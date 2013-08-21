@@ -5,72 +5,68 @@ used by the backend when populating the array. -->
 
 <h2>Victim Demographics</h2>
 <p>This section describes (but does not identify) the organization affected by the incident. The primary purpose is to aid comparisons between different types of organizations (across industries, sizes, regions, etc) or departments within a single organization.</p>
-<div class="form-group">
-    <label>Victim ID</label>
-    <input name="victim_id" class="form-control" placeholder="Proper name for the victim organization" required>
-</div>
-<div class="form-group">
-    <label>Number of Employees</label>
-    <select name="employee_count" class="form-control" required>
-        <option value="" disabled selected>-- Please select --</option>
-        <option value="1 to 10">1 to 10</option>
-        <option value="11 to 100">11 to 100</option>
-        <option value="101 to 1000">101 to 1,000</option>
-        <option value="Small">Small (less than 1000 employees)</option>
-        <option value="Large">Large (1,000 employees or more)</option>
-        <option value="1001 to 10000">1,001 to 10,000</option>
-        <option value="10001 to 25000">10,001 to 25,000</option>
-        <option value="25001 to 50000">25,001 to 50,000</option>
-        <option value="50001 to 100000">50,001 to 100,000</option>
-        <option value="Over 100000">Over 100,000</option> 
-        <option value="Unknown">Unknown</option>
-    </select>
-</div>
-<label>Annual Revenue</label>
-<div class="input-group">
-    <input type="number" name="revenue" class="form-control">
-    <span class="input-group-addon">
-        <select name="iso_currency_code">
-            <option value="USD" selected>USD</option>
-            {% include 'partials/iso_currency_codes.html' %}
-        </select>
-    </span>
-</div>
-<div class="form-group">
-    <label>Primary Industry</label>
-    <input type="number" name="industry" placeholder="6 digit NAICS code" class="form-control">
-</div>
-<div class="form-group">
-    <label>Country of Operation</label>
-    <select name="country" class="form-control" required>
-        <option value="" selected disabled>-- Please select--</option>
-        <optgroup label="Common Selections">
-            <option value="Unknown">Unknown</option>
-            <option value="US">United States of America</option>
-        </optgroup>
-        <optgroup label="All Selections">
-            {% include 'partials/iso_country_codes.html' %}
-        </optgroup>
-    </select>
-</div>
-<div class="form-group">
-    <label>State/Region</label>
-    <input type="text" class="form-control" name="state">
-</div>
-<div class="form-group">
-    <label>Number of Locations Affected</label>
-    <input type="number" name="locations_affected" class="form-control">
-</div>
-<div class="form-group">
-    <label>Fortune 500 Company?</label>
-    <select name="fortune500" class="form-control">
-        <option value="" disabled selected>-- Please Select --</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-        <option value="Unknown">Unknown</option>
-    </select>
-</div>
-<div class="form-group">
-    <label>Victim Notes</label>
-    <textarea name="victim_notes" class="form-control"></textarea>
-</div>
+<div id="victim_array">
+    <div class="victim_demographics pull-right">
+        <div class="form-group">
+            <label>Victim ID</label>
+            <input name="1_victim_id" class="form-control" placeholder="Proper name for the victim organization" required>
+        </div>
+        <div class="form-group">
+            <label>Number of Employees</label>
+            <select name="1_employee_count" class="form-control" required>
+                <option value="" disabled selected>-- Please select --</option>
+                <option value="1 to 10">1 to 10</option>
+                <option value="11 to 100">11 to 100</option>
+                <option value="101 to 1000">101 to 1,000</option>
+                <option value="Small">Small (less than 1000 employees)</option>
+                <option value="Large">Large (1,000 employees or more)</option>
+                <option value="1001 to 10000">1,001 to 10,000</option>
+                <option value="10001 to 25000">10,001 to 25,000</option>
+                <option value="25001 to 50000">25,001 to 50,000</option>
+                <option value="50001 to 100000">50,001 to 100,000</option>
+                <option value="Over 100000">Over 100,000</option> 
+                <option value="Unknown">Unknown</option>
+            </select>
+        </div>
+        <label>Annual Revenue</label>
+        <div class="input-group">
+            <input type="number" name="1_revenue" class="form-control">
+            <span class="input-group-addon">
+                <select name="iso_currency_code">
+                    <option value="USD" selected>USD</option>
+                    {% include 'partials/iso_currency_codes.html' %}
+                </select>
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Primary Industry</label>
+            <input type="number" name="1_industry" placeholder="6 digit NAICS code" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Country of Operation</label>
+            <select name="1_country" class="form-control" required>
+                <option value="" selected disabled>-- Please select--</option>
+                <optgroup label="Common Selections">
+                    <option value="Unknown">Unknown</option>
+                    <option value="US">United States of America</option>
+                </optgroup>
+                <optgroup label="All Selections">
+                    {% include 'partials/iso_country_codes.html' %}
+                </optgroup>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>State/Region</label>
+            <input type="text" class="form-control" name="1_state">
+        </div>
+        <div class="form-group">
+            <label>Number of Locations Affected</label>
+            <input type="number" name="1_locations_affected" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Victim Notes</label>
+            <textarea name="1_victim_notes" class="form-control"></textarea>
+        </div>
+    </div> <!-- end of single victim demographics -->
+</div> <!-- end of victim_array -->
+<button id="btn_add_victim" class="btn btn-primary" type="button">Add Another Victim</button>
