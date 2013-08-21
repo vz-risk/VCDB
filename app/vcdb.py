@@ -23,5 +23,9 @@ def index():
         else:
             return "invalid form selection"
 
+@vcdb.route('/test')
+def test():
+    return render_template('temp.html')
+
 if __name__ == "__main__":
     vcdb.run(debug=True, host="0.0.0.0")
