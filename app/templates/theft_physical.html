@@ -19,12 +19,9 @@
         {% include 'partials/vic_demographics.html' %}
 
         <h2 id="theft">Theft and Tampering</h2>
-        <div class="form-group">
-            <label>Actor</label>
-            <select name="actor_variety" required class="form-control">
-                <option value="" selected disabled>-- Please Select --</option>
-            </select>
-        </div>
+        {% set exclude_actors = ['e_Force_majeure'] %}
+        {% include 'partials/actor_short.html' %}
+
         <div class="form-group">
             <label>Actor motive</label>
             <select name="actor_motive" required class="form-control">

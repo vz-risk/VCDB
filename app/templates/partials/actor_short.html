@@ -1,0 +1,42 @@
+{% set actorlist = {'e_Activist':'External - Activist',
+'e_Auditor':'External - Auditor',
+'e_Competitor':'External - Competitor',
+'e_Customer':'External - Customer',
+'e_Force_majeure':'External - Force majeure',
+'e_Former_employee':'External - Former employee',
+'e_Nation-state':'External - Nation-state',
+'e_Organized_crime':'External - Organized crime',
+'e_Acquaintance':'External - Acquaintance',
+'e_State-affiliated':'External - State-affiliated',
+'e_Terrorist':'External - Terrorist',
+'e_Unaffiliated':'External - Unaffiliated',
+'e_Unknown':'External - Unknown',
+'e_Other':'External - Other',
+'i_Auditor':'Internal - Auditor',
+'i_Call_center':'Internal - Call center',
+'i_Cashier':'Internal - Cashier',
+'i_End-user':'Internal - End-user',
+'i_Executive':'Internal - Executive',
+'i_Finance':'Internal - Finance',
+'i_Helpdesk':'Internal - Helpdesk',
+'i_Human_resources':'Internal - Human resources',
+'i_Maintenance':'Internal - Maintenance',
+'i_Manager':'Internal - Manager',
+'i_Guard':'Internal - Guard',
+'i_Developer':'Internal - Developer',
+'i_System_admin':'Internal - System admin',
+'i_Unknown':'Internal - Unknown',
+'i_Other':'Internal - Other'}
+%} 
+
+<div class="form-group">
+    <label>Actor</label>
+    <select name="actor_variety" required class="form-control">
+        <option value="" selected disabled>-- Please Select --</option>
+        {% for key,value in actorlist.items()|sort %}
+            {% if key not in exclude_actors %}
+                <option value="{{key}}">{{value}}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+</div>
