@@ -1,0 +1,49 @@
+{% include 'partials/header.html' %}
+
+{% include 'partials/bodystart.html' %}
+
+<div class="row">
+    <div class="col-md-3">
+        <ul class="nav form-navigation">
+            <li><a href="#incident-tracking">Incident Tracking</a></li>
+            <li><a href="#vic-demographics">Victim Demographics</a></li>
+            <li><a href="#theft">Theft and Tampering</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+            <li><a href="#">Link 6</a></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+
+        {% include 'partials/incident_tracking.html' %}
+        {% include 'partials/vic_demographics.html' %}
+
+        <h2 id="theft">Theft and Tampering</h2>
+        <div class="form-group">
+            <label>Actor</label>
+            <select name="actor_variety" required class="form-control">
+                <option value="" selected disabled>-- Please Select --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Actor motive</label>
+            <select name="actor_motive" required class="form-control">
+                <option value="" selected disabled>-- Please Select --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Where stolen?</label>
+            <select name="physical_location" required class="form-control">
+                <option value="" selected disabled>-- Please Select --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Asset<label>
+            <select name="asset_variety" required class="form-control">
+                <option value="" selected disabled>-- Please Select --</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/footer.html' %}
