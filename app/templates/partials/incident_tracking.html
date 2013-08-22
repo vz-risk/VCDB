@@ -1,0 +1,54 @@
+<h2 id="incident-tracking">Incident Tracking</h2>
+<p>This section captures general information about the incident. The main purpose is allow organizations to identify, store, and retrieve incidents over time.</p>
+<div class="form-group">
+    <label>Confirmed Incident</label>
+    <select name="security_incident" class="form-control" required>
+        <option value="" selected disabled>-- Please Select --</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Suspected">Suspected</option>
+        <option value="False positive">False positive</option>
+        <option value="Near miss">Near miss</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Incident Summary</label>
+    <textarea name="summary" class="form-control" placeholder="what happened?"></textarea>
+</div>
+<div class="form-group">
+    <table>
+        <tr><th> </th><th>Year</th><th>Month</th><th>Day</th></tr>
+        <tr><td><label>Initial Compromise</label></td>
+            <td><input name="compromise_year" type="number"></td>
+            <td><input name="compromise_month" type="number"></td>
+            <td><input name="compromise_day" type="number"></td></tr>
+        <tr><td><label>Discovery/Investigation</label></td>
+            <td><input name="discovery_year" type="number"></td>
+            <td><input name="discovery_month" type="number"></td>
+            <td><input name="discovery_day" type="number"></td></tr>
+        <tr><td><label>Notication/Disclosure</label></td>
+            <td><input name="disclosure_year" type="number"></td>
+            <td><input name="disclosure_month" type="number"></td>
+            <td><input name="disclosure_day" type="number"></td></tr>
+    </table>
+</div>
+<div id="source-material" class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label>Source URL</label>
+            <input name="1_source_url" class="form-control">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Date Retrieved</label>
+            <input name="1_source_retrieved" type="date" class="form-control">
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span> Add another source</button>
+</div>
+<div class="form-group">
+    <label>General notes</label>
+    <textarea name="notes" class="form-control"></textarea>
+</div>
