@@ -77,4 +77,4 @@ def long_form():
 
 
 if __name__ == "__main__":
-    vcdb.run(debug=True, host="0.0.0.0")
+    vcdb.run(debug=True, host="0.0.0.0",port=3000)
