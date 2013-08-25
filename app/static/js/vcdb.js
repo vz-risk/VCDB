@@ -9,7 +9,7 @@ $('#btn_add_victim').click(function() {
     $('#victim_array').append('<hr style="clear:both;">');
 
     newvic = document.createElement("div");
-    $(newvic).addClass("victim_demographics pull-right");
+    $(newvic).addClass("indented-fields pull-right");
 
     form_field = $("<div></div>").addClass("form-group");
     $(form_field).append("<label>Victim ID</label>");
@@ -136,4 +136,5 @@ $('#btn-add-data-variety').click( function() {
   newCol.append(newFields);
   newRow.append(newCol);
   $("#data-variety-array").append(newRow);
+  $(data_variety_count+"_data_variety").focus();
 });
