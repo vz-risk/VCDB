@@ -24,17 +24,11 @@
         {% set exclude_motives = ['NA'] %}
         {% include 'partials/actor_motive.html' %}
         {% include 'partials/physical_location.html' %}
-      {% set asset_groups = ['media','user'] %}
-      {% include 'partials/asset_list.html' %}
+        {% set asset_groups = ['media','user'] %}
+        {% include 'partials/asset_list.html' %}
 
 
-        <div class="form-group">
-            <label>Asset<label>
-            <select name="asset_variety" required class="form-control">
-                <option value="" selected disabled>-- Please Select --</option>
-            </select>
-        </div>
-              {% include 'partials/confidentiality.html' %}
+        {% include 'partials/confidentiality.html' %}
     </div><!-- end of col-md-9 -->
 </div><!-- end of row -->
  
