@@ -1,0 +1,124 @@
+{
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "osint600",
+  "reference": "http://www.theregister.co.uk/2012/04/30/eukhost_billing_system_compromise/",
+  "attribute": {
+    "integrity": {
+      "notes": "Added an IP address on an allow list for access.",
+      "variety": [
+        "Modify configuration"
+      ]
+    },
+    "confidentiality": {
+      "state": [
+        "Unknown"
+      ],
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "notes": "According to OSINT, an administrative password was used for access, but no payment card information was at risk.",
+      "data_disclosure": "Yes"
+    }
+  },
+  "notes": "",
+  "discovery_method": "Int - log review",
+  "schema_version": "1.2",
+  "summary": "Webhosting company's billing system was compromised via undisclosed web-based hacking action. ",
+  "source_id": "osint",
+  "security_incident": "Confirmed",
+  "plus": {
+    "master_id": "osint600",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U",
+        "data_abuse": "U",
+        "data_subject": "Customer"
+      }
+    },
+    "f500": "N",
+    "asset": {
+      "total": "No"
+    },
+    "timeline": {
+      "notification": {
+        "year": 2012,
+        "day": 28,
+        "month": 4
+      }
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Fun"
+      ],
+      "country": [
+        "PK"
+      ],
+      "notes": "",
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "victim": [
+    {
+      "victim_id": "eUKHost",
+      "revenue": {
+        "iso_currency_code": "GBP",
+        "amount": 78000
+      },
+      "country": "GB",
+      "industry": "518210",
+      "employee_count": "1 to 10",
+      "notes": ""
+    }
+  ],
+  "timeline": {
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2012,
+      "day": 28,
+      "month": 4
+    },
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Hours"
+    }
+  },
+  "action": {
+    "hacking": {
+      "notes": "",
+      "vector": [
+        "Web application"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "cve": ""
+    }
+  },
+  "asset": {
+    "notes": "",
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  }
+}

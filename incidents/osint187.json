@@ -1,0 +1,141 @@
+{
+  "impact": {
+    "loss": [
+      {
+        "rating": "Minor",
+        "variety": "Asset and fraud"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Brand damage"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Business disruption"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Operating costs"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Legal and regulatory"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Competitive advantage"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Response and recovery"
+      }
+    ],
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "osint187",
+  "reference": "http://doj.nh.gov/consumer/security-breaches/documents/american-stock-20120214.pdf (20130212) http://doj.nh.gov/consumer/security-breaches/documents/american-stock-20120413.pdf (20130212)",
+  "attribute": {
+    "confidentiality": {
+      "notes": "We know there were at least 6 victims in one state.  Total victim count unknown.",
+      "data_disclosure": "Yes",
+      "data": [
+        {
+          "amount": 6,
+          "variety": "Bank"
+        }
+      ],
+      "state": [
+        "Stored unencrypted"
+      ],
+      "data_total": 6
+    }
+  },
+  "notes": "One of the sources said they discovered the breach from returned mail.  I added two days to the compromise date to allow for the mail to send and be returned.",
+  "discovery_method": "Int - reported by user",
+  "schema_version": "1.2",
+  "summary": "American Stock Transer & Trust Company, LLC accidentally mailed tax forms to the wrong people.",
+  "source_id": "osint",
+  "security_incident": "Confirmed",
+  "plus": {
+    "master_id": "osint187",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Y",
+        "data_abuse": "U",
+        "data_subject": "Customer"
+      }
+    },
+    "f500": "N",
+    "asset": {
+      "total": "No"
+    },
+    "timeline": {
+      "notification": {
+        "year": 2012,
+        "day": 24,
+        "month": 1
+      }
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "victim": [
+    {
+      "victim_id": "American Stock Transfer & Trust Company, LLc",
+      "revenue": {
+        "iso_currency_code": "USD",
+        "amount": 23900000
+      },
+      "country": "US",
+      "notes": "",
+      "state": "NY",
+      "employee_count": "101 to 1000",
+      "industry": "523999"
+    }
+  ],
+  "timeline": {
+    "exfiltration": {
+      "unit": "NA"
+    },
+    "incident": {
+      "year": 2012,
+      "day": 17,
+      "month": 1
+    },
+    "compromise": {
+      "unit": "NA"
+    },
+    "containment": {
+      "unit": "NA"
+    },
+    "discovery": {
+      "unit": "Days"
+    }
+  },
+  "action": {
+    "error": {
+      "notes": " [through Mail]",
+      "vector": [
+        "Unknown"
+      ],
+      "variety": [
+        "Misdelivery"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ]
+  }
+}

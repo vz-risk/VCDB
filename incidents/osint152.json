@@ -1,0 +1,102 @@
+{
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "osint152",
+  "reference": "http://www.marbridgeconsulting.com/marbridgedaily/2012-01-05/article/52705/sql_injection_attack_exposes_sina_passwords, http://www.scmagazine.com.au/News/349585,28-million-clear-text-passwords-found-after-tianya65279-hack.aspx ",
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Misappropriation"
+      ]
+    },
+    "confidentiality": {
+      "state": [
+        "Stored unencrypted"
+      ],
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "notes": "",
+      "data_disclosure": "Yes"
+    }
+  },
+  "notes": "",
+  "discovery_method": "Ext - actor disclosure",
+  "schema_version": "1.2",
+  "summary": "Chinese online security website Youxia.org today revealed a security loophole in Chinese internet company Sina's (Nasdaq: SINA) iAsk search engine that exposes user passwords.  According to the site, iAsk is vulnerable to an SQL injection attack that allows access to the iAsk database, which includes information for over 70 mln users.  As an example, Youxia.org demonstrated how it could find the username and password of popular magician Liu Qian, who confirmed on his personal microblog that the password was correct.  While Sina has already closed the security breach, Youxia pointed out that following user data leaks at online communities CSDN.net and Tianya, Sina claimed passwords were encrypted in their database, but the exploit has proven that the majority of passwords are saved in plain text.",
+  "source_id": "osint",
+  "security_incident": "Confirmed",
+  "plus": {
+    "master_id": "osint152",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U",
+        "data_abuse": "U",
+        "data_subject": "Customer"
+      }
+    },
+    "f500": "N",
+    "asset": {
+      "total": "No"
+    },
+    "timeline": {
+      "notification": {
+        "year": 2012,
+        "day": 5,
+        "month": 1
+      }
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Other"
+      ],
+      "country": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "victim": [
+    {
+      "victim_id": "SINA",
+      "revenue": {
+        "iso_currency_code": "USD",
+        "amount": 482830000
+      },
+      "country": "CN",
+      "industry": "519130",
+      "employee_count": "1001 to 10000",
+      "notes": ""
+    }
+  ],
+  "timeline": {
+    "incident": {
+      "year": 2012
+    }
+  },
+  "action": {
+    "hacking": {
+      "notes": "",
+      "vector": [
+        "Web application"
+      ],
+      "variety": [
+        "SQLi"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  }
+}

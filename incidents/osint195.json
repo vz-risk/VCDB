@@ -1,0 +1,148 @@
+{
+  "impact": {
+    "loss": [
+      {
+        "rating": "Unknown",
+        "variety": "Asset and fraud"
+      },
+      {
+        "rating": "Unknown",
+        "variety": "Brand damage"
+      },
+      {
+        "rating": "Unknown",
+        "variety": "Business disruption"
+      },
+      {
+        "rating": "Unknown",
+        "variety": "Operating costs"
+      },
+      {
+        "rating": "Unknown",
+        "variety": "Legal and regulatory"
+      },
+      {
+        "rating": "Unknown",
+        "variety": "Competitive advantage"
+      },
+      {
+        "rating": "Unknown",
+        "variety": "Response and recovery"
+      }
+    ],
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "osint195",
+  "reference": "http://news.softpedia.com/news/Hackers-Breach-Alabama-and-Texas-Law-Enforcement-Sites-251967.shtml (20130212) http://www.databreaches.net/?p=23257 (20130212) http://pastehtml.com/view/bniks0jem.html (20130212)",
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Misappropriation"
+      ]
+    },
+    "confidentiality": {
+      "state": [
+        "Stored unencrypted"
+      ],
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "System"
+        }
+      ],
+      "notes": "variety of data affecting many classes of user.",
+      "data_disclosure": "Yes"
+    }
+  },
+  "notes": "",
+  "discovery_method": "Ext - actor disclosure",
+  "schema_version": "1.2",
+  "summary": "Hacker breached the website for Alabama Department of Public Safety and posted database tables and sample data online.",
+  "source_id": "osint",
+  "security_incident": "Confirmed",
+  "plus": {
+    "master_id": "osint195",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "N",
+        "data_abuse": "Y",
+        "data_subject": "Other"
+      }
+    },
+    "f500": "N",
+    "asset": {
+      "total": "No"
+    },
+    "timeline": {
+      "notification": {
+        "year": 2012,
+        "day": 8,
+        "month": 2
+      }
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Ideology"
+      ],
+      "country": [],
+      "notes": "CabinCr3w, w0rmer",
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "victim": [
+    {
+      "victim_id": "Alabama Department of Public Safety",
+      "country": "US",
+      "notes": "",
+      "state": "AL",
+      "employee_count": "1001 to 10000",
+      "industry": "922120"
+    }
+  ],
+  "timeline": {
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2012
+    },
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    }
+  },
+  "action": {
+    "hacking": {
+      "notes": "SQL injection not reported.  However, it has the look of an sql injection attack and CabinCr3w is known for using that type of attack frequently.",
+      "vector": [
+        "Web application"
+      ],
+      "variety": [
+        "SQLi"
+      ],
+      "cve": ""
+    }
+  },
+  "asset": {
+    "notes": "",
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  }
+}

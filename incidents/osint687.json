@@ -1,0 +1,174 @@
+{
+  "impact": {
+    "loss": [
+      {
+        "rating": "Minor",
+        "variety": "Asset and fraud"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Brand damage"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Business disruption"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Operating costs"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Legal and regulatory"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Competitive advantage"
+      },
+      {
+        "rating": "Minor",
+        "variety": "Response and recovery"
+      }
+    ],
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "osint687",
+  "reference": "http://theonion.github.io/blog/2013/05/08/how-the-syrian-electronic-army-hacked-the-onion/ (20130509) http://www.bbc.co.uk/news/technology-22435872 (20130509)",
+  "attribute": {
+    "integrity": {
+      "notes": "",
+      "variety": [
+        "Fraudulent transaction",
+        "Alter behavior"
+      ]
+    },
+    "confidentiality": {
+      "notes": "Employee email communication was posted to the SEA twitter account. Screenshots of 3 email messages were made public.",
+      "data_disclosure": "Yes",
+      "data": [
+        {
+          "amount": 3,
+          "variety": "Internal"
+        }
+      ],
+      "state": [
+        "Stored unencrypted"
+      ],
+      "data_total": 3
+    }
+  },
+  "notes": "",
+  "action": {
+    "hacking": {
+      "notes": "Used stolen credentials to log into Twitter and Google Apps.",
+      "vector": [
+        "Web application"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "cve": ""
+    },
+    "social": {
+      "notes": "threat actor avoided sending messages to technical staff to evade detection.",
+      "vector": [
+        "Email"
+      ],
+      "target": [
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ]
+    }
+  },
+  "schema_version": "1.2",
+  "summary": "Syrian Electronic Army uses Social Engineering to gain passwords to systems and then uses the passwords to post unauthorized twitter messages. Also posted content of staff email to their own Twitter feed",
+  "source_id": "osint",
+  "security_incident": "Confirmed",
+  "plus": {
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "N",
+        "data_abuse": "Y",
+        "data_subject": "Partner"
+      }
+    },
+    "timeline": {
+      "notification": {
+        "year": 2013,
+        "day": 6,
+        "month": 5
+      }
+    },
+    "f500": "N",
+    "master_id": "osint687",
+    "asset": {
+      "total": "No"
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Ideology"
+      ],
+      "country": [
+        "SY"
+      ],
+      "notes": "Some question whether to classify variety as state-sponsored or activist group. Group appears to get material support from the government, thus state-sponsored.",
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "victim": [
+    {
+      "victim_id": "theonion.com",
+      "revenue": {
+        "iso_currency_code": "USD",
+        "amount": 7800000
+      },
+      "country": "US",
+      "notes": "",
+      "state": "IL",
+      "employee_count": "11 to 100",
+      "industry": "519130"
+    }
+  ],
+  "timeline": {
+    "exfiltration": {
+      "unit": "Days"
+    },
+    "incident": {
+      "year": 2013,
+      "day": 3,
+      "month": 5
+    },
+    "compromise": {
+      "unit": "Days"
+    },
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Days"
+    }
+  },
+  "discovery_method": "Unknown",
+  "asset": {
+    "notes": "a total of five user accounts were compromised.",
+    "management": "External",
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - End-user"
+      }
+    ],
+    "hosting": "External"
+  }
+}

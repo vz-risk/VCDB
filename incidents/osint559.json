@@ -1,0 +1,137 @@
+{
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "osint559",
+  "reference": "http://waukee.patch.com/articles/west-des-moines-restaurateur-tracks-down-the-culprits-in-credit-card-fraud-cases http://westdesmoines.patch.com/articles/west-des-moines-police-find-link-in-spate-of-credit-card-fraud-cases http://www.yelp.com/biz/eastern-hibachi-and-sushi-west-des-moines",
+  "attribute": {
+    "integrity": {
+      "notes": "Threat actors influenced business owner/management to hire them.",
+      "variety": [
+        "Alter behavior"
+      ]
+    },
+    "confidentiality": {
+      "notes": "",
+      "data_disclosure": "Yes",
+      "data": [
+        {
+          "amount": 30,
+          "variety": "Payment"
+        }
+      ],
+      "state": [
+        "Unknown"
+      ],
+      "data_total": 30
+    }
+  },
+  "notes": "",
+  "discovery_method": "Ext - fraud detection",
+  "schema_version": "1.2",
+  "summary": "2 employees at restaurant used fake identities to secure jobs for the purpose of skimming customer credit cards. At least 30 cards were used to make fraudulent charges.  Business suffered significant reduction in business post-breach and was forced to close. ",
+  "source_id": "osint",
+  "security_incident": "Confirmed",
+  "plus": {
+    "master_id": "osint559",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U",
+        "data_abuse": "Y",
+        "data_subject": ""
+      }
+    },
+    "f500": "N",
+    "asset": {
+      "total": "No"
+    },
+    "timeline": {
+      "notification": {
+        "year": 2012,
+        "month": 5
+      }
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Actors obtained employment with fake identities and skimmed credit cards. Sought employment right after business opened.",
+      "variety": [
+        "Cashier"
+      ]
+    }
+  },
+  "victim": [
+    {
+      "victim_id": "Eastern Buffet",
+      "country": "US",
+      "notes": "",
+      "state": "IA",
+      "employee_count": "11 to 100",
+      "industry": "722"
+    }
+  ],
+  "timeline": {
+    "exfiltration": {
+      "unit": "Seconds"
+    },
+    "incident": {
+      "year": 2012,
+      "month": 3
+    },
+    "compromise": {
+      "unit": "NA"
+    },
+    "containment": {
+      "unit": "Weeks"
+    },
+    "discovery": {
+      "unit": "Weeks"
+    }
+  },
+  "action": {
+    "misuse": {
+      "notes": "Hand held skimmers likely used in capturing payment card data.",
+      "vector": [
+        "Physical access"
+      ],
+      "variety": [
+        "Embezzlement",
+        "Unapproved hardware"
+      ]
+    },
+    "social": {
+      "notes": "Use of fake documents and assumed identities to obtain employment.",
+      "vector": [
+        "Documents",
+        "In-person"
+      ],
+      "target": [
+        "Manager"
+      ],
+      "variety": [
+        "Forgery",
+        "Pretexting"
+      ]
+    }
+  },
+  "asset": {
+    "notes": "",
+    "assets": [
+      {
+        "variety": "M - Payment card"
+      },
+      {
+        "variety": "P - Manager"
+      }
+    ]
+  }
+}
