@@ -1,139 +1,139 @@
 {
-  "impact": {
-    "loss": [
+  "action": {
+    "hacking": {
+      "cve": "", 
+      "notes": "", 
+      "variety": [
+        "Use of stolen creds"
+      ], 
+      "vector": [
+        "Web application"
+      ]
+    }, 
+    "misuse": {
+      "notes": "", 
+      "variety": [
+        "Privilege abuse"
+      ], 
+      "vector": [
+        "LAN access"
+      ]
+    }
+  }, 
+  "actor": {
+    "partner": {
+      "country": [
+        "US"
+      ], 
+      "industry": "000000", 
+      "motive": [
+        "Financial"
+      ], 
+      "notes": ""
+    }
+  }, 
+  "asset": {
+    "assets": [
       {
-        "rating": "Unknown",
-        "variety": "Brand damage"
-      },
+        "variety": "S - Web application"
+      }, 
       {
-        "rating": "Unknown",
-        "variety": "Legal and regulatory"
-      },
-      {
-        "rating": "Minor",
-        "variety": "Response and recovery"
+        "variety": "U - Other"
       }
-    ],
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint703",
-  "reference": "http://healthitsecurity.com/2013/02/21/former-mid-florida-urological-employee-accused-of-data-breach/  http://www.wftv.com/news/news/local/medical-assistant-accused-using-patients-records-c/nWS2T/",
+    ], 
+    "hosting": "External", 
+    "management": "External", 
+    "notes": "End User system in partner location used for Misuse; leads to Hacking of web application."
+  }, 
   "attribute": {
     "confidentiality": {
-      "state": [
-        "Stored"
-      ],
       "data": [
         {
           "variety": "Medical"
         }
-      ],
-      "notes": "",
-      "data_disclosure": "Yes"
-    }
-  },
-  "notes": "",
-  "action": {
-    "misuse": {
-      "notes": "",
-      "vector": [
-        "LAN access"
-      ],
-      "variety": [
-        "Privilege abuse"
+      ], 
+      "data_disclosure": "Yes", 
+      "notes": "", 
+      "state": [
+        "Stored"
       ]
-    },
-    "hacking": {
-      "notes": "",
-      "vector": [
-        "Web application"
-      ],
-      "variety": [
-        "Use of stolen creds"
-      ],
-      "cve": ""
     }
-  },
-  "schema_version": "1.2",
-  "summary": "Medical assistant uses stolen credential to access patient records and commit insurance fraud. Modeling from organization she accessed, not her place of employment.",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
+  }, 
+  "discovery_method": "Unknown", 
+  "impact": {
+    "loss": [
+      {
+        "rating": "Unknown", 
+        "variety": "Brand damage"
+      }, 
+      {
+        "rating": "Unknown", 
+        "variety": "Legal and regulatory"
+      }, 
+      {
+        "rating": "Minor", 
+        "variety": "Response and recovery"
+      }
+    ], 
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint703", 
+  "notes": "", 
   "plus": {
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "U",
-        "data_abuse": "Y",
-        "data_subject": ""
-      }
-    },
-    "timeline": {
-      "notification": {
-        "year": 2013,
-        "day": 21,
-        "month": 2
-      }
-    },
-    "f500": "N",
-    "master_id": "osint703",
     "asset": {
       "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "Y", 
+        "data_subject": ""
+      }
+    }, 
+    "f500": "N", 
+    "master_id": "osint703", 
+    "timeline": {
+      "notification": {
+        "day": 21, 
+        "month": 2, 
+        "year": 2013
+      }
     }
-  },
-  "actor": {
-    "partner": {
-      "motive": [
-        "Financial"
-      ],
-      "country": [
-        "US"
-      ],
-      "industry": "000000",
-      "notes": ""
-    }
-  },
-  "victim": [
-    {
-      "victim_id": "Orlando Health",
-      "revenue": {
-        "iso_currency_code": "USD",
-        "amount": 1650000000
-      },
-      "country": "US",
-      "notes": "",
-      "state": "FL",
-      "employee_count": "1001 to 10000",
-      "industry": "622"
-    }
-  ],
+  }, 
+  "reference": "http://healthitsecurity.com/2013/02/21/former-mid-florida-urological-employee-accused-of-data-breach/  http://www.wftv.com/news/news/local/medical-assistant-accused-using-patients-records-c/nWS2T/", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "Medical assistant uses stolen credential to access patient records and commit insurance fraud. Modeling from organization she accessed, not her place of employment.", 
   "timeline": {
-    "exfiltration": {
-      "unit": "NA"
-    },
-    "incident": {
-      "year": 2013
-    },
     "compromise": {
       "unit": "Unknown"
-    },
+    }, 
     "containment": {
       "unit": "Unknown"
-    },
+    }, 
     "discovery": {
       "unit": "Unknown"
+    }, 
+    "exfiltration": {
+      "unit": "NA"
+    }, 
+    "incident": {
+      "year": 2013
     }
-  },
-  "discovery_method": "Unknown",
-  "asset": {
-    "notes": "End User system in partner location used for Misuse; leads to Hacking of web application.",
-    "management": "External",
-    "assets": [
-      {
-        "variety": "S - Web application"
-      },
-      {
-        "variety": "U - Other"
-      }
-    ],
-    "hosting": "External"
-  }
+  }, 
+  "victim": [
+    {
+      "country": "US", 
+      "employee_count": "1001 to 10000", 
+      "industry": "622", 
+      "notes": "", 
+      "revenue": {
+        "amount": 1650000000, 
+        "iso_currency_code": "USD"
+      }, 
+      "state": "FL", 
+      "victim_id": "Orlando Health"
+    }
+  ]
 }

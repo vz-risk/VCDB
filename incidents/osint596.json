@@ -1,122 +1,122 @@
 {
-  "impact": {
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint596",
-  "reference": "http://www.cyberwarnews.info/2012/03/04/electronics-giant-epson-hacked-and-data-leaked-by-anonymous-hacker-anonyintra/",
-  "attribute": {
-    "integrity": {
-      "notes": "Use of web application to manipulate DB.",
+  "action": {
+    "hacking": {
+      "cve": "", 
+      "notes": "", 
       "variety": [
-        "Misappropriation"
+        "SQLi"
+      ], 
+      "vector": [
+        "Web application"
       ]
-    },
-    "confidentiality": {
-      "notes": "",
-      "data_disclosure": "Yes",
-      "data": [
-        {
-          "amount": 67,
-          "variety": "Credentials"
-        }
-      ],
-      "state": [
-        "Stored unencrypted"
-      ],
-      "data_total": 67
     }
-  },
-  "notes": "",
-  "discovery_method": "Ext - actor disclosure",
-  "schema_version": "1.2",
-  "summary": "Epson hacked by Anonymous, posted on pastebin.  Leak contains basic table information. usernames and clear text passwords.",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
-  "plus": {
-    "master_id": "osint596",
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "U",
-        "data_abuse": "Y",
-        "data_subject": "Customer"
-      }
-    },
-    "f500": "Y",
-    "asset": {
-      "total": "No"
-    },
-    "timeline": {
-      "notification": {
-        "year": 2012,
-        "day": 4,
-        "month": 3
-      }
-    }
-  },
+  }, 
   "actor": {
     "external": {
-      "motive": [
-        "Fun"
-      ],
       "country": [
         "Unknown"
-      ],
-      "notes": "",
+      ], 
+      "motive": [
+        "Fun"
+      ], 
+      "notes": "", 
       "variety": [
         "Activist"
       ]
     }
-  },
-  "victim": [
-    {
-      "victim_id": "Epson",
-      "revenue": {
-        "iso_currency_code": "USD",
-        "amount": 10670000000
-      },
-      "country": "JP",
-      "industry": "334",
-      "employee_count": "50001 to 100000",
-      "notes": ""
-    }
-  ],
-  "timeline": {
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "year": 2012,
-      "day": 29,
-      "month": 2
-    },
-    "compromise": {
-      "unit": "Unknown"
-    },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Hours"
-    }
-  },
-  "action": {
-    "hacking": {
-      "notes": "",
-      "vector": [
-        "Web application"
-      ],
-      "variety": [
-        "SQLi"
-      ],
-      "cve": ""
-    }
-  },
+  }, 
   "asset": {
-    "notes": "",
     "assets": [
       {
         "variety": "S - Database"
       }
-    ]
-  }
+    ], 
+    "notes": ""
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 67, 
+          "variety": "Credentials"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_total": 67, 
+      "notes": "", 
+      "state": [
+        "Stored unencrypted"
+      ]
+    }, 
+    "integrity": {
+      "notes": "Use of web application to manipulate DB.", 
+      "variety": [
+        "Misappropriation"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - actor disclosure", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint596", 
+  "notes": "", 
+  "plus": {
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "Y", 
+        "data_subject": "Customer"
+      }
+    }, 
+    "f500": "Y", 
+    "master_id": "osint596", 
+    "timeline": {
+      "notification": {
+        "day": 4, 
+        "month": 3, 
+        "year": 2012
+      }
+    }
+  }, 
+  "reference": "http://www.cyberwarnews.info/2012/03/04/electronics-giant-epson-hacked-and-data-leaked-by-anonymous-hacker-anonyintra/", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "Epson hacked by Anonymous, posted on pastebin.  Leak contains basic table information. usernames and clear text passwords.", 
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    }, 
+    "containment": {
+      "unit": "Unknown"
+    }, 
+    "discovery": {
+      "unit": "Hours"
+    }, 
+    "exfiltration": {
+      "unit": "Unknown"
+    }, 
+    "incident": {
+      "day": 29, 
+      "month": 2, 
+      "year": 2012
+    }
+  }, 
+  "victim": [
+    {
+      "country": "JP", 
+      "employee_count": "50001 to 100000", 
+      "industry": "334", 
+      "notes": "", 
+      "revenue": {
+        "amount": 10670000000, 
+        "iso_currency_code": "USD"
+      }, 
+      "victim_id": "Epson"
+    }
+  ]
 }

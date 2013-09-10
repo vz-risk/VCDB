@@ -1,132 +1,132 @@
 {
-  "impact": {
-    "loss": [
-      {
-        "rating": "Major",
-        "variety": "Asset and fraud"
-      },
-      {
-        "rating": "Major",
-        "variety": "Brand damage"
-      },
-      {
-        "rating": "Unknown",
-        "variety": "Legal and regulatory"
-      },
-      {
-        "rating": "Unknown",
-        "variety": "Response and recovery"
-      }
-    ],
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint704",
-  "reference": "http://www.mediapost.com/publications/article/193831/aol-settles-data-valdez-lawsuit-for-5-million.html#axzz2VAPeeYcs  http://www.nytimes.com/2006/08/09/technology/09aol.html?_r=1&ex=1312776000&pagewanted=all",
-  "attribute": {
-    "confidentiality": {
-      "state": [
-        "Stored"
-      ],
-      "data": [
-        {
-          "variety": "Personal"
-        }
-      ],
-      "notes": "",
-      "data_disclosure": "Yes"
-    }
-  },
-  "notes": "",
   "action": {
-    "misuse": {
-      "notes": "",
-      "vector": [
-        "LAN access"
-      ],
-      "variety": [
-        "Data mishandling"
-      ]
-    },
     "error": {
-      "notes": "",
-      "vector": [
-        "Carelessness"
-      ],
+      "notes": "", 
       "variety": [
         "Gaffe"
+      ], 
+      "vector": [
+        "Carelessness"
+      ]
+    }, 
+    "misuse": {
+      "notes": "", 
+      "variety": [
+        "Data mishandling"
+      ], 
+      "vector": [
+        "LAN access"
       ]
     }
-  },
-  "schema_version": "1.2",
-  "summary": "AOL releases search histories for 650,000 subscribers. The identifications of the subscribers were not disclosed, but many were identified by analyzing the search histories. ",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
-  "plus": {
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "U",
-        "data_abuse": "U",
-        "data_subject": ""
-      }
-    },
-    "timeline": {
-      "notification": {
-        "year": 2006,
-        "month": 7
-      }
-    },
-    "f500": "U",
-    "master_id": "osint704",
-    "asset": {
-      "total": "No"
-    }
-  },
+  }, 
   "actor": {
     "internal": {
       "motive": [
         "Fun"
-      ],
-      "notes": "Internal actors did not foresee the ability to identify users from their search history. The data was published for academic research in mind.",
+      ], 
+      "notes": "Internal actors did not foresee the ability to identify users from their search history. The data was published for academic research in mind.", 
       "variety": [
         "System admin"
       ]
     }
-  },
-  "victim": [
-    {
-      "victim_id": "America Online, Inc.",
-      "country": "US",
-      "notes": "19K employees in 2006: http://www.washingtonpost.com/wp-dyn/content/article/2006/08/03/AR2006080301401.html",
-      "state": "VA",
-      "employee_count": "10001 to 25000",
-      "industry": "51913"
-    }
-  ],
-  "timeline": {
-    "exfiltration": {
-      "unit": "NA"
-    },
-    "incident": {
-      "year": 2006,
-      "month": 7
-    },
-    "compromise": {
-      "unit": "NA"
-    },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Days"
-    }
-  },
-  "discovery_method": "Other",
+  }, 
   "asset": {
-    "notes": "I inferred that search histories were aggregated on a database.",
     "assets": [
       {
         "variety": "S - Database"
       }
-    ]
-  }
+    ], 
+    "notes": "I inferred that search histories were aggregated on a database."
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "notes": "", 
+      "state": [
+        "Stored"
+      ]
+    }
+  }, 
+  "discovery_method": "Other", 
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major", 
+        "variety": "Asset and fraud"
+      }, 
+      {
+        "rating": "Major", 
+        "variety": "Brand damage"
+      }, 
+      {
+        "rating": "Unknown", 
+        "variety": "Legal and regulatory"
+      }, 
+      {
+        "rating": "Unknown", 
+        "variety": "Response and recovery"
+      }
+    ], 
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint704", 
+  "notes": "", 
+  "plus": {
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "U", 
+        "data_subject": ""
+      }
+    }, 
+    "f500": "U", 
+    "master_id": "osint704", 
+    "timeline": {
+      "notification": {
+        "month": 7, 
+        "year": 2006
+      }
+    }
+  }, 
+  "reference": "http://www.mediapost.com/publications/article/193831/aol-settles-data-valdez-lawsuit-for-5-million.html#axzz2VAPeeYcs  http://www.nytimes.com/2006/08/09/technology/09aol.html?_r=1&ex=1312776000&pagewanted=all", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "AOL releases search histories for 650,000 subscribers. The identifications of the subscribers were not disclosed, but many were identified by analyzing the search histories. ", 
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    }, 
+    "containment": {
+      "unit": "Unknown"
+    }, 
+    "discovery": {
+      "unit": "Days"
+    }, 
+    "exfiltration": {
+      "unit": "NA"
+    }, 
+    "incident": {
+      "month": 7, 
+      "year": 2006
+    }
+  }, 
+  "victim": [
+    {
+      "country": "US", 
+      "employee_count": "10001 to 25000", 
+      "industry": "51913", 
+      "notes": "19K employees in 2006: http://www.washingtonpost.com/wp-dyn/content/article/2006/08/03/AR2006080301401.html", 
+      "state": "VA", 
+      "victim_id": "America Online, Inc."
+    }
+  ]
 }

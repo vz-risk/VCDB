@@ -1,108 +1,113 @@
 {
-  "impact": {
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint623",
-  "reference": "http://www.alertboot.com/blog/blogs/endpoint_security/archive/2012/02/20/laptop-encryption-software-fairbridge-signs-undertaking-with-uk-ico.aspx",
-  "attribute": {
-    "confidentiality": {
-      "notes": "Salary information accounts for the sensitive organizational data loss.",
-      "data_disclosure": "Potentially",
-      "data": [
-        {
-          "amount": 325,
-          "variety": "Personal"
-        },
-        {
-          "amount": 325,
-          "variety": "Internal"
-        }
-      ],
-      "state": [
-        "Stored unencrypted"
-      ],
-      "data_total": 325
+  "action": {
+    "error": {
+      "notes": "Public vehicle", 
+      "variety": [
+        "Loss"
+      ], 
+      "vector": [
+        "Carelessness"
+      ]
     }
-  },
-  "notes": "",
-  "discovery_method": "Other",
-  "schema_version": "1.2",
-  "summary": "Laptop that contained PII and salary information for 325 employees was left on public bus. Device was password-protected, but did not have full-disk encryption.",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
-  "plus": {
-    "master_id": "osint623",
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "U",
-        "data_abuse": "U",
-        "data_subject": "Partner"
-      }
-    },
-    "f500": "N",
-    "asset": {
-      "total": "No"
-    },
-    "timeline": {
-      "notification": {
-        "year": 2012,
-        "day": 20,
-        "month": 2
-      }
-    }
-  },
+  }, 
   "actor": {
     "internal": {
       "motive": [
         "NA"
-      ],
+      ], 
       "variety": [
         "Unknown"
       ]
     }
-  },
-  "victim": [
-    {
-      "victim_id": "Fairbridge",
-      "notes": "",
-      "industry": "813",
-      "employee_count": "1 to 10",
-      "country": "GB"
-    }
-  ],
-  "timeline": {
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "year": 2012
-    },
-    "compromise": {
-      "unit": "NA"
-    },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Minutes"
-    }
-  },
-  "action": {
-    "error": {
-      "notes": "Public vehicle",
-      "vector": [
-        "Carelessness"
-      ],
-      "variety": [
-        "Loss"
-      ]
-    }
-  },
+  }, 
   "asset": {
     "assets": [
       {
         "variety": "U - Laptop"
       }
     ]
-  }
+  }, 
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    }, 
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 325, 
+          "variety": "Personal"
+        }, 
+        {
+          "amount": 325, 
+          "variety": "Internal"
+        }
+      ], 
+      "data_disclosure": "Potentially", 
+      "data_total": 325, 
+      "notes": "Salary information accounts for the sensitive organizational data loss.", 
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  }, 
+  "discovery_method": "Other", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint623", 
+  "notes": "", 
+  "plus": {
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "U", 
+        "data_subject": "Partner"
+      }
+    }, 
+    "f500": "N", 
+    "master_id": "osint623", 
+    "timeline": {
+      "notification": {
+        "day": 20, 
+        "month": 2, 
+        "year": 2012
+      }
+    }
+  }, 
+  "reference": "http://www.alertboot.com/blog/blogs/endpoint_security/archive/2012/02/20/laptop-encryption-software-fairbridge-signs-undertaking-with-uk-ico.aspx", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "Laptop that contained PII and salary information for 325 employees was left on public bus. Device was password-protected, but did not have full-disk encryption.", 
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    }, 
+    "containment": {
+      "unit": "Unknown"
+    }, 
+    "discovery": {
+      "unit": "Minutes"
+    }, 
+    "exfiltration": {
+      "unit": "Unknown"
+    }, 
+    "incident": {
+      "year": 2012
+    }
+  }, 
+  "victim": [
+    {
+      "country": "GB", 
+      "employee_count": "1 to 10", 
+      "industry": "813", 
+      "notes": "", 
+      "victim_id": "Fairbridge"
+    }
+  ]
 }

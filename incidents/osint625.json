@@ -1,113 +1,113 @@
 {
-  "impact": {
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint625",
-  "reference": "http://doj.nh.gov/consumer/security-breaches/documents/fidelity-20120320.pdf",
-  "attribute": {
-    "confidentiality": {
-      "notes": "",
-      "data_disclosure": "Yes",
-      "data": [
-        {
-          "amount": 1,
-          "variety": "Personal"
-        }
-      ],
-      "state": [
+  "action": {
+    "error": {
+      "notes": "Incorrect number provided to customer resulting in misdelivery.", 
+      "variety": [
+        "Misdelivery"
+      ], 
+      "vector": [
         "Unknown"
-      ],
-      "data_total": 1
+      ]
     }
-  },
-  "notes": "",
-  "discovery_method": "Other",
-  "schema_version": "1.2",
-  "summary": "Company provided incorrect fax number to customer resulting in customer sending fax containing PII to incorrect number.",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
-  "plus": {
-    "master_id": "osint625",
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "Y",
-        "data_abuse": "N",
-        "data_subject": "Customer"
-      }
-    },
-    "f500": "N",
-    "asset": {
-      "total": "No"
-    },
-    "timeline": {
-      "notification": {
-        "year": 2012,
-        "day": 19,
-        "month": 3
-      }
-    }
-  },
+  }, 
   "actor": {
     "internal": {
       "motive": [
         "NA"
-      ],
-      "notes": "",
+      ], 
+      "notes": "", 
       "variety": [
         "Unknown"
       ]
     }
-  },
-  "victim": [
-    {
-      "victim_id": "Fidelity Investments",
-      "revenue": {
-        "iso_currency_code": "USD",
-        "amount": 12000000000
-      },
-      "country": "US",
-      "notes": "",
-      "state": "MA",
-      "employee_count": "25001 to 50000",
-      "industry": "525910"
-    }
-  ],
-  "timeline": {
-    "exfiltration": {
-      "unit": "NA"
-    },
-    "incident": {
-      "year": 2012,
-      "day": 28,
-      "month": 2
-    },
-    "compromise": {
-      "unit": "NA"
-    },
-    "containment": {
-      "unit": "Weeks"
-    },
-    "discovery": {
-      "unit": "Days"
-    }
-  },
-  "action": {
-    "error": {
-      "notes": "Incorrect number provided to customer resulting in misdelivery.",
-      "vector": [
-        "Unknown"
-      ],
-      "variety": [
-        "Misdelivery"
-      ]
-    }
-  },
+  }, 
   "asset": {
-    "notes": "",
     "assets": [
       {
         "variety": "M - Documents"
       }
-    ]
-  }
+    ], 
+    "notes": ""
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1, 
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_total": 1, 
+      "notes": "", 
+      "state": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "discovery_method": "Other", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint625", 
+  "notes": "", 
+  "plus": {
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Y", 
+        "data_abuse": "N", 
+        "data_subject": "Customer"
+      }
+    }, 
+    "f500": "N", 
+    "master_id": "osint625", 
+    "timeline": {
+      "notification": {
+        "day": 19, 
+        "month": 3, 
+        "year": 2012
+      }
+    }
+  }, 
+  "reference": "http://doj.nh.gov/consumer/security-breaches/documents/fidelity-20120320.pdf", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "Company provided incorrect fax number to customer resulting in customer sending fax containing PII to incorrect number.", 
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    }, 
+    "containment": {
+      "unit": "Weeks"
+    }, 
+    "discovery": {
+      "unit": "Days"
+    }, 
+    "exfiltration": {
+      "unit": "NA"
+    }, 
+    "incident": {
+      "day": 28, 
+      "month": 2, 
+      "year": 2012
+    }
+  }, 
+  "victim": [
+    {
+      "country": "US", 
+      "employee_count": "25001 to 50000", 
+      "industry": "525910", 
+      "notes": "", 
+      "revenue": {
+        "amount": 12000000000, 
+        "iso_currency_code": "USD"
+      }, 
+      "state": "MA", 
+      "victim_id": "Fidelity Investments"
+    }
+  ]
 }

@@ -1,120 +1,120 @@
 {
-  "impact": {
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint562",
-  "reference": "http://doj.nh.gov/consumer/security-breaches/documents/ecs-tuning-20120619.pdf",
-  "attribute": {
-    "integrity": {
-      "notes": "Web Server misappropriated via likley SQLi to affect database.",
+  "action": {
+    "hacking": {
+      "notes": "", 
       "variety": [
-        "Misappropriation"
+        "Unknown"
+      ], 
+      "vector": [
+        "Web application"
       ]
-    },
-    "confidentiality": {
-      "notes": "",
-      "data_disclosure": "Yes",
-      "data": [
-        {
-          "amount": 71,
-          "variety": "Payment"
-        }
-      ],
-      "state": [
-        "Stored unencrypted"
-      ],
-      "data_total": 71
     }
-  },
-  "notes": "",
-  "discovery_method": "Ext - fraud detection",
-  "schema_version": "1.2",
-  "summary": "E-commerce site compromised via undisclosed methods and customer payment card information was exposed. SQLi highly likely vector CPP likely method of discovery.",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
-  "plus": {
-    "master_id": "osint562",
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "U",
-        "data_abuse": "Y",
-        "data_subject": "Customer"
-      }
-    },
-    "f500": "N",
-    "asset": {
-      "total": "No"
-    },
-    "timeline": {
-      "notification": {
-        "year": 2012,
-        "day": 19,
-        "month": 6
-      }
-    }
-  },
+  }, 
   "actor": {
     "external": {
-      "motive": [
-        "Financial"
-      ],
       "country": [
         "Unknown"
-      ],
+      ], 
+      "motive": [
+        "Financial"
+      ], 
       "variety": [
         "Unaffiliated"
       ]
     }
-  },
-  "victim": [
-    {
-      "victim_id": "ECS Tuning",
-      "revenue": {
-        "iso_currency_code": "USD",
-        "amount": 3900000
-      },
-      "country": "US",
-      "notes": "",
-      "state": "OH",
-      "employee_count": "11 to 100",
-      "industry": "441310"
-    }
-  ],
-  "timeline": {
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "year": 2012,
-      "day": 6,
-      "month": 5
-    },
-    "compromise": {
-      "unit": "Unknown"
-    },
-    "containment": {
-      "unit": "Weeks"
-    },
-    "discovery": {
-      "unit": "Unknown"
-    }
-  },
-  "action": {
-    "hacking": {
-      "notes": "",
-      "vector": [
-        "Web application"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
+  }, 
   "asset": {
     "assets": [
       {
         "variety": "S - Database"
       }
     ]
-  }
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 71, 
+          "variety": "Payment"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_total": 71, 
+      "notes": "", 
+      "state": [
+        "Stored unencrypted"
+      ]
+    }, 
+    "integrity": {
+      "notes": "Web Server misappropriated via likley SQLi to affect database.", 
+      "variety": [
+        "Misappropriation"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - fraud detection", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint562", 
+  "notes": "", 
+  "plus": {
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "Y", 
+        "data_subject": "Customer"
+      }
+    }, 
+    "f500": "N", 
+    "master_id": "osint562", 
+    "timeline": {
+      "notification": {
+        "day": 19, 
+        "month": 6, 
+        "year": 2012
+      }
+    }
+  }, 
+  "reference": "http://doj.nh.gov/consumer/security-breaches/documents/ecs-tuning-20120619.pdf", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "E-commerce site compromised via undisclosed methods and customer payment card information was exposed. SQLi highly likely vector CPP likely method of discovery.", 
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    }, 
+    "containment": {
+      "unit": "Weeks"
+    }, 
+    "discovery": {
+      "unit": "Unknown"
+    }, 
+    "exfiltration": {
+      "unit": "Unknown"
+    }, 
+    "incident": {
+      "day": 6, 
+      "month": 5, 
+      "year": 2012
+    }
+  }, 
+  "victim": [
+    {
+      "country": "US", 
+      "employee_count": "11 to 100", 
+      "industry": "441310", 
+      "notes": "", 
+      "revenue": {
+        "amount": 3900000, 
+        "iso_currency_code": "USD"
+      }, 
+      "state": "OH", 
+      "victim_id": "ECS Tuning"
+    }
+  ]
 }

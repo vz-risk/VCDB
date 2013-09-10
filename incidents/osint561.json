@@ -1,112 +1,112 @@
 {
-  "impact": {
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "osint561",
-  "reference": "http://www.cyberwarnews.info/2012/02/09/economic-development-association-scotland-hacked-and-data-leaked-by-epoch/",
-  "attribute": {
-    "integrity": {
+  "action": {
+    "hacking": {
+      "notes": "", 
       "variety": [
-        "Misappropriation"
+        "SQLi"
+      ], 
+      "vector": [
+        "Web application"
       ]
-    },
-    "confidentiality": {
-      "notes": "Usernames in clear text, passwords are encrypted.",
-      "data_disclosure": "Yes",
-      "data": [
-        {
-          "amount": 647,
-          "variety": "Credentials"
-        }
-      ],
-      "state": [
-        "Stored encrypted"
-      ],
-      "data_total": 647
     }
-  },
-  "notes": "",
-  "discovery_method": "Ext - actor disclosure",
-  "schema_version": "1.2",
-  "summary": "Hacker posts 647 usernames and encrypted passwords to pastebin.com. Method used to access information not provided ",
-  "source_id": "osint",
-  "security_incident": "Confirmed",
-  "plus": {
-    "master_id": "osint561",
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": "U",
-        "data_abuse": "Y",
-        "data_subject": "Customer"
-      }
-    },
-    "f500": "U",
-    "asset": {
-      "total": "No"
-    },
-    "timeline": {
-      "notification": {
-        "year": 2012,
-        "day": 9,
-        "month": 2
-      }
-    }
-  },
+  }, 
   "actor": {
     "external": {
-      "motive": [
-        "Fun"
-      ],
       "country": [
         "Unknown"
-      ],
+      ], 
+      "motive": [
+        "Fun"
+      ], 
       "variety": [
         "Unaffiliated"
       ]
     }
-  },
-  "victim": [
-    {
-      "victim_id": "Economic Development Association Scotland",
-      "notes": "",
-      "industry": "5419",
-      "employee_count": "11 to 100",
-      "country": "GB"
-    }
-  ],
-  "timeline": {
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "year": 2012
-    },
-    "compromise": {
-      "unit": "Unknown"
-    },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Unknown"
-    }
-  },
-  "action": {
-    "hacking": {
-      "notes": "",
-      "vector": [
-        "Web application"
-      ],
-      "variety": [
-        "SQLi"
-      ]
-    }
-  },
+  }, 
   "asset": {
     "assets": [
       {
         "variety": "S - Database"
       }
     ]
-  }
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 647, 
+          "variety": "Credentials"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_total": 647, 
+      "notes": "Usernames in clear text, passwords are encrypted.", 
+      "state": [
+        "Stored encrypted"
+      ]
+    }, 
+    "integrity": {
+      "variety": [
+        "Misappropriation"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - actor disclosure", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "osint561", 
+  "notes": "", 
+  "plus": {
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "Y", 
+        "data_subject": "Customer"
+      }
+    }, 
+    "f500": "U", 
+    "master_id": "osint561", 
+    "timeline": {
+      "notification": {
+        "day": 9, 
+        "month": 2, 
+        "year": 2012
+      }
+    }
+  }, 
+  "reference": "http://www.cyberwarnews.info/2012/02/09/economic-development-association-scotland-hacked-and-data-leaked-by-epoch/", 
+  "schema_version": "1.2", 
+  "security_incident": "Confirmed", 
+  "source_id": "osint", 
+  "summary": "Hacker posts 647 usernames and encrypted passwords to pastebin.com. Method used to access information not provided ", 
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    }, 
+    "containment": {
+      "unit": "Unknown"
+    }, 
+    "discovery": {
+      "unit": "Unknown"
+    }, 
+    "exfiltration": {
+      "unit": "Unknown"
+    }, 
+    "incident": {
+      "year": 2012
+    }
+  }, 
+  "victim": [
+    {
+      "country": "GB", 
+      "employee_count": "11 to 100", 
+      "industry": "5419", 
+      "notes": "", 
+      "victim_id": "Economic Development Association Scotland"
+    }
+  ]
 }
