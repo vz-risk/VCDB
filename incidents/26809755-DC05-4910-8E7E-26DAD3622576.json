@@ -52,7 +52,7 @@
     }
   },
   "reference": "https://oag.ca.gov/system/files/CA%20notification%2060413_0.pdf?",
-  "schema_version": "1.2",
+  "schema_version": "1.2.1",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "The 401(k) retirement plan information of certain clients was inadvertently exposed when a MassMutual account manager sent an email on May 8.  Names, Social Security numbers, investment elections, and account balances were included in the email.  A third party provider received the email and confirmed that the information was deleted without being saved or copied. The employee who accidentally sent the sensitive email received training on proper security procedures.",
@@ -63,19 +63,17 @@
       "year": 2013
     }
   },
-  "victim": [
-    {
-      "country": "US",
-      "employee_count": "1001 to 10000",
-      "industry": "524113",
-      "state": "MA",
-      "victim_id": "MassMutual Financial Group"
+  "victim": {
+    "country": "US",
+    "employee_count": "1001 to 10000",
+    "industry": "524113",
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Massachusetts Mutual Life Insurance Company"
+      ]
     },
-    {
-      "country": "Unknown",
-      "employee_count": "Unknown",
-      "industry": "000000",
-      "victim_id": "Massachusetts Mutual Life Insurance Company"
-    }
-  ]
+    "state": "MA",
+    "victim_id": "MassMutual Financial Group"
+  }
 }
