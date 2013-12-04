@@ -5,7 +5,7 @@ Information sharing is a complex and challenging undertaking. If done correctly,
 While there are a handful of efforts to capture security incidents that are publicly disclosed, there is no unrestricted, comprehensive raw dataset available for download on security incidents that is sufficiently rich to support both community research and corporate decision-making. There are organizations that collect—and in some form—disseminate aggregated collections, but they are either not in a format that lends itself to ease of data manipulation and transformation required for research, or the underlying data are not freely and publicly available for use. This gap has long hampered researchers who are studying the problems surrounding security incidents, as well as the risk managers who are starved for reliable data upon which to base their risk calculations.
 
 # Getting Involved
-If you want to get involved in this project, we have directions in the wiki for this repo.
+If you want to get involved in this project, we have directions in the wiki for this repo.  If you are new to GitHub, it is the book icon to the right of this page section.
 
 # Using the application to code incidents
 At this time there is no public application for coding an incident in VERIS format and contributing to the database. However, an application is in the works and is included with this repository. You can see the progress of the application by following these directions
