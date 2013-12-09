@@ -7,6 +7,17 @@ While there are a handful of efforts to capture security incidents that are publ
 # Getting Involved
 If you want to get involved in this project, we have directions in the wiki for this repo.  If you are new to GitHub, it is the book icon to the right of this page section.
 
+
+
+
+# VCDB Statistics
+
+![plot of chunk yearly](figure/yearly.png) 
+
+
+![plot of chunk a2grid](figure/a2grid.png) 
+
+
 # Using the application to code incidents
 At this time there is no public application for coding an incident in VERIS format and contributing to the database. However, an application is in the works and is included with this repository. You can see the progress of the application by following these directions
 
