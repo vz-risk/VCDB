@@ -21,10 +21,3 @@ If you want to get involved in this project, we have directions in the wiki for 
 
 
 
-# Using the application to code incidents
-At this time there is no public application for coding an incident in VERIS format and contributing to the database. However, an application is in the works and is included with this repository. You can see the progress of the application by following these directions
-
-    virtualenv venv
-    source venv/bin/activate
-    pip install flask
-    python app/vcdb.py
