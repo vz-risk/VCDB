@@ -35,6 +35,9 @@
       "data": [
         {
           "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
         }
       ],
       "data_disclosure": "Yes",
@@ -47,10 +50,22 @@
   },
   "discovery_method": "Unknown",
   "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 1600000,
+        "variety": "Response and recovery"
+      },
+      {
+        "amount": 2100000,
+        "variety": "Business disruption"
+      }
+    ],
+    "overall_min_amount": 3700000,
     "overall_rating": "Unknown"
   },
   "incident_id": "21E1B7E1-A38A-4284-9A05-CAE129C2402C",
-  "notes": "",
+  "notes": "The DOE report mentions that log review identified events early on, but the discovery date is later and so it isnt clear if reviewing those earlier events lead to discovery of the incident.",
   "plus": {
     "analysis_status": "First pass",
     "analyst": "swidup",
@@ -67,7 +82,7 @@
     "created": "2013-08-21T23:44:32Z",
     "f500": "N",
     "master_id": "21E1B7E1-A38A-4284-9A05-CAE129C2402C",
-    "modified": "2013-12-06T17:29:00Z",
+    "modified": "2013-12-15T16:41:59Z",
     "timeline": {
       "notification": {
         "day": 5,
@@ -76,13 +91,27 @@
       }
     }
   },
-  "reference": "http://www.informationweek.com/security/attacks/department-of-energy-confirms-data-breac/240147877, http://www.infoworld.com/t/hacking/data-breach-exposes-energy-departments-continuing-story-of-negligence-212246, http://www.informationweek.com/security/attacks/energy-department-updates-breach-count-s/240160706, http://www.informationweek.com/security/attacks/doe-breach-count-now-exceeds-100000/240162952",
+  "reference": "http://www.informationweek.com/security/attacks/department-of-energy-confirms-data-breac/240147877, http://www.infoworld.com/t/hacking/data-breach-exposes-energy-departments-continuing-story-of-negligence-212246, http://www.informationweek.com/security/attacks/energy-department-updates-breach-count-s/240160706, http://www.informationweek.com/security/attacks/doe-breach-count-now-exceeds-100000/240162952;http://energy.gov/sites/prod/files/2013/12/f5/IG-0900.pdf (20131215)",
   "schema_version": "1.2.1",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "The U.S. Department of Energy has admitted that unidentified malicious hackers successfully breached 14 of its servers and 20 of its workstations two weeks ago, making off with personal information belonging to several hundred employees. The department's assurances that \"no classified data was compromised\" come as little comfort, however, considering the department's spotty security history.  \"It's a continuing story of negligence,\" Ed McCallum, former director of the department's office of safeguards and security, told the Free Beacon. \"[The department] is on the cutting edge of some of the most sophisticated military and intelligence technology the country owns and it is being treated frivolously by the Department of Energy and its political masters.\"",
   "timeline": {
+    "compromise": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 15
+    },
+    "exfiltration": {
+      "unit": "Days",
+      "value": 2
+    },
     "incident": {
+      "day": 24,
+      "month": 7,
       "year": 2013
     }
   },
