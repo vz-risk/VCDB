@@ -11,9 +11,9 @@ db = server[DATABASE]
 col = db[COLLECTION]
 
 
-for (path, dirs, files) in os.walk('../incidents/'):
+for (path, dirs, files) in os.walk('../data/json/'):
     for file in files:
-        print('loading: '+os.path.join('../incidents/',file))
-        infile = open(os.path.join('../incidents/',file), 'rb')
+        print('loading: '+os.path.join('../data/json/',file))
+        infile = open(os.path.join('../data/json/',file), 'rb')
         incident = json.loads(infile.read())
         col.insert(incident)
