@@ -1,7 +1,7 @@
 {
   "action": {
     "hacking": {
-      "notes": "SQLi activist",
+      "notes": "making an educated guess about SQLi.",
       "variety": [
         "SQLi"
       ],
@@ -13,13 +13,14 @@
   "actor": {
     "external": {
       "country": [
-        "Unknown"
+        "AR"
       ],
       "motive": [
-        "Fun"
+        "Other"
       ],
+      "notes": "Other motive of wanted to be sure citizen data was protected, though could be \"curiousity\" too.",
       "variety": [
-        "Activist"
+        "Unaffiliated"
       ]
     }
   },
@@ -32,22 +33,19 @@
     ],
     "hosting": "Unknown",
     "management": "Unknown",
-    "ownership": "Unknown"
+    "ownership": "Victim"
   },
   "attribute": {
     "confidentiality": {
       "data": [
         {
           "variety": "Personal"
-        },
-        {
-          "variety": "Internal"
         }
       ],
       "data_disclosure": "Yes",
-      "notes": "\"tens of .csv files and a couple of log files. Theyve also leaked the names, email addresses, phone numbers and IP addresses of individuals who are presumably Chinese officials.\"",
+      "data_total": 5900,
       "state": [
-        "Unknown"
+        "Stored unencrypted"
       ]
     },
     "integrity": {
@@ -60,46 +58,47 @@
   "impact": {
     "overall_rating": "Unknown"
   },
-  "incident_id": "ADFB981E-6178-49EB-830E-B8C87C6A02F0",
+  "incident_id": "434E52F3-74AA-4087-9DD4-E98C9160D84B",
   "plus": {
-    "analysis_status": "Validated",
+    "analysis_status": "First pass",
     "analyst": "jayjacobs",
     "attribute": {
       "confidentiality": {
         "credit_monitoring": "U",
-        "data_subject": "Unknown"
+        "data_subject": "Other"
       }
     },
-    "created": "2013-11-05T02:27:00Z",
-    "github": "760",
-    "master_id": "ADFB981E-6178-49EB-830E-B8C87C6A02F0",
-    "modified": "2013-12-27T17:58:43Z",
+    "created": "2013-12-13T20:04:00Z",
+    "github": "1080",
+    "master_id": "434E52F3-74AA-4087-9DD4-E98C9160D84B",
+    "modified": "2013-12-13T20:04:00Z",
     "timeline": {
       "notification": {
-        "day": 4,
-        "month": 11,
         "year": 2013
       }
     }
   },
-  "reference": "http://news.softpedia.com/news/Hackers-Leak-Data-Allegedly-Stolen-from-Chinese-Chamber-of-Commerce-Website-396936.shtml",
+  "reference": "https://www.privacyinternational.org/blog/ignoring-repeated-warnings-argentina-biometrics-database-leaks-personal-data",
   "schema_version": "1.2.1",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
-  "summary": "anon group \"Raptor Swag\" hacking Chinese, \"China Chamber of International Commerce (CCOIC)  Zhejiang Chamber of Commerce (ccpitzj.gov.cn)\" through SQLinjection. ",
+  "summary": "Multiple external \"concerned citizens\" were able to download data (photos of voters) from the voter registration site. ",
   "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Hours"
     },
     "incident": {
-      "month": 11,
+      "month": 10,
       "year": 2013
     }
   },
   "victim": {
-    "country": "CN",
+    "country": "AR",
     "employee_count": "Unknown",
-    "industry": "928",
-    "victim_id": "CN China Chamber of International Commerce"
+    "industry": "921",
+    "victim_id": "National Electoral Commission of Argentina"
   }
 }
