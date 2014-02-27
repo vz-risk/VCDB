@@ -7,6 +7,7 @@ DATABASE = 'kevin'
 COLLECTION = 'vcdb'
 
 server = pymongo.Connection(SERVER)
+server.drop_database(DATABASE)
 db = server[DATABASE]
 col = db[COLLECTION]
 
