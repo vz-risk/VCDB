@@ -56,20 +56,21 @@
     </div>
 
     <div class="container">
-      <p class="bg-info">Tnhis is a contextual background</p>
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-12">
           <h1 id="incident_title"></h1>
           <p id="incident_body"></p>
-          <h2>Denial of Service</h2>
-          <p>This incident has been classified as a Denial of Service attack
-            all the question below are based on that initial classification.
-            <a href="#"><span class="text-danger">Click here if this is wrong!</span></a>
-          </p>
-          <form name="incident" id="incident_form" method="post" action="http://rubes-61775.use1.nitrousbox.com:8888/getdos">
+          <div class="alert alert-info">
+            <h2>Denial of Service</h2>
+            <p>This incident has been classified as a Denial of Service attack
+              all the question below are based on that initial classification.
+            </p>
+            <button type="button" class="btn btn-danger">That's incorrect!</button>
+          </div><!-- end of the alert div -->
+          <form name="incident" id="incident_form" method="post" action="http://kevdog-nodejs-99338.use1.nitrousbox.com/what">
             <h2>Timeline</h2>
-            <p class="text-primary">When did the Denial of service incident happen?</p>
+            <p class="text-muted">When did the Denial of service incident happen?</p>
             <div class="row"><!-- that's right a row within a row -->
               <div class="col-lg-4">
                 <div class="form-group">
@@ -142,7 +143,7 @@
               </div>
             </div><!-- end of the row within a row -->
             <h2>Victim Demographics</h2>
-            <p class="text-primary">What do we know about the organization that was DDoSed?</p>
+            <p class="text-muted">What do we know about the organization that was DDoSed?</p>
             <div class="row">
               <div class="col-lg-4">
                 <div class="form-group">
@@ -163,7 +164,7 @@
               <div class="col-lg-4">
                 <div class="form-group">
                   <label>Victim industry</label>
-                  <select name="employee_count" class="form-control">
+                  <select name="industry" class="form-control">
                     <optgroup label="Common options">
                       <option value="92">Government</option>
                       <option value="62">Health care</option>
@@ -190,7 +191,7 @@
               </div>
             </div><!-- end of vic demographics row -->
             <h2>Actor information</h2>
-            <p class="text-primary">What do we know about the people that did this?</p>
+            <p class="text-muted">What do we know about the people that did this?</p>
             <div class="row">
               <div class="col-lg-4">
                 <div class="form-group">
@@ -270,7 +271,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label>Your nickname</label>
-                  <input name="nickname" class="form-control" required placeholder="Who should we credit?">
+                  <input name="nickname" class="form-control" required placeholder="Who should we credit? twitter handle? gitub id?">
                 </div>
               </div>
               <div class="col-lg-6">
@@ -280,7 +281,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-success btn-lg">Contribute</button>
+            <button type="submit" class="btn btn-success btn-lg">Contribute</button>
 
 
           </form>
@@ -305,7 +306,7 @@
             incident = data[Math.floor(Math.random() * data.length)];
             $('#incident_title').text(incident.title);
             $('#incident_body').text(incident.body);
-            $('#incident_form').append('<input type="hidden" value='+incident.number+'>')
+            $('#incident_form').append('<input type="hidden" name="github" value='+incident.number+'>')
           })
         </script>
 
