@@ -66,7 +66,7 @@
             <p>This incident has been classified as a Denial of Service attack
               all the question below are based on that initial classification.
             </p>
-            <button type="button" class="btn btn-danger">That's incorrect!</button>
+            <button type="button" class="btn btn-danger" id="wrong_dos">That's incorrect!</button>
           </div><!-- end of the alert div -->
           <form name="incident" id="incident_form" method="post" action="http://kevdog-nodejs-99338.use1.nitrousbox.com/what">
             <h2>Timeline</h2>
@@ -185,7 +185,7 @@
                     <option value="61">Educational services</option>
                     <option value="71">Recreation</option>
                     <option value="72">Hospitality</option>
-                    <option value="81">Other services</option>
+                    <option value="81">Political parties and social advocacy groups</option>
                   </select>
                 </div>
               </div>
@@ -298,16 +298,28 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/main.js"></script>
+        <script src="js/ba-linkify.min.js"></script>
 
         <script>
           $.getJSON("https://api.github.com/repos/vz-risk/VCDB/issues?labels=dos",function(data){
             incident = data[Math.floor(Math.random() * data.length)];
             $('#incident_title').text(incident.title);
-            $('#incident_body').text(incident.body);
+            $('#incident_body').html(linkify(incident.body,{callback: function(text,href){
+              if (typeof href !== "undefined"){
+              $('#incident_form').append('<input type="hidden" name="source" value='+href+'>')};
+              return href ? '<a href="' + href + '" title="' + href + '" target="_blank">' + text + '</a>' : text;
+            }}));
             $('#incident_form').append('<input type="hidden" name="github" value='+incident.number+'>')
-          })
+          });
+
+          $('#wrong_dos').click(function(){
+            $.post("http://kevdog-nodejs-99338.use1.nitrousbox.com/wrong",
+              {github:incident.number}).always(function(){window.location="/v2/thank.html"});
+
+          });
+
+
         </script>
 
 <!--
