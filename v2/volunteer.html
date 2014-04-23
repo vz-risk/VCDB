@@ -194,7 +194,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label>Victim country</label>
-                  <select name="victim-country" class="form-control" id="victim-country">
+                  <select name="victim_country" class="form-control" id="victim_country">
                     <optgroup label="Common options">control">
                     <optgroup label="Common options">
                       <option value="US">United States of America</option>
@@ -453,9 +453,9 @@
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="form-group hidden" id="victim-region">
+                <div class="form-group hidden" id="victim_region">
                   <label>Victim Region (if country is unknown)</label>
-                  <select name="victim-region" class="form-control">
+                  <select name="victim_region" class="form-control">
                     <option value="000000">Unknown</option>
                     <option value="002000">Africa</option>
                     <option value="002014">&nbsp;-&nbsp;Eastern Africa</option>
@@ -617,10 +617,10 @@
               {github:incident.number}).always(function(){window.location="/v2/thank.html"});
           });
           
-          $('#victim-country').change(function(){
-            $('#victim-region').addClass("hidden");
-            if ( $('#victim-country').val() == "Unknown") {
-              $("#victim-region").toggleClass("hidden");
+          $('#victim_country').change(function(){
+            $('#victim_region').addClass("hidden");
+            if ( $('#victim_country').val() == "Unknown") {
+              $("#victim_region").toggleClass("hidden");
             }
           });
 
