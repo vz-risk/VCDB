@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="keywords" content="VCDB VERIS Community Database data breach data-breach information security">
+        <meta name="description" content="Free and open source collection of information security breach data">
+
+        <title>VCDB VERIS Community Database</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 70px;
+                padding-bottom: 20px;
+            }
+        </style>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/nv.d3.css"/>
+        <link rel="stylesheet" href="css/explore.css"/>
+
+        <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/colorbrewer.v1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/queue.v1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/topojson.v1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/nv.d3.min.js" charset="utf-8"></script>
+
+        <script type="text/javascript" src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" charset="utf-8"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">VCDB</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Explore</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <ul id="exploreTab" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#how" data-toggle="tab">Exploring the VCDB</a></li>
+        <li><a href="#geo" data-toggle="tab">Geo</a></li>
+        <li><a href="#patterns" data-toggle="tab">Patterns</a></li>
+      </ul>
+
+      <div id="exploreContent" class="tab-content" style="padding-top:20px">
+
+       <div class="tab-pane active" id="how">
+         
+         <div class="row">
+            <div class="col-md-4">
+             <h3>Welcome to the VCDB Explorer!</h3>
+             <p>The <b>Vocabulary for Event Recording and Incident Sharing (VERIS)</b> is a set of metrics designed to provide a common language for describing security incidents in a structured and repeatable manner. VERIS is a response to one of the most critical and persistent challenges in the security industry - a lack of quality information. VERIS targets this problem by helping organizations to collect useful incident-related information and to share that information - anonymously and responsibly - with others. The overall goal is to lay a foundation from which we can constructively and cooperatively learn from our experiences to better measure and manage risk.  Learn more at <a href="http://www.veriscommunity.net">http://www.veriscommunity.net</a>.</p>
+             <p>Each tab lets you explore different aspects of the VCDB data set. The visualizations are updated regularly and new ones are always in the works.</p>
+           </div>
+           
+           <div class="col-md-8">
+             <div id="byyear" style="margin-left:auto; margin-right:auto"><center><h4>Incident Count By Year</h4></center><svg style="margin-left:auto; margin-right:auto"></svg></div>
+           </div>
+           
+         </div>
+         <div class="row">
+           <div class="col-md-12" style="text-align:center"><h4>Incident Counts by:</h4></div>
+         </div>
+         <div class="row">
+            <div class="col-md-3"><div id="actor"><center><h4>Actor</h4></center><svg style="margin-left:auto; margin-right:auto"></svg></div></div>
+            <div class="col-md-3"><div id="attribute"><center><h4>Attribute</h4></center><svg style="margin-left:auto; margin-right:auto"></svg></div></div>           
+            <div class="col-md-3"><div id="action"><center><h4>Action</h4></center><svg style="margin-left:auto; margin-right:auto"></svg></div></div>
+            <div class="col-md-3"><div id="asset"><center><h4>Asset</h4></center><svg style="margin-left:auto; margin-right:auto"></svg></div></div>
+         </div>
+         
+       </div>
+
+        <div class="tab-pane" id="geo">
+
+          <div class="row">
+
+            <div class="col-md-5">
+              <center><b>VCDB Incidents By Country</b></center>
+              <div id="vcdbmap"></div>
+              <center><div id="countrySel" style="padding-top:5px; padding-bottom:10px;"></div></center>
+              <div style="width:75%; margin-right:auto; margin-left:auto"><p>Select a country from the map or list and view the industries that were most impacted.</p></div>
+            </div>
+
+            <div class="col-md-7">
+              <center><b><span id="countrySpan">Global </span>Incidents By Industry</b></center>
+              <div id="byindustry">
+                <svg style="margin-left:auto; margin-right:auto"></svg>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tab-pane" id="patterns">
+
+          <div class="row">
+
+            <div class="col-md-3">
+              <h3>VCDB Incident/Breach Patterns By Industry</h3>
+              <p>This shows the proportion of incidents within each industry represented by the nine patterns. Identify your industry on the X-axis (refer to the <a href="https://www.census.gov/eos/www/naics/">NAICS website</a> if you’re unsure where your organization fits). The percentages are relative to each industry.</p>
+              <p>Hover on each cell to see in-industry incident counts.</p>
+              
+              <p>You can also switch views from all incidents to ones with confirmed data disclosure</p>
+              
+              <div id="heattoggle" class="btn-group" data-toggle="buttons">
+                <label id="all" class="btn btn-default active">
+                  <input type="radio" name="options" id="all"> All Breaches
+                </label>
+                <label id="discl" class="btn btn-default">
+                  <input type="radio" name="options" id="breach"> Only Data Disclosure
+                </label>
+              </div>
+              
+            </div>
+            
+            <div class="col-md-9">
+              <div id="pheat">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <hr>
+
+      <footer>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </footer>
+    </div> <!-- /container -->
+
+    <script type="text/javascript" src="js/explore.js" charset="utf-8"></script>
+
+        <!-- // <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script> -->
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-49862516-1', 'vcdb.org');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
