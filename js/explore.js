@@ -21,8 +21,10 @@ var tooltip = d3.select("#vcdbmap").append("div").attr("class", "tooltip hidden"
 var heattip ;
 var hoffsetLeft = document.getElementById("pheat").offsetLeft + 40 ;
 var hoffsetTop = document.getElementById("pheat").offsetTop + 30 ;
+var uri_pattern = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig;
 
-var commas = d3.format("0,000")
+
+var commas = d3.format(",")
 
 d3.select(window).on('resize', resize);
 
@@ -43,6 +45,10 @@ queue()
 queue()
     .defer(d3.json, "data/a4.json")
     .await(makesummary);
+
+queue()
+    .defer(d3.csv, "data/indtime.csv?1")
+    .await(maketimeline);
 
 /**
  * Called when window is resized.
@@ -736,11 +742,18 @@ function heatupdate(newdata) {
 }
 
 /**
- * Heatmap button callbacks
- * Used to switch data sets
+ * button callbacks
+ * Used to switch data sets for various vis
  */
 
-$(function(){ 
+$(document).ready(function(){ 
+
+    $('.multiselect').multiselect({
+      buttonClass: 'btn btn-default btn-sm',
+      includeSelectAllOption: true,
+      includeSelectAllDivider: true,
+      buttonWidth: '200px'
+    });
 
     $('#all').on('click', function() {
       heatupdate(all) ;
@@ -749,5 +762,376 @@ $(function(){
     $('#discl').on('click', function() {      
       heatupdate(discl) ;
     });
+
+    $('#tindustry').on('click', function() {
+      timelineupdate("industry")
+    })
+
+    $('#tpattern').on('click', function() {
+      timelineupdate("pattern")
+    })
+
+    $('#tvariety').on('click', function() {
+      timelineupdate("data_variety")
+    })
+
+    $('#tabout').on('click', function() {
+      $('#thelpmodal').modal('toggle');
+    })
+
+    $('#tbutdat').on('click', function() {
+      $('#datamodal').modal('toggle');
+    })
+
+    $('#tindsel').change(function() { changetimeopts(); })
+    $('#tpatsel').change(function() { changetimeopts(); })
+    $('#tvarsel').change(function() { changetimeopts(); })
     
 });
+
+
+/**
+ * Called to handle changes to the filters for the timeline vis
+ */
+
+function changetimeopts() {
+
+  var varopts = $("#tvarsel option:selected").map(function(){ return this.value }).get();
+  var indopts = $("#tindsel option:selected").map(function(){ return this.value }).get();
+  var patopts = $("#tpatsel option:selected").map(function(){ return this.value }).get();
+
+  $.each(rectime, function(i) {
+    this.visible = ((varopts.indexOf(this.data_variety) > -1) &&
+                    (indopts.indexOf(this.industry) > -1) &&
+                    (patopts.indexOf(this.pattern) > -1)) ? "TRUE" : "FALSE" ; 
+  })
+
+  timechange(rectime);
+
+}
+
+var timetooltip = d3.select("body").append("div")
+    .attr("class", "timetip")
+    .style("opacity", 0);
+
+
+/**
+ * Called to update the timeline
+ * @tparam Object data the data for the timeline (cld just use the global tho)
+ */
+
+function timechange(data) {
+
+  var recct=0, incct=0 ;
+
+  $.each(rectime, function(i) {
+    if (this.visible == "TRUE") {
+      recct = recct + (+this.data_total) ;
+      incct = incct + 1 ;
+    }; 
+  })
+
+  $("#incct").html(commas(incct));
+  $("#recct").html(commas(recct));
+
+  var upd = tsvg.selectAll(".tdot")
+      .data(data);
+
+  upd.attr("class", "tdot")
+      .attr("class", "tdot")
+      .attr("r", 3.5)      
+      .style("fill", function(d) { return(tcolor[t.colorby](d[t.colorby])) })
+      .attr("stroke", "black")
+      .attr("stroke-width", function(d) { 
+        if (d.visible == "TRUE") {
+          return("0.5");
+        } else {
+          return("0")
+        }
+      })
+      .attr("cy", function(d) { return ty(+d["data_total"]) })
+      .transition().duration(1000).ease('quad')
+      .attr("cx", function(d) { 
+        if (d.visible == "TRUE") {
+          return tx(new Date(d["incident.month"] + "/1/" +d["incident.year"]));
+        } else {
+          return(-2)
+        }
+      })
+      .attr("fill-opacity", function(d) { return(d.visible == "TRUE" ? 0.9 : 0.0) })
+      ;
+
+  upd.enter().append("circle")
+      .attr("class", "tdot")
+      .attr("r", 3.5)      
+      .attr("stroke", "black")
+      .attr("stroke-width", function(d) { 
+        if (d.visible == "TRUE") {
+          return("0.5");
+        } else {
+          return("0")
+        }
+      })
+      .style("fill", function(d) { return(tcolor[t.colorby](d[t.colorby])) })
+      .attr("cy", function(d) { return ty(+d["data_total"]) })
+      .transition().duration(1000).ease('quad')
+      .attr("cx", function(d) { 
+        if (d.visible == "TRUE") {
+          return tx(new Date(d["incident.month"] + "/1/" +d["incident.year"]));
+        } else {
+          return(-2)
+        }
+      })
+      .attr("fill-opacity", function(d) { return(d.visible == "TRUE" ? 0.9 : 0.0) })
+      ;
+
+  upd.on("mouseover", function(d, i) {
+   
+    timetooltip.transition()
+               .duration(200)
+               .style("opacity", 1.0);
+
+    var shortsum = d.summary ;
+    if (shortsum.length > 100) {
+      shortsum = shortsum.substr(0,96) + "..."
+    }
+
+    var addw = (d3.event.pageX < $(window).width()*2/3 ? d3.event.pageX : d3.event.pageX - 200 - 40);
+    
+    // <span class="label label-success"
+    var v = d["data_variety"].split(",").map(function(x) { return('<span class="label label-success" style="display:inline-block;background-color:'+tcolor["data_variety"](d["data_variety"])+'">' + x + '</span> ') }).join(" ")
+
+    timetooltip.html("<span style='font-weight:bold;font-size:110%;color:"+tcolor[t.colorby](d[t.colorby])+"'>"+d["victim.name"]+"</span> ("+commas(+d["data_total"])+"&nbsp;records)" + 
+                     "<br/>" + 
+                      '<b>Industry:</b> <span class="label label-success" style="display:inline-block;background-color:'+tcolor["industry"](d["industry"])+'">' + d.industry + '</span>'+"<br/>" + 
+                      "<table><tr valign='top'><td nowrap><b>Data Variety:&nbsp;</b></td><td>"+ v +"</td></tr></table>" + 
+                      '<b>Pattern:</b> <span class="label label-success" style="display:inline-block;background-color:'+tcolor["pattern"](d["pattern"])+'">' + d.pattern + '</span>'+"<br/>" + 
+                      "<b>Year:</b> "+d["incident.year"]+"<br/><div style='width:100%;text-align:center;font-size:75%'>Click for more</div>")
+               .style("left", (addw + 20) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+
+    });
+
+
+  upd.on("mouseout", function(d, i) { timetooltip.transition().duration(500).style("opacity", 0); });
+
+  upd.on("click", function(d, i) {
+
+    timetooltip.transition().duration(500).style("opacity", 0);
+
+    $('#victimdialog').css({ width:'90%x', height:'650px', 'padding':'0' });
+
+    $('#victimcontent').css({ height:'650px', 'padding':'0' });
+
+    var ref = d.reference;
+
+    var prog = '<div id="tprog" style="width:100%"><center><h2>Loading</h2><img src="img/spiffygif_88x88.gif"/></center></div>';
+
+    var flag = '<img src="img/1x1.png" class="flag flag-' + d["victim.country"].toLowerCase() + '"/>';
+    
+    var v = d["data_variety"].split(",").map(function(x) { return('<span class="label label-success" style="display:inline-block;background-color:'+tcolor["data_variety"](d["data_variety"])+'">' + x + '</span> ') }).join(" ");
+
+    $('#victimcontent').html("<div id='tmb' class='modal-body'>"+
+                      "<span style='float:left;font-weight:bold;color:"+tcolor[t.colorby](d[t.colorby])+"'>"+d["victim.name"]+"&nbsp; "+flag+"</span>&nbsp; ("+commas(+d["data_total"])+" records)"+ 
+                      "<span style='float:right'><span class='glyphicon glyphicon-new-window'></span> <a style='color:"+tcolor[t.colorby](d[t.colorby])+";font-style:bold' target=_blank href='https://github.com/vz-risk/VCDB/blob/master/data/json/"+d.incident_id+".json'>JSON entry for this incident</a></span>"+
+                      "<table style='padding-top:0px;margin-top:0px' width='100%'><tr valign='bottom'><td nowrap width='20%' style='padding-right:10px'>"+
+                      '<div class="well well-sm" style="height:100%;">'+
+                      '<b>Industry:</b> <span class="label label-success" style="display:inline-block;background-color:'+tcolor["industry"](d["industry"])+'">' + d.industry + '</span>'+"<br/>" + 
+                      "<b>Data Variety:</b> "+v+"<br/>" + 
+                      '<b>Pattern:</b> <span class="label label-success" style="display:inline-block;background-color:'+tcolor["pattern"](d["pattern"])+'">' + d.pattern + '</span>'+"<br/>" + 
+                      "<b>Year:</b> "+d["incident.year"]+"</div></td><td>" + 
+                      "<textarea class='form-control' style='resize:none;padding:9px;height:100%;' rows='4'>"+d.summary+"</textarea><br/></td></tr><br/><br/></div>");
+
+    if (d.canLoad == "NULL") {
+
+      $('#tmb').append(prog)
+   
+      var iframe = document.createElement("iframe");
+      iframe.sandbox = "allow-same-origin allow-scripts allow-popups allow-forms" ; // try to stop iframe busting
+      iframe.src = ref;
+      $('#tprog').remove();
+      $('#tmb').append(iframe);
+      $('#tmb').find('iframe').css({"height":"440px", "margin":"auto", "width":"99.6%", "border":"1px solid black"});
+
+    } else if (d.canLoad == "NA") {
+
+      $('#tmb').append("No news reference URL specified");
+
+    } else {
+
+      $('#tmb').append("<i>Cannot display news frame due to site origin restrictions.</i><br/>Please visit <a target=_blank href='"+ref+"'>their site directly</a>.");
+
+    }
+
+    $('#victimmodal').modal('toggle');
+
+  })
+
+}
+
+/**
+ * Called as part of an array filter to filter by industries
+ * Used in the timeline visualization
+ * @tparam array industry array of industries to filter on.
+ */
+
+function indfilt(indf) {
+  if (indf.length == 0) { return(function(node) { return(false) }); }
+  return function(node) {
+    return(indf.indexOf(node.industry) > -1)
+  }
+}
+
+function varfilt(varf) {
+  if (varf.length == 0) { return(function(node) { return(false) }); }
+  return function(node) {
+    return(varf.indexOf(node["data_variety"]) > -1)
+  }
+}
+
+var tmp, rectime ;
+var t = {} ;
+t.colorby = "industry" ; // data_variety, pattern
+var tdots ;
+var tsvg ;
+var tcolor = {}
+var tcolorind, tcolorpat, tcolorvar ;
+
+function timelineupdate(dotcolor) {
+
+  t.colorby = dotcolor ;
+
+  tsvg.selectAll(".tdot").transition().duration(350).style("fill", function(d) { return tcolor[dotcolor](d[dotcolor]); }) 
+  
+}
+
+var tx, ty, twidth, theight ;
+var tabdata = [];
+
+/**
+ * Called to make the summary vis
+ * Used in the data queuing call
+ * @tparam Object error (if any) from the data load.
+ * @tparam Object a4 the barcharts data object read by d3.json
+ */
+
+function maketimeline(error, indtime) {
+
+  rectime = indtime ;
+
+  $.each(rectime, function(i, d) {
+
+    tabdata.push([ +d["incident.year"], 
+                    d["victim.name"], 
+                    d["victim.country"],
+                    d["industry"], 
+                    d["pattern"], 
+                    commas(+d["data_total"]) ]) ;
+
+  });
+
+  $('#tdatatab').dataTable( {
+        "data": tabdata,
+        "columns": [
+            { "title": "Year" },
+            { "title": "Victim" },
+            { "title": "Country" },
+            { "title": "Industry" },
+            { "title": "Pattern" },
+            { "title": "# Records" }
+        ],
+    } );   
+
+  t.industries = d3.set($.map(indtime, function(d) { return d.industry })).values().sort() ;
+  t.patterns = d3.set($.map(indtime, function(d) { return d.pattern })).values().sort() ;
+  t.varieties = d3.set($.map(indtime, function(d) { return d.data_variety })).values().sort() ;
+
+  $("#tindsel").multiselect('dataprovider', $.map(t.industries, function(d) { return { label:d, value:d } }))
+  $("#tpatsel").multiselect('dataprovider', $.map(t.patterns, function(d) { return { label:d, value:d } }))
+  $("#tvarsel").multiselect('dataprovider', $.map(t.varieties, function(d) { return { label:d, value:d } }))
+
+  $("#tindsel option").each(function(el) { $("#tindsel").multiselect('select', $(this).val()) })
+  $("#tpatsel option").each(function(el) { $("#tpatsel").multiselect('select', $(this).val()) })
+  $("#tvarsel option").each(function(el) { $("#tvarsel").multiselect('select', $(this).val()) })
+
+  $("#tindsel").multiselect('rebuild')
+  $("#tpatsel").multiselect('rebuild')
+  $("#tvarsel").multiselect('rebuild')
+
+  var margin = {top: 20, right: 20, bottom: 30, left: 100 };
+  twidth = 800 - margin.left - margin.right,
+  theight = 500 - margin.top - margin.bottom;
+
+  tx = d3.time.scale().range([0, twidth]);
+
+  ty = d3.scale.log().range([theight, 0]);
+
+  var varcols = d3.scale.category20c().range();
+  var indcols = d3.scale.category20c().range();
+  var patcols = d3.scale.category10().range();
+
+  tcolor["data_variety"] = d3.scale.ordinal().domain(t.varieties).range(varcols.slice(0,t.varieties.length));
+  tcolor["industry"] = d3.scale.ordinal().domain(t.industries).range(indcols.slice(0,t.industries.length));
+  tcolor["pattern"] = d3.scale.ordinal().domain(t.patterns).range(patcols.slice(0,t.patterns.length));
+
+  var xAxis = d3.svg.axis().scale(tx).orient("bottom");
+  var yAxis = d3.svg.axis().scale(ty).orient("left").ticks(10, d3.format(",0f"));
+
+  var svg = d3.select("#timeplot").append("svg")
+      .attr("width", twidth + margin.left + margin.right)
+      .attr("height", theight + margin.top + margin.bottom)
+      .style("max-width", "100%")
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  tx.domain(d3.extent(indtime, function(d) { return new Date(d["incident.month"] + "/1/" +d["incident.year"]); })).nice();
+  ty.domain(d3.extent(indtime, function(d) { return +d["data_total"] })).nice();
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + theight + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("# Records (log scale)")
+
+  tsvg = svg ;
+
+  timechange(indtime);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

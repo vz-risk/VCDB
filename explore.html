@@ -11,7 +11,7 @@
 
         <title>VCDB VERIS Community Database</title>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 70px;
@@ -19,29 +19,64 @@
             }
         </style>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
 
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/nv.d3.css"/>
-        <link rel="stylesheet" href="css/explore.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/nv.d3.css"/>
+        <link rel="stylesheet" type="text/css" href="css/explore.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"/>
+        <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css"/>
 
-        <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/colorbrewer.v1.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/queue.v1.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/d3.geo.projection.v0.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/topojson.v1.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/nv.d3.min.js" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8" src="js/d3.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/colorbrewer.v1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/queue.v1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/d3.geo.projection.v0.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/topojson.v1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/nv.d3.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/dataTables.bootstrap.js"></script>
 
-        <script type="text/javascript" src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8" src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+  
+<div id="victimmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div id="victimdialog" class="modal-dialog modal-lg">
+    <div id="victimcontent" class="modal-content"></div>
+  </div>
+</div>
+
+<div id="datamodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div id="datadialog" class="modal-dialog modal-lg">
+    <div id="datacontent" class="modal-content">
+      <div id='databody' class='modal-body'>
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="tdatatab"></table>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div id="thelpmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div id="thelpdialog" class="modal-dialog modal-lg">
+    <div id="thelpcontent" class="modal-content">
+      <div id='thelpbody' class='modal-body'>
+      <p>We've combed through the <a target=_blank href="https://github.com/vz-risk/VCDB">VCDB corpus</a> and extraced entries going back to 2005 that have the most complete incident details&mdash;including number of compromised records. The record counts and data varieties exposed in each incident have been been tagged by both industry and <a target=_blank href="http://datadrivensecurity.info/blog/posts/2014/May/dbir-mds/">pattern</a>, and you can slice &amp; the data in any way you like.</p>
+      <p>Hover over each data point for quick incident information and click for more details. Filter on any combination of industry type, pattern or data variety.</p>
+      <p>Remember: <b>You</b> can help clean up and code new incidents by <a target=_blank href="http://localhost:9999/volunteer.html">volunteering</a> your time!</p>
+      </div>
+    </div>
+  </div>
+</div>  
+
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -66,14 +101,65 @@
     <div class="container-fluid">
 
       <ul id="exploreTab" class="nav nav-tabs" data-tabs="tabs">
-        <li class="active"><a href="#how" data-toggle="tab">Exploring the VCDB</a></li>
+        <li><a href="#how" data-toggle="tab">Exploring the VCDB</a></li>
         <li><a href="#geo" data-toggle="tab">Geo</a></li>
         <li><a href="#patterns" data-toggle="tab">Patterns</a></li>
+        <li class="active"><a href="#time" data-toggle="tab">Records Loss Timeline</a></li>
       </ul>
 
       <div id="exploreContent" class="tab-content" style="padding-top:20px">
 
-       <div class="tab-pane active" id="how">
+       <div class="tab-pane active" id="time">
+         <div class="row">
+
+           <div class="col-md-3">
+              <div style="margin:auto;text-align:center">
+                
+              Color incidents by:<br/>
+              <div id="tindtoggle" class="btn-group" data-toggle="buttons">
+                <label id="tindustry" class="btn btn-sm btn-default active">
+                  <input type="radio" name="options" id="tindustry"> Industry
+                </label>
+                <label id="tpattern" class="btn btn-sm btn-default">
+                  <input type="radio" name="options" id="tpattern"> Patterns
+                </label>
+                <label id="tvariety" class="btn btn-sm btn-default">
+                  <input type="radio" name="options" id="tvariety"> Data Variety
+                </label>              
+              </div><br/><br/>
+
+              Filter Industries by:<br/>
+              <select class="multiselect" id="tindsel" multiple="multiple">
+              </select><br/><br/>
+
+              Filter Patterns by:<br/>
+              <select class="multiselect" id="tpatsel" multiple="multiple">
+              </select><br/><br/>
+
+              Filter Data Variety by:<br/>
+              <select class="multiselect" id="tvarsel" multiple="multiple">
+              </select><br/><br/>
+
+              <table style="margin:auto;width:auto">
+              <tr><td style='padding-right:5px;text-align:left'><b>Total Incidents:</b></td><td style="text-align:left"><span id="incct"></span></td></tr>
+              <tr><td style="text-align:left"><b>Total Records:</b></td><td style="text-align:left"><span id="recct"></span></td></tr>
+              </table>
+              </div><br/><br/>
+
+              <button id="tbutdat" type="button" class="btn btn-default btn-xs center-block">Just show me the data!</button><br/><br/>
+
+              <center><a style="font-size:85%" id="tabout" href="#">Help/About</a></center>
+
+           </div>
+
+           <div class="col-md-9">
+             <div id="timeplot"></div>
+           </div>
+         </div>
+       </div>
+
+
+       <div class="tab-pane" id="how">
          
          <div class="row">
             <div class="col-md-4">
