@@ -12,7 +12,7 @@ with a description to show that a particular campaign ID has been taken.
 | B91B10AA-1441-4C51-920F-3BD73AF6F4F0 | MongoHQ breach and,follow up attack from 2013 |
 | F94E45F1-175C-48DD-A658-5F5209D43AFA | Operation,DeputyDog; FireEye 2013             |
 | 84F70E33-3D69-4180-A4CC-E8FF7A8C0EC4 | Sunshop Campaign;,FireEye 2013                |
-| 06C2A8F8-76D4-4BC2-8C77-CB563EE1F3D8   SSNDOB outed by Krebsonline 9/25/2013         |
+| 06C2A8F8-76D4-4BC2-8C77-CB563EE1F3D8 |  SSNDOB outed by Krebsonline 9/25/2013        |
 | 3EC75F4E-600F-498A-B0D8-39BFDE21B9AC |                                               |
 | D9A0A1DC-6201-48A2-B270-E7C6EF530D13 |                                               |
 | 104874B4-3EC7-4B09-95F1-930F007487B0 |                                               |
