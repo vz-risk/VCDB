@@ -14,7 +14,7 @@ with a description to show that a particular campaign ID has been taken.
 | 84F70E33-3D69-4180-A4CC-E8FF7A8C0EC4 | Sunshop Campaign;,FireEye 2013                |
 | 06C2A8F8-76D4-4BC2-8C77-CB563EE1F3D8 |  SSNDOB outed by Krebsonline 9/25/2013        |
 | 3EC75F4E-600F-498A-B0D8-39BFDE21B9AC |  GCHQ hacking of Belgacom,GreenNet,Riseup     |
-| D9A0A1DC-6201-48A2-B270-E7C6EF530D13 |                                               |
+| D9A0A1DC-6201-48A2-B270-E7C6EF530D13 |  Operation Aurora, 2009                       |
 | 104874B4-3EC7-4B09-95F1-930F007487B0 |                                               |
 | 09A354EC-4E75-48A4-94B9-2E64D9D1DF15 |                                               |
 | CF78215A-6145-4556-B2C1-FD79D43BA6CD |                                               |
