@@ -1,0 +1,87 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Backdoor"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      }
+    ]
+  },
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Modify data",
+        "Software installation"
+      ]
+    }
+  },
+  "discovery_method": "Unknown",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "DCE38CAA-1105-4FF0-A43C-19CF2905F084",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "swidup",
+    "created": "2014-07-11T21:12:00Z",
+    "github": "3658",
+    "master_id": "DCE38CAA-1105-4FF0-A43C-19CF2905F084",
+    "modified": "2014-07-11T21:12:00Z",
+    "timeline": {
+      "notification": {
+        "day": 26,
+        "month": 9,
+        "year": 2012
+      }
+    }
+  },
+  "reference": "http://www.networkworld.com/article/2160201/smb/compromised-sourceforge-mirror-distributes-backdoored-phpmyadmin-package.html; http://www.networkworld.com/article/2162884/security/worst-security-snafus-of-2012.html",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Unknown attackers compromised a download mirror server for the SourceForge software repository, rigging the installer package for phpMyAdmin, a popular Web-based MySQL database administration tool, with a backdoor.SourceForge is a Web-based collaborative software development and repository system that hosts over 324,000 software development projects and serves 46 million users. The service is operated by Geeknet, a company based in Fairfax County, Virginia, U.S.  \"One of the SourceForge.net mirrors, namely cdnetworks-kr-1, was being used to distribute a modified archive of phpMyAdmin, which includes a backdoor,\" the phpMyAdmin development team said Tuesday in a security advisory. \"This backdoor is located in file server_sync.php and allows an attacker to remotely execute PHP code.\"  The modified package was phpMyAdmin-3.5.2.2-all-languages.zip and, according to access logs from the compromised mirror server, it was downloaded by approximately 400 users.  An identifier of CVE-2012-5159 was assigned to the vulnerability introduced by the phpMyAdmin backdoor code. Security vendor Secunia rates the vulnerability as extremely critical because it provides system access and can be exploited remotely.  A module targeting the vulnerability was added to the Metasploit penetration testing framework on Tuesday.  The affected mirror server was based in Korea and was compromised on or around Sept. 22, the SourceForge team said Tuesday in a blog post. \"The mirror provider has confirmed the attack vector has been identified and is limited to their mirror,\" the SourceForge team said.  The mirror server was removed from rotation after SourceForge learned of the compromise on Tuesday. However, the team is still investigating whether the phpMyAdmin archive was the only package modified by the attackers.  The mirror provider appears to be a company called CDNetworks that specializes in Internet content delivery. CDNetworks has been operating SourceForge mirror servers in the U.S. and Asia since 2009. A spokeswoman for CDNetworks in the U.S. said she was looking into the incident, but was not immediately able to provide more information about the apparent security breach.  RESOURCES  WHITE PAPER SIP Migration: Addressing CIOs' Concerns  WHITE PAPER SBIC: Transforming Information Security SEE ALL   Go It's not clear why the rogue package modification wasn't detected earlier since by definition mirror servers should mirror the content from a central repository. \"Automated mirror validation occurs on an ongoing basis and SHA1/MD5 sums [file digital fingerprints] are provided for validation client-side,\" Rich Bowen, a SourceForge official, said Tuesday via email.  Users who downloaded and deployed the phpMyAdmin-3.5.2.2-all-languages.zip package recently are advised to check whether heir phpMyAdmin installations contain the rogue server_sync.php file. If the file is found, the software should be deleted and a fresh copy of the package should be downloaded.  Web server administrators are also advised to check the server logs in order to determine whether the backdoor was accessed and used to execute rogue code on their servers.  The phpMyAdmin development team regularly publishes the MD5 checksums for the software's official install packages on its website. For example, the legitimate phpMyAdmin-3.5.2.2-all-languages.zip archive has an MD5 checksum of \"6f284e973809af8cda998eeaa9aa7884\".  Users should calculate the MD5 checksum of the package they download and compare it to the one published by the phpMyAdmin developers in order to verify that it is legitimate. A modified package will have a different MD5 checksum.  In fact, users should always perform a checksum verification when downloading software for use on their computers or servers, whenever the developer provides an MD5 or other type of checksum for the installer. Some browsers, like Mozilla Firefox, have extensions that make checksum checking easier.  This is not the first time that a download server has been compromised and the installer of a popular application has been backdoored.  In June 2011, the WordPress development team warned that some fairly popular WordPress plug-ins had been backdoored through the official plug-in repository.  In July 2011, the maintainer of vsftpd (Very Secure FTP Daemon), a popular FTP server software, announced that the master vsftpd download site was compromised and the software's official packages were rigged with a backdoor.  In December 2010, unknown hackers compromised the main distribution server of the ProFTPD Project -- another popular FTP server software -- and added a root shell backdoor to the source code. ",
+  "timeline": {
+    "incident": {
+      "day": 22,
+      "month": 9,
+      "year": 2012
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "541618",
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "SourceForge"
+  }
+}

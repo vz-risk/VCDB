@@ -1,0 +1,125 @@
+{
+  "action": {
+    "malware": {
+      "notes": "Packaged as part of the client software to allow access to gaming servers and prevent cheating.",
+      "variety": [
+        "Click fraud"
+      ],
+      "vector": [
+        "Software update"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown",
+        "Financial"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "U - Desktop"
+      }
+    ],
+    "notes": "Giving the organization the benefit of the doubt, the software should not have been on the fileserver pushing updates to clients, and obviously the customer desktops are an affected asset."
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "One article mentioned malware could track user activity",
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Repurpose",
+        "Software installation"
+      ]
+    }
+  },
+  "discovery_method": "Ext - customer",
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 325000,
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_amount": 325000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "6FEB644A-AA8F-471C-8B6B-86D671F73EA2",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Spitler",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2014-08-18T13:24:00Z",
+    "github": "882",
+    "master_id": "6FEB644A-AA8F-471C-8B6B-86D671F73EA2",
+    "modified": "2014-08-18T13:24:00Z",
+    "timeline": {
+      "notification": {
+        "day": 19,
+        "month": 11,
+        "year": 2013
+      }
+    }
+  },
+  "reference": "http://www.wired.com/wiredenterprise/2013/11/e-sports/  http://nj.gov/oag/newsreleases13/E-Sports_Complaint_Consent-Judgment.pdf",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Employee of gaming software company infected 14,000 customer computers with malware that tracked activity and mined bitcoins.",
+  "timeline": {
+    "compromise": {
+      "unit": "Seconds"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 13,
+      "month": 4,
+      "year": 2013
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "519130",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "E-Sports Entertainment Association"
+  }
+}
