@@ -34,7 +34,7 @@ mapsetup(width, height)
 
 queue()
     .defer(d3.json, "js/world-topo-min.json")
-    .defer(d3.csv, "data/victims.csv")
+    .defer(d3.csv, "data/victims.csv?1")
     .await(makegeo);
 
 queue()
