@@ -38,12 +38,12 @@ queue()
     .await(makegeo);
 
 queue()
-    .defer(d3.json, "data/vcdb19.json")
-    .defer(d3.json, "data/vcdb19-breach.json")
+    .defer(d3.json, "data/vcdb19.json?1")
+    .defer(d3.json, "data/vcdb19-breach.json?1")
     .await(makeheat);
 
 queue()
-    .defer(d3.json, "data/a4.json")
+    .defer(d3.json, "data/a4.json?1")
     .await(makesummary);
 
 queue()
