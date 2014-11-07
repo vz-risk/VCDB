@@ -35,29 +35,43 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">VCDB</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="explore.html">Explore</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active"><a href="#">Contact</a></li>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li class="active"><a href="learn.html">Learn</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Have a question?</h1>
-        <p>We'd love to answer it. Send an email to
-          <a mailto:participate@veris.org>participate@vcdb.org</a></p>
-      </div>
-    </div>
 
-    <div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Learning to Use the JSON Data for Research</h1>
+            <p>We've developed some resources for helping you get started using the JSON data in our repository.  The first is a series of blog posts on the Verizon Security Blog on how to pull the data into MongoDB and build a detailed report on a specific industry.  At the end of the series, you have a script that can be easily modified to look at the industry of your choice.  In the repository, there is also a similar script without the industry filter in place, so you can generate an overall report of all of the data in the dataset.  
+
+<h2>Healthcare Data Breaches: Using VCDB and Mongo to Find Answers</h2>
+<p>
+<h3>Part 1:</h3>
+<p>The VERIS Community Database (VCDB) project was launched last year with the goal of making a freely downloadable, raw dataset of publicly disclosed data breach incidents available for research.  With the Q2 release, the dataset has grown to over 3,500 incidents, each in its own JSON file.  This article will walk the beginner through the process of loading the data into MongoDB and running queries on one industry:  Healthcare.  <a href="https://securityblog.verizonenterprise.com/?p=6144">(read full article)</a>
+<p>
+<h3>Part 2:</h3>
+<p>Back in July, we looked at working with the VERIS Community Database (VCDB) data to see some basic information about security incidents in the Healthcare industry. Since that time, we’ve completed another update to the dataset, so there are more incidents for us to explore. To begin, you’ll want to drop the existing data from your database and import the new dataset to ensure you have no duplications. I didn’t cover dropping a database in the prior article, so lets go over that now.  <a href="https://securityblog.verizonenterprise.com/?p=6304">(read full article)</a>
+<p>
+<h3>Part 3:</h3>
+<p>In this final installment of the series, we will develop our script to provide even more detail on the incidents in the healthcare sector that the VERIS Community Database (VCDB) contains. If you missed Part One or Part Two, it is highly recommended that you review them.  They walk you through building the first and second scripts, which this current article expands upon.  Unless you are already familiar with the Mongo Aggregation Framework, you should begin there.  <a href="https://securityblog.verizonenterprise.com/?p=6340">(read full article)</a>
+
+        </div>
+    </div><!-- end of jumbotron -->
+       <div class="col-lg-4">
+       </div>
+   </div><!-- end of row -->
+
       <hr>
 
       <footer>
