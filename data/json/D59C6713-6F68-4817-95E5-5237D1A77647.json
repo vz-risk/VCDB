@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Likely use of stolen credentials, but no details known at this time.",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "VPN"
+      ]
+    },
+    "malware": {
+      "notes": "Unknown vectors and functionalities at this time. Based on the TTP of espionage incidents, and news reports that there was a degree of sophistication I am inferring that Malware was utilized to maintain persistence and/or advance the attack.",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown",
+        "CN"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "142030",
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Remote access"
+      },
+      {
+        "variety": "U - Other"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "notes": "Inferred asset types to best of ability. There was a user device (ownership unknown) at some point due to the reference of the VPN and teleworkers. Assuming that the 800K records were in a database. Also assuming that credentials were reused against a VPN server"
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 800000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 800000,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "discovery_method": "Unknown",
+  "discovery_notes": "Timeline is unknown, only available information was a mention that it took several weeks to discover the breach.",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "D59C6713-6F68-4817-95E5-5237D1A77647",
+  "notes": "Will update this record as details emerge in OSINT. ",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Spitler",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2014-11-20T14:10:00Z",
+    "github": "4664",
+    "master_id": "D59C6713-6F68-4817-95E5-5237D1A77647",
+    "modified": "2014-11-20T14:10:00Z",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 11,
+        "year": 2014
+      }
+    }
+  },
+  "reference": "http://time.com/3575963/usps-hack/;  http://www.washingtonpost.com/blogs/federal-eye/wp/2014/11/10/china-suspected-of-breaching-u-s-postal-service-computer-networks/;  http://www.reuters.com/article/2014/11/10/us-cybersecurity-usps-idUSKCN0IU1P420141110?feedType=RSS&feedName=technologyNews;  http://arstechnica.com/security/2014/11/all-us-postal-service-employees-personal-data-exposed-by-hackers/;  http://fedscoop.com/usps-cyber-breach-agency-halts-teleworking-union-files-charges-nlrb/;  http://www.nbcnews.com/tech/tech-news/usps-hack-affected-800-000-employees-very-sophisticated-n251851;",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "USPS attacked via VPN connections by state-affiliated threat actor. 800,000 employee PII records are considered compromised. Limited details to date on methods utilized.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "day": 1,
+      "month": 1,
+      "year": 2014
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "491110",
+    "region": [
+      "019021"
+    ],
+    "state": "DC",
+    "victim_id": "United States Postal Service"
+  }
+}

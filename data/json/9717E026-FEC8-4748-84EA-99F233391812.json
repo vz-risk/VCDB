@@ -1,0 +1,100 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2012-4969",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown",
+        "CN"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "142030",
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "governance": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "integrity": {
+      "notes": "Installation of malware through waterhole attack.",
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "discovery_method": "Ext - audit",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9717E026-FEC8-4748-84EA-99F233391812",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "gdbassett",
+    "created": "2014-09-12T13:00:00Z",
+    "github": "3528",
+    "master_id": "9717E026-FEC8-4748-84EA-99F233391812",
+    "modified": "2014-09-12T13:00:00Z",
+    "timeline": {
+      "notification": {
+        "day": 12,
+        "month": 3,
+        "year": 2013
+      }
+    }
+  },
+  "reference": "http://community.websense.com/blogs/securitylabs/archive/2013/03/12/israeli-website-for-international-institute-for-counter-terrorism-waterhole-serving-cve-2012-4969.aspx",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "SRAELI WEBSITE FOR INTERNATIONAL INSTITUTE FOR COUNTER-TERRORISM WATERHOLE ATTACK SERVING CVE-2012-4969  Websense Security Labs and the Websense ThreatSeeker Intelligence Cloud have detected that the government-related websites ict.org.il and herzliyaconference.org have been involved in a \"waterhole\" attack and are injected with malicious code that serves as an exploit for Internet Explorer vulnerability CVE-2012-4969. The first website describes itself as the International Institute for Counter-Terrorism. Both websites seem to be connected and governed by a leading Israeli academic institution called the IDC.    The malicious code found on the websites is identical and was identified as CVE-2012-4969 - an Internet Explorer vulnerability that was verified as a zero-day at the time and was found to be exploited in the wild on September 2012. It was found by Eric Romang from Zataz.   From our initial checks, the websites still serve the malicious code on specific paths, and have been serving the malicious code from as early as the 23rd of January 2013. At the time of this writing, the malicious code on ict.org.il appears to be fully functional, but the malicious code on herzliyaconference.org doesn't seem to be functional (the main page that initiates the exploit seems to have been removed; although subsequent pages are still available, on their own they won't serve a successful exploit).   The attack seems to be very similar to the spear-phishing attacks we reported on with the \"Rotary Domains\" (Part 1 &amp; 2) that served CVE-2012-4792 - that's the same zero-day that was found on cfr.org. The attack on IDC uses a Flash file to conduct a \"heap spray\" attack. The Flash file appears to have the misspelled string \"heapspary\".  According to Symantec, this string may be evidence that the \"Elderwoord\" group is behind this attack, because there's a similarity to the cfr.org attack, which held the same string \"heapspary\" in a Flash file as well. We're not completely convinced by this theory; this may indeed suggest a connection to the \"Elderwoord\" project, but may instead suggest the use of the same toolkit by different perpetrators.    One of the most interesting techniques employed by this attack, which we described in detail in our previous \"Rotary Domains\" posts, is that the dropped malware is actually embedded as a XORed list of bytes on the page and assigned to a Javascript variable with a marker at the start of the stream.  After exploitation is successful, then on the client side the shellcode initiates a thorough search for a certain marker in memory called \"KKONG\".  When this marker is found, then the stream is extracted and de-XORed to form the actual malware binary, which is then run. This is an interesting technique that is also good for Sandbox evasion and reminds us of the \"Drive by cache\" techniques also found to be popular with spear-phishing attacks in the last two years. The difference in this method is that it's sort of a \"Drive by marked memory object\".   Websense Security Labs has contacted the IDC to report the compromise; as of this writing we had not heard back yet from the IDC.   The Israeli website for the International Institute for Counter-Terrorism and its mission statement is shown here:             Technical details   As described, the attacks on both websites are identical. The exploit chain starting point is in an HTML file on a dedicated directory.  We're not certain if this specific path was sent in spear-phishing emails, or if the main page of each of the websites referred to this path. If you have any more details on this, please do let us know.   Here are the exploit chains for ict.org.il and herzliyaconference.org:  hxxp://www.ict.org.il/js/1.html -&gt; Flash file loader (AceInsight report) hxxp://www.ict.org.il/js/logo4969.swf -&gt; Flash heap-spray + exploit.html loader hxxp://www.ict.org.il/js/exploit.html -&gt; Dropped file cache + Exploit Loader hxxp://www.ict.org.il/js/Protect.html -&gt; Exploit CVE-2012-4969     hxxp://www.herzliyaconference. org/_modules/80.html -&gt; Flash file loader (AceInsight report) hxxp://herzliyaconference .org/_modules/logo4969.swf -&gt; Flash heap-spray + exploit.html loader hxxp://herzliyaconference. org/_modules/exploit.html -&gt; Dropped file cache + Exploit Loader hxxp://herzliyaconference. org/_modules/Protect.html -&gt; Exploit CVE-2012-4969   Let's have a look at the specific exploit chain on ict.org.il.   The file 1.html is used just as a loader for the malicious file logo4969.swf.  Besides the loading of the malicious file, there are no malicious indicators on the page, but just the HTML Flash container/loader:      The loaded Flash file initiates a heap-spray attack, but it also acts as the caller to the Exploit Loader page exploit.html - it loads it through some Actionscript commands embedded in the Flash file, to evaluate some Javascript code to be executed on the page and load exploit.html, as seen in the next picture snippet from the file:         exploit.html holds some Javascript code and an especially long variable. This variable starts with a marker \"KKONG\" that is later searched for by the shellcode that resides inside the loaded Flash file on the client side. The file is obfuscated with a simple XOR 0xBF. The page also loads the actual exploit page by calling an iframe to Protect.html:        Protect.html holds the exploit code to CVE-2012-4969. The exploit code is obfuscated with a simple obfuscation technique:         After the exploit is triggered by Protect.html, the code will jump to the sprayed shellcode on the heap.  In return, the shellcode will scan the memory for the marker mentioned earlier: \"KKONG\". After the marker is found, the shellcode strips the stream following the marker and gets it de-XORed with the value 0XBF to form a valid executable file.  That file is then written to the Windows local machine's temporary folder and executed to infect the machine with a persistent backdoor.        The executed file dw20.exe (MD5:d2354e9ce69985c1f55dbad2837099b8) acts as a dropper and has the same name as the file dropped with Rotary domains attack. The threat stays persistent on the system by dropping another file to the Windows directory called startup.dll (MD5: 4e1e2b9cd6b5bca2b1b935ddc97f2d7a) that registers as an auto-started service called WindowsUpdata. Check out this complete report from ThreatScope. The backdoor service is actually installed under a registry key called \"RAT\", which is not very discreet, to say the least, and the backdoor connects to a C2 that is recognized by our service as suspicious hxxp://interfacet.oicp.net:88. It appears that oicp.net is a web host that is located in China. Custom hosts on the site have been found to be involved in targeted attacks in the past (1 2); however, the specific host actually points to an IP address of 65.19.141.203 located in Fremont, California, United States. Looking closer at this IP address, we could see that it hosts a lot of mayhem, as well as many other hosts that are associated that use host names on *.oicp.net that we have already classified in a security category:               One of the most interesting parts is that the IP address to which the C2 points is hosted on an IP address range that belong to Hurricane Electric, a US-based internet service provider that got some headlines lately for being the first Internet Backbone to Connect to 2,000 IPv6 Networks. An Interesting article from 'The Droid Tech Guy' illustrates how, although web traffic in China is very restrictive and censored, its architecture is actually one of the most advanced.  According to the article, one of its advances is that it employs a security feature known as Source Address Validation Architecture (SAVA). To quote from the article: \"This feature puts security checkpoints throughout the system and then builds up a database very systematically. This database will contain trusted computers and their IP addresses. This system will then authenticate who is sending what. This way, the possibility of sending malicious data becomes a lot more difficult, nearly impossible, like many say.\"    This is a good point that makes us ponder - could it be that threats that originate from China are actually safer, from the attacker's perspective, if hosted outside of China? That may well be the case.    In summary, we had a look at high profile government related website that got compromised in a 'waterhole' attack and employed some interesting technique. It looks as if targeted attacks have now been surfacing regularly and more frequently, with more attacks that are now exposed almost on a weekly basis. Those kinds of rapid discoveries may cause the players behind state-sponsored attacks or other miscreant groups to increase their level of sophistication. However, we believe that the sophistication of such attacks directly depends on the protection level employed by the target. If defense levels are mediocre or \"just enough,\" then attackers will probably do just that much to get past them. The tough questions one should ask one's self in today's threat landscape is \"what am I doing to not be the next victim?\" and, even more importantly, \"what am I going to do when I do become one?\".  We believe that post-infection mitigation plans should be given the same emphasis as prevention and putting adequate protection in place.   Websense Protection   Websense customers are protected from this and other threats by Websense ACE (Advanced Classification Engine).  ACE protected against this threat in real-time and against the different stages of the attack progression, also known as the \"kill chain\". You can find in the next link more information about the 7 stages of advanced threats. Here is a recap how ACE protected against the different stages:   Lure stage: protection confirmed, the lure is the first stage of the attack and in this case it was those URLs that loaded a malicious flash file: hxxp://www.ict.org.il/js/1.html -&gt; Flash file loader (AceInsight report) hxxp://www.herzliyaconference.org/_modules/80.html -&gt; Flash file loader (AceInsight report)   Dropper stage: not applicable, the dropper is the stage where a file passes through the gateway and inspected in real-time, however, this is not applicable for this attack as the file was hidden and obfuscated in memory and reconstructed on the client side - this is a typical sandbox evasion technique.    Calling home stage: protection confirmed, the calling home stage is the destination that the malware connects to after getting successfully installed on the victim's machine. In this attack the malware initiated connection to a destination that is already known to us hxxp://interfacet.oicp.net:88 (AceInsight report).     For participation in data analysis, special thanks to: Gianluca Giuliani",
+  "timeline": {
+    "containment": {
+      "unit": "Months"
+    },
+    "discovery": {
+      "unit": "Months"
+    },
+    "incident": {
+      "day": 23,
+      "month": 1,
+      "year": 2013
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "611310",
+    "locations_affected": 2,
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Interdisciplinary Center Herzliya"
+  }
+}

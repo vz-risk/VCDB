@@ -1,0 +1,110 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Remote access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Authentication"
+      }
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 60000,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 60000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "discovery_method": "Int - IT review",
+  "discovery_notes": "\"After noticing some suspicious activity on our server earlier today, we discovered a significant attack on our membership database. In\"",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "64006832-161F-4352-813E-A77E88DB7EBA",
+  "plus": {
+    "analysis_status": "Needs review",
+    "analyst": "eludom",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2014-10-15T00:18:00Z",
+    "github": "4421",
+    "master_id": "64006832-161F-4352-813E-A77E88DB7EBA",
+    "modified": "2014-10-15T00:18:00Z",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 9,
+        "year": 2014
+      }
+    }
+  },
+  "reference": "http://www.tripwire.com/state-of-security/security-data-protection/ithemes-plaintext/;https://ithemes.com/2014/09/23/important-security-update-for-all-customers/",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "HACKED SECURITY PLUGIN FIRM STORED CUSTOMER PASSWORDS IN PLAINTEXT. SERIOUSLY?!   GRAHAM CLULEY SEP 30, 2014 Share on kindleit44 We all make mistakes. I know that sometimes I have made some real howlers, and lived to regret it, but at least we can try to learn from our past screw-ups, put it down to experience and move on.  Its the same when it comes to computers. Many of us probably remember the first gut-wrenching time that we realized we hadnt backed up our data and promised ourselves never to make the same mistake again, or realized that we were playing dangerously by using the same password in multiple places  only to hear on the news that one of the sites had been hacked.  In todays information age, where information about computer security threats and easy-to-use tools are at our fingertips, there shouldnt be much excuse for making some of the Security 101 errors that have plagued users and companies in the past.  iThemes Security Pro pluginAnd yet, from time to time, firms find themselves in the position of admitting that they have messed up massively with potentially disastrous consequences for their business and their innocent customers.  What makes it even worse, however, is when the company that has fallen woefully short really should have known better.  One such company which can offer no reasonable excuses is iThemes, the one-stop shop for WordPress themes, plugins and training.  Last week, the company issued an important security advisory for all of its customers:  After noticing some suspicious activity on our server earlier today, we discovered a significant attack on our membership database. In an over-abundance of caution, were asking all customers to reset their iThemes password immediately.   To protect your account from any unauthorized access, weve temporarily reset all user passwords. We just sent emails to our entire iThemes customer community asking you to do this as well. To regain access to your account, youll need to reset your password now. So far, so normala companys website gets hacked and potentially user information has been stolen.  iThemes stated that the hackers may have had access to usernames, passwords, email addresses, IP addresses, past purchases and payment receipt information but thankfully, not other payment information or credit card details.  Clearly, we all feel sympathetic to the customers who might be affected, but theres also some sympathy for the hacked company which has fallen victim to a criminal attack. At this point, you think its good that iThemes appears to have acted quickly, sharing information with customers and advising that passwords be reset in what it describes as an over-abundance of caution.  But can you be over-abundant with caution when it comes to IT security? Well, the answer came a couple of days later in a follow-up blog post from iThemes CEO and founder Cory Miller:  How Does iThemes Store Passwords? There is no easy way to say this: We were storing your passwords in clear-text. This directly impacted approximately 60,000 of our users, past and current. _ Its important that you immediately update any other account that uses the same username / password combination. This includes WordPress installs, FTP logins, cPanel access, Gmail accounts, Yahoo accounts, Facebook, Twitter, billing accounts, etc.   What Does Plain Text Mean? This means that the passwords were not protected as they should have been. They were not hashed, salted or any combination of techniques. This means if the attacker was able to see / save the passwords they have a new username / password list. Wow. Its bad enough that many firms dont bother to salt and hash passwords on their servers and just encrypt them instead, but its petrifying to think that a technology company is actually storing passwords in plaintext in this day and age, despite the constant news headlines of security breaches and hacks.  What makes it even more jaw-dropping is that iThemes actually works in the security field, developing a popular WordPress backup tool (BackupBuddy), as well as iThemes Security Pro, which the firm describes as the best WordPress security plugin.  Here, for instance, you can see how its WordPress security plugin advises users to tighten their website security:  iThemes security product  Anyone else get the irony of the iThemes security plugin warning that strong passwords may not be enforced? The sad truth is that it doesnt matter how strong the passwords are if your website gets hacked and the passwords have been stored in plaintext.  Not only has private information potentially fallen into the hands of hackers, but there has also been damage done to a companys reputation. As one customer commented:  Its a shame that a company which produces and maintains a security plugin stores passwords in plain text, there is NO excuse for this. This makes me believe that there are no serious developers in your house which have worked on enterprise level. Now, it would be very easy to grab a pitchfork and a flaming torch and drive iThemess technical team out of town after a massive faux pas like this, but thats not going to help the firms current customers.  The best thing they can do right now is ensure that they were not using the same password anywhere else on the net, consider adopting a password management solution (such as 1Password or LastPass), enable two-factor authentication where available, and keep a close eye on their other online accounts for signs of compromise.  If there is anything good to find in this sorry tale, then it is surely Cory Millers candid admission of failure and acceptance of responsibility:  _as the founder and CEO, the leader of this company, I want you to know: the buck stops with me and me alone.   At the end of the day, I am responsible for our company, iThemes, and the work we do. Ive often tried to defer credit for the great work weve done to our team, but as for the mistakes we make, that credit belongs solely to me.   I started this company to offer solutions to help make peoples lives better.   I cannot control the past. The mistakes above were made. But we can control what we learn and how we grow from it in order to be better for you through it.   If anything, I am more energized and motivated than ever to make what were doing and how we do it better than ever. I wish iThemes and its boss well. No-one deserves to get hacked, even if you made the mistake of playing fast and loose with your customers private information. But my primary concern is for those innocent users who may have been impacted by the hack and placed trust in iThemes to do a decent job with their passwords and other data.  If you run a technology company, make sure that your IT team feels empowered to explore vulnerabilities andwhen they are foundgive them the freedom to fix them, or you could find your problems are only just beginning.",
+  "timeline": {
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2014
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "000",
+    "region": [
+      "021000",
+      "019021"
+    ],
+    "secondary": {
+      "amount": 60000,
+      "notes": "\"This directly impacted approximately 60,000 of our users, past and current.\""
+    },
+    "state": "OK",
+    "victim_id": "iThemes"
+  }
+}
