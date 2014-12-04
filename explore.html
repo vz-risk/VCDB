@@ -77,6 +77,18 @@
   </div>
 </div>  
 
+<div id="tpatmodal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div id="tpatdialog" class="modal-dialog modal-lg">
+    <div id="tpatcontent" class="modal-content">
+      <div id='thpatbody' class='modal-body'>
+        <p>This shows the proportion of incidents within each industry represented by the nine patterns. Identify your industry on the X-axis (refer to the <a href="https://www.census.gov/eos/www/naics/">NAICS website</a> if you’re unsure where your organization fits). The percentages are relative to each industry.</p>
+        <p>Hover on each cell to see in-industry incident counts.</p>
+        <p>You can also switch views from all incidents to ones with confirmed data disclosure</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -198,10 +210,12 @@
             </div>
 
             <div class="col-md-7">
+            <div class="pull-left">
               <center><b><span id="countrySpan">Global </span>Incidents By Industry</b></center>
               <div id="byindustry">
                 <svg style="margin-left:auto; margin-right:auto"></svg>
               </div>
+            </div>
             </div>
 
           </div>
@@ -211,15 +225,9 @@
         <div class="tab-pane" id="patterns">
 
           <div class="row">
-
-            <div class="col-md-3">
-              <h3>VCDB Incident/Breach Patterns By Industry</h3>
-              <p>This shows the proportion of incidents within each industry represented by the nine patterns. Identify your industry on the X-axis (refer to the <a href="https://www.census.gov/eos/www/naics/">NAICS website</a> if you’re unsure where your organization fits). The percentages are relative to each industry.</p>
-              <p>Hover on each cell to see in-industry incident counts.</p>
-              
-              <p>You can also switch views from all incidents to ones with confirmed data disclosure</p>
-              
-              <div id="heattoggle" class="btn-group" data-toggle="buttons">
+            <div class="col-md-12">
+              <h3>VCDB Incident/Breach Patterns By Industry [<a style="font-size:85%" id="patinfo" href="#">?</a>]</h3>
+                <div id="heattoggle" class="btn-group" data-toggle="buttons">
                 <label id="all" class="btn btn-default active">
                   <input type="radio" name="options" id="all"> All Breaches
                 </label>
@@ -227,14 +235,17 @@
                   <input type="radio" name="options" id="breach"> Only Data Disclosure
                 </label>
               </div>
-              
+              <div id="pheat"></div>
             </div>
-            
-            <div class="col-md-9">
-              <div id="pheat">
-              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
             </div>
 
+            <div class="col-md-4"></div>
           </div>
 
         </div>

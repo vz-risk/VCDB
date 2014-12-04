@@ -60,8 +60,8 @@ function resize() {
   offsetLeft = document.getElementById("vcdbmap").offsetLeft + 40 ;
   offsetTop = document.getElementById("vcdbmap").offsetTop + 30 ;
 
-  hoffsetLeft = document.getElementById("pheat").offsetLeft + 40 ;
-  hoffsetTop = document.getElementById("pheat").offsetTop + 30;
+  hoffsetLeft = document.getElementById("pheat").offsetLeft + 20 ;
+  hoffsetTop = document.getElementById("pheat").offsetTop + 15;
 
 }
 
@@ -208,8 +208,8 @@ function makeheat(error, pheat1, breaches) {
 
   // setup vis height/width/etc
 
-  var margin = { top: 100, right: 0, bottom: 0, left: 100 },
-      width = 700 - margin.left - margin.right,
+  var margin = { top: 100, right: 0, bottom: 0, left: 150 },
+      width = 900 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
   
   gridSize = Math.floor(width / pheat1.cols.length);
@@ -314,16 +314,21 @@ function makeheat(error, pheat1, breaches) {
 
 }
 
+var dbg_incidents;
+var dt ;
 /**
  * Called to make the map vis
  * Used in the data queuing call
  * @tparam Object error (if any) from the data load.
- * @tparam Object pheat1 the heatmap object read by d3.json
+ * @tparam Object world world map topojson
+ * @tparam Object incident data from CSV
  */
 
-function makegeo(error, world, incidents, pheat1) {
+function makegeo(error, world, incidents) {
 
   // summarize the incidents by country
+
+  dbg_incidents = incidents ;
 
   ccNest = d3.nest().key(function(d) { return(d.CountryName); })
              .rollup(function(d) {
@@ -348,6 +353,10 @@ function makegeo(error, world, incidents, pheat1) {
               .sortValues(d3.descending)
               .entries(incidents);
 
+  for (var i=0; i<indNest.length; i++) { indNest[i].series = 0 ; } 
+
+  dt = indNest ;
+
   // it's as cood a color as any
 
   inCol = "#993404";
@@ -363,7 +372,7 @@ function makegeo(error, world, incidents, pheat1) {
   // setup our color scale
 
   quantize = d3.scale.log()
-               .domain([d3.min(ccData.values()), d3.max(ccData.values())])
+               .domain([1, d3.max(ccData.values())])
                .range(["#fed98e", "#d95f0e", "#993404"]);
 
   // helps troublshooting vis issues
@@ -777,6 +786,10 @@ $(document).ready(function(){
 
     $('#tabout').on('click', function() {
       $('#thelpmodal').modal('toggle');
+    })
+
+    $('#patinfo').on('click', function() {
+      $('#tpatmodal').modal('toggle');
     })
 
     $('#tbutdat').on('click', function() {
