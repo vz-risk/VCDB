@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>DBIR Attack Graph Mitigations Diminishing Returns Analysis</title>
+<link href="./nv.d3.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+<script src="./nv.d3.js"></script>
+<script>
+    function getGraphtPt(graph, x1, y1) {
+            var a = graph.series.values;
+            var i = a.length;
+
+         while (i--) {
+//           if (a[i].x==x1 & a[i].y==y1) {
+           if (a[i].x==x1) { // replace above line because y is too accurate & only 1 point per x.
+              return a[i];
+          }
+       }
+       return null;
+    }
+
+    d3.json("./vcdb_node_mitigations.json", function(myData) {
+        nv.addGraph(function() {
+          var chart = nv.models.scatterChart()
+                        .showDistX(true)    //showDist, when true, will display those little distribution lines on the axis.
+                        .showDistY(true)
+                        .forceY([0,4])
+                        .color(d3.scale.category10().range());
+
+          //Configure how the tooltip looks.
+          chart.tooltipContent(function(key, x, y, e, graph) {
+            var s = "unknown";
+//            console.log(graph);
+            var pt = getGraphtPt(graph, x, y);
+            if (pt != null) {
+                s = pt["name"];
+            }
+              return '<h3>' + key + ": " + s + '</h3>';
+          });
+
+          //Axis settings
+          chart.xAxis.tickFormat(d3.format('.02f'));
+          chart.yAxis.tickFormat(d3.format('.02f'));
+
+          //Axis Label
+          chart.yAxis.axisLabel('Shortest Path Distance Before Mitigation');
+          chart.xAxis.axisLabel('Mitigation Number');
+
+//          console.log(myData)  // DEBUG
+
+          d3.select('#chart svg')
+              .datum(myData)
+              .call(chart);
+
+          nv.utils.windowResize(chart.update);
+
+          return chart;
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="chart">
+        <svg></svg>
+    </div>
+</body>
+</html>
