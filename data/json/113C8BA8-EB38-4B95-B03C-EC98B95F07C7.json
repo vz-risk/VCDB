@@ -1,0 +1,105 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Abuse of functionality"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "SE"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "region": [
+        "150154"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "Unknown"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "notes": "Annonymity, actor matched controversial comments with email addresses, email address were uncovered",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "discovery_method": "Ext - actor disclosure",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "113C8BA8-EB38-4B95-B03C-EC98B95F07C7",
+  "notes": "Disqus http://www.cio.com/article/744481/Disqus_Scrambles_After_Leak_Fuels_Swedish_Tabloid_Expos_195_169_?taxonomyId=3234;http://arstechnica.com/security/2013/12/crypto-weakness-in-web-comment-system-exposes-hate-mongering-politicians/;http://www.infosecurity-magazine.com/view/36125/disqus-may-not-have-been-hacked-but-it-was-certainly-exploited/   start 2013-02 notification/discovery 2013-12-10 (public brag)  Later on Tuesday, Disqus said its network had not been breached and that it did not leak email addresses. The journalists appeared to have abused a feature it used for a third-party service, it said. Disqus used a third-party service called Gravatar from Automattic, the company behind the WordPress software. Users can upload an avatar, which will then appear on any Gravatar-enabled website.",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "tecamac",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2016-01-18T09:14:00Z",
+    "dbir_year": 2016,
+    "github": "1051",
+    "master_id": "113C8BA8-EB38-4B95-B03C-EC98B95F07C7",
+    "modified": "2016-01-18T09:14:00Z",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 12,
+        "year": 2015
+      }
+    }
+  },
+  "reference": "http://www.cio.com/article/744481/Disqus_Scrambles_After_Leak_Fuels_Swedish_Tabloid_Expos_195_169_?taxonomyId=3234;http://arstechnica.com/security/2013/12/crypto-weakness-in-web-comment-system-exposes-hate-mongering-politicians/;http://www.infosecurity-magazine.com/view/36125/disqus-may-not-have-been-hacked-but-it-was-certainly-exploited/",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Disqus is updating its widely-used comments platform after a Swedish tabloid exposed politicians and other public figures for allegedly making highly offensive comments on right-wing websites.  The Swedish daily Expressen, working with an investigative journalism group, said it uncovered the identity of hundreds of people who left offensive comments at four right-wing websites through their email addresses. It then confronted the authors of the comments, many of whom freely admitted to writing them.   Later on Tuesday, Disqus said its network had not been breached and that it did not leak email addresses. The journalists appeared to have abused a feature it used for a third-party service, it said.  Also on CIO.com:  What CSOs should do on their first days Hiring an information security vendor? Use these best practices. Security takes center stage in 2016 Based on information from Disqus and other observers, a general picture of the journalists' method has emerged.  Disqus used a third-party service called Gravatar from Automattic, the company behind the WordPress software. Users can upload an avatar, which will then appear on any Gravatar-enabled website.  A Disqus API (application programming interface) fetched avatars from Gravatar using the hashed email addresses of registered users. A hash is a cryptographic representation of a value processed by an algorithm.  For example, the email address \"idg@idgnews.com\" when processed by the MD5 algorithm appears as this hash: \"0ff3eeab2b765f017a526bbddd328c3b.\"  The journalists likely collected the nicknames of commentators from the websites, then pinged Disqus' API to see what MD5 value was returned. They could have gained access to Disqus' API by creating an account, according to Eaxbreakparty, a blog run by a self-described cryptography enthusiast.",
+  "timeline": {
+    "incident": {
+      "day": 10,
+      "month": 12,
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "519130",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Disqus"
+  }
+}

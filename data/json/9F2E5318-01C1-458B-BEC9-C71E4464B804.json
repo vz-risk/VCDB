@@ -1,0 +1,102 @@
+{
+  "action": {
+    "error": {
+      "notes": "Unknown third-party vendor",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {}
+  },
+  "actor": {
+    "unknown": {}
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "governance": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "amount": 140000,
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 140000,
+      "data_victim": [
+        "Employee",
+        "Student"
+      ],
+      "notes": "The exposed SNHU database contains more than 140,000 records including student names, email addresses, and IDs; as well as other class-related details such as course name, course section, assignment details and assignment score. The database also contains instructor names and email addresses. ",
+      "state": [
+        "Unknown"
+      ]
+    }
+  },
+  "discovery_method": "Ext - actor disclosure",
+  "discovery_notes": "The database was discovered by researcher Chris Vickery shortly before Christmas. Vickery turned to Salted Hash for assistance in resolving the matter, as previous attempts to contact the university were stalled due to a lack of contact options. ",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9F2E5318-01C1-458B-BEC9-C71E4464B804",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "nicolasvillatte",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2016-01-12T09:07:00Z",
+    "dbir_year": 2016,
+    "github": "6970",
+    "master_id": "9F2E5318-01C1-458B-BEC9-C71E4464B804",
+    "modified": "2016-01-12T09:07:00Z",
+    "timeline": {
+      "notification": {
+        "day": 15,
+        "month": 12,
+        "year": 2015
+      }
+    }
+  },
+  "reference": "http://www.csoonline.com/article/3019278/security/snhu-still-investigating-database-leak-exposing-over-140-000-records.html;",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": " Southern New Hampshire University (SNHU) says they're still investigating how a database containing some student and class information was exposed to the public. The database was discovered by researcher Chris Vickery shortly before Christmas. flying ace Infosec jobs: 5 Ways to score an ace recruiter  Working with recruiters who specialize in placing security professionals can give you an advantage in Read Now  Vickery turned to Salted Hash for assistance in resolving the matter, as previous attempts to contact the university were stalled due to a lack of contact options.  A former SNHU student contacted by Salted Hash was able to connect us to the university's Information Security Officer on December 15, 2015. After our email containing IP and DNS information was sent, the contact reacted swiftly to secure the exposed database. MORE ON CSO:Millions of records compromised in these data breaches  When questioned about the function of the database, SNHU wouldn't comment.  The exposed SNHU database contains more than 140,000 records including student names, email addresses, and IDs; as well as other class-related details such as course name, course section, assignment details and assignment score. The database also contains instructor names and email addresses.  Considering the information contained within the leaked database, it looks as if it's related to the university's online offerings or something students can use to track class progress. On their website, SNHU says that enrollment totals more than 70,000 students. So, either the exposed database has duplicated records, or both current and former students were impacted by the incident.  After being contacted a second time by Salted Hash, the school confirmed an investigation was ongoing and the student IDs exposed in the incident were not based on Social Security Numbers.  SNHU says the database was exposed by a third-party vendor (configuration errors), but they wouldn't name the vendor in question.  \"We are awaiting a copy of the database from the vendor, so we cannot comment on the precise nature of its contents. The vendor did tell us that no Social Security information, birth dates, credit card information or SNHU passwords were present in the database,\" the university said in a statement to Salted Hash.  On December 23, SNHU said they'll \"assess next steps, including any possible communications to students,\" once their investigation concludes.  As of January 4, that investigation remains open. This story will be updated as new information becomes available. ",
+  "timeline": {
+    "incident": {
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "611310",
+    "region": [
+      "019021"
+    ],
+    "state": "NH",
+    "victim_id": "Southern New Hampshire University"
+  }
+}

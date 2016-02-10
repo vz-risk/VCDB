@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Fun"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Auditor"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3300000,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 3300000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 3300000,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Personal details on 3.3 million accounts user's real name, email address, account password, gender, birthday, country of origin, password hints, and their answers.  password string was hashed and stored in MD5 form (easy to crack).  It's not clear [...] or how it was leaked  However, it added that the data did not include credit card or other payment details, and that no information was stolen.  The security researcher who identified the problem, Chris Vickery, disputed Sanrio's claim that information was not accessed",
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "discovery_method": "Ext - actor disclosure",
+  "discovery_notes": "Sanrio Co.'s digital arm said Tuesday that it \"corrected\" a security vulnerability on the SanrioTown.com website and was investigating. The leak was discovered Saturday by a security researcher.",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "66C4F97C-4661-4AA3-A4D7-D72A0E2BC03E",
+  "notes": "Sanrio Digital  Incident 2015-12-19 Notification 2015-12-19 (Sec Researcher) NAICS 4532201 Employees: 766  Data  Personal details on 3.3 million accounts user's real name, email address, account password, gender, birthday, country of origin, password hints, and their answers.  password string was hashed and stored in MD5 form (easy to crack).  It's not clear [...] or how it was leaked  However, it added that the data did not include credit card or other payment details, and that no information was stolen.  The security researcher who identified the problem, Chris Vickery, disputed Sanrio's claim that information was not accessed   Timeline Sanrio Co.'s digital arm said Tuesday that it \"corrected\" a security vulnerability on the SanrioTown.com website and was investigating. The leak was discovered Saturday by a security researcher.  Breach: 2015-12-19 Containment: 2015-12-22",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "tecamac",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2016-01-11T07:28:00Z",
+    "dbir_year": 2016,
+    "github": "6857",
+    "master_id": "66C4F97C-4661-4AA3-A4D7-D72A0E2BC03E",
+    "modified": "2016-01-11T07:28:00Z",
+    "timeline": {
+      "notification": {
+        "day": 19,
+        "month": 12,
+        "year": 2015
+      }
+    }
+  },
+  "reference": "http://news.softpedia.com/news/data-breach-on-hello-kitty-servers-over-3-3-million-accounts-exposed-497872.shtml;http://www.continuityinsights.com/news/2016/01/hello-kitty-owner-sanrio-says-fan-site-security-leak-fixed;http://www.csoonline.com/article/3017171/security/database-leak-exposes-3-3-million-hello-kitty-fans.html;http://sanriodigital.com/story/security-advisory",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Sanrio Digital notifies that personal information belonging to members of the consumer website SanrioTown.com was publicly accessible owing to a security vulnerability. The vulnerability has been corrected and investigations are underway. To our knowledge at this time, no personal information of SanrioTown.com users was stolen or exposed.   On December 19, it was revealed by security researcher Chris Vickery that personal information (such as names, date of birth, gender) belonging to SanrioTown.com members was accessible by someone who knew the IP addresses of specific vulnerable servers.   The vulnerable data did not include credit card information or other payment information. Users' passwords were accessible but remained securely encrypted with the cryptographic hash function SHA-1.   Please note that membership data of SanrioTown is not shared with other Sanrio services or websites (such as Sanrio.com), therefore other Sanrio services were not affected by this security vulnerability.   We investigated the problem and applied fixes, including securing the servers identified as vulnerable by Mr Vickery.   We are conducting an internal investigation and security review into this incident; at this time we have no indication that users' personal information was stolen by malicious parties.   We apologize deeply for any concern and inconvenience this incident may have caused.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 19,
+      "month": 12,
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "453220",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Sanrio Digital"
+  }
+}

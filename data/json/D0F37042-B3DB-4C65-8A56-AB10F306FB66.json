@@ -1,0 +1,145 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "POS hack",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Backdoor or C2",
+        "Web application"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Capture stored data"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CN"
+      ],
+      "motive": [
+        "Fun"
+      ],
+      "region": [
+        "142030",
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - POS controller"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 1600000,
+          "variety": "Payment"
+        },
+        {
+          "amount": 1600000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1600000,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Zhang illegally accessed the airline's database and stole details about 1.6 million bookings, names, ID numbers, email addresses, and mobile phone numbers.",
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "notes": "He also used his access to the website to cancel some current bookings, and later, using the stolen information, contacted airline customers via text messages, and asked them to re-book their flights.  This scheme is how the hacker made his money, by offering a re-booking link that pocketed him re-booking fees. He used a trojan to infiltrate the airline's computer systems, from where he acquired the necessary information and credentials to access their website.  Company lacked an up-to-date antivirus system",
+      "variety": [
+        "Software installation",
+        "Fraudulent transaction",
+        "Misrepresentation",
+        "Modify data"
+      ]
+    }
+  },
+  "discovery_method": "Ext - customer",
+  "discovery_notes": "These incidents took place between July 31 and August 20, and by August 22, the airline's customers started complaining about constantly canceled flights. The company launched an investigation, and later announced a data breach on the same day",
+  "impact": {
+    "overall_amount": 170000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "D0F37042-B3DB-4C65-8A56-AB10F306FB66",
+  "plus": {
+    "analysis_status": "Needs review",
+    "analyst": "anastasia",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U",
+        "data_misuse": "Y"
+      }
+    },
+    "created": "2015-12-17T22:24:00Z",
+    "dbir_year": 2016,
+    "github": "6840",
+    "master_id": "D0F37042-B3DB-4C65-8A56-AB10F306FB66",
+    "modified": "2015-12-17T22:24:00Z",
+    "timeline": {
+      "notification": {
+        "day": 22,
+        "month": 8,
+        "year": 2015
+      }
+    }
+  },
+  "reference": "http://news.softpedia.com/news/chinese-hacker-pockets-170-000-after-hacking-airline-website-497771.shtml",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Chinese Hacker Pockets $170,000 After Hacking Airline Website; hacker made his money, by offering a re-booking link that pocketed him re-booking fees.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "incident": {
+      "day": 31,
+      "month": 7,
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "Unknown",
+    "industry": "561599",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Unknown"
+  }
+}

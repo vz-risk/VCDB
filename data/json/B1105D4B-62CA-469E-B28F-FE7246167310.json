@@ -1,0 +1,116 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "SQLi"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Mufasa"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "governance": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 50000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 50000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Repurpose"
+      ]
+    }
+  },
+  "discovery_method": "Ext - actor disclosure",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "B1105D4B-62CA-469E-B28F-FE7246167310",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U",
+        "data_misuse": "Y"
+      }
+    },
+    "created": "2016-02-04T00:01:00Z",
+    "dbir_year": 2016,
+    "github": "6115",
+    "master_id": "B1105D4B-62CA-469E-B28F-FE7246167310",
+    "modified": "2016-02-04T00:01:00Z",
+    "timeline": {
+      "notification": {
+        "month": 6,
+        "year": 2015
+      }
+    }
+  },
+  "reference": "http://www.csoonline.com/article/2938032/data-breach/akorn-inc-has-customer-database-stolen-records-offered-to-highest-bidder.html",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Akorn Inc., a niche pharmaceutical company Lake Forest, IL, has had a customer database with more than 50,000 records compromised by a hacker who is offering to sell the data to the highest bidder or back to the company, whichever comes first.   The database was offered up on a dark web forum by a person known for using SQL Injection and other techniques to target vulnerable companies.  Going by the alias \"Mufasa\" the hacker posted basic details on the data earlier this week, noting that it was an Akorn customer database, complete with business related information, including DEA numbers. This is the same hacker who claimed responsibility for the breach at iiNEt, Australia's second largest ISP, earlier this month.  DEA registration numbers are assigned to healthcare providers in order to help track controlled substances. While the DEA primarily uses them for tracking, the medical industry uses them as a unique identifier for those who can prescribe narcotics, such as oxycodone, meperidine, or fentanyl, among others.  Salted Hash first learned about the incident thanks to a tip form Israeli threat intelligence firm, CyberInt. We reached out to the hacker offering to sell the data, and learned that the breach occurred due to SQL Injection vulnerabilities on the company website.  \"Every PHP file on their website was vulnerable to [SQL Injection],\" Mufasa told Salted Hash, \"they had no security whatsoever.\"  When contacted by Salted Hash for comment, Akorn confirmed the breach and stated that they were notifying customers.  \"Although much of the information acquired is publicly available, we are in the process of notifying our valued customers about this incident,\" Akorn said in a statement.  The company added that they're also cooperating fully with law enforcement officials, including the DEA.  The compromised data includes customer email address, username, password, business address, and DEA number. There was no financial data stored in the database, which is good because it was being housed with no encryption at all. Screenshots of the records shared with Salted Hash show all fields in clear text, including passwords.  It's also possible that due to duplicates, the total number of records is as low as 35,000, but Akorn couldn't comment on exact figures.  Given the type of data that has been compromised, phishing is certainly a potential risk in this case, due to the fact that medical practitioners have access to patient records and other sensitive data. Moreover, there is a risk __ albeit slight __ that someone could use the DEA numbers and other information to obtain drugs.  However, prescriptions are monitored, so if the same DEA number was to be used more than normal or for drugs not normally prescribed, the fraudster would be caught almost immediately. Unfortunately, sometimes the red flags on a given number can take weeks to be raised.  When asked if they had any offers for the data, Mufasa told Salted Hash that there were some offers on the table, but expressed some hesitation about selling the records. However, if someone were to offer the right price, Mufasa would sell.  Moreover, if Akorn wanted to purchase the data back, the price is $5,000 USD, Mufasa added. Commenting on why the data was taken in the first place, Mufasa said that they wanted to teach Akorn a lesson in security and to encourage them to use encryption.  \"...640mil on buying a company and they couldn't invest in some [website] security.\"  The database theft at Akorn is just the latest in a sting of issues for the company. Last month, the company recalled more than 360,000 units of antibiotics made by Hi-Tech Pharmacal, which Akorn bought in 2013 for $640 million. And in April, the company faced a number of class action suits after they overstated their financial results for the last three quarters of 2014.  Update: On June 4, Akorn informed the New Hampshire Attorney General that four employee email accounts were compromised earlier this year, and that the incident lasted several weekends before it was detected around April 20.  On May 1, the company discovered that personal information was compromised during the earlier incident, but the exact scope of the compromise (e.g. number of records) was not disclosed.  However, the notice does say the incident compromised PII (names, Social Security Number, etc.) for the persons \"whose e-mail accounts were compromised (and their associates and relatives) and for additional persons whose information was in human resources and/or payroll-related records.\"  When asked for comment in order to confirm this as a separate incident, or as something related to this more recent incident, the company declined to respond.",
+  "timeline": {
+    "incident": {
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "32541",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Akorn Inc."
+  }
+}

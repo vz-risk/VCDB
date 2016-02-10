@@ -1,0 +1,115 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "weak password after database dump acquisition",
+      "variety": [
+        "Unknown",
+        "Brute force"
+      ],
+      "vector": [
+        "Unknown",
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Trojan mod",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "unknown": {}
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "governance": [
+      "Personally owned"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5915013,
+      "state": [
+        "Stored encrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "discovery_method": "Ext - audit",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "41CBE7EA-47AD-4FBD-9CC8-5B75FF89E2AB",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "nicolasvillatte",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2016-01-20T14:24:00Z",
+    "dbir_year": 2016,
+    "github": "7041",
+    "master_id": "41CBE7EA-47AD-4FBD-9CC8-5B75FF89E2AB",
+    "modified": "2016-01-20T14:24:00Z",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 12,
+        "year": 2015
+      }
+    }
+  },
+  "reference": "http://news.softpedia.com/news/nexus-mods-data-breach-confirmed-6-million-accounts-compromised-499084.shtml;http://www.nexusmods.com/games/news/12670/?;http://www.nexusmods.com/games/news/12675/?;",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Nexus Mods Data Breach Confirmed, 6 Million Accounts Compromised Early December 2015 Nexus Mods data breach report confirmed Jan 18, 2016 22:13 GMT    By Catalin Cimpanu  A database of six million Nexus Mods user accounts has been added to the Have I Been Pwned? online service, after the website's operators discovered the breach last month.  Nexus Mods is the biggest gaming mods database on the Internet, with an estimated userbase of ten million users. The site provides modding (customization) utilities for over 230 gaming titles, ranging from simple weapon skins to advanced game mods that transform the original game's entire playing experience.  At the start of December, a user on Reddit was advising Nexus Mods fans to reset their passwords, after he stumbled upon a database dump belonging to the Nexus Mods website. Nexus Mods was hacked in July 2013, only came to light in December 2015  One of the website's administrators got in contact with the Reddit user, got hold of the database dump, and after sifting through the data for an entire night, sent out a notification to all site users to reset their passwords.  According to Dark0ne, Nexus Mods admin, the data dump he received via Reddit contained info belonging to Nexus Mods users that registered before July 22, 2013, and it reflected the account details for that specific time.  No financial details were included, since payment information is handled by PayPal, and the database wasn't complete, including only user IDs, usernames, email addresses, password hashes and salts. No cleartext passwords. Malware was uploaded on the site instead of legitimate mod files  Dark0ne said the data breach occurred after the hacker compromised three user accounts with extremely simple passwords. He then used these three compromised mod author accounts to upload malware on the Nexus Mods servers, in place of legitimate mods.  These malicious files were then later used to launch the attack on the site's database. No details were revealed on whether the files were used to trigger an SQL injection attack or to install a backdoor on the server.  While the data breach seemed to have been contained on Nexus Mods' part after alerting users to reset their account passwords (via an alert on its site, not by individual emails), the story didn't end here, though. The leaked Nexus Mods database contains details of 5,915,013 users  The Nexus Mods database dump eventually made its way onto the Dark Web, and as Troy Hunt (owner of Have I've Been Pwned?) reports, somebody even tried selling it to him a while back.  \"Sooner or later, someone comes along perhaps driven by a desire to do good, who provides me with the data. That was the case with 000webhost and now it's the case with Nexus Mods as well,\" Mr. Hunt explains, after an anonymous benefactor eventually supplied him with the Nexus Mods database for free.  All the details of affected Nexus Mods users have been added to Have I Been Pwned?, a website that allows users to check if their details have been leaked in past data breaches.  Details for 5,915,013 Nexus Mods users have been indexed on the service, fifth all time behind the databases of Adobe, Ashley Madison, 000webhost.com, and Gamigo. ",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 2
+    },
+    "incident": {
+      "day": 22,
+      "month": 7,
+      "year": 2013
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "561499",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Black Tree Gaming Limited"
+  }
+}
