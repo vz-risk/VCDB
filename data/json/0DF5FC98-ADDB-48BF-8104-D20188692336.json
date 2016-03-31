@@ -1,0 +1,172 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "", 
+      "variety": [
+        "Abuse of functionality", 
+        "Brute force", 
+        "Use of stolen creds"
+      ], 
+      "vector": [
+        "Desktop sharing"
+      ]
+    }, 
+    "malware": {
+      "cve": "", 
+      "name": "", 
+      "variety": [
+        "Backdoor", 
+        "Adminware"
+      ], 
+      "vector": [
+        "Unknown"
+      ]
+    }, 
+    "social": {
+      "notes": "August 13, 2012: A malicious (phishing) email was sent to multiple Department of Revenue employees. At least one Department of Revenue user clicked on the embedded link, unwittingly executed malware, and became compromised. The malware likely stole the user\u2019s username and password. This theory is based on other facts discovered during the investigation; however, Mandiant was unable to conclusively determine if this is how the user\u2019s credentials were obtained by the attacker.", 
+      "target": [
+        "End-user"
+      ], 
+      "variety": [
+        "Phishing"
+      ], 
+      "vector": [
+        "Email"
+      ]
+    }
+  }, 
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ], 
+      "motive": [
+        "Financial"
+      ], 
+      "region": [
+        "150151"
+      ], 
+      "variety": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Authentication"
+      }, 
+      {
+        "variety": "S - Database"
+      }, 
+      {
+        "variety": "S - File"
+      }, 
+      {
+        "variety": "S - Remote access"
+      }, 
+      {
+        "variety": "P - End-user"
+      }
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1, 
+          "variety": "Credentials"
+        }, 
+        {
+          "amount": 3300000, 
+          "variety": "Bank"
+        }, 
+        {
+          "amount": 6399900, 
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_total": 9699901, 
+      "data_victim": [
+        "Customer"
+      ], 
+      "notes": "In addition to 3.8 million tax returns, including the Social Security numbers of 1.9 million children and other dependents, the hackers got access to data on 699,900 business tax returns and 3.3 million bank accounts.  Plus the one set of account creds that we know of.  There were others that were enumerated, but be aren't confirmed on them taking those.", 
+      "state": [
+        "Stored unencrypted"
+      ]
+    }, 
+    "integrity": {
+      "variety": [
+        "Repurpose", 
+        "Software installation", 
+        "Alter behavior"
+      ]
+    }
+  }, 
+  "discovery_method": "Unknown", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "0DF5FC98-ADDB-48BF-8104-D20188692336", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "swidup", 
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Y", 
+        "data_abuse": "U"
+      }
+    }, 
+    "created": "2013-02-17T23:20:23Z", 
+    "f500": "N", 
+    "master_id": "0DF5FC98-ADDB-48BF-8104-D20188692336", 
+    "modified": "2014-05-10T00:58:18Z", 
+    "timeline": {
+      "notification": {
+        "day": 20, 
+        "month": 11, 
+        "year": 2012
+      }
+    }
+  }, 
+  "reference": "http://openchannel.nbcnews.com/_news/2012/11/20/15313720-one-email-exposes-millions-of-people-to-data-theft-in-south-carolina-cyberattack?lite, http://governor.sc.gov/Documents/MANDIANT%20Public%20IR%20Report%20-%20Department%20of%20Revenue%20-%2011%2020%202012.pdf, http://doj.nh.gov/consumer/security-breaches/documents/south-carolina-revenue-20121126.pdf, http://www.atg.state.vt.us/issues/consumer-protection/privacy-and-Data-Security/documents-and-resources5/south-carolina-department-of-revenue-breach.php ", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "A single malicious email sent to workers at the South Carolina  Department of Revenue last August enabled an international hacker to crack into state computers and gain access to 3.8 million tax returns, including Social Security numbers and bank account information, in what experts say is the biggest cyber-attack ever against a state government, according to details in a report released Tuesday.  According to the Mandiant report, the cyberattack, which state sources say is believed to have originated inside Russia, started with a \u201cphishing\u201d scheme, a common tactic used by cyber criminals.   Last Aug. 13, a hacker sent multiple South Carolina Department of Revenue  employees a malicious email containing an embedded link containing malware or a computer virus. When at least one of the employees clicked on the link, the malware was activated and allowed the hacker to steal the employee\u2019s user name and password.  From there, the hacker was off to the races. Two weeks later, the attacker logged onto the remote-access service for Department of Revenue computers, using the credentials of an employee who had clicked on the Aug. 13 email. The invader then \u201cleveraged the user\u2019s access rights to access other Department of Revenue systems and databases with the user\u2019s credentials,\u201d the report states.", 
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    }, 
+    "containment": {
+      "unit": "Days"
+    }, 
+    "discovery": {
+      "unit": "Months"
+    }, 
+    "exfiltration": {
+      "unit": "Weeks"
+    }, 
+    "incident": {
+      "day": 13, 
+      "month": 8, 
+      "year": 2012
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "101 to 1000", 
+    "industry": "9211", 
+    "region": [
+      "019021"
+    ], 
+    "state": "SC", 
+    "victim_id": "South Carolina Department of Revenue"
+  }
+}

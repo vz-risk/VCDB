@@ -1,0 +1,136 @@
+{
+  "action": {
+    "misuse": {
+      "notes": "Installation of out-of-band modem, configured devices to run on VRAM, so a reboot would clear the configuration.", 
+      "variety": [
+        "Unapproved hardware", 
+        "Unapproved workaround", 
+        "Possession abuse", 
+        "Privilege abuse"
+      ], 
+      "vector": [
+        "LAN access", 
+        "Physical access"
+      ]
+    }, 
+    "physical": {
+      "variety": [
+        "Tampering"
+      ], 
+      "vector": [
+        "Victim secure area"
+      ]
+    }, 
+    "social": {
+      "notes": "Refusal to provide password necessary to administrate Fiber WLAN in attempt to save his employment.", 
+      "target": [
+        "Executive"
+      ], 
+      "variety": [
+        "Extortion"
+      ], 
+      "vector": [
+        "In-person"
+      ]
+    }
+  }, 
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ], 
+      "notes": "Borderline paranoid actions were conducted to attempt to make him indispensable. Also modeling as 'Internal' as the initial actions occurred while under employment. ", 
+      "variety": [
+        "System admin"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - LAN"
+      }, 
+      {
+        "variety": "N - Other"
+      }, 
+      {
+        "variety": "P - Executive"
+      }
+    ], 
+    "governance": [
+      "Personally owned"
+    ], 
+    "notes": "The asset specified throughout the court documentation is the \"Fiber WAN\".  The utility and integrity of numerous devices on said WAN had to be affected by his actions, so I am also marking Network (Other)."
+  }, 
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days", 
+        "value": 12
+      }, 
+      "notes": "Utility loss as nobody could access network administration for days and no changes could be made. Scheduled power outage could not occur, new departments could not be provisioned. ", 
+      "variety": [
+        "Other"
+      ]
+    }, 
+    "integrity": {
+      "notes": "Installation of out-of-band access; configuring environment to only allow threat actor administrative access and setting up config in memory so it would be lost on reboot. Extortion of employer.", 
+      "variety": [
+        "Modify configuration", 
+        "Alter behavior", 
+        "Hardware tampering"
+      ]
+    }
+  }, 
+  "discovery_method": "Int - reported by employee", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "B13ACEAE-65B6-4ED5-9ABF-A01452364C23", 
+  "notes": "The official court case is worth the read.", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "Spitler", 
+    "created": "2013-11-16T14:42:00Z", 
+    "github": "766", 
+    "master_id": "B13ACEAE-65B6-4ED5-9ABF-A01452364C23", 
+    "modified": "2014-05-10T19:23:23Z", 
+    "timeline": {
+      "notification": {
+        "month": 7, 
+        "year": 2008
+      }
+    }
+  }, 
+  "reference": "http://www.forbes.com/sites/ericgoldman/2013/11/04/think-hoarding-passwords-keeps-you-safe-from-firing-think-again/; http://www.courts.ca.gov/opinions/documents/A129583.PDF", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "IT Administrator is dismissed and will not divulge passwords he purposely kept sole knowledge of to former employer, also installed logic bomb that would erase information if attempts were made to access systems. Installed non-sanctioned out-of-band modem access.", 
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    }, 
+    "containment": {
+      "unit": "Weeks"
+    }, 
+    "exfiltration": {
+      "unit": "NA"
+    }, 
+    "incident": {
+      "year": 2008
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "101 to 1000", 
+    "industry": "921", 
+    "region": [
+      "019021"
+    ], 
+    "state": "CA", 
+    "victim_id": "Department of Telecommunications and Information Services of the City and County of San Francisco"
+  }
+}

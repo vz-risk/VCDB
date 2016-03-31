@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of stolen creds"
+      ], 
+      "vector": [
+        "Web application"
+      ]
+    }, 
+    "social": {
+      "notes": "Smishing tricks customers to provide information that is used to allow actors to request SMS one-time passwords to be sent to a different SIM.  ", 
+      "target": [
+        "Customer"
+      ], 
+      "variety": [
+        "Phishing"
+      ], 
+      "vector": [
+        "SMS"
+      ]
+    }
+  }, 
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ], 
+      "motive": [
+        "Financial"
+      ], 
+      "region": [
+        "000000"
+      ], 
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }, 
+      {
+        "variety": "P - Customer"
+      }
+    ], 
+    "governance": [
+      "Personally owned"
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }, 
+        {
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_victim": [
+        "Customer"
+      ], 
+      "notes": "PII and banking information disclosed by customer, used to acquire access to one-time authentication PINs.", 
+      "state": [
+        "Transmitted"
+      ]
+    }, 
+    "integrity": {
+      "variety": [
+        "Alter behavior", 
+        "Fraudulent transaction"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - customer", 
+  "impact": {
+    "iso_currency_code": "ZAR", 
+    "loss": [
+      {
+        "amount": 1682205, 
+        "variety": "Asset and fraud"
+      }
+    ], 
+    "notes": "disclosed losses, amount is likely higher.;", 
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "9EFB472D-D1D2-452C-A999-A349CA5B3795", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "Spitler", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_misuse": "Y"
+      }
+    }, 
+    "created": "2013-11-16T15:21:00Z", 
+    "github": "728", 
+    "master_id": "9EFB472D-D1D2-452C-A999-A349CA5B3795", 
+    "modified": "2014-05-10T00:58:19Z", 
+    "timeline": {
+      "notification": {
+        "year": 2013
+      }
+    }
+  }, 
+  "reference": "http://mybroadband.co.za/news/banking/90585-why-absa-mtn-clients-were-targeted-in-online-banking-fraud.html; http://mybroadband.co.za/news/banking/76994-this-is-how-sim-swap-fraud-happens-absa.html", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "ABSA customers were victims of SIM swap fraud, allowing external actors to receive one-time passwords via SMS (after acquiring other information from phishing attacks). Armed with both sets of data, fraudulent transactions ensue. ", 
+  "timeline": {
+    "incident": {
+      "year": 2013
+    }
+  }, 
+  "victim": {
+    "country": [
+      "ZA"
+    ], 
+    "employee_count": "Unknown", 
+    "industry": "522110", 
+    "region": [
+      "002018"
+    ], 
+    "victim_id": "Absa Group Limited"
+  }
+}

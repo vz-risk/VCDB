@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Accessed registrar information and web control panel using credentials. Unknown how they were obtained.  Also obtained a password reset for the mail server by leveraging web panel access.",
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown",
+        "Grudge"
+      ],
+      "name": [
+        "Eugene Belford"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - DNS"
+      }
+    ],
+    "cloud": "Hosting governance",
+    "governance": [
+      "3rd party managed",
+      "3rd party owned",
+      "3rd party hosted"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 3
+      },
+      "notes": "Site was compromised 3 times during a 3-day span.",
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "notes": "Configuration modification occurred on partner asset (DNS Server). Modified permissions was the password reset and allowance of single factor authentication into the mail server.",
+      "variety": [
+        "Modify privileges",
+        "Modify configuration"
+      ]
+    }
+  },
+  "discovery_method": "Ext - actor disclosure",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "BD71EF22-F735-4AE9-A9A4-3F39DABF6169",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Spitler",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2014-07-11T14:07:00Z",
+    "github": "1723",
+    "master_id": "BD71EF22-F735-4AE9-A9A4-3F39DABF6169",
+    "modified": "2014-07-11T14:07:00Z",
+    "timeline": {
+      "notification": {
+        "year": 2014
+      }
+    }
+  },
+  "reference": "http://www.theregister.co.uk/2014/03/13/ethical_hacker_cert_org_pwned/;  http://www.infosecnews.org/so-who-hacked-ec-council-three-times-this-week/#.UxnmDnk3-5c",
+  "schema_version": "1.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Unaffiliated hacker utilizes DNS hijacking to route traffic destined to EC-council's domain to a controlled website. The same threat actor was able to access the control panel for the website and gain access to their enterprise mail server.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "year": 2014
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "611420",
+    "region": [
+      "019021"
+    ],
+    "state": "NM",
+    "victim_id": "Ec-Council Foundation"
+  }
+}

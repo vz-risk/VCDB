@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "notes": "The error was in sending the data unencrypted.  The document implies that is not the usual practice.", 
+      "variety": [
+        "Other"
+      ], 
+      "vector": [
+        "Unknown"
+      ]
+    }, 
+    "misuse": {
+      "variety": [
+        "Possession abuse"
+      ], 
+      "vector": [
+        "LAN access"
+      ]
+    }
+  }, 
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ], 
+      "variety": [
+        "Unknown"
+      ]
+    }, 
+    "partner": {
+      "country": [
+        "US"
+      ], 
+      "industry": "423450", 
+      "motive": [
+        "Financial"
+      ], 
+      "notes": "All American Medical Supplies", 
+      "region": [
+        "019021"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ], 
+    "governance": [
+      "Personally owned"
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_victim": [
+        "Patient"
+      ], 
+      "notes": "Subsequent use was by the partner to market equipment to the patients.", 
+      "state": [
+        "Transmitted unencrypted"
+      ]
+    }
+  }, 
+  "discovery_method": "Unknown", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "F8C47B4F-7298-4E27-8829-39C963252B91", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "swidup", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_misuse": "Y"
+      }
+    }, 
+    "created": "2014-05-03T01:09:00Z", 
+    "master_id": "F8C47B4F-7298-4E27-8829-39C963252B91", 
+    "modified": "2014-05-03T01:09:00Z", 
+    "timeline": {
+      "notification": {
+        "year": 2014
+      }
+    }
+  }, 
+  "reference": "http://doj.nh.gov/consumer/security-breaches/documents/complete-medical-homecare-20140121.pdf; http://www.oag.state.md.us/idtheft/Breach%20Notices/itu-237698.pdf; http://www.phiprivacy.net/complete-medical-homecare-reports-unintended-disclosure-of-phi-to-business-partner/", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "  Complete Medical Homecare didnt encrypt emails sent to trusted business partners like All American Medical Supplies. That failure to encrypt, combined with human error, resulted in a regrettable privacy breach.  On December 27, CMH discovered that materials with patients names, addresses, dates of birth, Social Security numbers, and certain medical diagnoses had been transmitted to AAMS on December 12. AAMS then used that information, in error, to send introductory letters to the patients and, in some cases, they sent them medical equipment.  When CMH discovered their error, they contacted AAMS, who destroyed their copy of the data, and agreed that no further letters would be sent out. Patients who received equipment from AAMS were asked to contact them to arrange for the return of the equipment at no cost to them.  Because CMH and AAMS are both covered by HIPAA, this breach was not as bad as it might have been, although clearly it was an unintended disclosure of PHI that patients needed to be informed about.  As part of preventing future incidents of this kind, CMH is undertaking a number of steps, including deploying encryption when emailing outside the company. Actually, they should have been doing that anyway, as even though they may trust the recipient, failure to encrypt allows capture or interception of the communications by attackers.  You can read CMHs report to the New Hampshire Attorney Generals Office and their notification to three New Hampshire residents here (pdf).  The total number of patients notified was not reported.  Update: The breach also affected 16 Maryland residents, but we still dont know the total number affected. ", 
+  "timeline": {
+    "incident": {
+      "year": 2014
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "Unknown", 
+    "industry": "622110", 
+    "region": [
+      "019021"
+    ], 
+    "state": "KS", 
+    "victim_id": "Complete Medical Homecare"
+  }
+}

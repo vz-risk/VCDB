@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "XSS", 
+        "Use of backdoor or C2", 
+        "Use of stolen creds"
+      ], 
+      "vector": [
+        "Web application"
+      ]
+    }, 
+    "malware": {
+      "notes": "Once the attacker gained administrator access in the Forums they were able to add a hook through the administrator control panel. Hooks in vBulletin are arbitrary PHP code which can be made to run on every page load. The attacker installed a hook allowing them to execute arbitrary PHP passed in a query string argument. They used this mechanism to explore the environment and also to upload and install two widely available PHP shell kits. The attacker used these shell kits to upload and run some custom PHP code to dump the user table to a file on disk which they then downloaded.", 
+      "variety": [
+        "Password dumper", 
+        "Capture stored data", 
+        "Backdoor"
+      ], 
+      "vector": [
+        "Direct install"
+      ]
+    }, 
+    "social": {
+      "notes": "The attacker posted an announcement and then sent private messages to three Forum administrators (also members of the Ubuntu community) claiming that there was a server error on the announcement page and asking the Forum administrators to take a look.", 
+      "target": [
+        "System admin"
+      ], 
+      "variety": [
+        "Phishing"
+      ], 
+      "vector": [
+        "Website"
+      ]
+    }
+  }, 
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ], 
+      "motive": [
+        "Fun"
+      ], 
+      "notes": "@sputn1k", 
+      "region": [
+        "000000"
+      ], 
+      "variety": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }, 
+      {
+        "variety": "P - System admin"
+      }
+    ], 
+    "governance": [
+      "Personally owned"
+    ]
+  }, 
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days", 
+        "value": 1
+      }, 
+      "notes": "Ubuntu took down the forums in response to the defacement", 
+      "variety": [
+        "Interruption"
+      ]
+    }, 
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1820000, 
+          "variety": "Credentials"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_total": 1820000, 
+      "data_victim": [
+        "Customer"
+      ], 
+      "state": [
+        "Unknown"
+      ]
+    }, 
+    "integrity": {
+      "notes": "Uploading web shell and defacing the site.", 
+      "variety": [
+        "Software installation", 
+        "Modify data", 
+        "Alter behavior", 
+        "Defacement"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - actor disclosure", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "F68EF982-454F-46D2-8545-85FE1E908CD7", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "blackfist", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    }, 
+    "created": "2014-02-07T20:33:26Z", 
+    "github": "1551", 
+    "master_id": "F68EF982-454F-46D2-8545-85FE1E908CD7", 
+    "modified": "2014-05-18T15:34:56Z", 
+    "timeline": {
+      "notification": {
+        "day": 20, 
+        "month": 7, 
+        "year": 2013
+      }
+    }
+  }, 
+  "reference": "https://www.net-security.org/secworld.php?id=15327 (20140207);http://arstechnica.com/security/2013/07/hack-exposes-e-mail-addresses-password-data-for-2-million-ubuntu-forum-users/ (20140207)", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "Actor uses combination of hacking, social engineering, and malware to gain access to Ubuntu forums,steal user information, and finally deface the site..", 
+  "timeline": {
+    "containment": {
+      "unit": "Days", 
+      "value": 1
+    }, 
+    "discovery": {
+      "unit": "Days", 
+      "value": 6
+    }, 
+    "incident": {
+      "day": 14, 
+      "month": 7, 
+      "year": 2013
+    }
+  }, 
+  "victim": {
+    "country": [
+      "GB"
+    ], 
+    "employee_count": "101 to 1000", 
+    "industry": "541512", 
+    "region": [
+      "150154"
+    ], 
+    "victim_id": "CANONICAL GROUP LTD"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "action": {
+    "error": {
+      "notes": "It appears from Sentrys letter, however, that EFAST2_s scrubbers/filters did not prevent the attachments from being uploaded with the 5500 Form. Misdelivery covers Sentry's email attachment mistake, Misconfiguration covers the \"scrubbers\" not working for some reason, and \"Publishing error\" covers accidentally uploading the private info to a public site.", 
+      "variety": [
+        "Misconfiguration", 
+        "Misdelivery", 
+        "Publishing error"
+      ], 
+      "vector": [
+        "Carelessness", 
+        "Inadequate technology"
+      ]
+    }
+  }, 
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ], 
+      "variety": [
+        "Unknown"
+      ]
+    }, 
+    "partner": {
+      "country": [
+        "US"
+      ], 
+      "industry": "524113", 
+      "motive": [
+        "NA"
+      ], 
+      "notes": "Sentry Life Insurance Company Sentry Life Insurance is a service provider for many companies 401k plans.  In that capacity, they assist clients in the preparation  of, and submission of, the plans Form 5500 to the Department of Labor.", 
+      "region": [
+        "019021"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "Unknown"
+      }, 
+      {
+        "variety": "S - Web application"
+      }
+    ], 
+    "cloud": "Unknown", 
+    "governance": [
+      "Personally owned"
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3, 
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Potentially", 
+      "data_total": 3, 
+      "data_victim": [
+        "Employee"
+      ], 
+      "state": [
+        "Stored unencrypted"
+      ]
+    }, 
+    "integrity": {
+      "notes": "scrubbing/filters seem to have been misconfigured in some way because they didn't work as intended.", 
+      "variety": [
+        "Modify configuration"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - customer", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "0DF05980-BACC-445A-BCB5-15336E0F7675", 
+  "notes": "The Sentry email mistake was modeled seperately. ", 
+  "plus": {
+    "analysis_status": "Needs review", 
+    "analyst": "whbaker", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    }, 
+    "created": "2013-10-12T14:32:00Z", 
+    "github": "336", 
+    "master_id": "0DF05980-BACC-445A-BCB5-15336E0F7675", 
+    "modified": "2014-05-10T00:58:18Z", 
+    "timeline": {
+      "notification": {
+        "day": 11, 
+        "month": 7, 
+        "year": 2013
+      }
+    }
+  }, 
+  "reference": "http://www.databreaches.net/errors-by-both-sentry-life-insurance-and-the-department-of-labor-expose-401k-participants-information-online/", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "On July 2, Sentry discovered that some plans Form 5500 submissions to DOL contained an attachment with the individuals names, Social Security numbers, and in some cases, 401k account balances. To make matters worse, it seems the DOL uploaded the plans 5500 Forms to its EFAST2 website, where anyone can search for a plans filing, then click a link and download it.", 
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    }, 
+    "incident": {
+      "day": 2, 
+      "month": 7, 
+      "year": 2013
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "1001 to 10000", 
+    "industry": "9261", 
+    "locations_affected": 1, 
+    "region": [
+      "019021"
+    ], 
+    "victim_id": "US Department of Labor"
+  }
+}

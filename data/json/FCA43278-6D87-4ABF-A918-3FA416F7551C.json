@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "notes": "This incident was a result of a failure in a caching service that interfaces with devices using Exchange ActiveSync, including most smart phones. The failure caused these devices to receive an error and continuously try to connect to our service. This resulted in a flood of traffic that our services did not handle properly, with the effect that some customers were unable to access their Outlook.com email and unable to share their SkyDrive files via email. In order to stabilize the overall email service, we temporarily blocked access via Exchange ActiveSync. This allowed us to restore access to Outlook.com via the web and restore the sharing features of SkyDrive. These parts of the service were fully stabilized within a few hours of the initial incident. A significant backlog of Exchange ActiveSync requests accumulated as we worked to stabilize access. To avoid another flood of traffic, we needed to restore access to Exchange ActiveSync slowly, which meant that some customers remained impacted for a longer period of time.", 
+      "variety": [
+        "Misconfiguration", 
+        "Malfunction"
+      ], 
+      "vector": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ], 
+      "motive": [
+        "NA"
+      ], 
+      "region": [
+        "000000"
+      ], 
+      "variety": [
+        "Force majeure"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }, 
+      {
+        "variety": "S - File"
+      }, 
+      {
+        "variety": "S - Other"
+      }, 
+      {
+        "variety": "S - Web application"
+      }
+    ], 
+    "cloud": "Unknown", 
+    "governance": [
+      "Personally owned"
+    ]
+  }, 
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days", 
+        "value": 3
+      }, 
+      "variety": [
+        "Interruption"
+      ]
+    }
+  }, 
+  "discovery_method": "Unknown", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "FCA43278-6D87-4ABF-A918-3FA416F7551C", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "whbaker", 
+    "created": "2013-09-13T17:13:00Z", 
+    "master_id": "FCA43278-6D87-4ABF-A918-3FA416F7551C", 
+    "modified": "2014-05-10T19:23:23Z", 
+    "timeline": {
+      "notification": {
+        "month": 8, 
+        "year": 2013
+      }
+    }
+  }, 
+  "reference": "http://www.zdnet.com/microsoft-outlook-com-problems-still-not-fully-resolved-7000019509/", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "Outlook.com had a 2+ day outage which has resulted in some users not being able to get access their e-mail for the better part of this past week. This incident was a result of a failure in a caching service that interfaces with devices using Exchange ActiveSync, including most smart phones. The failure caused these devices to receive an error and continuously try to connect to our service. This resulted in a flood of traffic that our services did not handle properly, with the effect that some customers were unable to access their Outlook.com email and unable to share their SkyDrive files via email. In order to stabilize the overall email service, we temporarily blocked access via Exchange ActiveSync. This allowed us to restore access to Outlook.com via the web and restore the sharing features of SkyDrive. These parts of the service were fully stabilized within a few hours of the initial incident. A significant backlog of Exchange ActiveSync requests accumulated as we worked to stabilize access. To avoid another flood of traffic, we needed to restore access to Exchange ActiveSync slowly, which meant that some customers remained impacted for a longer period of time.", 
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    }, 
+    "exfiltration": {
+      "unit": "NA"
+    }, 
+    "incident": {
+      "day": 14, 
+      "month": 8, 
+      "year": 2013
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "50001 to 100000", 
+    "industry": "511210", 
+    "region": [
+      "019021"
+    ], 
+    "state": "WA", 
+    "victim_id": "Microsoft Corporation"
+  }
+}

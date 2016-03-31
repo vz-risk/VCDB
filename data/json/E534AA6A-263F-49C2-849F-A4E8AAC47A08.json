@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "", 
+      "variety": [
+        "Use of stolen creds"
+      ], 
+      "vector": [
+        "Web application"
+      ]
+    }, 
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ], 
+      "vector": [
+        "LAN access"
+      ]
+    }
+  }, 
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ], 
+      "variety": [
+        "End-user"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }, 
+      {
+        "variety": "S - Web application"
+      }
+    ], 
+    "governance": [
+      "3rd party hosted", 
+      "3rd party managed"
+    ], 
+    "notes": "Accessed 401K information on Fidelity servers using credentials he changed."
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        }, 
+        {
+          "variety": "Personal"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "state": [
+        "Stored"
+      ]
+    }, 
+    "integrity": {
+      "notes": "Initiated fraudulent transactions, changed PIN numbers to access account.", 
+      "variety": [
+        "Fraudulent transaction", 
+        "Modify data"
+      ]
+    }
+  }, 
+  "discovery_method": "Unknown", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "E534AA6A-263F-49C2-849F-A4E8AAC47A08", 
+  "plus": {
+    "analysis_status": "First pass", 
+    "analyst": "Splitler", 
+    "asset": {
+      "total": "No"
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U", 
+        "data_abuse": "Y"
+      }
+    }, 
+    "created": "2013-08-05T17:33:46Z", 
+    "f500": "N", 
+    "master_id": "E534AA6A-263F-49C2-849F-A4E8AAC47A08", 
+    "modified": "2014-05-10T00:58:19Z", 
+    "timeline": {
+      "notification": {
+        "day": 1, 
+        "month": 8, 
+        "year": 2013
+      }
+    }
+  }, 
+  "reference": "http://www.northjersey.com/news/217868681_East_Orange_man_charged_with_identity_theft_of_records_from_Rockleigh_business.html", 
+  "schema_version": "1.3.0", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "Internal actor used system access to steal personal and financial information belonging to fellow employees. He used this information to reset PIN numbers, access the accounts and commit fraud.", 
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    }, 
+    "containment": {
+      "unit": "Unknown"
+    }, 
+    "discovery": {
+      "unit": "Unknown"
+    }, 
+    "exfiltration": {
+      "unit": "NA"
+    }, 
+    "incident": {
+      "year": 2013
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "1 to 10", 
+    "industry": "492", 
+    "region": [
+      "019021"
+    ], 
+    "state": "NJ", 
+    "victim_id": "Publishers Circulation Fulfillment"
+  }
+}
