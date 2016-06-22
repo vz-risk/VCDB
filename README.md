@@ -19,5 +19,14 @@ If you want to get involved in this project, we have directions in the wiki for 
 
 
 
+# Index
+* vcdb_diff.json - An update to the verisc.json schema file to produce the schema file used for the vcdb
+* vcdb_diff-labels.json - An update to the verisc-labels.json labels file to produce the vcdb labels file
+* vcdb.json - The vcdb schema file
+* vcdb-labels.json - The vcdb labels file
+* vcdb-merged.json - The full schema, combining the schema file and enumerations from the labels file.
+* vcdb-enum.json - A json file containing just the enumerations from the schema.
+* vcdb-keynames-real.txt - A text file containing the keys in the vcdb schema.
+
 
 

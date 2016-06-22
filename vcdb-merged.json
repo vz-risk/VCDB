@@ -1,0 +1,3488 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#", 
+  "additionalProperties": false, 
+  "description": "VERIS Community Schema 1.3.1", 
+  "properties": {
+    "action": {
+      "minProperties": 1, 
+      "properties": {
+        "environmental": {
+          "additionalProperties": false, 
+          "properties": {
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Hazmat", 
+                  "Temperature", 
+                  "Unknown", 
+                  "Hurricane", 
+                  "Ice", 
+                  "Meteorite", 
+                  "Other", 
+                  "Pathogen", 
+                  "Landslide", 
+                  "Tornado", 
+                  "Leak", 
+                  "Earthquake", 
+                  "Particulates", 
+                  "Power failure", 
+                  "EMI", 
+                  "Humidity", 
+                  "Tsunami", 
+                  "ESD", 
+                  "Deterioration", 
+                  "Volcano", 
+                  "Lightning", 
+                  "Wind", 
+                  "Flood", 
+                  "Vermin", 
+                  "Fire"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "error": {
+          "additionalProperties": false, 
+          "properties": {
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Disposal error", 
+                  "Omission", 
+                  "Loss", 
+                  "Unknown", 
+                  "Maintenance error", 
+                  "Misinformation", 
+                  "Physical accidents", 
+                  "Publishing error", 
+                  "Malfunction", 
+                  "Capacity shortage", 
+                  "Other", 
+                  "Programming error", 
+                  "Data entry error", 
+                  "Gaffe", 
+                  "Misconfiguration", 
+                  "Misdelivery", 
+                  "Classification error"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "vector": {
+              "items": {
+                "enum": [
+                  "Random error", 
+                  "Carelessness", 
+                  "Other", 
+                  "Unknown", 
+                  "Inadequate processes", 
+                  "Inadequate technology", 
+                  "Inadequate personnel"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety", 
+            "vector"
+          ], 
+          "type": "object"
+        }, 
+        "hacking": {
+          "additionalProperties": false, 
+          "properties": {
+            "Elevate": {
+              "type": "boolean"
+            }, 
+            "Exfiltrate": {
+              "type": "boolean"
+            }, 
+            "Infiltrate": {
+              "type": "boolean"
+            }, 
+            "cve": {
+              "type": "string"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "XSS", 
+                  "HTTP Response Splitting", 
+                  "Unknown", 
+                  "Buffer overflow", 
+                  "Format string attack", 
+                  "LDAP injection", 
+                  "SSI injection", 
+                  "MitM", 
+                  "Path traversal", 
+                  "URL redirector abuse", 
+                  "Use of backdoor or C2", 
+                  "Mail command injection", 
+                  "Virtual machine escape", 
+                  "OS commanding", 
+                  "Soap array abuse", 
+                  "Footprinting", 
+                  "Cryptanalysis", 
+                  "SQLi", 
+                  "XML external entities", 
+                  "Abuse of functionality", 
+                  "XML injection", 
+                  "Routing detour", 
+                  "HTTP response smuggling", 
+                  "Forced browsing", 
+                  "Cache poisoning", 
+                  "Null byte injection", 
+                  "Reverse engineering", 
+                  "Brute force", 
+                  "Fuzz testing", 
+                  "Offline cracking", 
+                  "CSRF", 
+                  "XML entity expansion", 
+                  "RFI", 
+                  "Session fixation", 
+                  "Integer overflows", 
+                  "XQuery injection", 
+                  "Pass-the-hash", 
+                  "XML attribute blowup", 
+                  "Session prediction", 
+                  "Use of stolen creds", 
+                  "HTTP request smuggling", 
+                  "XPath injection", 
+                  "Other", 
+                  "DoS", 
+                  "Special element injection", 
+                  "HTTP request splitting", 
+                  "Session replay"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "vector": {
+              "items": {
+                "enum": [
+                  "Physical access", 
+                  "Command shell", 
+                  "Unknown", 
+                  "Backdoor or C2", 
+                  "Web application", 
+                  "Desktop sharing", 
+                  "3rd party desktop", 
+                  "Partner", 
+                  "VPN", 
+                  "Other"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "vector", 
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "malware": {
+          "additionalProperties": false, 
+          "properties": {
+            "Elevate": {
+              "type": "boolean"
+            }, 
+            "Exfiltrate": {
+              "type": "boolean"
+            }, 
+            "Infiltrate": {
+              "type": "boolean"
+            }, 
+            "cve": {
+              "type": "string"
+            }, 
+            "name": {
+              "type": "string"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Spam", 
+                  "Unknown", 
+                  "Packet sniffer", 
+                  "Backdoor", 
+                  "Exploit vuln", 
+                  "Other", 
+                  "Password dumper", 
+                  "Scan network", 
+                  "Downloader", 
+                  "Adminware", 
+                  "Click fraud", 
+                  "Adware", 
+                  "C2", 
+                  "Worm", 
+                  "Spyware/Keylogger", 
+                  "Brute force", 
+                  "Capture app data", 
+                  "Ram scraper", 
+                  "Disable controls", 
+                  "Capture stored data", 
+                  "Ransomware", 
+                  "Export data", 
+                  "Client-side attack", 
+                  "SQL injection", 
+                  "Rootkit", 
+                  "Destroy data", 
+                  "DoS"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "vector": {
+              "items": {
+                "enum": [
+                  "Remote injection", 
+                  "Software update", 
+                  "Instant messaging", 
+                  "Email attachment", 
+                  "Direct install", 
+                  "Download by malware", 
+                  "Removable media", 
+                  "Web drive-by", 
+                  "Email link", 
+                  "Network propagation", 
+                  "Unknown", 
+                  "Email autoexecute", 
+                  "Web download", 
+                  "Email unknown", 
+                  "Other"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "vector", 
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "misuse": {
+          "additionalProperties": false, 
+          "properties": {
+            "Elevate": {
+              "type": "boolean"
+            }, 
+            "Exfiltrate": {
+              "type": "boolean"
+            }, 
+            "Infiltrate": {
+              "type": "boolean"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Unapproved software", 
+                  "Illicit content", 
+                  "Unapproved workaround", 
+                  "Unapproved hardware", 
+                  "Unknown", 
+                  "Email misuse", 
+                  "Possession abuse", 
+                  "Other", 
+                  "Net misuse", 
+                  "Data mishandling", 
+                  "Privilege abuse", 
+                  "Knowledge abuse"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "vector": {
+              "items": {
+                "enum": [
+                  "Physical access", 
+                  "Remote access", 
+                  "LAN access", 
+                  "Unknown", 
+                  "Non-corporate", 
+                  "Other"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "vector", 
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "physical": {
+          "additionalProperties": false, 
+          "properties": {
+            "Elevate": {
+              "type": "boolean"
+            }, 
+            "Exfiltrate": {
+              "type": "boolean"
+            }, 
+            "Infiltrate": {
+              "type": "boolean"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Skimmer", 
+                  "Snooping", 
+                  "Tampering", 
+                  "Unknown", 
+                  "Theft", 
+                  "Connection", 
+                  "Surveillance", 
+                  "Assault", 
+                  "Other", 
+                  "Wiretapping", 
+                  "Bypassed controls", 
+                  "Destruction", 
+                  "Disabled controls"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "vector": {
+              "items": {
+                "enum": [
+                  "Personal vehicle", 
+                  "Visitor privileges", 
+                  "Public facility", 
+                  "Victim grounds", 
+                  "Uncontrolled location", 
+                  "Partner vehicle", 
+                  "Victim work area", 
+                  "Victim secure area", 
+                  "Partner facility", 
+                  "Personal residence", 
+                  "Other", 
+                  "Public vehicle", 
+                  "Unknown", 
+                  "Victim public area", 
+                  "Privileged access"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "vector", 
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "social": {
+          "additionalProperties": false, 
+          "properties": {
+            "Elevate": {
+              "type": "boolean"
+            }, 
+            "Exfiltrate": {
+              "type": "boolean"
+            }, 
+            "Infiltrate": {
+              "type": "boolean"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "target": {
+              "items": {
+                "enum": [
+                  "Customer", 
+                  "End-user", 
+                  "Human resources", 
+                  "Finance", 
+                  "Unknown", 
+                  "Helpdesk", 
+                  "Executive", 
+                  "Cashier", 
+                  "Manager", 
+                  "Former employee", 
+                  "Guard", 
+                  "Other", 
+                  "Auditor", 
+                  "Maintenance", 
+                  "Call center", 
+                  "Partner", 
+                  "System admin", 
+                  "Developer"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Scam", 
+                  "Phishing", 
+                  "Elicitation", 
+                  "Unknown", 
+                  "Spam", 
+                  "Influence", 
+                  "Propaganda", 
+                  "Forgery", 
+                  "Bribery", 
+                  "Other", 
+                  "Pretexting", 
+                  "Extortion", 
+                  "Baiting"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "vector": {
+              "items": {
+                "enum": [
+                  "In-person", 
+                  "Social media", 
+                  "Documents", 
+                  "Unknown", 
+                  "SMS", 
+                  "Phone", 
+                  "Website", 
+                  "Other", 
+                  "IM", 
+                  "Removable media", 
+                  "Email", 
+                  "Software"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "vector", 
+            "variety", 
+            "target"
+          ], 
+          "type": "object"
+        }, 
+        "unknown": {
+          "properties": {
+            "Elevate": {
+              "type": "boolean"
+            }, 
+            "Exfiltrate": {
+              "type": "boolean"
+            }, 
+            "Infiltrate": {
+              "type": "boolean"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "type": "object"
+        }
+      }, 
+      "type": "object"
+    }, 
+    "actor": {
+      "additionalProperties": false, 
+      "minProperties": 1, 
+      "properties": {
+        "external": {
+          "additionalProperties": false, 
+          "properties": {
+            "country": {
+              "items": {
+                "enum": [
+                  "BD", 
+                  "BE", 
+                  "BF", 
+                  "BG", 
+                  "BA", 
+                  "BB", 
+                  "WF", 
+                  "BL", 
+                  "BM", 
+                  "BN", 
+                  "BO", 
+                  "BH", 
+                  "BI", 
+                  "BJ", 
+                  "BT", 
+                  "JM", 
+                  "BV", 
+                  "BW", 
+                  "WS", 
+                  "BQ", 
+                  "BR", 
+                  "BS", 
+                  "JE", 
+                  "BY", 
+                  "BZ", 
+                  "RU", 
+                  "RW", 
+                  "RS", 
+                  "TL", 
+                  "RE", 
+                  "TM", 
+                  "Unknown", 
+                  "TJ", 
+                  "RO", 
+                  "TK", 
+                  "GW", 
+                  "GU", 
+                  "GT", 
+                  "GS", 
+                  "GR", 
+                  "GQ", 
+                  "GP", 
+                  "JP", 
+                  "GY", 
+                  "GG", 
+                  "GF", 
+                  "GE", 
+                  "GD", 
+                  "GB", 
+                  "GA", 
+                  "SV", 
+                  "GN", 
+                  "GM", 
+                  "GL", 
+                  "GI", 
+                  "GH", 
+                  "OM", 
+                  "TN", 
+                  "JO", 
+                  "HR", 
+                  "HT", 
+                  "HU", 
+                  "HK", 
+                  "HN", 
+                  "HM", 
+                  "VE", 
+                  "PR", 
+                  "PS", 
+                  "PW", 
+                  "PT", 
+                  "SJ", 
+                  "PY", 
+                  "IQ", 
+                  "PA", 
+                  "PF", 
+                  "PG", 
+                  "PE", 
+                  "PK", 
+                  "PH", 
+                  "PN", 
+                  "PL", 
+                  "PM", 
+                  "ZM", 
+                  "EH", 
+                  "EE", 
+                  "EG", 
+                  "ZA", 
+                  "EC", 
+                  "IT", 
+                  "VN", 
+                  "SB", 
+                  "ET", 
+                  "SO", 
+                  "ZW", 
+                  "SA", 
+                  "ES", 
+                  "ER", 
+                  "ME", 
+                  "MD", 
+                  "MG", 
+                  "MF", 
+                  "MA", 
+                  "MC", 
+                  "UZ", 
+                  "MM", 
+                  "ML", 
+                  "MO", 
+                  "MN", 
+                  "MH", 
+                  "MK", 
+                  "MU", 
+                  "MT", 
+                  "MW", 
+                  "MV", 
+                  "MQ", 
+                  "MP", 
+                  "MS", 
+                  "MR", 
+                  "IM", 
+                  "UG", 
+                  "TZ", 
+                  "MY", 
+                  "MX", 
+                  "IL", 
+                  "FR", 
+                  "IO", 
+                  "SH", 
+                  "FI", 
+                  "FJ", 
+                  "FK", 
+                  "FM", 
+                  "FO", 
+                  "NI", 
+                  "NL", 
+                  "NO", 
+                  "NA", 
+                  "VU", 
+                  "NC", 
+                  "NE", 
+                  "NF", 
+                  "NG", 
+                  "NZ", 
+                  "NP", 
+                  "NR", 
+                  "NU", 
+                  "CK", 
+                  "CI", 
+                  "CH", 
+                  "CO", 
+                  "CN", 
+                  "CM", 
+                  "CL", 
+                  "CC", 
+                  "CA", 
+                  "CG", 
+                  "CF", 
+                  "CD", 
+                  "CZ", 
+                  "CY", 
+                  "CX", 
+                  "CR", 
+                  "CW", 
+                  "CV", 
+                  "CU", 
+                  "SZ", 
+                  "SY", 
+                  "SX", 
+                  "KG", 
+                  "KE", 
+                  "SS", 
+                  "SR", 
+                  "KI", 
+                  "KH", 
+                  "KN", 
+                  "KM", 
+                  "ST", 
+                  "SK", 
+                  "KR", 
+                  "SI", 
+                  "KP", 
+                  "KW", 
+                  "SN", 
+                  "SM", 
+                  "SL", 
+                  "SC", 
+                  "KZ", 
+                  "KY", 
+                  "SG", 
+                  "SE", 
+                  "SD", 
+                  "DO", 
+                  "DM", 
+                  "DJ", 
+                  "DK", 
+                  "VG", 
+                  "DE", 
+                  "YE", 
+                  "Other", 
+                  "DZ", 
+                  "US", 
+                  "UY", 
+                  "YT", 
+                  "UM", 
+                  "LB", 
+                  "LC", 
+                  "LA", 
+                  "TV", 
+                  "TW", 
+                  "TT", 
+                  "TR", 
+                  "LK", 
+                  "LI", 
+                  "LV", 
+                  "TO", 
+                  "LT", 
+                  "LU", 
+                  "LR", 
+                  "LS", 
+                  "TH", 
+                  "TF", 
+                  "TG", 
+                  "TD", 
+                  "TC", 
+                  "LY", 
+                  "VA", 
+                  "VC", 
+                  "AE", 
+                  "AD", 
+                  "AG", 
+                  "AF", 
+                  "AI", 
+                  "VI", 
+                  "IS", 
+                  "IR", 
+                  "AM", 
+                  "AL", 
+                  "AO", 
+                  "AQ", 
+                  "AS", 
+                  "AR", 
+                  "AU", 
+                  "AT", 
+                  "AW", 
+                  "IN", 
+                  "AX", 
+                  "AZ", 
+                  "IE", 
+                  "ID", 
+                  "UA", 
+                  "QA", 
+                  "MZ"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "motive": {
+              "items": {
+                "enum": [
+                  "Grudge", 
+                  "Financial", 
+                  "NA", 
+                  "Ideology", 
+                  "Convenience", 
+                  "Other", 
+                  "Unknown", 
+                  "Fun", 
+                  "Fear", 
+                  "Espionage", 
+                  "Secondary"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "name": {
+              "items": {
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "region": {
+              "items": {
+                "maxLength": 6, 
+                "minLength": 6, 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Customer", 
+                  "Organized crime", 
+                  "Acquaintance", 
+                  "Competitor", 
+                  "Unaffiliated", 
+                  "Force majeure", 
+                  "Former employee", 
+                  "Nation-state", 
+                  "Activist", 
+                  "Terrorist", 
+                  "Auditor", 
+                  "Unknown", 
+                  "State-affiliated", 
+                  "Other"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "country", 
+            "variety", 
+            "motive"
+          ], 
+          "type": "object"
+        }, 
+        "internal": {
+          "additionalProperties": false, 
+          "properties": {
+            "job_change": {
+              "items": {
+                "enum": [
+                  "Lateral move", 
+                  "Let go", 
+                  "Unknown", 
+                  "Personal issues", 
+                  "Job eval", 
+                  "Reprimanded", 
+                  "Hired", 
+                  "Passed over", 
+                  "Demoted", 
+                  "Promoted", 
+                  "Resigned", 
+                  "Other"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "motive": {
+              "items": {
+                "enum": [
+                  "Grudge", 
+                  "Financial", 
+                  "NA", 
+                  "Ideology", 
+                  "Convenience", 
+                  "Other", 
+                  "Unknown", 
+                  "Fun", 
+                  "Fear", 
+                  "Espionage", 
+                  "Secondary"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "End-user", 
+                  "Human resources", 
+                  "Finance", 
+                  "Unknown", 
+                  "Helpdesk", 
+                  "Executive", 
+                  "Cashier", 
+                  "Manager", 
+                  "Guard", 
+                  "Other", 
+                  "Auditor", 
+                  "Maintenance", 
+                  "Call center", 
+                  "System admin", 
+                  "Developer"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "motive", 
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "partner": {
+          "additionalProperties": false, 
+          "properties": {
+            "country": {
+              "items": {
+                "enum": [
+                  "BD", 
+                  "BE", 
+                  "BF", 
+                  "BG", 
+                  "BA", 
+                  "BB", 
+                  "WF", 
+                  "BL", 
+                  "BM", 
+                  "BN", 
+                  "BO", 
+                  "BH", 
+                  "BI", 
+                  "BJ", 
+                  "BT", 
+                  "JM", 
+                  "BV", 
+                  "BW", 
+                  "WS", 
+                  "BQ", 
+                  "BR", 
+                  "BS", 
+                  "JE", 
+                  "BY", 
+                  "BZ", 
+                  "RU", 
+                  "RW", 
+                  "RS", 
+                  "TL", 
+                  "RE", 
+                  "TM", 
+                  "Unknown", 
+                  "TJ", 
+                  "RO", 
+                  "TK", 
+                  "GW", 
+                  "GU", 
+                  "GT", 
+                  "GS", 
+                  "GR", 
+                  "GQ", 
+                  "GP", 
+                  "JP", 
+                  "GY", 
+                  "GG", 
+                  "GF", 
+                  "GE", 
+                  "GD", 
+                  "GB", 
+                  "GA", 
+                  "SV", 
+                  "GN", 
+                  "GM", 
+                  "GL", 
+                  "GI", 
+                  "GH", 
+                  "OM", 
+                  "TN", 
+                  "JO", 
+                  "HR", 
+                  "HT", 
+                  "HU", 
+                  "HK", 
+                  "HN", 
+                  "HM", 
+                  "VE", 
+                  "PR", 
+                  "PS", 
+                  "PW", 
+                  "PT", 
+                  "SJ", 
+                  "PY", 
+                  "IQ", 
+                  "PA", 
+                  "PF", 
+                  "PG", 
+                  "PE", 
+                  "PK", 
+                  "PH", 
+                  "PN", 
+                  "PL", 
+                  "PM", 
+                  "ZM", 
+                  "EH", 
+                  "EE", 
+                  "EG", 
+                  "ZA", 
+                  "EC", 
+                  "IT", 
+                  "VN", 
+                  "SB", 
+                  "ET", 
+                  "SO", 
+                  "ZW", 
+                  "SA", 
+                  "ES", 
+                  "ER", 
+                  "ME", 
+                  "MD", 
+                  "MG", 
+                  "MF", 
+                  "MA", 
+                  "MC", 
+                  "UZ", 
+                  "MM", 
+                  "ML", 
+                  "MO", 
+                  "MN", 
+                  "MH", 
+                  "MK", 
+                  "MU", 
+                  "MT", 
+                  "MW", 
+                  "MV", 
+                  "MQ", 
+                  "MP", 
+                  "MS", 
+                  "MR", 
+                  "IM", 
+                  "UG", 
+                  "TZ", 
+                  "MY", 
+                  "MX", 
+                  "IL", 
+                  "FR", 
+                  "IO", 
+                  "SH", 
+                  "FI", 
+                  "FJ", 
+                  "FK", 
+                  "FM", 
+                  "FO", 
+                  "NI", 
+                  "NL", 
+                  "NO", 
+                  "NA", 
+                  "VU", 
+                  "NC", 
+                  "NE", 
+                  "NF", 
+                  "NG", 
+                  "NZ", 
+                  "NP", 
+                  "NR", 
+                  "NU", 
+                  "CK", 
+                  "CI", 
+                  "CH", 
+                  "CO", 
+                  "CN", 
+                  "CM", 
+                  "CL", 
+                  "CC", 
+                  "CA", 
+                  "CG", 
+                  "CF", 
+                  "CD", 
+                  "CZ", 
+                  "CY", 
+                  "CX", 
+                  "CR", 
+                  "CW", 
+                  "CV", 
+                  "CU", 
+                  "SZ", 
+                  "SY", 
+                  "SX", 
+                  "KG", 
+                  "KE", 
+                  "SS", 
+                  "SR", 
+                  "KI", 
+                  "KH", 
+                  "KN", 
+                  "KM", 
+                  "ST", 
+                  "SK", 
+                  "KR", 
+                  "SI", 
+                  "KP", 
+                  "KW", 
+                  "SN", 
+                  "SM", 
+                  "SL", 
+                  "SC", 
+                  "KZ", 
+                  "KY", 
+                  "SG", 
+                  "SE", 
+                  "SD", 
+                  "DO", 
+                  "DM", 
+                  "DJ", 
+                  "DK", 
+                  "VG", 
+                  "DE", 
+                  "YE", 
+                  "Other", 
+                  "DZ", 
+                  "US", 
+                  "UY", 
+                  "YT", 
+                  "UM", 
+                  "LB", 
+                  "LC", 
+                  "LA", 
+                  "TV", 
+                  "TW", 
+                  "TT", 
+                  "TR", 
+                  "LK", 
+                  "LI", 
+                  "LV", 
+                  "TO", 
+                  "LT", 
+                  "LU", 
+                  "LR", 
+                  "LS", 
+                  "TH", 
+                  "TF", 
+                  "TG", 
+                  "TD", 
+                  "TC", 
+                  "LY", 
+                  "VA", 
+                  "VC", 
+                  "AE", 
+                  "AD", 
+                  "AG", 
+                  "AF", 
+                  "AI", 
+                  "VI", 
+                  "IS", 
+                  "IR", 
+                  "AM", 
+                  "AL", 
+                  "AO", 
+                  "AQ", 
+                  "AS", 
+                  "AR", 
+                  "AU", 
+                  "AT", 
+                  "AW", 
+                  "IN", 
+                  "AX", 
+                  "AZ", 
+                  "IE", 
+                  "ID", 
+                  "UA", 
+                  "QA", 
+                  "MZ"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "industry": {
+              "maxLength": 6, 
+              "minLength": 2, 
+              "pattern": "\\d{2}-?\\d{0,4}", 
+              "type": "string"
+            }, 
+            "motive": {
+              "items": {
+                "enum": [
+                  "Grudge", 
+                  "Financial", 
+                  "NA", 
+                  "Ideology", 
+                  "Convenience", 
+                  "Other", 
+                  "Unknown", 
+                  "Fun", 
+                  "Fear", 
+                  "Espionage", 
+                  "Secondary"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "region": {
+              "items": {
+                "maxLength": 6, 
+                "minLength": 6, 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "country", 
+            "motive"
+          ], 
+          "type": "object"
+        }, 
+        "unknown": {
+          "properties": {
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "type": "object"
+        }
+      }, 
+      "type": "object"
+    }, 
+    "asset": {
+      "additionalProperties": false, 
+      "minProperties": 1, 
+      "properties": {
+        "accessibility": {
+          "enum": [
+            "NA", 
+            "Isolated", 
+            "Internal", 
+            "External", 
+            "Unknown", 
+            "Other"
+          ], 
+          "type": "string"
+        }, 
+        "assets": {
+          "items": {
+            "additionalProperties": false, 
+            "properties": {
+              "amount": {
+                "type": "integer"
+              }, 
+              "variety": {
+                "enum": [
+                  "Unknown", 
+                  "M - Disk media", 
+                  "M - Payment card", 
+                  "U - Mobile phone", 
+                  "T - Kiosk", 
+                  "P - Former employee", 
+                  "U - POS terminal", 
+                  "N - Broadband", 
+                  "U - Unknown", 
+                  "N - Telephone", 
+                  "P - Finance", 
+                  "N - VoIP adapter", 
+                  "S - Payment switch", 
+                  "U - Auth token", 
+                  "U - Other", 
+                  "S - Remote access", 
+                  "M - Documents", 
+                  "T - Other", 
+                  "S - DCS", 
+                  "N - PBX", 
+                  "S - DHCP", 
+                  "N - LAN", 
+                  "T - ATM", 
+                  "N - Public WAN", 
+                  "P - End-user", 
+                  "N - IDS", 
+                  "U - Desktop", 
+                  "N - Other", 
+                  "U - Tablet", 
+                  "N - Firewall", 
+                  "M - Disk drive", 
+                  "S - ICS", 
+                  "P - Human resources", 
+                  "S - File", 
+                  "N - WLAN", 
+                  "S - Database", 
+                  "N - Camera", 
+                  "N - Unknown", 
+                  "U - Media", 
+                  "T - PED pad", 
+                  "N - RTU", 
+                  "S - Authentication", 
+                  "N - Router or switch", 
+                  "N - HSM", 
+                  "S - Mail", 
+                  "N - SAN", 
+                  "N - PLC", 
+                  "P - Cashier", 
+                  "T - Gas terminal", 
+                  "P - Unknown", 
+                  "S - Mainframe", 
+                  "U - Laptop", 
+                  "P - Auditor", 
+                  "U - VoIP phone", 
+                  "S - DNS", 
+                  "S - Log", 
+                  "P - Other", 
+                  "S - Proxy", 
+                  "T - Unknown", 
+                  "N - Access reader", 
+                  "S - Web application", 
+                  "S - POS controller", 
+                  "P - Manager", 
+                  "M - Flash drive", 
+                  "S - Print", 
+                  "P - Guard", 
+                  "M - Other", 
+                  "P - System admin", 
+                  "S - Unknown", 
+                  "Other", 
+                  "S - Other", 
+                  "N - NAS", 
+                  "S - Code repository", 
+                  "P - Developer", 
+                  "M - Smart card", 
+                  "P - Executive", 
+                  "P - Customer", 
+                  "S - Directory", 
+                  "P - Call center", 
+                  "N - Private WAN", 
+                  "P - Helpdesk", 
+                  "U - Peripheral", 
+                  "P - Partner", 
+                  "P - Maintenance", 
+                  "S - VM host", 
+                  "M - Unknown", 
+                  "M - Tapes", 
+                  "U - Telephone", 
+                  "S - Backup"
+                ], 
+                "type": "string"
+              }
+            }, 
+            "required": [
+              "variety"
+            ], 
+            "type": "object"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "cloud": {
+          "enum": [
+            "Hosting error", 
+            "User breakout", 
+            "Unknown", 
+            "Other", 
+            "Hosting governance", 
+            "Customer attack", 
+            "Hypervisor", 
+            "Partner application"
+          ], 
+          "type": "string"
+        }, 
+        "country": {
+          "items": {
+            "enum": [
+              "BD", 
+              "BE", 
+              "BF", 
+              "BG", 
+              "BA", 
+              "BB", 
+              "WF", 
+              "BL", 
+              "BM", 
+              "BN", 
+              "BO", 
+              "BH", 
+              "BI", 
+              "BJ", 
+              "BT", 
+              "JM", 
+              "BV", 
+              "BW", 
+              "WS", 
+              "BQ", 
+              "BR", 
+              "BS", 
+              "JE", 
+              "BY", 
+              "BZ", 
+              "RU", 
+              "RW", 
+              "RS", 
+              "TL", 
+              "RE", 
+              "TM", 
+              "Unknown", 
+              "TJ", 
+              "RO", 
+              "TK", 
+              "GW", 
+              "GU", 
+              "GT", 
+              "GS", 
+              "GR", 
+              "GQ", 
+              "GP", 
+              "JP", 
+              "GY", 
+              "GG", 
+              "GF", 
+              "GE", 
+              "GD", 
+              "GB", 
+              "GA", 
+              "SV", 
+              "GN", 
+              "GM", 
+              "GL", 
+              "GI", 
+              "GH", 
+              "OM", 
+              "TN", 
+              "JO", 
+              "HR", 
+              "HT", 
+              "HU", 
+              "HK", 
+              "HN", 
+              "HM", 
+              "VE", 
+              "PR", 
+              "PS", 
+              "PW", 
+              "PT", 
+              "SJ", 
+              "PY", 
+              "IQ", 
+              "PA", 
+              "PF", 
+              "PG", 
+              "PE", 
+              "PK", 
+              "PH", 
+              "PN", 
+              "PL", 
+              "PM", 
+              "ZM", 
+              "EH", 
+              "EE", 
+              "EG", 
+              "ZA", 
+              "EC", 
+              "IT", 
+              "VN", 
+              "SB", 
+              "ET", 
+              "SO", 
+              "ZW", 
+              "SA", 
+              "ES", 
+              "ER", 
+              "ME", 
+              "MD", 
+              "MG", 
+              "MF", 
+              "MA", 
+              "MC", 
+              "UZ", 
+              "MM", 
+              "ML", 
+              "MO", 
+              "MN", 
+              "MH", 
+              "MK", 
+              "MU", 
+              "MT", 
+              "MW", 
+              "MV", 
+              "MQ", 
+              "MP", 
+              "MS", 
+              "MR", 
+              "IM", 
+              "UG", 
+              "TZ", 
+              "MY", 
+              "MX", 
+              "IL", 
+              "FR", 
+              "IO", 
+              "SH", 
+              "FI", 
+              "FJ", 
+              "FK", 
+              "FM", 
+              "FO", 
+              "NI", 
+              "NL", 
+              "NO", 
+              "NA", 
+              "VU", 
+              "NC", 
+              "NE", 
+              "NF", 
+              "NG", 
+              "NZ", 
+              "NP", 
+              "NR", 
+              "NU", 
+              "CK", 
+              "CI", 
+              "CH", 
+              "CO", 
+              "CN", 
+              "CM", 
+              "CL", 
+              "CC", 
+              "CA", 
+              "CG", 
+              "CF", 
+              "CD", 
+              "CZ", 
+              "CY", 
+              "CX", 
+              "CR", 
+              "CW", 
+              "CV", 
+              "CU", 
+              "SZ", 
+              "SY", 
+              "SX", 
+              "KG", 
+              "KE", 
+              "SS", 
+              "SR", 
+              "KI", 
+              "KH", 
+              "KN", 
+              "KM", 
+              "ST", 
+              "SK", 
+              "KR", 
+              "SI", 
+              "KP", 
+              "KW", 
+              "SN", 
+              "SM", 
+              "SL", 
+              "SC", 
+              "KZ", 
+              "KY", 
+              "SG", 
+              "SE", 
+              "SD", 
+              "DO", 
+              "DM", 
+              "DJ", 
+              "DK", 
+              "VG", 
+              "DE", 
+              "YE", 
+              "Other", 
+              "DZ", 
+              "US", 
+              "UY", 
+              "YT", 
+              "UM", 
+              "LB", 
+              "LC", 
+              "LA", 
+              "TV", 
+              "TW", 
+              "TT", 
+              "TR", 
+              "LK", 
+              "LI", 
+              "LV", 
+              "TO", 
+              "LT", 
+              "LU", 
+              "LR", 
+              "LS", 
+              "TH", 
+              "TF", 
+              "TG", 
+              "TD", 
+              "TC", 
+              "LY", 
+              "VA", 
+              "VC", 
+              "AE", 
+              "AD", 
+              "AG", 
+              "AF", 
+              "AI", 
+              "VI", 
+              "IS", 
+              "IR", 
+              "AM", 
+              "AL", 
+              "AO", 
+              "AQ", 
+              "AS", 
+              "AR", 
+              "AU", 
+              "AT", 
+              "AW", 
+              "IN", 
+              "AX", 
+              "AZ", 
+              "IE", 
+              "ID", 
+              "UA", 
+              "QA", 
+              "MZ"
+            ], 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "governance": {
+          "items": {
+            "enum": [
+              "3rd party hosted", 
+              "Unknown", 
+              "3rd party managed", 
+              "3rd party owned", 
+              "Other", 
+              "Personally owned", 
+              "Internally isolated"
+            ], 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "hosting": {
+          "enum": [
+            "External shared", 
+            "External dedicated", 
+            "NA", 
+            "Internal", 
+            "External", 
+            "Unknown", 
+            "Other"
+          ], 
+          "type": "string"
+        }, 
+        "management": {
+          "enum": [
+            "NA", 
+            "Internal", 
+            "Other", 
+            "External", 
+            "Unknown"
+          ], 
+          "type": "string"
+        }, 
+        "notes": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "ownership": {
+          "enum": [
+            "Customer", 
+            "Unknown", 
+            "Other", 
+            "Victim", 
+            "NA", 
+            "Employee", 
+            "Partner"
+          ], 
+          "type": "string"
+        }, 
+        "total_amount": {
+          "type": "number"
+        }
+      }, 
+      "type": "object"
+    }, 
+    "attribute": {
+      "additionalProperties": false, 
+      "minProperties": 1, 
+      "properties": {
+        "availability": {
+          "properties": {
+            "duration": {
+              "additionalProperties": false, 
+              "properties": {
+                "unit": {
+                  "enum": [
+                    "Months", 
+                    "Seconds", 
+                    "NA", 
+                    "Never", 
+                    "Days", 
+                    "Years", 
+                    "Hours", 
+                    "Unknown", 
+                    "Weeks", 
+                    "Minutes"
+                  ], 
+                  "type": "string"
+                }, 
+                "value": {
+                  "type": "number"
+                }
+              }, 
+              "required": [
+                "unit"
+              ], 
+              "type": "object"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Acceleration", 
+                  "Interruption", 
+                  "Loss", 
+                  "Unknown", 
+                  "Degradation", 
+                  "Other", 
+                  "Obscuration", 
+                  "Destruction"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "confidentiality": {
+          "additionalProperties": false, 
+          "properties": {
+            "data": {
+              "items": {
+                "additionalProperties": false, 
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  }, 
+                  "variety": {
+                    "enum": [
+                      "Source code", 
+                      "Personal", 
+                      "Unknown", 
+                      "Medical", 
+                      "Classified", 
+                      "System", 
+                      "Digital certificate", 
+                      "Secrets", 
+                      "Internal", 
+                      "Virtual currency", 
+                      "Copyrighted", 
+                      "Credentials", 
+                      "Other", 
+                      "Payment", 
+                      "Bank"
+                    ], 
+                    "type": "string"
+                  }
+                }, 
+                "required": [
+                  "variety"
+                ], 
+                "type": "object"
+              }, 
+              "minItems": 1, 
+              "type": "array"
+            }, 
+            "data_disclosure": {
+              "enum": [
+                "Unknown", 
+                "Yes", 
+                "Potentially", 
+                "No"
+              ], 
+              "type": "string"
+            }, 
+            "data_total": {
+              "type": "integer"
+            }, 
+            "data_victim": {
+              "items": {
+                "enum": [
+                  "Customer", 
+                  "Patient", 
+                  "Unknown", 
+                  "Other", 
+                  "Student", 
+                  "Employee", 
+                  "Partner"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "state": {
+              "items": {
+                "enum": [
+                  "Unknown", 
+                  "Transmitted encrypted", 
+                  "Transmitted unencrypted", 
+                  "Stored", 
+                  "Transmitted", 
+                  "Printed", 
+                  "Stored encrypted", 
+                  "Stored unencrypted", 
+                  "Processed"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "data_disclosure"
+          ], 
+          "type": "object"
+        }, 
+        "integrity": {
+          "additionalProperties": false, 
+          "properties": {
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "variety": {
+              "items": {
+                "enum": [
+                  "Misrepresentation", 
+                  "Modify data", 
+                  "Unknown", 
+                  "Created account", 
+                  "Defacement", 
+                  "Log tampering", 
+                  "Modify privileges", 
+                  "Software installation", 
+                  "Other", 
+                  "Fraudulent transaction", 
+                  "Alter behavior", 
+                  "Hardware tampering", 
+                  "Modify configuration", 
+                  "Repurpose"
+                ], 
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }
+      }, 
+      "type": "object"
+    }, 
+    "campaign_id": {
+      "type": "string"
+    }, 
+    "confidence": {
+      "enum": [
+        "High", 
+        "None", 
+        "Medium", 
+        "Low"
+      ], 
+      "type": "string"
+    }, 
+    "control_failure": {
+      "type": "string"
+    }, 
+    "corrective_action": {
+      "type": "string"
+    }, 
+    "cost_corrective_action": {
+      "enum": [
+        "Simple and cheap", 
+        "Unknown", 
+        "Something in-between", 
+        "Difficult and expensive"
+      ], 
+      "type": "string"
+    }, 
+    "discovery_method": {
+      "enum": [
+        "Int - financial audit", 
+        "Ext - found documents", 
+        "Unknown", 
+        "Ext - audit", 
+        "Ext - incident response", 
+        "Ext - unknown", 
+        "Other", 
+        "Int - NIDS", 
+        "Ext - emergency response team", 
+        "Ext - fraud detection", 
+        "Int - incident response", 
+        "Ext - customer", 
+        "Prt - audit", 
+        "Int - IT review", 
+        "Int - other", 
+        "Int - log review", 
+        "Int - unknown", 
+        "Ext - suspicious traffic", 
+        "Int - HIDS", 
+        "Ext - monitoring service", 
+        "Prt - antivirus", 
+        "Ext - other", 
+        "Int - security alarm", 
+        "Ext - law enforcement", 
+        "Int - antivirus", 
+        "Int - infrastructure monitoring", 
+        "Prt - incident response", 
+        "Int - data loss prevention", 
+        "Int - fraud detection", 
+        "Prt - monitoring service", 
+        "Int - reported by employee", 
+        "Prt - unknown", 
+        "Prt - other", 
+        "Ext - actor disclosure"
+      ], 
+      "type": "string"
+    }, 
+    "discovery_notes": {
+      "minLength": 1, 
+      "type": "string"
+    }, 
+    "impact": {
+      "additionalProperties": false, 
+      "properties": {
+        "iso_currency_code": {
+          "enum": [
+            "DZD", 
+            "NAD", 
+            "GHS", 
+            "EGP", 
+            "BGN", 
+            "PAB", 
+            "BOB", 
+            "DKK", 
+            "BWP", 
+            "LBP", 
+            "TZS", 
+            "VND", 
+            "AOA", 
+            "KHR", 
+            "MYR", 
+            "KYD", 
+            "LYD", 
+            "UAH", 
+            "JOD", 
+            "AWG", 
+            "SAR", 
+            "EUR", 
+            "HKD", 
+            "CHF", 
+            "GIP", 
+            "BYR", 
+            "ALL", 
+            "MRO", 
+            "HRK", 
+            "DJF", 
+            "SZL", 
+            "THB", 
+            "XAF", 
+            "BND", 
+            "ISK", 
+            "UYU", 
+            "NIO", 
+            "LAK", 
+            "SYP", 
+            "MAD", 
+            "MZN", 
+            "PHP", 
+            "ZAR", 
+            "NPR", 
+            "NGN", 
+            "ZWD", 
+            "CRC", 
+            "AED", 
+            "GBP", 
+            "MWK", 
+            "LKR", 
+            "PKR", 
+            "HUF", 
+            "BMD", 
+            "LSL", 
+            "MNT", 
+            "AMD", 
+            "UGX", 
+            "QAR", 
+            "XDR", 
+            "JMD", 
+            "GEL", 
+            "SHP", 
+            "AFN", 
+            "SBD", 
+            "KPW", 
+            "TRY", 
+            "BDT", 
+            "YER", 
+            "HTG", 
+            "XOF", 
+            "MGA", 
+            "ANG", 
+            "LRD", 
+            "RWF", 
+            "NOK", 
+            "MOP", 
+            "INR", 
+            "MXN", 
+            "CZK", 
+            "TJS", 
+            "TWD", 
+            "BTN", 
+            "COP", 
+            "TMT", 
+            "MUR", 
+            "IDR", 
+            "HNL", 
+            "XPF", 
+            "FJD", 
+            "ETB", 
+            "PEN", 
+            "BZD", 
+            "ILS", 
+            "DOP", 
+            "GGP", 
+            "MDL", 
+            "BSD", 
+            "SPL", 
+            "SEK", 
+            "ZMK", 
+            "JEP", 
+            "AUD", 
+            "SRD", 
+            "CUP", 
+            "BBD", 
+            "KMF", 
+            "KRW", 
+            "GMD", 
+            "VEF", 
+            "IMP", 
+            "CUC", 
+            "TVD", 
+            "CLP", 
+            "LTL", 
+            "CDF", 
+            "XCD", 
+            "KZT", 
+            "RUB", 
+            "TTD", 
+            "OMR", 
+            "BRL", 
+            "MMK", 
+            "PLN", 
+            "PYG", 
+            "KES", 
+            "SVC", 
+            "MKD", 
+            "AZN", 
+            "TOP", 
+            "MVR", 
+            "VUV", 
+            "GNF", 
+            "WST", 
+            "IQD", 
+            "ERN", 
+            "BAM", 
+            "SCR", 
+            "CAD", 
+            "CVE", 
+            "KWD", 
+            "BIF", 
+            "PGK", 
+            "SOS", 
+            "SGD", 
+            "UZS", 
+            "STD", 
+            "IRR", 
+            "CNY", 
+            "SLL", 
+            "TND", 
+            "GYD", 
+            "NZD", 
+            "FKP", 
+            "LVL", 
+            "USD", 
+            "KGS", 
+            "ARS", 
+            "RON", 
+            "GTQ", 
+            "RSD", 
+            "BHD", 
+            "JPY", 
+            "SDG"
+          ], 
+          "type": "string"
+        }, 
+        "loss": {
+          "items": {
+            "additionalProperties": false, 
+            "properties": {
+              "amount": {
+                "type": "number"
+              }, 
+              "max_amount": {
+                "type": "number"
+              }, 
+              "min_amount": {
+                "type": "number"
+              }, 
+              "rating": {
+                "enum": [
+                  "Unknown", 
+                  "Major", 
+                  "Moderate", 
+                  "None", 
+                  "Minor"
+                ], 
+                "type": "string"
+              }, 
+              "variety": {
+                "enum": [
+                  "Legal and regulatory", 
+                  "Asset and fraud", 
+                  "Business disruption", 
+                  "Response and recovery", 
+                  "Competitive advantage", 
+                  "Operating costs", 
+                  "Brand damage"
+                ], 
+                "type": "string"
+              }
+            }, 
+            "required": [
+              "variety"
+            ], 
+            "type": "object"
+          }, 
+          "minItems": 1, 
+          "type": "array"
+        }, 
+        "notes": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "overall_amount": {
+          "type": "number"
+        }, 
+        "overall_max_amount": {
+          "type": "number"
+        }, 
+        "overall_min_amount": {
+          "type": "number"
+        }, 
+        "overall_rating": {
+          "enum": [
+            "Insignificant", 
+            "Catastrophic", 
+            "Distracting", 
+            "Damaging", 
+            "Unknown", 
+            "Painful"
+          ], 
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "overall_rating"
+      ], 
+      "type": "object"
+    }, 
+    "incident_id": {
+      "type": "string"
+    }, 
+    "ioc": {
+      "items": {
+        "additionalProperties": false, 
+        "properties": {
+          "comment": {
+            "type": "string"
+          }, 
+          "indicator": {
+            "type": "string"
+          }
+        }, 
+        "required": [
+          "indicator"
+        ], 
+        "type": "object"
+      }, 
+      "minItems": 1, 
+      "type": "array"
+    }, 
+    "notes": {
+      "minLength": 1, 
+      "type": "string"
+    }, 
+    "plus": {
+      "$schema": "http://json-schema.org/draft-04/schema#", 
+      "additionalProperties": false, 
+      "description": "VERIZON plus schema version 1.3", 
+      "properties": {
+        "analysis_status": {
+          "enum": [
+            "First pass", 
+            "Ineligible", 
+            "Finalized", 
+            "In-progress", 
+            "Needs review", 
+            "Validated"
+          ], 
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "analyst": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "analyst_notes": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "antiforensic_measures": {
+          "items": {
+            "enum": [
+              "Data Corruption", 
+              "Unknown", 
+              "Data Hiding", 
+              "No evidence of AF", 
+              "Data Wiping"
+            ], 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "asset": {
+          "additionalProperties": false, 
+          "properties": {
+            "total": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "type": "object"
+        }, 
+        "asset_os": {
+          "items": {
+            "enum": [
+              "Apple iOS", 
+              "Windows", 
+              "Unknown", 
+              "Windows Phone", 
+              "Mac OSX", 
+              "webOS", 
+              "Symbian", 
+              "Unix", 
+              "Mainframe", 
+              "BlackBerry OS", 
+              "Linux", 
+              "Android", 
+              "Other", 
+              "Not applicable"
+            ], 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "attack_difficulty_initial": {
+          "enum": [
+            "Unknown", 
+            "High", 
+            "Very Low", 
+            "Low", 
+            "Moderate", 
+            "Not Applicable"
+          ], 
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "attack_difficulty_legacy": {
+          "enum": [
+            "Unknown", 
+            "High", 
+            "Very Low", 
+            "Low", 
+            "Moderate", 
+            "Not Applicable"
+          ], 
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "attack_difficulty_subsequent": {
+          "enum": [
+            "Unknown", 
+            "High", 
+            "Very Low", 
+            "Low", 
+            "Moderate", 
+            "Not Applicable"
+          ], 
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "attribute": {
+          "additionalProperties": false, 
+          "properties": {
+            "confidentiality": {
+              "additionalProperties": false, 
+              "properties": {
+                "credit_monitoring": {
+                  "minLength": 1, 
+                  "type": "string"
+                }, 
+                "credit_monitoring_years": {
+                  "minLength": 1, 
+                  "type": "integer"
+                }, 
+                "data_abuse": {
+                  "minLength": 1, 
+                  "type": "string"
+                }, 
+                "data_misuse": {
+                  "minLength": 1, 
+                  "type": "string"
+                }, 
+                "partner_data": {
+                  "minLength": 1, 
+                  "type": "string"
+                }, 
+                "partner_number": {
+                  "minLength": 1, 
+                  "type": "integer"
+                }
+              }, 
+              "type": "object"
+            }
+          }, 
+          "type": "object"
+        }, 
+        "control_inadequacies_legacy": {
+          "items": {
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "created": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "dbir_year": {
+          "minLength": 1, 
+          "type": "integer"
+        }, 
+        "event_chain": {
+          "items": {
+            "additionalProperties": false, 
+            "properties": {
+              "action": {
+                "enum": [
+                  "soc", 
+                  "hak", 
+                  "err", 
+                  "phy", 
+                  "env", 
+                  "mis", 
+                  "mal"
+                ], 
+                "minLength": 1, 
+                "type": "string"
+              }, 
+              "actor": {
+                "enum": [
+                  "int", 
+                  "prt", 
+                  "ext"
+                ], 
+                "minLength": 1, 
+                "type": "string"
+              }, 
+              "asset": {
+                "enum": [
+                  "med", 
+                  "ppl", 
+                  "srv", 
+                  "usr", 
+                  "net", 
+                  "ter"
+                ], 
+                "minLength": 1, 
+                "type": "string"
+              }, 
+              "attribute": {
+                "enum": [
+                  "ia", 
+                  "cp", 
+                  "au"
+                ], 
+                "minLength": 1, 
+                "type": "string"
+              }, 
+              "summary": {
+                "minLength": 1, 
+                "type": "string"
+              }
+            }, 
+            "type": "object"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "f500": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "github": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "investigator": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "master_id": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "modified": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "pci": {
+          "additionalProperties": false, 
+          "properties": {
+            "compliance_status": {
+              "enum": [
+                "Not Compliant", 
+                "Found Compliant", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "merchant_level": {
+              "enum": [
+                "Unknown", 
+                "Level 4", 
+                "Level 1", 
+                "Level 3", 
+                "Level 2"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_1": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_10": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_11": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_12": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_2": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_3": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_4": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_5": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_6": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_7": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_8": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "req_9": {
+              "enum": [
+                "Not Applicable", 
+                "In Place", 
+                "Not In Place", 
+                "Unknown"
+              ], 
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "status_determined": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "type": "object"
+        }, 
+        "public_disclosure": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "security_maturity": {
+          "enum": [
+            "Optimizing", 
+            "Managed", 
+            "Defined", 
+            "Unknown", 
+            "Initial", 
+            "Measured"
+          ], 
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "timeline": {
+          "additionalProperties": false, 
+          "properties": {
+            "notification": {
+              "additionalProperties": false, 
+              "properties": {
+                "day": {
+                  "minLength": 1, 
+                  "type": "integer"
+                }, 
+                "month": {
+                  "minLength": 1, 
+                  "type": "integer"
+                }, 
+                "year": {
+                  "minLength": 1, 
+                  "type": "integer"
+                }
+              }, 
+              "type": "object"
+            }
+          }, 
+          "type": "object"
+        }, 
+        "unfollowed_policies": {
+          "enum": [
+            "Unknown", 
+            "Yes", 
+            "No"
+          ], 
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "unknown_unknowns": {
+          "items": {
+            "enum": [
+              "Assets unknown or unclaimed by the organization (or business group affected)", 
+              "Assets that had unknown user accounts or privileges", 
+              "Assets that had unknown network connections or accessibility", 
+              "Data the organization did not know existed on a particular asset", 
+              "Unknown"
+            ], 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "victim_name": {
+          "items": {
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }
+      }, 
+      "required": [
+        "master_id"
+      ], 
+      "type": "object"
+    }, 
+    "reference": {
+      "type": "string"
+    }, 
+    "schema_version": {
+      "type": "string"
+    }, 
+    "security_incident": {
+      "enum": [
+        "Suspected", 
+        "Confirmed", 
+        "Near miss", 
+        "False positive"
+      ], 
+      "type": "string"
+    }, 
+    "source_id": {
+      "type": "string"
+    }, 
+    "subsets": {
+      "properties": {}, 
+      "type": "object"
+    }, 
+    "summary": {
+      "type": "string"
+    }, 
+    "targeted": {
+      "enum": [
+        "Targeted", 
+        "NA", 
+        "Opportunistic", 
+        "Unknown"
+      ], 
+      "type": "string"
+    }, 
+    "timeline": {
+      "additionalProperties": false, 
+      "properties": {
+        "compromise": {
+          "additionalProperties": false, 
+          "properties": {
+            "unit": {
+              "enum": [
+                "Months", 
+                "Seconds", 
+                "NA", 
+                "Never", 
+                "Days", 
+                "Years", 
+                "Hours", 
+                "Unknown", 
+                "Weeks", 
+                "Minutes"
+              ], 
+              "type": "string"
+            }, 
+            "value": {
+              "type": "number"
+            }
+          }, 
+          "required": [
+            "unit"
+          ], 
+          "type": "object"
+        }, 
+        "containment": {
+          "additionalProperties": false, 
+          "properties": {
+            "unit": {
+              "enum": [
+                "Months", 
+                "Seconds", 
+                "NA", 
+                "Never", 
+                "Days", 
+                "Years", 
+                "Hours", 
+                "Unknown", 
+                "Weeks", 
+                "Minutes"
+              ], 
+              "type": "string"
+            }, 
+            "value": {
+              "type": "number"
+            }
+          }, 
+          "required": [
+            "unit"
+          ], 
+          "type": "object"
+        }, 
+        "discovery": {
+          "additionalProperties": false, 
+          "properties": {
+            "unit": {
+              "enum": [
+                "Months", 
+                "Seconds", 
+                "NA", 
+                "Never", 
+                "Days", 
+                "Years", 
+                "Hours", 
+                "Unknown", 
+                "Weeks", 
+                "Minutes"
+              ], 
+              "type": "string"
+            }, 
+            "value": {
+              "type": "number"
+            }
+          }, 
+          "required": [
+            "unit"
+          ], 
+          "type": "object"
+        }, 
+        "exfiltration": {
+          "additionalProperties": false, 
+          "properties": {
+            "unit": {
+              "enum": [
+                "Months", 
+                "Seconds", 
+                "NA", 
+                "Never", 
+                "Days", 
+                "Years", 
+                "Hours", 
+                "Unknown", 
+                "Weeks", 
+                "Minutes"
+              ], 
+              "type": "string"
+            }, 
+            "value": {
+              "type": "number"
+            }
+          }, 
+          "required": [
+            "unit"
+          ], 
+          "type": "object"
+        }, 
+        "incident": {
+          "additionalProperties": false, 
+          "properties": {
+            "day": {
+              "maximum": 31, 
+              "minimum": 1, 
+              "type": "integer"
+            }, 
+            "month": {
+              "maximum": 12, 
+              "minimum": 1, 
+              "type": "integer"
+            }, 
+            "time": {
+              "type": "string"
+            }, 
+            "year": {
+              "maximum": 2020, 
+              "minimum": 1950, 
+              "type": "integer"
+            }
+          }, 
+          "required": [
+            "year"
+          ], 
+          "type": "object"
+        }
+      }, 
+      "required": [
+        "incident"
+      ], 
+      "type": "object"
+    }, 
+    "victim": {
+      "additionalProperties": false, 
+      "properties": {
+        "country": {
+          "items": {
+            "enum": [
+              "BD", 
+              "BE", 
+              "BF", 
+              "BG", 
+              "BA", 
+              "BB", 
+              "WF", 
+              "BL", 
+              "BM", 
+              "BN", 
+              "BO", 
+              "BH", 
+              "BI", 
+              "BJ", 
+              "BT", 
+              "JM", 
+              "BV", 
+              "BW", 
+              "WS", 
+              "BQ", 
+              "BR", 
+              "BS", 
+              "JE", 
+              "BY", 
+              "BZ", 
+              "RU", 
+              "RW", 
+              "RS", 
+              "TL", 
+              "RE", 
+              "TM", 
+              "Unknown", 
+              "TJ", 
+              "RO", 
+              "TK", 
+              "GW", 
+              "GU", 
+              "GT", 
+              "GS", 
+              "GR", 
+              "GQ", 
+              "GP", 
+              "JP", 
+              "GY", 
+              "GG", 
+              "GF", 
+              "GE", 
+              "GD", 
+              "GB", 
+              "GA", 
+              "SV", 
+              "GN", 
+              "GM", 
+              "GL", 
+              "GI", 
+              "GH", 
+              "OM", 
+              "TN", 
+              "JO", 
+              "HR", 
+              "HT", 
+              "HU", 
+              "HK", 
+              "HN", 
+              "HM", 
+              "VE", 
+              "PR", 
+              "PS", 
+              "PW", 
+              "PT", 
+              "SJ", 
+              "PY", 
+              "IQ", 
+              "PA", 
+              "PF", 
+              "PG", 
+              "PE", 
+              "PK", 
+              "PH", 
+              "PN", 
+              "PL", 
+              "PM", 
+              "ZM", 
+              "EH", 
+              "EE", 
+              "EG", 
+              "ZA", 
+              "EC", 
+              "IT", 
+              "VN", 
+              "SB", 
+              "ET", 
+              "SO", 
+              "ZW", 
+              "SA", 
+              "ES", 
+              "ER", 
+              "ME", 
+              "MD", 
+              "MG", 
+              "MF", 
+              "MA", 
+              "MC", 
+              "UZ", 
+              "MM", 
+              "ML", 
+              "MO", 
+              "MN", 
+              "MH", 
+              "MK", 
+              "MU", 
+              "MT", 
+              "MW", 
+              "MV", 
+              "MQ", 
+              "MP", 
+              "MS", 
+              "MR", 
+              "IM", 
+              "UG", 
+              "TZ", 
+              "MY", 
+              "MX", 
+              "IL", 
+              "FR", 
+              "IO", 
+              "SH", 
+              "FI", 
+              "FJ", 
+              "FK", 
+              "FM", 
+              "FO", 
+              "NI", 
+              "NL", 
+              "NO", 
+              "NA", 
+              "VU", 
+              "NC", 
+              "NE", 
+              "NF", 
+              "NG", 
+              "NZ", 
+              "NP", 
+              "NR", 
+              "NU", 
+              "CK", 
+              "CI", 
+              "CH", 
+              "CO", 
+              "CN", 
+              "CM", 
+              "CL", 
+              "CC", 
+              "CA", 
+              "CG", 
+              "CF", 
+              "CD", 
+              "CZ", 
+              "CY", 
+              "CX", 
+              "CR", 
+              "CW", 
+              "CV", 
+              "CU", 
+              "SZ", 
+              "SY", 
+              "SX", 
+              "KG", 
+              "KE", 
+              "SS", 
+              "SR", 
+              "KI", 
+              "KH", 
+              "KN", 
+              "KM", 
+              "ST", 
+              "SK", 
+              "KR", 
+              "SI", 
+              "KP", 
+              "KW", 
+              "SN", 
+              "SM", 
+              "SL", 
+              "SC", 
+              "KZ", 
+              "KY", 
+              "SG", 
+              "SE", 
+              "SD", 
+              "DO", 
+              "DM", 
+              "DJ", 
+              "DK", 
+              "VG", 
+              "DE", 
+              "YE", 
+              "Other", 
+              "DZ", 
+              "US", 
+              "UY", 
+              "YT", 
+              "UM", 
+              "LB", 
+              "LC", 
+              "LA", 
+              "TV", 
+              "TW", 
+              "TT", 
+              "TR", 
+              "LK", 
+              "LI", 
+              "LV", 
+              "TO", 
+              "LT", 
+              "LU", 
+              "LR", 
+              "LS", 
+              "TH", 
+              "TF", 
+              "TG", 
+              "TD", 
+              "TC", 
+              "LY", 
+              "VA", 
+              "VC", 
+              "AE", 
+              "AD", 
+              "AG", 
+              "AF", 
+              "AI", 
+              "VI", 
+              "IS", 
+              "IR", 
+              "AM", 
+              "AL", 
+              "AO", 
+              "AQ", 
+              "AS", 
+              "AR", 
+              "AU", 
+              "AT", 
+              "AW", 
+              "IN", 
+              "AX", 
+              "AZ", 
+              "IE", 
+              "ID", 
+              "UA", 
+              "QA", 
+              "MZ"
+            ], 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "employee_count": {
+          "enum": [
+            "1001 to 10000", 
+            "Over 100000", 
+            "Large", 
+            "Unknown", 
+            "50001 to 100000", 
+            "101 to 1000", 
+            "25001 to 50000", 
+            "10001 to 25000", 
+            "Small", 
+            "1 to 10", 
+            "11 to 100"
+          ], 
+          "type": "string"
+        }, 
+        "industry": {
+          "maxLength": 6, 
+          "minLength": 2, 
+          "pattern": "\\d{2}-?\\d{0,4}", 
+          "type": "string"
+        }, 
+        "locations_affected": {
+          "type": "integer"
+        }, 
+        "notes": {
+          "minLength": 1, 
+          "type": "string"
+        }, 
+        "region": {
+          "items": {
+            "maxLength": 6, 
+            "minLength": 6, 
+            "type": "string"
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "revenue": {
+          "additionalProperties": false, 
+          "minProperties": 1, 
+          "properties": {
+            "amount": {
+              "type": "integer"
+            }, 
+            "iso_currency_code": {
+              "enum": [
+                "DZD", 
+                "NAD", 
+                "GHS", 
+                "EGP", 
+                "BGN", 
+                "PAB", 
+                "BOB", 
+                "DKK", 
+                "BWP", 
+                "LBP", 
+                "TZS", 
+                "VND", 
+                "AOA", 
+                "KHR", 
+                "MYR", 
+                "KYD", 
+                "LYD", 
+                "UAH", 
+                "JOD", 
+                "AWG", 
+                "SAR", 
+                "EUR", 
+                "HKD", 
+                "CHF", 
+                "GIP", 
+                "BYR", 
+                "ALL", 
+                "MRO", 
+                "HRK", 
+                "DJF", 
+                "SZL", 
+                "THB", 
+                "XAF", 
+                "BND", 
+                "ISK", 
+                "UYU", 
+                "NIO", 
+                "LAK", 
+                "SYP", 
+                "MAD", 
+                "MZN", 
+                "PHP", 
+                "ZAR", 
+                "NPR", 
+                "NGN", 
+                "ZWD", 
+                "CRC", 
+                "AED", 
+                "GBP", 
+                "MWK", 
+                "LKR", 
+                "PKR", 
+                "HUF", 
+                "BMD", 
+                "LSL", 
+                "MNT", 
+                "AMD", 
+                "UGX", 
+                "QAR", 
+                "XDR", 
+                "JMD", 
+                "GEL", 
+                "SHP", 
+                "AFN", 
+                "SBD", 
+                "KPW", 
+                "TRY", 
+                "BDT", 
+                "YER", 
+                "HTG", 
+                "XOF", 
+                "MGA", 
+                "ANG", 
+                "LRD", 
+                "RWF", 
+                "NOK", 
+                "MOP", 
+                "INR", 
+                "MXN", 
+                "CZK", 
+                "TJS", 
+                "TWD", 
+                "BTN", 
+                "COP", 
+                "TMT", 
+                "MUR", 
+                "IDR", 
+                "HNL", 
+                "XPF", 
+                "FJD", 
+                "ETB", 
+                "PEN", 
+                "BZD", 
+                "ILS", 
+                "DOP", 
+                "GGP", 
+                "MDL", 
+                "BSD", 
+                "SPL", 
+                "SEK", 
+                "ZMK", 
+                "JEP", 
+                "AUD", 
+                "SRD", 
+                "CUP", 
+                "BBD", 
+                "KMF", 
+                "KRW", 
+                "GMD", 
+                "VEF", 
+                "IMP", 
+                "CUC", 
+                "TVD", 
+                "CLP", 
+                "LTL", 
+                "CDF", 
+                "XCD", 
+                "KZT", 
+                "RUB", 
+                "TTD", 
+                "OMR", 
+                "BRL", 
+                "MMK", 
+                "PLN", 
+                "PYG", 
+                "KES", 
+                "SVC", 
+                "MKD", 
+                "AZN", 
+                "TOP", 
+                "MVR", 
+                "VUV", 
+                "GNF", 
+                "WST", 
+                "IQD", 
+                "ERN", 
+                "BAM", 
+                "SCR", 
+                "CAD", 
+                "CVE", 
+                "KWD", 
+                "BIF", 
+                "PGK", 
+                "SOS", 
+                "SGD", 
+                "UZS", 
+                "STD", 
+                "IRR", 
+                "CNY", 
+                "SLL", 
+                "TND", 
+                "GYD", 
+                "NZD", 
+                "FKP", 
+                "LVL", 
+                "USD", 
+                "KGS", 
+                "ARS", 
+                "RON", 
+                "GTQ", 
+                "RSD", 
+                "BHD", 
+                "JPY", 
+                "SDG"
+              ], 
+              "type": "string"
+            }
+          }, 
+          "type": "object"
+        }, 
+        "secondary": {
+          "additionalProperties": false, 
+          "minProperties": 1, 
+          "properties": {
+            "amount": {
+              "type": "integer"
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "victim_id": {
+              "items": {
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array"
+            }
+          }, 
+          "type": "object"
+        }, 
+        "state": {
+          "type": "string"
+        }, 
+        "victim_id": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "country", 
+        "employee_count", 
+        "industry"
+      ], 
+      "type": "object"
+    }
+  }, 
+  "required": [
+    "actor", 
+    "action", 
+    "discovery_method", 
+    "schema_version", 
+    "asset", 
+    "timeline", 
+    "incident_id", 
+    "security_incident"
+  ], 
+  "type": "object"
+}
