@@ -1,0 +1,105 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ], 
+      "vector": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ], 
+      "variety": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 22754, 
+          "variety": "Medical"
+        }
+      ], 
+      "data_disclosure": "Potentially", 
+      "data_total": 22754, 
+      "data_victim": [
+        "Patient"
+      ], 
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - unknown", 
+  "discovery_notes": "Found by a security researcher.  We need to put \"Unrelated third party\" back as an option here.", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "8D39950B-7564-43BB-BCE8-B074E6E9E285", 
+  "plus": {
+    "analysis_status": "Finalized", 
+    "analyst": "swidup", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    }, 
+    "created": "2016-08-02T22:15:00Z", 
+    "dbir_year": 2017, 
+    "github": "7240", 
+    "master_id": "8D39950B-7564-43BB-BCE8-B074E6E9E285", 
+    "modified": "2016-08-02T22:15:00Z", 
+    "sub_source": "PHIDBR", 
+    "timeline": {
+      "notification": {
+        "month": 2, 
+        "year": 2016
+      }
+    }
+  }, 
+  "reference": "http://www.databreaches.net/22000-dental-patients-info-exposed-on-unsecured-eaglesoft-ftp-server/; http://www.dailydot.com/politics/justin-shafer-fbi-raid/", 
+  "schema_version": "1.3", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "Eaglesoft software by Patterson Dental is a popular patient management system.  But just as Justin Shafer had concerns about patient data security in Henry Schein's Dentrix G5 software, he's also had concerns about Eaglesoft, albeit for different reasons. Shafer contacted this site on February 6 and notified CERT of  his concern:  Eaglesoft does seem to use a Connection String in the registry, and this can be changed, but it must also be changed in the database, and I can promise you NOBODY will change this. Eaglesoft has been using \"dba\" as a username and \"sql\" as a password for years and years and years. Changing this involves a bit of work, most dental IT guys will not ever be asked to change the BACKEND database password.  CERT has now issued a VU number for Shafer's report -VU#344432  and will be contacting Eaglesoft to discuss the concern.  Also of concern, in the process of looking into Eaglesoft, Shafer discovered that some of Patterson Dental clients' patient databases were unsecured on Eaglesoft's FTP server.  DataBreaches.net sent a security alert/notification about the situation to Patterson Dental on February 6, and receiving no substantive acknowledgement, emailed them twice more over the next few days.  DataBreaches.net also notified  or attempted to notify  affected Eaglesoft clients to alert them that their patients' data was exposed.  Information provided by Shafer indicated that the exposed databases included two from Canadian dental practices, one from a U.S. dental group, and one from a U.S. dentist employed by Patterson:  Timberlea Dental Clinic (Alberta, Canada): Approximately 2,300 patients had their information exposed, including patient ID, first and last name, age, responsible party, home telephone number, date of last visit, recall date, LPA, NPA, NRA, recall type, and recall status. DataBreaches.net attempted notification via their contact form but got no response. Shafer spoke to them a few days later.  Dr. M Stemalschuk (Canada): There were two files. One was password-protected. The other was a zip file with an Eaglesoft database with health and insurance information on approximately 15,000 patients: name, date of birth, address, telephone number, gender, marital status, employer, insurance carrier, and insurance member ID. Shafer also noted 10 SSN. Note: DataBreaches.net did not contact this practice because they had no email address on their website or contact form. Shafer called them.  Massachusetts General Hospital Dental Group had protected health information on some of its patients exposed in a transaction log. The data included patient first and last names, the provider's name, the patient's ID number, their date of birth, their Social Security number, gender, and chart ID number. All of the data were plain text. Shafer informs DataBreaches.net that there were 5,424 unique patient names in the database with 4,396 Social Security numbers. Their HIPAA compliance office thanked DataBreaches.net for notifying them and immediately launched an investigation.  Rob McCanon (CEREC specialist, Patterson Dental): a directory of almost three dozen named patients from 2009 was exposed. The files were image files (CDT), and the index was last updated in 2011. Because Shafer did not download or explore any of the individual CDT files, it is not known whether the image files also contained PHI such as patient names or if they were only images. DataBreaches.net notified Dr. McCanon via email, but received no response or acknowledgement.  By February 8, the FTP server was taken offline, but Patterson Dental has not responded to inquiries from this site asking:  For how long patient data had been left unsecured on the server, How this happened, How many patients, total, had PHI exposed or left vulnerable because of this error, What Patterson Dental was doing in the way of notification and harm mitigation, and Whether Patterson Dental would be reporting this incident to HHS. If Patterson Dental does provide more information or if any of the affected clients provide more details, this post will be updated.  Correction: This post previously noted that Shafer had found 90 plaintext user passwords in Dr. Stemalschuk' data. Post-publication, Shafer clarified that the plaintext passwords table found in Dr. M Stemalschuk' database have been present in every Eaglesoft database he has analyzed, and that Eaglesoft version 17 and below stored these passwords in plaintext. There is no indication in this case, however, that Dr. Stemalshuk used these passwords. ", 
+  "timeline": {
+    "incident": {
+      "year": 2015
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "1001 to 10000", 
+    "industry": "423450", 
+    "region": [
+      "019021"
+    ], 
+    "secondary": {
+      "amount": 4, 
+      "victim_id": [
+        "Timberlea Dental Clinic", 
+        " Dr. M Stemalschuk", 
+        " Massachusetts General Hospital Dental Group", 
+        " Rob McCanon (CEREC specialist, Patterson Dental)"
+      ]
+    }, 
+    "state": "NY", 
+    "victim_id": "Patterson Dental"
+  }
+}

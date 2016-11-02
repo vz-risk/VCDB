@@ -1,0 +1,108 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ], 
+      "vector": [
+        "Remote injection"
+      ]
+    }
+  }, 
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ], 
+      "motive": [
+        "Financial"
+      ], 
+      "region": [
+        "000000"
+      ], 
+      "variety": [
+        "Unknown"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ], 
+    "governance": [
+      "Unknown"
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ], 
+      "data_disclosure": "Potentially", 
+      "data_victim": [
+        "Patient"
+      ], 
+      "state": [
+        "Unknown"
+      ]
+    }, 
+    "integrity": {
+      "variety": [
+        "Modify data", 
+        "Software installation"
+      ]
+    }
+  }, 
+  "discovery_method": "Ext - actor disclosure", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "53A33C2B-848F-4D3F-BA59-E64D7E61842E", 
+  "plus": {
+    "analysis_status": "Finalized", 
+    "analyst": "swidup", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    }, 
+    "created": "2016-07-25T20:54:00Z", 
+    "dbir_year": 2017, 
+    "github": "7481", 
+    "master_id": "53A33C2B-848F-4D3F-BA59-E64D7E61842E", 
+    "modified": "2016-07-25T20:54:00Z", 
+    "sub_source": "PHIDBR", 
+    "timeline": {
+      "notification": {
+        "month": 3, 
+        "year": 2016
+      }
+    }
+  }, 
+  "reference": "http://www.databreaches.net/medstar-health-hit-by-virus-affecting-system/; https://www.washingtonpost.com/local/virus-infects-medstar-health-systems-computers-hospital-officials-say/2016/03/28/480f7d66-f515-11e5-a3ce-f06b5ba21f33_story.html; http://arstechnica.com/security/2016/03/maryland-hospital-group-hit-by-ransomware/", 
+  "schema_version": "1.3", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "Baltimore's Union Memorial Hospital is the epicenter of a malware attack upon its parent organization, MedStar. Data at Union Memorial and other MedStar hospitals in Maryland have been encrypted by ransomware spread across the network, and the operators of the malware are offering a bulk deal: 45 bitcoins (about $18,500) for the keys to unlock all the affected systems.  Reuters reports that the FBI issued a confidential urgent \"Flash\" message to the industry about the threat of Samsam on March 25, seeking assistance in fighting the ransomware and pleading, \"We need your help!\" The FBI's cyber center also shared signature data for Samsam activity to help organizations screen for infections. But the number of potential targets remains vast, and the FBI was concerned that entire networks could fall victim to the ransomware.  According to sources who spoke to the Baltimore Sun, the malware involved in MedStar's outages is Samsam, also known as Samas and MSIL. The subject of a recent confidential FBI cyber-alert, Samsam is form of malware that uses well-known exploits in the JBoss application server and other Java-based application platforms. As Ars reported on Monday, Samsam uses exploits published as part of JexBoss, an open-source security and penetration testing tool for checking JBoss servers for misconfiguration.  The exploited vulnerabilities are in the JBoss Management Console (JMX), the command-line interface used to control JBoss-based application servers. The default installation of JBoss leaves JMX unsecured from outside access. The attacker uses these exploits to get remote shell access to the server itself and install Samsam malware onto the targeted Web application server. From there, the server is used to spread the ransomware client to Windows machines. There's no communication with a command and control network once the server is compromised.", 
+  "timeline": {
+    "incident": {
+      "year": 2015
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "25001 to 50000", 
+    "industry": "621610", 
+    "region": [
+      "019021"
+    ], 
+    "state": "MD", 
+    "victim_id": "MedStar Health"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "action": {
+    "misuse": {
+      "notes": "that fourteen individuals had snooped on a patient's records, which is against hospital policy and HIPAA rules", 
+      "variety": [
+        "Data mishandling", 
+        "Privilege abuse"
+      ], 
+      "vector": [
+        "LAN access"
+      ]
+    }
+  }, 
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ], 
+      "variety": [
+        "End-user"
+      ]
+    }
+  }, 
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ]
+  }, 
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ], 
+      "data_disclosure": "Yes", 
+      "data_victim": [
+        "Patient"
+      ], 
+      "state": [
+        "Stored encrypted"
+      ]
+    }
+  }, 
+  "discovery_method": "Int - log review", 
+  "discovery_notes": "The monitoring of access is possible because every time a patient's records are viewed, the system logs the user's credentials. By analyzing the access logs it is possible to see which individuals viewed a particular record, and determine whether there was any legitimate reason for viewing a particular file", 
+  "impact": {
+    "overall_rating": "Unknown"
+  }, 
+  "incident_id": "ECA8BBC2-CB20-451B-8FB1-D2BA89286A79", 
+  "plus": {
+    "analysis_status": "Finalized", 
+    "analyst": "Robert-Topper", 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    }, 
+    "created": "2016-08-31T22:24:00Z", 
+    "dbir_year": 2016, 
+    "github": "6322", 
+    "master_id": "ECA8BBC2-CB20-451B-8FB1-D2BA89286A79", 
+    "modified": "2016-08-31T22:24:00Z", 
+    "sub_source": "PHIDBR", 
+    "timeline": {
+      "notification": {
+        "month": 8, 
+        "year": 2015
+      }
+    }
+  }, 
+  "reference": "http://www.hipaajournal.com/mass-violations-of-patient-privacy-at-virginia-clinic-8074/", 
+  "schema_version": "1.3", 
+  "security_incident": "Confirmed", 
+  "source_id": "vcdb", 
+  "summary": "14 employees were caught using audit logs viewing patient records that they are not authorized to do so", 
+  "timeline": {
+    "incident": {
+      "year": 2015
+    }
+  }, 
+  "victim": {
+    "country": [
+      "US"
+    ], 
+    "employee_count": "Large", 
+    "industry": "622110", 
+    "locations_affected": 1, 
+    "region": [
+      "019021"
+    ], 
+    "state": "VA", 
+    "victim_id": "Carilion Clinic"
+  }
+}
