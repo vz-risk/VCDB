@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "\"after some initial investigation, we were able to confirm there had been an exposure of data and shut down the Forums as a precautionary measure. Deeper investigation revealed that there was a known SQL injection vulnerability in the Forumrunner add-on in the Forums which had not yet been patched\".  The unknown hacker/s exploited an SQL injection vulnerability in an add-on used by older vBulletin forum software. The hack gave the attacked access to the usernames, emails, salted and hashed passwords though Canonical said that only limited user data was accessed and downloaded. Canonical also stated that that no code or repository data was accessed, and the hacker couldn't write data to the database or gain shell access. The hacker was not able to gain access to any other Canonical or Ubuntu service according to the statement,",
+      "variety": [
+        "SQLi"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "governance": [
+      "Unknown"
+    ],
+    "notes": "security breach on the Ubuntu Forums site  The unknown hacker/s exploited an SQL injection vulnerability in an add-on used by older vBulletin forum software. The hack gave the attacked access to the usernames, emails, salted and hashed passwords though Canonical said that only limited user data was accessed and downloaded. Canonical also stated that that no code or repository data was accessed, and the hacker couldn't write data to the database or gain shell access. "
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2000000,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 2000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "It believes that the attacker managed to dump a portion of the users table of the forum. This table contains usernames, email addresses and IP addresses for the two million users of the forum.  Passwords were not accessed, but encrypted Ubuntu Single Sign On for logins were. The attacker did download these strings which were hashed and salted according to Canonical.",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Repurpose"
+      ]
+    }
+  },
+  "discovery_method": "Int - reported by employee",
+  "discovery_notes": "At 20:33 UTC on 14th July 2016, Canonical's IS team were notified by a member of the Ubuntu Forums Council that someone was claiming to have a copy of the Forums database.",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9E7535DC-22D9-405A-98C3-5FB14A9F6157",
+  "notes": "The attacker had the ability to inject certain formatted SQL to the Forums database on the Forums database servers. This gave them the ability to read from any table but we believe they only ever read from the 'user' table.  They used this access to download portions of the 'user' table which contained usernames, email addresses and IPs for 2 million users. No active passwords were accessed; the passwords stored in this table were random strings as the Ubuntu Forums rely on Ubuntu Single Sign On for logins. The attacker did download these random strings (which were hashed and salted).",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "anastasia",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "U"
+      }
+    },
+    "created": "2016-08-16T14:24:00Z",
+    "dbir_year": 2017,
+    "github": "8095",
+    "master_id": "9E7535DC-22D9-405A-98C3-5FB14A9F6157",
+    "modified": "2016-08-16T20:01:00Z",
+    "sub_source": "DBIRPRIORITY",
+    "timeline": {
+      "notification": {
+        "day": 14,
+        "month": 7,
+        "year": 2016
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/ubuntu-forums-hacked/; http://www.ghacks.net/2016/07/15/ubuntu-forums-security-breach/; http://www.techworm.net/2016/07/ubuntu-linux-forum-hacked-data-2-million-users-leaked.html",
+  "schema_version": "1.3.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ubuntu Linux forum hacked, data of 2 million users leaked",
+  "timeline": {
+    "containment": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 14,
+      "month": 7,
+      "year": 2016
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "511210",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Canonical"
+  }
+}
