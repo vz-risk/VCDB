@@ -1,0 +1,100 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Brute force",
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 90
+    }
+  },
+  "confidence": "Medium",
+  "control_failure": "Single factor authentication",
+  "discovery_method": "Int - log review",
+  "incident_id": "fa9a4330-778c-11e7-a457-a5a222e6d450",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Spitler",
+    "created": "2017-10-25T21:30:08.437Z",
+    "dbir_year": 2018,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "9694",
+    "master_id": "975e7d18-ca1e-43c3-a516-b2620f40d25f",
+    "modified": "2017-10-26T07:06:38.608Z"
+  },
+  "reference": "https://www.theguardian.com/politics/2017/jun/24/cyber-attack-parliament-email-access",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Brute force attacks on web based mail pops 90 accounts.",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 25,
+      "month": 6,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "Large",
+    "industry": "92",
+    "victim_id": "Parliament"
+  }
+}

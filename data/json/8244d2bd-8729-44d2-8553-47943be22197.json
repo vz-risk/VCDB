@@ -1,0 +1,145 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of backdoor or C2"
+      ],
+      "vector": [
+        "Backdoor or C2"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Backdoor"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "misuse": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Privilege abuse",
+        "Knowledge abuse"
+      ],
+      "vector": [
+        "Remote access",
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Resigned"
+      ],
+      "motive": [
+        "Grudge"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 3
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Int - reported by employee",
+  "incident_id": "78ee4940-6c82-11e7-8419-7d473c8dcba3",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Breland",
+    "attack_difficulty_initial": "Low",
+    "attack_difficulty_legacy": "Low",
+    "attack_difficulty_subsequent": "Low",
+    "created": "2017-10-25T21:13:18.930Z",
+    "dbir_year": 2014,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Employee installs RAT before quitting "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of backdoor by now former employee"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Destruction of data by former employee"
+      }
+    ],
+    "github": "9750",
+    "master_id": "8244d2bd-8729-44d2-8553-47943be22197",
+    "modified": "2017-10-26T06:55:57.751Z"
+  },
+  "reference": "https://nakedsecurity.sophos.com/2017/07/10/when-sysadmins-attack-again-former-worker-gets-seven-years/",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ex-workers attack (again): man used Trojan to cause havoc",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "exfiltration": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 27,
+      "month": 1,
+      "year": 2013
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "484110",
+    "victim_id": "Navarro Security Group"
+  }
+}
