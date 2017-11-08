@@ -294,6 +294,7 @@
           "properties": {
             "country": {
               "items": {
+                "default": "Unknown", 
                 "type": "string"
               }, 
               "minItems": 1, 
@@ -388,6 +389,7 @@
           "properties": {
             "country": {
               "items": {
+                "default": "Unknown", 
                 "type": "string"
               }, 
               "minItems": 1, 
@@ -835,6 +837,7 @@
           "type": "string"
         }, 
         "dbir_year": {
+          "default": 2018, 
           "minLength": 1, 
           "type": "integer"
         }, 
@@ -1026,8 +1029,8 @@
       "type": "string"
     }, 
     "schema_version": {
-      "type": "string", 
-      "default": "1.3.2"
+      "default": "1.3.2", 
+      "type": "string"
     }, 
     "security_incident": {
       "type": "string"
@@ -1122,6 +1125,7 @@
               "type": "integer"
             }, 
             "time": {
+              "pattern": "^0[1-9]|1[0-2]:[0-5][0-9]:[0-5][0-9] [AP]M$", 
               "type": "string"
             }, 
             "year": {
@@ -1146,6 +1150,7 @@
       "properties": {
         "country": {
           "items": {
+            "default": "Unknown", 
             "type": "string"
           }, 
           "minItems": 1, 

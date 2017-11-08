@@ -591,8 +591,10 @@
           "properties": {
             "country": {
               "items": {
+                "default": "Unknown", 
                 "type": "string", 
                 "enum": [
+                  "Unknown", 
                   "AD", 
                   "AE", 
                   "AF", 
@@ -842,8 +844,7 @@
                   "ZA", 
                   "ZM", 
                   "ZW", 
-                  "Other", 
-                  "Unknown"
+                  "Other"
                 ]
               }, 
               "minItems": 1, 
@@ -1012,8 +1013,10 @@
           "properties": {
             "country": {
               "items": {
+                "default": "Unknown", 
                 "type": "string", 
                 "enum": [
+                  "Unknown", 
                   "AD", 
                   "AE", 
                   "AF", 
@@ -1263,8 +1266,7 @@
                   "ZA", 
                   "ZM", 
                   "ZW", 
-                  "Other", 
-                  "Unknown"
+                  "Other"
                 ]
               }, 
               "minItems": 1, 
@@ -1489,6 +1491,7 @@
           "items": {
             "type": "string", 
             "enum": [
+              "Unknown", 
               "AD", 
               "AE", 
               "AF", 
@@ -1738,8 +1741,7 @@
               "ZA", 
               "ZM", 
               "ZW", 
-              "Other", 
-              "Unknown"
+              "Other"
             ]
           }, 
           "minItems": 1, 
@@ -2376,7 +2378,14 @@
         }, 
         "antiforensic_measures": {
           "items": {
-            "type": "string"
+            "type": "string", 
+            "enum": [
+              "No evidence of AF", 
+              "Data Corruption", 
+              "Data Hiding", 
+              "Data Wiping", 
+              "Unknown"
+            ]
           }, 
           "minItems": 1, 
           "type": "array", 
@@ -2394,7 +2403,23 @@
         }, 
         "asset_os": {
           "items": {
-            "type": "string"
+            "type": "string", 
+            "enum": [
+              "Android", 
+              "Apple iOS", 
+              "BlackBerry OS", 
+              "Linux", 
+              "Mac OSX", 
+              "Mainframe", 
+              "Symbian", 
+              "Unix", 
+              "webOS", 
+              "Windows", 
+              "Windows Phone", 
+              "Not applicable", 
+              "Unknown", 
+              "Other"
+            ]
           }, 
           "minItems": 1, 
           "type": "array", 
@@ -2402,15 +2427,39 @@
         }, 
         "attack_difficulty_initial": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string", 
+          "enum": [
+            "High", 
+            "Moderate", 
+            "Low", 
+            "Very Low", 
+            "Not Applicable", 
+            "Unknown"
+          ]
         }, 
         "attack_difficulty_legacy": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string", 
+          "enum": [
+            "High", 
+            "Moderate", 
+            "Low", 
+            "Very Low", 
+            "Not Applicable", 
+            "Unknown"
+          ]
         }, 
         "attack_difficulty_subsequent": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string", 
+          "enum": [
+            "High", 
+            "Moderate", 
+            "Low", 
+            "Very Low", 
+            "Not Applicable", 
+            "Unknown"
+          ]
         }, 
         "attribute": {
           "additionalProperties": false, 
@@ -2461,6 +2510,7 @@
           "type": "string"
         }, 
         "dbir_year": {
+          "default": 2018, 
           "minLength": 1, 
           "type": "integer"
         }, 
@@ -2470,19 +2520,47 @@
             "properties": {
               "action": {
                 "minLength": 1, 
-                "type": "string"
+                "type": "string", 
+                "enum": [
+                  "env", 
+                  "err", 
+                  "hak", 
+                  "mal", 
+                  "mis", 
+                  "phy", 
+                  "soc"
+                ]
               }, 
               "actor": {
                 "minLength": 1, 
-                "type": "string"
+                "type": "string", 
+                "enum": [
+                  "ext", 
+                  "int", 
+                  "prt"
+                ]
               }, 
               "asset": {
                 "minLength": 1, 
-                "type": "string"
+                "type": "string", 
+                "enum": [
+                  "emb", 
+                  "med", 
+                  "net", 
+                  "ppl", 
+                  "srv", 
+                  "ter", 
+                  "usr"
+                ]
               }, 
               "attribute": {
                 "minLength": 1, 
-                "type": "string"
+                "type": "string", 
+                "enum": [
+                  "au", 
+                  "cp", 
+                  "ia"
+                ]
               }, 
               "summary": {
                 "minLength": 1, 
@@ -2520,7 +2598,12 @@
           "properties": {
             "compliance_status": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "Not Compliant", 
+                "Found Compliant", 
+                "Unknown"
+              ]
             }, 
             "merchant_level": {
               "enum": [
@@ -2539,51 +2622,123 @@
             }, 
             "req_1": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_10": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_11": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_12": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_2": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_3": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_4": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_5": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_6": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_7": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_8": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "req_9": {
               "minLength": 1, 
-              "type": "string"
+              "type": "string", 
+              "enum": [
+                "In Place", 
+                "Not In Place", 
+                "Not Applicable", 
+                "Unknown"
+              ]
             }, 
             "status_determined": {
               "minLength": 1, 
@@ -2601,7 +2756,15 @@
         }, 
         "security_maturity": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string", 
+          "enum": [
+            "Optimizing", 
+            "Measured", 
+            "Defined", 
+            "Managed", 
+            "Initial", 
+            "Unknown"
+          ]
         }, 
         "sub_source": {
           "type": "string"
@@ -2632,11 +2795,23 @@
         }, 
         "unfollowed_policies": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string", 
+          "enum": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
         }, 
         "unknown_unknowns": {
           "items": {
-            "type": "string"
+            "type": "string", 
+            "enum": [
+              "Assets that had unknown network connections or accessibility", 
+              "Assets that had unknown user accounts or privileges", 
+              "Assets unknown or unclaimed by the organization (or business group affected)", 
+              "Data the organization did not know existed on a particular asset", 
+              "Unknown"
+            ]
           }, 
           "minItems": 1, 
           "type": "array", 
@@ -2652,8 +2827,8 @@
       "type": "string"
     }, 
     "schema_version": {
-      "type": "string", 
-      "default": "1.3.2"
+      "default": "1.3.2", 
+      "type": "string"
     }, 
     "security_incident": {
       "type": "string", 
@@ -2808,6 +2983,7 @@
               "type": "integer"
             }, 
             "time": {
+              "pattern": "^0[1-9]|1[0-2]:[0-5][0-9]:[0-5][0-9] [AP]M$", 
               "type": "string"
             }, 
             "year": {
@@ -2832,8 +3008,10 @@
       "properties": {
         "country": {
           "items": {
+            "default": "Unknown", 
             "type": "string", 
             "enum": [
+              "Unknown", 
               "AD", 
               "AE", 
               "AF", 
@@ -3083,8 +3261,7 @@
               "ZA", 
               "ZM", 
               "ZW", 
-              "Other", 
-              "Unknown"
+              "Other"
             ]
           }, 
           "minItems": 1, 
