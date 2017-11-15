@@ -4,16 +4,19 @@
   "description": "VERIS VCDB Schema 1.3.2", 
   "properties": {
     "action": {
+      "description": "What threat actions were involved? <a href='http://veriscommunity.net/actions.html' target='_blank'>More Info</a>", 
       "minProperties": 1, 
       "properties": {
         "environmental": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-environmental' target='_blank'>More Info</a>", 
           "properties": {
             "notes": {
               "minLength": 1, 
               "type": "string"
             }, 
             "variety": {
+              "description": "Varieties of environmental events", 
               "items": {
                 "type": "string"
               }, 
@@ -29,6 +32,7 @@
         }, 
         "error": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-error' target='_blank'>More Info</a>", 
           "properties": {
             "notes": {
               "minLength": 1, 
@@ -43,6 +47,7 @@
               "uniqueItems": true
             }, 
             "vector": {
+              "description": "Reasons errors occurred", 
               "items": {
                 "type": "string"
               }, 
@@ -59,8 +64,10 @@
         }, 
         "hacking": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-hacking' target='_blank'>More Info</a>", 
           "properties": {
             "cve": {
+              "description": "CVE(s) exploited through hacking", 
               "type": "string"
             }, 
             "notes": {
@@ -100,11 +107,14 @@
         }, 
         "malware": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-malware' target='_blank'>More Info</a>", 
           "properties": {
             "cve": {
+              "description": "CVE(s) exploited by this malware", 
               "type": "string"
             }, 
             "name": {
+              "description": "Common name(s) or strain(s) of malware", 
               "type": "string"
             }, 
             "notes": {
@@ -144,6 +154,7 @@
         }, 
         "misuse": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-misuse' target='_blank'>More Info</a>", 
           "properties": {
             "notes": {
               "minLength": 1, 
@@ -166,6 +177,7 @@
               "uniqueItems": true
             }, 
             "vector": {
+              "description": "Vectors or access methods", 
               "items": {
                 "type": "string"
               }, 
@@ -182,6 +194,7 @@
         }, 
         "physical": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-physical' target='_blank'>More Info</a>", 
           "properties": {
             "notes": {
               "minLength": 1, 
@@ -204,6 +217,7 @@
               "uniqueItems": true
             }, 
             "vector": {
+              "description": "Vector of physical access", 
               "items": {
                 "type": "string"
               }, 
@@ -220,6 +234,7 @@
         }, 
         "social": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actions.html#section-social' target='_blank'>More Info</a>", 
           "properties": {
             "notes": {
               "minLength": 1, 
@@ -234,6 +249,7 @@
               "uniqueItems": true
             }, 
             "target": {
+              "description": "Target of social tactics", 
               "items": {
                 "type": "string"
               }, 
@@ -242,6 +258,7 @@
               "uniqueItems": true
             }, 
             "variety": {
+              "description": "Varities of social tactics", 
               "items": {
                 "type": "string"
               }, 
@@ -250,6 +267,7 @@
               "uniqueItems": true
             }, 
             "vector": {
+              "description": "Vectors of communication", 
               "items": {
                 "type": "string"
               }, 
@@ -287,10 +305,12 @@
     }, 
     "actor": {
       "additionalProperties": false, 
+      "description": "<a href='http://veriscommunity.net/actors.html' target='_blank'>More Info</a>", 
       "minProperties": 1, 
       "properties": {
         "external": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actors.html#section-external' target='_blank'>More Info</a>", 
           "properties": {
             "country": {
               "items": {
@@ -310,6 +330,7 @@
               "uniqueItems": true
             }, 
             "name": {
+              "description": "Actor name (if known). e.g. 'lizard squad'", 
               "items": {
                 "type": "string"
               }, 
@@ -317,10 +338,12 @@
               "uniqueItems": true
             }, 
             "notes": {
+              "description": "Misc external actor notes", 
               "minLength": 1, 
               "type": "string"
             }, 
             "region": {
+              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. Asia: 142000, East Asia (includes China): 142030, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
               "items": {
                 "maxLength": 6, 
                 "minLength": 6, 
@@ -348,8 +371,10 @@
         }, 
         "internal": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actors.html#section-internal' target='_blank'>More Info</a>", 
           "properties": {
             "job_change": {
+              "description": "Recent job change PRIOR to incident? (i.e., not asking if 'let go' afterwards)", 
               "items": {
                 "type": "string"
               }, 
@@ -366,6 +391,7 @@
               "uniqueItems": true
             }, 
             "notes": {
+              "description": "Misc internal actor notes", 
               "minLength": 1, 
               "type": "string"
             }, 
@@ -386,6 +412,7 @@
         }, 
         "partner": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/actors.html#section-partner' target='_blank'>More Info</a>", 
           "properties": {
             "country": {
               "items": {
@@ -418,10 +445,12 @@
               "uniqueItems": true
             }, 
             "notes": {
+              "description": "Misc partner actor notes", 
               "minLength": 1, 
               "type": "string"
             }, 
             "region": {
+              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. Asia: 142000, East Asia (includes China): 142030, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
               "items": {
                 "maxLength": 6, 
                 "minLength": 6, 
@@ -439,6 +468,7 @@
           "type": "object"
         }, 
         "unknown": {
+          "description": "If the actor is unknown, you *must* add a note of some type, otherwise the incident will not validate.", 
           "properties": {
             "notes": {
               "minLength": 1, 
@@ -452,9 +482,11 @@
     }, 
     "asset": {
       "additionalProperties": false, 
+      "description": "<a href='http://veriscommunity.net/assets.html' target='_blank'>More Info</a>", 
       "minProperties": 1, 
       "properties": {
         "accessibility": {
+          "description": "Please do not use.  This feature will likely be removed in the near future.  Recommend using ownership or hosting instead.", 
           "type": "string"
         }, 
         "assets": {
@@ -462,9 +494,11 @@
             "additionalProperties": false, 
             "properties": {
               "amount": {
+                "description": "How many total systems were compromised?", 
                 "type": "integer"
               }, 
               "variety": {
+                "description": "What varieties of assets were compromised?", 
                 "type": "string"
               }
             }, 
@@ -478,9 +512,11 @@
           "uniqueItems": true
         }, 
         "cloud": {
+          "description": "Only answer if you know for sure if the asset was hosted in a cloud service.", 
           "type": "string"
         }, 
         "country": {
+          "description": "The country hosting the asset.", 
           "items": {
             "type": "string"
           }, 
@@ -517,12 +553,15 @@
     }, 
     "attribute": {
       "additionalProperties": false, 
+      "description": "<a href='http://veriscommunity.net/attributes.html' target='_blank'>More Info</a>", 
       "minProperties": 1, 
       "properties": {
         "availability": {
+          "description": "<a href='http://veriscommunity.net/attributes.html#section-availability' target='_blank'>More Info</a>", 
           "properties": {
             "duration": {
               "additionalProperties": false, 
+              "description": "Specific value of the specific selected unit, (i.e., # of 'days').", 
               "properties": {
                 "unit": {
                   "type": "string"
@@ -556,8 +595,10 @@
         }, 
         "confidentiality": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/attributes.html#section-confidentiality' target='_blank'>More Info</a>", 
           "properties": {
             "data": {
+              "description": "Varieties (and amount) of data compromised. Click the red \u2018Add\u2019 button to record multiple data varieties.", 
               "items": {
                 "additionalProperties": false, 
                 "properties": {
@@ -577,9 +618,11 @@
               "type": "array"
             }, 
             "data_disclosure": {
+              "description": "Was data disclosed?  This is the core determiner if this incident is a breach.  If this is 'Yes', it will be considered a breach.  If it is anything else, it will only be an incident.", 
               "type": "string"
             }, 
             "data_total": {
+              "description": "Total records breached", 
               "type": "integer"
             }, 
             "data_victim": {
@@ -610,6 +653,7 @@
         }, 
         "integrity": {
           "additionalProperties": false, 
+          "description": "<a href='http://veriscommunity.net/attributes.html#section-integrity' target='_blank'>More Info</a>", 
           "properties": {
             "notes": {
               "minLength": 1, 
@@ -633,15 +677,18 @@
       "type": "object"
     }, 
     "campaign_id": {
+      "description": "(Way to associate multiple incident w/in one campaign)", 
       "type": "string"
     }, 
     "confidence": {
       "type": "string"
     }, 
     "control_failure": {
+      "description": "What were the root control failures or weaknesses that allowed this incident to occur?<br />Obviously, there may be a multitude of factors that could be listed here. Include as many as you want, but focus on the issues most pertinent to why the incident occurred.", 
       "type": "string"
     }, 
     "corrective_action": {
+      "description": "What corrective action(s) are planned (or recommended) to prevent and/or detect similar incidents in the future?<br />This can include general recommendations, specific changes to policy, procedures, personnel, and technology, short-term and long-term strategies, etc. Don't simply copy what the investigator said. Tie to the root causes listed above, and focus on practical, effective corrective actions.", 
       "type": "string"
     }, 
     "cost_corrective_action": {
@@ -651,16 +698,19 @@
       "type": "string"
     }, 
     "discovery_notes": {
+      "description": "How was the incident discovered? <a href='http://veriscommunity.net/discovery.html#section-discovery-method' target='_blank'>More Info</a>", 
       "minLength": 1, 
       "type": "string"
     }, 
     "impact": {
       "additionalProperties": false, 
+      "description": "a href='http://veriscommunity.net/impact.html' target='_blank'>Impact Info</a><br />**REMINDER - UNLESS THIS IS FOR VCDB, DON'T RECORD VICTIM-INDENTIFYING INFO IF SUBMITTING TO THE DBIR**<br />**Tip: Hold CTRL or COMMAND to select multiple items from a list.", 
       "properties": {
         "iso_currency_code": {
           "type": "string"
         }, 
         "loss": {
+          "description": "Were any losses or costs reported for this incident? (Definitions for loss varieties and ratings are <a href='http://veriscommunity.net/impact.html#section-loss-estimation' target='_blank'>here</a>)", 
           "items": {
             "additionalProperties": false, 
             "properties": {
@@ -711,6 +761,7 @@
       "type": "object"
     }, 
     "incident_id": {
+      "description": "<a href='http://veriscommunity.net/incident-track.html' target='_blank'>More Info</a>", 
       "type": "string"
     }, 
     "ioc": {
@@ -733,6 +784,7 @@
       "type": "array"
     }, 
     "notes": {
+      "description": "Record notes about the incident.", 
       "minLength": 1, 
       "type": "string"
     }, 
@@ -747,6 +799,7 @@
           "type": "string"
         }, 
         "analyst_notes": {
+          "description": "Record notes about the analysis of the incident. (This is in contrast to notes about the incident itself which should go in 'notes'.)", 
           "minLength": 1, 
           "type": "string"
         }, 
@@ -877,6 +930,7 @@
           "type": "string"
         }, 
         "github": {
+          "description": "Github issue #.  Only used in VCDB.", 
           "minLength": 1, 
           "type": "string"
         }, 
@@ -977,10 +1031,12 @@
           "type": "number"
         }, 
         "security_maturity": {
+          "description": "How would you rate the maturity of the victim's overall security program?", 
           "minLength": 1, 
           "type": "string"
         }, 
         "sub_source": {
+          "description": "This field defines how the data was selected below the source level.  For example, It is a PHIDBR, record in VCDB, it should be 'phidbr'.  If it is a priority incident, it should be 'priority'.  If the incident is randomly assigned through vcdb assignment, it should be  'random' or blank.  It can be used by others to differentiate between different sources within their data.", 
           "type": "string"
         }, 
         "timeline": {
@@ -1021,8 +1077,7 @@
         }
       }, 
       "required": [
-        "master_id",
-        "github"
+        "master_id"
       ], 
       "type": "object"
     }, 
@@ -1031,9 +1086,11 @@
     }, 
     "schema_version": {
       "default": "1.3.2", 
+      "description": "Schema version in use. This should be 1.3.2 for this schema.", 
       "type": "string"
     }, 
     "security_incident": {
+      "description": "Confirmed incident?", 
       "type": "string"
     }, 
     "source_id": {
@@ -1045,9 +1102,11 @@
       "type": "object"
     }, 
     "summary": {
+      "description": "Give a good descriptive summary of the incident in one sentence. Use natural language instead of VERIS notation, but we should be able to 'VERISize' the incident pretty well from just this description.<br />**REMINDER: IF THIS IS FOR THE DBIR AND NOT VCDB  - DON'T RECORD VICTIM-INDENTIFYING INFO**", 
       "type": "string"
     }, 
     "targeted": {
+      "description": "Was this a targeted or opportunistic attack? <a href='http://veriscommunity.net/discovery.html#section-target-opportunistic' target='_blank'>More Info</a><br />N/A: Not an attack (e.g., unintentional actions)<br />Opportunistic: Victim was NOT pre-selected as a target; they were identified/attacked because they exhibited a weakness the attacker knew how to exploit.<br />Targeted: The victim is pre-selected as a target; the attacker(s) then determined what weaknesses exist within the target that could be exploited.", 
       "type": "string"
     }, 
     "timeline": {
@@ -1055,6 +1114,7 @@
       "properties": {
         "compromise": {
           "additionalProperties": false, 
+          "description": "How long from the first action to the first compromise of an attribute?", 
           "properties": {
             "unit": {
               "type": "string"
@@ -1070,6 +1130,7 @@
         }, 
         "containment": {
           "additionalProperties": false, 
+          "description": "How long did it take the organization to contain the incident once it was discovered?", 
           "properties": {
             "unit": {
               "type": "string"
@@ -1085,6 +1146,7 @@
         }, 
         "discovery": {
           "additionalProperties": false, 
+          "description": "How long from compromise until the incident was discovered by the victim organization?", 
           "properties": {
             "unit": {
               "type": "string"
@@ -1100,6 +1162,7 @@
         }, 
         "exfiltration": {
           "additionalProperties": false, 
+          "description": "How long from initial compromise to first known data exfiltration?", 
           "properties": {
             "unit": {
               "type": "string"
@@ -1115,6 +1178,7 @@
         }, 
         "incident": {
           "additionalProperties": false, 
+          "description": "When did this incident initially occur?", 
           "properties": {
             "day": {
               "maximum": 31, 
@@ -1127,6 +1191,7 @@
               "type": "integer"
             }, 
             "time": {
+              "description": "Use the format '05:45:00 PM'", 
               "pattern": "^0[1-9]|1[0-2]:[0-5][0-9]:[0-5][0-9] [AP]M$", 
               "type": "string"
             }, 
@@ -1149,8 +1214,10 @@
     }, 
     "victim": {
       "additionalProperties": false, 
+      "description": "<a href='http://veriscommunity.net/victim-demo.html' target='_blank'>More Info</a>. **REMINDER - UNLESS THIS IS A VCDB INCIDENT, DON'T RECORD VICTIM-IDENTIFYING INFO IN ANY INCIDENT TO BE SUBMITTED TO THE DBIR**", 
       "properties": {
         "country": {
+          "description": "Victim country of operation", 
           "items": {
             "default": "Unknown", 
             "type": "string"
@@ -1160,22 +1227,27 @@
           "uniqueItems": true
         }, 
         "employee_count": {
+          "description": "Number of employees", 
           "type": "string"
         }, 
         "industry": {
+          "description": "Victim NAICS Code. You can look it up <a href='http://www.farsmarterbids.com/reference/naics-list.php'>here</a> or <a href='http://www.naics.com/search' target='_blank'>here</a>.", 
           "maxLength": 6, 
           "minLength": 2, 
           "pattern": "\\d{2}-?\\d{0,4}", 
           "type": "string"
         }, 
         "locations_affected": {
+          "description": "The number of victim locations, (stores, offices, etc), affected", 
           "type": "integer"
         }, 
         "notes": {
+          "description": "**UNLESS THIS IS FOR VCDB, DON'T RECORD VICTIM-INDENTIFYING INFO IF THIS WILL BE SUBMITTED TO THE DBIR**", 
           "minLength": 1, 
           "type": "string"
         }, 
         "region": {
+          "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. Asia: 142000, East Asia (includes China): 142030, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
           "items": {
             "maxLength": 6, 
             "minLength": 6, 
@@ -1187,6 +1259,7 @@
         }, 
         "revenue": {
           "additionalProperties": false, 
+          "description": "For the DBIR, this is a low priority field and is OK to not fill in.", 
           "minProperties": 1, 
           "properties": {
             "amount": {
@@ -1210,6 +1283,7 @@
               "type": "string"
             }, 
             "victim_id": {
+              "description": "List any secondary victims here.", 
               "items": {
                 "type": "string"
               }, 
@@ -1220,6 +1294,7 @@
           "type": "object"
         }, 
         "state": {
+          "description": "ALl CAPS.  For US states, you can use the <a href='https://en.wikipedia.org/wiki/ISO_3166-2:US'>ISO_3166-2 2-character state code</a>, otherwise use the full <a href='https://en.wikipedia.org/wiki/ISO_3166-2' target='_blank'>ISO_3166-2 Country subdivision code</a>", 
           "type": "string"
         }, 
         "victim_id": {

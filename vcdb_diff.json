@@ -6,6 +6,7 @@
     "plus": {
       "properties": {
         "sub_source": {
+          "description": "This field defines how the data was selected below the source level.  For example, It is a PHIDBR, record in VCDB, it should be 'phidbr'.  If it is a priority incident, it should be 'priority'.  If the incident is randomly assigned through vcdb assignment, it should be  'random' or blank.  It can be used by others to differentiate between different sources within their data.",
           "type": "string"
         },
         "row_number": {
@@ -21,7 +22,8 @@
         }, 
         "analyst_notes": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string",
+          "description": "Record notes about the analysis of the incident. (This is in contrast to notes about the incident itself which should go in 'notes'.)"
         }, 
         "antiforensic_measures": {
           "items": {
@@ -151,7 +153,8 @@
         }, 
         "github": {
           "minLength": 1, 
-          "type": "string"
+          "type": "string",
+          "description": "Github issue #.  Only used in VCDB."
         }, 
         "investigator": {
           "minLength": 1, 
@@ -247,6 +250,7 @@
           "type": "string"
         }, 
         "security_maturity": {
+          "description": "How would you rate the maturity of the victim's overall security program?",
           "minLength": 1, 
           "type": "string"
         }, 
