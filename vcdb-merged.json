@@ -18,7 +18,8 @@
       ]
     }, 
     "reference": {
-      "type": "string"
+      "type": "string", 
+      "description": "Refernce should ba a url, incident number, case ID, or other reference to the document the VERIS incident was based on."
     }, 
     "summary": {
       "type": "string", 
@@ -2825,7 +2826,7 @@
       "type": "string"
     }, 
     "impact": {
-      "description": "a href='http://veriscommunity.net/impact.html' target='_blank'>Impact Info</a><br />**REMINDER - UNLESS THIS IS FOR VCDB, DON'T RECORD VICTIM-INDENTIFYING INFO IF SUBMITTING TO THE DBIR**<br />**Tip: Hold CTRL or COMMAND to select multiple items from a list.", 
+      "description": "<a href='http://veriscommunity.net/impact.html' target='_blank'>Impact Info</a><br />**REMINDER - UNLESS THIS IS FOR VCDB, DON'T RECORD VICTIM-INDENTIFYING INFO IF SUBMITTING TO THE DBIR**<br />**Tip: Hold CTRL or COMMAND to select multiple items from a list.", 
       "additionalProperties": false, 
       "properties": {
         "overall_rating": {
@@ -3009,12 +3010,15 @@
           ]
         }, 
         "overall_amount": {
+          "description": "The total amount lost in the given ISO currency code.", 
           "type": "number"
         }, 
         "overall_min_amount": {
+          "description": "When 'overall_amount' would be a range, use this field for the minimum of that range. Note: Values here will not appear in searches for 'overall_amount'.", 
           "type": "number"
         }, 
         "overall_max_amount": {
+          "description": "When 'overall_amount' would be a range, use this field for the maximum of that range. Note: Values here will not appear in searches for 'overall_amount'.", 
           "type": "number"
         }, 
         "loss": {
@@ -3092,12 +3096,12 @@
           "minLength": 1, 
           "type": "string", 
           "enum": [
-            "Ineligible", 
-            "Needs review", 
             "In-progress", 
+            "Needs review", 
             "First pass", 
             "Validated", 
-            "Finalized"
+            "Finalized", 
+            "Ineligible"
           ]
         }, 
         "analyst": {
@@ -3117,7 +3121,8 @@
               "Data Corruption", 
               "Data Hiding", 
               "Data Wiping", 
-              "Unknown"
+              "Unknown", 
+              "Other"
             ]
           }, 
           "minItems": 1, 
@@ -3167,7 +3172,8 @@
             "Low", 
             "Very Low", 
             "Not Applicable", 
-            "Unknown"
+            "Unknown", 
+            "Other"
           ]
         }, 
         "attack_difficulty_legacy": {
@@ -3179,7 +3185,8 @@
             "Low", 
             "Very Low", 
             "Not Applicable", 
-            "Unknown"
+            "Unknown", 
+            "Other"
           ]
         }, 
         "attack_difficulty_subsequent": {
@@ -3191,7 +3198,8 @@
             "Low", 
             "Very Low", 
             "Not Applicable", 
-            "Unknown"
+            "Unknown", 
+            "Other"
           ]
         }, 
         "attribute": {
@@ -3490,11 +3498,11 @@
           "minLength": 1, 
           "type": "string", 
           "enum": [
-            "Optimizing", 
-            "Measured", 
+            "Initial", 
             "Defined", 
             "Managed", 
-            "Initial", 
+            "Measured", 
+            "Optimizing", 
             "Unknown"
           ]
         }, 
