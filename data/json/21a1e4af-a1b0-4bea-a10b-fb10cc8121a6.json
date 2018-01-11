@@ -1,0 +1,102 @@
+{
+    "incident_id": "63507400-e2e3-11e7-a8b4-b50015373b0a",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hipaajournal.com/aging-agency-reports-ransomware-attack-8750-patients-impacted/; http://www.ottawaherald.com/news/20171102/agencys-data-remains-uncompromised-after-computer-breach",
+    "summary": "The Ottawa-based East Central Kansas Area Agency on Aging (ECKAAA) has experienced a ransomware attack that has resulted in the encryption of files on one of the agency’s servers. Those files contained the protected health information (PHI) of 8,750 patients.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 9,
+            "day": 5
+        },
+        "discovery": {
+            "unit": "Minutes"
+        }
+    },
+    "victim": {
+        "victim_id": "East Central Kansas Area Agency on Aging",
+        "employee_count": "11 to 100",
+        "industry": "923120",
+        "country": [
+            "US"
+        ],
+        "state": "KS"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 8750,
+            "data": [
+                {
+                    "amount": 8750,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "created": "2017-12-17T12:38:36.092Z",
+        "modified": "2017-12-17T12:38:36.092Z",
+        "master_id": "21a1e4af-a1b0-4bea-a10b-fb10cc8121a6",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "github": "10396"
+    },
+    "schema_version": "1_3_2"
+}

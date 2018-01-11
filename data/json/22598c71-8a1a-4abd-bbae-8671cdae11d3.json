@@ -1,0 +1,110 @@
+{
+    "incident_id": "b37a3eb0-e1db-11e7-8553-197c24c367d2",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/mn-colorado-center-for-reproductive-medicine-in-minneapolis-warns-clients-of-data-breach/; http://www.kare11.com/news/edina-fertility-clinic-warns-clients-of-data-breach/496983568",
+    "summary": "CCRM Minneapolis, which is located in Edina, says the clinic's servers were targeted by a ransomware attack on October 3, which triggered an investigation to determine if sensitive information had been put at risk. The hacker reportedly demanded a ransom.  The probe confirmed that an unknown, unauthorized third-party may have breached the clinic's computer security and viewed or accessed patient information that was on the server. That information includes names, addresses, phone numbers, dates of birth, email addresses, Social Security numbers, driver’s licenses, insurance identification numbers and medical records.  Company spokeswoman Constance Rapson says nearly 3,300 patients were potentially affected.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 10,
+            "day": 3
+        }
+    },
+    "victim": {
+        "victim_id": "CCRM Minneapolis",
+        "employee_count": "1 to 10",
+        "industry": "621111",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "MN"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 3300,
+            "data": [
+                {
+                    "amount": 3300,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Unknown"
+            }
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "created": "2017-12-16T05:14:26.621Z",
+        "modified": "2017-12-16T05:14:26.621Z",
+        "master_id": "22598c71-8a1a-4abd-bbae-8671cdae11d3",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10608"
+    },
+    "schema_version": "1_3_2"
+}

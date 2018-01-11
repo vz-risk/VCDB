@@ -1,0 +1,110 @@
+{
+    "incident_id": "42ef39c0-e35c-11e7-bf7a-0771e1cc9602",
+    "security_incident": "Confirmed",
+    "reference": "http://www.kaaltv.com/news/data-breach-family-services-rochester/4405076/; http://healthitsecurity.com/news/79k-patients-affected-by-emory-healthcare-data-breach; http://familyservicerochester.org/files/2017/02/Data-Breach.pdf",
+    "summary": "law enforcement was notified after ransomware was found on Family Service Rochester's computer system.  Investigators discovered that someone had illegally accessed the system between December 16, 2016 and January 25, 2017.  Potentially compromised information includes name, address, date of birth, social security number, driver's license number, insurance identification number and medication information, according to Family Services.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 12,
+            "day": 16
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 5
+        }
+    },
+    "victim": {
+        "victim_id": "Family Service Rochester",
+        "employee_count": "Small",
+        "industry": "624190",
+        "country": [
+            "US"
+        ],
+        "state": "MN"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 17037,
+            "data": [
+                {
+                    "amount": 17037,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - unknown",
+    "plus": {
+        "created": "2017-12-18T03:06:22.408Z",
+        "modified": "2017-12-18T03:06:22.408Z",
+        "timeline": {
+            "notification": {
+                "day": 20,
+                "month": 2,
+                "year": 2017
+            }
+        },
+        "master_id": "26d91377-97f0-4d84-8f42-e0a9380f4599",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "github": "9255"
+    },
+    "schema_version": "1_3_2"
+}

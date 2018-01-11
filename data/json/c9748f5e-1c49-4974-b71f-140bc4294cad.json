@@ -1,0 +1,121 @@
+{
+    "incident_id": "8ddd2cb0-e3a9-11e7-8742-2bc46bd10713",
+    "security_incident": "Confirmed",
+    "reference": "http://www.healthcareitnews.com/news/emory-healthcare-hit-ransomware-data-over-200000-patients-hacked; https://www.databreaches.net/emory-healthcare-patient-data-hijacked-and-held-for-ransom/",
+    "summary": "Atlanta-based Emory Healthcare was hacked by the Harak1r1 the 0.2 Bitcoin Ransomware, MacKeeper security researcher Chris Vickery discovered on Jan. 3.  On Dec. 30, MacKeeper Security Research Center discovered a misconfigured MongoDB database that contained data from over 200,000 patients and other sensitive information. On Jan. 3, the firm confirmed this data was linked to Emory Brain Health Center.  It appeared Harak1r1 wiped a database of the Brain Health Center and blocked access to these records, Vickery said. The database is gone and now boasts a ransomware message asking for .2 bitcoin.  The data appeared to be orthopedic and clinic workflow records. All files included names and addresses. Some included emails, birthdates, medical record numbers and cellphone numbers. The timestamps of the files are dated from 2015 - 2016.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 12,
+            "day": 30
+        }
+    },
+    "victim": {
+        "victim_id": "Emory Healthcare",
+        "employee_count": "10001 to 25000",
+        "industry": "621999",
+        "country": [
+            "US"
+        ],
+        "state": "GA"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 200000,
+            "data": [
+                {
+                    "amount": 200000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - unrelated 3rd party",
+    "plus": {
+        "created": "2017-12-18T12:18:44.967Z",
+        "modified": "2017-12-18T12:18:44.967Z",
+        "master_id": "c9748f5e-1c49-4974-b71f-140bc4294cad",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "8978"
+    },
+    "schema_version": "1_3_2"
+}
