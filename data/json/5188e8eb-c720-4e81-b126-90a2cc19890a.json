@@ -1,90 +1,90 @@
 {
-    "incident_id": "7d276370-e441-11e7-977c-0b3846f56840",
-    "security_incident": "Confirmed",
-    "reference": "https://www.databreaches.net/hcmc-employee-sentenced-for-fraudulently-using-patients-credit-cards/; http://kstp.com/article/stories/s4320873.shtml",
-    "summary": "A Hennepin County Medical Center employee who pleaded guilty to fraudulently using patients’ credit cards was sentenced Monday.",
-    "source_id": "vcdb",
-    "confidence": "High",
-    "timeline": {
-        "incident": {
-            "year": 2015,
-            "month": 10,
-            "day": 19
-        },
-        "discovery": {
-            "unit": "Months",
-            "value": 3
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
         }
-    },
-    "victim": {
-        "victim_id": "Hennepin County Medical Center",
-        "employee_count": "1001 to 10000",
-        "industry": "622110",
-        "country": [
-            "US"
-        ],
-        "state": "MN"
-    },
-    "action": {
-        "misuse": {
-            "variety": [
-                "Privilege abuse"
-            ],
-            "vector": [
-                "LAN access"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Unknown"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "total_amount": 1,
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ]
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Unknown",
+  "incident_id": "7d276370-e441-11e7-977c-0b3846f56840",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
     "attribute": {
-        "confidentiality": {
-            "data_disclosure": "Yes",
-            "data": [
-                {
-                    "variety": "Payment"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ]
-        }
+      "confidentiality": {
+        "data_misuse": "Y"
+      }
     },
-    "targeted": "Opportunistic",
-    "discovery_method": "Unknown",
-    "plus": {
-        "created": "2017-12-19T06:23:38.544Z",
-        "modified": "2017-12-19T06:23:38.544Z",
-        "master_id": "5188e8eb-c720-4e81-b126-90a2cc19890a",
-        "analysis_status": "Validated",
-        "analyst": "swidup",
-        "dbir_year": 2018,
-        "attribute": {
-            "confidentiality": {
-                "data_misuse": "Y"
-            }
-        },
-        "github": "8799"
+    "created": "2017-12-19T06:23:38.544Z",
+    "dbir_year": 2018,
+    "github": "8799",
+    "master_id": "5188e8eb-c720-4e81-b126-90a2cc19890a",
+    "modified": "2017-12-19T06:23:38.544Z"
+  },
+  "reference": "https://www.databreaches.net/hcmc-employee-sentenced-for-fraudulently-using-patients-credit-cards/; http://kstp.com/article/stories/s4320873.shtml",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A Hennepin County Medical Center employee who pleaded guilty to fraudulently using patients\u2019 credit cards was sentenced Monday.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 3
     },
-    "schema_version": "1_3_2"
+    "incident": {
+      "day": 19,
+      "month": 10,
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "622110",
+    "state": "MN",
+    "victim_id": "Hennepin County Medical Center"
+  }
 }

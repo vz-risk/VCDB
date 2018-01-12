@@ -1,118 +1,118 @@
 {
-    "incident_id": "53ad2c30-e37b-11e7-8742-2bc46bd10713",
-    "security_incident": "Confirmed",
-    "reference": "http://www.jdsupra.com/legalnews/cancer-services-provider-confronts-52149/",
-    "summary": "On January 11, 2017, TheDarkOverlord attacked Little Red Door with ransomware and demanded a payment of 50 Bitcoin (approximately $43,000) for return of the data. If the ransom wasn’t paid, the threat was that confidential information would be disclosed to the public. TheDarkOverlord wiped the company’s database and physical backups. Luckily, Little Red Door has much of the information in paper files and a cloud storage backup system and it is in the process of rebuilding the database and reconstructing the data. Its crackerjack IT folks will have the data back up and running this week. ",
-    "source_id": "vcdb",
-    "confidence": "High",
-    "timeline": {
-        "incident": {
-            "year": 2017,
-            "month": 1,
-            "day": 11
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "TheDarkOverlord"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
     },
-    "victim": {
-        "victim_id": "Little Red Door",
-        "employee_count": "Small",
-        "industry": "621111",
-        "country": [
-            "US"
-        ],
-        "state": "IN"
-    },
-    "action": {
-        "hacking": {
-            "variety": [
-                "Unknown"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Infiltrate"
-            ]
-        },
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ],
-            "country": [
-                "Unknown"
-            ],
-            "name": [
-                "TheDarkOverlord"
-            ]
-        }
-    },
-    "asset": {
-        "total_amount": 1,
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ]
-    },
+    "integrity": {
+      "variety": [
+        "Modify data",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Ext - actor disclosure",
+  "incident_id": "53ad2c30-e37b-11e7-8742-2bc46bd10713",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
     "attribute": {
-        "confidentiality": {
-            "data_disclosure": "Yes",
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ]
-        },
-        "integrity": {
-            "variety": [
-                "Modify data",
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Loss",
-                "Obscuration"
-            ]
-        }
+      "confidentiality": {
+        "data_misuse": "Y"
+      }
     },
-    "targeted": "Opportunistic",
-    "discovery_method": "Ext - actor disclosure",
-    "plus": {
-        "created": "2017-12-18T06:56:49.772Z",
-        "modified": "2017-12-18T06:56:49.772Z",
-        "master_id": "3f7b24c9-d435-49bc-9871-ac4e2034199c",
-        "analysis_status": "Validated",
-        "analyst": "swidup",
-        "dbir_year": 2018,
-        "attribute": {
-            "confidentiality": {
-                "data_misuse": "Y"
-            }
-        },
-        "github": "9042"
-    },
-    "schema_version": "1_3_2"
+    "created": "2017-12-18T06:56:49.772Z",
+    "dbir_year": 2018,
+    "github": "9042",
+    "master_id": "3f7b24c9-d435-49bc-9871-ac4e2034199c",
+    "modified": "2017-12-18T06:56:49.772Z"
+  },
+  "reference": "http://www.jdsupra.com/legalnews/cancer-services-provider-confronts-52149/",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 11, 2017, TheDarkOverlord attacked Little Red Door with ransomware and demanded a payment of 50 Bitcoin (approximately $43,000) for return of the data. If the ransom wasn\u2019t paid, the threat was that confidential information would be disclosed to the public. TheDarkOverlord wiped the company\u2019s database and physical backups. Luckily, Little Red Door has much of the information in paper files and a cloud storage backup system and it is in the process of rebuilding the database and reconstructing the data. Its crackerjack IT folks will have the data back up and running this week. ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 11,
+      "month": 1,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "621111",
+    "state": "IN",
+    "victim_id": "Little Red Door"
+  }
 }

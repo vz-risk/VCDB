@@ -1,94 +1,94 @@
 {
-    "incident_id": "acd58490-e2e2-11e7-a8b4-b50015373b0a",
-    "security_incident": "Confirmed",
-    "reference": "https://www.beckershospitalreview.com/cybersecurity/employee-wrongdoing-at-valley-family-medical-exposes-data-on-8-5k-patients.html; https://www.hipaajournal.com/virginia-medical-practice-inappropriate-phi-use/",
-    "summary": "Two former employees of Valley Family Medicine in Staunton, VA have been discovered to have inappropriately used a patient list.",
-    "source_id": "vcdb",
-    "confidence": "High",
-    "timeline": {
-        "incident": {
-            "year": 2017,
-            "month": 7
-        },
-        "discovery": {
-            "unit": "Months",
-            "value": 2
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 8500,
+          "variety": "Medical"
         }
-    },
-    "victim": {
-        "victim_id": "Valley Family Medicine",
-        "employee_count": "Unknown",
-        "industry": "621111",
-        "country": [
-            "US"
-        ],
-        "state": "VA"
-    },
-    "action": {
-        "misuse": {
-            "variety": [
-                "Privilege abuse"
-            ],
-            "vector": [
-                "LAN access"
-            ],
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "End-user"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "total_amount": 1,
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ]
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8500,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Ext - customer",
+  "incident_id": "acd58490-e2e2-11e7-a8b4-b50015373b0a",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
     "attribute": {
-        "confidentiality": {
-            "data_disclosure": "Yes",
-            "data_total": 8500,
-            "data": [
-                {
-                    "amount": 8500,
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ]
-        }
+      "confidentiality": {
+        "data_misuse": "Y"
+      }
     },
-    "targeted": "Targeted",
-    "discovery_method": "Ext - customer",
-    "plus": {
-        "created": "2017-12-17T12:33:09.929Z",
-        "modified": "2017-12-17T12:33:09.929Z",
-        "master_id": "49560b8b-90f2-45bf-ae37-0fc2bf558b8c",
-        "analysis_status": "Validated",
-        "analyst": "swidup",
-        "dbir_year": 2018,
-        "attribute": {
-            "confidentiality": {
-                "data_misuse": "Y"
-            }
-        },
-        "github": "10398"
+    "created": "2017-12-17T12:33:09.929Z",
+    "dbir_year": 2018,
+    "github": "10398",
+    "master_id": "49560b8b-90f2-45bf-ae37-0fc2bf558b8c",
+    "modified": "2017-12-17T12:33:09.929Z"
+  },
+  "reference": "https://www.beckershospitalreview.com/cybersecurity/employee-wrongdoing-at-valley-family-medical-exposes-data-on-8-5k-patients.html; https://www.hipaajournal.com/virginia-medical-practice-inappropriate-phi-use/",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Two former employees of Valley Family Medicine in Staunton, VA have been discovered to have inappropriately used a patient list.",
+  "targeted": "Targeted",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 2
     },
-    "schema_version": "1_3_2"
+    "incident": {
+      "month": 7,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "621111",
+    "state": "VA",
+    "victim_id": "Valley Family Medicine"
+  }
 }

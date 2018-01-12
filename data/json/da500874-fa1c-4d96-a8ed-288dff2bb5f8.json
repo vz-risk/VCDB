@@ -1,88 +1,88 @@
 {
-    "incident_id": "39352080-eeaf-11e7-b683-c1703914e4a4",
-    "security_incident": "Confirmed",
-    "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-64960; https://oag.ca.gov/system/files/doc05680520161117112652_0.pdf; https://oag.ca.gov/system/files/Christie%20Minor%20Notice%20%282%29_0.pdf; https://oag.ca.gov/system/files/Christie%20Adult%20Notice_0.pdf",
-    "summary": "On September 11, 2016, we were notified by our billing software company that their Amazon “S3” storage account was vulnerable because it was accessible to persons outside their organization, and that a security researcher who works for a software company accessed and downloaded information from the account. This storage account contained, among other things, protected health information of certain Watsonville Chiropractic, Inc. patients. ",
-    "source_id": "vcdb",
-    "confidence": "High",
-    "timeline": {
-        "incident": {
-            "year": 2016,
-            "month": 5
-        },
-        "discovery": {
-            "unit": "Months",
-            "value": 4
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "governance": [
+      "3rd party hosted",
+      "3rd party managed"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Ext - unrelated 3rd party",
+  "incident_id": "39352080-eeaf-11e7-b683-c1703914e4a4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2018-01-01T12:56:16.967Z",
+    "dbir_year": 2018,
+    "github": "9211",
+    "master_id": "da500874-fa1c-4d96-a8ed-288dff2bb5f8",
+    "modified": "2018-01-01T12:56:16.967Z"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-64960; https://oag.ca.gov/system/files/doc05680520161117112652_0.pdf; https://oag.ca.gov/system/files/Christie%20Minor%20Notice%20%282%29_0.pdf; https://oag.ca.gov/system/files/Christie%20Adult%20Notice_0.pdf",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 11, 2016, we were notified by our billing software company that their Amazon \u201cS3\u201d storage account was vulnerable because it was accessible to persons outside their organization, and that a security researcher who works for a software company accessed and downloaded information from the account. This storage account contained, among other things, protected health information of certain Watsonville Chiropractic, Inc. patients. ",
+  "targeted": "NA",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 4
     },
-    "victim": {
-        "victim_id": "Watsonville Chiropractic Inc./David W. Christie, D.C/ Luque Chiropractice, Inc.",
-        "employee_count": "Small",
-        "industry": "621111",
-        "country": [
-            "US"
-        ],
-        "state": "CA"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Unknown"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "total_amount": 1,
-        "assets": [
-            {
-                "variety": "S - File",
-                "amount": 1
-            }
-        ],
-        "governance": [
-            "3rd party hosted",
-            "3rd party managed"
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data_disclosure": "Yes",
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ]
-        }
-    },
-    "targeted": "NA",
-    "discovery_method": "Ext - unrelated 3rd party",
-    "plus": {
-        "created": "2018-01-01T12:56:16.967Z",
-        "modified": "2018-01-01T12:56:16.967Z",
-        "master_id": "da500874-fa1c-4d96-a8ed-288dff2bb5f8",
-        "analysis_status": "Validated",
-        "analyst": "swidup",
-        "dbir_year": 2018,
-        "github": "9211"
-    },
-    "schema_version": "1_3_2"
+    "incident": {
+      "month": 5,
+      "year": 2016
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "621111",
+    "state": "CA",
+    "victim_id": "Watsonville Chiropractic Inc./David W. Christie, D.C/ Luque Chiropractice, Inc."
+  }
 }

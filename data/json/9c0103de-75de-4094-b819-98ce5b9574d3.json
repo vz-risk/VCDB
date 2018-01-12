@@ -1,90 +1,90 @@
 {
-    "incident_id": "04c9c2b0-eaae-11e7-92b6-dfe49f9d7042",
-    "security_incident": "Confirmed",
-    "reference": "http://en.brinkwire.com/6406/office-worker-hacked-computer-to-see-colleagues-salaries/; http://www.dailymail.co.uk/news/article-5131937/Office-worker-hacked-computer-colleagues-salaries.html",
-    "summary": "An embittered office worker hacked the leading private hospital where she worked so she could find out her colleagues' wages.",
-    "source_id": "vcdb",
-    "confidence": "High",
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of backdoor or C2"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "Finance"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Int - unknown",
+  "incident_id": "04c9c2b0-eaae-11e7-92b6-dfe49f9d7042",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2017-12-27T10:37:01.353Z",
+    "dbir_year": 2018,
+    "github": "10579",
+    "master_id": "9c0103de-75de-4094-b819-98ce5b9574d3",
+    "modified": "2017-12-27T10:37:01.353Z",
     "timeline": {
-        "incident": {
-            "year": 2015
-        },
-        "discovery": {
-            "unit": "Years",
-            "value": 2
-        }
+      "notification": {
+        "month": 12,
+        "year": 2017
+      }
+    }
+  },
+  "reference": "http://en.brinkwire.com/6406/office-worker-hacked-computer-to-see-colleagues-salaries/; http://www.dailymail.co.uk/news/article-5131937/Office-worker-hacked-computer-colleagues-salaries.html",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An embittered office worker hacked the leading private hospital where she worked so she could find out her colleagues' wages.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 2
     },
-    "victim": {
-        "victim_id": "Cygnet Hospital",
-        "employee_count": "1001 to 10000",
-        "industry": "621112",
-        "country": [
-            "GB"
-        ]
-    },
-    "action": {
-        "hacking": {
-            "variety": [
-                "Use of backdoor or C2"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Finance"
-            ],
-            "motive": [
-                "Fun"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database"
-            }
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data_disclosure": "Yes",
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Employee",
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ]
-        }
-    },
-    "targeted": "Opportunistic",
-    "discovery_method": "Int - unknown",
-    "plus": {
-        "created": "2017-12-27T10:37:01.353Z",
-        "modified": "2017-12-27T10:37:01.353Z",
-        "timeline": {
-            "notification": {
-                "month": 12,
-                "year": 2017
-            }
-        },
-        "master_id": "9c0103de-75de-4094-b819-98ce5b9574d3",
-        "analysis_status": "Validated",
-        "analyst": "swidup",
-        "dbir_year": 2018,
-        "github": "10579"
-    },
-    "schema_version": "1_3_2"
+    "incident": {
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "621112",
+    "victim_id": "Cygnet Hospital"
+  }
 }
