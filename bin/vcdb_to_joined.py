@@ -96,7 +96,8 @@ updateLogger()
 ## SETUP
 __author__ = "Gabriel Bassett"
 # Parse Arguments (should correspond to user variables)
-parser = argparse.ArgumentParser(description="This script joins the vcdb json into a single json object with a list at it's root and vcdb json incidents as items in that list.")
+parser = argparse.ArgumentParser(description="This script joins the vcdb json into a single json object with a list at it's root and vcdb json incidents as items in that list. " + \
+                                             "Example: `python2.7 ./vcdb_to_joined.py -i ../data/json/ -o ../data/joined/ -z`")
 parser.add_argument('-d', '--debug',
                     help='Print lots of debugging statements',
                     action="store_const", dest="loglevel", const=logging.DEBUG,
