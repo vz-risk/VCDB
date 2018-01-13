@@ -8,14 +8,66 @@ While there are a handful of efforts to capture security incidents that are publ
 If you want to get involved in this project, we have directions in the wiki for this repo.  If you are new to GitHub, it is the book icon to the top of this page section.
 
 
+# WARNING ON SAMPLING  
+
+Most VCDB issues are chosen randomly (with a preferences for those in the last year), however we specifically select healthcare issues and some priority incidents.  Incidents not chosen randomly can be identified by the value of 'plus.sub_source'.  It will be 'phidbr' for healthcare issues and 'priority' for priority issues.  For those wishing to normalize out non-random selection, here is the issue composition as of Jan 13, 2018 to normalize the actuall incidents to:
+```
+{
+'2013': {'all': 1199, 'phidbr': 0, 'priority': 11},
+'2014': {'all': 3885, 'phidbr': 30, 'priority': 113},
+'2015': {'all': 1844, 'phidbr': 197, 'priority': 47},
+'2016': {'all': 1996, 'phidbr': 516, 'priority': 75},
+'2017': {'all': 1826, 'phidbr': 455, 'priority': 75},
+'2018': {'all': 28, 'phidbr': 8, 'priority': 1}
+}
+```
+
+# VCDB Statistics  
+As of Jan 13, 2018
 
 
-# VCDB Statistics
+```
+vcdb %>%
+    dplyr::group_by(attribute.confidentiality.data_disclosure.Yes) %>%
+    dplyr::count(timeline.incident.year) %>%
+    dplyr::ungroup() %>%
+    dplyr::rename(breach = attribute.confidentiality.data_disclosure.Yes) %>%
+    dplyr::mutate(breach = ifelse(breach, "Breach", "Incident")) %>%
+  ggplot2::ggplot() + 
+    ggplot2::geom_bar(ggplot2::aes(x=timeline.incident.year, y=n, group=breach, fill=breach), stat="identity") + 
+    ggplot2::labs(title="VCDB Breaches and Incidents by Incident Year", x="Count", y="Year") +
+    ggplot2::scale_x_continuous(expand=c(0,0), limits=c(2003, 2018)) +
+    ggplot2::scale_y_continuous(expand=c(0,0)) +
+    ggplot2::scale_fill_brewer() +
+    ggplot2::theme_minimal() +
+    ggplot2::theme(
+        panel.grid.major.x = ggplot2::element_blank(),
+        panel.grid.minor.x = ggplot2::element_blank(),
+        panel.grid.minor.y = ggplot2::element_blank()
+    )
+```
 
 ![plot of chunk yearly](figure/yearly.png) 
 
+```
+vcdb %>%
+    verisr::getenumCI("action", by="asset.variety") %>%
+    dplyr::filter(!is.na(n)) %>%
+    dplyr::mutate(by = stringr::str_sub(by, 15)) %>%
+  ggplot2::ggplot() +
+    ggplot2::geom_tile(ggplot2::aes(x=enum, y=by, fill=x)) +
+    ggplot2::geom_text(ggplot2::aes(x=enum, y=by, label=x)) +
+    ggplot2::scale_fill_gradient2() +
+    ggplot2::theme_void() +
+    ggplot2::theme(
+        axis.text = ggplot2::element_text(),
+        axis.text.x = ggplot2::element_text(hjust=1, angle=90)
+    )
+```
+
 
 ![plot of chunk a2grid](figure/a2grid.png) 
+
 
 
 
