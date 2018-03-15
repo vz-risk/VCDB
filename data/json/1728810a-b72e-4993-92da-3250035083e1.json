@@ -1,107 +1,107 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Web application"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 2200,
-          "variety": "Secrets"
+    "incident_id": "1bd73390-81ed-11e7-ace7-c5c15a923e51",
+    "security_incident": "Confirmed",
+    "reference": "https://www.financemagnates.com/forex/regulation/romanian-authorities-apprehend-three-men-trying-sell-stolen-client-data/",
+    "summary": "Romania’s Directorate for Investigating Organized Crime and Terrorism (DIICOT) has successfully detained three individuals who attempted to sell information stolen from a Cyprus-based brokerage. Iliescu Stefan Virgil, Roşoiu Darie Leone, and Vîlceanu Ionut succeeded in obtaining sensitive data from the brokerage group, which they intended to sell for upwards of €80,000.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 1
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 2200,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - actor disclosure",
-  "incident_id": "1bd73390-81ed-11e7-ace7-c5c15a923e51",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Moderate",
+    },
+    "victim": {
+        "victim_id": "Cypriot Brokerage",
+        "employee_count": "Small",
+        "industry": "523",
+        "locations_affected": 1,
+        "country": [
+            "CY"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2200,
+            "data": [
+                {
+                    "amount": 2200,
+                    "variety": "Secrets"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:48Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9834",
-    "master_id": "1728810a-b72e-4993-92da-3250035083e1",
-    "modified": "2018-02-22T12:31:41.584Z"
-  },
-  "reference": "https://www.financemagnates.com/forex/regulation/romanian-authorities-apprehend-three-men-trying-sell-stolen-client-data/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Romania\u2019s Directorate for Investigating Organized Crime and Terrorism (DIICOT) has successfully detained three individuals who attempted to sell information stolen from a Cyprus-based brokerage. Iliescu Stefan Virgil, Ro\u015foiu Darie Leone, and V\u00eelceanu Ionut succeeded in obtaining sensitive data from the brokerage group, which they intended to sell for upwards of \u20ac80,000.",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "targeted": "Targeted",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Moderate",
+        "created": "2017-10-26T14:33:48Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T12:31:41.584Z",
+        "master_id": "1728810a-b72e-4993-92da-3250035083e1",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9834"
     },
-    "exfiltration": {
-      "unit": "Minutes"
-    },
-    "incident": {
-      "month": 1,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "CY"
-    ],
-    "employee_count": "Small",
-    "industry": "523",
-    "locations_affected": 1,
-    "victim_id": "Cypriot Brokerage"
-  }
+    "schema_version": "1_3_2"
 }

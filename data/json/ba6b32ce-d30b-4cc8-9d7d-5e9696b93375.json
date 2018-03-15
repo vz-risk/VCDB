@@ -1,110 +1,110 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Disposal error"
-      ],
-      "vector": [
-        "Carelessness"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "End-user"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "M - Documents"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 50,
-          "variety": "Medical"
+    "incident_id": "d51037c0-dc25-11e7-be42-df02fe7390b5",
+    "security_incident": "Confirmed",
+    "reference": "http://www.kitv.com/story/36705195/medical-records-found-in-trash-bins-in-palolo",
+    "summary": "Medical records found in trash bins in Palolo",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 10
         },
-        {
-          "amount": 50,
-          "variety": "Personal"
+        "compromise": {
+            "unit": "Hours"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 50,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Printed"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - found documents",
-  "incident_id": "d51037c0-dc25-11e7-be42-df02fe7390b5",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Not Applicable",
-    "attack_difficulty_subsequent": "Not Applicable",
+    },
+    "victim": {
+        "victim_id": "Windward Family Therapy Center",
+        "employee_count": "Unknown",
+        "industry": "621340",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "HI"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Disposal error"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "M - Documents"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Yes"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 50,
+            "data": [
+                {
+                    "amount": 50,
+                    "variety": "Medical"
+                },
+                {
+                    "amount": 50,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Printed"
+            ]
+        }
     },
-    "created": "2017-12-08T19:51:57.135Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10372",
-    "master_id": "ba6b32ce-d30b-4cc8-9d7d-5e9696b93375",
-    "modified": "2018-02-24T11:56:19.958Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.kitv.com/story/36705195/medical-records-found-in-trash-bins-in-palolo",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Medical records found in trash bins in Palolo",
-  "targeted": "NA",
-  "timeline": {
-    "compromise": {
-      "unit": "Hours"
+    "targeted": "NA",
+    "discovery_method": "Ext - found documents",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Not Applicable",
+        "attack_difficulty_subsequent": "Not Applicable",
+        "created": "2017-12-08T19:51:57.135Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T11:56:19.958Z",
+        "master_id": "ba6b32ce-d30b-4cc8-9d7d-5e9696b93375",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Yes"
+            }
+        },
+        "github": "10372"
     },
-    "containment": {
-      "unit": "Hours"
-    },
-    "discovery": {
-      "unit": "Hours"
-    },
-    "incident": {
-      "month": 10,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Unknown",
-    "industry": "621340",
-    "locations_affected": 1,
-    "state": "HI",
-    "victim_id": "Windward Family Therapy Center"
-  }
+    "schema_version": "1_3_2"
 }

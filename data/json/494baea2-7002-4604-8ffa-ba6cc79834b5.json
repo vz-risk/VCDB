@@ -1,104 +1,104 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Brute force"
-      ],
-      "vector": [
-        "Web application"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Fun"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Web application"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Internal"
+    "incident_id": "87775c50-6c8b-11e7-8419-7d473c8dcba3",
+    "security_incident": "Confirmed",
+    "reference": "http://www.securityweek.com/citrix-says-sensitive-data-not-accessed-breach?utm_source=twitter.com&utm_medium=social&utm_campaign=buffer&utm_content=buffer40639; http://www.scmagazineuk.com/i-hacked-citrix-says-russian-hacker-w0rm/article/464362/",
+    "summary": "Citrix, a US software company specialising in virtualisation and cloud computing, has reportedly been compromised by a Russian hacker called w0rm.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2015,
+            "month": 10
+        },
+        "containment": {
+            "unit": "Weeks",
+            "value": 1
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - actor disclosure",
-  "incident_id": "87775c50-6c8b-11e7-8419-7d473c8dcba3",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-24T06:29:45.963Z",
-    "dbir_year": 2016,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "7024",
-    "master_id": "494baea2-7002-4604-8ffa-ba6cc79834b5",
-    "modified": "2018-02-22T07:24:32.645Z"
-  },
-  "reference": "http://www.securityweek.com/citrix-says-sensitive-data-not-accessed-breach?utm_source=twitter.com&utm_medium=social&utm_campaign=buffer&utm_content=buffer40639; http://www.scmagazineuk.com/i-hacked-citrix-says-russian-hacker-w0rm/article/464362/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Citrix, a US software company specialising in virtualisation and cloud computing, has reportedly been compromised by a Russian hacker called w0rm.",
-  "targeted": "Targeted",
-  "timeline": {
-    "containment": {
-      "unit": "Weeks",
-      "value": 1
     },
-    "incident": {
-      "month": 10,
-      "year": 2015
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "541512",
-    "secondary": {
-      "victim_id": [
-        "Citrix "
-      ]
+    "victim": {
+        "victim_id": "Citrix ",
+        "employee_count": "1001 to 10000",
+        "industry": "541512",
+        "country": [
+            "US"
+        ],
+        "state": "FL",
+        "secondary": {
+            "victim_id": [
+                "Citrix "
+            ]
+        }
     },
-    "state": "FL",
-    "victim_id": "Citrix "
-  }
+    "action": {
+        "hacking": {
+            "variety": [
+                "Brute force"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Fun"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-24T06:29:45.963Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T07:24:32.645Z",
+        "master_id": "494baea2-7002-4604-8ffa-ba6cc79834b5",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2016,
+        "github": "7024"
+    },
+    "schema_version": "1_3_2"
 }

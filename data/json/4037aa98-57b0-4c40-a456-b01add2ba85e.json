@@ -1,121 +1,118 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Misdelivery"
-      ],
-      "vector": [
-        "Other"
-      ]
-    },
-    "social": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "target": [
-        "Human resources"
-      ],
-      "variety": [
-        "Phishing"
-      ],
-      "vector": [
-        "Email"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "U - Desktop"
-      },
-      {
-        "variety": "P - Customer"
-      },
-      {
-        "variety": "P - Human resources"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1000,
-          "variety": "Personal"
+    "incident_id": "c987f070-82aa-11e7-8009-bf30ec7afbca",
+    "security_incident": "Confirmed",
+    "reference": "http://www.ledgertranscript.com/gfCrotchedMountain-ml-022117-8164753",
+    "summary": "Crotched Mountain Foundation had an unauthorized release of employee W-2s, which include social security numbers, on Thursday, according to center officials.  “Our computer systems weren’t hacked, a human error led to this,” Director of Marketing and Communications Dave Johnson said about the breach on Friday afternoon.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1000,
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "c987f070-82aa-11e7-8009-bf30ec7afbca",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-24T06:15:09.623Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "soc",
-        "actor": "ext",
-        "asset": "med",
-        "attribute": "au"
-      }
-    ],
-    "github": "9254",
-    "master_id": "4037aa98-57b0-4c40-a456-b01add2ba85e",
-    "modified": "2018-02-22T11:49:57.603Z"
-  },
-  "reference": "http://www.ledgertranscript.com/gfCrotchedMountain-ml-022117-8164753",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Crotched Mountain Foundation had an unauthorized release of employee W-2s, which include social security numbers, on Thursday, according to center officials.  \u201cOur computer systems weren\u2019t hacked, a human error led to this,\u201d Director of Marketing and Communications Dave Johnson said about the breach on Friday afternoon.",
-  "targeted": "Targeted",
-  "timeline": {
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "623",
-    "locations_affected": 1,
-    "state": "NH",
-    "victim_id": "Crotched Mountain Foundation"
-  }
+    "victim": {
+        "victim_id": "Crotched Mountain Foundation",
+        "employee_count": "101 to 1000",
+        "industry": "623",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "NH"
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Human resources"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        },
+        "error": {
+            "variety": [
+                "Misdelivery"
+            ],
+            "vector": [
+                "Other"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "U - Desktop"
+            },
+            {
+                "variety": "P - Customer"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1000,
+            "data": [
+                {
+                    "amount": 1000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-24T06:15:09.623Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "med",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2018-02-22T11:49:57.603Z",
+        "master_id": "4037aa98-57b0-4c40-a456-b01add2ba85e",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9254"
+    },
+    "schema_version": "1_3_2"
 }

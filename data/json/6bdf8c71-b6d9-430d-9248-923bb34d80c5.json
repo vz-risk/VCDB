@@ -1,116 +1,116 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Unknown"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "61e3af70-d9e1-11e7-be42-df02fe7390b5",
+    "security_incident": "Confirmed",
+    "reference": "http://www.todayonline.com/world/asia/we-knew-about-data-theft-february-dental-group-now-says",
+    "summary": "The Malaysian Dental Association (MDA) disclosed on Wednesday (Nov 1) that it had been alerted to a security breach on its online information system containing private data of its members since February.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 11,
+            "day": 1
         },
-        {
-          "variety": "Credentials"
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - monitoring service",
-  "incident_id": "61e3af70-d9e1-11e7-be42-df02fe7390b5",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Unknown",
-    "attack_difficulty_subsequent": "Unknown",
+    },
+    "victim": {
+        "victim_id": "Malaysian Dental Association",
+        "employee_count": "11 to 100",
+        "industry": "621210",
+        "locations_affected": 1,
+        "country": [
+            "MY"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-12-08T19:41:09.340Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10380",
-    "master_id": "6bdf8c71-b6d9-430d-9248-923bb34d80c5",
-    "modified": "2018-02-21T10:45:21.137Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.todayonline.com/world/asia/we-knew-about-data-theft-february-dental-group-now-says",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "The Malaysian Dental Association (MDA) disclosed on Wednesday (Nov 1) that it had been alerted to a security breach on its online information system containing private data of its members since February.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - monitoring service",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Unknown",
+        "attack_difficulty_subsequent": "Unknown",
+        "created": "2017-12-08T19:41:09.340Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T10:45:21.137Z",
+        "master_id": "6bdf8c71-b6d9-430d-9248-923bb34d80c5",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10380"
     },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Unknown"
-    },
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "day": 1,
-      "month": 11,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "MY"
-    ],
-    "employee_count": "11 to 100",
-    "industry": "621210",
-    "locations_affected": 1,
-    "victim_id": "Malaysian Dental Association"
-  }
+    "schema_version": "1_3_2"
 }

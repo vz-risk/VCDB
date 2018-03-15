@@ -1,99 +1,99 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Theft"
-      ],
-      "vector": [
-        "Public facility"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "HK"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 2,
-        "variety": "U - Laptop"
-      }
-    ],
-    "country": [
-      "HK"
-    ],
-    "total_amount": 2
-  },
-  "attribute": {
-    "availability": {
-      "duration": {
-        "unit": "Never"
-      },
-      "variety": [
-        "Loss"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 3700000,
-          "variety": "Personal"
+    "incident_id": "c54dc480-0a36-11e8-bbae-ed39c73f1398",
+    "security_incident": "Confirmed",
+    "reference": "http://www.scmp.com/news/hong-kong/politics/article/2086038/stolen-laptops-carrying-voter-information-triggers-security; http://www.scmp.com/news/hong-kong/politics/article/2098002/hong-kong-privacy-watchdog-blasts-electoral-office-massive; https://www.scmagazineuk.com/regs-slam-electoral-office-after-data-theft-of-all-hong-kong-voters/article/669385/",
+    "summary": "Last Monday, staff from the electoral office discovered two laptops had been stolen from a storeroom at the AsiaWorld-Expo centre on Lantau Island, which served as a back-up venue for the chief executive election on March 26. The laptops contained the names, addresses and identity card numbers of 3.7 million voters.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 3,
+            "day": 26
         }
-      ],
-      "data_disclosure": "Potentially",
-      "data_total": 3700000,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored unencrypted"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - break in discovered",
-  "incident_id": "c54dc480-0a36-11e8-bbae-ed39c73f1398",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "swidup",
-    "created": "2018-02-05T13:45:05.270Z",
-    "dbir_year": 2018,
-    "github": "9435",
-    "master_id": "f7a36443-5714-45ac-8ad8-623128e029a9",
-    "modified": "2018-02-05T13:45:05.270Z"
-  },
-  "reference": "http://www.scmp.com/news/hong-kong/politics/article/2086038/stolen-laptops-carrying-voter-information-triggers-security; http://www.scmp.com/news/hong-kong/politics/article/2098002/hong-kong-privacy-watchdog-blasts-electoral-office-massive; https://www.scmagazineuk.com/regs-slam-electoral-office-after-data-theft-of-all-hong-kong-voters/article/669385/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Last Monday, staff from the electoral office discovered two laptops had been stolen from a storeroom at the AsiaWorld-Expo centre on Lantau Island, which served as a back-up venue for the chief executive election on March 26. The laptops contained the names, addresses and identity card numbers of 3.7 million voters.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "incident": {
-      "day": 26,
-      "month": 3,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "HK"
-    ],
-    "employee_count": "Unknown",
-    "industry": "92",
-    "victim_id": "Hong Kong\u2019s Electoral Office"
-  }
+    },
+    "victim": {
+        "victim_id": "Hong Kong’s Electoral Office",
+        "employee_count": "Unknown",
+        "industry": "92",
+        "country": [
+            "HK"
+        ]
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Theft"
+            ],
+            "vector": [
+                "Public facility"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "HK"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 2,
+        "assets": [
+            {
+                "variety": "U - Laptop",
+                "amount": 2
+            }
+        ],
+        "country": [
+            "HK"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 3700000,
+            "data": [
+                {
+                    "amount": 3700000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ],
+            "duration": {
+                "unit": "Never"
+            }
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - break in discovered",
+    "plus": {
+        "created": "2018-02-05T13:45:05.270Z",
+        "modified": "2018-02-05T13:45:05.270Z",
+        "master_id": "f7a36443-5714-45ac-8ad8-623128e029a9",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "github": "9435"
+    },
+    "schema_version": "1_3_2"
 }

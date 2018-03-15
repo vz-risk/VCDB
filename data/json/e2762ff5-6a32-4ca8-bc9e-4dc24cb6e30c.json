@@ -1,98 +1,98 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 9,
-          "variety": "Medical"
+    "incident_id": "a721b910-8cd4-11e7-811e-83915e56fc98",
+    "security_incident": "Confirmed",
+    "reference": "http://www.eadt.co.uk/news/hospital-staff-sacked-for-prying-at-patients-medical-records-in-suffolk-and-colchester-hospitals-1-5150406",
+    "summary": "Hospital staff sacked for prying on patients’ medical records in Suffolk and Colchester hospitals",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Days"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 9,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "a721b910-8cd4-11e7-811e-83915e56fc98",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "created": "2017-10-26T14:33:50Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9966",
-    "master_id": "e2762ff5-6a32-4ca8-bc9e-4dc24cb6e30c",
-    "modified": "2018-02-24T12:53:53.191Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.eadt.co.uk/news/hospital-staff-sacked-for-prying-at-patients-medical-records-in-suffolk-and-colchester-hospitals-1-5150406",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Hospital staff sacked for prying on patients\u2019 medical records in Suffolk and Colchester hospitals",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "discovery": {
-      "unit": "Days"
+    "victim": {
+        "victim_id": "Ipswich Hospital ",
+        "employee_count": "1001 to 10000",
+        "industry": "621",
+        "locations_affected": 1,
+        "country": [
+            "GB"
+        ]
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "GB"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "621",
-    "locations_affected": 1,
-    "victim_id": "Ipswich Hospital "
-  }
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 9,
+            "data": [
+                {
+                    "amount": 9,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-26T14:33:50Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:53:53.191Z",
+        "master_id": "e2762ff5-6a32-4ca8-bc9e-4dc24cb6e30c",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9966"
+    },
+    "schema_version": "1_3_2"
 }

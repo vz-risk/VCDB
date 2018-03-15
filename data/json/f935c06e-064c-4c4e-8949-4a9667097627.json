@@ -1,109 +1,109 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Abuse of functionality"
-      ],
-      "vector": [
-        "Physical access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Financial",
-        "Other",
-        "Fun"
-      ],
-      "variety": [
-        "Other"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 2,
-        "variety": "U - Desktop"
-      }
-    ],
-    "total_amount": 2
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "59d82810-82b1-11e7-8009-bf30ec7afbca",
+    "security_incident": "Confirmed",
+    "reference": "https://www.theregister.co.uk/2017/04/12/prisoners_built_computer_connected_to_states_network/?utm_source=dlvr.it&utm_medium=facebook; https://regmedia.co.uk/2017/04/12/ohio_inspector_general_report.pdf",
+    "summary": "Prisoners built two PCs from parts, hid them in ceiling, connected to the state's network and did cybershenanigans",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
         },
-        {
-          "variety": "Bank"
+        "discovery": {
+            "unit": "Weeks"
+        },
+        "containment": {
+            "unit": "Seconds"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "59d82810-82b1-11e7-8009-bf30ec7afbca",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-25T23:01:22.902Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "cp"
-      },
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9460",
-    "master_id": "f935c06e-064c-4c4e-8949-4a9667097627",
-    "modified": "2018-02-26T08:24:57.281Z"
-  },
-  "reference": "https://www.theregister.co.uk/2017/04/12/prisoners_built_computer_connected_to_states_network/?utm_source=dlvr.it&utm_medium=facebook; https://regmedia.co.uk/2017/04/12/ohio_inspector_general_report.pdf",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Prisoners built two PCs from parts, hid them in ceiling, connected to the state's network and did cybershenanigans",
-  "targeted": "Targeted",
-  "timeline": {
-    "containment": {
-      "unit": "Seconds"
     },
-    "discovery": {
-      "unit": "Weeks"
+    "victim": {
+        "victim_id": "Ohio Department of Rehabilitation and Correction's (ODRC) ",
+        "employee_count": "10001 to 25000",
+        "industry": "922140",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "OH"
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "922140",
-    "locations_affected": 1,
-    "state": "OH",
-    "victim_id": "Ohio Department of Rehabilitation and Correction's (ODRC) "
-  }
+    "action": {
+        "hacking": {
+            "variety": [
+                "Abuse of functionality"
+            ],
+            "vector": [
+                "Physical access"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Financial",
+                "Other",
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 2,
+        "assets": [
+            {
+                "amount": 2,
+                "variety": "U - Desktop"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "created": "2017-10-25T23:01:22.902Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-26T08:24:57.281Z",
+        "master_id": "f935c06e-064c-4c4e-8949-4a9667097627",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9460"
+    },
+    "schema_version": "1_3_2"
 }

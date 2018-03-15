@@ -1,135 +1,135 @@
 {
-  "action": {
-    "malware": {
-      "result": [
-        "Exfiltrate",
-        "Infiltrate"
-      ],
-      "variety": [
-        "Spyware/Keylogger"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Unknown"
-      },
-      {
-        "variety": "U - Unknown"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Payment"
+    "incident_id": "e839fe90-8cba-11e7-97c0-cfe5b6ac1588",
+    "security_incident": "Confirmed",
+    "reference": "http://www.healthcareitnews.com/news/san-antonios-largest-ob-gyn-provider-breached-keylogger-malware; http://www.mysanantonio.com/business/local/article/Institute-for-Women-s-Health-notifies-patients-11943303.php; https://www.ifwh.org/en/newsroom/",
+    "summary": "The Institute for Women’s Health warned patients that hackers may have stolen some of their personal information or credit or debit card data, the physicians’ group said Thursday. The San Antonio OBGYN practice said a so-called keylogger virus was installed on its network on June 5. The virus was discovered July 6 and the company took action to remove it “from the majority of all network computers and terminal servers by July 11, 2017, resolving it completely by July 13, 2017,” it said in a statement.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 6
         },
-        {
-          "variety": "Medical"
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 1
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 2
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Software installation"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Int - unknown",
-  "incident_id": "e839fe90-8cba-11e7-97c0-cfe5b6ac1588",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "usr",
-        "attribute": "ia"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "usr",
-        "attribute": "cp"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "ia"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10001",
-    "master_id": "9f853552-18ad-471c-8b64-5938473f7c3a",
-    "modified": "2018-02-21T11:58:28.271Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.healthcareitnews.com/news/san-antonios-largest-ob-gyn-provider-breached-keylogger-malware; http://www.mysanantonio.com/business/local/article/Institute-for-Women-s-Health-notifies-patients-11943303.php; https://www.ifwh.org/en/newsroom/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "The Institute for Women\u2019s Health warned patients that hackers may have stolen some of their personal information or credit or debit card data, the physicians\u2019 group said Thursday. The San Antonio OBGYN practice said a so-called keylogger virus was installed on its network on June 5. The virus was discovered July 6 and the company took action to remove it \u201cfrom the majority of all network computers and terminal servers by July 11, 2017, resolving it completely by July 13, 2017,\u201d it said in a statement.",
-  "targeted": "Unknown",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "victim": {
+        "victim_id": "The institute for Women's Health",
+        "employee_count": "101 to 1000",
+        "industry": "621",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "TX"
     },
-    "containment": {
-      "unit": "Days",
-      "value": 2
+    "action": {
+        "malware": {
+            "variety": [
+                "Spyware/Keylogger"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
     },
-    "discovery": {
-      "unit": "Months",
-      "value": 1
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
     },
-    "incident": {
-      "month": 6,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "621",
-    "locations_affected": 1,
-    "state": "TX",
-    "victim_id": "The institute for Women's Health"
-  }
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            },
+            {
+                "variety": "U - Unknown"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Payment"
+                },
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": "Int - unknown",
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T11:58:28.271Z",
+        "master_id": "9f853552-18ad-471c-8b64-5938473f7c3a",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "10001"
+    },
+    "schema_version": "1_3_2"
 }

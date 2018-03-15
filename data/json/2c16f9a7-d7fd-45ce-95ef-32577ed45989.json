@@ -1,99 +1,99 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Publishing error"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "NA"
-      ],
-      "variety": [
-        "System admin"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Database"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1600,
-          "variety": "Personal"
+    "incident_id": "ffae2fc0-9a56-11e7-bfd9-89a842dbe08d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/medical-billing-firm-exposes-unencrypted-protected-health-information/",
+    "summary": "Medical billing firm exposes unencrypted protected health information",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017
         },
-        {
-          "variety": "Medical"
-        },
-        {
-          "variety": "Credentials"
+        "containment": {
+            "unit": "Days"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1600,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored unencrypted"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - other",
-  "incident_id": "ffae2fc0-9a56-11e7-bfd9-89a842dbe08d",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Spitler",
-    "created": "2017-10-24T05:46:35.099Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9721",
-    "master_id": "2c16f9a7-d7fd-45ce-95ef-32577ed45989",
-    "modified": "2018-02-21T07:11:01.805Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "https://www.databreaches.net/medical-billing-firm-exposes-unencrypted-protected-health-information/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Medical billing firm exposes unencrypted protected health information",
-  "targeted": "NA",
-  "timeline": {
-    "containment": {
-      "unit": "Days"
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1 to 10",
-    "industry": "541219",
-    "state": "OH",
-    "victim_id": "iMax Medical Billing"
-  }
+    "victim": {
+        "victim_id": "iMax Medical Billing",
+        "employee_count": "1 to 10",
+        "industry": "541219",
+        "country": [
+            "US"
+        ],
+        "state": "OH"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1600,
+            "data": [
+                {
+                    "amount": 1600,
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Ext - other",
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2017-10-24T05:46:35.099Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T07:11:01.805Z",
+        "master_id": "2c16f9a7-d7fd-45ce-95ef-32577ed45989",
+        "analysis_status": "Validated",
+        "analyst": "Spitler",
+        "dbir_year": 2018,
+        "github": "9721"
+    },
+    "schema_version": "1_3_2"
 }

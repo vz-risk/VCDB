@@ -1,119 +1,119 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Web application"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "name": [
-        "TheDarkOverlord (TDO)"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1750,
-          "variety": "Medical"
+    "incident_id": "9bbed460-df4d-11e7-98c9-5b20d709bc39",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/austin-manual-therapy-associates-patient-data-hacked-thedarkoverlord/; https://www.databreaches.net/austin-manual-therapy-notifies-1750-patients-of-data-breach/",
+    "summary": "Austin Manual Therapy Associates patient data hacked by The Dark Overlord.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 10
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1750,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - actor disclosure",
-  "incident_id": "9bbed460-df4d-11e7-98c9-5b20d709bc39",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Unknown",
-    "attack_difficulty_subsequent": "Unknown",
+    },
+    "victim": {
+        "victim_id": " Austin Manual Therapy Associates",
+        "employee_count": "1 to 10",
+        "industry": "621340",
+        "locations_affected": 2,
+        "country": [
+            "US"
+        ],
+        "state": "TX"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ],
+            "name": [
+                "TheDarkOverlord (TDO)"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1750,
+            "data": [
+                {
+                    "variety": "Medical",
+                    "amount": 1750
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-12-12T20:18:59.738Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10350",
-    "master_id": "18f8a875-c695-421e-bdb3-699d0d363b2f",
-    "modified": "2018-02-21T12:17:38.495Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "https://www.databreaches.net/austin-manual-therapy-associates-patient-data-hacked-thedarkoverlord/; https://www.databreaches.net/austin-manual-therapy-notifies-1750-patients-of-data-breach/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Austin Manual Therapy Associates patient data hacked by The Dark Overlord.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Unknown",
+        "attack_difficulty_subsequent": "Unknown",
+        "created": "2017-12-12T20:18:59.738Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T12:17:38.495Z",
+        "master_id": "18f8a875-c695-421e-bdb3-699d0d363b2f",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10350"
     },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Unknown"
-    },
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "month": 10,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1 to 10",
-    "industry": "621340",
-    "locations_affected": 2,
-    "state": "TX",
-    "victim_id": " Austin Manual Therapy Associates"
-  }
+    "schema_version": "1_3_2"
 }

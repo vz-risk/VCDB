@@ -1,121 +1,121 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Skimmer",
-        "Surveillance"
-      ],
-      "vector": [
-        "Victim grounds"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "T - ATM"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 7,
-          "variety": "Payment"
+    "incident_id": "95219390-8cbe-11e7-97c0-cfe5b6ac1588",
+    "security_incident": "Confirmed",
+    "reference": "http://www.nbcmiami.com/news/local/ATM-Skimmer-Found-in-Mt-Sinai-Medical-Center-Miami-Beach-Police-441037803.html",
+    "summary": "ATM Skimmer Found in Mt. Sinai Medical Center: Miami Beach Police",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 8
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 7,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Hardware tampering"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "95219390-8cbe-11e7-97c0-cfe5b6ac1588",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
+    "victim": {
+        "victim_id": "Mt. Sinai Medical Center,",
+        "employee_count": "1001 to 10000",
+        "industry": "621",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "FL"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer",
+                "Surveillance"
+            ],
+            "vector": [
+                "Victim grounds"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "T - ATM"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 7,
+            "data": [
+                {
+                    "amount": 7,
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:50Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "ia"
-      },
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10002",
-    "master_id": "f91d4ce0-dc12-41cb-9482-41e96b358e2b",
-    "modified": "2018-02-26T08:23:08.750Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.nbcmiami.com/news/local/ATM-Skimmer-Found-in-Mt-Sinai-Medical-Center-Miami-Beach-Police-441037803.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "ATM Skimmer Found in Mt. Sinai Medical Center: Miami Beach Police",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "targeted": "Targeted",
+    "discovery_method": "Unknown",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-26T14:33:50Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "ia"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-26T08:23:08.750Z",
+        "master_id": "f91d4ce0-dc12-41cb-9482-41e96b358e2b",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10002"
     },
-    "discovery": {
-      "unit": "Hours"
-    },
-    "incident": {
-      "month": 8,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "621",
-    "locations_affected": 1,
-    "state": "FL",
-    "victim_id": "Mt. Sinai Medical Center,"
-  }
+    "schema_version": "1_3_2"
 }

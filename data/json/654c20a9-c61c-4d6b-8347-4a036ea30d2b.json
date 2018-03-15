@@ -1,100 +1,100 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Publishing error"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "NA"
-      ],
-      "variety": [
-        "System admin"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Authentication"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Digital certificate"
+    "incident_id": "83029d60-d905-11e7-be42-df02fe7390b5",
+    "security_incident": "Confirmed",
+    "reference": "https://www.theregister.co.uk/2017/11/16/dji_private_keys_left_github/; https://arstechnica.com/information-technology/2017/11/dji-left-private-keys-for-ssl-cloud-storage-in-public-view-and-exposed-customers/",
+    "summary": "Drone maker DJI left its private SSL, firmware keys open to world+dog on GitHub FOR YEARS",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 11
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - customer",
-  "incident_id": "83029d60-d905-11e7-be42-df02fe7390b5",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Not Applicable",
-    "attack_difficulty_subsequent": "Not Applicable",
-    "created": "2017-12-04T20:26:41.398Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10484",
-    "master_id": "654c20a9-c61c-4d6b-8347-4a036ea30d2b",
-    "modified": "2018-02-22T07:36:45.799Z"
-  },
-  "reference": "https://www.theregister.co.uk/2017/11/16/dji_private_keys_left_github/; https://arstechnica.com/information-technology/2017/11/dji-left-private-keys-for-ssl-cloud-storage-in-public-view-and-exposed-customers/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Drone maker DJI left its private SSL, firmware keys open to world+dog on GitHub FOR YEARS",
-  "targeted": "NA",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
     },
-    "containment": {
-      "unit": "Unknown"
+    "victim": {
+        "victim_id": "DJI",
+        "employee_count": "10001 to 25000",
+        "industry": "336411",
+        "locations_affected": 1,
+        "country": [
+            "CN"
+        ]
     },
-    "discovery": {
-      "unit": "Unknown"
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Unknown"
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
     },
-    "incident": {
-      "month": 11,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "CN"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "336411",
-    "locations_affected": 1,
-    "victim_id": "DJI"
-  }
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Authentication"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Digital certificate"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "attack_difficulty_initial": "Not Applicable",
+        "attack_difficulty_subsequent": "Not Applicable",
+        "created": "2017-12-04T20:26:41.398Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T07:36:45.799Z",
+        "master_id": "654c20a9-c61c-4d6b-8347-4a036ea30d2b",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "github": "10484"
+    },
+    "schema_version": "1_3_2"
 }

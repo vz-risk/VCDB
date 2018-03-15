@@ -1,110 +1,110 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Skimmer"
-      ],
-      "vector": [
-        "Victim public area"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "T - ATM"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Payment"
+    "incident_id": "5cb52b10-9980-11e7-b039-d34ad5cfc38b",
+    "security_incident": "Confirmed",
+    "reference": "http://wcfcourier.com/news/local/crime-and-courts/camera-footage-released-in-atm-skimmer-investigation/article_f28426ca-564f-5a41-9d09-6c29b2a222cc.html",
+    "summary": "Camera footage released in ATM skimmer investigation",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 8,
+            "day": 25
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours",
+            "value": 1
+        },
+        "containment": {
+            "unit": "Hours",
+            "value": 1
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Hardware tampering"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "5cb52b10-9980-11e7-b039-d34ad5cfc38b",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10101",
-    "master_id": "d3dffb49-9fd4-47ed-8fb3-c056cdf44e12",
-    "modified": "2018-02-24T12:20:33.580Z"
-  },
-  "reference": "http://wcfcourier.com/news/local/crime-and-courts/camera-footage-released-in-atm-skimmer-investigation/article_f28426ca-564f-5a41-9d09-6c29b2a222cc.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Camera footage released in ATM skimmer investigation",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "victim": {
+        "victim_id": "Verdian Credit Union",
+        "employee_count": "101 to 1000",
+        "industry": "522110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "IA"
     },
-    "containment": {
-      "unit": "Hours",
-      "value": 1
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Victim public area"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "discovery": {
-      "unit": "Hours",
-      "value": 1
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
     },
-    "incident": {
-      "day": 25,
-      "month": 8,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "522110",
-    "locations_affected": 1,
-    "state": "IA",
-    "victim_id": "Verdian Credit Union"
-  }
+    "asset": {
+        "assets": [
+            {
+                "variety": "T - ATM"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:20:33.580Z",
+        "master_id": "d3dffb49-9fd4-47ed-8fb3-c056cdf44e12",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "10101"
+    },
+    "schema_version": "1_3_2"
 }

@@ -1,96 +1,96 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Espionage"
-      ],
-      "variety": [
-        "End-user",
-        "Manager"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Mail"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Secrets"
+    "incident_id": "a16640f0-842c-11e7-a921-2d695ce70b69",
+    "security_incident": "Confirmed",
+    "reference": "http://www.lifesciencesipreview.com/news/par-targets-former-employees-over-trade-secrets-2352",
+    "summary": "Par Pharmaceutical has sued a pair of former employees who set up a rival company, accusing them of poaching staff to steal trade secrets.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 8
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "a16640f0-842c-11e7-a921-2d695ce70b69",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
     },
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9984",
-    "master_id": "c86435cd-fd1b-4f6d-8ce4-4bcf7ede9930",
-    "modified": "2018-02-24T12:14:54.656Z"
-  },
-  "reference": "http://www.lifesciencesipreview.com/news/par-targets-former-employees-over-trade-secrets-2352",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Par Pharmaceutical has sued a pair of former employees who set up a rival company, accusing them of poaching staff to steal trade secrets.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "incident": {
-      "month": 8,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "621",
-    "locations_affected": 1,
-    "state": "NJ",
-    "victim_id": "Par Pharmaceutical "
-  }
+    "victim": {
+        "victim_id": "Par Pharmaceutical ",
+        "employee_count": "101 to 1000",
+        "industry": "621",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "NJ"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user",
+                "Manager"
+            ],
+            "motive": [
+                "Espionage"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Secrets"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:14:54.656Z",
+        "master_id": "c86435cd-fd1b-4f6d-8ce4-4bcf7ede9930",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9984"
+    },
+    "schema_version": "1_3_2"
 }

@@ -1,125 +1,125 @@
 {
-  "action": {
-    "social": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "target": [
-        "Human resources"
-      ],
-      "variety": [
-        "Pretexting"
-      ],
-      "vector": [
-        "Email"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "P - Human resources"
-      },
-      {
-        "amount": 1,
-        "variety": "U - Desktop"
-      }
-    ],
-    "total_amount": 2
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "17d704f0-8125-11e7-abf2-119fe288b6e8",
+    "security_incident": "Confirmed",
+    "reference": "http://tdn.com/news/local/transportation-company-in-washington-oregon-california-falls-for-email-scam/article_5b982b97-5338-57b8-b62f-00df2bd3b11f.html",
+    "summary": "W2 phishing scam",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 3,
+            "day": 10
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 1
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Unknown",
-  "incident_id": "17d704f0-8125-11e7-abf2-119fe288b6e8",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Spitler",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
+    "victim": {
+        "victim_id": "Paratransit Services",
+        "employee_count": "11 to 100",
+        "industry": "485991",
+        "country": [
+            "US"
+        ]
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Pretexting"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Human resources"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 2,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "P - Human resources"
+            },
+            {
+                "variety": "U - Desktop",
+                "amount": 1
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
     },
-    "created": "2017-10-25T21:13:45.700Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "soc",
-        "actor": "ext",
-        "asset": "ppl",
-        "attribute": "ia"
-      },
-      {
-        "action": "soc",
-        "actor": "ext",
-        "asset": "ppl",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9525",
-    "master_id": "827d31ff-7fc8-4088-8086-dde90d4efaa0",
-    "modified": "2018-02-22T07:42:20.277Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://tdn.com/news/local/transportation-company-in-washington-oregon-california-falls-for-email-scam/article_5b982b97-5338-57b8-b62f-00df2bd3b11f.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "W2 phishing scam",
-  "targeted": "Targeted",
-  "timeline": {
-    "discovery": {
-      "unit": "Months",
-      "value": 1
+    "targeted": "Targeted",
+    "discovery_method": "Unknown",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-25T21:13:45.700Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T07:42:20.277Z",
+        "master_id": "827d31ff-7fc8-4088-8086-dde90d4efaa0",
+        "analysis_status": "Validated",
+        "analyst": "Spitler",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9525"
     },
-    "incident": {
-      "day": 10,
-      "month": 3,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "11 to 100",
-    "industry": "485991",
-    "victim_id": "Paratransit Services"
-  }
+    "schema_version": "1_3_2"
 }

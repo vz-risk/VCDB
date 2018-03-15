@@ -1,116 +1,116 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Brute force"
-      ],
-      "vector": [
-        "Backdoor or C2"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "US"
-      ],
-      "motive": [
-        "Grudge"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Web application"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 80,
-          "variety": "Personal"
+    "incident_id": "0d128dc0-7615-11e7-9d88-ab89f89c69db",
+    "security_incident": "Confirmed",
+    "reference": "http://www.databreaches.net/hackers-dox-miami-police-officers-with-data-stolen-from-government-database/; https://motherboard.vice.com/en_us/article/bmvze8/hackers-dox-miami-police-officers-with-data-stolen-from-government-database",
+    "summary": "Hackers ‘Dox’ Miami Police Officers With Data Stolen From Government Database",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 80,
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - unknown",
-  "incident_id": "0d128dc0-7615-11e7-9d88-ab89f89c69db",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
+    },
+    "victim": {
+        "victim_id": "Miami Police Department",
+        "employee_count": "1001 to 10000",
+        "industry": "922120",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "FL"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Brute force"
+            ],
+            "vector": [
+                "Backdoor or C2"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Grudge"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Web application"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 80,
+            "data": [
+                {
+                    "amount": 80,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-10-25T21:21:52.451Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "usr",
-        "attribute": "cp"
-      },
-      {
-        "action": "mis",
-        "actor": "ext",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "7067",
-    "master_id": "8addfb7a-5331-48bd-bfe6-87347ac814c5",
-    "modified": "2018-02-21T11:09:47.696Z"
-  },
-  "reference": "http://www.databreaches.net/hackers-dox-miami-police-officers-with-data-stolen-from-government-database/; https://motherboard.vice.com/en_us/article/bmvze8/hackers-dox-miami-police-officers-with-data-stolen-from-government-database",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Hackers \u2018Dox\u2019 Miami Police Officers With Data Stolen From Government Database",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
+    "targeted": "Targeted",
+    "discovery_method": "Int - unknown",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-25T21:21:52.451Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp"
+            },
+            {
+                "action": "mis",
+                "actor": "ext",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T11:09:47.696Z",
+        "master_id": "8addfb7a-5331-48bd-bfe6-87347ac814c5",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "7067"
     },
-    "exfiltration": {
-      "unit": "Minutes"
-    },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "922120",
-    "locations_affected": 1,
-    "state": "FL",
-    "victim_id": "Miami Police Department"
-  }
+    "schema_version": "1_3_2"
 }

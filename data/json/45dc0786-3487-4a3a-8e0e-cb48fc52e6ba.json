@@ -1,121 +1,121 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Skimmer"
-      ],
-      "vector": [
-        "Victim grounds"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "T - Gas terminal"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Payment"
+    "incident_id": "d24d7280-6b0c-11e7-9b43-bf152d61c1c6",
+    "security_incident": "Confirmed",
+    "reference": "http://wtnh.com/2017/06/06/police-looking-for-person-who-installed-skimming-device-at-essex-gas-station/; http://www.masslive.com/news/index.ssf/2017/06/skimming_device_found_on_pump.html",
+    "summary": "Police looking for person who installed skimming device at Essex gas station",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Hardware tampering"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "d24d7280-6b0c-11e7-9b43-bf152d61c1c6",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-26T14:33:48Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "ia",
-        "summary": "Skimmer "
-      },
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "au",
-        "summary": "Loss of Credit Card Data"
-      }
-    ],
-    "github": "9592",
-    "master_id": "45dc0786-3487-4a3a-8e0e-cb48fc52e6ba",
-    "modified": "2018-02-21T12:24:42.494Z"
-  },
-  "reference": "http://wtnh.com/2017/06/06/police-looking-for-person-who-installed-skimming-device-at-essex-gas-station/; http://www.masslive.com/news/index.ssf/2017/06/skimming_device_found_on_pump.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Police looking for person who installed skimming device at Essex gas station",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Seconds"
+    "victim": {
+        "victim_id": "Mobil Mart",
+        "employee_count": "Small",
+        "industry": "447110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "CT"
     },
-    "containment": {
-      "unit": "Minutes"
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Victim grounds"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "discovery": {
-      "unit": "Unknown"
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Unknown"
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "T - Gas terminal"
+            }
+        ]
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Small",
-    "industry": "447110",
-    "locations_affected": 1,
-    "state": "CT",
-    "victim_id": "Mobil Mart"
-  }
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-26T14:33:48Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "ia",
+                "summary": "Skimmer "
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "au",
+                "summary": "Loss of Credit Card Data"
+            }
+        ],
+        "modified": "2018-02-21T12:24:42.494Z",
+        "master_id": "45dc0786-3487-4a3a-8e0e-cb48fc52e6ba",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9592"
+    },
+    "schema_version": "1_3_2"
 }

@@ -1,101 +1,101 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Web application"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "38e9cfb0-8440-11e7-9557-ff063714718d",
+    "security_incident": "Confirmed",
+    "reference": "http://globalnews.ca/news/3208546/security-experts-call-grey-eagle-casino-security-breach-a-wake-up-call/; http://globalnews.ca/news/3206136/grey-eagle-casino-employee-information-leaked-in-major-privacy-breach/",
+    "summary": "Computer security experts say confidential employee information hacked from a computer in an office at the Calgary-area casino is the tip of a much bigger problem.  Someone gained access to a computer in the human resources department and downloaded confidential letters and files with the names and personal information of over a dozen employees and then posted the documents on the Internet, Global News learned Wednesday.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "38e9cfb0-8440-11e7-9557-ff063714718d",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
+    },
+    "victim": {
+        "victim_id": "Grey Eagle Casino ",
+        "employee_count": "101 to 1000",
+        "industry": "713210",
+        "locations_affected": 1,
+        "country": [
+            "CA"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9063",
-    "master_id": "d4ab9a48-eb35-485d-ae52-2a8c76532d5b",
-    "modified": "2018-02-24T12:24:00.393Z"
-  },
-  "reference": "http://globalnews.ca/news/3208546/security-experts-call-grey-eagle-casino-security-breach-a-wake-up-call/; http://globalnews.ca/news/3206136/grey-eagle-casino-employee-information-leaked-in-major-privacy-breach/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Computer security experts say confidential employee information hacked from a computer in an office at the Calgary-area casino is the tip of a much bigger problem.  Someone gained access to a computer in the human resources department and downloaded confidential letters and files with the names and personal information of over a dozen employees and then posted the documents on the Internet, Global News learned Wednesday.",
-  "targeted": "Unknown",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "targeted": "Unknown",
+    "discovery_method": "Unknown",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:24:00.393Z",
+        "master_id": "d4ab9a48-eb35-485d-ae52-2a8c76532d5b",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9063"
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "CA"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "713210",
-    "locations_affected": 1,
-    "victim_id": "Grey Eagle Casino "
-  }
+    "schema_version": "1_3_2"
 }

@@ -1,109 +1,109 @@
 {
-  "action": {
-    "malware": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Backdoor"
-      ],
-      "vector": [
-        "Download by malware"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Web application"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1033,
-          "variety": "Payment"
+    "incident_id": "bce2bb90-6c87-11e7-8419-7d473c8dcba3",
+    "security_incident": "Confirmed",
+    "reference": "http://www.ocregister.com/2017/07/10/hackers-nab-credit-card-data-from-up-to-1000-california-realtors/",
+    "summary": "Just over 1,000 California Association of Realtors members may have been affected by a breach of the online store they use to buy everything from blank home sales contracts and disclosure forms to books, software, magnets, lapel pins and coffee mugs.  The malware attack, which occurred from March 13 through May 15, prompted CAR subsidiary Real Estate Business Services to notify the affected 1,033 members last week their personal data may have been stolen while using payment cards such as credit cards for online purchases.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 3
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 2
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1033,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Software installation"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - customer",
-  "incident_id": "bce2bb90-6c87-11e7-8419-7d473c8dcba3",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-25T21:17:16.069Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "usr",
-        "attribute": "ia"
-      }
-    ],
-    "github": "9738",
-    "master_id": "83b37678-eb3c-4d8e-a4a6-2546ae5f440b",
-    "modified": "2018-02-22T02:28:21.338Z"
-  },
-  "reference": "http://www.ocregister.com/2017/07/10/hackers-nab-credit-card-data-from-up-to-1000-california-realtors/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Just over 1,000 California Association of Realtors members may have been affected by a breach of the online store they use to buy everything from blank home sales contracts and disclosure forms to books, software, magnets, lapel pins and coffee mugs.  The malware attack, which occurred from March 13 through May 15, prompted CAR subsidiary Real Estate Business Services to notify the affected 1,033 members last week their personal data may have been stolen while using payment cards such as credit cards for online purchases.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "discovery": {
-      "unit": "Years",
-      "value": 2
+    "victim": {
+        "victim_id": "California Association of Realtors",
+        "employee_count": "101 to 1000",
+        "industry": "45",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "CA",
+        "secondary": {
+            "victim_id": [
+                " California Association of Realtors "
+            ]
+        }
     },
-    "incident": {
-      "month": 3,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "45",
-    "locations_affected": 1,
-    "secondary": {
-      "victim_id": [
-        " California Association of Realtors "
-      ]
+    "action": {
+        "malware": {
+            "variety": [
+                "Backdoor"
+            ],
+            "vector": [
+                "Download by malware"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "state": "CA",
-    "victim_id": "California Association of Realtors"
-  }
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1033,
+            "data": [
+                {
+                    "amount": 1033,
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "created": "2017-10-25T21:17:16.069Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia"
+            }
+        ],
+        "modified": "2018-02-22T02:28:21.338Z",
+        "master_id": "83b37678-eb3c-4d8e-a4a6-2546ae5f440b",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9738"
+    },
+    "schema_version": "1_3_2"
 }

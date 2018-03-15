@@ -1,104 +1,104 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Publishing error"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "System admin"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Web application"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 50,
-          "variety": "Personal"
+    "incident_id": "6b3dae90-d9d7-11e7-be42-df02fe7390b5",
+    "security_incident": "Confirmed",
+    "reference": "https://www.infosecurity-magazine.com/news/info-vulnerable-adults-victims/; https://www.sundaypost.com/fp/fury-vulnerable-witnesses-id-info-leaked-online/; http://www.ibtimes.co.uk/scottish-charity-inadvertently-leaks-sensitive-data-rape-victims-volunteers-more-online-1646349",
+    "summary": "The names, emails, phone numbers and computer addresses of around 50 people across the country were obtainable on the website of the Scottish Appropriate Adult Network (SAAN).",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 11
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 50,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Unknown",
-  "incident_id": "6b3dae90-d9d7-11e7-be42-df02fe7390b5",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Not Applicable",
-    "attack_difficulty_subsequent": "Not Applicable",
-    "created": "2017-12-05T21:28:46.274Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10407",
-    "master_id": "694e7254-c9f8-48b6-8ca5-594d6e8d76d4",
-    "modified": "2018-02-22T07:39:00.129Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "https://www.infosecurity-magazine.com/news/info-vulnerable-adults-victims/; https://www.sundaypost.com/fp/fury-vulnerable-witnesses-id-info-leaked-online/; http://www.ibtimes.co.uk/scottish-charity-inadvertently-leaks-sensitive-data-rape-victims-volunteers-more-online-1646349",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "The names, emails, phone numbers and computer addresses of around 50 people across the country were obtainable on the website of the Scottish Appropriate Adult Network (SAAN).",
-  "targeted": "NA",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
     },
-    "containment": {
-      "unit": "Unknown"
+    "victim": {
+        "victim_id": " Scottish Appropriate Adult Network ",
+        "employee_count": "Unknown",
+        "industry": "622210",
+        "locations_affected": 1,
+        "country": [
+            "GB"
+        ]
     },
-    "discovery": {
-      "unit": "Unknown"
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Unknown"
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
     },
-    "incident": {
-      "month": 11,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "GB"
-    ],
-    "employee_count": "Unknown",
-    "industry": "622210",
-    "locations_affected": 1,
-    "victim_id": " Scottish Appropriate Adult Network "
-  }
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 50,
+            "data": [
+                {
+                    "amount": 50,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Unknown",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Not Applicable",
+        "attack_difficulty_subsequent": "Not Applicable",
+        "created": "2017-12-05T21:28:46.274Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T07:39:00.129Z",
+        "master_id": "694e7254-c9f8-48b6-8ca5-594d6e8d76d4",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "github": "10407"
+    },
+    "schema_version": "1_3_2"
 }

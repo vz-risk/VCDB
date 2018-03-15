@@ -1,107 +1,107 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Misconfiguration"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "NA"
-      ],
-      "variety": [
-        "System admin"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - File"
-      }
-    ],
-    "governance": [
-      "3rd party hosted"
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 2200000,
-          "variety": "Personal"
+    "incident_id": "376ceb50-6be4-11e7-97f1-7f40b0b1fd66",
+    "security_incident": "Confirmed",
+    "reference": "https://www.infosecurity-magazine.com/news/dow-jones-leaks-personal-info/; https://www.usatoday.com/story/tech/news/2017/07/17/wall-street-journal-parent-exposes-2-2-m-customers-data-cloud-storage-leak/485604001/",
+    "summary": "The information of more than 2 million Dow Jones customers was left exposed online after the company made an error in the access preferences on a cloud storage system.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 5
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 6
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 2200000,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - other",
-  "incident_id": "376ceb50-6be4-11e7-97f1-7f40b0b1fd66",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Not Applicable",
-    "attack_difficulty_subsequent": "Not Applicable",
-    "created": "2017-10-24T06:18:24.705Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp",
-        "summary": "Wrong configurations on Cloud make personal information avaliable"
-      }
-    ],
-    "github": "9765",
-    "master_id": "432da9cf-f3c8-4943-ba14-447e22936cfc",
-    "modified": "2018-02-22T07:18:56.216Z",
-    "sub_source": "priority"
-  },
-  "reference": "https://www.infosecurity-magazine.com/news/dow-jones-leaks-personal-info/; https://www.usatoday.com/story/tech/news/2017/07/17/wall-street-journal-parent-exposes-2-2-m-customers-data-cloud-storage-leak/485604001/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "The information of more than 2 million Dow Jones customers was left exposed online after the company made an error in the access preferences on a cloud storage system.",
-  "targeted": "NA",
-  "timeline": {
-    "containment": {
-      "unit": "Days",
-      "value": 6
     },
-    "incident": {
-      "month": 5,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "523110",
-    "locations_affected": 1,
-    "secondary": {
-      "victim_id": [
-        "Dow Jones"
-      ]
+    "victim": {
+        "victim_id": "DOW Jones",
+        "employee_count": "1001 to 10000",
+        "industry": "523110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "NY",
+        "secondary": {
+            "victim_id": [
+                "Dow Jones"
+            ]
+        }
     },
-    "state": "NY",
-    "victim_id": "DOW Jones"
-  }
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - File"
+            }
+        ],
+        "governance": [
+            "3rd party hosted"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2200000,
+            "data": [
+                {
+                    "amount": 2200000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Ext - other",
+    "plus": {
+        "sub_source": "priority",
+        "attack_difficulty_initial": "Not Applicable",
+        "attack_difficulty_subsequent": "Not Applicable",
+        "created": "2017-10-24T06:18:24.705Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Wrong configurations on Cloud make personal information avaliable"
+            }
+        ],
+        "modified": "2018-02-22T07:18:56.216Z",
+        "master_id": "432da9cf-f3c8-4943-ba14-447e22936cfc",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9765"
+    },
+    "schema_version": "1_3_2"
 }

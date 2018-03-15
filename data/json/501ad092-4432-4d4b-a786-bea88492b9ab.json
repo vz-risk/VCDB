@@ -1,92 +1,92 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Publishing error"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "NA"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Web application"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "26a837d0-94a6-11e7-9340-f70be1ebf87c",
+    "security_incident": "Confirmed",
+    "reference": "http://www.zdnet.com/article/code-org-volunteer-emails-exposed-in-information-leak/; http://www.databreaches.net/non-profit-code-org-notifies-volunteers-whose-email-addresses-were-exposed/",
+    "summary": "On Friday night we discovered and fixed an error in the Code.org site that allowed access to our volunteer email addresses. This wasn’t a case of hackers breaching our security systems, rather it was our mistake of leaving volunteer email addresses accessible via the web browser.  ",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 3
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "containment": {
+            "unit": "Days"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - customer",
-  "incident_id": "26a837d0-94a6-11e7-9340-f70be1ebf87c",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-24T06:38:44.514Z",
-    "dbir_year": 2017,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "7376",
-    "master_id": "501ad092-4432-4d4b-a786-bea88492b9ab",
-    "modified": "2018-02-22T07:27:30.458Z"
-  },
-  "reference": "http://www.zdnet.com/article/code-org-volunteer-emails-exposed-in-information-leak/; http://www.databreaches.net/non-profit-code-org-notifies-volunteers-whose-email-addresses-were-exposed/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "On Friday night we discovered and fixed an error in the Code.org site that allowed access to our volunteer email addresses. This wasn\u2019t a case of hackers breaching our security systems, rather it was our mistake of leaving volunteer email addresses accessible via the web browser.  ",
-  "targeted": "NA",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "containment": {
-      "unit": "Days"
+    "victim": {
+        "victim_id": "code.org",
+        "employee_count": "11 to 100",
+        "industry": "541512",
+        "locations_affected": 1,
+        "country": [
+            "SG"
+        ]
     },
-    "incident": {
-      "month": 3,
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "SG"
-    ],
-    "employee_count": "11 to 100",
-    "industry": "541512",
-    "locations_affected": 1,
-    "victim_id": "code.org"
-  }
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "created": "2017-10-24T06:38:44.514Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T07:27:30.458Z",
+        "master_id": "501ad092-4432-4d4b-a786-bea88492b9ab",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2017,
+        "github": "7376"
+    },
+    "schema_version": "1_3_2"
 }

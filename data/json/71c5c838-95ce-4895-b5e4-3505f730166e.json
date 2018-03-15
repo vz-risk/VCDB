@@ -1,127 +1,119 @@
 {
-  "action": {
-    "misuse": {
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    },
-    "social": {
-      "result": [
-        "Infiltrate"
-      ],
-      "target": [
-        "Cashier"
-      ],
-      "variety": [
-        "Bribery"
-      ],
-      "vector": [
-        "In-person"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Acquaintance"
-      ]
-    },
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Other"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      },
-      {
-        "variety": "P - Cashier"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Bank"
+    "incident_id": "455474d0-8102-11e7-8520-b5d4bef506ca",
+    "security_incident": "Confirmed",
+    "reference": "http://wsav.com/2017/07/26/savannah-resident-convicted-for-bank-fraud-aggravated-identity-theft/",
+    "summary": "Savannah resident convicted for bank fraud, aggravated identity theft - Wells Fargo Bank",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "455474d0-8102-11e7-8520-b5d4bef506ca",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-26T06:45:24.388Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "med",
-        "attribute": "cp"
-      },
-      {
-        "action": "mis",
-        "actor": "ext",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9869",
-    "master_id": "71c5c838-95ce-4895-b5e4-3505f730166e",
-    "modified": "2018-02-22T01:52:51.833Z"
-  },
-  "reference": "http://wsav.com/2017/07/26/savannah-resident-convicted-for-bank-fraud-aggravated-identity-theft/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Savannah resident convicted for bank fraud, aggravated identity theft - Wells Fargo Bank",
-  "targeted": "Targeted",
-  "timeline": {
-    "incident": {
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "522110",
-    "locations_affected": 1,
-    "state": "GA",
-    "victim_id": "Wells Fargo"
-  }
+    "victim": {
+        "victim_id": "Wells Fargo",
+        "employee_count": "10001 to 25000",
+        "industry": "522110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "GA"
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Bribery"
+            ],
+            "vector": [
+                "In-person"
+            ],
+            "target": [
+                "Cashier"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Acquaintance"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Unknown",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-26T06:45:24.388Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp"
+            },
+            {
+                "action": "mis",
+                "actor": "ext",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T01:52:51.833Z",
+        "master_id": "71c5c838-95ce-4895-b5e4-3505f730166e",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9869"
+    },
+    "schema_version": "1_3_2"
 }

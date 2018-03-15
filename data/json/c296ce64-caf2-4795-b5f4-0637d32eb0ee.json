@@ -1,110 +1,110 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Skimmer"
-      ],
-      "vector": [
-        "Victim grounds"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "T - Gas terminal"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Payment"
+    "incident_id": "23d2fde0-8436-11e7-a921-2d695ce70b69",
+    "security_incident": "Confirmed",
+    "reference": "http://abc30.com/news/police-warning-hanford-residents-after-high-tech-skimming-device-found-at-gas-station/1703056/",
+    "summary": "POLICE WARNING HANFORD RESIDENTS AFTER HIGH-TECH SKIMMING DEVICE FOUND AT GAS STATION - Mobil",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Seconds"
+        },
+        "discovery": {
+            "unit": "Days"
+        },
+        "containment": {
+            "unit": "Seconds"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Transmitted"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Hardware tampering"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "23d2fde0-8436-11e7-a921-2d695ce70b69",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Moderate",
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9003",
-    "master_id": "c296ce64-caf2-4795-b5f4-0637d32eb0ee",
-    "modified": "2018-02-24T12:08:10.306Z"
-  },
-  "reference": "http://abc30.com/news/police-warning-hanford-residents-after-high-tech-skimming-device-found-at-gas-station/1703056/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "POLICE WARNING HANFORD RESIDENTS AFTER HIGH-TECH SKIMMING DEVICE FOUND AT GAS STATION - Mobil",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Seconds"
+    "victim": {
+        "victim_id": "Mobil",
+        "employee_count": "1 to 10",
+        "industry": "447110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "CA"
     },
-    "containment": {
-      "unit": "Seconds"
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Victim grounds"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "discovery": {
-      "unit": "Days"
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Seconds"
+    "asset": {
+        "assets": [
+            {
+                "variety": "T - Gas terminal"
+            }
+        ]
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1 to 10",
-    "industry": "447110",
-    "locations_affected": 1,
-    "state": "CA",
-    "victim_id": "Mobil"
-  }
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Transmitted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Moderate",
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:08:10.306Z",
+        "master_id": "c296ce64-caf2-4795-b5f4-0637d32eb0ee",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9003"
+    },
+    "schema_version": "1_3_2"
 }

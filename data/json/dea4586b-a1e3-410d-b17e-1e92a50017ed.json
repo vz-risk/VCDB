@@ -1,108 +1,108 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    },
-    "physical": {
-      "variety": [
-        "Theft"
-      ],
-      "vector": [
-        "Personal residence"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Fun"
-      ],
-      "variety": [
-        "Other"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      },
-      {
-        "variety": "U - Other"
-      }
-    ]
-  },
-  "attribute": {
-    "availability": {
-      "variety": [
-        "Loss"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "2e481050-8434-11e7-a921-2d695ce70b69",
+    "security_incident": "Confirmed",
+    "reference": "https://www.japantoday.com/category/crime/view/former-tokyo-ward-worker-arrested-for-stealing-personal-info-of-woman",
+    "summary": "Police in Tokyo said Wednesday they have re-arrested a former part-time employee of the Nakano Ward office on suspicion of breaking and entering, as well as violating a privacy protection ordinance.  According to police, Kenichiro Takahashi, 29, who had already been arrested for indecent assault against five women, was re-arrested for stealing the personal information of another woman from the resident registry system at the Nakano Ward office, Fuji TV reported. Police said he is refusing to discuss his actions.  Takahashi used to work in the section that manages the information of families and residents' registry from October 2014 to March 2016. During this time, he trespassed on the balcony of a third-floor apartment where a woman in her 20s lives alone. Police said he allegedly obtained her name, address and birthday from the records at the ward office.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - customer",
-  "incident_id": "2e481050-8434-11e7-a921-2d695ce70b69",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
     },
-    "created": "2017-10-25T22:42:16.938Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "int",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9007",
-    "master_id": "dea4586b-a1e3-410d-b17e-1e92a50017ed",
-    "modified": "2018-02-24T12:37:02.237Z"
-  },
-  "reference": "https://www.japantoday.com/category/crime/view/former-tokyo-ward-worker-arrested-for-stealing-personal-info-of-woman",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Police in Tokyo said Wednesday they have re-arrested a former part-time employee of the Nakano Ward office on suspicion of breaking and entering, as well as violating a privacy protection ordinance.  According to police, Kenichiro Takahashi, 29, who had already been arrested for indecent assault against five women, was re-arrested for stealing the personal information of another woman from the resident registry system at the Nakano Ward office, Fuji TV reported. Police said he is refusing to discuss his actions.  Takahashi used to work in the section that manages the information of families and residents' registry from October 2014 to March 2016. During this time, he trespassed on the balcony of a third-floor apartment where a woman in her 20s lives alone. Police said he allegedly obtained her name, address and birthday from the records at the ward office.",
-  "targeted": "Targeted",
-  "timeline": {
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "JP"
-    ],
-    "employee_count": "Small",
-    "industry": "000",
-    "victim_id": "Nakano Ward office"
-  }
+    "victim": {
+        "victim_id": "Nakano Ward office",
+        "employee_count": "Small",
+        "industry": "000",
+        "country": [
+            "JP"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "physical": {
+            "variety": [
+                "Theft"
+            ],
+            "vector": [
+                "Personal residence"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            },
+            {
+                "variety": "U - Other"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "created": "2017-10-25T22:42:16.938Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:37:02.237Z",
+        "master_id": "dea4586b-a1e3-410d-b17e-1e92a50017ed",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9007"
+    },
+    "schema_version": "1_3_2"
 }

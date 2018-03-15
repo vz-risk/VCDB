@@ -1,112 +1,112 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Theft"
-      ],
-      "vector": [
-        "Victim work area"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "M - Documents"
-      },
-      {
-        "variety": "M - Payment card"
-      }
-    ]
-  },
-  "attribute": {
-    "availability": {
-      "variety": [
-        "Loss"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "c3d5e630-9a17-11e7-9c6e-153653ac7780",
+    "security_incident": "Confirmed",
+    "reference": "http://fox5sandiego.com/2017/09/12/woman-robs-crossfit-gym-uses-banking-info-at-taco-bell-walmart/",
+    "summary": "Gym is robbed, documents stolen.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 6
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Printed"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - break in discovered",
-  "incident_id": "c3d5e630-9a17-11e7-9c6e-153653ac7780",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
     },
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "med",
-        "attribute": "au"
-      },
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10135",
-    "master_id": "88fa5b24-fc20-4786-878d-33d590dc7d5d",
-    "modified": "2018-02-22T06:54:23.948Z"
-  },
-  "reference": "http://fox5sandiego.com/2017/09/12/woman-robs-crossfit-gym-uses-banking-info-at-taco-bell-walmart/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Gym is robbed, documents stolen.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "incident": {
-      "month": 6,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1 to 10",
-    "industry": "713",
-    "locations_affected": 1,
-    "state": "CA",
-    "victim_id": "CrossFit gym "
-  }
+    "victim": {
+        "victim_id": "CrossFit gym ",
+        "employee_count": "1 to 10",
+        "industry": "713",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "CA"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Theft"
+            ],
+            "vector": [
+                "Victim work area"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "M - Documents"
+            },
+            {
+                "variety": "M - Payment card"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Printed"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - break in discovered",
+    "plus": {
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "med",
+                "attribute": "au"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T06:54:23.948Z",
+        "master_id": "88fa5b24-fc20-4786-878d-33d590dc7d5d",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10135"
+    },
+    "schema_version": "1_3_2"
 }

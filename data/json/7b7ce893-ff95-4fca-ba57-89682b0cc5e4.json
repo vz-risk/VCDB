@@ -1,116 +1,116 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "name": [
-        "The Dark Overlord"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "88185220-dc27-11e7-be42-df02fe7390b5",
+    "security_incident": "Confirmed",
+    "reference": "http://metro.co.uk/2017/10/24/hackers-have-stolen-data-from-a-cosmetic-surgery-clinic-used-by-the-rich-and-famous-7023893/; https://www.christianpost.com/news/hacker-steals-patients-sensitive-photos-and-records-from-top-london-plastic-surgery-clinic-204274/",
+    "summary": "Hackers have stolen data from a cosmetic surgery clinic used by the rich and famous - London Bridge Plastic Surgery ",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 10
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Ext - actor disclosure",
-  "incident_id": "88185220-dc27-11e7-be42-df02fe7390b5",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Unknown",
-    "attack_difficulty_subsequent": "Unknown",
+    },
+    "victim": {
+        "victim_id": "London Bridge Plastic Surgery Clinic",
+        "employee_count": "11 to 100",
+        "industry": "621112",
+        "locations_affected": 1,
+        "country": [
+            "GB"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ],
+            "name": [
+                "The Dark Overlord"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-12-08T23:38:01.592Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10356",
-    "master_id": "7b7ce893-ff95-4fca-ba57-89682b0cc5e4",
-    "modified": "2018-02-21T11:05:32.650Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://metro.co.uk/2017/10/24/hackers-have-stolen-data-from-a-cosmetic-surgery-clinic-used-by-the-rich-and-famous-7023893/; https://www.christianpost.com/news/hacker-steals-patients-sensitive-photos-and-records-from-top-london-plastic-surgery-clinic-204274/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Hackers have stolen data from a cosmetic surgery clinic used by the rich and famous - London Bridge Plastic Surgery ",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
+    "targeted": "Targeted",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Unknown",
+        "attack_difficulty_subsequent": "Unknown",
+        "created": "2017-12-08T23:38:01.592Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T11:05:32.650Z",
+        "master_id": "7b7ce893-ff95-4fca-ba57-89682b0cc5e4",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10356"
     },
-    "containment": {
-      "unit": "Unknown"
-    },
-    "discovery": {
-      "unit": "Unknown"
-    },
-    "exfiltration": {
-      "unit": "Unknown"
-    },
-    "incident": {
-      "month": 10,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "GB"
-    ],
-    "employee_count": "11 to 100",
-    "industry": "621112",
-    "locations_affected": 1,
-    "victim_id": "London Bridge Plastic Surgery Clinic"
-  }
+    "schema_version": "1_3_2"
 }

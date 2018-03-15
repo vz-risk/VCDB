@@ -1,110 +1,110 @@
 {
-  "action": {
-    "malware": {
-      "variety": [
-        "Ransomware"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "availability": {
-      "variety": [
-        "Obscuration"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Unknown"
+    "incident_id": "ebb820a0-880b-11e7-9a4a-fb58f2b09996",
+    "security_incident": "Confirmed",
+    "reference": "http://www.somdnews.com/enterprise/news/local/st-mary-s-government-s-computers-attacked-on-thanksgiving/article_29f6e7fc-2a65-593e-94da-d34ea5204c65.html",
+    "summary": "St. Mary’s County government’s servers and computers were attacked on the evening of Thanksgiving, leaving most services down over the weekend as repair work continued early this week.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 10
+        },
+        "compromise": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Software installation"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "ebb820a0-880b-11e7-9a4a-fb58f2b09996",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-24T00:01:50.229Z",
-    "dbir_year": 2017,
-    "event_chain": [
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "ia"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "au"
-      }
-    ],
-    "github": "8869",
-    "master_id": "1374e13a-4190-4761-bef6-6b208a138e2d",
-    "modified": "2018-02-22T11:33:04.749Z"
-  },
-  "reference": "http://www.somdnews.com/enterprise/news/local/st-mary-s-government-s-computers-attacked-on-thanksgiving/article_29f6e7fc-2a65-593e-94da-d34ea5204c65.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "St. Mary\u2019s County government\u2019s servers and computers were attacked on the evening of Thanksgiving, leaving most services down over the weekend as repair work continued early this week.",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "victim": {
+        "victim_id": "St Mary's Goverment",
+        "employee_count": "1 to 10",
+        "industry": "921",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ]
     },
-    "incident": {
-      "month": 10,
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1 to 10",
-    "industry": "921",
-    "locations_affected": 1,
-    "victim_id": "St Mary's Goverment"
-  }
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Unknown"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-24T00:01:50.229Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2018-02-22T11:33:04.749Z",
+        "master_id": "1374e13a-4190-4761-bef6-6b208a138e2d",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2017,
+        "github": "8869"
+    },
+    "schema_version": "1_3_2"
 }

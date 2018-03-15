@@ -1,143 +1,135 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    },
-    "social": {
-      "result": [
-        "Infiltrate"
-      ],
-      "target": [
-        "Unknown"
-      ],
-      "variety": [
-        "Bribery"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "CN"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    },
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    },
-    "partner": {
-      "country": [
-        "CN"
-      ],
-      "industry": "000",
-      "motive": [
-        "Financial"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "M - Documents"
-      },
-      {
-        "variety": "P - Unknown"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "b7e4efe0-8425-11e7-a921-2d695ce70b69",
+    "security_incident": "Confirmed",
+    "reference": "http://chinaplus.cri.cn/news/china/9/20170603/5729.html",
+    "summary": "Three stand trial for job seeker private data breach - Zhaopin.com",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 3
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 5
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "b7e4efe0-8425-11e7-a921-2d695ce70b69",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-24T06:09:14.493Z",
-    "dbir_year": 2017,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9580",
-    "master_id": "3acbbd49-b696-4359-aaa3-f3dfe1244bb5",
-    "modified": "2018-02-21T07:29:06.492Z"
-  },
-  "reference": "http://chinaplus.cri.cn/news/china/9/20170603/5729.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Three stand trial for job seeker private data breach - Zhaopin.com",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "victim": {
+        "victim_id": " Zhaopin.com ",
+        "employee_count": "Small",
+        "industry": "541",
+        "locations_affected": 1,
+        "country": [
+            "CN"
+        ]
     },
-    "discovery": {
-      "unit": "Months",
-      "value": 5
+    "action": {
+        "social": {
+            "variety": [
+                "Bribery"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "target": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Minutes"
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "CN"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        },
+        "partner": {
+            "motive": [
+                "Financial"
+            ],
+            "industry": "000",
+            "country": [
+                "CN"
+            ]
+        }
     },
-    "incident": {
-      "month": 3,
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "CN"
-    ],
-    "employee_count": "Small",
-    "industry": "541",
-    "locations_affected": 1,
-    "victim_id": " Zhaopin.com "
-  }
+    "asset": {
+        "assets": [
+            {
+                "variety": "M - Documents"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-24T06:09:14.493Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T07:29:06.492Z",
+        "master_id": "3acbbd49-b696-4359-aaa3-f3dfe1244bb5",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2017,
+        "github": "9580"
+    },
+    "schema_version": "1_3_2"
 }

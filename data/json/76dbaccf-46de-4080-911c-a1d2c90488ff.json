@@ -1,99 +1,99 @@
 {
-  "action": {
-    "unknown": {
-      "result": [
-        "Infiltrate"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 230,
-          "variety": "Bank"
+    "incident_id": "57cd5f30-899c-11e7-bf1d-81579668407a",
+    "security_incident": "Confirmed",
+    "reference": "http://wspa.com/2016/09/16/some-employees-not-paid-after-data-breach-in-oconee-co/; https://www.databreaches.net/sc-data-breach-in-oconee-co-causes-employee-pay-issues/",
+    "summary": "230 Oconee County employees did not get money deposited into their bank accounts after a data breach involving the payroll service the county uses.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 9
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Days"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Fraudulent transaction"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "57cd5f30-899c-11e7-bf1d-81579668407a",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-25T20:58:07.595Z",
-    "dbir_year": 2017,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "8455",
-    "master_id": "76dbaccf-46de-4080-911c-a1d2c90488ff",
-    "modified": "2018-02-22T01:55:34.800Z"
-  },
-  "reference": "http://wspa.com/2016/09/16/some-employees-not-paid-after-data-breach-in-oconee-co/; https://www.databreaches.net/sc-data-breach-in-oconee-co-causes-employee-pay-issues/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "230 Oconee County employees did not get money deposited into their bank accounts after a data breach involving the payroll service the county uses.",
-  "targeted": "Unknown",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "victim": {
+        "victim_id": "Oconee County",
+        "employee_count": "101 to 1000",
+        "industry": "921",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "SC"
     },
-    "discovery": {
-      "unit": "Days"
+    "action": {
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ]
+        }
     },
-    "incident": {
-      "month": 9,
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "921",
-    "locations_affected": 1,
-    "state": "SC",
-    "victim_id": "Oconee County"
-  }
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "amount": 230,
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "created": "2017-10-25T20:58:07.595Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T01:55:34.800Z",
+        "master_id": "76dbaccf-46de-4080-911c-a1d2c90488ff",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2017,
+        "github": "8455"
+    },
+    "schema_version": "1_3_2"
 }

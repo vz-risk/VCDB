@@ -1,113 +1,113 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "US"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Acquaintance"
-      ]
-    },
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 71,
-          "variety": "Payment"
+    "incident_id": "71fab7e0-7605-11e7-9d88-ab89f89c69db",
+    "security_incident": "Confirmed",
+    "reference": "http://www.nj.com/middlesex/index.ssf/2017/02/couple_sentenced_for_stealing_identities_of_71_men.html",
+    "summary": "Couple sentenced for stealing identities of 71 mental health patients",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 2
+        },
+        "compromise": {
+            "unit": "NA"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 71,
-      "data_victim": [
-        "Partner"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - fraud detection",
-  "incident_id": "71fab7e0-7605-11e7-9d88-ab89f89c69db",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Very Low",
-    "attack_difficulty_subsequent": "Very Low",
+    },
+    "victim": {
+        "employee_count": "Unknown",
+        "industry": "541",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "NJ"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Acquaintance"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "US"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 71,
+            "data": [
+                {
+                    "variety": "Payment",
+                    "amount": 71
+                }
+            ],
+            "data_victim": [
+                "Partner"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-10-24T06:24:31.751Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9285",
-    "master_id": "46f85a5e-9885-46e6-a289-bd378af827ad",
-    "modified": "2018-02-22T01:26:57.538Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.nj.com/middlesex/index.ssf/2017/02/couple_sentenced_for_stealing_identities_of_71_men.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Couple sentenced for stealing identities of 71 mental health patients",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "compromise": {
-      "unit": "NA"
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - fraud detection",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Very Low",
+        "attack_difficulty_subsequent": "Very Low",
+        "created": "2017-10-24T06:24:31.751Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T01:26:57.538Z",
+        "master_id": "46f85a5e-9885-46e6-a289-bd378af827ad",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9285"
     },
-    "incident": {
-      "month": 2,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Unknown",
-    "industry": "541",
-    "locations_affected": 1,
-    "state": "NJ"
-  }
+    "schema_version": "1_3_2"
 }

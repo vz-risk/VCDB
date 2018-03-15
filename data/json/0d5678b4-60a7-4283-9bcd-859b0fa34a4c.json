@@ -1,106 +1,106 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "End-user"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "Unknown"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 267,
-          "variety": "Personal"
+    "incident_id": "94aef4f0-6beb-11e7-97f1-7f40b0b1fd66",
+    "security_incident": "Confirmed",
+    "reference": "https://www.usnews.com/news/best-states/alabama/articles/2017-03-02/police-verizon-employees-used-stolen-info-to-buy-phones; http://www.tuscaloosanews.com/news/20170301/3-women-charged-with-trafficking-stolen-identities",
+    "summary": "Verizon Employees Used Stolen Info from car dealership to Buy Phones",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 3
+        },
+        "compromise": {
+            "unit": "NA"
+        },
+        "exfiltration": {
+            "unit": "NA"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 3
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 267,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Unknown"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - other",
-  "incident_id": "94aef4f0-6beb-11e7-97f1-7f40b0b1fd66",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
+    },
+    "victim": {
+        "victim_id": "Locklear Dodge",
+        "employee_count": "Small",
+        "industry": "4411",
+        "country": [
+            "US"
+        ],
+        "state": "AL"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "Unknown"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 267,
+            "data": [
+                {
+                    "amount": 267,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Unknown"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:48Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "ext",
-        "attribute": "cp",
-        "summary": "Misuse of customer information "
-      }
-    ],
-    "github": "9333",
-    "master_id": "0d5678b4-60a7-4283-9bcd-859b0fa34a4c",
-    "modified": "2018-02-21T05:40:39.115Z"
-  },
-  "reference": "https://www.usnews.com/news/best-states/alabama/articles/2017-03-02/police-verizon-employees-used-stolen-info-to-buy-phones; http://www.tuscaloosanews.com/news/20170301/3-women-charged-with-trafficking-stolen-identities",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Verizon Employees Used Stolen Info from car dealership to Buy Phones",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "compromise": {
-      "unit": "NA"
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - other",
+    "plus": {
+        "created": "2017-10-26T14:33:48Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "ext",
+                "attribute": "cp",
+                "summary": "Misuse of customer information "
+            }
+        ],
+        "modified": "2018-02-21T05:40:39.115Z",
+        "master_id": "0d5678b4-60a7-4283-9bcd-859b0fa34a4c",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9333"
     },
-    "discovery": {
-      "unit": "Months",
-      "value": 3
-    },
-    "exfiltration": {
-      "unit": "NA"
-    },
-    "incident": {
-      "month": 3,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Small",
-    "industry": "4411",
-    "state": "AL",
-    "victim_id": "Locklear Dodge"
-  }
+    "schema_version": "1_3_2"
 }

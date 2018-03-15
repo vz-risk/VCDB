@@ -1,103 +1,103 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Exfiltrate",
-        "Infiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Web application"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "US"
-      ],
-      "motive": [
-        "Fun"
-      ],
-      "variety": [
-        "Other"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "16be08e0-81eb-11e7-ace7-c5c15a923e51",
+    "security_incident": "Confirmed",
+    "reference": "http://www.theage.com.au/victoria/camberwell-high-school-becomes-second-target-of-major-privacy-breach-in-two-weeks-20170529-gwf92s.html",
+    "summary": "Camberwell High School becomes second target of major privacy breach in two weeks",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 5
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Student"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - customer",
-  "incident_id": "16be08e0-81eb-11e7-ace7-c5c15a923e51",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-25T18:04:12.299Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9539",
-    "master_id": "61ea6c7f-f9cd-4644-9c70-7acf7fe56fc0",
-    "modified": "2018-02-22T01:42:03.006Z"
-  },
-  "reference": "http://www.theage.com.au/victoria/camberwell-high-school-becomes-second-target-of-major-privacy-breach-in-two-weeks-20170529-gwf92s.html",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Camberwell High School becomes second target of major privacy breach in two weeks",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "discovery": {
-      "unit": "Hours"
+    "victim": {
+        "victim_id": "Camberwell High School",
+        "employee_count": "Small",
+        "industry": "611110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "FL"
     },
-    "incident": {
-      "month": 5,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Small",
-    "industry": "611110",
-    "locations_affected": 1,
-    "state": "FL",
-    "victim_id": "Camberwell High School"
-  }
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Fun"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Student"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-25T18:04:12.299Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T01:42:03.006Z",
+        "master_id": "61ea6c7f-f9cd-4644-9c70-7acf7fe56fc0",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9539"
+    },
+    "schema_version": "1_3_2"
 }

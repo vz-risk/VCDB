@@ -1,94 +1,94 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "End-user"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "48e39c50-72db-11e7-ace1-3bcdf5dc8d5d",
+    "security_incident": "Confirmed",
+    "reference": "http://viconsortium.com/featured/officer-now-fired-allegedly-shared-identifying-information-of-people-who-filed-police-reports/",
+    "summary": "OFFICER, NOW FIRED, ALLEGEDLY SHARED IDENTIFYING INFORMATION OF PEOPLE WHO FILED POLICE REPORTS - US Virgin Islands Police Department",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 7
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "48e39c50-72db-11e7-ace1-3bcdf5dc8d5d",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
     },
-    "created": "2017-10-25T21:36:49.415Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9768",
-    "master_id": "9b184a76-7c0d-486d-8eb8-5723e165a16b",
-    "modified": "2018-02-21T11:18:17.629Z"
-  },
-  "reference": "http://viconsortium.com/featured/officer-now-fired-allegedly-shared-identifying-information-of-people-who-filed-police-reports/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "OFFICER, NOW FIRED, ALLEGEDLY SHARED IDENTIFYING INFORMATION OF PEOPLE WHO FILED POLICE REPORTS - US Virgin Islands Police Department",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "incident": {
-      "month": 7,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "VI"
-    ],
-    "employee_count": "Small",
-    "industry": "922120",
-    "locations_affected": 1,
-    "victim_id": "Virgin Island Police Department"
-  }
+    "victim": {
+        "victim_id": "Virgin Island Police Department",
+        "employee_count": "Small",
+        "industry": "922120",
+        "locations_affected": 1,
+        "country": [
+            "VI"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Unknown",
+    "plus": {
+        "created": "2017-10-25T21:36:49.415Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T11:18:17.629Z",
+        "master_id": "9b184a76-7c0d-486d-8eb8-5723e165a16b",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9768"
+    },
+    "schema_version": "1_3_2"
 }

@@ -1,103 +1,103 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 106000,
-          "variety": "Medical"
+    "incident_id": "25556460-8cd7-11e7-811e-83915e56fc98",
+    "security_incident": "Suspected",
+    "reference": "http://www.wilx.com/content/news/Data-breach-at-Mid-Michigan-Physicians-Practice-441746563.html; http://www.lansingstatejournal.com/story/news/local/2017/08/25/lansing-data-breach-mid-michigan-physicians/602183001/",
+    "summary": "McLaren Medical Group, which manages the Mid-Michigan Physicians clinic, said it was notified in March that a Radiology Center computer system was compromised. Letters were mailed to patients on Thursday.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 4
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 106000,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "25556460-8cd7-11e7-811e-83915e56fc98",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "created": "2017-10-25T22:26:42.601Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10029",
-    "master_id": "c88ca4c6-ac2d-4789-9a26-dff5433ab1ab",
-    "modified": "2018-02-24T12:06:12.270Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.wilx.com/content/news/Data-breach-at-Mid-Michigan-Physicians-Practice-441746563.html; http://www.lansingstatejournal.com/story/news/local/2017/08/25/lansing-data-breach-mid-michigan-physicians/602183001/",
-  "schema_version": "1_3_2",
-  "security_incident": "Suspected",
-  "source_id": "vcdb",
-  "summary": "McLaren Medical Group, which manages the Mid-Michigan Physicians clinic, said it was notified in March that a Radiology Center computer system was compromised. Letters were mailed to patients on Thursday.",
-  "targeted": "Unknown",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "discovery": {
-      "unit": "Months",
-      "value": 4
+    "victim": {
+        "victim_id": "Mid-Michigan Physicians; McLaren Medical Group",
+        "employee_count": "11 to 100",
+        "industry": "621",
+        "country": [
+            "US"
+        ],
+        "state": "IL"
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "11 to 100",
-    "industry": "621",
-    "state": "IL",
-    "victim_id": "Mid-Michigan Physicians; McLaren Medical Group"
-  }
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 106000,
+            "data": [
+                {
+                    "amount": 106000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": "Unknown",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-25T22:26:42.601Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:06:12.270Z",
+        "master_id": "c88ca4c6-ac2d-4789-9a26-dff5433ab1ab",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "10029"
+    },
+    "schema_version": "1_3_2"
 }

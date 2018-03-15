@@ -1,98 +1,98 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Database"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "01a87160-9c81-11e7-8eb8-67f320c42447",
+    "security_incident": "Confirmed",
+    "reference": "https://www.insurancetimes.co.uk/police-probe-after-aviva-claims-details-stolen-by-staff/1407060.article",
+    "summary": "Police probe after Aviva claims details stolen by staff",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2013,
+            "month": 2
         },
-        {
-          "variety": "Internal"
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - unknown",
-  "incident_id": "01a87160-9c81-11e7-8eb8-67f320c42447",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2014,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10136",
-    "master_id": "7a962e55-c966-451e-beec-e597dd71319f",
-    "modified": "2018-02-21T11:01:45.555Z"
-  },
-  "reference": "https://www.insurancetimes.co.uk/police-probe-after-aviva-claims-details-stolen-by-staff/1407060.article",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Police probe after Aviva claims details stolen by staff",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "containment": {
-      "unit": "Unknown"
     },
-    "incident": {
-      "month": 2,
-      "year": 2013
-    }
-  },
-  "victim": {
-    "country": [
-      "GB"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "524128",
-    "locations_affected": 1,
-    "notes": "The city and country is London, England",
-    "victim_id": "Aviva"
-  }
+    "victim": {
+        "victim_id": "Aviva",
+        "employee_count": "10001 to 25000",
+        "industry": "524128",
+        "locations_affected": 1,
+        "country": [
+            "GB"
+        ],
+        "notes": "The city and country is London, England"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - unknown",
+    "plus": {
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T11:01:45.555Z",
+        "master_id": "7a962e55-c966-451e-beec-e597dd71319f",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2014,
+        "github": "10136"
+    },
+    "schema_version": "1_3_2"
 }

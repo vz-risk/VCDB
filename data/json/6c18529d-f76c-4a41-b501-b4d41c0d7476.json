@@ -1,128 +1,128 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Skimmer"
-      ],
-      "vector": [
-        "Victim public area"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "T - PED pad"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Payment"
+    "incident_id": "7dc8dc10-6b0a-11e7-9b43-bf152d61c1c6",
+    "security_incident": "Confirmed",
+    "reference": "http://www.fox29.com/news/local-news/260874994-story",
+    "summary": "Skimming device suspected at self-checkout line in grocery store - Giant Food Store",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 6
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 1
+        },
+        "containment": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Hardware tampering"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - customer",
-  "incident_id": "7dc8dc10-6b0a-11e7-9b43-bf152d61c1c6",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "ia",
-        "summary": "Installation of Skimmer"
-      },
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "ter",
-        "attribute": "cp",
-        "summary": "Collection of Payment Card Data"
-      }
-    ],
-    "github": "9627",
-    "master_id": "6c18529d-f76c-4a41-b501-b4d41c0d7476",
-    "modified": "2018-02-21T10:47:37.028Z"
-  },
-  "reference": "http://www.fox29.com/news/local-news/260874994-story",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Skimming device suspected at self-checkout line in grocery store - Giant Food Store",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Seconds"
+    "victim": {
+        "victim_id": "Giant Food Stores",
+        "employee_count": "10001 to 25000",
+        "industry": "445110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "PA",
+        "secondary": {
+            "victim_id": [
+                "Giant Food Stores"
+            ]
+        }
     },
-    "containment": {
-      "unit": "Minutes"
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Victim public area"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "discovery": {
-      "unit": "Weeks",
-      "value": 1
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Minutes"
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "T - PED pad"
+            }
+        ]
     },
-    "incident": {
-      "month": 6,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "445110",
-    "locations_affected": 1,
-    "secondary": {
-      "victim_id": [
-        "Giant Food Stores"
-      ]
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
     },
-    "state": "PA",
-    "victim_id": "Giant Food Stores"
-  }
+    "targeted": "Targeted",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "ia",
+                "summary": "Installation of Skimmer"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp",
+                "summary": "Collection of Payment Card Data"
+            }
+        ],
+        "modified": "2018-02-21T10:47:37.028Z",
+        "master_id": "6c18529d-f76c-4a41-b501-b4d41c0d7476",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9627"
+    },
+    "schema_version": "1_3_2"
 }

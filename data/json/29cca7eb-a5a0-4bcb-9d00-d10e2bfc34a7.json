@@ -1,124 +1,124 @@
 {
-  "action": {
-    "malware": {
-      "name": "Bitpaymer ransomware",
-      "result": [
-        "Infiltrate",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Ransomware"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "availability": {
-      "variety": [
-        "Obscuration"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Medical"
+    "incident_id": "e2008570-995e-11e7-a069-d9175a67bd3e",
+    "security_incident": "Confirmed",
+    "reference": "https://www.theregister.co.uk/2017/08/30/lanarkshire_nhs_infection_named_as_bitpaymer_variant/; https://stv.tv/news/west-central/1396611-cyber-attack-which-hit-nhs-board-was-ransomware/; https://www.theregister.co.uk/2017/08/30/lanarkshire_nhs_infection_named_as_bitpaymer_variant/",
+    "summary": "NHS Lanarkshire hit by cyber attack cancels operations and asks patients not to come to hospital 'unless it is essential' ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        },
+        "compromise": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Potentially",
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Software installation"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "e2008570-995e-11e7-a069-d9175a67bd3e",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
+    "victim": {
+        "victim_id": "NHS Lanarkshire",
+        "employee_count": "Large",
+        "industry": "621",
+        "locations_affected": 1,
+        "country": [
+            "GB"
+        ]
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ],
+            "name": "Bitpaymer ransomware"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data": [
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:48Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "ia"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "au"
-      }
-    ],
-    "github": "10040",
-    "master_id": "29cca7eb-a5a0-4bcb-9d00-d10e2bfc34a7",
-    "modified": "2018-02-21T12:20:35.899Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "https://www.theregister.co.uk/2017/08/30/lanarkshire_nhs_infection_named_as_bitpaymer_variant/; https://stv.tv/news/west-central/1396611-cyber-attack-which-hit-nhs-board-was-ransomware/; https://www.theregister.co.uk/2017/08/30/lanarkshire_nhs_infection_named_as_bitpaymer_variant/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "NHS Lanarkshire hit by cyber attack cancels operations and asks patients not to come to hospital 'unless it is essential' ",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2017-10-26T14:33:48Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2018-02-21T12:20:35.899Z",
+        "master_id": "29cca7eb-a5a0-4bcb-9d00-d10e2bfc34a7",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10040"
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "GB"
-    ],
-    "employee_count": "Large",
-    "industry": "621",
-    "locations_affected": 1,
-    "victim_id": "NHS Lanarkshire"
-  }
+    "schema_version": "1_3_2"
 }

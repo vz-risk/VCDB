@@ -1,101 +1,101 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Misconfiguration"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Fun"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Web application"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1000000,
-          "variety": "Personal"
+    "incident_id": "bfd27100-899d-11e7-bf1d-81579668407a",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/waterly-app-potentially-exposed-up-to-1-million-israelis-details-researcher/",
+    "summary": "Waterly app potentially exposed up to 1 million Israelis’ details- researcher",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 1
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "containment": {
+            "unit": "Days"
         }
-      ],
-      "data_disclosure": "Potentially",
-      "data_total": 1000000,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - unrelated 3rd party",
-  "incident_id": "bfd27100-899d-11e7-bf1d-81579668407a",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "created": "2017-10-25T22:13:13.388Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "8972",
-    "master_id": "b8dc77fa-ab44-48e4-b3a9-caa300a1f8ae",
-    "modified": "2018-02-24T05:27:06.553Z"
-  },
-  "reference": "https://www.databreaches.net/waterly-app-potentially-exposed-up-to-1-million-israelis-details-researcher/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Waterly app potentially exposed up to 1 million Israelis\u2019 details- researcher",
-  "targeted": "NA",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "containment": {
-      "unit": "Days"
+    "victim": {
+        "victim_id": "M.G.A.R. Ltd",
+        "employee_count": "Small",
+        "industry": "541",
+        "locations_affected": 1,
+        "country": [
+            "IL"
+        ]
     },
-    "exfiltration": {
-      "unit": "Minutes"
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
     },
-    "incident": {
-      "month": 1,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "IL"
-    ],
-    "employee_count": "Small",
-    "industry": "541",
-    "locations_affected": 1,
-    "victim_id": "M.G.A.R. Ltd"
-  }
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Fun"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 1000000,
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 1000000
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Ext - unrelated 3rd party",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-25T22:13:13.388Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T05:27:06.553Z",
+        "master_id": "b8dc77fa-ab44-48e4-b3a9-caa300a1f8ae",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "8972"
+    },
+    "schema_version": "1_3_2"
 }

@@ -1,148 +1,140 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Illicit content",
-        "Privilege abuse",
-        "Knowledge abuse"
-      ],
-      "vector": [
-        "Physical access"
-      ]
-    },
-    "social": {
-      "result": [
-        "Infiltrate"
-      ],
-      "target": [
-        "Unknown"
-      ],
-      "variety": [
-        "Bribery"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "job_change": [
-        "Other"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Human resources"
-      ]
-    },
-    "partner": {
-      "country": [
-        "IN"
-      ],
-      "industry": "000",
-      "motive": [
-        "Financial"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "Unknown"
-      },
-      {
-        "variety": "P - Unknown"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Internal"
+    "incident_id": "8eb1d360-a2d2-11e7-a67b-81fbdaca3f85",
+    "security_incident": "Confirmed",
+    "reference": "http://economictimes.indiatimes.com/news/politics-and-nation/cbi-books-army-medical-corps-mci-officials-for-leaking-information/articleshow/60730506.cms",
+    "summary": "CBI books Army Medical Corps, MCI officials for leaking information",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 9
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Unknown"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "Medium",
-  "discovery_method": "Unknown",
-  "impact": {
-    "loss": [
-      {
-        "rating": "Unknown",
-        "variety": "Legal and regulatory"
-      }
-    ],
-    "overall_rating": "Unknown"
-  },
-  "incident_id": "8eb1d360-a2d2-11e7-a67b-81fbdaca3f85",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "cdander",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-24T06:31:25.537Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "attribute": "cp",
-        "summary": "CBI books Army Medical Corps, MCI officials for leaking information   "
-      }
-    ],
-    "github": "10166",
-    "master_id": "4ada0459-0e19-4417-8ea3-b18433dd81e3",
-    "modified": "2018-02-21T07:41:27.044Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://economictimes.indiatimes.com/news/politics-and-nation/cbi-books-army-medical-corps-mci-officials-for-leaking-information/articleshow/60730506.cms",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "CBI books Army Medical Corps, MCI officials for leaking information",
-  "timeline": {
-    "compromise": {
-      "unit": "Unknown"
+    "victim": {
+        "victim_id": "Medical Council of India (MCI) ",
+        "employee_count": "Unknown",
+        "industry": "611310",
+        "locations_affected": 1,
+        "country": [
+            "IN"
+        ]
     },
-    "containment": {
-      "unit": "Unknown"
+    "action": {
+        "social": {
+            "variety": [
+                "Bribery"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "target": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Illicit content",
+                "Privilege abuse",
+                "Knowledge abuse"
+            ],
+            "vector": [
+                "Physical access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
     },
-    "discovery": {
-      "unit": "Unknown"
+    "actor": {
+        "internal": {
+            "variety": [
+                "Human resources"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "job_change": [
+                "Other"
+            ]
+        },
+        "partner": {
+            "motive": [
+                "Financial"
+            ],
+            "industry": "000",
+            "country": [
+                "IN"
+            ]
+        }
     },
-    "exfiltration": {
-      "unit": "Unknown"
+    "asset": {
+        "assets": [
+            {
+                "variety": "Unknown"
+            }
+        ]
     },
-    "incident": {
-      "month": 9,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "IN"
-    ],
-    "employee_count": "Unknown",
-    "industry": "611310",
-    "locations_affected": 1,
-    "victim_id": "Medical Council of India (MCI) "
-  }
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Unknown"
+            ]
+        }
+    },
+    "discovery_method": "Unknown",
+    "impact": {
+        "overall_rating": "Unknown",
+        "loss": [
+            {
+                "rating": "Unknown",
+                "variety": "Legal and regulatory"
+            }
+        ]
+    },
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-24T06:31:25.537Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "CBI books Army Medical Corps, MCI officials for leaking information   "
+            }
+        ],
+        "modified": "2018-02-21T07:41:27.044Z",
+        "master_id": "4ada0459-0e19-4417-8ea3-b18433dd81e3",
+        "analysis_status": "Validated",
+        "analyst": "cdander",
+        "dbir_year": 2018,
+        "github": "10166"
+    },
+    "schema_version": "1_3_2"
 }

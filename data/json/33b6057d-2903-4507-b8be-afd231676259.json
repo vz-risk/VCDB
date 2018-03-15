@@ -1,109 +1,109 @@
 {
-  "action": {
-    "hacking": {
-      "variety": [
-        "Unknown"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    },
-    "malware": {
-      "variety": [
-        "Ram scraper"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "US"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 100,
-        "variety": "S - POS controller"
-      },
-      {
-        "amount": 100,
-        "variety": "U - POS terminal"
-      }
-    ],
-    "total_amount": 200
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 355000,
-          "variety": "Payment"
+    "incident_id": "3d80f3e0-0b5f-11e8-985b-1119ad21cbad",
+    "security_incident": "Confirmed",
+    "reference": "https://krebsonsecurity.com/2017/02/fast-food-chain-arbys-acknowledges-breach/",
+    "summary": "POS breach",
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 10,
+            "day": 25
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 2
+        },
+        "containment": {
+            "unit": "Months",
+            "value": 4
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 355000,
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Processed"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Software installation"
-      ]
-    }
-  },
-  "discovery_method": "Ext - fraud detection",
-  "incident_id": "3d80f3e0-0b5f-11e8-985b-1119ad21cbad",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Spitler",
-    "created": "2018-02-06T22:05:53.708Z",
-    "dbir_year": 2018,
-    "github": "9150",
-    "master_id": "33b6057d-2903-4507-b8be-afd231676259",
-    "modified": "2018-02-06T22:06:28.200Z"
-  },
-  "reference": "https://krebsonsecurity.com/2017/02/fast-food-chain-arbys-acknowledges-breach/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "POS breach",
-  "targeted": "Unknown",
-  "timeline": {
-    "containment": {
-      "unit": "Months",
-      "value": 4
+    "victim": {
+        "victim_id": "Arby's",
+        "employee_count": "Large",
+        "industry": "722",
+        "country": [
+            "US"
+        ]
     },
-    "discovery": {
-      "unit": "Months",
-      "value": 2
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ram scraper"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
     },
-    "incident": {
-      "day": 25,
-      "month": 10,
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Large",
-    "industry": "722",
-    "victim_id": "Arby's"
-  }
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 200,
+        "assets": [
+            {
+                "variety": "S - POS controller",
+                "amount": 100
+            },
+            {
+                "variety": "U - POS terminal",
+                "amount": 100
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 355000,
+            "data": [
+                {
+                    "amount": 355000,
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": "Ext - fraud detection",
+    "plus": {
+        "created": "2018-02-06T22:05:53.708Z",
+        "modified": "2018-02-06T22:06:28.200Z",
+        "master_id": "33b6057d-2903-4507-b8be-afd231676259",
+        "analysis_status": "Validated",
+        "analyst": "Spitler",
+        "dbir_year": 2018,
+        "github": "9150"
+    },
+    "schema_version": "1_3_2"
 }

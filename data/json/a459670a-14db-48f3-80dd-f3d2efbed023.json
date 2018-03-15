@@ -1,124 +1,121 @@
 {
-  "action": {
-    "social": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "target": [
-        "Unknown"
-      ],
-      "variety": [
-        "Phishing"
-      ],
-      "vector": [
-        "Email"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "P - Human resources"
-      },
-      {
-        "variety": "U - Desktop"
-      },
-      {
-        "variety": "P - Unknown"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "variety": "Personal"
+    "incident_id": "a123d630-842b-11e7-a921-2d695ce70b69",
+    "security_incident": "Confirmed",
+    "reference": "http://kcur.org/post/social-security-numbers-stolen-all-independence-school-employees#stream/0",
+    "summary": "The school district employees were alerted to the scam in an email sent last Thursday.  In it, the business office says “the names, social security numbers, addresses and earnings” of every employee was stolen in a phishing scam, where the crooks use fake emails or websites to steal personal information.  The information was used to file fraudulent income tax returns, according to the email.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 1
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 2
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_victim": [
-        "Employee"
-      ],
-      "state": [
-        "Stored"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "a123d630-842b-11e7-a921-2d695ce70b69",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
+    "victim": {
+        "victim_id": "Independence School District",
+        "employee_count": "1001 to 10000",
+        "industry": "611110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "MO"
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - Human resources"
+            },
+            {
+                "variety": "U - Desktop"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:49Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "soc",
-        "actor": "ext",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9291",
-    "master_id": "a459670a-14db-48f3-80dd-f3d2efbed023",
-    "modified": "2018-02-22T12:42:24.353Z"
-  },
-  "reference": "http://kcur.org/post/social-security-numbers-stolen-all-independence-school-employees#stream/0",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "The school district employees were alerted to the scam in an email sent last Thursday.  In it, the business office says \u201cthe names, social security numbers, addresses and earnings\u201d of every employee was stolen in a phishing scam, where the crooks use fake emails or websites to steal personal information.  The information was used to file fraudulent income tax returns, according to the email.",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-26T14:33:49Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T12:42:24.353Z",
+        "master_id": "a459670a-14db-48f3-80dd-f3d2efbed023",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9291"
     },
-    "discovery": {
-      "unit": "Weeks",
-      "value": 2
-    },
-    "exfiltration": {
-      "unit": "Minutes"
-    },
-    "incident": {
-      "month": 1,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "611110",
-    "locations_affected": 1,
-    "state": "MO",
-    "victim_id": "Independence School District"
-  }
+    "schema_version": "1_3_2"
 }

@@ -1,110 +1,110 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate",
-        "Infiltrate"
-      ],
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Grudge",
-        "Fun"
-      ],
-      "variety": [
-        "Other"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1,
-          "variety": "Medical"
+    "incident_id": "e72784c0-89a7-11e7-bf1d-81579668407a",
+    "security_incident": "Confirmed",
+    "reference": "http://wvrecord.com/stories/511092664-woman-accuses-camc-associated-radiologists-of-breach-of-privacy",
+    "summary": "A Kanawha County woman is suing Charleston Area Medical Center after she claims someone accessed her personal medical records and shared the information with others.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 2
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Weeks"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - customer",
-  "incident_id": "e72784c0-89a7-11e7-bf1d-81579668407a",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
+    },
+    "victim": {
+        "victim_id": "Charleston Area Medical Center",
+        "employee_count": "1001 to 10000",
+        "industry": "621111",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "WV",
+        "secondary": {
+            "victim_id": [
+                "CAMC Women’s and Children’s Hospital"
+            ]
+        }
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Grudge",
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1,
+            "data": [
+                {
+                    "variety": "Medical",
+                    "amount": 1
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
     },
-    "created": "2017-10-25T21:32:29.569Z",
-    "dbir_year": 2017,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9367",
-    "master_id": "978d6fbf-5bd6-4e34-8370-bd91a6a06b25",
-    "modified": "2018-02-22T11:31:37.595Z"
-  },
-  "reference": "http://wvrecord.com/stories/511092664-woman-accuses-camc-associated-radiologists-of-breach-of-privacy",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "A Kanawha County woman is suing Charleston Area Medical Center after she claims someone accessed her personal medical records and shared the information with others.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "discovery": {
-      "unit": "Weeks"
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "created": "2017-10-25T21:32:29.569Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-22T11:31:37.595Z",
+        "master_id": "978d6fbf-5bd6-4e34-8370-bd91a6a06b25",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2017,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9367"
     },
-    "exfiltration": {
-      "unit": "Minutes"
-    },
-    "incident": {
-      "month": 2,
-      "year": 2016
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "1001 to 10000",
-    "industry": "621111",
-    "locations_affected": 1,
-    "secondary": {
-      "victim_id": [
-        "CAMC Women\u2019s and Children\u2019s Hospital"
-      ]
-    },
-    "state": "WV",
-    "victim_id": "Charleston Area Medical Center"
-  }
+    "schema_version": "1_3_2"
 }

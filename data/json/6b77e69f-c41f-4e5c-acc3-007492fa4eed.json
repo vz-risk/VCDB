@@ -1,113 +1,113 @@
 {
-  "action": {
-    "misuse": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Knowledge abuse"
-      ],
-      "vector": [
-        "Other"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "Acquaintance"
-      ]
-    },
-    "internal": {
-      "motive": [
-        "Unknown"
-      ],
-      "variety": [
-        "Other"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "Other"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1,
-          "variety": "Personal"
+    "incident_id": "ae8aa450-8ccf-11e7-811e-83915e56fc98",
+    "security_incident": "Confirmed",
+    "reference": "http://www.nzherald.co.nz/bay-of-plenty-times/news/article.cfm?c_id=1503343&objectid=11906814",
+    "summary": "Privacy breach by ambulance officer alleged in cannabis disclosure case - St John Ambulance",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Transmitted"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Alter behavior"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Ext - customer",
-  "incident_id": "ae8aa450-8ccf-11e7-811e-83915e56fc98",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Very Low",
+    "victim": {
+        "victim_id": " St John Ambulance ",
+        "employee_count": "11 to 100",
+        "industry": "621910",
+        "locations_affected": 1,
+        "country": [
+            "NZ"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Knowledge abuse"
+            ],
+            "vector": [
+                "Other"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Acquaintance"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "Other"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1,
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 1
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Transmitted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
     },
-    "created": "2017-10-24T07:19:06.501Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "ppl",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10008",
-    "master_id": "6b77e69f-c41f-4e5c-acc3-007492fa4eed",
-    "modified": "2018-02-21T08:05:54.773Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://www.nzherald.co.nz/bay-of-plenty-times/news/article.cfm?c_id=1503343&objectid=11906814",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Privacy breach by ambulance officer alleged in cannabis disclosure case - St John Ambulance",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "NZ"
-    ],
-    "employee_count": "11 to 100",
-    "industry": "621910",
-    "locations_affected": 1,
-    "victim_id": " St John Ambulance "
-  }
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - customer",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Very Low",
+        "created": "2017-10-24T07:19:06.501Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "ppl",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T08:05:54.773Z",
+        "master_id": "6b77e69f-c41f-4e5c-acc3-007492fa4eed",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "10008"
+    },
+    "schema_version": "1_3_2"
 }

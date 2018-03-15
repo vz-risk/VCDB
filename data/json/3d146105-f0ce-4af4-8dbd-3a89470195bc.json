@@ -1,99 +1,99 @@
 {
-  "action": {
-    "error": {
-      "variety": [
-        "Misdelivery"
-      ],
-      "vector": [
-        "Carelessness"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "NA"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Mail"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 320,
-          "variety": "Personal"
+    "incident_id": "d8a27240-82ac-11e7-8009-bf30ec7afbca",
+    "security_incident": "Confirmed",
+    "reference": "https://thetab.com/uk/norwich/2017/06/16/exclusive-a-named-list-of-students-extenuating-circumstances-has-been-accidentally-sent-in-a-uea-department-email-27522",
+    "summary": "An email detailing confidential extenuating circumstances has been sent to every undergraduate student in the American Studies school at UEA, The Tab can exclusively reveal.  It contained information about several private issues. It was sent to 320 AMA undergraduates enrolled in the school, naming every student next to their reason.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017
         },
-        {
-          "variety": "Medical"
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Minutes"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 320,
-      "data_victim": [
-        "Student"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "d8a27240-82ac-11e7-8009-bf30ec7afbca",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
-    "attack_difficulty_subsequent": "Low",
-    "created": "2017-10-26T14:33:48Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "err",
-        "actor": "int",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9636",
-    "master_id": "3d146105-f0ce-4af4-8dbd-3a89470195bc",
-    "modified": "2018-02-21T07:32:32.359Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "https://thetab.com/uk/norwich/2017/06/16/exclusive-a-named-list-of-students-extenuating-circumstances-has-been-accidentally-sent-in-a-uea-department-email-27522",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "An email detailing confidential extenuating circumstances has been sent to every undergraduate student in the American Studies school at UEA, The Tab can exclusively reveal.  It contained information about several private issues. It was sent to 320 AMA undergraduates enrolled in the school, naming every student next to their reason.",
-  "targeted": "NA",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "discovery": {
-      "unit": "Minutes"
+    "victim": {
+        "victim_id": "University of East Anglia",
+        "employee_count": "101 to 1000",
+        "industry": "611310",
+        "locations_affected": 1,
+        "country": [
+            "GB"
+        ]
     },
-    "incident": {
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "GB"
-    ],
-    "employee_count": "101 to 1000",
-    "industry": "611310",
-    "locations_affected": 1,
-    "victim_id": "University of East Anglia"
-  }
+    "action": {
+        "error": {
+            "variety": [
+                "Misdelivery"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 320,
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 320
+                },
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Student"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Low",
+        "attack_difficulty_subsequent": "Low",
+        "created": "2017-10-26T14:33:48Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T07:32:32.359Z",
+        "master_id": "3d146105-f0ce-4af4-8dbd-3a89470195bc",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "9636"
+    },
+    "schema_version": "1_3_2"
 }

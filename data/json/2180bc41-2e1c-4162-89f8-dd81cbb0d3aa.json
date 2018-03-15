@@ -1,95 +1,95 @@
 {
-  "action": {
-    "misuse": {
-      "variety": [
-        "Privilege abuse"
-      ],
-      "vector": [
-        "LAN access"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Fun"
-      ],
-      "variety": [
-        "Manager"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Database"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 14,
-          "variety": "Medical"
+    "incident_id": "e07cba20-9404-11e7-967f-a9fa27eb51b9",
+    "security_incident": "Confirmed",
+    "reference": "http://globalnews.ca/news/3328360/former-ahs-supervisor-convicted-of-inappropriately-accessing-health-information/",
+    "summary": "A former supervisor of health information management with Alberta Health Services was slapped with a $5,000 fine on Tuesday after being convicted of 13 counts of accessing health information in contravention of the Health Information Act.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2013,
+            "month": 5
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months"
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 14,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "e07cba20-9404-11e7-967f-a9fa27eb51b9",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "created": "2017-10-24T05:34:44.363Z",
-    "dbir_year": 2014,
-    "event_chain": [
-      {
-        "action": "mis",
-        "actor": "int",
-        "asset": "srv"
-      }
-    ],
-    "github": "9384",
-    "master_id": "2180bc41-2e1c-4162-89f8-dd81cbb0d3aa",
-    "modified": "2018-02-22T11:34:27.810Z",
-    "sub_source": "phidbr"
-  },
-  "reference": "http://globalnews.ca/news/3328360/former-ahs-supervisor-convicted-of-inappropriately-accessing-health-information/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "A former supervisor of health information management with Alberta Health Services was slapped with a $5,000 fine on Tuesday after being convicted of 13 counts of accessing health information in contravention of the Health Information Act.",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "compromise": {
-      "unit": "Minutes"
     },
-    "discovery": {
-      "unit": "Months"
+    "victim": {
+        "victim_id": "Alberta Health Services ",
+        "employee_count": "10001 to 25000",
+        "industry": "622110",
+        "locations_affected": 1,
+        "country": [
+            "CA"
+        ]
     },
-    "incident": {
-      "month": 5,
-      "year": 2013
-    }
-  },
-  "victim": {
-    "country": [
-      "CA"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "622110",
-    "locations_affected": 1,
-    "victim_id": "Alberta Health Services "
-  }
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Manager"
+            ],
+            "motive": [
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 14,
+            "data": [
+                {
+                    "amount": 14,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Unknown",
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2017-10-24T05:34:44.363Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv"
+            }
+        ],
+        "modified": "2018-02-22T11:34:27.810Z",
+        "master_id": "2180bc41-2e1c-4162-89f8-dd81cbb0d3aa",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2014,
+        "github": "9384"
+    },
+    "schema_version": "1_3_2"
 }

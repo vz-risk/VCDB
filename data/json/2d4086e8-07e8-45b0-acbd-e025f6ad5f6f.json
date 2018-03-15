@@ -1,105 +1,105 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Snooping"
-      ],
-      "vector": [
-        "Victim public area"
-      ]
-    }
-  },
-  "actor": {
-    "internal": {
-      "motive": [
-        "Fun"
-      ],
-      "variety": [
-        "Guard"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "M - Documents"
-      }
-    ]
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 1,
-          "variety": "Personal"
+    "incident_id": "53e55200-842a-11e7-a921-2d695ce70b69",
+    "security_incident": "Confirmed",
+    "reference": "http://www.pressherald.com/2017/03/06/probe-of-security-officers-breach-ongoing/",
+    "summary": "A week after a court security officer took a cellphone photo of a defense attorney’s notes and emailed it to a prosecutor in an unprecedented breach of protocol, the investigation into the matter continues and the policies followed by court officers remain unchanged.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 2
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "discovery": {
+            "unit": "Minutes",
+            "value": 30
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 1,
-      "data_victim": [
-        "Other"
-      ],
-      "state": [
-        "Printed"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Int - reported by employee",
-  "incident_id": "53e55200-842a-11e7-a921-2d695ce70b69",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "Breland",
-    "attack_difficulty_initial": "Low",
+    },
+    "victim": {
+        "victim_id": "Kennebec County Sheriff’s Office ",
+        "employee_count": "Small",
+        "industry": "92110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "GA"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Snooping"
+            ],
+            "vector": [
+                "Victim public area"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Guard"
+            ],
+            "motive": [
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "M - Documents"
+            }
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_misuse": "Y"
-      }
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1,
+            "data": [
+                {
+                    "amount": 1,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Printed"
+            ]
+        }
     },
-    "created": "2017-10-26T14:33:48Z",
-    "dbir_year": 2018,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "int",
-        "asset": "med",
-        "attribute": "cp"
-      }
-    ],
-    "github": "9322",
-    "master_id": "2d4086e8-07e8-45b0-acbd-e025f6ad5f6f",
-    "modified": "2018-02-21T07:21:08.759Z"
-  },
-  "reference": "http://www.pressherald.com/2017/03/06/probe-of-security-officers-breach-ongoing/",
-  "schema_version": "1_3_2",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "A week after a court security officer took a cellphone photo of a defense attorney\u2019s notes and emailed it to a prosecutor in an unprecedented breach of protocol, the investigation into the matter continues and the policies followed by court officers remain unchanged.",
-  "targeted": "Targeted",
-  "timeline": {
-    "compromise": {
-      "unit": "Seconds"
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "attack_difficulty_initial": "Low",
+        "created": "2017-10-26T14:33:48Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-21T07:21:08.759Z",
+        "master_id": "2d4086e8-07e8-45b0-acbd-e025f6ad5f6f",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "9322"
     },
-    "discovery": {
-      "unit": "Minutes",
-      "value": 30
-    },
-    "incident": {
-      "month": 2,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "Small",
-    "industry": "92110",
-    "locations_affected": 1,
-    "state": "GA",
-    "victim_id": "Kennebec County Sheriff\u2019s Office "
-  }
+    "schema_version": "1_3_2"
 }
