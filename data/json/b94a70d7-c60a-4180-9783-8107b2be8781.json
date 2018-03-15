@@ -1,0 +1,108 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Unknown"
+      },
+      "variety": [
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 820000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 820000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Ext - actor disclosure",
+  "incident_id": "591bab60-0aa4-11e8-827c-bba53cbad290",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "analyst_notes": "Note;  This github issue combined two separate incidents in error.  I am coding up the CloudPets incident under the same github issue, so the two are not duplicates.",
+    "attribute": {
+      "confidentiality": {
+        "data_misuse": "Y"
+      }
+    },
+    "created": "2018-02-06T02:48:46.496Z",
+    "dbir_year": 2018,
+    "github": "9262",
+    "master_id": "b94a70d7-c60a-4180-9783-8107b2be8781",
+    "modified": "2018-02-06T02:48:46.496Z",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 3,
+        "year": 2017
+      }
+    }
+  },
+  "reference": "http://www.techhive.com/article/3175229/security/smart-teddy-bears-involved-in-a-contentious-data-breach.html; https://auth0.com/blog/cloudpets-data-breach/",
+  "schema_version": "1_3_2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Spiral Toys is a company that creates toys for children. It has an internet-connected product called CloudPets which allows parents and children to record and send voice messages to each other through a mobile app. On January 7, hackers discovered that the database the company was using to store data for this product was unsecured. Hackers took control of the database, deleted all information, and demanded a payment to restore the data.  The database contained information for 820,000+ users containing emails, bcrypt hashed passwords, and links to voice recordings customers and their children had made which could now be publicly accessed. Additional information stored included pictures, names, birthdays, and relationships. Customers were not notified that their data had been compromised.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 7,
+      "month": 1,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "339931",
+    "state": "CA",
+    "victim_id": "Spiral Toys"
+  }
+}
