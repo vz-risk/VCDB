@@ -515,6 +515,8 @@
         "Cryptanalysis", 
         "CSRF", 
         "DoS", 
+        "Exploit misconfig", 
+        "Exploit vuln", 
         "Footprinting", 
         "Forced browsing", 
         "Format string attack", 
@@ -585,12 +587,15 @@
         "Capture app data", 
         "Capture stored data", 
         "Click fraud", 
+        "Click fraud and cryptocurrency mining", 
         "Client-side attack", 
+        "Cryptocurrency mining", 
         "Destroy data", 
         "Modify data", 
         "Disable controls", 
         "DoS", 
         "Downloader", 
+        "Exploit misconfig", 
         "Exploit vuln", 
         "Export data", 
         "Packet sniffer", 
@@ -1863,6 +1868,7 @@
         "Partner", 
         "Patient", 
         "Student", 
+        "Victim organization", 
         "Other", 
         "Unknown"
       ], 
@@ -1930,44 +1936,55 @@
     "NA", 
     "Unknown"
   ], 
-  "discovery_method": [
-    "Ext - actor disclosure", 
-    "Ext - audit", 
-    "Ext - customer", 
-    "Ext - emergency response team", 
-    "Ext - found documents", 
-    "Ext - fraud detection", 
-    "Ext - incident response", 
-    "Ext - law enforcement", 
-    "Ext - monitoring service", 
-    "Ext - suspicious traffic", 
-    "Ext - other", 
-    "Ext - unknown", 
-    "Ext - unrelated 3rd party", 
-    "Int - antivirus", 
-    "Int - data loss prevention", 
-    "Int - financial audit", 
-    "Int - fraud detection", 
-    "Int - HIDS", 
-    "Int - incident response", 
-    "Int - IT review", 
-    "Int - infrastructure monitoring", 
-    "Int - log review", 
-    "Int - NIDS", 
-    "Int - reported by employee", 
-    "Int - security alarm", 
-    "Int - break in discovered", 
-    "Int - other", 
-    "Int - unknown", 
-    "Prt - antivirus", 
-    "Prt - audit", 
-    "Prt - incident response", 
-    "Prt - monitoring service", 
-    "Prt - other", 
-    "Prt - unknown", 
-    "Other", 
-    "Unknown"
-  ], 
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure", 
+        "Audit", 
+        "Customer", 
+        "Emergency response team", 
+        "Found documents", 
+        "Fraud detection", 
+        "Incident response", 
+        "Law enforcement", 
+        "Monitoring service", 
+        "Other", 
+        "Security researcher", 
+        "Suspicious traffic", 
+        "Unknown", 
+        "Unrelated 3rd party"
+      ]
+    }, 
+    "internal": {
+      "variety": [
+        "Antivirus", 
+        "Break in discovered", 
+        "Data loss prevention", 
+        "Financial audit", 
+        "Fraud detection", 
+        "Hids", 
+        "Incident response", 
+        "Infrastructure monitoring", 
+        "It review", 
+        "Log review", 
+        "Nids", 
+        "Other", 
+        "Reported by employee", 
+        "Security alarm", 
+        "Unknown"
+      ]
+    }, 
+    "partner": {
+      "variety": [
+        "Antivirus", 
+        "Audit", 
+        "Incident response", 
+        "Monitoring service", 
+        "Other", 
+        "Unknown"
+      ]
+    }
+  }, 
   "impact": {
     "loss": {
       "variety": [
@@ -2233,6 +2250,14 @@
         "unk"
       ]
     }, 
+    "security_maturity": [
+      "Initial", 
+      "Defined", 
+      "Managed", 
+      "Measured", 
+      "Optimizing", 
+      "Unknown"
+    ], 
     "attack_difficulty_initial": [
       "High", 
       "Moderate", 
@@ -2328,14 +2353,16 @@
         "Unknown"
       ]
     }, 
-    "security_maturity": [
-      "Initial", 
-      "Defined", 
-      "Managed", 
-      "Measured", 
-      "Optimizing", 
-      "Unknown"
-    ], 
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ]
+      }
+    }, 
     "analysis_status": [
       "In-progress", 
       "Needs review", 
