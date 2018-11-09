@@ -50,7 +50,7 @@
         "Months": "Months", 
         "Years": "Years", 
         "Never": "Never", 
-        "NA": "Discovry does not apply in the context of the security event.", 
+        "NA": "Discovery does not apply in the context of the security event.", 
         "Unknown": "Unknown"
       }
     }, 
@@ -515,6 +515,8 @@
         "Cryptanalysis": "Cryptanalysis", 
         "CSRF": "Cross-site request forgery", 
         "DoS": "Denial of service", 
+        "Exploit misconfig": "Exploit a misconfiguration (vs vuln or weakness)", 
+        "Exploit vuln": "Exploit vulnerability in code (vs misconfig or weakness). This can be used with other hacking enumerations, (such as XSS when an XSS vuln exists.)", 
         "Footprinting": "Footprinting and fingerprinting", 
         "Forced browsing": "Forced browsing or predictable resource location", 
         "Format string attack": "Format string attack", 
@@ -584,14 +586,17 @@
         "C2": "Command and control (C2)", 
         "Capture app data": "Capture data from application or system process", 
         "Capture stored data": "Capture data stored on system disk", 
-        "Click fraud": "Click fraud or Bitcoin mining", 
+        "Click fraud": "Click fraud, whether or not cryptocurrency mining.  Also mark 'Click fraud or cryptocurrency mining'.", 
+        "Click fraud and cryptocurrency mining": "Click fraud or cryptocurrency mining", 
         "Client-side attack": "Client-side or browser attack (e.g., redirection, XSS, MitB)", 
+        "Cryptocurrency mining": "Cryptocurrency mining, whether or not click fraud.  Also mark 'Click fraud or cryptocurrency mining'.", 
         "Destroy data": "Destroy or corrupt stored data", 
         "Modify data": "Malware which compromises a legitimate file rather than creating new filess", 
         "Disable controls": "Disable or interfere with security controls", 
         "DoS": "DoS attack", 
         "Downloader": "Downloader (pull updates or other malware) ", 
-        "Exploit vuln": "Exploit vulnerability in code (vs misconfig or weakness)", 
+        "Exploit misconfig": "Exploit a misconfiguration (vs vuln or weakness)", 
+        "Exploit vuln": "Exploit vulnerability in code (vs misconfig or weakness). This can be used with other malware enumerations, (such as Remote injection when a Remote injection vuln exists.)", 
         "Export data": "Export data to another site or system", 
         "Packet sniffer": "Packet sniffer (capture data from network)", 
         "Password dumper": "Password dumper (extract credential hashes)", 
@@ -1863,14 +1868,15 @@
         "Partner": "Partner", 
         "Patient": "Patient", 
         "Student": "Student", 
+        "Victim organization": "The data was that of the victim organization rather than a customer, employee, etc.", 
         "Other": "Other", 
         "Unknown": "Unknown"
       }, 
       "state": {
         "Processed": "Processed", 
-        "Stored": "Stored", 
-        "Stored encrypted": "Stored encrypted", 
-        "Stored unencrypted": "Stored unencrypted", 
+        "Stored": "Stored (either encrypted, unencrypted, or where encryption is unknown.", 
+        "Stored encrypted": "Stored encrypted. (Also mark 'Stored'.)", 
+        "Stored unencrypted": "Stored unencrypted. (Also mark 'Stored'.)", 
         "Transmitted": "Transmitted", 
         "Transmitted encrypted": "Transmitted encrypted", 
         "Transmitted unencrypted": "Transmitted unencrypted", 
@@ -1904,7 +1910,7 @@
         "Destruction": "Destruction", 
         "Interruption": "Interruption", 
         "Loss": "Loss", 
-        "Obscuration": "Conversion or obscuration", 
+        "Obscuration": "Conversion or obscuration (ransomware)", 
         "Other": "Other", 
         "Unknown": "Unknown"
       }, 
@@ -1927,46 +1933,57 @@
   "targeted": {
     "Opportunistic": "Opportunistic: victim attacked because they exhibited a weakness the actor knew how to exploit", 
     "Targeted": "Targeted: victim chosen as target then actor determined what weaknesses could be exploited", 
-    "NA": "Not applicable", 
+    "NA": "Not applicable.  Use when actor does not have a practical choice of targets or no intent (i.e. Error).", 
     "Unknown": "Unknown"
   }, 
   "discovery_method": {
-    "Ext - actor disclosure": "External - disclosed by threat agent (e.g., public brag, private blackmail)", 
-    "Ext - audit": "External - security audit or scan", 
-    "Ext - customer": "External - reported by customer or partner affected by the incident", 
-    "Ext - emergency response team": "External - Emergency response team", 
-    "Ext - found documents": "External - Found documents", 
-    "Ext - fraud detection": "External - fraud detection (e.g., CPP)", 
-    "Ext - incident response": "External - Notified while investigating another incident", 
-    "Ext - law enforcement": "Internal - notified by law enforcement or government agency", 
-    "Ext - monitoring service": "External - managed security event monitoring service", 
-    "Ext - suspicious traffic": "External - Report of suspicious traffic", 
-    "Ext - other": "Discovery method was external and known but not listed", 
-    "Ext - unknown": "External - unknown", 
-    "Ext - unrelated 3rd party": "Discovered by person unaffiliated with victim or threat actor", 
-    "Int - antivirus": "Internal - antivirus alert", 
-    "Int - data loss prevention": "Internal - Data loss prevention software", 
-    "Int - financial audit": "Internal - financial audit and reconciliation process", 
-    "Int - fraud detection": "Internal - fraud detection mechanism", 
-    "Int - HIDS": "Internal - host IDS or file integrity monitoring", 
-    "Int - incident response": "Internal - discovered while responding to another (separate) incident", 
-    "Int - IT review": "Any routine maintenance, testing or review of it assets. (Includes inspect of assets, vulnerability scans, etc.)", 
-    "Int - infrastructure monitoring": "Internal - Health and welfare monitoring of assets such as utilization, uptime, and SNMP alerts", 
-    "Int - log review": "Internal - log review process or SIEM", 
-    "Int - NIDS": "Internal - All network-based security tool detection (including IPS, IDS, firewalls and other network-based security tools)", 
-    "Int - reported by employee": "Internal - reported by employee who saw something odd", 
-    "Int - security alarm": "Internal - physical security system alarm", 
-    "Int - break in discovered": "Internal - employee discovered evidence of a break in", 
-    "Int - other": "Discovery method was internal and known but not listed", 
-    "Int - unknown": "Internal - unknown", 
-    "Prt - antivirus": "Partner - Notified by antivirus company but not through AV product", 
-    "Prt - audit": "Partner - Audit performed by a partner organization", 
-    "Prt - incident response": "Partner - notified while investigating another incident", 
-    "Prt - monitoring service": "Partner - Reported by a monitoring service", 
-    "Prt - other": "Discovery method was partner and known but not listed", 
-    "Prt - unknown": "Partner - Unknown", 
-    "Other": "Other", 
-    "Unknown": "Unknown"
+    "external": {
+      "variety": {
+        "Actor disclosure": "disclosed by threat agent (e.g., public brag, private blackmail)", 
+        "Audit": "security audit or scan", 
+        "Customer": "reported by customer or partner affected by the incident", 
+        "Emergency response team": "Emergency response team", 
+        "Found documents": "Found documents", 
+        "Fraud detection": "fraud detection (e.g., CPP)", 
+        "Incident response": "Notified while investigating another incident", 
+        "Law enforcement": "notified by law enforcement or government agency", 
+        "Monitoring service": "managed security event monitoring service", 
+        "Other": "Discovery method was external and known but not listed", 
+        "Security researcher": "security researcher attempting to identify insecure data", 
+        "Suspicious traffic": "Report of suspicious traffic", 
+        "Unknown": "unknown", 
+        "Unrelated 3rd party": "Discovered by person unaffiliated with victim or threat actor"
+      }
+    }, 
+    "internal": {
+      "variety": {
+        "Antivirus": "antivirus alert", 
+        "Break in discovered": "employee discovered evidence of a break in", 
+        "Data loss prevention": "Data loss prevention software", 
+        "Financial audit": "financial audit and reconciliation process", 
+        "Fraud detection": "fraud detection mechanism", 
+        "Hids": "host IDS or file integrity monitoring", 
+        "Incident response": "discovered while responding to another (separate) incident", 
+        "Infrastructure monitoring": "Health and welfare monitoring of assets such as utilization, uptime, and SNMP alerts", 
+        "It review": "Any routine maintenance, testing or review of it assets. (Includes inspect of assets, vulnerability scans, etc.)", 
+        "Log review": "log review process or SIEM", 
+        "Nids": "All network", 
+        "Other": "Discovery method was internal and known but not listed", 
+        "Reported by employee": "reported by employee who saw something odd", 
+        "Security alarm": "physical security system alarm", 
+        "Unknown": "unknown"
+      }
+    }, 
+    "partner": {
+      "variety": {
+        "Antivirus": "Notified by antivirus company but not through AV product", 
+        "Audit": "Audit performed by a partner organization", 
+        "Incident response": "notified while investigating another incident", 
+        "Monitoring service": "Reported by a monitoring service", 
+        "Other": "Discovery method was partner and known but not listed", 
+        "Unknown": "Unknown"
+      }
+    }
   }, 
   "impact": {
     "loss": {
@@ -2233,6 +2250,14 @@
         "unk": "Unknown"
       }
     }, 
+    "security_maturity": {
+      "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.", 
+      "Defined": "Processes are defined, documented, standardized and integrated into each other.", 
+      "Managed": "Basic processes are established and there is a level of discipline to stick to these processes.", 
+      "Measured": "Processes are quantitatively managed in accordance with agreed-upon metrics.", 
+      "Optimizing": "Continuous process improvement by quantitative feedback and testing.", 
+      "Unknown": "The organizations level of maturity is unknown."
+    }, 
     "attack_difficulty_initial": {
       "High": "No label.", 
       "Moderate": "No label.", 
@@ -2328,13 +2353,15 @@
         "Unknown": "No label."
       }
     }, 
-    "security_maturity": {
-      "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.", 
-      "Defined": "Processes are defined, documented, standardized and integrated into each other.", 
-      "Managed": "Basic processes are established and there is a level of discipline to stick to these processes.", 
-      "Measured": "Processes are quantitatively managed in accordance with agreed-upon metrics.", 
-      "Optimizing": "Continuous process improvement by quantitative feedback and testing.", 
-      "Unknown": "The organizations level of maturity is unknown."
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": {
+          "Yes": "Data was abused or maliciously misused", 
+          "No": "Data was not abused or maliciously misused", 
+          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.", 
+          "Unknown": "No information is known about if the data was abused"
+        }
+      }
     }, 
     "analysis_status": {
       "In-progress": "Incident is currently being entered.", 
