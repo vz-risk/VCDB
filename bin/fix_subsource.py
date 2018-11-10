@@ -141,7 +141,14 @@ class Subsource():
                 incident['plus']['sub_source'] = self.issue_map[gh_id]
           else:
             #print("{0} not in map".format(gh_id))
-            pass
+            if 'sub_source' in incident['plus']:
+              logging.warning("Incident {0} has plus.sub_source set to '{1}', however there are no tags in the associated github issue {2}.".format(
+                  incident['plus'].get('master_id', "no_master_id"),
+                  incident['plus'].get('sub_source', 'no_sub_source'),
+                  gh_id
+              ))
+              if self.cfg['fix']:
+                _ = incident['plus'].pop("sub_source")
         return incident
 
 ## MAIN LOOP EXECUTION
