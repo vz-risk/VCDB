@@ -43,11 +43,6 @@ import logging
 
 
 # USER VARIABLES
-NEODB = "http://192.168.121.134:7474/db/data"  # CHANGEME
-CONFIG_FILE = "/tmp/verum.cfg"  # CHANGEME
-LOGLEVEL = logging.DEBUG
-LOG = None
-
 ########### NOT USER EDITABLE BELOW THIS POINT #################
 
 
@@ -55,25 +50,45 @@ LOG = None
 import argparse
 import configparser
 import os
-import json
+import simplejson
 from tqdm import tqdm
 from pprint import pprint, pformat
 from distutils.version import LooseVersion
+from github import Github
+from jsonschema import ValidationError
 
 
 ## SETUP
 __author__ = "Gabriel Bassett"
+# Default Configuration Settings
+## Labels in priority order (higher up takes precidence)
+PRIORITIZED_LABELS = [
+  "priority",
+  "phidbr"
+]
 
+cfg = {
+    'log_level': 'warning',
+    'log_file': None,
+    'version':"1.3.2",
+    'output': None,
+    'quiet': False,
+    'gh_user': None,
+    'gh_password': None,
+    'priority_labels': PRIORITIZED_LABELS,
+    'fix': False
+}
 
 ## GLOBAL EXECUTION
-
+logging.getLogger().setLevel(logging.WARNING)
 
 ## FUNCTION DEFINITION
 class Subsource():
     cfg = None
+    repo = None
+    issue_map = None
 
     def __init__(self, cfg):
-        veris_logger.updateLogger(cfg)
         logging.debug("Initializing subsource correction object.")
 
         self.cfg = cfg
@@ -82,14 +97,56 @@ class Subsource():
             raise ValueError("The veris/vcdb version must be at least 1.3.2 to include plus.subsource.")
 
         # TODO: Load GITHUB stuff
+        if cfg['gh_user'] is not None and cfg['gh_password'] is not None:
+          self.gh = Github(cfg['gh_user'], cfg['gh_password'], per_page=100)
+        else:
+          self.gh = Github(per_page=100)
+        self.repo = self.gh.get_user("vz-risk").get_repo("VCDB")
+        self.labels = self.get_labels()
 
-    def fix_subsource(incident):
+
+    def get_labels(self):
+      issue_map = {}
 
 
+      issues = self.repo.get_issues(state="closed", sort="created", direction="desc")
+      for issue in issues:
+        if issue.labels:
+          for plabel in self.cfg['priority_labels']:
+            if any(plabel in label.name.lower() for label in issue.labels):
+              issue_map[str(issue.number)] = plabel
+              break
+
+#      ## DEBUG:
+#      with open("/Users/v685573/issue_map.json", 'r') as filehandle:
+#        #simplejson.dump(issue_map, filehandle, sort_keys=True, indent=2, separators=(',', ': '))
+#        issue_map = simplejson.load(filehandle)
+
+      self.issue_map = issue_map
+
+
+    def fix_subsource(self, incident):
+        if 'plus' in incident.keys():
+          gh_id = incident['plus'].get('github', '')
+          if gh_id in self.issue_map.keys():
+            #print("{0} in map".format(gh_id))
+            if incident['plus'].get('sub_source', '') != self.issue_map[gh_id]:
+              logging.warning("Incident {0} has plus.sub_source set to '{1}', however it should be '{3}'' based on the tags in github issue {2}.".format(
+                  incident['plus'].get('master_id', "no_master_id"),
+                  incident['plus'].get('sub_source', 'no_sub_source'),
+                  gh_id,
+                  self.issue_map[gh_id]
+              ))
+              if self.cfg['fix']:
+                incident['plus']['sub_source'] = self.issue_map[gh_id]
+          else:
+            #print("{0} not in map".format(gh_id))
+            pass
         return incident
 
 ## MAIN LOOP EXECUTION
 if __name__ == "__main__":
+
     ## Gabe
     ## The general Apprach to config parsing (Probably not the best way)
     ## 1. create a dictionary called 'cfg' of fallback values (up at the top of the file)
@@ -104,6 +161,9 @@ if __name__ == "__main__":
     parser.add_argument("-l","--log_level",choices=["critical","warning","info","debug"], help="Minimum logging level to display")
     parser.add_argument('--log_file', help='Location of log file')
     parser.add_argument("--version", help="The version of veris in use")
+    parser.add_argument("--gh_user", help="The github user to use")
+    parser.add_argument("--gh_password", help="The password for the github user")
+    parser.add_argument("--fix", help="Include to replace the plus.sub_source field if an appropriate tag is found.", action="store_true", default=False)
     parser.add_argument('--conf', help='The location of the config file', default="./_checkValidity.cfg")
     args = parser.parse_args()
     args = {k:v for k,v in vars(args).items() if v is not None}
@@ -136,11 +196,23 @@ if __name__ == "__main__":
 
     cfg.update(args)
 
+    logging.getLogger().setLevel({
+      "debug": logging.DEBUG,
+      "info": logging.INFO,
+      "warning": logging.WARNING,
+      "critical": logging.CRITICAL}[cfg['log_level']])
+    if cfg['log_file'] is not None:
+      fileHandler = logging.FileHandler(cfg['log_file'])
+      logging.getLogger().addHandler(fileHandler)
+
     logging.debug(args)
 
     logging.debug(cfg)
 
     logging.info('Beginning main loop.')
+
+
+    subsource = Subsource(cfg)
 
     # get all files in directory and sub-directories
     if os.path.isfile(cfg['input']):
@@ -153,7 +225,7 @@ if __name__ == "__main__":
     else:
         raise OSError("File or directory {0} does not exist.".format(cfg['input']))
 
-    subsource = Subsource(cfg)
+
 
     # open each json file
     if 'output' in cfg and cfg['output'] is not None:
@@ -163,162 +235,25 @@ if __name__ == "__main__":
     for filename in tqdm(filenames):
         with open(filename, 'r+') as filehandle:
             try:
-                incident = json.load(filehandle)
+                incident = simplejson.load(filehandle)
             except:
                 logging.warning("Unable to load {0}.".format(filename))
                 continue
             logging.debug("Before parsing:\n" + pformat(incident))
             # fixsource
-            incident = rules.makeValid(incident, cfg)
-            logging.debug("After parsing:\n" + pformat(incident))
-            # save it back out
-            if overwrite:
-                filehandle.seek(0)
-                json.dump(incident, filehandle, sort_keys=True, indent=2, separators=(',', ': '))
-                filehandle.truncate()
-            else:
-                with open(cfg['output'].rstrip("/") + "/" + filename.split("/")[-1], 'w') as outfilehandle:
-                    json.dump(incident, outfilehandle, sort_keys=True, indent=2, separators=(',', ': '))
-
+            incident = subsource.fix_subsource(incident)
+            if cfg['fix']:
+              if overwrite:
+                  filehandle.seek(0)
+                  simplejson.dump(incident, filehandle, sort_keys=True, indent=2, separators=(',', ': '))
+                  filehandle.truncate()
+              else:
+                  with open(cfg['output'].rstrip("/") + "/" + filename.split("/")[-1], 'w') as outfilehandle:
+                      simplejson.dump(incident, outfilehandle, sort_keys=True, indent=2, separators=(',', ': '))
+            logging.debug("After parsing:\n" + pformat(incident)) 
 
     logging.info('Ending main loop.')
 
 
 
 
-##### VCDB ASSIGN #####
-## HEADER ##
-
-# TODO: Prioritize newer over older
-# TODO: up to 5 news-worthy incidents (and record the ones not randomly chosen)
-# TODO: Move Labels and Assignees to config file and use proper config file setup
-# TODO: Set the assigner to automatically run in cron and notify me when it runs
-# TODO: Filter out 'needs details'
-
-## IMPORT ##
-
-from github import Github
-import json
-import csv
-import os
-import sys
-import random
-from pprint import pprint
-
-
-
-## Variables ##
-#YEAR = None # create year. If set, only issues created in the listed years will elligable.
-#YEAR = [2015]  # create year. If set, only issues created in the listed years will elligable.
-# IDS = (5807,6934)  # 2015 IDs
-IDS = (6567, 100000) # 2016 IDs, starting november 2015
-TEAM_CASE_COUNT = 12 # Cases per assignee
-HELP_CASE_COUNT = 7
-ANTI_LABELS = ["Update", "schema", "Autocode-Test", "Autocode", "enhancement", "invalid", "Mining", "Needs Details", "question", "wontfix"]
-LABELS = [ "Breach", "DOS", "Defacement", "Environmental", "Error", 
-           "Hacking", "Malware", "Misuse", "Outage", "Physical", "Social" ] 
-ASSIGNEES = {"swidup": TEAM_CASE_COUNT, 
-             "spitler": TEAM_CASE_COUNT, 
-             "dhylender": TEAM_CASE_COUNT#, 
-#              "B-byrd": 10,
-             "jasoncmiller79": 15 # out 3 weeks.  back Nov 12.
-            } #, "gdbassett": TEAM_CASE_COUNT}
-PRIORITIZED_LABELS = ["Priority", 
-                      "Priority 2016", 
-                      "PHIDBR2016", 
-                      "Priority 2017", 
-                      "PHIDBR2017", 
-                      "PHIDBR2018", 
-                      "Priority 2018", 
-                      "PHIDBR2019"
-                      ]
-RANDOM_ASSIGNMENT_LABEL = "random_assignment"
-MAX_PRIORITY = .8  # The maximum amount of prioritized incidents to include
-PRIORITY_LOG_FILE = "/Users/v685573/Documents/Development/vcdbassign/priority.log"
-CONFIG_FILE = "/Users/v685573/Documents/Development/vcdbassign/vcdbassign.conf"
-
-## Setup ##
-# random_case_count = (1-MAX_PRIORITY) * CASE_COUNT
-random_case_count = {who: int((1-MAX_PRIORITY) * cnt) for who, cnt in ASSIGNEES.iteritems()}
-# priority_case_count = MAX_PRIORITY * CASE_COUNT
-priority_case_count = {who: int(MAX_PRIORITY * cnt) for who, cnt in ASSIGNEES.iteritems()}
-# random.shuffle(ASSIGNEES)  # Will randomize assignees which also randomizes who gets priority incidents
-
-## EXECUTION ##
-
-# randomly assign VCDB github issues to folks
-with open(os.path.expanduser(CONFIG_FILE)) as cred_file:
-  gh_creds = json.load(cred_file)
-  gh = Github(gh_creds["user"], gh_creds["password"], per_page=100)
-
-# get all open issues, sorted
-
-repo = gh.get_user("vz-risk").get_repo("VCDB")
-issues = repo.get_issues(state="open", sort="created", direction="desc", assignee="none")
-
-total_issues = []
-total_priority_issues = []
-
-# gh API takes a bit so inform
-print("Getting issues...")
-
-for issue in issues:
-    
-  if issue.labels:
-        
-    if any(label.name in LABELS for label in issue.labels) and (not issue.assignee) and not any(label.name in ANTI_LABELS for label in issue.labels):
-#      if YEAR is None or issue.created_at.year in YEAR:
-      if IDS is None or (issue.number >= IDS[0] and issue.number <= IDS[1]):
-        total_issues.append(issue)
-    if any(label.name in PRIORITIZED_LABELS for label in issue.labels) and (not issue.assignee) and not any(label.name in ANTI_LABELS for label in issue.labels):
-      total_priority_issues.append(issue)
-
-# update this for new team members or - better yet - read a file from somewhere
-
-# gh API takes a bit so inform
-print("Assigning issues...")
-
-
-try:
-  # priority_to_be_assigned = random.sample(total_priority_issues, int(len(ASSIGNEES) * priority_case_count))
-  priority_to_be_assigned = random.sample(total_priority_issues, int(sum(priority_case_count.values())))
-except ValueError:
-  priority_to_be_assigned = random.sample(total_priority_issues, len(total_priority_issues))
-# to_be_assigned = random.sample(total_issues, len(ASSIGNEES) * CASE_COUNT - len(priority_to_be_assigned))
-to_be_assigned = random.sample(total_issues, sum(ASSIGNEES.values()) - len(priority_to_be_assigned))
-
-print "Length of priority incidents is {0}".format(len(priority_to_be_assigned))
-print "Length of incidents is {0}".format(len(to_be_assigned))
-
-priority_assigned = []
-# Assign
-i = 0
-k = 0
-for who in ASSIGNEES.keys():
-  print("- assigning %d cases to [%s]..." % (ASSIGNEES[who], who))
-  # assign random incidents
-  for j in range(int(random_case_count[who])):
-    to_be_assigned[i].edit(assignee=who)
-    to_be_assigned[i].add_to_labels(RANDOM_ASSIGNMENT_LABEL) # tag incidents that were randomly assigned so that plus.sub_source can be correctly filled in. - Gdb 171030
-#    print "{0} being assigned issue {1} ({2})".format(who, to_be_assigned[i].number, i)  # DEBUG
-    i += 1
-  # assign prioritized incidents
-  for j in range(int(priority_case_count[who])):
-    if k < len(priority_to_be_assigned):  # Only do this if we have prioritized incidents
-      priority_to_be_assigned[k].edit(assignee=who)
-#      print "{0} being assigned priority issue {1} ({2})".format(who, priority_to_be_assigned[k].number, k)  # DEBUG
-      priority_assigned.append((priority_to_be_assigned[k].number,who))
-      k += 1
-    else:  # We're out of priority incidents
-      to_be_assigned[i].edit(assignee=who)
-#      print "{0} being assigned issue {1} ({2})".format(who, to_be_assigned[i].number, i)  # DEBUG
-      i += 1
-
-# Save prioritized issues so we know what we cheated on
-print("Saving priority events to file")
-with open(PRIORITY_LOG_FILE, 'a') as f:
-  for line in priority_assigned:
-    print "Priority assigned {0} to {1}".format(line[0], line[1])
-    f.write("{0},{1}\n".format(line[0], line[1]))
-
-print("Complete!")
