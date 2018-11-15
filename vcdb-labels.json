@@ -1527,21 +1527,13 @@
       }
     }, 
     "ownership": {
-      "Customer": "Customer owned", 
-      "Employee": "Employee owned", 
-      "NA": "Not applicable", 
-      "Partner": "Partner owned", 
-      "Unknown": "Unknown", 
-      "Victim": "Victim owned", 
+      "Customer": "The affected assets is consumer owned \u2013 an example would be credentials stolen from a banking customer then reused to access a banking application", 
+      "Employee": "The asset was owned by an employee of the victim organization. BYOD assets would be categorized under this label. Currently", 
+      "NA": "Ownership label is not applicable, a Human asset that clicks a malicious attachment is a common example.", 
+      "Partner": "The asset (regardless of physical location) was the property of a business partner, including a cloud provider.", 
+      "Unknown": "Ownership of the asset was not known to the incident responder or not recorded.", 
+      "Victim": "The affected asset is property of the victim organization", 
       "Other": "Owner known but not listed"
-    }, 
-    "accessibility": {
-      "External": "Publicly accessible", 
-      "Internal": "Internally accessible", 
-      "Isolated": "Internally isolated or restricted environment", 
-      "NA": "Not applicable", 
-      "Other": "Accessibility known but not listed", 
-      "Unknown": "Unknown"
     }, 
     "cloud": {
       "Customer attack": "Penetration of another web site on shared device", 
@@ -1555,30 +1547,21 @@
       "Other": "Cloud hosting known but not listed", 
       "Unknown": "The involvement of cloud assets was not measured"
     }, 
-    "governance": {
-      "Personally owned": "Personally owned asset", 
-      "3rd party owned": "Owned by 3rd party", 
-      "3rd party managed": "Managed by 3rd party", 
-      "3rd party hosted": "Hosted by 3rd party", 
-      "Internally isolated": "Isolated internal asset", 
-      "Victim governed": "The victim owns and controls the asset", 
-      "Unknown": "Unknown", 
-      "Other": "Governance known but not listed"
-    }, 
     "hosting": {
-      "External": "Externally hosted (unsure if dedicated or shared)", 
-      "External dedicated": "Externally hosted in a dedicated environment", 
-      "External shared": "Externally hosted in a shared environment", 
-      "Internal": "Internally hosted", 
-      "NA": "Not applicable", 
-      "Other": "Hosting known but not listed", 
-      "Unknown": "Unknown"
+      "External - unknown environment": "A third party provided hosted the affected asset, but it is unknown whether the victim organization\u2019s environment was shared or dedicated.", 
+      "External - dedicated environment": "A third party provider hosted the affected asset on servers dedicated to the victim organization.", 
+      "External - shared environment": "A third party provider hosted the affected asset on a shared physical device. This is common in web hosting services where multiple organizations\u2019 web applications are resident on the same physical server.", 
+      "Internal": "The affected asset was hosted within the victim organization\u2019s location.", 
+      "NA": "Hosting label is not applicable, a Human asset that clicks a malicious attachment is a common example as is portable assets like laptops or paper documents.", 
+      "Other": "Hosting arrangement known but not listed", 
+      "Unknown": "The hosting arrangement of the asset was not known to the incident responder or not recorded."
     }, 
     "management": {
-      "External": "Externally managed", 
-      "Internal": "Internally managed", 
-      "NA": "Not applicable", 
-      "Unknown": "Unknown", 
+      "External": "The affected asset was managed and maintained by a third party service provider or business partner.", 
+      "Internal": "The affected asset was managed and maintained by employees of the victim organization.", 
+      "Co-managed": "The affected asset was managed and maintained by both internal administrators as well as a third party provider or partner. There is a level of shared responsibility.", 
+      "NA": "Management label is not applicable, a Human asset that clicks a malicious attachment is a common example.", 
+      "Unknown": "The responsibility for management and maintenance of the affected asset was not known to the incident responder or not recorded.", 
       "Other": "Ownership known but not listed"
     }, 
     "country": {
@@ -1982,6 +1965,89 @@
         "Monitoring service": "Reported by a monitoring service", 
         "Other": "Discovery method was partner and known but not listed", 
         "Unknown": "Unknown"
+      }
+    }
+  }, 
+  "value chain": {
+    "development": {
+      "variety": {
+        "Bot": "A small program that can be distributed, installed, and controlled en mass.", 
+        "Trojan": "A program which masquerades as another program to get a target to execute malicious content", 
+        "Payload": "The portion a program that causes a negative effect.", 
+        "Website": "Development of any full website controlled by the attacker", 
+        "Exploit": "Code to exploit a vulnerability, including web injects.", 
+        "Persona": "A fake representation of a person, such as fake social media profiles", 
+        "Ransomware": "Ransomware (encrypt or seize stored data)", 
+        "Exploit Kits": "Code sets capable of selecting and trying multiple exploits against a target.", 
+        "NA": "No type of development was necessary", 
+        "Other": "The variety of development required is known, but is not listed.", 
+        "Unknown": "Nothing is known about the need for or type of development investment"
+      }
+    }, 
+    "non-distribution services": {
+      "variety": {
+        "Hashcracking": "i.e. converting hashes into the text that produce them", 
+        "Counter AV": "Services for testing if malware is detected by anti-virus", 
+        "VPN": "A VPN service (either formally or informally hosted) is used by the actor to obscure their source", 
+        "Proxy": "A proxy service (either formally or informally hosted) is used by the actor to obscure their source", 
+        "Marketplace": "Use of a marketplace was required as part of this incident.", 
+        "DNS": "DNS services including fast flux", 
+        "NA": "No type of non-distribution service was necessary", 
+        "Other": "The variety of non-distribution service required is known, but is not listed", 
+        "Unknown": "Nothing is known about the need for or type of non-distribution service investment"
+      }
+    }, 
+    "targeting": {
+      "variety": {
+        "Lost or stolen credentials": "lost or stolen credentials, including credental stuffing, used to pick an organization as a target", 
+        "Default credentials": "Credentials the system came with", 
+        "Email addresses": "Email addresses", 
+        "Vulnerabilities": "Knowledge of software vulnerabilities, both at an organization or associated with a specific vendor's product, used to pick them as a target.", 
+        "Misconfigurations": "Knowledge of system misconfigurations used to pick an organization as a target", 
+        "Weaknesses": "Knowledge of weaknesses other than vulnerability and misconfigurations used to pick an organization as a target", 
+        "Personal Information": "Information on individuals such as title, interests, physical location, etc, used to pick an organization as a target", 
+        "Organizational Information": "Information on an organization such as org chart, technologies in use, financial assets, etc, used to pick them as a target", 
+        "NA": "No type of targeting was necessary", 
+        "Other": "The variety of targeting was known, but is not listed", 
+        "Unknown": "Nothing is known about the need for or type of targeting investment"
+      }
+    }, 
+    "distribution": {
+      "variety": {
+        "Website": "Malicious content shared intentionally, including bullet-proof hosting", 
+        "Botnet": "For content distributed from a collection of bots.", 
+        "Compromised server": "malicious content added to a benign server, such as a webserver, by the actor, without the permission or necessarily knowledge of the server\u2019s owner", 
+        "Email": "Distribution by email including anonymous/one time and spam", 
+        "Phone": "Distribution over the Plain Old Telephone System (POTS).", 
+        "Loader": "malware that loads other malware", 
+        "NA": "No type of distribution was necessary", 
+        "Other": "The variety of distribution was known, but is not listed", 
+        "Unknown": "Nothing is known about the need for or type of distribution investment"
+      }
+    }, 
+    "cash-out": {
+      "variety": {
+        "Cryptocurrency": "exchange (sale or otherwise) for cryptocurrency", 
+        "Hijacked rewards": "Recieve value meant for someone else", 
+        "Sell stolen goods": "likely the data.variety for breaches or asset for stolen assets", 
+        "Fraud": "Financial, Medical, Tax, etc", 
+        "Direct": "i.e. stole money", 
+        "Provide service": "See distribution and non-distribution services for potential examples", 
+        "NA": "No type of cash-out was necessary", 
+        "Other": "The variety of cash-out was known, but is not listed", 
+        "Unknown": "Nothing is known about the need for or type of cash-out investment"
+      }
+    }, 
+    "money laundering": {
+      "variety": {
+        "Cryptocurrency tumbling": "Breaking an amount of cryptocurrency into smaller amounts and quickly filtering it through multiple accounts", 
+        "Smurfing": "Breaking non-crypt currency up into smaller amounts to transfer", 
+        "Physical": "Physically smuggling money", 
+        "Employment": "An individual believes they are legitimately employed, and launders money/items during the course of their employment.", 
+        "Re-shipping": "Individuals receive packages purchased through fraudulent means and subsequently repackage the merchandise for shipment, usually abroad.", 
+        "Gambling": "Gambling related money laundering. (e.g. Converting to chips and back or big wins and losses.", 
+        "Bank": "Financial institution based money laundering.", 
+        "Company": "Trade-based, shell companies, under/over paying, cash-intensive businesses, etc, used for money laundering"
       }
     }
   }, 

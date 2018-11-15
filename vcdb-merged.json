@@ -2224,16 +2224,22 @@
           "uniqueItems": true
         }, 
         "ownership": {
-          "type": "string", 
-          "enum": [
-            "Customer", 
-            "Employee", 
-            "NA", 
-            "Partner", 
-            "Unknown", 
-            "Victim", 
-            "Other"
-          ]
+          "description": "Who owns the affected asset? This can allow us to identify employee-owned (BYOD) assets.", 
+          "items": {
+            "type": "string", 
+            "enum": [
+              "Customer", 
+              "Employee", 
+              "NA", 
+              "Partner", 
+              "Unknown", 
+              "Victim", 
+              "Other"
+            ]
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
         }, 
         "cloud": {
           "description": "Only answer if you know for sure if the asset was hosted in a cloud service.", 
@@ -2251,16 +2257,33 @@
             "Unknown"
           ]
         }, 
-        "governance": {
+        "hosting": {
+          "description": "Where is the affected asset hosted/located?", 
           "items": {
             "type": "string", 
             "enum": [
-              "Personally owned", 
-              "3rd party owned", 
-              "3rd party managed", 
-              "3rd party hosted", 
-              "Internally isolated", 
-              "Victim governed", 
+              "External - unknown environment", 
+              "External - dedicated environment", 
+              "External - shared environment", 
+              "Internal", 
+              "NA", 
+              "Other", 
+              "Unknown"
+            ]
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "management": {
+          "description": "Independent of physical location, who administers and maintains the affected asset?", 
+          "items": {
+            "type": "string", 
+            "enum": [
+              "External", 
+              "Internal", 
+              "Co-managed", 
+              "NA", 
               "Unknown", 
               "Other"
             ]
@@ -2268,40 +2291,6 @@
           "minItems": 1, 
           "type": "array", 
           "uniqueItems": true
-        }, 
-        "hosting": {
-          "type": "string", 
-          "enum": [
-            "External", 
-            "External dedicated", 
-            "External shared", 
-            "Internal", 
-            "NA", 
-            "Other", 
-            "Unknown"
-          ]
-        }, 
-        "management": {
-          "type": "string", 
-          "enum": [
-            "External", 
-            "Internal", 
-            "NA", 
-            "Unknown", 
-            "Other"
-          ]
-        }, 
-        "accessibility": {
-          "description": "Please do not use.  This feature will likely be removed in the near future.  Recommend using ownership or hosting instead.", 
-          "type": "string", 
-          "enum": [
-            "External", 
-            "Internal", 
-            "Isolated", 
-            "NA", 
-            "Other", 
-            "Unknown"
-          ]
         }, 
         "notes": {
           "minLength": 1, 
@@ -2903,6 +2892,221 @@
       "description": "How was the incident discovered? <a href='http://veriscommunity.net/discovery.html#section-discovery-method' target='_blank'>More Info</a>", 
       "minLength": 1, 
       "type": "string"
+    }, 
+    "value chain": {
+      "description": "Capabilities and investments an attacker must aquire prior to the actions on target.  May be internal to the actors organization (vertically integrated org), or external (purchased in a criminal market).", 
+      "minProperties": 1, 
+      "additionalProperties": false, 
+      "properties": {
+        "development": {
+          "description": "Software that must be developed to accomplish the actions on target.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of development investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Bot", 
+                  "Trojan", 
+                  "Payload", 
+                  "Website", 
+                  "Exploit", 
+                  "Persona", 
+                  "Ransomware", 
+                  "Exploit Kits", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "non-distribution services": {
+          "description": "Services provided and used by malicous actors other than those used for distribution of actor content", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of non-distribution service investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Hashcracking", 
+                  "Counter AV", 
+                  "VPN", 
+                  "Proxy", 
+                  "Marketplace", 
+                  "DNS", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "targeting": {
+          "description": "Things that identify exploitable opportunities.  These overlap heavily with data varieties that are compromised.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of targeting investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Lost or stolen credentials", 
+                  "Default credentials", 
+                  "Email addresses", 
+                  "Vulnerabilities", 
+                  "Misconfigurations", 
+                  "Weaknesses", 
+                  "Personal Information", 
+                  "Organizational Information", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "distribution": {
+          "description": "Services used to distribute actor content.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of distribution investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Website", 
+                  "Botnet", 
+                  "Compromised server", 
+                  "Email", 
+                  "Phone", 
+                  "Loader", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "cash-out": {
+          "description": "Methods for converting something (likely the attribute compromised) into currency.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of cash-out investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Cryptocurrency", 
+                  "Hijacked rewards", 
+                  "Sell stolen goods", 
+                  "Fraud", 
+                  "Direct", 
+                  "Provide service", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "money laundering": {
+          "description": "Methods for concealing the origins of illegally obtained money.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of money laundering", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Cryptocurrency tumbling", 
+                  "Smurfing", 
+                  "Physical", 
+                  "Employment", 
+                  "Re-shipping", 
+                  "Gambling", 
+                  "Bank", 
+                  "Company"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }
+      }, 
+      "type": "object"
     }, 
     "impact": {
       "description": "<a href='http://veriscommunity.net/impact.html' target='_blank'>Impact Info</a><br />**REMINDER - UNLESS THIS IS FOR VCDB, DON'T RECORD VICTIM-INDENTIFYING INFO IF SUBMITTING TO THE DBIR**<br />**Tip: Hold CTRL or COMMAND to select multiple items from a list.", 
