@@ -37,7 +37,8 @@ pass
 ## IMPORTS
 import argparse
 import logging
-import simplejson as json # to load the json
+#import simplejson as json # to load the json
+import json # simple json not installed on python2 on dbir_data_pipeline docker image
 import fnmatch # to walk the FS
 import os # to walk the FS
 import zipfile # to compress
@@ -109,7 +110,7 @@ parser.add_argument('-v', '--verbose',
                    )
 parser.add_argument('--log', help='Location of log file', default=None)
 parser.add_argument('-i', '--input',
-                    help='The input directory containing the json',
+                    help='The input directory or comma separated directories containing the json',
                     default='../data/json')
 parser.add_argument('-o', '--output',
                     help='The output directory to store the single json file in',
@@ -121,7 +122,7 @@ parser.add_argument('-r', '--recurse',
                     help='Recurse into sub directories that may contain additional incidents.',
                     action='store_true')
 args = parser.parse_args()
-args = {k:v for k,v in vars(args).iteritems() if v is not None}
+args = {k:v for k,v in vars(args).items() if v is not None}
 
 ## Set up Logging
 updateLogger({'log_level': args['loglevel'], 'log_file': args.get('log', None)})
@@ -135,17 +136,18 @@ def main(args):
 
 
     files = list()
-    if args['recurse']:
-        logging.debug('Searching for json files recursively')
-        for root, dirnames, filenames in os.walk(args['input']):
-            logging.debug(root)
-            for filename in fnmatch.filter(filenames, '*.json'):
-                logging.debug(os.path.join(root, filename))
-                files.append(os.path.join(root, filename))
-    else:
-        for filename in os.listdir(args['input']):
-            if fnmatch.fnmatch(filename, '*.json'):
-                files.append(os.path.join(args['input'], filename))
+    for src in [s.strip() for s in args['input'].split(",")]:
+      if args['recurse']:
+          logging.debug('Searching for json files recursively')
+          for root, dirnames, filenames in os.walk(src):
+              logging.debug(root)
+              for filename in fnmatch.filter(filenames, '*.json'):
+                  logging.debug(os.path.join(root, filename))
+                  files.append(os.path.join(root, filename))
+      else:
+          for filename in os.listdir(src):
+              if fnmatch.fnmatch(filename, '*.json'):
+                  files.append(os.path.join(src, filename))
 
     incidents = list()
     try:
