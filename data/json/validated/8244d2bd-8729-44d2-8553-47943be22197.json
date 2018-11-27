@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of backdoor or C2"
+      ],
+      "vector": [
+        "Backdoor or C2"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "misuse": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Privilege abuse",
+        "Knowledge abuse"
+      ],
+      "vector": [
+        "Remote access",
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Grudge"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Former employee"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 3
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Int - reported by employee",
+  "incident_id": "78ee4940-6c82-11e7-8419-7d473c8dcba3",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Breland",
+    "attack_difficulty_initial": "Low",
+    "attack_difficulty_subsequent": "Low",
+    "attribute": {
+      "confidentiality": {
+        "data_misuse": "Y"
+      }
+    },
+    "created": "2017-10-25T21:13:18.930Z",
+    "dbir_year": 2014,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Employee installs RAT before quitting "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of backdoor by now former employee"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Destruction of data by former employee"
+      }
+    ],
+    "github": "9750",
+    "master_id": "8244d2bd-8729-44d2-8553-47943be22197",
+    "modified": "2018-02-22T11:56:04.189Z"
+  },
+  "reference": "https://nakedsecurity.sophos.com/2017/07/10/when-sysadmins-attack-again-former-worker-gets-seven-years/",
+  "schema_version": "1.3.2",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Jonathan Lee Eubanks, a 29-year-old Florida man, has been sentenced to seven years in federal prison after he used a remote access Trojan (RAT) to rain down cyber fire and brimstone on his former employer.  His crimes: rerouting visitors to his former employer\u2019s website to a rival\u2019s site; deleting all the files on the company server; hacking into an email account and masquerading as a former colleague in order to send messages full of criticism and accusations of corporate malfeasance; and stealing three credit cards from a security company software maker and using them to order rifle scopes, electronics and survivalist gear.  The recipient of his felonious wrath was Navarro Security Group, a private security services company in Florida.",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "exfiltration": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 27,
+      "month": 1,
+      "year": 2013
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "484110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Navarro Security Group"
+  }
+}
