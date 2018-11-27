@@ -93,7 +93,7 @@ class Subsource():
 
         self.cfg = cfg
 
-        if LooseVersion(cfg.get('version')) < LooseVersion("1.3.2"):
+        if LooseVersion(cfg.get('version', '1.3.2')) < LooseVersion("1.3.2"): # assume 1.3.2 since at time of writing all VZ veris is at least 1.3.2 - GDB 181127 
             raise ValueError("The veris/vcdb version must be at least 1.3.2 to include plus.subsource.")
 
         # TODO: Load GITHUB stuff
