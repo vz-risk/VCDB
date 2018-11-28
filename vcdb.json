@@ -907,6 +907,23 @@
             "variety"
           ],
           "type": "object"
+        },
+        "unknown": {
+          "properties": {
+            "notes": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "result": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array",
+              "uniqueItems": true
+            }
+          },
+          "type": "object"
         }
       },
       "type": "object"

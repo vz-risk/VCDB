@@ -2260,7 +2260,20 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_9": {
+      "merchant_level": {
+        "Level 1": "No label.",
+        "Level 2": "No label.",
+        "Level 3": "No label.",
+        "Level 4": "No label.",
+        "Unknown": "No label."
+      },
+      "req_3": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_8": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2272,7 +2285,13 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_11": {
+      "req_1": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_2": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2284,37 +2303,7 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_5": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "merchant_level": {
-        "Level 1": "No label.",
-        "Level 2": "No label.",
-        "Level 3": "No label.",
-        "Level 4": "No label.",
-        "Unknown": "No label."
-      },
-      "req_2": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_1": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "compliance_status": {
-        "Not Compliant": "No label.",
-        "Found Compliant": "No label.",
-        "Unknown": "No label."
-      },
-      "req_3": {
+      "req_9": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2332,7 +2321,18 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_8": {
+      "compliance_status": {
+        "Not Compliant": "No label.",
+        "Found Compliant": "No label.",
+        "Unknown": "No label."
+      },
+      "req_11": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_5": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2340,6 +2340,12 @@
       }
     },
     "event_chain": {
+      "attribute": {
+        "au": "Availability",
+        "cp": "Confidentiality",
+        "ia": "Integrity",
+        "unk": "Unknown"
+      },
       "action": {
         "env": "Environmental",
         "err": "Error",
@@ -2348,12 +2354,6 @@
         "mis": "Misuse",
         "phy": "Physical",
         "soc": "Social",
-        "unk": "Unknown"
-      },
-      "actor": {
-        "ext": "External",
-        "int": "Internal",
-        "prt": "Partner",
         "unk": "Unknown"
       },
       "asset": {
@@ -2366,29 +2366,12 @@
         "usr": "User device",
         "unk": "Unknown"
       },
-      "attribute": {
-        "au": "Availability",
-        "cp": "Confidentiality",
-        "ia": "Integrity",
+      "actor": {
+        "ext": "External",
+        "int": "Internal",
+        "prt": "Partner",
         "unk": "Unknown"
       }
-    },
-    "antiforensic_measures": {
-      "No evidence of AF": "No label.",
-      "Data Corruption": "No label.",
-      "Data Hiding": "No label.",
-      "Data Wiping": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "attack_difficulty_initial": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "Not Applicable": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
     },
     "analysis_status": {
       "In-progress": "Incident is currently being entered.",
@@ -2398,21 +2381,17 @@
       "Finalized": "The incident has been reviewed by Marc.",
       "Ineligible": "Does not meet the criteria to be included in the corpus."
     },
-    "unfollowed_policies": {
-      "Yes": "No label.",
-      "No": "No label.",
-      "Unknown": "No label."
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": {
+          "Yes": "Data was abused or maliciously misused",
+          "No": "Data was not abused or maliciously misused",
+          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
+          "Unknown": "No information is known about if the data was abused"
+        }
+      }
     },
     "attack_difficulty_legacy": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "Not Applicable": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "attack_difficulty_subsequent": {
       "High": "No label.",
       "Moderate": "No label.",
       "Low": "No label.",
@@ -2428,16 +2407,6 @@
       "Data the organization did not know existed on a particular asset": "No label.",
       "Unknown": "No label."
     },
-    "attribute": {
-      "confidentiality": {
-        "data_abuse": {
-          "Yes": "Data was abused or maliciously misused",
-          "No": "Data was not abused or maliciously misused",
-          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
-          "Unknown": "No information is known about if the data was abused"
-        }
-      }
-    },
     "security_maturity": {
       "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.",
       "Defined": "Processes are defined, documented, standardized and integrated into each other.",
@@ -2445,6 +2414,14 @@
       "Measured": "Processes are quantitatively managed in accordance with agreed-upon metrics.",
       "Optimizing": "Continuous process improvement by quantitative feedback and testing.",
       "Unknown": "The organizations level of maturity is unknown."
+    },
+    "antiforensic_measures": {
+      "No evidence of AF": "No label.",
+      "Data Corruption": "No label.",
+      "Data Hiding": "No label.",
+      "Data Wiping": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
     },
     "asset_os": {
       "Android": "No label.",
@@ -2459,6 +2436,29 @@
       "Windows": "No label.",
       "Windows Phone": "No label.",
       "Not applicable": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
+    },
+    "unfollowed_policies": {
+      "Yes": "No label.",
+      "No": "No label.",
+      "Unknown": "No label."
+    },
+    "attack_difficulty_initial": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "Not Applicable": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
+    },
+    "attack_difficulty_subsequent": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "Not Applicable": "No label.",
       "Unknown": "No label.",
       "Other": "No label."
     }
