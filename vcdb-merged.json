@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#", 
   "additionalProperties": false, 
-  "description": "VERIS VCDB Schema 1.3.2", 
+  "description": "VERIS VCDB Schema 1.3.3.", 
   "properties": {
     "incident_id": {
       "type": "string", 
@@ -19,11 +19,11 @@
     }, 
     "reference": {
       "type": "string", 
-      "description": "Refernce should ba a url, incident number, case ID, or other reference to the document the VERIS incident was based on."
+      "description": "Reference should be a url, incident number, case ID, or other reference to the document the VERIS incident was based on."
     }, 
     "summary": {
       "type": "string", 
-      "description": "Give a good descriptive summary of the incident in one sentence. Use natural language instead of VERIS notation, but we should be able to 'VERISize' the incident pretty well from just this description.<br />**REMINDER: IF THIS IS FOR THE DBIR AND NOT VCDB  - DON'T RECORD VICTIM-INDENTIFYING INFO**"
+      "description": "Give a good descriptive summary of the incident in several sentences. Use natural language instead of VERIS notation, but we should be able to 'VERISize' the incident pretty well from just this description.<br />**REMINDER: IF THIS IS FOR THE DBIR AND NOT VCDB  - DON'T RECORD VICTIM-INDENTIFYING INFO**"
     }, 
     "source_id": {
       "type": "string", 
@@ -31,7 +31,7 @@
     }, 
     "campaign_id": {
       "type": "string", 
-      "description": "(Way to associate multiple incident w/in one campaign)"
+      "description": "(Way to associate multiple incident w/in one campaign)."
     }, 
     "confidence": {
       "type": "string", 
@@ -51,7 +51,7 @@
           "properties": {
             "year": {
               "type": "integer", 
-              "maximum": 2020, 
+              "maximum": 2021, 
               "minimum": 1950
             }, 
             "month": {
@@ -201,7 +201,7 @@
           "type": "string"
         }, 
         "employee_count": {
-          "description": "Number of employees", 
+          "description": "Number of employees.  Only use the count of the individual instance of a business (e.g. franchise location vs entire company) if the action vector was explicitly something unique to this individual instance. (i.e. This franchisee used a non-standard POS system that was then compromised.)", 
           "type": "string", 
           "enum": [
             "Small", 
@@ -492,18 +492,20 @@
           "uniqueItems": true
         }, 
         "region": {
-          "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. Asia: 142000, East Asia (includes China): 142030, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
+          "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
           "items": {
             "type": "string", 
             "maxLength": 6, 
-            "minLength": 6
+            "minLength": 6, 
+            "pattern": "\\d{6}"
           }, 
           "minItems": 1, 
           "type": "array", 
-          "uniqueItems": true
+          "uniqueItems": true, 
+          "pattern": "\\d{6}"
         }, 
         "state": {
-          "description": "ALl CAPS.  For US states, you can use the <a href='https://en.wikipedia.org/wiki/ISO_3166-2:US'>ISO_3166-2 2-character state code</a>, otherwise use the full <a href='https://en.wikipedia.org/wiki/ISO_3166-2' target='_blank'>ISO_3166-2 Country subdivision code</a>", 
+          "description": "ALL CAPS.  For US states, you can use the <a href='https://en.wikipedia.org/wiki/ISO_3166-2:US'>ISO_3166-2 2-character state code</a>, otherwise use the full <a href='https://en.wikipedia.org/wiki/ISO_3166-2' target='_blank'>ISO_3166-2 Country subdivision code</a>", 
           "type": "string"
         }, 
         "notes": {
@@ -724,6 +726,7 @@
     "action": {
       "description": "What threat actions were involved? <a href='http://veriscommunity.net/actions.html' target='_blank'>More Info</a>", 
       "minProperties": 1, 
+      "additionalProperties": false, 
       "properties": {
         "hacking": {
           "description": "<a href='http://veriscommunity.net/actions.html#section-hacking' target='_blank'>More Info</a>", 
@@ -740,6 +743,8 @@
                   "Cryptanalysis", 
                   "CSRF", 
                   "DoS", 
+                  "Exploit misconfig", 
+                  "Exploit vuln", 
                   "Footprinting", 
                   "Forced browsing", 
                   "Format string attack", 
@@ -851,12 +856,15 @@
                   "Capture app data", 
                   "Capture stored data", 
                   "Click fraud", 
+                  "Click fraud and cryptocurrency mining", 
                   "Client-side attack", 
+                  "Cryptocurrency mining", 
                   "Destroy data", 
                   "Modify data", 
                   "Disable controls", 
                   "DoS", 
                   "Downloader", 
+                  "Exploit misconfig", 
                   "Exploit vuln", 
                   "Export data", 
                   "Packet sniffer", 
@@ -1639,11 +1647,12 @@
               "uniqueItems": true
             }, 
             "region": {
-              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. Asia: 142000, East Asia (includes China): 142030, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
+              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
               "items": {
                 "type": "string", 
                 "maxLength": 6, 
-                "minLength": 6
+                "minLength": 6, 
+                "pattern": "\\d{6}"
               }, 
               "minItems": 1, 
               "type": "array", 
@@ -2049,11 +2058,12 @@
               "uniqueItems": true
             }, 
             "region": {
-              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. Asia: 142000, East Asia (includes China): 142030, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
+              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
               "items": {
                 "type": "string", 
                 "maxLength": 6, 
-                "minLength": 6
+                "minLength": 6, 
+                "pattern": "\\d{6}"
               }, 
               "minItems": 1, 
               "type": "array", 
@@ -2087,7 +2097,7 @@
       "type": "object"
     }, 
     "asset": {
-      "description": "<a href='http://veriscommunity.net/assets.html' target='_blank'>More Info</a>", 
+      "description": "What assets were affected by the incident.  Data types and record count will be covered in the attributes section.  <a href='http://veriscommunity.net/assets.html' target='_blank'>More Info</a>", 
       "additionalProperties": false, 
       "minProperties": 1, 
       "properties": {
@@ -2214,16 +2224,22 @@
           "uniqueItems": true
         }, 
         "ownership": {
-          "type": "string", 
-          "enum": [
-            "Customer", 
-            "Employee", 
-            "NA", 
-            "Partner", 
-            "Unknown", 
-            "Victim", 
-            "Other"
-          ]
+          "description": "Who owns the affected asset? This can allow us to identify employee-owned (BYOD) assets.", 
+          "items": {
+            "type": "string", 
+            "enum": [
+              "Customer", 
+              "Employee", 
+              "NA", 
+              "Partner", 
+              "Unknown", 
+              "Victim", 
+              "Other"
+            ]
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
         }, 
         "cloud": {
           "description": "Only answer if you know for sure if the asset was hosted in a cloud service.", 
@@ -2241,16 +2257,33 @@
             "Unknown"
           ]
         }, 
-        "governance": {
+        "hosting": {
+          "description": "Where is the affected asset hosted/located?", 
           "items": {
             "type": "string", 
             "enum": [
-              "Personally owned", 
-              "3rd party owned", 
-              "3rd party managed", 
-              "3rd party hosted", 
-              "Internally isolated", 
-              "Victim governed", 
+              "External - unknown environment", 
+              "External - dedicated environment", 
+              "External - shared environment", 
+              "Internal", 
+              "NA", 
+              "Other", 
+              "Unknown"
+            ]
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "management": {
+          "description": "Independent of physical location, who administers and maintains the affected asset?", 
+          "items": {
+            "type": "string", 
+            "enum": [
+              "External", 
+              "Internal", 
+              "Co-managed", 
+              "NA", 
               "Unknown", 
               "Other"
             ]
@@ -2258,40 +2291,6 @@
           "minItems": 1, 
           "type": "array", 
           "uniqueItems": true
-        }, 
-        "hosting": {
-          "type": "string", 
-          "enum": [
-            "External", 
-            "External dedicated", 
-            "External shared", 
-            "Internal", 
-            "NA", 
-            "Other", 
-            "Unknown"
-          ]
-        }, 
-        "management": {
-          "type": "string", 
-          "enum": [
-            "External", 
-            "Internal", 
-            "NA", 
-            "Unknown", 
-            "Other"
-          ]
-        }, 
-        "accessibility": {
-          "description": "Please do not use.  This feature will likely be removed in the near future.  Recommend using ownership or hosting instead.", 
-          "type": "string", 
-          "enum": [
-            "External", 
-            "Internal", 
-            "Isolated", 
-            "NA", 
-            "Other", 
-            "Unknown"
-          ]
         }, 
         "notes": {
           "minLength": 1, 
@@ -2631,6 +2630,7 @@
                   "Partner", 
                   "Patient", 
                   "Student", 
+                  "Victim organization", 
                   "Other", 
                   "Unknown"
                 ]
@@ -2765,6 +2765,23 @@
             "variety"
           ], 
           "type": "object"
+        }, 
+        "unknown": {
+          "properties": {
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }, 
+            "result": {
+              "items": {
+                "type": "string"
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "type": "object"
         }
       }, 
       "type": "object"
@@ -2780,50 +2797,333 @@
       ]
     }, 
     "discovery_method": {
-      "type": "string", 
-      "enum": [
-        "Ext - actor disclosure", 
-        "Ext - audit", 
-        "Ext - customer", 
-        "Ext - emergency response team", 
-        "Ext - found documents", 
-        "Ext - fraud detection", 
-        "Ext - incident response", 
-        "Ext - law enforcement", 
-        "Ext - monitoring service", 
-        "Ext - suspicious traffic", 
-        "Ext - other", 
-        "Ext - unknown", 
-        "Ext - unrelated 3rd party", 
-        "Int - antivirus", 
-        "Int - data loss prevention", 
-        "Int - financial audit", 
-        "Int - fraud detection", 
-        "Int - HIDS", 
-        "Int - incident response", 
-        "Int - IT review", 
-        "Int - infrastructure monitoring", 
-        "Int - log review", 
-        "Int - NIDS", 
-        "Int - reported by employee", 
-        "Int - security alarm", 
-        "Int - break in discovered", 
-        "Int - other", 
-        "Int - unknown", 
-        "Prt - antivirus", 
-        "Prt - audit", 
-        "Prt - incident response", 
-        "Prt - monitoring service", 
-        "Prt - other", 
-        "Prt - unknown", 
-        "Other", 
-        "Unknown"
-      ]
+      "description": "What discovery method was involved? <a href='http://veriscommunity.net/discovery.html#section-discovery-method' target='_blank'>More Info</a>", 
+      "minProperties": 1, 
+      "additionalProperties": false, 
+      "properties": {
+        "external": {
+          "description": "Discovered by an external entity.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Actor disclosure", 
+                  "Audit", 
+                  "Customer", 
+                  "Emergency response team", 
+                  "Found documents", 
+                  "Fraud detection", 
+                  "Incident response", 
+                  "Law enforcement", 
+                  "Monitoring service", 
+                  "Other", 
+                  "Security researcher", 
+                  "Suspicious traffic", 
+                  "Unknown", 
+                  "Unrelated 3rd party"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "internal": {
+          "description": "Discovered by an external partner.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Antivirus", 
+                  "Break in discovered", 
+                  "Data loss prevention", 
+                  "Financial audit", 
+                  "Fraud detection", 
+                  "Hids", 
+                  "Incident response", 
+                  "Infrastructure monitoring", 
+                  "It review", 
+                  "Log review", 
+                  "Nids", 
+                  "Other", 
+                  "Reported by employee", 
+                  "Security alarm", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "partner": {
+          "description": "Discovered by a partner of the victim.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Antivirus", 
+                  "Audit", 
+                  "Incident response", 
+                  "Monitoring service", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "other": {
+          "type": "boolean"
+        }, 
+        "unknown": {
+          "type": "boolean"
+        }
+      }, 
+      "type": "object"
     }, 
     "discovery_notes": {
       "description": "How was the incident discovered? <a href='http://veriscommunity.net/discovery.html#section-discovery-method' target='_blank'>More Info</a>", 
       "minLength": 1, 
       "type": "string"
+    }, 
+    "value_chain": {
+      "description": "Capabilities and investments an attacker must aquire prior to the actions on target.  May be internal to the actors organization (vertically integrated org), or external (purchased in a criminal market).", 
+      "minProperties": 1, 
+      "additionalProperties": false, 
+      "properties": {
+        "development": {
+          "description": "Software that must be developed to accomplish the actions on target.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of development investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Bot", 
+                  "Trojan", 
+                  "Payload", 
+                  "Website", 
+                  "Exploit", 
+                  "Persona", 
+                  "Ransomware", 
+                  "Exploit Kits", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "non-distribution services": {
+          "description": "Services provided and used by malicious actors other than those used for distribution of actor content", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of non-distribution service investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Hashcracking", 
+                  "Counter AV", 
+                  "VPN", 
+                  "Proxy", 
+                  "Marketplace", 
+                  "DNS", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "targeting": {
+          "description": "Things that identify exploitable opportunities.  These overlap heavily with data varieties that are compromised.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of targeting investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Lost or stolen credentials", 
+                  "Default credentials", 
+                  "Email addresses", 
+                  "Vulnerabilities", 
+                  "Misconfigurations", 
+                  "Weaknesses", 
+                  "Personal Information", 
+                  "Organizational Information", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "distribution": {
+          "description": "Services used to distribute actor content.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of distribution investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Website", 
+                  "Botnet", 
+                  "Compromised server", 
+                  "Email", 
+                  "Phone", 
+                  "Loader", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "cash-out": {
+          "description": "Methods for converting something (likely the attribute compromised) into currency.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of cash-out investments", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Cryptocurrency", 
+                  "Hijacked rewards", 
+                  "Sell stolen goods", 
+                  "Fraud", 
+                  "Direct", 
+                  "Provide service", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }, 
+        "money laundering": {
+          "description": "Methods for concealing the origins of illegally obtained money.", 
+          "additionalProperties": false, 
+          "properties": {
+            "variety": {
+              "description": "Varieties of money laundering", 
+              "items": {
+                "type": "string", 
+                "enum": [
+                  "Cryptocurrency tumbling", 
+                  "Smurfing", 
+                  "Physical", 
+                  "Employment", 
+                  "Re-shipping", 
+                  "Gambling", 
+                  "Bank", 
+                  "Company"
+                ]
+              }, 
+              "minItems": 1, 
+              "type": "array", 
+              "uniqueItems": true
+            }, 
+            "notes": {
+              "minLength": 1, 
+              "type": "string"
+            }
+          }, 
+          "required": [
+            "variety"
+          ], 
+          "type": "object"
+        }
+      }, 
+      "type": "object"
     }, 
     "impact": {
       "description": "<a href='http://veriscommunity.net/impact.html' target='_blank'>Impact Info</a><br />**REMINDER - UNLESS THIS IS FOR VCDB, DON'T RECORD VICTIM-INDENTIFYING INFO IF SUBMITTING TO THE DBIR**<br />**Tip: Hold CTRL or COMMAND to select multiple items from a list.", 
@@ -3084,6 +3384,7 @@
     }, 
     "plus": {
       "type": "object", 
+      "description": "Plus is the appropriate place to extend the VERIS schema for your own needs.  Add organization-specific enumerations here.", 
       "properties": {
         "row_number": {
           "type": "number"
@@ -3218,11 +3519,13 @@
                 }, 
                 "data_abuse": {
                   "minLength": 1, 
-                  "type": "string"
-                }, 
-                "data_misuse": {
-                  "minLength": 1, 
-                  "type": "string"
+                  "type": "string", 
+                  "enum": [
+                    "Yes", 
+                    "No", 
+                    "Other", 
+                    "Unknown"
+                  ]
                 }, 
                 "partner_data": {
                   "minLength": 1, 
@@ -3317,10 +3620,6 @@
           "minItems": 1, 
           "type": "array", 
           "uniqueItems": false
-        }, 
-        "f500": {
-          "minLength": 1, 
-          "type": "string"
         }, 
         "github": {
           "minLength": 1, 
@@ -3493,10 +3792,6 @@
           }, 
           "type": "object"
         }, 
-        "public_disclosure": {
-          "minLength": 1, 
-          "type": "string"
-        }, 
         "security_maturity": {
           "description": "How would you rate the maturity of the victim's overall security program?", 
           "minLength": 1, 
@@ -3562,6 +3857,12 @@
       "required": [
         "master_id"
       ]
+    }, 
+    "extra": {
+      "type": "object", 
+      "additionalProperties": false, 
+      "description": "Extra is a reserved name and should not appear in any objects. It should only be used for temporary derived columns during analysis.", 
+      "properties": {}
     }, 
     "corrective_action": {
       "description": "What corrective action(s) are planned (or recommended) to prevent and/or detect similar incidents in the future?<br />This can include general recommendations, specific changes to policy, procedures, personnel, and technology, short-term and long-term strategies, etc. Don't simply copy what the investigator said. Tie to the root causes listed above, and focus on practical, effective corrective actions.", 
