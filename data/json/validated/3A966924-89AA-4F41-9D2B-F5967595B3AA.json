@@ -3,7 +3,8 @@
     "hacking": {
       "notes": "client records were hosted on HQSU's server with only a username and password required to access and download lots of sensitive information on the clients; there is a video documenting a directory traversal attack",
       "variety": [
-        "Path traversal"
+        "Path traversal",
+        "Exploit vuln"
       ],
       "vector": [
         "Web application"
@@ -60,8 +61,8 @@
         "variety": "S - Web application"
       }
     ],
-    "governance": [
-      "3rd party hosted"
+    "hosting": [
+      "External - unknown environment"
     ],
     "notes": "client records were hosted on HQSU's server with only a username and password required to access and download lots of sensitive information on the clients"
   },
@@ -88,7 +89,13 @@
       ]
     }
   },
-  "discovery_method": "Ext - customer",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
   "discovery_notes": "lawsuit is based on the case of Adela Gonzalez, who was a client of Los Angeles-based Reyes & Barsoum L.L.P. a workers comp law firm that she hired to represent her workers comp suit. She claims her personal information was stolen from her lawyer's databases by private investigators hired by the insurers",
   "impact": {
     "overall_rating": "Unknown"
@@ -118,7 +125,7 @@
     }
   },
   "reference": "https://www.databreaches.net/lawsuit-claims-workers-comp-insurers-hacked-into-injured-workers-files/",
-  "schema_version": "1.3.2",
+  "schema_version": "1.3.3",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "Lawsuit claims workers comp insurers hacked into injured workers' files - HQSU Sign Up Services Inc.",

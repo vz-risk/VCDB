@@ -46,9 +46,7 @@
         "variety": "P - Customer"
       }
     ],
-    "governance": [
-      "Personally owned"
-    ]
+    "notes": "Following enumerations present before veris 1.3.3 removed: asset.governance.Personally owned."
   },
   "attribute": {
     "confidentiality": {
@@ -76,7 +74,13 @@
       ]
     }
   },
-  "discovery_method": "Ext - customer",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
   "impact": {
     "iso_currency_code": "ZAR",
     "loss": [
@@ -110,7 +114,7 @@
     }
   },
   "reference": "http://mybroadband.co.za/news/banking/90585-why-absa-mtn-clients-were-targeted-in-online-banking-fraud.html; http://mybroadband.co.za/news/banking/76994-this-is-how-sim-swap-fraud-happens-absa.html",
-  "schema_version": "1.3.2",
+  "schema_version": "1.3.3",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "ABSA customers were victims of SIM swap fraud, allowing external actors to receive one-time passwords via SMS (after acquiring other information from phishing attacks). Armed with both sets of data, fraudulent transactions ensue. ",

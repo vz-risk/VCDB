@@ -14,7 +14,8 @@
         "Infiltrate"
       ],
       "variety": [
-        "Forced browsing"
+        "Forced browsing",
+        "Exploit vuln"
       ],
       "vector": [
         "Web application"
@@ -57,10 +58,14 @@
       }
     ],
     "cloud": "Hosting error",
-    "governance": [
-      "3rd party hosted",
-      "3rd party managed",
-      "3rd party owned"
+    "hosting": [
+      "External - unknown environment"
+    ],
+    "management": [
+      "External"
+    ],
+    "ownership": [
+      "Partner"
     ],
     "total_amount": 1
   },
@@ -83,7 +88,13 @@
     }
   },
   "confidence": "Medium",
-  "discovery_method": "Ext - actor disclosure",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
   "incident_id": "4a615ac0-8115-11e7-9cfb-2f8f443557c3",
   "plus": {
     "analysis_status": "Validated",
@@ -116,7 +127,7 @@
     ]
   },
   "reference": "http://www.zdnet.com/article/millions-verizon-customer-records-israeli-data/",
-  "schema_version": "1.3.2",
+  "schema_version": "1.3.3",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "Misconfiguration of AWS bucket leads to customer data disclosure",

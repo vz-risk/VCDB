@@ -3,7 +3,8 @@
     "hacking": {
       "notes": "According to a blog post by Malwarebytes, hackers injected pseudo-Darkleech malware directly into the website's page, triggering a secondary ransomware infection via the Neutrino Exploit Kit. ",
       "variety": [
-        "SSI injection"
+        "SSI injection",
+        "Exploit vuln"
       ],
       "vector": [
         "Web application"
@@ -60,7 +61,13 @@
       ]
     }
   },
-  "discovery_method": "Ext - customer",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
   "impact": {
     "overall_rating": "Unknown"
   },
@@ -82,7 +89,7 @@
     }
   },
   "reference": "http://www.scmagazine.com/misfortune-cookie-mr-chow-restaurants-website-hacked-to-distribute-ransomware/article/519887/",
-  "schema_version": "1.3.2",
+  "schema_version": "1.3.3",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "Mr. Chow restaurants has reportedly been compromised to deliver ransomware to visitors",
