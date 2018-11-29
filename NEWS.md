@@ -1,3 +1,6 @@
+### 2018-11-29
+VCDB has been updated to version 1.3.3.  This update includes the schema as well as all JSON (using the convert_1.3.2_to_1.3.3.py script from github.com/vz-risk/veris/bin.  Note: plus.master_id was removed as it is now in verisc.
+
 ### 2018-11-27
 The DBIR team has moved to an automated update process for VCDB.  This has a few impacts.
 
