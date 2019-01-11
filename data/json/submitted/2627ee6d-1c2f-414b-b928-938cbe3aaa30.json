@@ -1,0 +1,114 @@
+{
+  "action": {
+    "error": {
+      "notes": "left data on cloud storage repository with no controls not even a password, and in clear text jsons.",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 48000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 48000000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "discovery_notes": "Found by UpGuard Cyber Researchers",
+  "incident_id": "777e8660-c32f-11e8-be54-d7fc81504f5e",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2018-09-28T20:32:43.673Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "11297",
+    "master_id": "2627ee6d-1c2f-414b-b928-938cbe3aaa30",
+    "modified": "2018-09-28T20:32:43.673Z",
+    "timeline": {
+      "notification": {
+        "day": 18,
+        "month": 4,
+        "year": 2018
+      }
+    }
+  },
+  "reference": "https://www.zdnet.com/article/data-firm-leaks-48-million-user-profiles-it-scraped-from-facebook-linkedin-others/ ; https://www.databreaches.net/a-private-intelligence-platform-localblox-leaked-48-million-personal-data-records/",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "cloud storage repository containing information belonging to LocalBlox, a personal and business data search service, was left publicly accessible, exposing 48 million records of detailed personal information on tens of millions of individuals, gathered and scraped from multiple sources.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "519130",
+    "state": "WA",
+    "victim_id": "LocalBlox"
+  }
+}

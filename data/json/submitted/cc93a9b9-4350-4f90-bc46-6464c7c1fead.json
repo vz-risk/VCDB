@@ -1,0 +1,155 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Executive",
+        "Finance"
+      ],
+      "variety": [
+        "Phishing",
+        "Pretexting"
+      ],
+      "vector": [
+        "Documents",
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CO"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Karina Henao",
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "amount": 1,
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "P - Finance"
+      }
+    ],
+    "country": [
+      "US"
+    ],
+    "management": [
+      "Internal"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Fraud detection"
+      ]
+    }
+  },
+  "incident_id": "3222dfd0-a9f8-11e8-b1ba-fd48fe3201a4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "jasoncmiller79",
+    "created": "2018-08-27T17:30:54.348Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen credentials"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting"
+      }
+    ],
+    "master_id": "cc93a9b9-4350-4f90-bc46-6464c7c1fead",
+    "modified": "2018-09-11T22:39:14.028Z"
+  },
+  "reference": "https://wcfcourier.com/news/local/crime-and-courts/woman-fleeced-hampton-firm-grand-jury-says/article_f77fcd09-9019-51a3-9834-7b882243fbff.html",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A Colombian woman has been charged with bilking a Hampton, IA, company of thousands of dollars after hijacking the business operator\u2019s email.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 28,
+      "month": 9,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "236",
+    "state": "IA",
+    "victim_id": "Buresh Building Systems"
+  }
+}

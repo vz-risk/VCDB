@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2017-5638",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "OS commanding",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate",
+        "Elevate"
+      ],
+      "variety": [
+        "Adminware",
+        "Click fraud and cryptocurrency mining",
+        "Password dumper"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Created account",
+        "Repurpose",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "6653fb70-d885-11e8-a65e-ff31a80401c2",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Spitler",
+    "attack_difficulty_initial": "Low",
+    "attack_difficulty_subsequent": "Medium",
+    "created": "2018-10-25T23:02:46.187Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "svr",
+        "attribute": "ia",
+        "summary": "OS Commanding"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "svr",
+        "attribute": "ia",
+        "summary": "Password dumper"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "svr",
+        "attribute": "cp",
+        "summary": "Password dumper "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "svr",
+        "attribute": "ia",
+        "summary": "OS commanding "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "svr",
+        "attribute": "ia",
+        "summary": "Cryptomining"
+      }
+    ],
+    "investigator": "Ezard",
+    "master_id": "c139e7b4-b45b-4498-8742-f9677e35c685",
+    "modified": "2018-10-25T23:02:46.187Z"
+  },
+  "reference": "VZIR_2019_0002",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vzir",
+  "summary": "Web vuln used to trigger power shells commands and install pw dumpers and cryptominter",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Months"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 16,
+      "month": 3,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "561599"
+  }
+}

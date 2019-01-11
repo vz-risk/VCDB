@@ -1,0 +1,107 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Email attachment"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "incident_id": "d69d6c70-fe75-11e8-aee0-f7420d4f3238",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "swidup",
+    "created": "2018-12-13T09:31:48.889Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "External actor sends phishing email to target."
+      },
+      {
+        "action": "mal",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Internal actor falls for the bait and installs the ransomware."
+      }
+    ],
+    "github": "12709",
+    "master_id": "b35ff9cd-2e71-4d27-a51b-c46d6a515b1c",
+    "modified": "2018-12-13T09:31:48.889Z"
+  },
+  "reference": "http://www.ics-shipping.org/docs/default-source/resources/safety-security-and-operations/guidelines-on-cyber-security-onboard-ships.pdf?sfvrsn=16",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A shipowner reported that the company\u2019s business networks were infected with ransomware, apparently from an email attachment. The source of the ransomware was from two unwitting ship agents, in separate ports, and on separate occasions. Ships were also affected but the damage was limited to the business networks, while navigation and ship operations were unaffected. In one case, the owner paid the ransom.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "483"
+  }
+}

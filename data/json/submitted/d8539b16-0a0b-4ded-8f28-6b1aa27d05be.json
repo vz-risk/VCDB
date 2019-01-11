@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "NG"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 2,
+        "variety": "P - End-user"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "total_amount": 3
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify privileges"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "17904680-974c-11e8-8342-0f8f10fcd812",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "jasoncmiller79",
+    "created": "2018-08-03T22:47:46.575Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen credentials"
+      }
+    ],
+    "master_id": "d8539b16-0a0b-4ded-8f28-6b1aa27d05be",
+    "modified": "2018-08-28T18:31:05.039Z"
+  },
+  "reference": "https://www.heraldandnews.com/news/local_news/county-data-breach-from-email-scam/article_36bc9f83-8136-5a40-9a9b-e7b72df73bae.html",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Klamath County discovered that two employees clicked a link in a mass phishing scam email that prompted employees to share their county credentials and sign an online document",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 9,
+      "month": 7,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "921190",
+    "state": "OR",
+    "victim_id": "Klamath County, OR"
+  }
+}
