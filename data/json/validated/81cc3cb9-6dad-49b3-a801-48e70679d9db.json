@@ -1,0 +1,150 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Capture app data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Fin7"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - POS controller"
+      }
+    ],
+    "country": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "44effb40-d0bb-11e8-bbbb-67b2993a8980",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2018-10-16T04:03:31.600Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Hacker gains access to POS server infrastructure through unknown hacking means."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Hacker installs malware to snarf customer credit card data."
+      }
+    ],
+    "github": "12290",
+    "master_id": "81cc3cb9-6dad-49b3-a801-48e70679d9db",
+    "modified": "2018-10-16T04:03:31.600Z",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 10,
+        "year": 2018
+      }
+    }
+  },
+  "reference": "https://www.zdnet.com/article/burgerville-customer-credit-card-info-stolen-in-data-breach-laid-at-fin7s-feet/; https://pdx.eater.com/2018/10/4/17936608/burgerville-data-breach; https://www.wweek.com/news/2018/10/03/class-action-lawsuit-filed-against-pacific-northwest-burgerville-chain-for-possible-data-breach-damages/",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Burgerville has revealed a data breach impacting the chain which may have led to the theft of detailed credit card information belonging to customers.  Malware was installed on Burgerville systems in order to scrape and steal customer data. Burgerville says that customer credit and debit card information, including names, card numbers, expiration dates, and CVV security numbers were stolen.The data breach has been attributed to Fin7, also known as Carbanak Group, an international hacking ring which has successfully launched cyberattacks against at least 100 US companies.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 1
+    },
+    "incident": {
+      "month": 9,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "722511",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Burgerville"
+  }
+}

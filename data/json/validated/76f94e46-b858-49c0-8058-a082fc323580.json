@@ -1,0 +1,120 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Brute force"
+      ],
+      "vector": [
+        "Desktop sharing software"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "51ad4280-fe78-11e8-aee0-f7420d4f3238",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "swidup",
+    "created": "2018-12-13T09:47:58.177Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Attacker brute forces passwords on server."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "System encrypted until ransom paid or system restored"
+      }
+    ],
+    "github": "12709",
+    "master_id": "76f94e46-b858-49c0-8058-a082fc323580",
+    "modified": "2018-12-13T09:47:58.177Z"
+  },
+  "reference": "http://www.ics-shipping.org/docs/default-source/resources/safety-security-and-operations/guidelines-on-cyber-security-onboard-ships.pdf?sfvrsn=16",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A ransomware infection on the main application server of the ship caused complete disruption of the IT infrastructure. The ransomware encrypted every critical file on the server and as a result, sensitive data were lost, and applications needed for ship\u2019s administrative operations were unusable. The incident was reoccurring even after complete restoration of the application server. The root cause of the infection was poor password policy that allowed attackers to brute force remote management services successfully. The company\u2019s IT department deactivated the undocumented user and enforced a strong password policy on the ship\u2019s systems to remediate the incident.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "483",
+    "region": [
+      "019021"
+    ]
+  }
+}

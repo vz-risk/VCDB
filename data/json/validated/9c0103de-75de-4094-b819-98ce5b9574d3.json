@@ -1,19 +1,25 @@
 {
   "action": {
-    "hacking": {
+    "misuse": {
       "result": [
+        "Infiltrate",
         "Exfiltrate"
       ],
       "variety": [
-        "Use of backdoor or C2"
+        "Data mishandling",
+        "Email misuse",
+        "Privilege abuse"
       ],
       "vector": [
-        "Unknown"
+        "LAN access"
       ]
     }
   },
   "actor": {
     "internal": {
+      "job_change": [
+        "Resigned"
+      ],
       "motive": [
         "Fun"
       ],
@@ -26,14 +32,28 @@
     "assets": [
       {
         "variety": "S - Database"
+      },
+      {
+        "variety": "S - Mail"
       }
+    ],
+    "country": [
+      "GB"
     ]
   },
   "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Unknown"
+      },
+      "variety": [
+        "Destruction"
+      ]
+    },
     "confidentiality": {
       "data": [
         {
-          "variety": "Medical"
+          "variety": "Personal"
         }
       ],
       "data_disclosure": "Yes",
@@ -50,7 +70,7 @@
   "discovery_method": {
     "internal": {
       "variety": [
-        "Unknown"
+        "It review"
       ]
     }
   },
@@ -59,10 +79,33 @@
     "analysis_status": "Validated",
     "analyst": "swidup",
     "created": "2017-12-27T10:37:01.353Z",
-    "dbir_year": 2018,
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access of payroll data/patient data"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Transfer of data to personal email"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "au",
+        "summary": "deletion of work files etc."
+      }
+    ],
     "github": "10579",
     "master_id": "9c0103de-75de-4094-b819-98ce5b9574d3",
-    "modified": "2017-12-27T10:37:01.353Z",
+    "modified": "2018-07-20T22:31:46.786Z",
     "sub_source": "phidbr",
     "timeline": {
       "notification": {
@@ -76,7 +119,7 @@
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "An embittered office worker hacked the leading private hospital where she worked so she could find out her colleagues' wages.",
-  "targeted": "Opportunistic",
+  "targeted": "NA",
   "timeline": {
     "discovery": {
       "unit": "Years",

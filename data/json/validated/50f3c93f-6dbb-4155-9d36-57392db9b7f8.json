@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Elevate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    },
+    "unknown": {
+      "notes": "Added by rules.py due to no attribute section."
+    }
+  },
+  "confidence": "Medium",
+  "control_failure": "2FA",
+  "cost_corrective_action": "Simple and cheap",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "35d1ca70-c117-11e8-a33a-95e6749d3999",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Spitler",
+    "created": "2018-09-26T03:22:26.499Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen credentials"
+      }
+    ],
+    "github": "12162",
+    "master_id": "50f3c93f-6dbb-4155-9d36-57392db9b7f8",
+    "modified": "2018-09-26T03:22:26.499Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.bizjournals.com/sanfrancisco/news/2018/09/10/phishing-biotech-guardant-health-ipo-liquid-biopsy.html",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Phishing works",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "621511",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Guardant Health"
+  }
+}

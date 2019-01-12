@@ -1,0 +1,117 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Forced browsing",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "cost_corrective_action": "Simple and cheap",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 290000,
+        "rating": "Moderate",
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_amount": 290000,
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "38c7a230-b6a0-11e8-b56a-011002460f8b",
+  "notes": "300,000 invoices ,but does not specify how many unique PII records. ",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Spitler",
+    "attack_difficulty_initial": "Low",
+    "attack_difficulty_subsequent": "Low",
+    "created": "2018-09-12T19:35:19.875Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Forced browsing "
+      }
+    ],
+    "github": "11557",
+    "master_id": "f015b795-b677-4c31-a696-603a201619f0",
+    "modified": "2018-09-12T19:35:19.875Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "http://www.securityprivacyandthelaw.com/2018/06/french-data-protection-authority-imposes-a-record-250000-e-fine-to-optical-center-for-a-security-breach-on-its-website/",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Website for Optical Center was configured where forced browsing could be used to view other customers' invoices",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "446130",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Optical Center"
+  }
+}

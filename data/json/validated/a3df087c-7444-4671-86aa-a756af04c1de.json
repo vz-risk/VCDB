@@ -1,0 +1,152 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "control_failure": "security awareness training, no two factor authentication",
+  "cost_corrective_action": "Simple and cheap",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "f41a65a0-aa01-11e8-b272-396d7fe012b7",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2018-08-27T19:14:50.113Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen credentials"
+      }
+    ],
+    "github": "11623",
+    "master_id": "a3df087c-7444-4671-86aa-a756af04c1de",
+    "modified": "2018-09-14T22:25:25.354Z",
+    "timeline": {
+      "notification": {
+        "day": 15,
+        "month": 6,
+        "year": 2018
+      }
+    }
+  },
+  "reference": "http://www.greatbanctrust.com/img/docs/noticeofBreach.pdf",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "User fell victim to a phishing attack which led to the compromise of customer credentials and other information. The attacker created an email folder and attempted to direct wire transfers to customers but no evidence that they were successful.",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 23,
+      "month": 10,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "522110",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "GreatBanc Trust Company"
+  }
+}

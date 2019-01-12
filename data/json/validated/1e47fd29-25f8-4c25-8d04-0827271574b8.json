@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Unknown"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "management": [
+      "Internal"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1290,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 1291,
+      "data_victim": [
+        "Employee",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "93233be0-a9fd-11e8-a274-afc3aa8c5110",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "jasoncmiller79",
+    "created": "2018-08-27T18:35:44.728Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen credentials"
+      }
+    ],
+    "master_id": "1e47fd29-25f8-4c25-8d04-0827271574b8",
+    "modified": "2018-09-11T22:19:04.636Z"
+  },
+  "reference": "https://healthitsecurity.com/news/interact-of-michigan-phishing-attack-exposes-phi-on-1290-people",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 8, 2018, InterAct of Michigan, Inc. (\u201cInterAct\u201d) became aware that an unauthorized third party obtained access to an InterAct e-mail account.  On July 30, 2018, InterAct determined that the e-mail account contained certain of its clients\u2019 personal information including those clients\u2019 names and Social Security numbers, and, in some instances, dates of birth, treatment history, and prescription information.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 2
+    },
+    "incident": {
+      "day": 8,
+      "month": 6,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "621330",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "InterAct of Michigan, Inc."
+  }
+}
