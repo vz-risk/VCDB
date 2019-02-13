@@ -1,0 +1,144 @@
+{
+    "incident_id": "5c248d80-2fbb-11e9-a1a1-c18441714bf8",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cso.com.au/article/657653/ex-employee-sued-by-firm-after-falling-bec-scam/; https://www.bbc.com/news/uk-scotland-glasgow-west-47161340",
+    "summary": "Scottish custom publishing house Peebles Media Group is suing a former employee, Patricia Reilly, for losses stemming from nearly £200,000 of the company’s money she transferred to a business email compromise (BEC) fraudster.   BEC fraud is a huge business that the FBI has attributed to over $12 billion in losses worldwide since 2013. The scam has many variants but typically involves a fraudster impersonating a senior officer over email and instructing a subordinate to urgently transfer cash to a purported supplier’s or business partner’s account that is actually the fraudster’s account.   In this case, the scammers emailed Reilly in early October 2015 and impersonated the company’s managing director, Yvonne Bremner, according to reports in British media. The ongoing civil case is being heard at the Court of Session in Edinburgh.  In total, Reilly, a credit controller at Peebles Media, made four payments to the fraudsters totaling £193,250. The company’s bank has since reimbursed £85,000 of the firm’s losses and Peebles Media is suing Reilly for the outstanding £108,000.     The fraudsters appeared to have some knowledge of Peebles Media’s operations, sending Reilly emails impersonating Bremner during a week in which the managing director and Reilly’s line manager were on holidays. BEC scammers are known to intensively study targets, including compromising email accounts to monitor communications between employees, suppliers, and partners.    According to The Sunday Post, Reilly liaised with her line manager for the first payment request of £24,800. The line manager made that payment via Britain’s Clearing House Automated Payment System (CHAPS) payment system.   Three days later, by which time Bremner and the line manager were on holidays, Reilly received another email purporting to come from Bremner that asked for £75,200 to be transferred online. She made several payments in the following days totaling about £108,000.      Reilly was fired in November 2015 for alleged gross misconduct and subsequently lost an appeal over her dismissal.   Peebles Media alleges that the fraudulent emails were not sent from Bremner’s email account. The company claims it told Reilly that no bills were due to be paid during the two weeks that Bremner was away.    The company also says that Reilly had read a warning about fraud when she accessed the firm’s online banking account. Reilly claims the company never provided training about online fraud.  Bremner, who was on holiday in the Canary Islands when the fraud occurred, says she wasn’t aware that Reilly could make payments since she did not have access to the firm’s current account. Bremner discovered the bogus emails upon her return from her holiday.     As per the BBC, the fraud was discovered by a colleague of Reilly’s when the colleague logged onto the firm’s online bank account and noticed a fraud warning.    Peebles Media’s lawyers accused Reilly of being negligent and are arguing that she was in breach of her duties to exercise reasonable care that she owed her employer. The firm alleges Reilly should have recognized the emails were suspicious.   BEC fraudsters have pulled off elaborate scams in the past that have even fooled employees of multinational tech giants, where employees could be expected to be more savvy to online fraud. And Reilly isn’t the first employee to be fired for falling victim to the fraud. A CEO of a supplier to Boeing and Airbus was fired in 2016 after wiring €52.8m to fraudsters.    ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2015,
+            "month": 10
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 7
+        }
+    },
+    "victim": {
+        "victim_id": "Peebles Media Group",
+        "employee_count": "11 to 100",
+        "industry": "51112",
+        "country": [
+            "GB"
+        ]
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Phishing",
+                "Pretexting"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Finance"
+            ],
+            "notes": "Credit Controller",
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 3,
+        "assets": [
+            {
+                "variety": "U - Laptop",
+                "amount": 1
+            },
+            {
+                "variety": "P - Finance",
+                "amount": 2
+            }
+        ],
+        "country": [
+            "Unknown"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data": [
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Unknown"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Fraud detection"
+            ]
+        }
+    },
+    "discovery_notes": "Fraud warning from the bank",
+    "impact": {
+        "overall_rating": "Damaging",
+        "iso_currency_code": "GBP",
+        "overall_amount": 200000,
+        "loss": [
+            {
+                "variety": "Asset and fraud",
+                "rating": "Major",
+                "amount": 200000
+            }
+        ]
+    },
+    "notes": "First time Suzanne saw someone getting sued over this.",
+    "plus": {
+        "created": "2019-02-14T02:42:34.346Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Attacker send phishing e-mail"
+            },
+            {
+                "action": "soc",
+                "actor": "int",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Employee sends money to bad guy."
+            }
+        ],
+        "modified": "2019-02-14T02:42:34.346Z",
+        "master_id": "847964b2-ce0e-4b5b-9ce8-085c933fe387",
+        "analysis_status": "Validated",
+        "analyst": "alexcpsec",
+        "dbir_year": 2019,
+        "github": "13130"
+    },
+    "schema_version": "1_3_3"
+}
