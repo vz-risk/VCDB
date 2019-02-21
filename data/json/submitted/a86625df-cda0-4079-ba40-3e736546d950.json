@@ -1,101 +1,103 @@
 {
-  "action": {
-    "physical": {
-      "result": [
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Theft"
-      ],
-      "vector": [
-        "Victim secure area"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "US"
-      ],
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Unaffiliated"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "U - Laptop"
-      }
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "availability": {
-      "variety": [
-        "Loss"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 10000,
-          "variety": "Medical"
+    "incident_id": "bfd78b10-034d-11e9-aee0-f7420d4f3238",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hipaajournal.com/stolen-raleys-pharmacy-laptop-may-have-contained-phi-of-10000-patients/",
+    "summary": "Stolen Raley’s Pharmacy Laptop May Have Contained PHI of 10,000 Patients",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 9,
+            "day": 24
         }
-      ],
-      "data_disclosure": "Potentially",
-      "data_victim": [
-        "Customer"
-      ],
-      "state": [
-        "Stored unencrypted"
-      ]
-    }
-  },
-  "confidence": "High",
-  "incident_id": "bfd78b10-034d-11e9-aee0-f7420d4f3238",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "swidup",
-    "created": "2018-12-19T13:25:54.431Z",
-    "dbir_year": 2019,
-    "event_chain": [
-      {
-        "action": "phy",
-        "actor": "ext",
-        "asset": "usr",
-        "attribute": "cp",
-        "summary": "laptop is stolen"
-      }
-    ],
-    "github": "12511",
-    "master_id": "a86625df-cda0-4079-ba40-3e736546d950",
-    "modified": "2018-12-19T13:25:54.431Z"
-  },
-  "reference": "https://www.hipaajournal.com/stolen-raleys-pharmacy-laptop-may-have-contained-phi-of-10000-patients/",
-  "schema_version": "1.3.3",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Stolen Raley\u2019s Pharmacy Laptop May Have Contained PHI of 10,000 Patients",
-  "targeted": "Unknown",
-  "timeline": {
-    "incident": {
-      "day": 24,
-      "month": 9,
-      "year": 2018
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "445110",
-    "state": "CA",
-    "victim_id": "Raley\u2019s Supermarkets"
-  }
+    },
+    "victim": {
+        "victim_id": "Raley’s Supermarkets",
+        "employee_count": "10001 to 25000",
+        "industry": "445110",
+        "country": [
+            "US"
+        ],
+        "state": "CA"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Theft"
+            ],
+            "vector": [
+                "Victim secure area"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "U - Laptop"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data": [
+                {
+                    "amount": 10000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2018-12-19T13:25:54.431Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp",
+                "summary": "laptop is stolen"
+            }
+        ],
+        "modified": "2019-02-21T09:18:25.506Z",
+        "dbir_year": 2019,
+        "master_id": "a86625df-cda0-4079-ba40-3e736546d950",
+        "analysis_status": "Validated",
+        "analyst": "swidup"
+    },
+    "schema_version": "1_3_3"
 }
