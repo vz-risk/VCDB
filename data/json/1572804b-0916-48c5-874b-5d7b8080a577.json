@@ -1,0 +1,117 @@
+{
+    "incident_id": "2eac9c40-e420-11e7-8742-2bc46bd10713",
+    "security_incident": "Confirmed",
+    "reference": "https://blog.knowbe4.com/health-care-records-unavailable-for-months-after-ransomware-infection; https://cdn2.hubspot.net/hubfs/241394/Ransomware-letter.pdf?t=1513611952589",
+    "summary": "Healthcare records of an Arizona clinic have not been available for months after a ransomware infection. ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 8
+        },
+        "containment": {
+            "unit": "Months",
+            "value": 5
+        }
+    },
+    "victim": {
+        "victim_id": "Desert Care clinic",
+        "employee_count": "Unknown",
+        "industry": "621111",
+        "country": [
+            "US"
+        ],
+        "state": "AZ"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 500,
+            "data": [
+                {
+                    "amount": 500,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Never"
+            }
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - actor disclosure",
+    "plus": {
+        "created": "2017-12-19T02:25:49.561Z",
+        "modified": "2017-12-19T02:25:49.561Z",
+        "timeline": {
+            "notification": {
+                "month": 1,
+                "year": 2017
+            }
+        },
+        "master_id": "1572804b-0916-48c5-874b-5d7b8080a577",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "8951"
+    },
+    "schema_version": "1_3_2"
+}

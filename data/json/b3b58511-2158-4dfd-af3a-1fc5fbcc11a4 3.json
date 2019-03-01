@@ -1,0 +1,102 @@
+{
+    "incident_id": "b6f1f800-e607-11e7-ae17-696b4c01f359",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/business-associate-breach-affected-greenville-health-system-patients/; http://www.hipaajournal.com/ambucor-health-solutions-breach-greenville-health-system-3666/; http://www.healthdatamanagement.com/news/flash-drive-misuse-creates-a-breach-for-greenville-health; http://healthitsecurity.com/news/physical-therapy-facility-reports-data-security-incident; http://www.berkshireeagle.com/stories/hundreds-of-bmc-patients-info-found-on-vendors-thumb-drives,490304; http://healthitsecurity.com/news/unencrypted-flash-drive-lost-privacy-incident-for-2k; https://www.abqjournal.com/895989/heart-institute-reports-privacy-breach.html",
+    "summary": "Ambucor learned that a former employee—while employed at Ambucor—downloaded onto thumb drives information from Ambucor’s files, including data about Main Line HealthCare patients, and retained the thumb drives after his employment was terminated.  The former employee is under investigation by federal law enforcement authorities on unrelated charges.  Ambucor has been cooperating with federal law enforcement in that ongoing investigation. As a result, Ambucor recently received the thumb drives from federal authorities who had obtained them from the former employee.  The former employee currently is incarcerated.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 3,
+            "day": 17
+        }
+    },
+    "victim": {
+        "victim_id": "Ambucor Health Solutions",
+        "employee_count": "11 to 100",
+        "industry": "62",
+        "country": [
+            "US"
+        ],
+        "state": "DE",
+        "secondary": {
+            "victim_id": [
+                "Carolina Cardiology Consultant",
+                "Main Line HealthCare",
+                "Greenville Health System",
+                "Wentworth-Douglass Hospital",
+                "Berkshire Medical Center",
+                "New Mexico Heart Institute",
+                "Stony Brook Internists, University Faculty Practice Corporation"
+            ]
+        }
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 15498,
+            "data": [
+                {
+                    "amount": 15498,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Ext - law enforcement",
+    "plus": {
+        "created": "2017-12-21T12:35:17.545Z",
+        "modified": "2017-12-21T12:35:57.528Z",
+        "master_id": "b3b58511-2158-4dfd-af3a-1fc5fbcc11a4",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "8731"
+    },
+    "schema_version": "1_3_2"
+}

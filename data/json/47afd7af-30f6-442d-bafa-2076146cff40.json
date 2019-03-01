@@ -1,0 +1,104 @@
+{
+    "incident_id": "ef930ef0-e423-11e7-8742-2bc46bd10713",
+    "security_incident": "Confirmed",
+    "reference": "http://www.nh1.com/news/personal-info-of-about-15-000-nh-dhhs-clients-accessed-by-patient-some-posted-on-social-media/; http://www.dailyprogress.com/new-hampshire-psychiatric-patient-accused-of-data-breach/article_8b048ffe-abd5-5d6e-8854-d874962d9125.html; https://manchesterinklink.com/nh-dhhs-data-breach-involves-15000-clients-personal-info-posted-nh-hospital-patient-social-media/; http://www.newhampshire.com/state-government/Detective-Suspect-in-DHHS-data-breach-said-he-was-bored-12292016",
+    "summary": "The NH Department of Health and Human Services reports a data breach involving 15,000 DHHS clients who received services prior to November 2015. An investigation indicates that a patient at New Hampshire Hospital accessed information on the DHHS website in 2015, including names and social security numbers, which was posted briefly to social media sites in August and November.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2015,
+            "month": 10
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 1
+        }
+    },
+    "victim": {
+        "victim_id": "New Hampshire Department of Health and Human Services",
+        "employee_count": "Large",
+        "industry": "923140",
+        "country": [
+            "US"
+        ],
+        "state": "NH"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Customer"
+            ],
+            "motive": [
+                "Fun"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 15000,
+            "data": [
+                {
+                    "amount": 15000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "created": "2017-12-19T02:54:11.971Z",
+        "modified": "2017-12-19T02:54:11.971Z",
+        "timeline": {
+            "notification": {
+                "day": 27,
+                "month": 12,
+                "year": 2016
+            }
+        },
+        "master_id": "47afd7af-30f6-442d-bafa-2076146cff40",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_misuse": "Y"
+            }
+        },
+        "github": "8912"
+    },
+    "schema_version": "1_3_2"
+}

@@ -1,0 +1,99 @@
+{
+    "incident_id": "eac291b0-9951-11e7-a069-d9175a67bd3e",
+    "security_incident": "Confirmed",
+    "reference": "http://panow.com/article/703416/employee-fired-paphr-snooping-patient-records",
+    "summary": "Employee fired from health region for ‘snooping' in patient records - Prince Albert Parkland Health Region",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 6
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months"
+        }
+    },
+    "victim": {
+        "victim_id": "Prince Albert Parkland Health",
+        "employee_count": "1001 to 10000",
+        "industry": "622110",
+        "locations_affected": 1,
+        "country": [
+            "CA"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Grudge",
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 14,
+            "data": [
+                {
+                    "amount": 14,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Ext - audit",
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2017-10-26T14:33:50Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:55:08.511Z",
+        "master_id": "eade7a3b-94c9-4ba4-bd45-f2c41c7be4c2",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "10132"
+    },
+    "schema_version": "1_3_2"
+}

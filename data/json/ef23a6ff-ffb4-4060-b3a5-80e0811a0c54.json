@@ -1,0 +1,94 @@
+{
+    "incident_id": "39d3a060-e3ac-11e7-8742-2bc46bd10713",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/kaiser-notifies-8000-members-whose-information-was-briefly-exposed-online/; https://oag.ca.gov/system/files/Privacy_Incident_Oct_2016_Template_Member_Letter_Standard_Custom_0.pdf",
+    "summary": "Three Kaiser units – Kaiser Permanente Health Plan, Inc of Northern California, Kaiser Permanente Health Plan, Inc of Southern California, and Kaiser Foundation Health Plan of the Northwest – have been notifying members after an error exposed some members’ protected health information for a brief period.  Based on reports to HHS, 8,020 members have been notified  that for approximately two hours during the evening of October 12th into the early morning of October 13th, 2016, some protected health information that members viewed after signing in to kp.org may have been viewable by other visitors to the website during that same time frame.  The error occurred during an upgrade that changed how the website stored data to make loading website pages quicker.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 10,
+            "day": 12
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 1
+        }
+    },
+    "victim": {
+        "victim_id": "Kaiser Permanente",
+        "employee_count": "Large",
+        "industry": "622110",
+        "country": [
+            "UM"
+        ],
+        "state": "CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 8020,
+            "data": [
+                {
+                    "amount": 8020,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": "Unknown",
+    "plus": {
+        "created": "2017-12-18T12:36:03.214Z",
+        "modified": "2017-12-18T12:36:03.214Z",
+        "timeline": {
+            "notification": {
+                "day": 10,
+                "month": 11,
+                "year": 2016
+            }
+        },
+        "master_id": "ef23a6ff-ffb4-4060-b3a5-80e0811a0c54",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2018,
+        "github": "8746"
+    },
+    "schema_version": "1_3_2"
+}

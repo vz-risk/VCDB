@@ -1,0 +1,113 @@
+{
+    "incident_id": "05d32b70-93d2-11e7-967f-a9fa27eb51b9",
+    "security_incident": "Confirmed",
+    "reference": "https://www.benzinga.com/pressreleases/17/08/r9884651/sport-and-spine-rehab-attention-patients-seen-prior-to-may-1st-2016-dat",
+    "summary": "On June 3rd 2017, Sport and Spine Rehab was the victim of a ransomware attack that encrypted the data stored on it's servers. ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 6
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Minutes"
+        }
+    },
+    "victim": {
+        "victim_id": "Sport and Spine Rehab",
+        "employee_count": "11 to 100",
+        "industry": "621340",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "MD"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": "Int - reported by employee",
+    "plus": {
+        "sub_source": "phidbr",
+        "attack_difficulty_initial": "Moderate",
+        "created": "2017-10-26T14:33:50Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2018-02-24T12:50:15.941Z",
+        "master_id": "e9fe47b1-30b7-4e11-9b67-9de1ca82f540",
+        "analysis_status": "Validated",
+        "analyst": "Breland",
+        "dbir_year": 2018,
+        "github": "10020"
+    },
+    "schema_version": "1_3_2"
+}
