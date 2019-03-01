@@ -1,0 +1,94 @@
+{
+    "incident_id": "b10d5fb0-33bd-11e9-8d6c-aba1b2985f04",
+    "security_incident": "Confirmed",
+    "reference": "https://www.verdict.co.uk/boomoji-data-breach/",
+    "summary": "Boomooji suffered a data breach that potentially exposed 124 million people's data as a result of an error in which two elasticsearch databases were left without password protection.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 12
+        }
+    },
+    "victim": {
+        "victim_id": "Boomoji",
+        "employee_count": "Unknown",
+        "industry": "511210",
+        "country": [
+            "CN"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Omission"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 2,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 2
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "amount": 125000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-19T03:03:14.120Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-02-19T03:03:14.120Z",
+        "master_id": "f408550a-251d-4e6f-ac31-dd205f7f2bcf",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2019,
+        "github": "12725"
+    },
+    "schema_version": "1_3_3"
+}

@@ -1,0 +1,95 @@
+{
+    "incident_id": "7e81b9c0-351f-11e9-aaf8-2b964a89eccb",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/garmin-owned-navigation-unit-exposed-thousands-of-boat-owners-data/",
+    "summary": "Navionics, owned by garmin, had an exposed database that contained approximately 261,000 customer names and email addresses.",
+    "source_id": "vcdb",
+    "confidence": "Low",
+    "timeline": {
+        "incident": {
+            "year": 2018
+        }
+    },
+    "victim": {
+        "victim_id": "Navionics",
+        "employee_count": "101 to 1000",
+        "industry": "334220",
+        "country": [
+            "US"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Omission"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": "no password on database"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "amount": 261000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-20T21:08:51.212Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-02-20T21:08:51.212Z",
+        "timeline": {
+            "notification": {
+                "month": 10,
+                "year": 2018
+            }
+        },
+        "master_id": "eb300761-f366-463b-8ad7-e0142bb26705",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2019,
+        "github": "12309"
+    },
+    "schema_version": "1_3_3"
+}

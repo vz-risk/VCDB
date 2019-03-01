@@ -1,0 +1,98 @@
+{
+    "incident_id": "239dbd50-33b8-11e9-98e0-dd5a6fccbee9",
+    "security_incident": "Confirmed",
+    "reference": "https://www.infosecurity-magazine.com/news/apache-misconfig-leaks-data-120/",
+    "summary": "The identity numbers of 120 million Brazilians have been found publicly exposed on the internet after yet another IT misconfiguration.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 3
+        }
+    },
+    "victim": {
+        "victim_id": "Brazil Central Bank",
+        "employee_count": "Large",
+        "industry": "52",
+        "country": [
+            "BR"
+        ],
+        "region": [
+            "019005"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": "Apache web server in March someone had renamed the ‘index.html’ to ‘index.html_bkp' making it searchable to the internet."
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "country": [
+            "BR"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 120000000
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-19T02:18:38.026Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-02-19T02:42:21.187Z",
+        "dbir_year": 2019,
+        "master_id": "f9ded691-b013-4022-9eb8-6e1015811036",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "github": "https://www.infosecurity-magazine.com/news/apache-misconfig-leaks-data-120/"
+    },
+    "schema_version": "1_3_3"
+}

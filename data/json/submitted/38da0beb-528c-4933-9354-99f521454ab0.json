@@ -1,0 +1,107 @@
+{
+    "incident_id": "9c1ec370-33c0-11e9-8d6c-aba1b2985f04",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cbsnews.com/news/google-plus-shutdown-date-moves-up-after-another-security-breach/ ;https://news.softpedia.com/news/personal-information-of-52-5-million-exposed-by-new-google-plus-people-api-bug-524205.shtml ; https://iapp.org/news/a/software-update-results-in-google-data-breach-affecting-52m-users/",
+    "summary": "The latest breach allowed developers to see profile information on 52.5 million users, even if set to private, using one of Google's APIs for six days in November.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 11
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 6
+        }
+    },
+    "victim": {
+        "victim_id": "google",
+        "employee_count": "50001 to 100000",
+        "industry": "51",
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Malfunction"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 52000000,
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-19T04:30:58.931Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-02-19T04:30:58.931Z",
+        "timeline": {
+            "notification": {
+                "day": 10,
+                "month": 12,
+                "year": 2018
+            }
+        },
+        "master_id": "38da0beb-528c-4933-9354-99f521454ab0",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2019,
+        "github": "12698"
+    },
+    "schema_version": "1_3_3"
+}

@@ -1,0 +1,106 @@
+{
+    "incident_id": "a06e67d0-351b-11e9-86d0-2ffc8e66db8e",
+    "security_incident": "Confirmed",
+    "reference": "http://www.philly.com/business/warby-parker-wharton-hack-data-breach-20181220.html ;https://www.pymnts.com/news/security-and-risk/2019/warby-parker-cybersecurity-attack-data-breach/",
+    "summary": "Warby Parker suffers breach which may have compromised creds of 198,000 customers.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 12
+        }
+    },
+    "victim": {
+        "victim_id": "warby parker",
+        "employee_count": "101 to 1000",
+        "industry": "446130",
+        "country": [
+            "US"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown",
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            },
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "amount": 198000,
+                    "variety": "Personal"
+                }
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2019-02-20T20:35:49.143Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "hacker uses unknown hacking variety to get credentials from other company site"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "hacker uses stolen creds against victim website"
+            }
+        ],
+        "modified": "2019-02-20T20:35:49.143Z",
+        "timeline": {
+            "notification": {
+                "day": 21,
+                "month": 12,
+                "year": 2018
+            }
+        },
+        "master_id": "5f375c56-ecbb-4d1c-8592-eae92b8bcffd",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2019,
+        "github": "12766"
+    },
+    "schema_version": "1_3_3"
+}
