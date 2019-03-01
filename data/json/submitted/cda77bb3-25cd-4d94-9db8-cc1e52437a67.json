@@ -1,0 +1,101 @@
+{
+    "incident_id": "2f4252f0-28dd-11e9-adf7-352895b3dcd2",
+    "security_incident": "Confirmed",
+    "reference": "https://www.wsj.com/articles/google-exposed-user-data-feared-repercussions-of-disclosing-to-public-1539017194; https://www.theguardian.com/technology/2018/oct/08/google-plus-security-breach-wall-street-journal; https://apnews.com/ac6087bb51194e158d80fed1dd8a4a2c; https://www.inquisitr.com/5113338/google-targeted-by-senate-committee-after-massive-data-leak/; https://www.providencejournal.com/news/20181211/ri-pension-system-sues-google-for-not-disclosing-breach",
+    "summary": "Google exposed the private data of hundreds of thousands of users of the Google+ social network and then opted not to disclose the issue this past spring, in part because of fears that doing so would draw regulatory scrutiny and cause reputational damage.  Shortly after the story was published, Google announced that it will shut down consumer access to Google+ and improve privacy protections for third-party applications.  In a blog post about the shutdown, Google disclosed the data leak, which it said potentially affected up to 500,000 accounts. Up to 438 different third-party applications may have had access to private information due to the bug, but Google apparently has no way of knowing whether they did because it only maintains logs of API use for two weeks.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 3
+        }
+    },
+    "victim": {
+        "victim_id": "Google",
+        "employee_count": "50001 to 100000",
+        "industry": "519130",
+        "country": [
+            "US"
+        ],
+        "state": "CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 500000,
+            "data": [
+                {
+                    "amount": 500000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-05T08:41:47.836Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfiguration exposes data on 500000."
+            }
+        ],
+        "modified": "2019-02-05T08:41:47.836Z",
+        "timeline": {
+            "notification": {
+                "month": 10,
+                "year": 2018
+            }
+        },
+        "master_id": "cda77bb3-25cd-4d94-9db8-cc1e52437a67",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2019,
+        "github": "12306"
+    },
+    "schema_version": "1_3_3"
+}

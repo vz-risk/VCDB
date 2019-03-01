@@ -1,0 +1,93 @@
+{
+    "incident_id": "27d23230-28d6-11e9-adf7-352895b3dcd2",
+    "security_incident": "Confirmed",
+    "reference": "https://portswigger.net/daily-swig/plaintext-offenders-south-korean-delivery-apps-leak-26m-documents",
+    "summary": "A data security oversight from a South Korean app developer appears to have caused more than 26 million documents to be leaked over the last month – some of which contained sensitive customer data stored in plaintext.  The issue was uncovered by Justin Paine, director of trust and safety at security firm Cloudflare, who says he discovered an Elasticsearch database with Kibana front-end that lacked any type of authentication at all.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2018
+        }
+    },
+    "victim": {
+        "victim_id": "Zcall",
+        "employee_count": "Unknown",
+        "industry": "51121",
+        "country": [
+            "KR"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 26000000,
+            "data": [
+                {
+                    "amount": 26000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-05T07:46:23.732Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Publishing error"
+            }
+        ],
+        "modified": "2019-02-05T07:46:23.732Z",
+        "master_id": "1f9ab817-82ab-449a-a627-898fe7128f2e",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2019,
+        "github": "13002"
+    },
+    "schema_version": "1_3_3"
+}

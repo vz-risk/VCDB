@@ -1,0 +1,100 @@
+{
+    "incident_id": "1567a8c0-28d9-11e9-adf7-352895b3dcd2",
+    "security_incident": "Confirmed",
+    "reference": "https://nationalmortgageprofessional.com/news/69821/data-breach-exposes-millions-loan-documents-online; https://techcrunch.com/2019/01/23/financial-files/; https://www.housingwire.com/articles/48007-massive-data-breach-involving-millions-of-mortgage-documents-just-got-much-worse; https://techcrunch.com/2019/01/24/mortgage-loan-leak-gets-worse/; https://krld.radio.com/articles/north-texas-company-warning-customers-about-massive-data-breach; https://hackercombat.com/massive-24-million-record-financial-mortgage-leak-with-opticsmls-s3-under-a-microscope/",
+    "summary": "A trove of more than 24 million financial and banking documents, representing tens of thousands of loans and mortgages from some of the biggest banks in the U.S., has been found online after a server security lapse.  The server, running an Elasticsearch database, had more than a decade’s worth of data, containing loan and mortgage agreements, repayment schedules and other highly sensitive financial and tax documents that reveal an intimate insight into a person’s financial life.  But it wasn’t protected with a password, allowing anyone to access and read the massive cache of documents.  It’s believed that the database was only exposed for two weeks — but long enough for independent security researcher Bob Diachenko to find the data. At first glance, it wasn’t immediately known who owned the data. After we inquired with several banks whose customers information was found on the server, the database was shut down on January 15.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 12
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 2
+        }
+    },
+    "victim": {
+        "victim_id": "Ascension",
+        "employee_count": "Unknown",
+        "industry": "522310",
+        "country": [
+            "US"
+        ],
+        "state": "TX"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 24000000,
+            "data": [
+                {
+                    "amount": 24000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-05T08:12:14.548Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Publishing error."
+            }
+        ],
+        "modified": "2019-02-05T08:12:14.548Z",
+        "master_id": "5140735e-df87-44dd-8302-3f528a8a88d7",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2019,
+        "github": "12966"
+    },
+    "schema_version": "1_3_3"
+}

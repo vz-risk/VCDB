@@ -1,0 +1,97 @@
+{
+    "incident_id": "4f67d260-28d5-11e9-adf7-352895b3dcd2",
+    "security_incident": "Confirmed",
+    "reference": "https://www.ctrlbox.com/2019/01/29/luscious-net-exposed-all-users-emails/",
+    "summary": "In an all too common incident, another elastic search engine has ended up exposing all the users' email addresses from  an adult content website, luscious.net.  The leak was discovered on January 26 when the CTRLBOX Open Data Monitor detected an elastic search containing more than 40 million rows of data that included some email addresses and usernames.  The exposure had been flagged back in late 2018, but due to a backlog, we first got to it now. Somewhat surprisingly - and disturbingly - the  data were still online without any authentication.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2018
+        },
+        "discovery": {
+            "unit": "Months"
+        }
+    },
+    "victim": {
+        "victim_id": "Luscious.net",
+        "employee_count": "Unknown",
+        "industry": "51913",
+        "country": [
+            "PA"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 130000,
+            "data": [
+                {
+                    "amount": 130000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-02-05T07:39:43.114Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Publishing error"
+            }
+        ],
+        "modified": "2019-02-05T07:49:34.792Z",
+        "dbir_year": 2019,
+        "master_id": "c93fb7a2-8443-4b3a-80cf-29c821bd0e27",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "github": "13032"
+    },
+    "schema_version": "1_3_3"
+}
