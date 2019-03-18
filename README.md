@@ -10,7 +10,7 @@ If you want to get involved in this project, we have directions in the wiki for 
 
 # WARNING ON SAMPLING  
 
-Most VCDB issues are chosen randomly (with a preferences for those in the last year), however we specifically select healthcare issues and some priority incidents.  Incidents not chosen randomly can be identified by the value of 'plus.sub_source'.  It will be 'phidbr' for healthcare issues and 'priority' for priority issues.  For those wishing to normalize out non-random selection, here is the issue composition as of Jan 13, 2018 to normalize the actuall incidents to:
+Most VCDB issues are chosen randomly (with a preferences for those in the last year), however we specifically select healthcare issues and some priority incidents.  Incidents not chosen randomly can be identified by the value of 'plus.sub_source'.  It will be 'phidbr' for healthcare issues and 'priority' for priority issues.  For those wishing to normalize out non-random selection, here is the issue composition as of Jan 13, 2018 to normalize the actual incidents to:
 ```
 {
 '2013': {'all': 1199, 'phidbr': 0, 'priority': 11},
