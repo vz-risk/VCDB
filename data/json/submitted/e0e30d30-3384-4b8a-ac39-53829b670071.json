@@ -1,0 +1,122 @@
+{
+    "incident_id": "2feb8a20-936b-11e9-96b8-11c597846497",
+    "security_incident": "Confirmed",
+    "reference": "https://www.insuranceage.co.uk/insurer/3868206/axa-staff-sentenced-for-data-theft; https://www.decisionmarketing.co.uk/news/gang-of-four-sentenced-over-axa-insurance-data-theft; https://www.manchestereveningnews.co.uk/news/greater-manchester-news/wolf-manchester-who-made-thousands-15883558",
+    "summary": "Four people have been sentenced for their part in a scam which saw 100 pieces of data a week stolen from Axa Insurance between July and December in 2015.  The City of London Police’s Insurance Fraud Enforcement Department (IFED), which worked closely with Axa during the investigation, discovered that between 15 July 2015 and 30 December 2015, employee Shane Jerman stole customer data and passed it onto ex-employee Stuart McGill, who in turn sold it.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2015,
+            "month": 7,
+            "day": 15
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 4
+        }
+    },
+    "victim": {
+        "victim_id": "Axa Insurance",
+        "employee_count": "Over 100000",
+        "industry": "5241",
+        "country": [
+            "GB"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse",
+                "Unapproved hardware"
+            ],
+            "vector": [
+                "LAN access",
+                "Physical access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Former employee"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2000,
+            "data": [
+                {
+                    "amount": 2000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2019-06-20T23:31:00.817Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Employee steals data."
+            }
+        ],
+        "modified": "2019-06-20T23:31:00.817Z",
+        "timeline": {
+            "notification": {
+                "month": 2,
+                "year": 2019
+            }
+        },
+        "master_id": "e0e30d30-3384-4b8a-ac39-53829b670071",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13200"
+    },
+    "schema_version": "1_3_3"
+}
