@@ -1,0 +1,138 @@
+{
+    "incident_id": "10749060-b3c3-11e9-8244-abb132467e1d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/ca-doctors-snooped-into-humboldt-broncos-patient-records-privacy-commissioner-finds/,https://nationalpost.com/news/canada/doctors-snooped-into-humboldt-broncos-patient-records-privacy-commissioner-finds",
+    "summary": "medical professionals access EHR they lacked need to know for.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 4,
+            "day": 9
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Weeks",
+            "value": 5
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Weeks",
+            "value": 5
+        }
+    },
+    "victim": {
+        "victim_id": "eHealth Saskatchewan",
+        "employee_count": "101 to 1000",
+        "industry": "62",
+        "locations_affected": 1,
+        "country": [
+            "CA"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "SK"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Doctor or nurse"
+            ],
+            "motive": [
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Other",
+                "amount": 1
+            }
+        ],
+        "cloud": "No",
+        "country": [
+            "CA"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 10,
+            "data": [
+                {
+                    "amount": 10,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Infrastructure monitoring"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2019-08-01T00:07:28.857Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-08-01T00:07:28.857Z",
+        "timeline": {
+            "notification": {
+                "day": 12,
+                "month": 2,
+                "year": 2019
+            }
+        },
+        "master_id": "48e703d0-00e6-4c1b-8c5b-4b93991f1421",
+        "analysis_status": "Validated",
+        "analyst": "gdbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "13124"
+    },
+    "schema_version": "1_3_3"
+}

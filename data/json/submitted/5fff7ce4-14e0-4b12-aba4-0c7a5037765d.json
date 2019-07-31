@@ -1,0 +1,172 @@
+{
+    "incident_id": "5ec09cb0-b3b3-11e9-8244-abb132467e1d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.masslive.com/news/2019/06/umass-memorial-community-healthlink-in-worcester-reports-data-breach-hacker-gained-access-to-email-accounts.html,https://www.wbjournal.com/article/community-healthlink-reports-data-breach",
+    "summary": "victim phished leading to compromise of email account and breach of medical data",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 4,
+            "day": 18
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "UMass Memorial Community Healthlink",
+        "employee_count": "1001 to 10000",
+        "industry": "622210",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-MA"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 4,
+        "assets": [
+            {
+                "variety": "P - Unknown",
+                "amount": 2
+            },
+            {
+                "variety": "S - Web application",
+                "amount": 2
+            }
+        ],
+        "cloud": "Unknown",
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2,
+            "data": [
+                {
+                    "amount": 2,
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Unknown",
+                "Victim organization"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Distracting"
+    },
+    "plus": {
+        "sub_source": "phidbr",
+        "created": "2019-07-31T23:25:01.244Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-07-31T23:25:01.244Z",
+        "timeline": {
+            "notification": {
+                "month": 6,
+                "year": 2019
+            }
+        },
+        "master_id": "5fff7ce4-14e0-4b12-aba4-0c7a5037765d",
+        "analysis_status": "Validated",
+        "analyst": "gdbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "13659"
+    },
+    "schema_version": "1_3_3"
+}

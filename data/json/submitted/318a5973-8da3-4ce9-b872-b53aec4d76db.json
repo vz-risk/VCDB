@@ -1,0 +1,112 @@
+{
+    "incident_id": "f529d3e0-b39c-11e9-8244-abb132467e1d",
+    "security_incident": "Confirmed",
+    "reference": "https://oag.ca.gov/system/files/Communication%20to%20Users%20-%20FINAL_0.pdf,https://www.tellerreport.com/tech/2019-07-15---data-breach-at-belgian-social-medium-netlog-affected-49-million-accounts-.BJbxRMqZH.html",
+    "summary": "database breach detected well after actions on target",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2012,
+            "month": 11
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 6
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "netlog",
+        "employee_count": "101 to 1000",
+        "industry": "517110",
+        "country": [
+            "BE"
+        ],
+        "region": [
+            "150155"
+        ]
+    },
+    "action": {
+        "unknown": {
+            "notes": "Action not disclosed or not known by victim.",
+            "result": [
+                "Elevate",
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "unknown": {
+            "notes": "No information given"
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 49000000,
+            "data": [
+                {
+                    "amount": 49000000000,
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted",
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-07-31T19:31:53.995Z",
+        "modified": "2019-07-31T19:33:32.388Z",
+        "timeline": {
+            "notification": {
+                "day": 27,
+                "month": 7,
+                "year": 2018
+            }
+        },
+        "master_id": "318a5973-8da3-4ce9-b872-b53aec4d76db",
+        "analysis_status": "Validated",
+        "analyst": "gdbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "13810"
+    },
+    "schema_version": "1_3_3"
+}

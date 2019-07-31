@@ -1,0 +1,132 @@
+{
+    "incident_id": "36b0b280-b3ab-11e9-8244-abb132467e1d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.vpnmentor.com/blog/report-theta360-leak/,https://cyware.com/news/theta360-leak-exposes-11-million-photos-user-data-2fedcb1a",
+    "summary": "researchers discovered explosed photo database",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 5,
+            "day": 14
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours",
+            "value": 24
+        },
+        "containment": {
+            "unit": "Hours",
+            "value": 24
+        }
+    },
+    "victim": {
+        "victim_id": "theta360",
+        "employee_count": "1001 to 10000",
+        "industry": "514511",
+        "locations_affected": 1,
+        "country": [
+            "JP"
+        ],
+        "region": [
+            "142030"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": "Unknown"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 11000000,
+            "data": [
+                {
+                    "amount": 11000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "attack_difficulty_initial": "Low",
+        "created": "2019-07-31T21:48:16.832Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-07-31T21:49:55.678Z",
+        "dbir_year": 2020,
+        "timeline": {
+            "notification": {
+                "day": 1,
+                "month": 6,
+                "year": 2019
+            }
+        },
+        "master_id": "723dfade-f87b-4012-98f6-e196575ae995",
+        "analysis_status": "Validated",
+        "analyst": "gdbassett",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "13559"
+    },
+    "schema_version": "1_3_3"
+}
