@@ -1,0 +1,134 @@
+{
+    "incident_id": "181ea540-b46c-11e9-a8df-bd69f47bcb14",
+    "security_incident": "Confirmed",
+    "reference": "https://healthitsecurity.com/news/60000-patients-employee-records-breached-in-emcare-email-hack,https://rainbowtabl.es/2019/04/19/steps-to-recovery-recovery-addiction-treatment-center-leak/",
+    "summary": "elastic search database on internet.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 4,
+            "day": 24
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours",
+            "value": 24
+        }
+    },
+    "victim": {
+        "victim_id": "steps to recovery",
+        "employee_count": "101 to 1000",
+        "industry": "623220",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-PA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": "Unknown"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 146316,
+            "data": [
+                {
+                    "amount": 146316,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted",
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Distracting"
+    },
+    "plus": {
+        "sub_source": "phidbir",
+        "attack_difficulty_initial": "Low",
+        "created": "2019-08-01T20:29:08.817Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-08-01T20:29:08.817Z",
+        "timeline": {
+            "notification": {
+                "day": 20,
+                "month": 4,
+                "year": 2019
+            }
+        },
+        "master_id": "7439f8f9-657e-46e5-a16a-b1c65830dd0f",
+        "analysis_status": "Validated",
+        "analyst": "gdbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "credit_monitoring": "yes"
+            }
+        },
+        "github": "13436"
+    },
+    "schema_version": "1_3_3"
+}
