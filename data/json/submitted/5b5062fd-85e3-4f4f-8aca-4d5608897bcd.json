@@ -1,0 +1,133 @@
+{
+    "incident_id": "607b2040-c833-11e9-b045-b11609af3ce0",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bankinfosecurity.com/hackers-reportedly-post-data-on-law-enforcement-officers-a-12380,https://www.nbcnews.com/tech/security/thousands-identities-personal-information-published-fbi-related-hack-n994366,https://techcrunch.com/2019/04/12/police-data-hack/,https://www.nbcnews.com/tech/security/hacker-group-posts-hundreds-law-officer-records-n994231",
+    "summary": "law enforcement PII stolen through webapp.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "FBI National Academy Associates",
+        "employee_count": "11 to 100",
+        "industry": "813990",
+        "locations_affected": 3,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-VA"
+    },
+    "action": {
+        "unknown": {
+            "notes": "We know the vector was through a webapp, but not what actions were taken.  Statements suggest it may have been exploitation of a vulnerability (due to multiple sites being breached), but it's not clearly stated.",
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 3,
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 3
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 4000,
+            "data": [
+                {
+                    "amount": 4000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "cash-out": {
+            "variety": [
+                "Sell stolen goods"
+            ]
+        }
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-08-27T00:28:03.333Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-08-27T01:04:40.708Z",
+        "dbir_year": 2020,
+        "timeline": {
+            "notification": {
+                "day": 13,
+                "month": 4,
+                "year": 2019
+            }
+        },
+        "master_id": "5b5062fd-85e3-4f4f-8aca-4d5608897bcd",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13413"
+    },
+    "schema_version": "1_3_3"
+}
