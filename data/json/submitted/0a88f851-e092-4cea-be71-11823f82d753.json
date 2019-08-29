@@ -1,0 +1,118 @@
+{
+    "incident_id": "d6c1c660-ca62-11e9-a165-8941f678e264",
+    "security_incident": "Confirmed",
+    "reference": "https://www.lenconnect.com/news/20171205/jeopardy-champion-jass-accused-of-hacking-emails,https://www.insidehighered.com/news/2018/07/23/former-adrian-college-professor-pleads-guilty-hacking-college-email-accounts, https://www.freep.com/story/news/local/michigan/2018/07/20/stephanie-jass-jeopardy-adrian-college/809384002/",
+    "summary": "teacher abuses password reset (sending a single temporary password to everyone and asking them to update their passwords) to read colleagues' emails",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 5
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Seconds"
+        }
+    },
+    "victim": {
+        "victim_id": "Adrian College",
+        "employee_count": "101 to 1000",
+        "industry": "611310",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-MI"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Abuse of functionality"
+            ],
+            "vector": [
+                "Other"
+            ],
+            "notes": "abuse of functionality chosen because she didn't 'steal' anything (passwords) and there was no misconfiguration as the school wanted password reset to work this way. \"honor code security\"",
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Break in discovered"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-08-29T19:45:08.696Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-08-29T19:45:08.696Z",
+        "master_id": "0a88f851-e092-4cea-be71-11823f82d753",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "10624"
+    },
+    "schema_version": "1_3_3"
+}

@@ -1,0 +1,122 @@
+{
+    "incident_id": "9e9a5030-ca6d-11e9-a165-8941f678e264",
+    "security_incident": "Confirmed",
+    "reference": "internet exposed database of cc numbers.",
+    "summary": "https://techcrunch.com/2019/08/20/moviepass-thousands-data-exposed-leak/,https://www.informationsecuritybuzz.com/expert-comments/moviepass-exposes-161m-records/,https://www.tvovermind.com/the-nightmare-continues-for-moviepass-with-massive-data-leak/",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 8
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "MoviePass",
+        "employee_count": "11 to 100",
+        "industry": "51213",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "state": "US-NY"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 16100000,
+            "data": [
+                {
+                    "amount": 16100000,
+                    "variety": "Internal"
+                },
+                {
+                    "amount": 58000,
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-08-29T20:14:07.725Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-08-29T20:14:07.725Z",
+        "master_id": "9f082a3d-c353-40d5-9751-6422f5256628",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "13935"
+    },
+    "schema_version": "1_3_3"
+}
