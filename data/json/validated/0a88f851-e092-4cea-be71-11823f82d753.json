@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "abuse of functionality chosen because she didn't 'steal' anything (passwords) and there was no misconfiguration as the school wanted password reset to work this way. \"honor code security\"",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Abuse of functionality",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Break in discovered"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "d6c1c660-ca62-11e9-a165-8941f678e264",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-08-29T19:45:08.696Z",
+    "dbir_year": 2018,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "10624",
+    "master_id": "0a88f851-e092-4cea-be71-11823f82d753",
+    "modified": "2019-08-29T19:45:08.696Z"
+  },
+  "reference": "https://www.lenconnect.com/news/20171205/jeopardy-champion-jass-accused-of-hacking-emails,https://www.insidehighered.com/news/2018/07/23/former-adrian-college-professor-pleads-guilty-hacking-college-email-accounts, https://www.freep.com/story/news/local/michigan/2018/07/20/stephanie-jass-jeopardy-adrian-college/809384002/",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "teacher abuses password reset (sending a single temporary password to everyone and asking them to update their passwords) to read colleagues' emails",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Seconds"
+    },
+    "incident": {
+      "month": 5,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "611310",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-MI",
+    "victim_id": "Adrian College"
+  }
+}
