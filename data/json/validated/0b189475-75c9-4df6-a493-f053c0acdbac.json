@@ -1,0 +1,186 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - End-user"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5030,
+          "variety": "Medical"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 5031,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "50a96550-cfe5-11e9-aa40-01794b8efffe",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2019-09-05T19:20:20.334Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "+ loss of confidentiality of credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14008",
+    "master_id": "0b189475-75c9-4df6-a493-f053c0acdbac",
+    "modified": "2019-09-05T19:20:20.334Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 16,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "http://www.communitynewspapergroup.com/vinton_newspapers/virginia-gay-hospital-data-breach-impacts-about-initiates-security-changes/article_27757e12-0645-5bdd-8fb7-19a558d5e2a7.html,http://www.spamfighter.com/News-22393-Virginia-Gay-Hospital-notified-their-patients-about-the-data-security-incident.htm",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "phishing email stole email creds and potentially breached PHI",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 18,
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Website"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "622110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-IA",
+    "victim_id": "Virginia Gay Hospital"
+  }
+}
