@@ -1,0 +1,123 @@
+{
+    "incident_id": "e4ceac90-d3d7-11e9-9298-79b47a23a7bd",
+    "security_incident": "Confirmed",
+    "reference": "https://www.wired.co.uk/article/pub-data-leak-brewhouse-and-kitchen,https://www.databreaches.net/this-uk-pub-chain-left-17000-customer-details-exposed-online/",
+    "summary": "spreadsheet of customer details left online",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 11,
+            "day": 9
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 5
+        }
+    },
+    "victim": {
+        "victim_id": "Brewhouse and Kitchen ",
+        "employee_count": "101 to 1000",
+        "industry": "722110",
+        "locations_affected": 23,
+        "country": [
+            "GB"
+        ],
+        "region": [
+            "150155"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            }
+        ],
+        "cloud": "NA"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 17000,
+            "data": [
+                {
+                    "amount": 17000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-09-10T19:41:36.724Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-10T19:41:36.724Z",
+        "master_id": "83011ed3-5073-4ebe-805d-ead18d3ff95b",
+        "analysis_status": "Validated",
+        "analyst": "gdbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "12550"
+    },
+    "schema_version": "1_3_3"
+}
