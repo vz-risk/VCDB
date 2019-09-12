@@ -1,0 +1,120 @@
+{
+    "incident_id": "a6ff0570-d57d-11e9-8597-ff36b2265d64",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/th-young-hackers-accused-of-stealing-selling-food-discount-codes/; https://www.bangkokpost.com/thailand/general/1743534/young-hackers-accused-of-stealing-selling-food-discount-codes",
+    "summary": "Two student hackers allegedly stole online discount codes for restaurant food and sold them to friends - costing the restaurants an estimated million baht in unauthorised discounts on deliveries.  University students Jirapat Yuenying, 20, and Supawat Weeraburut, 21, were arrested at their house in Muang district of Khon Kaen on Monday, Pol Col Siriwat Deepor, deputy commander of the Technology Crime Suppression Division, said on Thursday.  Police seized their computers and mobile phones.  He said a representative of a food delivery company complained to police that the suspects had hacked into the firm's computer system, and in 30 minutes had stolen codes for discounts on food from about 10 suppliers.  According to Pol Col Siriwat the two young men confessed they had learned hacking from dark websites, and used their knowledge to steal about 1,000 discount codes.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        },
+        "exfiltration": {
+            "unit": "Minutes",
+            "value": 30
+        }
+    },
+    "victim": {
+        "employee_count": "Small",
+        "industry": "722330",
+        "country": [
+            "TH"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "TH"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1000,
+            "data": [
+                {
+                    "amount": 1000,
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-09-13T00:04:29.153Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Students hack into company and steal codes."
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Discount codes, having been sold, are redeemed against the company."
+            }
+        ],
+        "modified": "2019-09-13T00:04:29.153Z",
+        "master_id": "771b53c5-6de9-49d4-8738-83c5de84cf98",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "14071"
+    },
+    "schema_version": "1_3_3"
+}

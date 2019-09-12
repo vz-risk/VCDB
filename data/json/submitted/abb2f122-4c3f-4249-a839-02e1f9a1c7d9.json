@@ -1,0 +1,117 @@
+{
+    "incident_id": "71947130-cf39-11e9-89a9-015b821d7cea",
+    "security_incident": "Confirmed",
+    "reference": "https://www.nbcconnecticut.com/news/local/Ransomware-Attack-Targets-Wolcott-Public-Schools-558610611.html",
+    "summary": "School district in CT was hit at the end of the school year by ransomware ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "victim_id": "Wolcott Public Schools",
+        "employee_count": "11 to 100",
+        "industry": "611110",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "CT",
+        "notes": "Local public school system that was impacted by the breach"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Months"
+            },
+            "notes": "They were able to restore some of the data but not all of it by the time the time the school year started"
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Painful"
+    },
+    "plus": {
+        "created": "2019-09-04T21:48:56.073Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Ransomware is installed on systems"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Ransomware encrypts data"
+            }
+        ],
+        "modified": "2019-09-12T21:46:23.040Z",
+        "dbir_year": 2020,
+        "master_id": "abb2f122-4c3f-4249-a839-02e1f9a1c7d9",
+        "analysis_status": "Validated",
+        "analyst": "planglois925",
+        "analyst_notes": "Ransomware hits School in CT",
+        "github": "13988"
+    },
+    "schema_version": "1_3_3"
+}

@@ -1,0 +1,131 @@
+{
+    "incident_id": "1efd3060-cd09-11e9-a052-6392f3b8c0e8",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/columbia-surgical-specialists-of-spokane-reports-incident-affecting-400000-patients/; http://www.spokesman.com/stories/2019/mar/07/spokanes-columbia-surgical-specialists-paid-nearly/",
+    "summary": "Columbia Surgical Specialists, which operates four medical offices in Spokane and Spokane Valley, says it paid hackers nearly $15,000 to decrypt patient information that was held hostage in a ransomware attack.  In a two-page notice sent to patients Thursday, the company said it learned about the hack on Jan. 9 and “took immediate action to evaluate the extent and nature of the intrusion and to address the source as soon as the vulnerability was discovered.”  The company said the compromised files may have included patients’ names, driver’s licenses, Social Security numbers and personal health information.  “We received notice from the people that encrypted the files just a few hours before several patients were scheduled for surgeries, and they made it clear we would not have access to patient information until we paid a fee,” the company said.  The doctors who own Columbia Surgical Specialists paid $14,649.09.  “We quickly determined that the health and well-being of our patients was the number one concern,” the company said, “and when we made the payment they gave us the decryption key so we could immediately proceed, unlocking the data.”  The company said its cybersecurity provider, Intrinium, analyzed its systems and “believes that no data was acquired, disclosed or used” by the hackers, though patient records were exposed during the attack.  Columbia Surgical Specialists said it initially believed records of up to 400,000 patients may have been compromised, but “after further investigation, the actual number of potentially affected patients is substantially smaller.”  The company’s statement didn’t say precisely how many patients might be at risk, nor did it say how the hackers made contact, how the doctors transferred the ransom money or what security measures were in place before the attack.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 1,
+            "day": 9
+        }
+    },
+    "victim": {
+        "victim_id": "Columbia Surgical Specialists",
+        "employee_count": "11 to 100",
+        "industry": "622110",
+        "country": [
+            "US"
+        ],
+        "state": "WA"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 400000,
+            "data": [
+                {
+                    "amount": 400000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Hours"
+            }
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-09-02T05:49:55.312Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Malware is installed on systems by unknown means"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Malware encrypts data until ransom is paid."
+            }
+        ],
+        "modified": "2019-09-02T05:49:55.312Z",
+        "timeline": {
+            "notification": {
+                "day": 7,
+                "month": 3,
+                "year": 2019
+            }
+        },
+        "master_id": "790bc6d7-fbb7-45e4-a639-b82113c855af",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13225"
+    },
+    "schema_version": "1_3_3"
+}

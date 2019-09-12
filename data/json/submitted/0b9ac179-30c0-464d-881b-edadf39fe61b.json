@@ -1,0 +1,93 @@
+{
+    "incident_id": "bf6cdbe0-ccff-11e9-a052-6392f3b8c0e8",
+    "security_incident": "Confirmed",
+    "reference": "https://www.wired.com/story/email-marketing-company-809-million-records-exposed-online; https://www.bleepingcomputer.com/news/security/insecure-database-leads-to-over-800-million-records-data-breach/;  https://www.forbes.com/sites/daveywinder/2019/03/10/2-billion-unencrypted-records-leaked-in-marketing-data-breach-what-happened-and-what-to-do-next/#2293ea6c6b0d; https://www.mediapost.com/publications/article/333276/email-vendor-verificationsio-seems-to-be-out-of-b.html",
+    "summary": "An unprotected 140+ GB MongoDB database led to the discovery of a huge collection of 808,539,939 email records, with many of them also containing detailed personally identifiable information (PII).  The large database discovered by security researcher Bob Diachenko comprised four separate collections of records, the biggest one being named mailEmailDatabase organized in three folders:   Emailrecords (count: 798,171,891 records) emailWithPhone (count: 4,150,600 records) businessLeads (count: 6,217,358 records) The Emailrecords folder which included the most records contained the last name, date of birth, email, phone number, zip code, address, gender, and IP address for each separate entry.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "victim_id": "Verifications IO LLC",
+        "employee_count": "Unknown",
+        "industry": "541613",
+        "country": [
+            "US"
+        ],
+        "state": "DE"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 808539849,
+            "data": [
+                {
+                    "amount": 808539849,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Partner"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-09-02T04:47:49.163Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Internal actor stands up database with no controls."
+            }
+        ],
+        "modified": "2019-09-02T04:47:49.163Z",
+        "master_id": "0b9ac179-30c0-464d-881b-edadf39fe61b",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "github": "13230"
+    },
+    "schema_version": "1_3_3"
+}
