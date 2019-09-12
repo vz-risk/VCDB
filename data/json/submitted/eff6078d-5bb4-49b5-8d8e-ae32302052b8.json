@@ -1,0 +1,128 @@
+{
+    "incident_id": "1bfcc1f0-d56a-11e9-8558-6543aabf247e",
+    "security_incident": "Confirmed",
+    "reference": "https://nakedsecurity.sophos.com/2019/08/06/attackers-ransom-booksellers-exposed-mongodb-database/",
+    "summary": "breach 1: researcher found and disclosed public mongoDB database",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7,
+            "day": 15
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months"
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 3
+        }
+    },
+    "victim": {
+        "victim_id": "Librería Porrúa",
+        "employee_count": "Large",
+        "industry": "511130",
+        "locations_affected": 1,
+        "country": [
+            "MX"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "MX-DF"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "notes": "mongodb",
+        "country": [
+            "MX"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 21,
+            "data": [
+                {
+                    "amount": 2100000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-09-12T19:48:01.176Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-12T19:59:52.209Z",
+        "dbir_year": 2020,
+        "master_id": "eff6078d-5bb4-49b5-8d8e-ae32302052b8",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "analyst_notes": "Contained in 1 day by the second breach which deleted the data.",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14036"
+    },
+    "schema_version": "1_3_3"
+}

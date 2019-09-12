@@ -1,0 +1,121 @@
+{
+    "incident_id": "172e0dc0-d568-11e9-8558-6543aabf247e",
+    "security_incident": "Confirmed",
+    "reference": "https://techcrunch.com/2019/09/04/facebook-phone-numbers-exposed/",
+    "summary": "Open serve found with databases of phone numbers scraped from facebook, but server owner unknown.",
+    "source_id": "vcdb",
+    "confidence": "Low",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 9,
+            "day": 4
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "Unknown",
+        "employee_count": "Unknown",
+        "industry": "000000",
+        "locations_affected": 1,
+        "country": [
+            "Unknown"
+        ],
+        "region": [
+            "000000"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 419000000,
+            "data": [
+                {
+                    "amount": 419000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "notes": "mostly phone number.  No real relationship between the victim and the data victims."
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-09-12T19:30:41.917Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-12T19:31:06.900Z",
+        "master_id": "a799f695-c775-4ce4-adb8-760d735d1881",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14073"
+    },
+    "schema_version": "1_3_3"
+}
