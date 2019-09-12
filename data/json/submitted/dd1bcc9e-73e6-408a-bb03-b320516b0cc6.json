@@ -1,0 +1,154 @@
+{
+    "incident_id": "5f0be4b0-d56c-11e9-8558-6543aabf247e",
+    "security_incident": "Confirmed",
+    "reference": "https://nakedsecurity.sophos.com/2019/08/06/attackers-ransom-booksellers-exposed-mongodb-database/",
+    "summary": "Breach 2 for github ID.  Database deleted and randsomed",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7,
+            "day": 18
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours",
+            "value": 24
+        }
+    },
+    "victim": {
+        "victim_id": "Librería Porrúa",
+        "employee_count": "Large",
+        "industry": "511130",
+        "locations_affected": 1,
+        "country": [
+            "MX"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "X-DF"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit misconfig"
+            ],
+            "vector": [
+                "Other"
+            ],
+            "notes": "Direct server access from internet",
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "notes": "mongo-DB",
+        "country": [
+            "MX"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2100000,
+            "data": [
+                {
+                    "amount": 2100000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ],
+            "duration": {
+                "unit": "Unknown"
+            }
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "targeting": {
+            "variety": [
+                "Misconfigurations"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Cryptocurrency"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Unknown"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-09-12T19:57:25.833Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2019-09-12T19:57:25.833Z",
+        "master_id": "dd1bcc9e-73e6-408a-bb03-b320516b0cc6",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "14036"
+    },
+    "schema_version": "1_3_3"
+}
