@@ -1,0 +1,126 @@
+{
+    "incident_id": "2364fcb0-d951-11e9-baf3-31037743ca61",
+    "security_incident": "Confirmed",
+    "reference": "https://www.telecompaper.com/news/over-5000-wind-tre-customers-hit-by-data-breach--1199392,https://www.key4biz.it/data-breach-colpisce-wind-tre-garante-privacy-lazienda-deve-avvertire-5mila-clienti-coinvolti/191820/",
+    "summary": "Personal data accidentally exposed on website during maintenance and not deleted. 402 records accessed, 5,118  expose",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 3,
+            "day": 20
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "Wind  Tre",
+        "employee_count": "Large",
+        "industry": "517210",
+        "locations_affected": 1,
+        "country": [
+            "IT"
+        ],
+        "region": [
+            "150039"
+        ],
+        "state": "IT-MI"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": " it emerged that the file with the data of the 5000 customers, which later became the object of the subsequent hacker attack, had been generated during a technical intervention and by mistake had not been canceled, as usual, at the end of the operation. "
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "notes": "on the IT system of selfcare tre.it",
+        "country": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 5118,
+            "data": [
+                {
+                    "amount": 5118,
+                    "variety": "Credentials"
+                },
+                {
+                    "amount": 5118,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-09-17T19:33:13.494Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-17T19:33:13.494Z",
+        "master_id": "d9328bb6-67d6-4a1b-afc0-36885eaf2faa",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "9609"
+    },
+    "schema_version": "1_3_3"
+}
