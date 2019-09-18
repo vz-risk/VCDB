@@ -1,0 +1,135 @@
+{
+    "incident_id": "92142c80-ca79-11e9-9a33-13e06a29212c",
+    "security_incident": "Confirmed",
+    "reference": "https://cyware.com/news/two-hospitals-in-puerto-rico-suffer-ransomware-attack-impacting-over-520000-patients-data-d2a87121",
+    "summary": "The ransomware infection encrypted all computer files that contained patients’ personal information. The incident impacted nearly 422,496 Bayamón Medical Center patients and 99,943 Puerto Rico Women And Children’s Hospital patients. What is the issue?  Bayamón Medical Center and its affiliated Puerto Rico Women And Children’s Hospital fell victim to a ransomware attack impacting over 520,000 patients's data.  The big picture  Bayamón Medical Center reported that 422,496 patients were potentially impacted, while Puerto Rico Women And Children’s Hospital reported that 99,943 patients were potentially impacted by the incident.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "NA"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "Bayamon Medical Center y Puerto Rico Women And Children’s Hospital ",
+        "employee_count": "Unknown",
+        "industry": "622110",
+        "country": [
+            "PR"
+        ]
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 520000,
+            "data": [
+                {
+                    "amount": 520000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify configuration"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-29T21:54:56.310Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2019-08-29T21:54:56.310Z",
+        "timeline": {
+            "notification": {
+                "day": 29,
+                "month": 7,
+                "year": 2019
+            }
+        },
+        "master_id": "66eae468-0915-4565-b921-9c144fd3bd8c",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "No"
+            }
+        },
+        "github": "13865"
+    },
+    "schema_version": "1_3_3"
+}

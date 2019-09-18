@@ -1,0 +1,157 @@
+{
+    "incident_id": "499b8730-c8eb-11e9-9c16-3f32faecab86",
+    "security_incident": "Confirmed",
+    "reference": "https://healthitsecurity.com/news/hackers-demand-1m-in-grays-harbor-ransomware-attack",
+    "summary": "August 14, 2019 - Hackers infected Washington-based Grays Harbor Community Hospital and Harbor Medical Group with ransomware and demanded a payment of $1 million to unlock patient files, according to a report from the Daily World.  The report sheds light on the EHR downtime the provider put into place after experiencing persistent issues with its EHR systems in June. Both the hospital and HMG’s clinics were impacted by the issues with its MEDITECH EHR. However, officials did not explain the cause.  According to the latest, the hackers infected the computer systems with ransomware nearly two months ago when an employee clicked on a malicious link contained in a phishing email. The cyberattack began on a weekend when Grays Harbor IT staff was limited.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 6,
+            "day": 14
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "NA"
+        },
+        "discovery": {
+            "unit": "Days"
+        },
+        "containment": {
+            "unit": "Weeks"
+        }
+    },
+    "victim": {
+        "victim_id": "Grays Harbor Community Hospital and Harbor Medical Group",
+        "employee_count": "Small",
+        "industry": "622110",
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "WA"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Email attachment"
+            ],
+            "result": [
+                "Elevate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File"
+            },
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_total": 85000,
+            "data": [
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Weeks"
+            }
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-27T22:06:39.365Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2019-08-27T22:06:39.365Z",
+        "timeline": {
+            "notification": {
+                "day": 14,
+                "month": 8,
+                "year": 2019
+            }
+        },
+        "master_id": "ba043379-e0c3-44c6-9ff2-8f292173f37b",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2020,
+        "github": "13914"
+    },
+    "schema_version": "1_3_3"
+}

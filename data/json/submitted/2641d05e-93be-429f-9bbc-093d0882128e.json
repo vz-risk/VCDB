@@ -1,0 +1,117 @@
+{
+    "incident_id": "45e6cf90-c81a-11e9-994f-43faafd7feda",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreachtoday.com/choice-hotels-700000-guest-records-exposed-a-12913 ; https://www.zdnet.com/article/700000-choice-hotels-records-leaked-in-data-breach/ ;https://www.msspalert.com/cybersecurity-news/choice-hotels-hacker-attack/",
+    "summary": "700,000 records belonging to Choice Hotels have reportedly been stolen with hackers demanding payment for their return.   Comparitech, in collaboration with security researcher Bob Diachenko, found an unsecured database containing data belonging to the hotel franchise on July 2, 2019, after the database was indexed by the BinaryEdge search engine. ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7,
+            "day": 2
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 4
+        }
+    },
+    "victim": {
+        "victim_id": "choice hotels",
+        "employee_count": "1001 to 10000",
+        "industry": "722110",
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "partner": {
+            "motive": [
+                "NA"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": "Partner application"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 700000,
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-27T00:08:59.677Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "prt",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-08-27T00:10:09.566Z",
+        "timeline": {
+            "notification": {
+                "day": 28,
+                "month": 7,
+                "year": 2019
+            }
+        },
+        "master_id": "2641d05e-93be-429f-9bbc-093d0882128e",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2020,
+        "github": "13916"
+    },
+    "schema_version": "1_3_3"
+}

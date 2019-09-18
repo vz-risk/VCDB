@@ -1,0 +1,140 @@
+{
+    "incident_id": "a777e1e0-c9eb-11e9-9a33-13e06a29212c",
+    "security_incident": "Confirmed",
+    "reference": "http://www.spamfighter.com/News-22302-Files-of-JFJ-Eyecare-were-encrypted-after-a-malware-attack.htm",
+    "summary": "JFJ Eyecare Ltd., doing business as the Quantum Vision Centers and Eye Surgery Center LLC, announced about security breach of their systems. This incident has caused a few of its systems getting accessed by the hackers.  As per a press release, the Quantum Vision Centers and Eye Surgery Center LLC based in Illinois revealed that they became aware about this incident on Apr. 18, 2019. According to the eyecare firm, the hackers deployed malware on a few of their systems and then encrypted several files. This also includes some patient files of a server containing patients PHI (Protected Health Information).  Quantum Vision Centers and Eye Surgery Center LLC has recently started notifying the patients that a few of their PHI might have been compromised in ransomware attack of April 2019. The kinds of data that has been affected in this incident might include first name and last name, social security number, address, date of birth, and information related to the health insurance coverage.  Till now, there has been no evidence whether the hackers have accessed or acquired the data during encryption process. \"There is currently no evidence that suggests this malware incident actually resulted in the acquisition of any personal information beyond its encryption, but that possibility cannot be conclusively ruled out,\" the company stated, as reported by InvisionMag.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 4
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "NA"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "victim_id": "Quantum Vision Centers and Eye Surgery Center LLC,",
+        "employee_count": "11 to 100",
+        "industry": "621320",
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "IL"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Elevate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify data"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Days"
+            }
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-29T21:24:50.527Z",
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia"
+            }
+        ],
+        "modified": "2019-08-29T21:24:50.527Z",
+        "timeline": {
+            "notification": {
+                "day": 15,
+                "month": 7,
+                "year": 2019
+            }
+        },
+        "master_id": "952604ae-dc49-4219-92ab-e9ec5bb36e94",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "Yes",
+                "credit_monitoring_years": 1
+            }
+        },
+        "github": "13789"
+    },
+    "schema_version": "1_3_3"
+}
