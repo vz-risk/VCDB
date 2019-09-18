@@ -1,0 +1,145 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Cashier",
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "country": [
+      "US"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Financial audit"
+      ]
+    }
+  },
+  "incident_id": "cc630a80-d57a-11e9-8597-ff36b2265d64",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-09-12T23:50:50.366Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employees use stolen data to look up credit reports to get the best customers."
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Fraudulent purchases made to newly opened customer accounts."
+      }
+    ],
+    "github": "14076",
+    "master_id": "ffd89802-b7f3-4c0b-82ef-994c152de412",
+    "modified": "2019-09-12T23:52:00.789Z",
+    "timeline": {
+      "notification": {
+        "day": 5,
+        "month": 9,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.bizjournals.com/atlanta/news/2019/09/05/former-georgia-verizon-employees-indicted-fraud.html; https://www.ajc.com/news/crime--law/verizon-employees-indicted-accused-opening-bogus-accounts/SbkSrCqiybqphvdoGtUNJI/",
+  "schema_version": "1.3.3",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Nearly a half-dozen former employees at Verizon stores in Buckhead, Newnan and Smyrna have been indicted for allegedly opening accounts using stolen identity information and then fraudulently charging tens of thousands of dollars\u2019 worth of merchandise.      The scheme involved a group of \u201crunners,\u201d who also brought stolen PII into the stores. The PII belonged to real people and included names, addresses, dates of birth, and Social Security numbers. Using the stolen information, the corrupt employees created Verizon accounts in the victims\u2019 names, without the victims\u2019 knowledge. The employees ran credit checks on the victims before opening the accounts, using the victims\u2019 Social Security numbers.      The defendants then used the accounts to purchase tens of thousands of dollars\u2019 worth of wireless phones and accessories. After the fraudulent purchases, the accounts went into default, causing the victims to receive bills for the merchandise charged on the fraudulent accounts. Verizon immediately terminated the employees upon discovering the fraud.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 6
+    },
+    "incident": {
+      "month": 11,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "517",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Verizon"
+  }
+}
