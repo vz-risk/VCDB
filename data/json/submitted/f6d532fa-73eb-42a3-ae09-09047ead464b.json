@@ -1,0 +1,143 @@
+{
+    "incident_id": "1e420150-daec-11e9-aa50-b778a2874faa",
+    "security_incident": "Confirmed",
+    "reference": "https://www.securityweek.com/vulnerabilities-exposed-2-million-verizon-customer-contracts,https://daleys.space/writeup/0day/2019/09/09/verizon-leak.html",
+    "summary": "insecure direct object reference vulnerability in employee website exposed contract information when id number brute forced.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 6,
+            "day": 15
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Weeks",
+            "value": 5
+        }
+    },
+    "victim": {
+        "victim_id": "Verizon",
+        "employee_count": "Over 100000",
+        "industry": "517",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Brute force"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "notes": "brute force ID numbers. (insecure direct object reference (IDOR) )",
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Other"
+            ],
+            "notes": "security researcher (unrelated 3rd party)",
+            "country": [
+                "GB"
+            ],
+            "region": [
+                "150155"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2000000,
+            "data": [
+                {
+                    "amount": 2000000,
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-09-19T20:01:53.675Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-19T20:01:53.675Z",
+        "timeline": {
+            "notification": {
+                "day": 9,
+                "month": 9,
+                "year": 2019
+            }
+        },
+        "master_id": "f6d532fa-73eb-42a3-ae09-09047ead464b",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14129"
+    },
+    "schema_version": "1_3_3"
+}

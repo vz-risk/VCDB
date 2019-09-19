@@ -1,0 +1,127 @@
+{
+    "incident_id": "8afc1710-daea-11e9-aa50-b778a2874faa",
+    "security_incident": "Confirmed",
+    "reference": "https://threatpost.com/198m-car-buyer-records-exposed-online/148231/,https://securitydiscovery.com/dealer-leads/,https://www.scmagazine.com/home/security-news/misconfigured-database-exposes-198m-records-on-prospective-auto-buyers/",
+    "summary": "ES database left exposed to internet with PII and financial information of potential car buyers",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 8,
+            "day": 19
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours",
+            "value": 24
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "victim_id": "Dealer Leads, LLC",
+        "employee_count": "11 to 100",
+        "industry": "518210",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 198000000,
+            "data": [
+                {
+                    "amount": 198000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "notes": "Data owners were website users, but not really the victim's customers per se."
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-09-19T19:44:33.245Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-19T19:44:33.245Z",
+        "master_id": "c3bbaa08-8b95-4cd4-84d7-b3f773e54447",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14148"
+    },
+    "schema_version": "1_3_3"
+}
