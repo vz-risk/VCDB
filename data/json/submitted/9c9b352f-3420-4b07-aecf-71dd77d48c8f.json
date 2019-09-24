@@ -1,0 +1,211 @@
+{
+    "incident_id": "774b16b0-ded9-11e9-ad75-f56272c47bf9",
+    "security_incident": "Confirmed",
+    "reference": "https://www.zdnet.com/article/brazilian-it-firm-tivit-suffers-data-leak/,https://www.defcon-lab.org/vazamento-de-dados-tivit/",
+    "summary": "Company phished and desktop systems accessed to steal client credentials.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 12
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "Tivit",
+        "employee_count": "1001 to 10000",
+        "industry": "5416",
+        "locations_affected": 1,
+        "country": [
+            "BR"
+        ],
+        "region": [
+            "019005"
+        ],
+        "state": "BR-SP",
+        "secondary": {
+            "amount": 19,
+            "victim_id": [
+                "Klabin",
+                "Brookfield",
+                "JMacedo",
+                "Multiplan",
+                "Braskem",
+                "Faber",
+                "Original Bank",
+                "Sebrae",
+                "Votorantim",
+                "SAP",
+                "Zurich"
+            ]
+        }
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of backdoor or C2"
+            ],
+            "vector": [
+                "Backdoor or C2"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Backdoor"
+            ],
+            "vector": [
+                "Email link"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 18,
+        "assets": [
+            {
+                "variety": "U - Desktop",
+                "amount": 9
+            },
+            {
+                "variety": "P - End-user",
+                "amount": 9
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Internal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Victim organization"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Software installation"
+            ],
+            "notes": "clicked phishing link, install malware"
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "discovery_notes": "posted to pastebin",
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Payload"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Painful"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-09-24T19:59:41.771Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-24T19:59:41.771Z",
+        "master_id": "9c9b352f-3420-4b07-aecf-71dd77d48c8f",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "12741"
+    },
+    "schema_version": "1_3_3"
+}

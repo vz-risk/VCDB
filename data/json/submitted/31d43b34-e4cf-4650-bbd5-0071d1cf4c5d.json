@@ -1,0 +1,160 @@
+{
+    "incident_id": "e6354520-ded2-11e9-843d-75ce6c835970",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hustlermoneyblog.com/taconic-employee-w-2-data-breach-class-action-lawsuit/,http://www.marylandattorneygeneral.gov/ID%20Theft%20Breach%20Notices/2017/itu-280527%20(1).pdf",
+    "summary": "employee was phished and sent actor w-2 data of other employees",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 1,
+            "day": 30
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 10
+        },
+        "containment": {
+            "unit": "NA"
+        }
+    },
+    "victim": {
+        "victim_id": "Taconic Biosciences, Inc",
+        "employee_count": "101 to 1000",
+        "industry": "115210",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-NY"
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Human resources"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "P - Human resources",
+                "amount": 1
+            }
+        ],
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 700,
+            "data": [
+                {
+                    "amount": 700,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "notes": "tax information / W-2"
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "value_chain": {
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Fraud"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Painful",
+        "iso_currency_code": "USD",
+        "overall_amount": 2100000,
+        "overall_min_amount": 2100000,
+        "loss": [
+            {
+                "variety": "Other",
+                "rating": "Moderate",
+                "max_amount": 2100000
+            }
+        ],
+        "notes": "class action settlement of 3k/person max for 700 workers"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-09-24T19:21:34.621Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-24T19:38:52.228Z",
+        "dbir_year": 2018,
+        "master_id": "31d43b34-e4cf-4650-bbd5-0071d1cf4c5d",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "13431"
+    },
+    "schema_version": "1_3_3"
+}

@@ -1,0 +1,157 @@
+{
+    "incident_id": "0619f490-ded7-11e9-843d-75ce6c835970",
+    "security_incident": "Confirmed",
+    "reference": "https://sg.news.yahoo.com/impatient-former-hong-kong-librarian-004752248.html",
+    "summary": "A library employee accessed people's library accounts and cancelled their library cards to force them to return books early so that she could check them out.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2015
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "NA"
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 3
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "victim_id": "Hong Kong public library",
+        "employee_count": "Small",
+        "industry": "519120",
+        "locations_affected": 1,
+        "country": [
+            "HK"
+        ],
+        "region": [
+            "142030"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Convenience"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 131,
+        "assets": [
+            {
+                "variety": "S - Unknown",
+                "amount": 1
+            },
+            {
+                "variety": "M - Other",
+                "amount": 130
+            }
+        ],
+        "country": [
+            "HK"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 130,
+            "data": [
+                {
+                    "amount": 130,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Modify configuration"
+            ],
+            "notes": "to set library cards as 'lost'."
+        },
+        "availability": {
+            "variety": [
+                "Interruption"
+            ],
+            "duration": {
+                "unit": "Unknown"
+            },
+            "notes": "library patrons' access to books was interrupted"
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Customer"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-09-24T19:38:23.483Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "ia"
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "au"
+            }
+        ],
+        "modified": "2019-09-24T19:41:56.122Z",
+        "dbir_year": 2019,
+        "master_id": "10f45d36-6e53-47f1-9cad-4a90993369d6",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "11611"
+    },
+    "schema_version": "1_3_3"
+}
