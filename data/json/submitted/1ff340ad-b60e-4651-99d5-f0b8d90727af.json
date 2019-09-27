@@ -1,0 +1,106 @@
+{
+    "incident_id": "85bd5560-e0ae-11e9-8cfd-bf57b38104b7",
+    "security_incident": "Confirmed",
+    "reference": "https://www.govinfosecurity.com/database-may-have-exposed-instagram-data-for-49-million-a-12503; https://z6mag.com/2019/05/27/company-denies-unethical-collection-of-ig-influencer-data-following-online-exposure/",
+    "summary": "There's been a potential leak of personally identifiable information from Instagram, but it's not clear yet whether the data came directly came from the social media company.  Security researcher Anurag Sen found a database online that appeared to contain profile data for 49 million Instagram users, including their email addresses and phone numbers - data that is supposed to be private. Instagram has at least 1 billion active monthly users.  Sen brought the database to the attention of TechCrunch, which traced the owner to Mumbai-based Chtrbox, a social media company. The database, which was hosted on Amazon Web Services, was left open without password protection on the internet. Chrtbox has since pulled it offline. ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 5
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 3
+        }
+    },
+    "victim": {
+        "victim_id": "Chtrbox",
+        "employee_count": "11 to 100",
+        "industry": "541613",
+        "country": [
+            "IN"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 49000000,
+            "data": [
+                {
+                    "amount": 49000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-09-27T06:21:04.852Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-09-27T06:21:04.852Z",
+        "timeline": {
+            "notification": {
+                "day": 21,
+                "month": 5,
+                "year": 2019
+            }
+        },
+        "master_id": "1ff340ad-b60e-4651-99d5-f0b8d90727af",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "github": "13501"
+    },
+    "schema_version": "1_3_3"
+}

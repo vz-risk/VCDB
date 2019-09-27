@@ -1,0 +1,104 @@
+{
+    "incident_id": "72a93f40-df21-11e9-9ff0-a5a30eaf0927",
+    "security_incident": "Confirmed",
+    "reference": "https://www.devex.com/news/unicef-data-leak-reveals-personal-info-of-8-000-online-learners-95558; https://www.informationsecuritybuzz.com/expert-comments/unicef-data-leak-reveals-personal-info-of-8000-online-learners/",
+    "summary": "The United Nations children’s agency, UNICEF, has inadvertently leaked personal information belonging to thousands of users of its online learning portal Agora.  The website offers free training courses to UNICEF staff and members of the public on issues such as child rights, humanitarian action, research, and data.  On Aug. 26, an email containing personal details of 8,253 users enrolled in courses on immunization went out to nearly 20,000 Agora users. ",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 8,
+            "day": 26
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 1
+        }
+    },
+    "victim": {
+        "victim_id": "UNICEF",
+        "employee_count": "10001 to 25000",
+        "industry": "813319",
+        "country": [
+            "BE"
+        ]
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misdelivery"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 8253,
+            "data": [
+                {
+                    "amount": 8253,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Transmitted unencrypted"
+            ]
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2019-09-25T06:47:55.882Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misdelivery error by an internal employee."
+            }
+        ],
+        "modified": "2019-09-25T06:47:55.882Z",
+        "timeline": {
+            "notification": {
+                "day": 28,
+                "month": 8,
+                "year": 2019
+            }
+        },
+        "master_id": "a3e67654-e27b-4a6b-ba19-604a40c46e95",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "github": "14113"
+    },
+    "schema_version": "1_3_3"
+}
