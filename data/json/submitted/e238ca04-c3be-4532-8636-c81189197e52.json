@@ -1,0 +1,110 @@
+{
+    "incident_id": "443b0e40-d8d7-11e9-aff6-af0add73f228",
+    "security_incident": "Confirmed",
+    "reference": "https://www.wptv.com/news/region-okeechobee-county/credit-card-skimmer-found-at-okeechobee-county-convenience-store; https://www.wpbf.com/article/police-warn-of-credit-card-skimmers-found-in-okeechobee/28982030",
+    "summary": "Skimming device found on convenience store POS device.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "employee_count": "Unknown",
+        "industry": "445120",
+        "country": [
+            "US"
+        ],
+        "state": "FL"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Victim work area"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "U - POS terminal",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2019-09-17T06:23:50.378Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia",
+                "summary": "Skimmer is installed"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp",
+                "summary": "Potential confidentiality loss"
+            }
+        ],
+        "modified": "2019-09-17T06:23:50.378Z",
+        "timeline": {
+            "notification": {
+                "day": 10,
+                "month": 9,
+                "year": 2019
+            }
+        },
+        "master_id": "e238ca04-c3be-4532-8636-c81189197e52",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "github": "14122"
+    },
+    "schema_version": "1_3_3"
+}

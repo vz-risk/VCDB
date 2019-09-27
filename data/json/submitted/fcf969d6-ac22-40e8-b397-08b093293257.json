@@ -1,0 +1,131 @@
+{
+    "incident_id": "78fccde0-cffd-11e9-b7c0-13a933b7e5d5",
+    "security_incident": "Confirmed",
+    "reference": "https://www.thepostmillennial.com/saskatoon-city-hall-loses-over-1-million-in-phishing-scam/; https://www.bleepingcomputer.com/news/security/scammer-tricks-city-into-1-million-wire-transfer/; ",
+    "summary": "Saskatoon city manager Jeff Jorgensen has admitted that the city has lost $1.04 million to a fraudster posing as a construction company’s chief financial officer for weeks. An expert now believes that the money may have been sent overseas and it is possible the city will never see the over $1 million in taxpayer money again.  The City of Saskatoon has been affected by a fraud scheme, where a fraudster electronically impersonated the CFO of a construction company and asked for a change of banking information.  The City complied, and as a result, the next contract payment intended to go to that company, $1.04 million, was directed to the fraudster’s bank account.  The fraud was identified on August 12, 2019.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "victim_id": "City of Saskatoon",
+        "employee_count": "1001 to 10000",
+        "industry": "921",
+        "country": [
+            "CA"
+        ]
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Pretexting"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Finance"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 2,
+        "assets": [
+            {
+                "variety": "P - Finance",
+                "amount": 1
+            },
+            {
+                "variety": "U - Laptop",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "unknown": true
+    },
+    "impact": {
+        "overall_rating": "Distracting",
+        "overall_amount": 1040000,
+        "loss": [
+            {
+                "variety": "Asset and fraud",
+                "rating": "Moderate",
+                "amount": 1040000
+            }
+        ]
+    },
+    "plus": {
+        "created": "2019-09-06T00:07:24.025Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Pretext email"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia",
+                "summary": "Fraudulent transaction initiated."
+            }
+        ],
+        "modified": "2019-09-06T00:07:42.125Z",
+        "master_id": "fcf969d6-ac22-40e8-b397-08b093293257",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13925"
+    },
+    "schema_version": "1_3_3"
+}

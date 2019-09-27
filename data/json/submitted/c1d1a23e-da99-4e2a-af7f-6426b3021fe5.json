@@ -1,0 +1,103 @@
+{
+    "incident_id": "aae96600-c8fb-11e9-9c8c-43e34f445f97",
+    "security_incident": "Confirmed",
+    "reference": "https://montrealgazette.com/business/desjardins-rogue-employee-caused-data-breach-for-2-9-million-members; https://www.cbc.ca/news/canada/montreal/desjardins-data-breach-1.5183297; https://www.databreaches.net/desjardins-hit-with-two-class-action-suits-after-security-breach/; https://www.pymnts.com/news/security-and-risk/2019/lender-desjardins-data-breach/; https://montrealgazette.com/news/local-news/hacked-desjardins-data-already-sold-to-criminals-report; https://www.cbc.ca/news/canada/montreal/desjardins-data-breach-protection-1.5212030",
+    "summary": "More than 2.9 million Desjardins Group members have had their personal information compromised in a data breach targeting Canada’s biggest credit union.  The incident stems from “unauthorized and illegal use of internal data” by an employee who has since been fired, Desjardins said Thursday in a statement. Computer systems were not breached, the cooperative said.  Names, dates of birth, social insurance numbers, addresses and phone numbers of about 2.7 million individual members were released to people outside the organization, Desjardins said. Passwords, security questions and personal identification numbers weren’t compromised, Desjardins stressed. About 173,000 business customers were also affected.  Calling the matter a “very serious situation,” Quebec’s Autorité des marchés financiers nevertheless expressed confidence that Desjardins officials “handled the situation with due rigour, transparency and speed and that the cooperation provided to law enforcement is full and complete. “  The incident “highlights the omnipresent risks to information security that all organizations must now contend with,” the financial markets watchdog said in a statement.Desjardins said it learned of the breach when contacted by Laval police June 14. The company said it has implemented additional security measures to protect personal information, accounts and assets. It has also hired experts and is working closely with the Laval police.  “I’d like to reassure our members and clients: their accounts and assets with Desjardins are protected in the event of fraud,” chief executive officer Guy Cormier said in the statement. “If they suffer a financial loss as a result of this situation, they will get their money back. We regret this situation and are making every effort to ensure that it doesn’t happen again.”  All members affected will receive a letter from Desjardins.  As a precaution, Desjardins pledged to offer those affected a credit-monitoring plan and identity theft insurance for a year. Desjardins will pay for the plan.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "victim_id": "Desjardins Group",
+        "employee_count": "25001 to 50000",
+        "industry": "238320",
+        "country": [
+            "CA"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 2700000,
+            "data": [
+                {
+                    "amount": 2700000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Law enforcement"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-28T03:27:34.837Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Employee misuses access to steal data."
+            }
+        ],
+        "modified": "2019-08-28T03:27:34.837Z",
+        "master_id": "c1d1a23e-da99-4e2a-af7f-6426b3021fe5",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "Y"
+            }
+        },
+        "github": "13680"
+    },
+    "schema_version": "1_3_3"
+}
