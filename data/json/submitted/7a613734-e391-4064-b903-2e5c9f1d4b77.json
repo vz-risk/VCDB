@@ -1,0 +1,123 @@
+{
+    "incident_id": "2f025340-e457-11e9-a93a-d3a3d34c5869",
+    "security_incident": "Confirmed",
+    "reference": "https://www.propublica.org/article/millions-of-americans-medical-images-and-data-are-available-on-the-internet,https://www.bleepingcomputer.com/news/security/400-million-medical-radiological-images-exposed-on-the-internet/,https://healthitsecurity.com/news/senator-demands-imaging-firm-share-cybersecurity-practices-after-breach",
+    "summary": "ProPublica searched the internet for Picture Archiving and Communication System (PACS) servers speaking an old medical imaging sharing protocol (DICOM) and found lots of data.",
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        },
+        "compromise": {
+            "unit": "Days"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Days"
+        },
+        "containment": {
+            "unit": "Hours",
+            "value": 24
+        }
+    },
+    "victim": {
+        "victim_id": "OffSite Image Management, Inc",
+        "employee_count": "11 to 100",
+        "industry": "518210",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-CO"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Other",
+                "amount": 1
+            }
+        ],
+        "notes": "PACS server: https://www.osirix-viewer.com › resources › pacs",
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 340000,
+            "data": [
+                {
+                    "amount": 340000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "notes": "Some were veterinary medical records"
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-10-01T19:31:36.500Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-10-01T19:32:38.579Z",
+        "dbir_year": 2020,
+        "master_id": "7a613734-e391-4064-b903-2e5c9f1d4b77",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14174"
+    },
+    "schema_version": "1_3_3"
+}

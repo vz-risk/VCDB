@@ -1,0 +1,125 @@
+{
+    "incident_id": "9357c330-e45b-11e9-a93a-d3a3d34c5869",
+    "security_incident": "Confirmed",
+    "reference": "https://www.engadget.com/2019/05/03/amc-sundance-now-shudder-subscriber-exposed-database/",
+    "summary": "exposed databases.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 4
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Weeks"
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "victim_id": "AMC Networks",
+        "employee_count": "1001 to 10000",
+        "industry": "515120",
+        "locations_affected": 1,
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "US-NY"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 1600000,
+            "data": [
+                {
+                    "amount": 1600000,
+                    "variety": "Personal"
+                },
+                {
+                    "amount": 3000,
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-10-01T20:03:25.283Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-10-01T20:03:25.283Z",
+        "master_id": "a8375045-e0f0-4ee0-9246-bdda620d847b",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14134"
+    },
+    "schema_version": "1_3_3"
+}

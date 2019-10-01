@@ -1,0 +1,144 @@
+{
+    "incident_id": "5ed1e620-e458-11e9-a93a-d3a3d34c5869",
+    "security_incident": "Confirmed",
+    "reference": "https://www.theinquirer.net/inquirer/news/3081589/creepy-data-on-nearly-every-one-of-ecuadors-citizens-has-leaked,https://www.miamiherald.com/news/nation-world/world/americas/article235137087.html,https://www.forbes.com/sites/daveywinder/2019/09/16/personal-data-from-entire-166m-population-of-ecuador-leaked-online/#5aad04393705,https://www.verdict.co.uk/ecuador-data-breach-assange/,https://www.databreaches.net/arrest-made-in-ecuadors-massive-data-breach/",
+    "summary": "Database left online.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 9
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Weeks"
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "victim_id": "Novaestrat",
+        "employee_count": "Small",
+        "industry": "518210",
+        "locations_affected": 1,
+        "country": [
+            "EC"
+        ],
+        "region": [
+            "019005"
+        ],
+        "secondary": {
+            "amount": 1,
+            "victim_id": [
+                "Ecuador’s Social Security Institute Bank,"
+            ]
+        }
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "notes": "elastic search",
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 20800000,
+            "data": [
+                {
+                    "amount": 20800000,
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Damaging",
+        "loss": [
+            {
+                "variety": "Brand damage",
+                "rating": "Major"
+            },
+            {
+                "variety": "Legal and regulatory",
+                "rating": "Major"
+            }
+        ],
+        "notes": "Company Executive arrested"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-10-01T19:54:50.000Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-10-01T19:54:50.000Z",
+        "master_id": "00f9b215-9058-483b-a226-56be3ce77b49",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14163"
+    },
+    "schema_version": "1_3_3"
+}
