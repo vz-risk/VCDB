@@ -1,0 +1,175 @@
+{
+    "incident_id": "583ab060-e5ea-11e9-a0ce-353e27116082",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cbc.ca/news/canada/british-columbia/best-western-hack-1.4286671",
+    "summary": "phishing used to compromise front desk computers and steal credit cards.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 9,
+            "day": 17
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Seconds"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 10
+        },
+        "containment": {
+            "unit": "Weeks"
+        }
+    },
+    "victim": {
+        "victim_id": "Best Western",
+        "employee_count": "Large",
+        "industry": "721110",
+        "locations_affected": 1,
+        "country": [
+            "CA"
+        ],
+        "region": [
+            "019021"
+        ],
+        "state": "CA-BC"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ram scraper"
+            ],
+            "vector": [
+                "Email unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Cashier"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "U - Desktop",
+                "amount": 1
+            }
+        ],
+        "cloud": "NA",
+        "country": [
+            "CA"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Payload"
+            ],
+            "notes": "payment card scraping malware"
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Sell stolen goods"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "random",
+        "created": "2019-10-03T19:47:42.909Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-10-03T19:47:42.909Z",
+        "master_id": "be8c6f93-10e9-46a8-98f7-bf769daa3806",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "10139"
+    },
+    "schema_version": "1_3_3"
+}

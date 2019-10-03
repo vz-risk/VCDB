@@ -1,0 +1,121 @@
+{
+    "incident_id": "97eb8690-e5e4-11e9-a0ce-353e27116082",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bloomberg.com/news/articles/2019-09-24/ecuadorians-personal-data-found-on-unsecured-database-again,https://www.computing.co.uk/ctg/news/3081923/ecuador-data-breach",
+    "summary": "exposed database.",
+    "source_id": "vcdb",
+    "confidence": "Low",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 9
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "victim_id": "DataBook",
+        "employee_count": "Small",
+        "industry": "518210",
+        "locations_affected": 1,
+        "country": [
+            "EC"
+        ],
+        "region": [
+            "019005"
+        ],
+        "state": "EC-P"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "country": [
+            "DE"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 20000000,
+            "data": [
+                {
+                    "amount": 20000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "sub_source": "priority",
+        "created": "2019-10-03T19:17:29.506Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2019-10-03T19:17:29.506Z",
+        "master_id": "8beec901-6b7b-429b-aa38-c9f02f091df4",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "14254"
+    },
+    "schema_version": "1_3_3"
+}
