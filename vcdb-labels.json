@@ -510,51 +510,53 @@
       "variety": {
         "Abuse of functionality": "Abuse of functionality",
         "Brute force": "Brute force or password guessing attacks",
-        "Buffer overflow": "Buffer overflow",
-        "Cache poisoning": "Cache poisoning",
-        "Cryptanalysis": "Cryptanalysis",
-        "CSRF": "Cross-site request forgery",
+        "Buffer overflow": "Buffer overflow. Child of 'Exploit vuln'.",
+        "Cache poisoning": "Cache poisoning. Child of 'Exploit vuln'.",
+        "Cryptanalysis": "Cryptanalysis. Child of 'Exploit vuln'.",
+        "CSRF": "Cross-site request forgery. Child of 'Exploit vuln'.",
         "DoS": "Denial of service",
         "Exploit misconfig": "Exploit a misconfiguration (vs vuln or weakness)",
-        "Exploit vuln": "Exploit vulnerability in code (vs misconfig or weakness). This can be used with other hacking enumerations, (such as XSS when an XSS vuln exists.)",
+        "Exploit vuln": "Exploit vulnerability in code (vs misconfig or weakness). This can be used with other hacking enumerations, (such as XSS when an XSS vuln exists.). Parent of many hacking varieties.",
         "Footprinting": "Footprinting and fingerprinting",
-        "Forced browsing": "Forced browsing or predictable resource location",
-        "Format string attack": "Format string attack",
-        "Fuzz testing": "Fuzz testing",
-        "HTTP request smuggling": "HTTP request smuggling",
-        "HTTP request splitting": "HTTP request splitting",
-        "HTTP response smuggling": "HTTP response smuggling",
-        "HTTP Response Splitting": "HTTP Response Splitting",
-        "Integer overflows": "Integer overflows",
-        "LDAP injection": "LDAP injection",
-        "Mail command injection": "Mail command injection",
-        "MitM": "Man-in-the-middle attack",
-        "Null byte injection": "Null byte injection",
+        "Forced browsing": "Forced browsing or predictable resource location. Child of 'Exploit vuln'.",
+        "Format string attack": "Format string attack. Child of 'Exploit vuln'.",
+        "Fuzz testing": "Fuzz testing. Child of 'Exploit vuln'.",
+        "HTTP request smuggling": "HTTP request smuggling. Child of 'Exploit vuln'.",
+        "HTTP request splitting": "HTTP request splitting. Child of 'Exploit vuln'.",
+        "HTTP response smuggling": "HTTP response smuggling. Child of 'Exploit vuln'.",
+        "HTTP Response Splitting": "HTTP Response Splitting. Child of 'Exploit vuln'.",
+        "Insecure deserialization": "iterating over sequential or obvious values. https://www.owasp.org/index.php/Top_10-2017_A8-Insecure_Deserialization. Child of 'Exploit vuln'.",
+        "Integer overflows": "Integer overflows. Child of 'Exploit vuln'.",
+        "LDAP injection": "LDAP injection. Child of 'Exploit vuln'.",
+        "Mail command injection": "Mail command injection. Child of 'Exploit vuln'.",
+        "MitM": "Man-in-the-middle attack. Child of 'Exploit vuln'.",
+        "Null byte injection": "Null byte injection. Child of 'Exploit vuln'.",
         "Offline cracking": "Offline password or key cracking (e.g., rainbow tables, Hashcat, JtR)",
-        "OS commanding": "OS commanding",
+        "OS commanding": "OS commanding. Child of 'Exploit vuln'.",
         "Pass-the-hash": "Pass-the-hash",
-        "Path traversal": "Path traversal",
-        "Reverse engineering": "Reverse engineering",
-        "RFI": "Remote file inclusion",
-        "Routing detour": "Routing detour",
-        "Session fixation": "Session fixation",
-        "Session prediction": "Credential or session prediction",
-        "Session replay": "Session replay",
-        "Soap array abuse": "Soap array abuse",
-        "Special element injection": "Special element injection",
-        "SQLi": "SQL injection",
-        "SSI injection": "SSI injection",
-        "URL redirector abuse": "URL redirector abuse",
+        "Path traversal": "Path traversal. Child of 'Exploit vuln'.",
+        "Reverse engineering": "Reverse engineering. Child of 'Exploit vuln'.",
+        "RFI": "Remote file inclusion. Child of 'Exploit vuln'.",
+        "Routing detour": "Routing detour. Child of 'Exploit vuln'.",
+        "Session fixation": "Session fixation. Child of 'Exploit vuln'.",
+        "Session prediction": "Credential or session prediction. Child of 'Exploit vuln'.",
+        "Session replay": "Session replay. Child of 'Exploit vuln'.",
+        "Soap array abuse": "Soap array abuse. Child of 'Exploit vuln'.",
+        "Special element injection": "Special element injection. Child of 'Exploit vuln'.",
+        "SQLi": "SQL injection. Child of 'Exploit vuln'.",
+        "SSI injection": "SSI injection. Child of 'Exploit vuln'.",
+        "URL redirector abuse": "URL redirector abuse. Child of 'Exploit vuln'.",
         "Use of backdoor or C2": "Use of Backdoor or C2 channel",
         "Use of stolen creds": "Use of stolen authentication credentials",
-        "Virtual machine escape": "Virtual machine escape",
-        "XML attribute blowup": "XML attribute blowup",
-        "XML entity expansion": "XML entity expansion",
-        "XML external entities": "XML external entities",
-        "XML injection": "XML injection",
-        "XPath injection": "XPath injection",
-        "XQuery injection": "XQuery injection",
-        "XSS": "Cross-site scripting",
+        "User breakout": "Elevation of privilege by another customer in shared environment. Child of 'Exploit vuln'.",
+        "Virtual machine escape": "Virtual machine escape. Child of 'Exploit vuln'.",
+        "XML attribute blowup": "XML attribute blowup. Child of 'Exploit vuln'.",
+        "XML entity expansion": "XML entity expansion. Child of 'Exploit vuln'.",
+        "XML external entities": "XML external entities. Child of 'Exploit vuln'.",
+        "XML injection": "XML injection. Child of 'Exploit vuln'.",
+        "XPath injection": "XPath injection. Child of 'Exploit vuln'.",
+        "XQuery injection": "XQuery injection. Child of 'Exploit vuln'.",
+        "XSS": "Cross-site scripting. Child of 'Exploit vuln'.",
         "Other": "Other",
         "Unknown": "Unknown"
       },
@@ -564,6 +566,8 @@
         "Command shell": "Remote shell",
         "Desktop sharing": "Graphical desktop sharing (RDP, VNC, PCAnywhere, Citrix)",
         "Desktop sharing software": "Superset of 'Desktop sharing' and '3rd party desktop'.  Please use in place of the other two",
+        "Hypervisor": "Hypervisor break-out attack",
+        "Inter-tenant": "Penetration of another VM or web site on shared device or infrastructure",
         "Other": "Other",
         "Partner": "Partner connection or credential",
         "Physical access": "Physical access or connection (i.e., at keyboard or via cable) ",
@@ -581,15 +585,15 @@
       "variety": {
         "Adminware": "System or network utilities (e.g., PsTools, Netcat)",
         "Adware": "Adware",
-        "Backdoor": "Backdoor (enable remote access)",
+        "Backdoor": "Backdoor (enable remote access). Child of 'RAT' when combined with 'Trojan'",
         "Brute force": "Brute force attack",
         "C2": "Command and control (C2)",
         "Capture app data": "Capture data from application or system process",
         "Capture stored data": "Capture data stored on system disk",
-        "Click fraud": "Click fraud, whether or not cryptocurrency mining.  Also mark 'Click fraud or cryptocurrency mining'.",
-        "Click fraud and cryptocurrency mining": "Click fraud or cryptocurrency mining",
+        "Click fraud": "Click fraud, whether or not cryptocurrency mining.  Also mark 'Click fraud or cryptocurrency mining'. Child of 'Click fraud and cryptocurrency mining'.",
+        "Click fraud and cryptocurrency mining": "Click fraud or cryptocurrency mining. Parent of 'Click fraud' and 'Cryptocurrency mining'.",
         "Client-side attack": "Client-side or browser attack (e.g., redirection, XSS, MitB)",
-        "Cryptocurrency mining": "Cryptocurrency mining, whether or not click fraud.  Also mark 'Click fraud or cryptocurrency mining'.",
+        "Cryptocurrency mining": "Cryptocurrency mining, whether or not click fraud. Child of 'Click fraud and cryptocurrency mining'.",
         "Destroy data": "Destroy or corrupt stored data",
         "Modify data": "Malware which compromises a legitimate file rather than creating new filess",
         "Disable controls": "Disable or interfere with security controls",
@@ -602,11 +606,13 @@
         "Password dumper": "Password dumper (extract credential hashes)",
         "Ram scraper": "Ram scraper or memory parser (capture data from volatile memory)",
         "Ransomware": "Ransomware (encrypt or seize stored data)",
+        "RAT": "Remote Access Trojan.  Parent of 'Backdoor' and 'Trojan'",
         "Rootkit": "Rootkit (maintain local privileges and stealth)",
         "Scan network": "Scan or footprint network",
         "Spam": "Send spam",
         "Spyware/Keylogger": "Spyware, keylogger or form-grabber (capture user input or activity)",
         "SQL injection": "SQL injection attack",
+        "Trojan": "An application which appears legitimate but hides malicious functionality. Child of 'RAT' when combined with 'Backdoor'",
         "Worm": "Worm (propagate to other systems or devices)",
         "Other": "Other",
         "Unknown": "Unknown"
@@ -614,10 +620,12 @@
       "vector": {
         "Direct install": "Directly installed or inserted by threat agent (after system access)",
         "Download by malware": "Downloaded and installed by local malware",
-        "Email attachment": "Email via user-executed attachment",
-        "Email autoexecute": "Email via automatic execution",
-        "Email link": "Email via embedded link",
-        "Email unknown": "Email but sub-variety (attachment, autoexecute, link, etc) not known",
+        "Email": "Email. Parent to 'Email attachment', 'Email autoexecute', 'Email link', 'Email unknown'",
+        "Email attachment": "Email via user-executed attachment. Child of 'Email'",
+        "Email autoexecute": "Email via automatic execution. Child of 'Email'",
+        "Email link": "Email via embedded link. Child of 'Email'",
+        "Email unknown": "Email but sub-variety (attachment, autoexecute, link, etc) not known. Child of 'Email'",
+        "Email other": "Email sub-variety known, but not one of those listed (attachment, link, autoexecute, etc). Child of 'Email'",
         "Instant messaging": "Instant Messaging",
         "Network propagation": "Network propagation",
         "Remote injection": "Remotely injected by agent (i.e. via SQLi)",
@@ -670,8 +678,9 @@
         "Cashier": "Cashier, teller or waiter",
         "Customer": "Customer (B2C)",
         "Developer": "Software developer",
-        "End-user": "End-user or regular employee",
-        "Executive": "Executive or upper management",
+        "End-user": "End-user of the victim's products and/or services. Child of 'End-user or employee'",
+        "End-user or employee": "End-user or regular employee not otherwise listed. Parent of 'End-user' or 'Other employee'",
+        "Executive": "Senior staff with legal responsibility such as board members and corporate officers",
         "Finance": "Finance or accounting staff",
         "Former employee": "Former employee",
         "Guard": "Security guard",
@@ -679,6 +688,7 @@
         "Human resources": "Human resources staff",
         "Maintenance": "Maintenance or janitorial staff",
         "Manager": "Manager or supervisor",
+        "Other employee": "Regular employee not otherwise listed. Child of 'End-user or employee'",
         "Partner": "Partner (B2B)",
         "System admin": "System or network administrator",
         "Other": "Other",
@@ -729,6 +739,7 @@
         "Net misuse": "Inappropriate use of network or Web access",
         "Possession abuse": "Abuse of physical access to asset",
         "Privilege abuse": "Abuse of system access privileges",
+        "Snap picture": "Actor photographs the confidentiality data variety.",
         "Unapproved hardware": "Use of unapproved hardware or devices",
         "Unapproved software": "Use of unapproved software or services",
         "Unapproved workaround": "Unapproved workaround or shortcut",
@@ -1117,7 +1128,7 @@
         "Cashier": "Cashier, teller, or waiter",
         "Developer": "Software developer",
         "End-user": "End-user or regular employee",
-        "Executive": "Executive or upper management",
+        "Executive": "Senior staff with legal responsibility such as board members and corporate officers",
         "Finance": "Finance or accounting staff",
         "Guard": "Security guard",
         "Helpdesk": "Helpdesk staff",
@@ -1465,7 +1476,7 @@
         "P - Customer": "People - Customer",
         "P - Developer": "People - Developer",
         "P - End-user": "People - End-user",
-        "P - Executive": "People - Executive",
+        "P - Executive": "People - Senior staff with legal responsibility such as board members and corporate officers",
         "P - Finance": "People - Finance",
         "P - Former employee": "People - Former employee",
         "P - Guard": "People - Guard",
@@ -1507,8 +1518,9 @@
         "T - Other": "Public Terminal - Variety known but not listed",
         "T - Unknown": "Public Terminal - Variety not known",
         "U - Auth token": "User Device - Authentication token or device",
-        "U - Desktop": "User Device - Desktop or workstation",
-        "U - Laptop": "User Device - Laptop",
+        "U - Desktop": "User Device - Desktop or workstation. Child to 'U - Desktop or laptop'",
+        "U - Desktop or laptop": "User Device - Desktop, workstation, or laptop.  Parent to 'U - Desktop' and 'U - Laptop'",
+        "U - Laptop": "User Device - Laptop. Child to 'U - Desktop or laptop'",
         "U - Media": "User Device - Media player or recorder",
         "U - Mobile phone": "User Device - Mobile phone or smartphone",
         "U - Peripheral": "User Device - Peripheral (e.g., printer, copier, fax)",
@@ -1536,16 +1548,11 @@
       "Other": "Owner known but not listed"
     },
     "cloud": {
-      "Customer attack": "Penetration of another web site on shared device",
-      "Hosting error": "Misconfiguration or error by hosting provider",
-      "Hosting governance": "Lack of security process or procedure by hosting provider",
-      "Hypervisor": "Hypervisor break-out attack",
-      "Partner application": "Application vulnerability in partner-developed application",
-      "User breakout": "Elevation of privilege by another customer in shared environment",
-      "NA": "It is known no cloud assets were involved",
-      "No": "It is known that a cloud asset was involved and it being a cloud asset did not affect the outcome",
+      "On-Premise Asset(s)": "On premise assets were involved in the incident.",
+      "External Cloud Asset(s)": "(cloud.Yes) Cloud assets were involved in the incident",
       "Other": "Cloud hosting known but not listed",
-      "Unknown": "The involvement of cloud assets was not measured"
+      "Unknown": "The involvement of cloud assets was not measured",
+      "NA": " (cloud.No) Cloud is not applicable to this incident"
     },
     "hosting": {
       "External - unknown environment": "A third party provided hosted the affected asset, but it is unknown whether the victim organization\u2019s environment was shared or dedicated.",
@@ -1563,6 +1570,13 @@
       "NA": "Management label is not applicable, a Human asset that clicks a malicious attachment is a common example.",
       "Unknown": "The responsibility for management and maintenance of the affected asset was not known to the incident responder or not recorded.",
       "Other": "Ownership known but not listed"
+    },
+    "role": {
+      "IT": "Information Technology",
+      "OT": "Operational Technology",
+      "Unknown": "Unknown",
+      "Other": "Known but not IT or OT",
+      "NA": "The concept of a role is not applicable to the asset."
     },
     "country": {
       "Unknown": "Unknown",
@@ -1846,7 +1860,7 @@
         }
       },
       "data_victim": {
-        "Customer": "Customer",
+        "Customer": "Customer, member, or constituent",
         "Employee": "Employee",
         "Partner": "Partner",
         "Patient": "Patient",
@@ -1861,8 +1875,8 @@
         "Stored encrypted": "Stored encrypted. (Also mark 'Stored'.)",
         "Stored unencrypted": "Stored unencrypted. (Also mark 'Stored'.)",
         "Transmitted": "Transmitted",
-        "Transmitted encrypted": "Transmitted encrypted",
-        "Transmitted unencrypted": "Transmitted unencrypted",
+        "Transmitted encrypted": "Transmitted encrypted. (Also mark 'Trasnmitted.')",
+        "Transmitted unencrypted": "Transmitted unencrypted. (Also mark 'Trasnmitted.')",
         "Other": "Data state known but not listed.",
         "Unknown": "Data stat not known",
         "Printed": "Data printed in human-readable format"
@@ -1876,7 +1890,7 @@
         "Fraudulent transaction": "Initiate fraudulent transaction",
         "Hardware tampering": "Hardware tampering or physical alteration",
         "Log tampering": "Log tampering or modification",
-        "Misrepresentation": "Misrepresentation",
+        "Misrepresentation": "compromise of authenticity (e.g. masquerading as the legitimate owner of an account)",
         "Modify configuration": "Modified configuration or services",
         "Modify data": "Modified stored data or content",
         "Modify privileges": "Modified privileges or permissions",
@@ -1981,7 +1995,7 @@
         "Exploit Kits": "Code sets capable of selecting and trying multiple exploits against a target.",
         "NA": "No type of development was necessary",
         "Other": "The variety of development required is known, but is not listed.",
-        "Unknown": "Nothing is known about the need for or type of development investment"
+        "Unknown": "Nothing is known about the need for or type of development investment other than it was present."
       }
     },
     "non-distribution services": {
@@ -1992,9 +2006,10 @@
         "Proxy": "A proxy service (either formally or informally hosted) is used by the actor to obscure their source",
         "Marketplace": "Use of a marketplace was required as part of this incident.",
         "DNS": "DNS services including fast flux",
+        "Escrow": "Something kept in the custody of a third party until a condition has been fulfilled.",
         "NA": "No type of non-distribution service was necessary",
         "Other": "The variety of non-distribution service required is known, but is not listed",
-        "Unknown": "Nothing is known about the need for or type of non-distribution service investment"
+        "Unknown": "Nothing is known about the need for or type of non-distribution service investment other than it was present."
       }
     },
     "targeting": {
@@ -2009,7 +2024,7 @@
         "Organizational Information": "Information on an organization such as org chart, technologies in use, financial assets, etc, used to pick them as a target",
         "NA": "No type of targeting was necessary",
         "Other": "The variety of targeting was known, but is not listed",
-        "Unknown": "Nothing is known about the need for or type of targeting investment"
+        "Unknown": "Nothing is known about the need for or type of targeting investment other than it was present."
       }
     },
     "distribution": {
@@ -2022,7 +2037,7 @@
         "Loader": "malware that loads other malware",
         "NA": "No type of distribution was necessary",
         "Other": "The variety of distribution was known, but is not listed",
-        "Unknown": "Nothing is known about the need for or type of distribution investment"
+        "Unknown": "Nothing is known about the need for or type of distribution investment other than it was present."
       }
     },
     "cash-out": {
@@ -2035,7 +2050,7 @@
         "Provide service": "See distribution and non-distribution services for potential examples",
         "NA": "No type of cash-out was necessary",
         "Other": "The variety of cash-out was known, but is not listed",
-        "Unknown": "Nothing is known about the need for or type of cash-out investment"
+        "Unknown": "Nothing is known about the need for or type of cash-out investment other than it was present."
       }
     },
     "money laundering": {
@@ -2047,14 +2062,18 @@
         "Re-shipping": "Individuals receive packages purchased through fraudulent means and subsequently repackage the merchandise for shipment, usually abroad.",
         "Gambling": "Gambling related money laundering. (e.g. Converting to chips and back or big wins and losses.",
         "Bank": "Financial institution based money laundering.",
-        "Company": "Trade-based, shell companies, under/over paying, cash-intensive businesses, etc, used for money laundering"
+        "Provide service": "See distribution and non-distribution services for potential examples",
+        "Company": "Trade-based, shell companies, under/over paying, cash-intensive businesses, etc, used for money laundering",
+        "NA": "No type of cmoney laundering was necessary",
+        "Other": "The variety of money laundering was known, but is not listed",
+        "Unknown": "Nothing is known about the need for or type of money laundering other than it was present."
       }
     }
   },
   "impact": {
     "loss": {
       "variety": {
-        "Asset and fraud": "Asset and fraud-related losses",
+        "Asset and fraud": "Asset (including physical currency) and fraud-related losses",
         "Brand damage": "Brand and market damage",
         "Business disruption": "Business disruption",
         "Competitive advantage": "Loss of competitive advantage",
@@ -2271,8 +2290,30 @@
       "Unknown": "No label.",
       "Other": "No label."
     },
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": {
+          "Yes": "Data was abused or maliciously misused",
+          "No": "Data was not abused or maliciously misused",
+          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
+          "Unknown": "No information is known about if the data was abused"
+        },
+        "credit_monitoring": {
+          "Yes": "Credit monitoring was offered",
+          "No": "Credit monitoring was not offered",
+          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
+          "Unknown": "No information is known about if credit monitoring was offered"
+        },
+        "partner_data": {
+          "Yes": "Partner data was compromised",
+          "No": "Partner data was not compromised",
+          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
+          "Unknown": "No information is known about if partner data was compromised"
+        }
+      }
+    },
     "pci": {
-      "req_4": {
+      "req_3": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2289,13 +2330,43 @@
         "Found Compliant": "No label.",
         "Unknown": "No label."
       },
-      "req_10": {
+      "req_9": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
       "req_7": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_11": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_4": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_10": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_8": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_1": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2313,10 +2384,11 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_1": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
+      "merchant_level": {
+        "Level 1": "No label.",
+        "Level 2": "No label.",
+        "Level 3": "No label.",
+        "Level 4": "No label.",
         "Unknown": "No label."
       },
       "req_6": {
@@ -2324,54 +2396,7 @@
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
         "Unknown": "No label."
-      },
-      "req_11": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_8": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_3": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_9": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "merchant_level": {
-        "Level 1": "No label.",
-        "Level 2": "No label.",
-        "Level 3": "No label.",
-        "Level 4": "No label.",
-        "Unknown": "No label."
       }
-    },
-    "asset_os": {
-      "Android": "No label.",
-      "Apple iOS": "No label.",
-      "BlackBerry OS": "No label.",
-      "Linux": "No label.",
-      "Mac OSX": "No label.",
-      "Mainframe": "No label.",
-      "Symbian": "No label.",
-      "Unix": "No label.",
-      "webOS": "No label.",
-      "Windows": "No label.",
-      "Windows Phone": "No label.",
-      "Not applicable": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
     },
     "event_chain": {
       "asset": {
@@ -2382,6 +2407,12 @@
         "srv": "Server",
         "ter": "Public terminal",
         "usr": "User device",
+        "unk": "Unknown"
+      },
+      "actor": {
+        "ext": "External",
+        "int": "Internal",
+        "prt": "Partner",
         "unk": "Unknown"
       },
       "attribute": {
@@ -2399,44 +2430,7 @@
         "phy": "Physical",
         "soc": "Social",
         "unk": "Unknown"
-      },
-      "actor": {
-        "ext": "External",
-        "int": "Internal",
-        "prt": "Partner",
-        "unk": "Unknown"
       }
-    },
-    "analysis_status": {
-      "In-progress": "Incident is currently being entered.",
-      "Needs review": "Incident has been coded and may have been validated, but requires review by a team member before adding.",
-      "First pass": "Coding of the incident is completed.",
-      "Validated": "The incident has been coded and reviewed.",
-      "Finalized": "The incident has been reviewed by Marc.",
-      "Ineligible": "Does not meet the criteria to be included in the corpus."
-    },
-    "attribute": {
-      "confidentiality": {
-        "data_abuse": {
-          "Yes": "Data was abused or maliciously misused",
-          "No": "Data was not abused or maliciously misused",
-          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
-          "Unknown": "No information is known about if the data was abused"
-        }
-      }
-    },
-    "unfollowed_policies": {
-      "Yes": "No label.",
-      "No": "No label.",
-      "Unknown": "No label."
-    },
-    "antiforensic_measures": {
-      "No evidence of AF": "No label.",
-      "Data Corruption": "No label.",
-      "Data Hiding": "No label.",
-      "Data Wiping": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
     },
     "attack_difficulty_subsequent": {
       "High": "No label.",
@@ -2447,6 +2441,11 @@
       "Unknown": "No label.",
       "Other": "No label."
     },
+    "unfollowed_policies": {
+      "Yes": "No label.",
+      "No": "No label.",
+      "Unknown": "No label."
+    },
     "security_maturity": {
       "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.",
       "Defined": "Processes are defined, documented, standardized and integrated into each other.",
@@ -2455,12 +2454,36 @@
       "Optimizing": "Continuous process improvement by quantitative feedback and testing.",
       "Unknown": "The organizations level of maturity is unknown."
     },
+    "analysis_status": {
+      "In-progress": "Incident is currently being entered.",
+      "Needs review": "Incident has been coded and may have been validated, but requires review by a team member before adding.",
+      "First pass": "Coding of the incident is completed.",
+      "Validated": "The incident has been coded and reviewed.",
+      "Finalized": "The incident has been reviewed by Marc.",
+      "Ineligible": "Does not meet the criteria to be included in the corpus."
+    },
     "unknown_unknowns": {
       "Assets that had unknown network connections or accessibility": "No label.",
       "Assets that had unknown user accounts or privileges": "No label.",
       "Assets unknown or unclaimed by the organization (or business group affected)": "No label.",
       "Data the organization did not know existed on a particular asset": "No label.",
       "Unknown": "No label."
+    },
+    "asset_os": {
+      "Android": "No label.",
+      "Apple iOS": "No label.",
+      "BlackBerry OS": "No label.",
+      "Linux": "No label.",
+      "Mac OSX": "No label.",
+      "Mainframe": "No label.",
+      "Symbian": "No label.",
+      "Unix": "No label.",
+      "webOS": "No label.",
+      "Windows": "No label.",
+      "Windows Phone": "No label.",
+      "Not applicable": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
     }
   }
 }
