@@ -525,6 +525,7 @@
         "HTTP request splitting", 
         "HTTP response smuggling", 
         "HTTP Response Splitting", 
+        "Insecure deserialization", 
         "Integer overflows", 
         "LDAP injection", 
         "Mail command injection", 
@@ -547,6 +548,7 @@
         "URL redirector abuse", 
         "Use of backdoor or C2", 
         "Use of stolen creds", 
+        "User breakout", 
         "Virtual machine escape", 
         "XML attribute blowup", 
         "XML entity expansion", 
@@ -564,6 +566,8 @@
         "Command shell", 
         "Desktop sharing", 
         "Desktop sharing software", 
+        "Hypervisor", 
+        "Inter-tenant", 
         "Other", 
         "Partner", 
         "Physical access", 
@@ -602,11 +606,13 @@
         "Password dumper", 
         "Ram scraper", 
         "Ransomware", 
+        "RAT", 
         "Rootkit", 
         "Scan network", 
         "Spam", 
         "Spyware/Keylogger", 
         "SQL injection", 
+        "Trojan", 
         "Worm", 
         "Other", 
         "Unknown"
@@ -614,10 +620,12 @@
       "vector": [
         "Direct install", 
         "Download by malware", 
+        "Email", 
         "Email attachment", 
         "Email autoexecute", 
         "Email link", 
         "Email unknown", 
+        "Email other", 
         "Instant messaging", 
         "Network propagation", 
         "Remote injection", 
@@ -671,6 +679,7 @@
         "Customer", 
         "Developer", 
         "End-user", 
+        "End-user or employee", 
         "Executive", 
         "Finance", 
         "Former employee", 
@@ -679,6 +688,7 @@
         "Human resources", 
         "Maintenance", 
         "Manager", 
+        "Other employee", 
         "Partner", 
         "System admin", 
         "Other", 
@@ -729,6 +739,7 @@
         "Net misuse", 
         "Possession abuse", 
         "Privilege abuse", 
+        "Snap picture", 
         "Unapproved hardware", 
         "Unapproved software", 
         "Unapproved workaround", 
@@ -1508,6 +1519,7 @@
         "T - Unknown", 
         "U - Auth token", 
         "U - Desktop", 
+        "U - Desktop or laptop", 
         "U - Laptop", 
         "U - Media", 
         "U - Mobile phone", 
@@ -1536,16 +1548,11 @@
       "Other"
     ], 
     "cloud": [
-      "Customer attack", 
-      "Hosting error", 
-      "Hosting governance", 
-      "Hypervisor", 
-      "Partner application", 
-      "User breakout", 
-      "NA", 
-      "No", 
+      "On-Premise Asset(s)", 
+      "External Cloud Asset(s)", 
       "Other", 
-      "Unknown"
+      "Unknown", 
+      "NA"
     ], 
     "hosting": [
       "External - unknown environment", 
@@ -1563,6 +1570,13 @@
       "NA", 
       "Unknown", 
       "Other"
+    ], 
+    "role": [
+      "IT", 
+      "OT", 
+      "Unknown", 
+      "Other", 
+      "NA"
     ], 
     "country": [
       "Unknown", 
@@ -1992,6 +2006,7 @@
         "Proxy", 
         "Marketplace", 
         "DNS", 
+        "Escrow", 
         "NA", 
         "Other", 
         "Unknown"
@@ -2047,7 +2062,11 @@
         "Re-shipping", 
         "Gambling", 
         "Bank", 
-        "Company"
+        "Provide service", 
+        "Company", 
+        "NA", 
+        "Other", 
+        "Unknown"
       ]
     }
   }, 
@@ -2253,16 +2272,7 @@
     "Unknown"
   ], 
   "plus": {
-    "attack_difficulty_legacy": [
-      "High", 
-      "Moderate", 
-      "Low", 
-      "Very Low", 
-      "Not Applicable", 
-      "Unknown", 
-      "Other"
-    ], 
-    "attack_difficulty_initial": [
+    "attack_difficulty_subsequent": [
       "High", 
       "Moderate", 
       "Low", 
@@ -2272,54 +2282,7 @@
       "Other"
     ], 
     "pci": {
-      "req_4": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_2": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "compliance_status": [
-        "Not Compliant", 
-        "Found Compliant", 
-        "Unknown"
-      ], 
-      "req_10": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_7": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
       "req_12": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_5": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_1": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_6": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2331,19 +2294,25 @@
         "Not Applicable", 
         "Unknown"
       ], 
-      "req_8": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_3": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
       "req_9": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_10": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_6": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_2": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2355,6 +2324,81 @@
         "Level 3", 
         "Level 4", 
         "Unknown"
+      ], 
+      "req_1": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_7": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_8": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "compliance_status": [
+        "Not Compliant", 
+        "Found Compliant", 
+        "Unknown"
+      ], 
+      "req_5": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_3": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_4": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ]
+    }, 
+    "event_chain": {
+      "actor": [
+        "ext", 
+        "int", 
+        "prt", 
+        "unk"
+      ], 
+      "asset": [
+        "emb", 
+        "med", 
+        "net", 
+        "ppl", 
+        "srv", 
+        "ter", 
+        "usr", 
+        "unk"
+      ], 
+      "action": [
+        "env", 
+        "err", 
+        "hak", 
+        "mal", 
+        "mis", 
+        "phy", 
+        "soc", 
+        "unk"
+      ], 
+      "attribute": [
+        "au", 
+        "cp", 
+        "ia", 
+        "unk"
       ]
     }, 
     "asset_os": [
@@ -2373,39 +2417,56 @@
       "Unknown", 
       "Other"
     ], 
-    "event_chain": {
-      "asset": [
-        "emb", 
-        "med", 
-        "net", 
-        "ppl", 
-        "srv", 
-        "ter", 
-        "usr", 
-        "unk"
-      ], 
-      "attribute": [
-        "au", 
-        "cp", 
-        "ia", 
-        "unk"
-      ], 
-      "action": [
-        "env", 
-        "err", 
-        "hak", 
-        "mal", 
-        "mis", 
-        "phy", 
-        "soc", 
-        "unk"
-      ], 
-      "actor": [
-        "ext", 
-        "int", 
-        "prt", 
-        "unk"
-      ]
+    "security_maturity": [
+      "Initial", 
+      "Defined", 
+      "Managed", 
+      "Measured", 
+      "Optimizing", 
+      "Unknown"
+    ], 
+    "attack_difficulty_legacy": [
+      "High", 
+      "Moderate", 
+      "Low", 
+      "Very Low", 
+      "Not Applicable", 
+      "Unknown", 
+      "Other"
+    ], 
+    "unknown_unknowns": [
+      "Assets that had unknown network connections or accessibility", 
+      "Assets that had unknown user accounts or privileges", 
+      "Assets unknown or unclaimed by the organization (or business group affected)", 
+      "Data the organization did not know existed on a particular asset", 
+      "Unknown"
+    ], 
+    "unfollowed_policies": [
+      "Yes", 
+      "No", 
+      "Unknown"
+    ], 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ], 
+        "partner_data": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ], 
+        "data_abuse": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ]
+      }
     }, 
     "analysis_status": [
       "In-progress", 
@@ -2415,30 +2476,7 @@
       "Finalized", 
       "Ineligible"
     ], 
-    "attribute": {
-      "confidentiality": {
-        "data_abuse": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ]
-      }
-    }, 
-    "unfollowed_policies": [
-      "Yes", 
-      "No", 
-      "Unknown"
-    ], 
-    "antiforensic_measures": [
-      "No evidence of AF", 
-      "Data Corruption", 
-      "Data Hiding", 
-      "Data Wiping", 
-      "Unknown", 
-      "Other"
-    ], 
-    "attack_difficulty_subsequent": [
+    "attack_difficulty_initial": [
       "High", 
       "Moderate", 
       "Low", 
@@ -2446,21 +2484,6 @@
       "Not Applicable", 
       "Unknown", 
       "Other"
-    ], 
-    "security_maturity": [
-      "Initial", 
-      "Defined", 
-      "Managed", 
-      "Measured", 
-      "Optimizing", 
-      "Unknown"
-    ], 
-    "unknown_unknowns": [
-      "Assets that had unknown network connections or accessibility", 
-      "Assets that had unknown user accounts or privileges", 
-      "Assets unknown or unclaimed by the organization (or business group affected)", 
-      "Data the organization did not know existed on a particular asset", 
-      "Unknown"
     ]
   }
 }
