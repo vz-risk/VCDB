@@ -1,0 +1,253 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "likely through trickbot",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Backdoor or C2"
+      ]
+    },
+    "malware": {
+      "name": "ryuk, potentially emotet, trickbot",
+      "notes": "https://blog.malwarebytes.com/detections/trojan-trickbot/, https://www.crowdstrike.com/blog/big-game-hunting-with-ryuk-another-lucrative-targeted-ransomware/, https://www.us-cert.gov/ncas/alerts/TA18-201A",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor",
+        "RAT",
+        "Ransomware",
+        "Trojan"
+      ],
+      "vector": [
+        "Email"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "WIZARD SPIDER"
+      ],
+      "notes": "https://malpedia.caad.fkie.fraunhofer.de/actor/wizard_spider",
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "country": [
+      "CA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks"
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored",
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Antivirus"
+      ]
+    }
+  },
+  "impact": {
+    "notes": "Hospital required to resort to paper processes and bring in additional staff.",
+    "overall_rating": "Painful"
+  },
+  "incident_id": "d1ac8700-f0e6-11e9-84f1-e9d602503a96",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "created": "2019-10-17T19:32:01.205Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au"
+      }
+    ],
+    "github": "14315",
+    "master_id": "22938540-84bf-46a1-bf0e-9a58df1326ac",
+    "modified": "2019-10-17T19:32:01.205Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 10,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://toronto.ctvnews.ca/east-york-hospital-recovering-after-malware-attack-1.4624628,https://www.crowdstrike.com/blog/big-game-hunting-with-ryuk-another-lucrative-targeted-ransomware/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "hospital infected by ransomware, likely through phishing.",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2019
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Payload",
+        "Ransomware",
+        "Trojan"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "money laundering": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses",
+        "Organizational Information",
+        "Weaknesses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "622210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA-ON",
+    "victim_id": "Michael Garron Hospital"
+  }
+}
