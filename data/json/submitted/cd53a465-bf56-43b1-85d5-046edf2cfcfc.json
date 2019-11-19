@@ -1,0 +1,141 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 9,
+            "day": 16
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Seconds"
+        },
+        "discovery": {
+            "unit": "Days"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "country": [
+            "CA"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Scotiabank",
+        "employee_count": "50001 to 100000",
+        "industry": "522110",
+        "locations_affected": 1,
+        "state": "CA-ON"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Inadequate processes"
+            ],
+            "notes": "no processes for removing sensitive data from repositories"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Code repository",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Internal"
+                },
+                {
+                    "variety": "Secrets"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Victim organization"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2019-11-19T21:53:00.122Z",
+        "created": "2019-11-19T21:39:19.624Z",
+        "dbir_year": 2020,
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 9,
+                "day": 19
+            }
+        },
+        "master_id": "cd53a465-bf56-43b1-85d5-046edf2cfcfc",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "partner_data": "No"
+            }
+        },
+        "github": "14192"
+    },
+    "incident_id": "8b34b220-0ae0-11ea-a7de-15b14f857e77",
+    "security_incident": "Confirmed",
+    "reference": "https://www.scmagazine.com/home/security-news/data-breach/report-scotiabank-exposed-source-code-and-credentials-on-github-repositories/,https://www.itworldcanada.com/article/scotiabank-source-code-credentials-found-open-on-github-news-report/421992,https://www.theregister.co.uk/2019/09/18/scotiabank_code_github_leak/",
+    "summary": "bank publishes internal information in public github repository",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}
