@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#", 
   "additionalProperties": false, 
-  "description": "VERIS VCDB Schema 1.3.3.", 
+  "description": "VERIS VCDB Schema 1.3.4.", 
   "properties": {
     "incident_id": {
       "type": "string", 
@@ -51,7 +51,7 @@
           "properties": {
             "year": {
               "type": "integer", 
-              "maximum": 2021, 
+              "maximum": 2022, 
               "minimum": 1950
             }, 
             "month": {
@@ -218,10 +218,10 @@
           ]
         }, 
         "industry": {
-          "description": "Victim NAICS Code. You can look it up <a href='http://www.farsmarterbids.com/reference/naics-list.php'>here</a> or <a href='http://www.naics.com/search' target='_blank'>here</a>.", 
+          "description": "Victim NAICS Code. You can look it up <a href='http://www.farsmarterbids.com/reference/naics-list.php' target='_blank'>here</a> or <a href='http://www.naics.com/search' target='_blank'>here</a>.", 
           "maxLength": 6, 
           "minLength": 2, 
-          "pattern": "\\d{2}-?\\d{0,4}", 
+          "pattern": "(00|11|2[1-3]|3[1-3]|4[24589]|5[1-6]|6[1-2]|7[12]|81|92)-?\\d{0,4}", 
           "type": "string"
         }, 
         "locations_affected": {
@@ -492,7 +492,7 @@
           "uniqueItems": true
         }, 
         "region": {
-          "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
+          "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.  Use 000000 if you do not know and 000001 for 'other' (includes international waters and outer space).  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
           "items": {
             "type": "string", 
             "maxLength": 6, 
@@ -505,7 +505,7 @@
           "pattern": "\\d{6}"
         }, 
         "state": {
-          "description": "ALL CAPS.  For US states, you can use the <a href='https://en.wikipedia.org/wiki/ISO_3166-2:US'>ISO_3166-2 2-character state code</a>, otherwise use the full <a href='https://en.wikipedia.org/wiki/ISO_3166-2' target='_blank'>ISO_3166-2 Country subdivision code</a>", 
+          "description": "ALL CAPS.  For US states, you can use the <a href='https://en.wikipedia.org/wiki/ISO_3166-2:US' target='_blank'>ISO_3166-2 2-character state code</a>, otherwise use the full <a href='https://en.wikipedia.org/wiki/ISO_3166-2' target='_blank'>ISO_3166-2 Country subdivision code</a>", 
           "type": "string"
         }, 
         "notes": {
@@ -525,7 +525,7 @@
               "type": "string"
             }, 
             "victim_id": {
-              "description": "List any secondary victims here.", 
+              "description": "List any secondary victims here.  IF a NAICS is known, list the NAICS code after a semi-colon.  For example: `verizon;517911`.  If only the NAICS code is known, list it first.  `;517911`", 
               "items": {
                 "type": "string"
               }, 
@@ -753,6 +753,7 @@
                   "HTTP request splitting", 
                   "HTTP response smuggling", 
                   "HTTP Response Splitting", 
+                  "Insecure deserialization", 
                   "Integer overflows", 
                   "LDAP injection", 
                   "Mail command injection", 
@@ -775,6 +776,7 @@
                   "URL redirector abuse", 
                   "Use of backdoor or C2", 
                   "Use of stolen creds", 
+                  "User breakout", 
                   "Virtual machine escape", 
                   "XML attribute blowup", 
                   "XML entity expansion", 
@@ -800,6 +802,8 @@
                   "Command shell", 
                   "Desktop sharing", 
                   "Desktop sharing software", 
+                  "Hypervisor", 
+                  "Inter-tenant", 
                   "Other", 
                   "Partner", 
                   "Physical access", 
@@ -871,11 +875,13 @@
                   "Password dumper", 
                   "Ram scraper", 
                   "Ransomware", 
+                  "RAT", 
                   "Rootkit", 
                   "Scan network", 
                   "Spam", 
                   "Spyware/Keylogger", 
                   "SQL injection", 
+                  "Trojan", 
                   "Worm", 
                   "Other", 
                   "Unknown"
@@ -891,10 +897,12 @@
                 "enum": [
                   "Direct install", 
                   "Download by malware", 
+                  "Email", 
                   "Email attachment", 
                   "Email autoexecute", 
                   "Email link", 
                   "Email unknown", 
+                  "Email other", 
                   "Instant messaging", 
                   "Network propagation", 
                   "Remote injection", 
@@ -1004,6 +1012,7 @@
                   "Customer", 
                   "Developer", 
                   "End-user", 
+                  "End-user or employee", 
                   "Executive", 
                   "Finance", 
                   "Former employee", 
@@ -1012,6 +1021,7 @@
                   "Human resources", 
                   "Maintenance", 
                   "Manager", 
+                  "Other employee", 
                   "Partner", 
                   "System admin", 
                   "Other", 
@@ -1122,6 +1132,7 @@
                   "Net misuse", 
                   "Possession abuse", 
                   "Privilege abuse", 
+                  "Snap picture", 
                   "Unapproved hardware", 
                   "Unapproved software", 
                   "Unapproved workaround", 
@@ -1647,7 +1658,7 @@
               "uniqueItems": true
             }, 
             "region": {
-              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
+              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.  Use 000000 if you do not know and 000001 for 'other' (includes international waters and outer space).  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
               "items": {
                 "type": "string", 
                 "maxLength": 6, 
@@ -1668,7 +1679,6 @@
             }
           }, 
           "required": [
-            "country", 
             "variety", 
             "motive"
           ], 
@@ -2058,7 +2068,7 @@
               "uniqueItems": true
             }, 
             "region": {
-              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. (e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.)  Use 000000 if you do not know.  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
+              "description": "The <a href='https://en.wikipedia.org/wiki/UN_M.49' target='_blank'>UN M.49</a> super-region and sub-region joined together. e.g. North America: 019021. South America (Brazil): 019005, Asia: 142000, East Asia (includes China): 142030, West Asia (Middle East): 142145, Southeast Asia: 142034, Eastern Europe: 150151, Western Europe: 150155.  Use 000000 if you do not know and 000001 for 'other' (includes international waters and outer space).  If you only know the super-region, use zero's for the region.  (e.g. 019000 for Americas.)", 
               "items": {
                 "type": "string", 
                 "maxLength": 6, 
@@ -2191,6 +2201,7 @@
                   "T - Unknown", 
                   "U - Auth token", 
                   "U - Desktop", 
+                  "U - Desktop or laptop", 
                   "U - Laptop", 
                   "U - Media", 
                   "U - Mobile phone", 
@@ -2243,19 +2254,19 @@
         }, 
         "cloud": {
           "description": "Only answer if you know for sure if the asset was hosted in a cloud service.", 
-          "type": "string", 
-          "enum": [
-            "Customer attack", 
-            "Hosting error", 
-            "Hosting governance", 
-            "Hypervisor", 
-            "Partner application", 
-            "User breakout", 
-            "NA", 
-            "No", 
-            "Other", 
-            "Unknown"
-          ]
+          "items": {
+            "type": "string", 
+            "enum": [
+              "On-Premise Asset(s)", 
+              "External Cloud Asset(s)", 
+              "Other", 
+              "Unknown", 
+              "NA"
+            ]
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
         }, 
         "hosting": {
           "description": "Where is the affected asset hosted/located?", 
@@ -2286,6 +2297,22 @@
               "NA", 
               "Unknown", 
               "Other"
+            ]
+          }, 
+          "minItems": 1, 
+          "type": "array", 
+          "uniqueItems": true
+        }, 
+        "role": {
+          "description": "Is the asset Information Technology (IT) such as email or the domain controller or Operational Technology (OT) such as rail-switching computers for a railroad or manufacturing robots for a manufacturing company.", 
+          "items": {
+            "type": "string", 
+            "enum": [
+              "IT", 
+              "OT", 
+              "Unknown", 
+              "Other", 
+              "NA"
             ]
           }, 
           "minItems": 1, 
@@ -2559,7 +2586,11 @@
           "uniqueItems": true
         }
       }, 
-      "type": "object"
+      "type": "object", 
+      "required": [
+        "assets", 
+        "cloud"
+      ]
     }, 
     "attribute": {
       "description": "<a href='http://veriscommunity.net/attributes.html' target='_blank'>More Info</a>", 
@@ -2966,6 +2997,7 @@
                   "Proxy", 
                   "Marketplace", 
                   "DNS", 
+                  "Escrow", 
                   "NA", 
                   "Other", 
                   "Unknown"
@@ -3105,7 +3137,11 @@
                   "Re-shipping", 
                   "Gambling", 
                   "Bank", 
-                  "Company"
+                  "Provide service", 
+                  "Company", 
+                  "NA", 
+                  "Other", 
+                  "Unknown"
                 ]
               }, 
               "minItems": 1, 
@@ -3418,22 +3454,6 @@
           "type": "string", 
           "description": "Record notes about the analysis of the incident. (This is in contrast to notes about the incident itself which should go in 'notes'.)"
         }, 
-        "antiforensic_measures": {
-          "items": {
-            "type": "string", 
-            "enum": [
-              "No evidence of AF", 
-              "Data Corruption", 
-              "Data Hiding", 
-              "Data Wiping", 
-              "Unknown", 
-              "Other"
-            ]
-          }, 
-          "minItems": 1, 
-          "type": "array", 
-          "uniqueItems": true
-        }, 
         "asset": {
           "additionalProperties": false, 
           "properties": {
@@ -3515,11 +3535,18 @@
               "properties": {
                 "credit_monitoring": {
                   "minLength": 1, 
-                  "type": "string"
+                  "type": "string", 
+                  "enum": [
+                    "Yes", 
+                    "No", 
+                    "Other", 
+                    "Unknown"
+                  ]
                 }, 
                 "credit_monitoring_years": {
                   "minLength": 1, 
-                  "type": "integer"
+                  "type": "number", 
+                  "minimum": 0.01
                 }, 
                 "data_abuse": {
                   "minLength": 1, 
@@ -3533,11 +3560,18 @@
                 }, 
                 "partner_data": {
                   "minLength": 1, 
-                  "type": "string"
+                  "type": "string", 
+                  "enum": [
+                    "Yes", 
+                    "No", 
+                    "Other", 
+                    "Unknown"
+                  ]
                 }, 
                 "partner_number": {
                   "minLength": 1, 
-                  "type": "integer"
+                  "type": "integer", 
+                  "minimum": 1
                 }
               }, 
               "type": "object"
@@ -3560,7 +3594,7 @@
         "dbir_year": {
           "minLength": 1, 
           "type": "integer", 
-          "default": 2018
+          "default": 2020
         }, 
         "event_chain": {
           "items": {
@@ -3905,9 +3939,9 @@
       "properties": {}
     }, 
     "schema_version": {
-      "description": "Schema version in use. This should be 1.3.3 for this schema.", 
+      "description": "Schema version in use. This should be 1.3.4 for this schema.", 
       "type": "string", 
-      "default": "1.3.3"
+      "default": "1.3.4"
     }
   }, 
   "required": [

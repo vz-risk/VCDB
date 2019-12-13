@@ -1,0 +1,170 @@
+{
+  "action": {
+    "social": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "target": [
+        "Human resources"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Human resources"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 700,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 700,
+      "data_victim": [
+        "Employee"
+      ],
+      "notes": "tax information / W-2",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "max_amount": 2100000,
+        "rating": "Moderate",
+        "variety": "Other"
+      }
+    ],
+    "notes": "class action settlement of 3k/person max for 700 workers",
+    "overall_amount": 2100000,
+    "overall_min_amount": 2100000,
+    "overall_rating": "Painful"
+  },
+  "incident_id": "e6354520-ded2-11e9-843d-75ce6c835970",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2019-09-24T19:21:34.621Z",
+    "dbir_year": 2018,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp"
+      }
+    ],
+    "github": "13431",
+    "master_id": "31d43b34-e4cf-4650-bbd5-0071d1cf4c5d",
+    "modified": "2019-09-24T19:38:52.228Z"
+  },
+  "reference": "https://www.hustlermoneyblog.com/taconic-employee-w-2-data-breach-class-action-lawsuit/,http://www.marylandattorneygeneral.gov/ID%20Theft%20Breach%20Notices/2017/itu-280527%20(1).pdf",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "employee was phished and sent actor w-2 data of other employees",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "NA"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 10
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 30,
+      "month": 1,
+      "year": 2017
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Fraud"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "115210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-NY",
+    "victim_id": "Taconic Biosciences, Inc"
+  }
+}

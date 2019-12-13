@@ -1,0 +1,190 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Adminware",
+        "Capture app data",
+        "Capture stored data",
+        "Packet sniffer"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "misuse": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Possession abuse",
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access",
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Grudge"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "U - Laptop"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Transmitted unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "529322f0-df46-11e9-9ff0-a5a30eaf0927",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "No"
+      }
+    },
+    "created": "2019-09-26T23:36:45.417Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Judge grants access to her system."
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Use of stolen creds to get access to laptop"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Wireshark installation"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Data is exfiltrated via wireshark until the cops arrive."
+      }
+    ],
+    "github": "14233",
+    "master_id": "a2ed36db-0c78-4162-b2cc-dbaa2ca73866",
+    "modified": "2019-09-26T23:36:45.417Z",
+    "timeline": {
+      "notification": {
+        "day": 18,
+        "month": 9,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "http://www.abajournal.com/news/article/judge-said-to-believe-da-hacked-her-computer-is-charged-with-computer-trespassing; https://pacga.org/2019/09/18/four-indicted-for-criminal-trespass-by-gwinnett-county-grand-jury/; https://apnews.com/0b8f6bfa105845debadd91739a038949; https://www.law.com/2019/09/18/special-prosecutor-seeks-indictment-of-gwinnett-judge-over-court-computer-hack-292-53725/?slreturn=20190825124146; https://www.gwinnettdailypost.com/local/gwinnett-superior-court-judge-kathryn-schrader-three-others-indicted-for/article_e008d912-da56-11e9-9861-eb6bd021d473.html; https://www.ajc.com/news/local/gwinnett-judge-dragoncon-founder-indicted-hacking-case/ni0nOji81VHz7xCdKP7LgN/; ",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A superior court judge in Gwinnett County, Georgia, has been indicted on three counts of computer trespass for allegedly allowing outsiders to access the county computer system, reportedly to investigate whether the district attorney had hacked her computer.  Judge Kathryn Schrader was indicted Wednesday along with a private investigator and two computer specialists allegedly given access to the computer system and data. One of the experts had been convicted of child molestation. Law.com, the Gwinnett Daily Post, the Atlanta Journal-Constitution and the Associated Press have coverage; a press release is here.  The indictment has few details. But a March court filing by a lawyer for the convicted child molester said the Georgia Bureau of Investigation was investigating whether Schrader allowed the experts to access the county computer system because she suspected that Gwinnett County District Attorney Danny Porter had hacked her computer. The Gwinnett Daily Post had coverage.  The court filing said one of the experts had installed a WireShark device on Schrader\u2019s computer in February to monitor suspicious activity on the computer network. The convicted child molester, Ed Kramer, was hired to analyze data collected by the device.  According to the filing, Kramer found \u201cclear signs\u201d that someone had accessed Schrader\u2019s computer without permission, according to the AP.  During the time period when Kramer was monitoring the data, he was accused of violating probation for taking a photo of a child at a doctor\u2019s office. The court filing by Kramer\u2019s lawyer sought to disqualify Porter in the parole violation case on the grounds that he was a potential witness in the computer-access investigation.  Porter had learned that Kramer had access to county computers after his office seized Kramer\u2019s electronic devices to look for photos of the child in the doctor\u2019s office, the court filing said.  Porter has denied hacking Schrader\u2019s computer. The criminal case was handled by the Prosecuting Attorneys\u2019 Council of Georgia because Porter is considered a witness.  Schrader is no longer hearing criminal cases as a result of the investigation.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "922110",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Gwinnett County Justice Center"
+  }
+}

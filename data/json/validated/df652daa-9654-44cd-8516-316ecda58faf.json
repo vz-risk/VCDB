@@ -1,0 +1,126 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "notes": "PACS server: https://www.osirix-viewer.com \u203a resources \u203a pacs",
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1000000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1000000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "e23a8d10-e452-11e9-a93a-d3a3d34c5869",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "No"
+      }
+    },
+    "created": "2019-10-01T19:24:07.843Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14174",
+    "master_id": "df652daa-9654-44cd-8516-316ecda58faf",
+    "modified": "2019-10-01T19:32:05.704Z"
+  },
+  "reference": "https://www.propublica.org/article/millions-of-americans-medical-images-and-data-are-available-on-the-internet,https://www.bleepingcomputer.com/news/security/400-million-medical-radiological-images-exposed-on-the-internet/,https://healthitsecurity.com/news/senator-demands-imaging-firm-share-cybersecurity-practices-after-breach",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ProPublica searched the internet for Picture Archiving and Communication System (PACS) servers speaking an old medical imaging sharing protocol (DICOM) and found lots of data.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Days"
+    },
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Days"
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "621512",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-MD",
+    "victim_id": "MobilexUSA"
+  }
+}

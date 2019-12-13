@@ -1,0 +1,102 @@
+{
+    "incident_id": "a126a5e0-c8f8-11e9-b2db-f769187145bf",
+    "security_incident": "Confirmed",
+    "reference": "https://kr-asia.com/two-ex-employees-from-chinese-online-recruitment-platform-zhaoping-on-trial-for-massive-personal-data-theft; https://technode.com/2019/07/11/zhaopin-employees-resume-leak/; https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=2ahUKEwjAqYj816PkAhUVrp4KHZVoDecQFjADegQIABAB&url=https%3A%2F%2Fsearchinform.com%2Fnews%2Fworld-news%2F2019%2F07%2F11%2F160000-cvs-leaked-to-taobao-by-zhaoping-ex-employees%2F&usg=AOvVaw0LV4SRjEDV930or4QSNqkq",
+    "summary": "Zhaoping, one of China’s biggest online recruitment platforms, confirmed on Tuesday that two now former employees were involved in a massive data leak case in which more than 150,000  CVs–written summaries of people’s education and work experience–were copied from the platform. The company said it would crack down on such illegal activities.  The Beijing-based company said that it became aware of the CV leak last June after noticing that CVs from its website were being sold on Taobao, China’s largest e-commerce platform.  The case bubbled up again in Chinese media earlier this week because the two former Zhaoping mployees were on trial for selling as much as 160,000 CVs illegally obtained from the platform.  CVs are attractive documents to buy in bulk, because they typically also contain personal information such as contact numbers and addresses. Salespeople could buy these CVs to find potential high-net worth customers, and so forth.  Zhaoping said it reported the case to the police immediately at that time and that it cooperated with the investigation. Two employees at its Shanghai subsidiary were then taken in for questioning in August 2018.  The two identified with only their surnames, Lu and Wang, helped another suspect, Zheng forge a business license and get access to CVs on the platform. Zheng then put the CVs on Taobao for sale. Each CV was sold around RMB 5 (USD 0.73).",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 6
+        }
+    },
+    "victim": {
+        "victim_id": "Zhaoping",
+        "employee_count": "11 to 100",
+        "industry": "519130",
+        "country": [
+            "CN"
+        ]
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "total_amount": 1,
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data_total": 160000,
+            "data": [
+                {
+                    "amount": 160000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-28T01:38:03.445Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Employees pilfer resumes of customers and put the data up for sale on the black market."
+            }
+        ],
+        "modified": "2019-08-28T01:38:03.445Z",
+        "master_id": "a85bd783-c023-4bee-8584-708ddbe5b346",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13764"
+    },
+    "schema_version": "1_3_3"
+}

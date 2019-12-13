@@ -1,0 +1,233 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "exfiltrate internal and personal data",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    },
+    "physical": {
+      "notes": "installation of physical key logger",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Tampering"
+      ],
+      "vector": [
+        "Victim work area"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Extortion",
+        "Pretexting"
+      ],
+      "vector": [
+        "In-person"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Grudge"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 2,
+        "variety": "P - End-user"
+      },
+      {
+        "amount": 6,
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "total_amount": 9
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "blackmail",
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "e1fcb180-ef5a-11e9-8b51-736a93581b2e",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-10-15T20:11:54.840Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "int",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "social engineering key from owner"
+      },
+      {
+        "action": "phy",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "theft of credentials by key logger"
+      },
+      {
+        "action": "hak",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "theft of data by credentials"
+      },
+      {
+        "action": "soc",
+        "actor": "int",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "blackmail to prevent disclosure"
+      }
+    ],
+    "github": "13703",
+    "master_id": "48af96e7-4550-4c92-a095-d744bceb4643",
+    "modified": "2019-10-15T20:12:57.638Z"
+  },
+  "reference": "https://www.bostonglobe.com/metro/2019/04/07/former-hassan-staffer-pleads-guilty-stealing-data/VYkyDl6wb24wNthDK99TMM/story.html,https://www.bostonherald.com/2018/10/05/former-staffer-for-sen-maggie-hassan-accused-of-stealing-private-info/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An employee borrowed physical keys, and use them to install key loggers, to steal data and blackmail a politician.",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Days"
+    },
+    "containment": {
+      "unit": "Months"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 17
+    },
+    "exfiltration": {
+      "unit": "Days"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2017
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "NA"
+      ]
+    },
+    "development": {
+      "notes": "physical keylogger",
+      "variety": [
+        "Other"
+      ]
+    },
+    "distribution": {
+      "notes": "physical",
+      "variety": [
+        "Other"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "NA"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "NA"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "921120",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-MA",
+    "victim_id": "United States Senate"
+  }
+}

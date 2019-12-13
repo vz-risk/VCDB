@@ -1,0 +1,107 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2000000,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2000000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "1768bff0-caab-11e9-be6a-93e1b0174537",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2019-08-30T05:24:47.535Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Developer's app stores wifi network passwords in the clear and has no controls."
+      }
+    ],
+    "github": "13434",
+    "master_id": "a20d7ea1-ac88-4fcb-a9ef-977a88df41d0",
+    "modified": "2019-08-30T05:24:47.535Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 22,
+        "month": 4,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://techcrunch.com/2019/04/22/hotspot-password-leak/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A popular hotspot finder app for Android exposed the Wi-Fi network passwords for more than two million networks.  The app, downloaded by thousands of users, allowed anyone to search for Wi-Fi networks in their nearby area. The app allows the user to upload Wi-Fi network passwords from their devices to its database for others to use.  That database of more than two million network passwords, however, was left exposed and unprotected, allowing anyone to access and download the contents in bulk.  Sanyam Jain, a security researcher and a member of the GDI Foundation, found the database and reported the findings to TechCrunch.  We spent more than two weeks trying to contact the developer, believed to be based in China, to no avail. Eventually we contacted the host, DigitalOcean, which took down the database within a day of reaching out.  \u201cWe notified the user and have taken the [server] hosting the exposed database offline,\u201d a spokesperson told TechCrunch.  Each record contained the Wi-Fi network name, its precise geolocation, its basic service set identifier (BSSID) and network password stored in plaintext.  Although the app developer claims the app only provides passwords for public hotspots, a review of the data showed countless home Wi-Fi networks. The exposed data didn\u2019t include contact information for any of the Wi-Fi network owners, but the geolocation of each Wi-Fi network correlated on a map often included networks in wholly residential areas or where no discernible businesses exist.  The app doesn\u2019t require users to obtain the permission from the network owner, exposing Wi-Fi networks to unauthorized access. With access to a network, an attacker may be able to modify router settings to point unsuspecting users to malicious websites by changing the DNS server, a vital system used to convert web addresses into the IP addresses used to locate web servers on the internet. When on a network, an attacker also can read the unencrypted traffic that goes across the wireless network, allowing them to steal passwords and secrets.  Tens of thousands of the exposed Wi-Fi passwords are for networks based in the U.S.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "Unknown",
+    "industry": "511210",
+    "region": [
+      "142030"
+    ]
+  }
+}

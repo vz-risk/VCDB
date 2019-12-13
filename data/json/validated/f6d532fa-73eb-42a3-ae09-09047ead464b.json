@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "brute force ID numbers. (insecure direct object reference (IDOR) )",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Brute force"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "GB"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "notes": "security researcher (unrelated 3rd party)",
+      "region": [
+        "150155",
+        "150154"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2000000,
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "1e420150-daec-11e9-aa50-b778a2874faa",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "No"
+      }
+    },
+    "created": "2019-09-19T20:01:53.675Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14129",
+    "master_id": "f6d532fa-73eb-42a3-ae09-09047ead464b",
+    "modified": "2019-09-19T20:01:53.675Z",
+    "timeline": {
+      "notification": {
+        "day": 9,
+        "month": 9,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.securityweek.com/vulnerabilities-exposed-2-million-verizon-customer-contracts,https://daleys.space/writeup/0day/2019/09/09/verizon-leak.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "insecure direct object reference vulnerability in employee website exposed contract information when id number brute forced.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "Weeks",
+      "value": 5
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 15,
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "517",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Verizon"
+  }
+}

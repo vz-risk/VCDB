@@ -1,0 +1,131 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "notes": "mongodb",
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 24386039,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 24386039,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 24386039,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "3f098480-e073-11e9-9b3e-615de4b5b4cd",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gdbassett",
+    "analyst_notes": "Two breaches.  #1 (this one) database downloaded. #2 database ransomed",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-09-26T20:50:54.751Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14179",
+    "master_id": "c69d77dd-89ec-47f4-bc31-cf946faacd78",
+    "modified": "2019-09-26T20:50:54.751Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.zdnet.com/article/data-of-24-3-million-lumin-pdf-users-shared-on-hacking-forum/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Hacker finds database exposed to internet, downloads, and shares it",
+  "targeted": "NA",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 5
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "month": 4,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "NZ"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "009053"
+    ],
+    "state": "NZ-CAN",
+    "victim_id": "Lumin PDF"
+  }
+}

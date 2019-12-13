@@ -1,5 +1,13 @@
 {
   "action": {
+    "error": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Inadequate processes"
+      ]
+    },
     "hacking": {
       "notes": "Accessed registrar information and web control panel using credentials. Unknown how they were obtained.  Also obtained a password reset for the mail server by leveraging web panel access.",
       "variety": [
@@ -17,7 +25,8 @@
       ],
       "motive": [
         "Unknown",
-        "Grudge"
+        "Grudge",
+        "Secondary"
       ],
       "name": [
         "Eugene Belford"
@@ -43,7 +52,9 @@
         "variety": "S - DNS"
       }
     ],
-    "cloud": "Hosting governance",
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
     "hosting": [
       "External - unknown environment"
     ],
@@ -100,7 +111,7 @@
     "analyst": "Spitler",
     "attribute": {
       "confidentiality": {
-        "credit_monitoring": "U"
+        "credit_monitoring": "Unknown"
       }
     },
     "created": "2014-07-11T14:07:00Z",
@@ -114,7 +125,7 @@
     }
   },
   "reference": "http://www.theregister.co.uk/2014/03/13/ethical_hacker_cert_org_pwned/;  http://www.infosecnews.org/so-who-hacked-ec-council-three-times-this-week/#.UxnmDnk3-5c",
-  "schema_version": "1.3.3",
+  "schema_version": "1.3.4",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "Unaffiliated hacker utilizes DNS hijacking to route traffic destined to EC-council's domain to a controlled website. The same threat actor was able to access the control panel for the website and gain access to their enterprise mail server.",

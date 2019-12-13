@@ -1,0 +1,141 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "country": [
+      "RU"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 60000000,
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 60000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "security researcher found data for sale on criminal marketplace",
+  "impact": {
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "ca136300-06ef-11ea-8714-b997dc99273b",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown",
+        "partner_data": "No"
+      }
+    },
+    "created": "2019-11-14T21:20:36.014Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14299",
+    "master_id": "871ddb78-33bf-4657-ac9c-1b081e4f4a5d",
+    "modified": "2019-11-14T21:20:36.014Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://news.bitcoin.com/why-bitcoin-is-better-than-banks-major-credit-card-breach-exposes-60m-accounts/,https://tass.com/economy/1081626,https://www.pymnts.com/news/security-and-risk/2019/russias-sberbank-investigating-client-data-leak/,https://www.sberbank.ru/en/press_center/all/article?newsID=04885252-1561-44c0-8532-2c4f33cd729f&blockID=1539&regionID=77&lang=en&type=NEWS,https://www.techradar.com/news/russias-sberbank-hit-with-huge-data-leak",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Internal actor misused access to download database of 60M current and former CC numbers w/ PII, but not logins/passwords or CVV numbers",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 2
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 4,
+      "month": 9,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "RU"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "522110",
+    "locations_affected": 1,
+    "region": [
+      "150151"
+    ],
+    "state": "US-77",
+    "victim_id": "Sberbank"
+  }
+}

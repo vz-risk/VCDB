@@ -1,0 +1,186 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ram scraper"
+      ],
+      "vector": [
+        "Email unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Cashier"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "P - Cashier"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "CA"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Processed"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "583ab060-e5ea-11e9-a0ce-353e27116082",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-10-03T19:47:42.909Z",
+    "dbir_year": 2018,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp"
+      }
+    ],
+    "github": "10139",
+    "master_id": "be8c6f93-10e9-46a8-98f7-bf769daa3806",
+    "modified": "2019-10-03T19:47:42.909Z"
+  },
+  "reference": "https://www.cbc.ca/news/canada/british-columbia/best-western-hack-1.4286671",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "phishing used to compromise front desk computers and steal credit cards.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Weeks"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 10
+    },
+    "exfiltration": {
+      "unit": "Seconds"
+    },
+    "incident": {
+      "day": 17,
+      "month": 9,
+      "year": 2016
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Sell stolen goods"
+      ]
+    },
+    "development": {
+      "notes": "payment card scraping malware",
+      "variety": [
+        "Payload"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "Large",
+    "industry": "721110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA-BC",
+    "victim_id": "Best Western"
+  }
+}

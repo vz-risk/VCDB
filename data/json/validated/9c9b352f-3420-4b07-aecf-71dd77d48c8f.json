@@ -1,0 +1,219 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of backdoor or C2"
+      ],
+      "vector": [
+        "Backdoor or C2"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Backdoor"
+      ],
+      "vector": [
+        "Email link"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 9,
+        "variety": "U - Desktop"
+      },
+      {
+        "amount": 9,
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 18
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "notes": "clicked phishing link, install malware",
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "posted to pastebin",
+  "impact": {
+    "overall_rating": "Painful"
+  },
+  "incident_id": "774b16b0-ded9-11e9-ad75-f56272c47bf9",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-09-24T19:59:41.771Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp"
+      }
+    ],
+    "github": "12741",
+    "master_id": "9c9b352f-3420-4b07-aecf-71dd77d48c8f",
+    "modified": "2019-09-24T19:59:41.771Z"
+  },
+  "reference": "https://www.zdnet.com/article/brazilian-it-firm-tivit-suffers-data-leak/,https://www.defcon-lab.org/vazamento-de-dados-tivit/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Company phished and desktop systems accessed to steal client credentials.",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2018
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Payload"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "BR"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "5416",
+    "locations_affected": 1,
+    "region": [
+      "019005"
+    ],
+    "secondary": {
+      "amount": 19,
+      "victim_id": [
+        "Klabin",
+        "Brookfield",
+        "JMacedo",
+        "Multiplan",
+        "Braskem",
+        "Faber",
+        "Original Bank",
+        "Sebrae",
+        "Votorantim",
+        "SAP",
+        "Zurich"
+      ]
+    },
+    "state": "BR-SP",
+    "victim_id": "Tivit"
+  }
+}

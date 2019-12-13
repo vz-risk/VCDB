@@ -1,0 +1,101 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 80000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 80000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "b273d450-caa9-11e9-be6a-93e1b0174537",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2019-08-30T05:19:34.829Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal actor stands up a database without controls."
+      }
+    ],
+    "github": "13483",
+    "master_id": "51acf7d2-e9ee-4b54-8819-38cef6443b39",
+    "modified": "2019-08-30T05:19:34.829Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://gdpr.report/news/2019/05/10/80-million-records-exposed-in-sms-spam-operation/; https://techcrunch.com/2019/05/09/sms-spammers-doxxed/u",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": " ApexSMS suffers data breach exposing the records of 80 million people.  Discovered by security researcher Bob Diachenko, ApexSMS, an SMS text marketing company has suffered a data breach exposing the personally identifiable information of more than 80 million people which was then submitted on an unsecured database.   The exposed database contained 80 million records which included people\u2019s names, locations, phone numbers and IP addresses, as well as mobile numbers and their network.  Very little is known about the company ApexSMS other than it relies on \u2018Mobile Drop\u2019, a cloud based SMS platform. Mobile Drip simply allows users to send pre-written messages in bulk. Upon further investigation Diachenko identified that ApexSMS is also the same name of an SMS Bombing program.  Diachenko defines SMS Bombing as:  \u201cA software program that duplicates the same message multiple times or rotates different messages and sends all the messages to a number of your choice.\u201d  SMS Bombing can be used for marketing products or services, as well as for harassment.  An estimated 38 million messages had been sent through disposable toll-free phone numbers, of which 2.1 million victims clicked on the link in the message. The  database  kept track of those who clicked on the links, which then led victims to scam sites. Their credentials were scraped and then submitted to the ApexSMS\u2019 spam database. The database also recorded when victims replied, with more than 115,000 people responding to the spam texts.  Mobile Drip denied any connection to ApexSMS stating:  \u201cWe take compliance and data security very seriously, and we are currently investigating to determine to what extent our information has been exposed to unauthorized parties. We have currently engaged an outside legal firm to assist with our investigation of this matter and we are also engaging a cyber security firm to perform a security audit.  \u201cOur servers have always been password protection, so any information that may have been acquired was done so through illegal means with the goal of harming the reputation and financial success of the business.\u201d  Diachenko said:  \u201cThis incident raises the issue once again that data security can affect legitimate businesses and what many would consider \u2018gray marketing\u2019 at best.\u201d ",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "industry": "541613",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "ApexSMS"
+  }
+}

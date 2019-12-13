@@ -1,0 +1,169 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 16,
+        "variety": "P - End-user"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 17
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 16,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 16
+    },
+    "integrity": {
+      "notes": "send phishing emails",
+      "variety": [
+        "Repurpose",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "f6498c10-dedb-11e9-ad75-f56272c47bf9",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "created": "2019-09-24T20:11:34.012Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp"
+      }
+    ],
+    "github": "11552",
+    "master_id": "4139be15-5897-49c2-b26e-c80485dbb87c",
+    "modified": "2019-09-24T20:14:05.633Z"
+  },
+  "reference": "https://www.bclocalnews.com/news/sooke-school-district-warns-parents-of-privacy-breach/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "one employee is phished.  account is used to phish 15 more.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
+    },
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2018
+    }
+  },
+  "value_chain": {
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "611110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA-BC",
+    "victim_id": "Sooke School District"
+  }
+}
