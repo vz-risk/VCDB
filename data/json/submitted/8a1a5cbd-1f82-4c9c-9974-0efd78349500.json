@@ -1,0 +1,111 @@
+{
+    "incident_id": "117a9da0-c4f9-11e9-8a5a-abdcbb867af8",
+    "security_incident": "Confirmed",
+    "reference": "https://www.businessinsider.sg/deutsche-bank-fired-employees-had-access-to-emails-2019-7/",
+    "summary": " Deutsche Bank has launched a probe into whether there was a potential data leak after roughly 50 former employees still had access to their emails despite being dismissed weeks ago, reports the Financial Times.  The Financial Times reported that one equity sales person sent over 450 emails despite already being let go.  The German bank failed to deactivate dozens of fired staff accounts when it shut down the global equities branch of the business earlier this month.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7
+        },
+        "discovery": {
+            "unit": "Weeks"
+        }
+    },
+    "victim": {
+        "victim_id": "Deutsche Bank",
+        "employee_count": "50001 to 100000",
+        "industry": "522110",
+        "country": [
+            "DE"
+        ]
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Former employee"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially",
+            "data": [
+                {
+                    "variety": "Unknown"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Unknown"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Misrepresentation"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2019-08-22T23:43:46.021Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Ex employee uses credentials to send lots and lots of emails."
+            }
+        ],
+        "modified": "2019-08-22T23:43:46.021Z",
+        "master_id": "8a1a5cbd-1f82-4c9c-9974-0efd78349500",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13870"
+    },
+    "schema_version": "1_3_3"
+}

@@ -1,0 +1,143 @@
+{
+    "incident_id": "0532aa80-c4fc-11e9-8a5a-abdcbb867af8",
+    "security_incident": "Confirmed",
+    "reference": "https://www.nj.com/essex/2019/08/gang-members-mother-worked-for-us-attorney-in-nj-outed-people-who-were-snitching-on-the-bloods-feds-say.html?utm_source=fark&utm_medium=website&utm_content=link&ICID=ref_fark",
+    "summary": "A paralegal at the New Jersey U.S. Attorney’s Office used government computers to identify people who were possibly helping authorities and posted a video on YouTube of her gang member son’s co-defendant talking to investigators, according to court filings.  Tawanna Hilliard pleaded not guilty at her arraignment Tuesday in Brooklyn federal court to an indictment charging her with offenses, including witness tampering, obstruction of justice and obtaining information from a government computer, according to officials. Hilliard’s son, Tyquan, a member of the 5-9 Brims set of the Bloods street gang serving a 10 year prison term for robbery in New York, is also charged in the indictment.  Federal prosecutors allege Tawanna Hilliard used her Department of Justice-issued equipment to search databases to help the 5-9 Brims by identifying and exposing cooperating witnesses. She is accused of conducting searches at the direction of high-ranking member of the Bloods set.  In an April 2016 call to Tyquan, Tawanna said she “looked up” criminal cases at the request of a gang member, who believed she could find out if someone “snitched” to authorities, court documents stated.  Tawanna also posted footage on YouTube showing a post-arrest video statement given by her son’s co-defendant, identified only as John Doe, about a May 2018 cell phone store robbery in Monticello, New York, according to court papers. She allegedly posted the video under the title “NYC Brim Gang Member Snitching Pt. 1.” to show the co-defendant was cooperating with law enforcement officials.  Investigators recovered text messages where Hilliard said Tyquan “has no line of defense because his co-d told everything,” according to documents filed in the case.  After the video was posted, the alleged accomplice received death threats from fellow inmates linked to the Bloods, according to prosecutors. The FBI also learned of death threats against John Doe’s family.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 4
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 2
+        }
+    },
+    "victim": {
+        "victim_id": "New Jersey U.S. Attorney’s Office",
+        "employee_count": "101 to 1000",
+        "industry": "922110",
+        "country": [
+            "US"
+        ],
+        "state": "NJ"
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Influence"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "target": [
+                "End-user"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Grudge"
+            ],
+            "country": [
+                "US"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Grudge"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Other"
+            ]
+        }
+    },
+    "discovery_notes": "Internal actor called her son in jail to tell him she had done the lookup.",
+    "plus": {
+        "created": "2019-08-23T00:00:46.210Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Gang member directs employee to find snitches."
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Employee finds out who snitched and communicates it."
+            }
+        ],
+        "modified": "2019-08-23T00:00:46.210Z",
+        "master_id": "eede63c3-cc11-4d4b-8414-35c265de323e",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13902"
+    },
+    "schema_version": "1_3_3"
+}

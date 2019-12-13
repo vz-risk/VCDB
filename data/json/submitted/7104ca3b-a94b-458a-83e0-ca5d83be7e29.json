@@ -1,0 +1,120 @@
+{
+    "incident_id": "0190acb0-b476-11e9-b6ed-d1eb4820968c",
+    "security_incident": "Confirmed",
+    "reference": "https://tdn.com/news/local/local-dental-offices-hit-by-malware-forced-to-cancel-appointments/article_d4a6fc1e-f4c4-5ef0-9974-3b7bee11bab8.html",
+    "summary": "Ransomware on a software as a service infrastructure.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7,
+            "day": 3
+        }
+    },
+    "victim": {
+        "victim_id": "PM Consultants",
+        "employee_count": "1 to 10",
+        "industry": "518210",
+        "country": [
+            "US"
+        ],
+        "state": "OR",
+        "secondary": {
+            "victim_id": [
+                "Lower Columbia Oral Health; 621210",
+                "Arbor Dental; 621210"
+            ]
+        }
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ]
+    },
+    "attribute": {
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2019-08-01T23:35:02.031Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "unk",
+                "summary": "Actor gets in to system."
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Ransomware is installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Data/system is obfuscated"
+            }
+        ],
+        "modified": "2019-08-01T23:35:02.031Z",
+        "timeline": {
+            "notification": {
+                "day": 11,
+                "month": 7,
+                "year": 2019
+            }
+        },
+        "master_id": "7104ca3b-a94b-458a-83e0-ca5d83be7e29",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "github": "13777"
+    },
+    "schema_version": "1_3_3"
+}

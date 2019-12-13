@@ -1,0 +1,114 @@
+{
+    "incident_id": "599bb4d0-bf7b-11e9-a5a0-eb7abaf171bc",
+    "security_incident": "Confirmed",
+    "reference": "https://www.arkansasonline.com/news/2019/aug/14/ex-bank-worker-indicted-in-theft-201908-1/",
+    "summary": "A former electronic banking manager at Bank of Little Rock has been indicted by a federal grand jury on an embezzlement charge.  The indictment alleges that John Henry Curry Jr., 41, took more than $80,000 from bank customers' accounts between May 5, 2017, and Oct. 5, 2018. It accuses him of transferring the funds from the customer accounts into his own accounts and accounts of his relatives.",
+    "source_id": "vcdb",
+    "confidence": "High",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 5,
+            "day": 5
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 17
+        }
+    },
+    "victim": {
+        "victim_id": "Bank of Little Rock",
+        "employee_count": "1001 to 10000",
+        "industry": "522110",
+        "country": [
+            "US"
+        ],
+        "state": "AK"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Manager"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Yes",
+            "data": [
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2019-08-15T23:49:05.184Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Access customer data to find balance info."
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Initiate fraudulent transactions to steal the money."
+            }
+        ],
+        "modified": "2019-08-15T23:49:05.184Z",
+        "master_id": "9efbb0ee-b204-4483-bd09-bd5744e76420",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "13908"
+    },
+    "schema_version": "1_3_3"
+}
