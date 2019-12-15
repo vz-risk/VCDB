@@ -1,0 +1,121 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unapproved hardware"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "country": [
+      "UA"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Hardware tampering",
+        "Repurpose"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "0e72f460-1d08-11ea-b94e-893211cca703",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2019-12-13T02:02:21.267Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Attached unapproved hardware to existing systems."
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Physical security details were exposed."
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Systems are repurposed as coin miners."
+      }
+    ],
+    "github": "13965",
+    "master_id": "ad7b59cb-c645-46cb-8443-d679c5159b6c",
+    "modified": "2019-12-13T02:02:21.267Z"
+  },
+  "reference": "https://safehaven.com/news/Breaking-News/Security-Breach-Reveals-Crypto-Mining-In-Ukrainian-Nuclear-Plant.html; https://www.unian.info/economics/10658847-sbu-busts-cryptocurrency-miners-at-ukrainian-power-plant.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ukrainian news media is reporting that last month an illegal cryptocurrency mining operation was discovered and confiscated on the site of a state-owned nuclear power plant in southern Ukraine. On July 10th Ukranian law enforcement and counterintelligence agencies discovered crypto mining equipment in a single office of the Yuzhnoukrainsk power plant run by the National Nuclear Energy Generating Company of Ukraine (known as Energoatom).   The Security Service of Ukraine (SBU) has arrested operators from the power plant for carrying out the crypto mining, compromising the plant\u2019s security with their mining operation\u2019s internet connection, and reportedly even leaking classified information about the plant\u2019s physical security. The discovery of this operation and its aftermath is made especially troubling by the fact the nuclear plant itself is a state secret and the entrance of any computer equipment from outside the operation is strictly prohibited. The equipment was discovered and confiscated in two separate seizures. Among the equipment confiscated by the SBU, according to reporting by CoinDesk, were \u201csix Radeon RX 470 GPU video cards, a motherboard, power supplies and extension cords, a USB and hard drive, and cooling units installed in the South Ukrainian Nuclear Power Plant.\u201d The report goes onto say that \u201call of the equipment was located in a single office, No. 104, in the administrative wing separate from the power facility.\u201d   In a separate confiscation made on the same day, a branch of the National Guard of Ukraine \u201cuncovered additional crypto mining equipment at the same nuclear plant,\u201d says CoinDesk. \u201cIn this search and seizure, 16 GPU video cards, 7 hard drives, 2 solid-state drives and router were uncovered.\u201d",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "UA"
+    ],
+    "employee_count": "25001 to 50000",
+    "industry": "221113",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "National Nuclear Energy Generating Company of Ukraine"
+  }
+}

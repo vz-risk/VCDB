@@ -1,0 +1,125 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Data mishandling"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify data"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3d8706d0-1d06-11ea-b94e-893211cca703",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-12-13T01:50:32.828Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data is shared inappropriately with vendors."
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Data is altered to fraudulently enhance the value of what they are selling."
+      }
+    ],
+    "github": "14034",
+    "master_id": "711b7710-630e-426f-bb1a-ae81c6bff150",
+    "modified": "2019-12-13T01:50:32.828Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.databreachtoday.asia/medical-booking-firm-could-face-penalties-for-selling-data-a-12890",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Australia's fair trading regulator says it's seeking penalties against HealthEngine, an online platform for booking medical appointments, for allegedly selling patient details to private health insurance brokers without disclosure and embellishing patient reviews of healthcare providers. ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "541",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "HealthEngine"
+  }
+}
