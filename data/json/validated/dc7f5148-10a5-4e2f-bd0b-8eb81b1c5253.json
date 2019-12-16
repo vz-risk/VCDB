@@ -1,0 +1,180 @@
+{
+  "action": {
+    "unknown": {
+      "notes": "exfiltration unknown, but likely SQLi due to the data looking like a user table in a database",
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6800000,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 6800000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6800000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored encrypted",
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Moderate",
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "344bcb90-1d16-11ea-b436-a7f38e8d15a2",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes",
+        "partner_data": "No"
+      }
+    },
+    "created": "2019-12-13T01:52:34.371Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "13891",
+    "master_id": "dc7f5148-10a5-4e2f-bd0b-8eb81b1c5253",
+    "modified": "2019-12-13T01:52:34.371Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://thenextweb.com/security/2019/08/05/online-sneaker-marketplace-failed-to-come-clean-about-6-8m-record-data-breach/,https://www.retaildive.com/news/stockx-reveals-details-about-data-breach/560896/,https://www.detroitnews.com/story/business/2019/08/20/stockx-data-breach-sparks-lawsuit/2058177001/,https://hypebeast.com/2019/8/stockx-password-reset-suspicious-activity,https://techcrunch.com/2019/08/03/stockx-hacked-millions-records/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "unknown action used to compromise user database of victim.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 3
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 5,
+      "year": 2019
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "sale of stolen data",
+      "variety": [
+        "Sell stolen goods"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "NA"
+      ]
+    },
+    "money laundering": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-MI",
+    "victim_id": "StockX"
+  }
+}

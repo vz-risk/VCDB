@@ -1,0 +1,196 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown how email credentials exposed",
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "ba47a4d0-1b81-11ea-aa10-8d551748dadb",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown",
+        "partner_data": "No"
+      }
+    },
+    "created": "2019-12-11T01:37:28.180Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14613",
+    "master_id": "e29ffe94-54c0-4b00-a788-fd07759fdc38",
+    "modified": "2019-12-11T01:37:46.522Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 27,
+        "month": 11,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.ptcommunity.com/wire/loudoun-medical-group-dba-comprehensive-sleep-care-center-provides-notice-data-privacy-event,https://www.databreaches.net/loudoun-medical-group-d-b-a-comprehensive-sleep-care-center-notifies-patients-after-employee-email-account-compromise/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "email compromise leads to potential disclosure of sensitive data",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 4
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 15,
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "money laundering": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "621",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-VA",
+    "victim_id": "Loudoun Medical Group d/b/a Comprehensive Sleep Care Center (CSCC) "
+  }
+}

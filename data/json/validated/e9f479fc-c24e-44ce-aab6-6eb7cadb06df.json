@@ -1,0 +1,145 @@
+{
+  "action": {
+    "physical": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Theft"
+      ],
+      "vector": [
+        "Victim work area"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CA"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "M - Disk media"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "country": [
+      "CA"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Never"
+      },
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 650,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 650,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Break in discovered"
+      ]
+    }
+  },
+  "incident_id": "8fdeb5b0-1d09-11ea-b94e-893211cca703",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2019-12-13T08:37:15.186Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Hard drive stole puts data at risk"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "au",
+        "summary": "Accounting for the loss of availability"
+      }
+    ],
+    "github": "14327",
+    "master_id": "e9f479fc-c24e-44ce-aab6-6eb7cadb06df",
+    "modified": "2019-12-13T08:37:15.186Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 7,
+        "month": 10,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/records-of-650-patients-on-missing-computer-hard-drive-alberta-health-services/; https://www.660citynews.com/2019/10/08/records-of-650-patients-on-missing-computer-hard-drive-ahs/; https://edmonton.ctvnews.ca/patient-privacy-compromised-after-theft-from-the-mazankowski-1.4627715",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Alberta Health Services (AHS) says a computer hard drive that contained the personal health information of about 650 patients has been missing since August.  The agency says the external drive vanished from a cardiac outpatient clinical lab at the Mazankowski Alberta Heart Institute in Edmonton.  It says the disappearance could be linked to a theft at the lab on Aug. 5, a holiday Monday, but the drive wasn\u2019t discovered missing until a few weeks later.  The external drive was not encrypted, as mandatory, and did not have password protection.  AHS says information includes patient names, gender, dates of birth, physician names and medical record numbers.  Alberta Health Services is notifying patients whose details are on the drive.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 5,
+      "month": 8,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "Large",
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Mazankowski Alberta Heart Institute"
+  }
+}
