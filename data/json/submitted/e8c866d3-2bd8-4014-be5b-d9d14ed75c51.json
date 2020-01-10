@@ -1,0 +1,181 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 9,
+            "day": 4
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 2
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 4
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "InterMed",
+        "employee_count": "101 to 1000",
+        "industry": "621111",
+        "locations_affected": 1,
+        "state": "ME"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ],
+            "notes": "Used stolen credentials from phishing"
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user",
+                "amount": 4
+            },
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "country": [
+            "US"
+        ],
+        "total_amount": 4
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 30000,
+                    "variety": "Medical"
+                },
+                {
+                    "amount": 4,
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 30000
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Got people to disclose credentials"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "Compromised credentials"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Used stolen credentials to get access to emails"
+            }
+        ],
+        "sub_source": "phidbr",
+        "modified": "2019-11-13T01:07:09.784Z",
+        "created": "2019-11-13T01:07:09.784Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 11,
+                "day": 6
+            }
+        },
+        "master_id": "e8c866d3-2bd8-4014-be5b-d9d14ed75c51",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "14459"
+    },
+    "incident_id": "d9a4b1e0-0585-11ea-a6b7-b9a04765ea4f",
+    "security_incident": "Confirmed",
+    "reference": "https://wgme.com/news/local/hack-may-have-exposed-information-on-30000-maine-patients",
+    "summary": "InterMed, a Maine-based health care provider, said it was hacked and about 30,000 patients may have had their information compromised.  InterMed serves patients through their practice sites in Portland, South Portland, and Yarmouth.  InterMed said on Tuesday an “unauthorized individual” gained access to the email account of an employee between September 4-6. They said they learned about the hack on September 6.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

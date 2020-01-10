@@ -1,0 +1,117 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Authentic Jobs",
+        "employee_count": "1 to 10",
+        "industry": "518210",
+        "locations_affected": 1,
+        "state": "FL"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "country": [
+            "US"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 221130,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 221130,
+            "notes": "Stored on open s3"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured s3 bucket"
+            }
+        ],
+        "modified": "2019-11-08T19:46:54.880Z",
+        "created": "2019-11-08T19:46:54.880Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 10,
+                "day": 21
+            }
+        },
+        "master_id": "bc9fc2b0-6db6-4a97-88f3-9a16e18f42a9",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "github": "14407"
+    },
+    "incident_id": "2f213890-0235-11ea-ad43-7952870528d4",
+    "security_incident": "Confirmed",
+    "reference": "http://www.digitaljournal.com/tech-and-science/technology/data-leak-exposes-more-than-200k-job-seeker-cvs/article/560196",
+    "summary": "Data leak exposes more than 200K job seeker CVs SPECIAL LISTEN | PRINT BY TIM SANDLE     OCT 21, 2019 IN TECHNOLOGY Two recruitment firms, US-based Authentic Jobs and UK-based Sonic Jobs, exposed more than 200K job seekers’ CVs. Stephan Chenette, Co-Founder and CTO, AttackIQ provides analysis. The two recruitment firms that exposed the curriculum vitaes (CVs) of thousands of job applications led to the following customer information being made available to hackers: names, addresses, phone numbers and career histories. Both firms exposed the CVs by leaving their AWS S3 buckets public. Amazon S3 is a simple web services interface that allows users to store and retrieve any amount of data, at any time. The service is designed to be accessible from anywhere on the Internet.   Read more: http://www.digitaljournal.com/tech-and-science/technology/data-leak-exposes-more-than-200k-job-seeker-cvs/article/560196#ixzz64hIKXz7N",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

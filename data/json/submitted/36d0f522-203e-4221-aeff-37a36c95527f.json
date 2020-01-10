@@ -1,0 +1,129 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 5,
+            "day": 20
+        },
+        "discovery": {
+            "unit": "Days"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "country": [
+            "SG"
+        ],
+        "region": [
+            "142034"
+        ],
+        "victim_id": "Chan Brothers Travel",
+        "employee_count": "Small",
+        "industry": "561510",
+        "locations_affected": 1
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration",
+                "Programming error"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 450,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 450
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured web application to leak personal information"
+            },
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured web caching of website which cached sensitive information"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2019-11-27T19:03:11.232Z",
+        "created": "2019-11-27T19:03:11.232Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 5,
+                "day": 24
+            }
+        },
+        "master_id": "36d0f522-203e-4221-aeff-37a36c95527f",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "github": "13522"
+    },
+    "incident_id": "a5c3a3c0-111c-11ea-bd5f-71a8176be0a0",
+    "security_incident": "Confirmed",
+    "reference": "https://www.straitstimes.com/tech/chan-brothers-travel-under-investigation-by-privacy-watchdog-after-personal-data-found-to-be",
+    "summary": "Travel agency Chan Brothers Travel is being investigated by Singapore's privacy watchdog after the personal data of more than 500 of its customers was found to be publicly accessible.",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

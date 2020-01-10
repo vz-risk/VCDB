@@ -1,0 +1,132 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 9
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "621112"
+        ],
+        "victim_id": "Elizabeth Family Health ",
+        "employee_count": "11 to 100",
+        "industry": "621112",
+        "locations_affected": 1,
+        "state": "CO"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Theft"
+            ],
+            "vector": [
+                "Victim secure area",
+                "Victim work area"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Backup",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 28375,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 28375
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ]
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Break in discovered"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Stole server backup"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Serverback up is stolen"
+            }
+        ],
+        "sub_source": "phidbr",
+        "modified": "2019-12-23T21:04:17.586Z",
+        "created": "2019-12-23T21:04:17.586Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 11,
+                "day": 22
+            }
+        },
+        "master_id": "21dbfac0-6c6a-4e53-9fb0-9e201467fe42",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "github": "14635"
+    },
+    "incident_id": "35c6e540-259a-11ea-b8c8-4fa7e4328c98",
+    "security_incident": "Confirmed",
+    "reference": "https://www.elizabethfamilyhealth.com/wp-content/uploads/2019/11/4855659-Substitute-Notice-.pdf,https://www.beckershospitalreview.com/cybersecurity/colorado-medical-center-alerts-28-000-patients-of-data-breach.html",
+    "summary": "Someone broke in, vandalized the place and stool things like server backups",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "AMC Network",
+        "employee_count": "1001 to 10000",
+        "industry": "515210",
+        "locations_affected": 1,
+        "state": "NY"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": "Didn't secure their Mongodb "
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "country": [
+            "US"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 1615360,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1615360,
+            "notes": "Stored in an open Mongodb"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Internal employee misconfigured mongodb server"
+            }
+        ],
+        "sub_source": "priority ",
+        "modified": "2019-11-11T20:12:21.028Z",
+        "created": "2019-11-11T20:12:21.028Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 5,
+                "day": 1
+            }
+        },
+        "master_id": "8b32f63a-0efb-4412-9f69-705a2b0113f3",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "github": "14134"
+    },
+    "incident_id": "b47f80e0-0493-11ea-ad43-7952870528d4",
+    "reference": "https://www.engadget.com/2019/05/03/amc-sundance-now-shudder-subscriber-exposed-database/",
+    "security_incident": "Confirmed",
+    "summary": "Someone at AMC Networks done left yet another open database",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

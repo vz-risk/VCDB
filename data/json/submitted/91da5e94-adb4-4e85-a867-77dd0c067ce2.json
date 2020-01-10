@@ -1,0 +1,151 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Katherine Shaw Bethea Hospital",
+        "employee_count": "101 to 1000",
+        "industry": "622110",
+        "locations_affected": 1,
+        "state": "IL"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user"
+            ],
+            "result": [
+                "Exfiltrate"
+            ],
+            "notes": "Steal creds"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user",
+                "amount": 1
+            },
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 2
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 1486,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1486
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Phishing email sent"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "Creds send to bad guy"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Stolen creds used to access mail box"
+            }
+        ],
+        "sub_source": "phdbir",
+        "modified": "2019-12-23T20:15:40.458Z",
+        "created": "2019-12-23T20:15:40.458Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 12,
+                "day": 11
+            }
+        },
+        "master_id": "91da5e94-adb4-4e85-a867-77dd0c067ce2",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "github": "14664"
+    },
+    "incident_id": "cc138e90-2595-11ea-b8c8-4fa7e4328c98",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hipaajournal.com/phishing-attacks-reported-by-sunrise-community-health-and-katherine-shaw-bethea-hospital/",
+    "summary": "Phishing attack potentially nabs hospital spreadsheet with over 1k records",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
