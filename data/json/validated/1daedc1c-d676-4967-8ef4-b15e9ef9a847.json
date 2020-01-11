@@ -1,0 +1,138 @@
+{
+  "action": {
+    "error": {
+      "notes": "Microsoft miscoded something on Office 365",
+      "variety": [
+        "Programming error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Partner"
+      ],
+      "state": [
+        "Stored encrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "ce76ba10-0a45-11ea-9821-617d71ee6253",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2019-11-19T02:18:39.126Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Someone misconfigured something"
+      },
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "And some user information was  disclosed "
+      }
+    ],
+    "github": "9932",
+    "master_id": "1daedc1c-d676-4967-8ef4-b15e9ef9a847",
+    "modified": "2019-11-19T02:18:56.477Z",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.petri.com/data-leak-office-365-admin-center,",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The danger of making mistakes when changing cloud systems that run at massive scale was demonstrated on Thursday evening (August 3) when the Office 365 Admin Center suddenly started to reveal usage data belonging to other tenants. ",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 3,
+      "month": 8,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "561990",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "notes": "Impacted an unknown number of organizations on Office 365"
+    },
+    "state": "CA",
+    "victim_id": "Microsoft"
+  }
+}

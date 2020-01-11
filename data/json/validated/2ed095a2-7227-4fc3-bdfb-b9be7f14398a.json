@@ -1,0 +1,117 @@
+{
+  "action": {
+    "error": {
+      "notes": "Misconfigured Elastic search to be world accessible ",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "Elasticsearch",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 13700000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13700000,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Stored on elasticsearch db",
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "260136e0-0fc1-11ea-936a-1ffb751fb68b",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-11-26T01:29:22.361Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured server"
+      }
+    ],
+    "github": "13458",
+    "master_id": "2ed095a2-7227-4fc3-bdfb-b9be7f14398a",
+    "modified": "2019-11-26T01:30:01.857Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 1,
+        "month": 5,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://techcrunch.com/2019/05/01/ladders-resume-leak/,https://www.nydailynews.com/news/national/ny-ladders-data-exposed-million-job-recruitment-site-20190502-f3govsm7hrcyxfowmees74avqe-story.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A security lapse has exposed the data of at least 13.7 million clients of the high-end job recruitment site The Ladders that were stored on an unprotected server hosted by Amazon.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "54151",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Ladders"
+  }
+}

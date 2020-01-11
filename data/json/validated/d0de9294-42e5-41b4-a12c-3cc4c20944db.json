@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "VPN"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "They have been targeted in the past by nation states, but not possible to tell at this time",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Remote access"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Employee"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "5822eae0-ffce-11e9-81dd-7371e517d223",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-11-05T18:37:06.078Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Gained access to user credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Used stolen creds to get access to environment"
+      }
+    ],
+    "github": "14393",
+    "master_id": "d0de9294-42e5-41b4-a12c-3cc4c20944db",
+    "modified": "2020-01-10T20:06:47.897Z",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 10,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://gdpr.report/news/2019/10/21/privacy-avast-discloses-security-breach-impacting-its-internal-network/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Avast finds that attacker compromises employee's VPN credentials",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 4
+    },
+    "incident": {
+      "day": 14,
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "CZ"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "511210",
+    "locations_affected": 1,
+    "region": [
+      "150151"
+    ],
+    "state": "CZ-ST",
+    "victim_id": "Avast"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1000000,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 27800000,
+      "data_victim": [
+        "Customer",
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "227bf4e0-07b7-11ea-a8b1-672cf95dfdfd",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-11-15T20:08:26.766Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfiguration of elasticsearch server"
+      }
+    ],
+    "github": "13904",
+    "master_id": "b73b7c18-2ba9-4cc2-aa44-9ac8d11567a8",
+    "modified": "2019-11-15T20:08:51.277Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 14,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.forbes.com/sites/zakdoffman/2019/08/14/new-data-breach-has-exposed-millions-of-fingerprint-and-facial-recognition-records-report/#f6b5b2c46c60,https://mashable.com/article/data-breach-biometrics-suprema-biostar-2/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Suprema biometeric data left unprotected in an elasticsearch server",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 7
+    },
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "541519",
+    "locations_affected": 1,
+    "region": [
+      "150154",
+      "150155"
+    ],
+    "victim_id": "Suprema"
+  }
+}

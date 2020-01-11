@@ -1,0 +1,198 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Hackers used stolen Microsoft support credentials to access support panel",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "notes": "Support credentials were compromised and an undisclosed number of user inboxes were accessed ",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "notes": "Allegedly hackers changed forwarding rules for targeted users and stolen bitcoins",
+      "variety": [
+        "Fraudulent transaction",
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "56111900-0ade-11ea-9821-617d71ee6253",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2019-11-19T20:33:09.600Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Microsoft employee credentials somehow compromised"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malicious actors access Microsoft system using stolen credentials "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Hackers gain access to users inbox "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Hackers change rulesets on mailbox forwarding rules"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Hackers reset credentials to cryptocurrency exchanges"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Hacker's steal crypto currencies "
+      }
+    ],
+    "github": "13426",
+    "master_id": "38d26fc5-f116-414f-b610-61042fa25734",
+    "modified": "2019-11-19T20:33:09.600Z",
+    "timeline": {
+      "notification": {
+        "day": 13,
+        "month": 4,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://techcrunch.com/2019/04/13/microsoft-support-agent-email-hack/,https://www.theverge.com/2019/4/13/18309192/microsoft-outlook-email-account-hack-breach-security,https://www.vice.com/en_us/article/xwndwn/microsoft-outlook-msn-hotmail-breach-cryptocurrency-bitcoin",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Earlier this month, Motherboard broke the news that hackers were not only able to access Outlook users\u2019 email metadata as previously reported, but also email content. The breach centered around a hacker getting hold of a Microsoft customer support worker\u2019s login credentials; from there, the hacker could dive into the content of any non-corporate Outlook, Hotmail, or MSN account, Motherboard found.",
+  "targeted": "Targeted",
+  "timeline": {
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Months"
+    },
+    "incident": {
+      "day": 1,
+      "month": 1,
+      "year": 2019
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "Stole cryptocurrency by resetting user's passwords",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses",
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "561990",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Microsoft"
+  }
+}

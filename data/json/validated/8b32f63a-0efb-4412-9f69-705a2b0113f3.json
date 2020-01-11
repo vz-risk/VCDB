@@ -1,0 +1,119 @@
+{
+  "action": {
+    "error": {
+      "notes": "Didn't secure their Mongodb ",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1615360,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1615360,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Stored in an open Mongodb",
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "b47f80e0-0493-11ea-ad43-7952870528d4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-11-11T20:12:21.028Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal employee misconfigured mongodb server"
+      }
+    ],
+    "github": "14134",
+    "master_id": "8b32f63a-0efb-4412-9f69-705a2b0113f3",
+    "modified": "2019-11-11T20:12:21.028Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 1,
+        "month": 5,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.engadget.com/2019/05/03/amc-sundance-now-shudder-subscriber-exposed-database/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Someone at AMC Networks done left yet another open database",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "515210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "AMC Network"
+  }
+}

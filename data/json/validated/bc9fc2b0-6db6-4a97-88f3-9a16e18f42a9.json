@@ -1,0 +1,118 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 221130,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 221130,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Stored on open s3",
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "2f213890-0235-11ea-ad43-7952870528d4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-11-08T19:46:54.880Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured s3 bucket"
+      }
+    ],
+    "github": "14407",
+    "master_id": "bc9fc2b0-6db6-4a97-88f3-9a16e18f42a9",
+    "modified": "2019-11-08T19:46:54.880Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 10,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "http://www.digitaljournal.com/tech-and-science/technology/data-leak-exposes-more-than-200k-job-seeker-cvs/article/560196",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Data leak exposes more than 200K job seeker CVs SPECIAL LISTEN | PRINT BY TIM SANDLE     OCT 21, 2019 IN TECHNOLOGY Two recruitment firms, US-based Authentic Jobs and UK-based Sonic Jobs, exposed more than 200K job seekers\u2019 CVs. Stephan Chenette, Co-Founder and CTO, AttackIQ provides analysis. The two recruitment firms that exposed the curriculum vitaes (CVs) of thousands of job applications led to the following customer information being made available to hackers: names, addresses, phone numbers and career histories. Both firms exposed the CVs by leaving their AWS S3 buckets public. Amazon S3 is a simple web services interface that allows users to store and retrieve any amount of data, at any time. The service is designed to be accessible from anywhere on the Internet.   Read more: http://www.digitaljournal.com/tech-and-science/technology/data-leak-exposes-more-than-200k-job-seeker-cvs/article/560196#ixzz64hIKXz7N",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Authentic Jobs"
+  }
+}

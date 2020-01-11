@@ -1,0 +1,144 @@
+{
+  "action": {
+    "error": {
+      "notes": "Partner left database open with test data",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "partner": {
+      "country": [
+        "US"
+      ],
+      "industry": "000",
+      "motive": [
+        "NA"
+      ],
+      "region": [
+        "019021"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 90,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 90,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "c88fbc70-057f-11ea-a6b7-b9a04765ea4f",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "No"
+      }
+    },
+    "created": "2019-11-13T00:21:37.521Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Partner misconfigured database as part of migration"
+      }
+    ],
+    "github": "14485",
+    "master_id": "29732f73-5968-4b51-9c69-c8242e228629",
+    "modified": "2019-11-13T00:40:55.613Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 28,
+        "month": 10,
+        "year": 2018
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/a-leak-report-quietly-disappears-leaving-questions-in-its-wake/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Unauthenticated database with test data and some real data left discovered by cybersecurity researcher",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 8,
+      "month": 10,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "621111",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Freedom Healthcare"
+  }
+}
