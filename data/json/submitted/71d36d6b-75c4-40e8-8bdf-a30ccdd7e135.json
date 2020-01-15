@@ -1,135 +1,141 @@
 {
-    "incident_id": "e1a8ae40-d3f4-11e9-ab55-b7fffb94511d",
-    "security_incident": "Confirmed",
-    "reference": "https://www.databreaches.net/noble-house-hotels-resorts-notifies-guests-of-payment-card-breaches-at-teton-mountain-lodge-spa-and-hotel-terra/",
-    "summary": "Payment card system for Nobel House Hotels & Resorts had been compromised.",
-    "source_id": "vcdb",
-    "confidence": "High",
+  "action": {
+    "malware": {
+      "notes": "No notes on how it was on the system, just that was discovered ",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Capture stored data",
+        "Ram scraper"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - POS controller"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "partner": {
+      "variety": [
+        "Audit"
+      ]
+    }
+  },
+  "incident_id": "e1a8ae40-d3f4-11e9-ab55-b7fffb94511d",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois925",
+    "created": "2019-09-10T23:13:02.511Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "8640",
+    "master_id": "71d36d6b-75c4-40e8-8bdf-a30ccdd7e135",
+    "modified": "2019-09-12T22:19:48.401Z",
     "timeline": {
-        "incident": {
-            "year": 2016,
-            "month": 9,
-            "day": 5
-        }
+      "notification": {
+        "day": 14,
+        "month": 10,
+        "year": 2016
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/noble-house-hotels-resorts-notifies-guests-of-payment-card-breaches-at-teton-mountain-lodge-spa-and-hotel-terra/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Payment card system for Nobel House Hotels & Resorts had been compromised.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 5,
+      "month": 9,
+      "year": 2016
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "721110",
+    "locations_affected": 2,
+    "notes": "Two hotels and resorts in WY",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "victim_id": [
+        "Teton Mountain Lodge & Spa",
+        "Hotel Terra"
+      ]
     },
-    "victim": {
-        "victim_id": "Noble House Hotels & Resorts",
-        "employee_count": "101 to 1000",
-        "industry": "721110",
-        "locations_affected": 2,
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "state": "WY",
-        "notes": "Two hotels and resorts in WY",
-        "secondary": {
-            "victim_id": [
-                "Teton Mountain Lodge & Spa",
-                "Hotel Terra"
-            ]
-        }
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Capture stored data",
-                "Ram scraper"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "notes": "No notes on how it was on the system, just that was discovered ",
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ],
-            "country": [
-                "Unknown"
-            ]
-        }
-    },
-    "asset": {
-        "total_amount": 1,
-        "assets": [
-            {
-                "variety": "S - POS controller",
-                "amount": 1
-            }
-        ],
-        "country": [
-            "US"
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data_disclosure": "Yes",
-            "data": [
-                {
-                    "variety": "Payment"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Unknown"
-            ]
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        }
-    },
-    "targeted": "Unknown",
-    "discovery_method": {
-        "partner": {
-            "variety": [
-                "Audit"
-            ]
-        }
-    },
-    "plus": {
-        "created": "2019-09-10T23:13:02.511Z",
-        "event_chain": [
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp"
-            }
-        ],
-        "modified": "2019-09-12T22:19:48.401Z",
-        "dbir_year": 2020,
-        "timeline": {
-            "notification": {
-                "day": 14,
-                "month": 10,
-                "year": 2016
-            }
-        },
-        "master_id": "71d36d6b-75c4-40e8-8bdf-a30ccdd7e135",
-        "analysis_status": "Validated",
-        "analyst": "planglois925",
-        "github": "8640"
-    },
-    "schema_version": "1_3_3"
+    "state": "WY",
+    "victim_id": "Noble House Hotels & Resorts"
+  }
 }

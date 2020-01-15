@@ -1,118 +1,125 @@
 {
-    "source_id": "vcdb",
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "CA"
+    ],
+    "role": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": "Unknown",
+  "incident_id": "822f04f0-0491-11ea-ad43-7952870528d4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-11-11T19:58:19.129Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Installed software"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encrypts files"
+      }
+    ],
+    "github": "14247",
+    "master_id": "054ce86a-bd24-4d0f-9b4e-35afd000dd36",
+    "modified": "2019-11-11T19:58:19.129Z",
+    "sub_source": "phidbr",
     "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 9,
-            "day": 25
-        },
-        "discovery": {
-            "unit": "Hours"
-        }
+      "notification": {
+        "day": 29,
+        "month": 9,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.cbc.ca/news/canada/kitchener-waterloo/rural-hospitals-in-southwest-ontario-hit-by-ransomware-attack-1.5301947,http://lfpress.com/news/local-news/two-southwestern-ontario-hospitals-hit-by-cyber-attack/wcm/37654a62-dae4-4350-91e8-50ccf21830ab",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Two hospitals shut down after ransomware attack",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
     },
-    "victim": {
-        "country": [
-            "CA"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Listowel Wingham Hospitals Alliance",
-        "employee_count": "Unknown",
-        "industry": "622110",
-        "locations_affected": 2,
-        "state": "CA-ON"
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Exfiltrate",
-                "Infiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "Unknown"
-        ],
-        "country": [
-            "CA"
-        ]
-    },
-    "attribute": {
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Installed software"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "Ransomware encrypts files"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2019-11-11T19:58:19.129Z",
-        "created": "2019-11-11T19:58:19.129Z",
-        "timeline": {
-            "notification": {
-                "year": 2019,
-                "month": 9,
-                "day": 29
-            }
-        },
-        "master_id": "054ce86a-bd24-4d0f-9b4e-35afd000dd36",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2020,
-        "github": "14247"
-    },
-    "incident_id": "822f04f0-0491-11ea-ad43-7952870528d4",
-    "security_incident": "Confirmed",
-    "reference": "https://www.cbc.ca/news/canada/kitchener-waterloo/rural-hospitals-in-southwest-ontario-hit-by-ransomware-attack-1.5301947,http://lfpress.com/news/local-news/two-southwestern-ontario-hospitals-hit-by-cyber-attack/wcm/37654a62-dae4-4350-91e8-50ccf21830ab",
-    "summary": "Two hospitals shut down after ransomware attack",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+    "incident": {
+      "day": 25,
+      "month": 9,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "Unknown",
+    "industry": "622110",
+    "locations_affected": 2,
+    "region": [
+      "019021"
+    ],
+    "state": "CA-ON",
+    "victim_id": "Listowel Wingham Hospitals Alliance"
+  }
 }

@@ -1,147 +1,160 @@
 {
-    "source_id": "vcdb",
+  "action": {
+    "malware": {
+      "name": "Lockcrypt ",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Email attachment"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 48,
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 48
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "360167d0-15e4-11ea-997d-ff527b87f439",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-12-03T21:17:48.105Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Got someone to click something and install ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware got installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encrypted stuff"
+      }
+    ],
+    "github": "10612",
+    "master_id": "3a90c564-cda7-4e64-9952-cc7b592ebbf7",
+    "modified": "2019-12-03T21:17:48.105Z",
+    "sub_source": "random",
     "timeline": {
-        "incident": {
-            "year": 2017,
-            "month": 12,
-            "day": 5
-        }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Mecklenburg County",
-        "employee_count": "1001 to 10000",
-        "industry": "921110",
-        "locations_affected": 1,
-        "state": "NC"
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Email attachment"
-            ],
-            "result": [
-                "Exfiltrate",
-                "Infiltrate"
-            ],
-            "name": "Lockcrypt "
-        },
-        "social": {
-            "variety": [
-                "Phishing"
-            ],
-            "vector": [
-                "Email"
-            ],
-            "target": [
-                "End-user"
-            ],
-            "result": [
-                "Infiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown",
-                "amount": 48
-            }
-        ],
-        "cloud": [
-            "On-Premise Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 48
-    },
-    "attribute": {
-        "integrity": {
-            "variety": [
-                "Alter behavior",
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
-    },
-    "impact": {
-        "overall_rating": "Damaging"
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "soc",
-                "actor": "ext",
-                "asset": "ppl",
-                "attribute": "ia",
-                "summary": "Got someone to click something and install ransomware"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Ransomware got installed"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "Ransomware encrypted stuff"
-            }
-        ],
-        "sub_source": "random",
-        "modified": "2019-12-03T21:17:48.105Z",
-        "created": "2019-12-03T21:17:48.105Z",
-        "timeline": {
-            "notification": {
-                "year": 2017,
-                "month": 12,
-                "day": 6
-            }
-        },
-        "master_id": "3a90c564-cda7-4e64-9952-cc7b592ebbf7",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2020,
-        "github": "10612"
-    },
-    "incident_id": "360167d0-15e4-11ea-997d-ff527b87f439",
-    "security_incident": "Confirmed",
-    "reference": "https://www.wsoctv.com/news/local/mecklenburg-county-offices-experience-system-wide-computer-outage/658993421,https://www.fox46charlotte.com/news/hackers-freeze-mecklenburg-county-servers-demand-23000,https://blog.knowbe4.com/48-servers-of-north-carolina-county-held-hostage-by-lockcrypt-ransomware,https://spectrumlocalnews.com/nc/charlotte/news/2018/04/17/mecklenburg-county-s-it-proposes-more-funds-for-cyber-security-",
-    "summary": "Mecklenburg County North Carolina got hit with ransomware ",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+      "notification": {
+        "day": 6,
+        "month": 12,
+        "year": 2017
+      }
+    }
+  },
+  "reference": "https://www.wsoctv.com/news/local/mecklenburg-county-offices-experience-system-wide-computer-outage/658993421,https://www.fox46charlotte.com/news/hackers-freeze-mecklenburg-county-servers-demand-23000,https://blog.knowbe4.com/48-servers-of-north-carolina-county-held-hostage-by-lockcrypt-ransomware,https://spectrumlocalnews.com/nc/charlotte/news/2018/04/17/mecklenburg-county-s-it-proposes-more-funds-for-cyber-security-",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Mecklenburg County North Carolina got hit with ransomware ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 5,
+      "month": 12,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "921110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Mecklenburg County"
+  }
 }
