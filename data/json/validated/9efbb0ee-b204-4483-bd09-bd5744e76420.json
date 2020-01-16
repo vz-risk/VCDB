@@ -1,0 +1,120 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "599bb4d0-bf7b-11e9-a5a0-eb7abaf171bc",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-08-15T23:49:05.184Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Access customer data to find balance info."
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initiate fraudulent transactions to steal the money."
+      }
+    ],
+    "github": "13908",
+    "master_id": "9efbb0ee-b204-4483-bd09-bd5744e76420",
+    "modified": "2019-08-15T23:49:05.184Z"
+  },
+  "reference": "https://www.arkansasonline.com/news/2019/aug/14/ex-bank-worker-indicted-in-theft-201908-1/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A former electronic banking manager at Bank of Little Rock has been indicted by a federal grand jury on an embezzlement charge.  The indictment alleges that John Henry Curry Jr., 41, took more than $80,000 from bank customers' accounts between May 5, 2017, and Oct. 5, 2018. It accuses him of transferring the funds from the customer accounts into his own accounts and accounts of his relatives.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 17
+    },
+    "incident": {
+      "day": 5,
+      "month": 5,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "522110",
+    "region": [
+      "019021"
+    ],
+    "state": "AK",
+    "victim_id": "Bank of Little Rock"
+  }
+}

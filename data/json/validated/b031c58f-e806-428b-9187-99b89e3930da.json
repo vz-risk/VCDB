@@ -1,0 +1,106 @@
+{
+  "action": {
+    "error": {
+      "notes": "failed to secure Amazon S3 bucket",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 100000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "59470020-ce58-11e9-b4e5-4769cce343a0",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2019-09-03T19:56:51.346Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "13979",
+    "master_id": "b031c58f-e806-428b-9187-99b89e3930da",
+    "modified": "2019-09-03T19:56:51.346Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 1,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.vice.com/en_us/article/43jkzp/one-million-bank-phone-calls-in-amazon-aws-bucket-bank-of-cardiff",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A bank has left more than one million audio recordings of phone calls seemingly made by bank employees exposed to the open internet, letting anyone listen in on sensitive conversations, including ones with potential customers.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "522110",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Bank of Cardiff"
+  }
+}

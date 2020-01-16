@@ -1,0 +1,122 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "System"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 134000000,
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "discovered via a shodan search",
+  "incident_id": "fe3911d0-c8f0-11e9-9c16-3f32faecab86",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2019-08-27T22:58:02.568Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "13881",
+    "master_id": "f1a285dc-fa89-48e5-9036-8cc838f46da1",
+    "modified": "2019-08-27T22:58:16.914Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 31,
+        "month": 7,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/honda-motor-company-leaks-database-with-134-million-rows-of-employee-computer-data/ ;https://rainbowtabl.es/2019/07/31/honda-motor-company-leak/ ;https://www.siliconrepublic.com/enterprise/honda-massive-data-breach",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On the eve of releasing its financial earnings for the past quarter, Honda created a situation described by one security researcher as \u201ca hacker\u2019s dream\u201d. According to Verdict, 40GB of critical company data \u2013 amounting to 134m rows of system data \u2013 was stored on an unsecured Elasticsearch database.  This meant that anyone who knew where to look could have come across the company\u2019s most sensitive data, not only including information about the company\u2019s security systems and networks, but also technical data on all of its IP addresses, operating systems and what patches they had.",
+  "targeted": "NA",
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 3
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 4,
+      "month": 7,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Over 100000",
+    "industry": "336111",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Honda Motor Manufacturing"
+  }
+}

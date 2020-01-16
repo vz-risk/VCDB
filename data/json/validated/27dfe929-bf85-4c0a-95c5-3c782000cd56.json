@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Repurpose"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "d5a33ce0-bf73-11e9-8126-75153e867d2b",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-08-15T23:40:00.980Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Actor hacks into mail server."
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Repurpose email server for sending out phishes."
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Alter human behavior."
+      },
+      {
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "People gave them creds for banking, etc."
+      }
+    ],
+    "github": "13874",
+    "master_id": "27dfe929-bf85-4c0a-95c5-3c782000cd56",
+    "modified": "2019-08-15T23:40:00.980Z"
+  },
+  "reference": "https://ktla.com/2019/07/26/texas-man-facing-350-years-in-prison-for-hacking-into-l-a-superior-court-sending-2-million-phishing-emails/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A Texas man was found guilty Thursday of hacking into the Los Angeles Superior Court computer system and then using it to send about 2 million phishing emails, the U.S. Department of Justice said.  A jury found 33-year-old Oriyomi Sadiq Aloba guilty of 27 federal criminal charges, including conspiracy to commit wire fraud, wire fraud, attempted wire fraud, unauthorized impairment of a protected computer, unauthorized access to a protected computer to obtain information and aggravated identity theft, authorities said.  He faces a statutory maximum sentence of more than 350 years in federal prison, according to the Department of Justice .  Aloba and his co-conspirators gained access to an employee\u2019s email account in 2017 and then sent out emails with a link to a phishing website disguised as a Dropbox link, and asked employees for email addresses and passwords, authorities said.  Thousands of employees gave out their email credentials to the hacker, who then used them to send out millions of phishing emails, the DOJ said.  The scam emails claimed to be from  American Express, Wells Fargo, and other companies, and linked victims to a webpage asking for their banking login credentials, personal identifying information and credit card information, the Department of Justice said.  Victims who put in their credit card information lost a combined total of $15,000, according to court documents.  When investigators searched Aloba\u2019s Texas home, they found a laptop hidden in a closet with fresh blood smeared over it, a broken iPhone in a bathroom sink and a thumb drive in a toilet, authorities said.  On the laptop and thumb drive, investigators found software designed to facilitate phishing attacks, including an American Express phishing kit used on L.A. court employees, according to the DOJ.  Aloba was taken into federal custody after the verdict was read Thursday, authorities said.  The L.A. court spent $45,000 to respond to the attack, according to a news release.  A co-defendant, Robert Charles Nicholson, 28, of New York, pleaded guilty last month to one count of conspiracy to commit wire fraud, the DOJ said. Three other co-defendants remain at large outside the United States.  Aloba was initially charged by the Los Angeles County District Attorney, but the case was referred to the United States Attorney\u2019s Office for federal prosecution.  His sentencing hearing is scheduled for October 21, authorities said.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "922110",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Los Angeles Superior Court"
+  }
+}

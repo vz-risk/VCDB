@@ -1,0 +1,120 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "0dff3590-c8f6-11e9-b2db-f769187145bf",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2019-08-28T01:29:35.384Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal actor stands up database with no controls."
+      }
+    ],
+    "github": "13780",
+    "master_id": "413eabf5-eee2-459e-91b2-209bdaadaaeb",
+    "modified": "2019-08-28T01:29:35.384Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 7,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.engadget.com/2019/07/10/k12-exposed-student-data/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "  K12.com, an online education platform, inadvertently exposed the personal information of nearly seven million students, according to security researchers at Comparitech. The exposed database contained full names, email addresses, birthdates and gender identities, as well as the school that the students attend, authentication keys for accessing their accounts and other internal data. The information was available online for more than one week, and it's unclear if the database was at any point accessed by malicious actors. Engadget reached out to K12.com for additional information regarding the data exposure and will update this story if we hear back.  According to the researchers who discovered the exposure, the issue affected K12.com's A+nyWhere Learning System (A+LS), which is utilized by more than 1,100 school districts in the US. The database was misconfigured, resulting in it being publicly accessible and discoverable on BinaryEdge and Shodan, two search engines that specialize in indexing public-facing databases. The exposure, which was discovered on June 25th, first occurred on June 23rd and wasn't fixed until July 1st.",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 8
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 23,
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "K12.com"
+  }
+}

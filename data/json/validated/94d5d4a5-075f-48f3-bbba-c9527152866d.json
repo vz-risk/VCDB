@@ -1,0 +1,108 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "partner": {
+      "country": [
+        "Unknown"
+      ],
+      "industry": "000",
+      "motive": [
+        "NA"
+      ],
+      "region": [
+        "000000"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "80fdb430-beb1-11e9-b2db-f769187145bf",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2019-08-28T01:11:08.764Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Partner stands up database with no controls."
+      }
+    ],
+    "github": "13833",
+    "master_id": "94d5d4a5-075f-48f3-bbba-c9527152866d",
+    "modified": "2019-08-28T01:11:08.764Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://tokenpost.com/Major-crypto-data-leak-impacts-300K-users-2730; https://bitcoinmagazine.com/articles/quickbit-confirms-data-leak; https://www.americancryptoassociation.com/2019/07/23/swedish-cryptocurrency-exchange-security-breach/; https://investor.quickbit.eu/pressreleases/uppdatering-om-dataincident-2/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Swedish crypto exchange QuickBit recently confirmed that it had indeed committed a major blunder in the form of a data leak that could impact as many as 3,00,000 users of the platform. This involves essentially placing customer data on an unprotected database that was accessible to practically anyone.  The exchange made the confirmation in an investor relations update where it explained what had occurred. Among the data that was exposed is crucial private information such as names and addresses.  \u201cQuickBit has recently adopted a third-party system for supplementary security screening of customers. In connection with the delivery of this system, it has been on a server that has been visible outside QuickBits firewall for a few days, and thus accessible to the person who has the right tools,\u201d the update reads after translation.  During the delivery period, a database has been exposed with information about name, address, e-mail address and truncated (not complete) card information for approximately 2% of QuickBit\u2019s customers.\u201d  This development is further detailed over at Comparitech, with the third-party platform being MongoDB. As tech investigator Paul Bischoff notes in his report, the details of the affected customers became \u201creadable to anyone with an internet connection.\u201d  It is worth pointing out that while 300,000 accounts were exposed, the number of users that have now become targets of malicious activities is still unknown. However, user data was not the only information compromised by this leak.  Bischoff also discovered that \u201c143 records with internal credentials, including merchants, secret keys, names, passwords, secret phrases, user IDs, and other information\u201d were exposed. The leak of these details currently presents a grave security threat for the exchange and its users. Responding to CoinDesk\u2019s request for a comment, the exchange promised that it would provide a report on the incident.  \u201cData security is of utmost importance for QuickBit,\u201d the exchange told the publication. \u201cWe will publish a public version of the incident report on our website shortly.\u201d",
+  "targeted": "NA",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "SE"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "523130",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "QuickBit"
+  }
+}
