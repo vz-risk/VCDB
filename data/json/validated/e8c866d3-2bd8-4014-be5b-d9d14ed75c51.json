@@ -1,0 +1,187 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Used stolen credentials from phishing",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 4,
+        "variety": "P - End-user"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "total_amount": 4
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 30000,
+          "variety": "Medical"
+        },
+        {
+          "amount": 4,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 30000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "d9a4b1e0-0585-11ea-a6b7-b9a04765ea4f",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2019-11-13T01:07:09.784Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Got people to disclose credentials"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Compromised credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials to get access to emails"
+      }
+    ],
+    "github": "14459",
+    "master_id": "e8c866d3-2bd8-4014-be5b-d9d14ed75c51",
+    "modified": "2019-11-13T01:07:09.784Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 11,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://wgme.com/news/local/hack-may-have-exposed-information-on-30000-maine-patients",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "InterMed, a Maine-based health care provider, said it was hacked and about 30,000 patients may have had their information compromised.  InterMed serves patients through their practice sites in Portland, South Portland, and Yarmouth.  InterMed said on Tuesday an \u201cunauthorized individual\u201d gained access to the email account of an employee between September 4-6. They said they learned about the hack on September 6.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 4,
+      "month": 9,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "621111",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "ME",
+    "victim_id": "InterMed"
+  }
+}

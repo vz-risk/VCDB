@@ -1,0 +1,113 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 37000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 37000,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "discoverd by UpGuard",
+  "incident_id": "e6dd9320-de0e-11e9-92e6-b7a271e742aa",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2019-09-23T20:01:00.032Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14032",
+    "master_id": "40b98e8c-a37a-4e8a-9024-abc317186d8b",
+    "modified": "2019-09-23T20:01:00.032Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 7,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.zdnet.com/article/upguard-finds-information-on-over-37000-australia-and-new-zealand-clinical-trial-participants-in-the-wild/ ; https://www.smh.com.au/business/companies/thousands-of-medical-histories-exposed-in-data-breach-20190807-p52euq.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A database containing information on individuals from Australia and New Zealand has been uncovered, with the exposed data connected to clinical trials.  As UpGuard detailed in a blog post, the database belonged to Neoclinical, an Australia-based company that matches individuals with active clinical trials.  Key takeaways from Singapore healthcare data breach Key takeaways from Singapore healthcare data breach  No system is infallible and cybersecurity breaches are inevitable, but Singapore needs to do better in mitigating the risks and following through on its pledge to safeguard citizen data.  Read More  The database included collections for different entity types involved in connecting users to clinical trials, such as the accounts of organisations running the trials and information on the \"users\" themselves seeking entry to those trials.  In addition to contact information, UpGuard said the database included users' responses to questions qualifying them for clinical trials, which included questions about medical diagnoses and treatments.",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 7,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "541715",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "neoclinical "
+  }
+}
