@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Elevate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "6352dbb0-de08-11e9-92e6-b7a271e742aa",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2019-09-23T18:53:47.953Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia"
+      }
+    ],
+    "github": "14049",
+    "master_id": "56865c72-d802-4f64-93de-caf71f0db77e",
+    "modified": "2019-09-23T18:53:47.953Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 9,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "http://www.spamfighter.com/News-22389-Around-5500-patients-PHI-exposed-in-phishing-attack-on-the-Michigan-Medicine.htm",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Around 5,500 patients of the Michigan Medicine are getting notified regarding the phishing email campaign, which might have exposed a few of their PHI (Protected Health Information).     In July 2019, employees of the Michigan Medicine were targeted in a huge scale phishing campaign. More than 3,200 employees of Michigan Medicine have received phishing emails having a malicious link, which when clicked directed to a webpage looking like legitimate site requesting the user's email account username and password.     Three employees have responded to this phishing emails and then disclosed their credentials, as a result of which the perpetrator gain access to the email accounts of those employees'. These accounts were then further used for sending more phishing emails. Suspicious activity in this email accounts were detected by Michigan Medicine on 8th, 9th and 12th July of 2019.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Michigan Medicine"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 4000000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "Bob Diachenko and Vinny Troia",
+  "incident_id": "688da860-1c35-11ea-a0aa-479da677bbbc",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2019-12-11T23:06:46.121Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "14574",
+    "master_id": "c84a2228-d1f0-4fce-96ff-f9c7fcb7b09e",
+    "modified": "2019-12-11T23:06:46.121Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 22,
+        "month": 11,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://threatpost.com/data-enriched-profiles-1-2b-leak/150560/ ; https://www.wired.com/story/billion-records-exposed-online/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "First found on October 16 by researchers Bob Diachenko and Vinny Troia, the database contains more than 4 terabytes of data. It consists of scraped information from social media sources like Facebook and LinkedIn, combined with names, personal and work email addresses, phone numbers, Twitter and Github URLs, and other data commonly available from data brokers \u2013 i.e., companies which specialize in supporting targeted advertising, marketing and messaging services.  Taken together, the profiles provide a 360-degree view of individuals, including their employment and education histories. All of the information was unprotected, with no login needed to access it.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "NA"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 16,
+      "month": 10,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "541511",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "People Data Labs (PDL) "
+  }
+}
