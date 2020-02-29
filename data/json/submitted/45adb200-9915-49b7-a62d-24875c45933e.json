@@ -1,0 +1,120 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "month": 4,
+            "year": 2019
+        },
+        "containment": {
+            "unit": "Weeks"
+        }
+    },
+    "victim": {
+        "country": [
+            "KR"
+        ],
+        "region": [
+            "142030"
+        ],
+        "employee_count": "Over 100000",
+        "industry": "443142",
+        "victim_id": "Samsung"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            },
+            {
+                "variety": "S - Code repository"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Source code"
+                },
+                {
+                    "variety": "System"
+                },
+                {
+                    "variety": "Secrets"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Victim organization"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "created": "2019-09-04T00:05:11.797Z",
+        "dbir_year": 2020,
+        "modified": "2020-03-01T02:27:12.157Z",
+        "timeline": {
+            "notification": {
+                "day": 10,
+                "month": 5,
+                "year": 2019
+            }
+        },
+        "master_id": "45adb200-9915-49b7-a62d-24875c45933e",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "github": "13484"
+    },
+    "confidence": "Medium",
+    "incident_id": "a8509040-ce6d-11e9-b4e5-4769cce343a0",
+    "reference": "https://gdpr.report/news/2019/05/10/samsung-data-leak-exposes-source-code-passwords-and-employee-data/",
+    "security_incident": "Confirmed",
+    "summary": "Security researcher revealed that sensitive information including source code, credentials and secret keys have been made accessible on GitLab. Mossab Hussein, a security researcher at SpiderSilk,  discovered dozens of exposed files and credentials to the entire AWS account that was being used on GitLab.  Many of the files contained logs, analytics data, and the source code for the Samsung smart home ecosystem, SmartThings and Bixby services. The files also contained several employees’ credentials, which had been stored in plaintext. Shockingly Hussein was able to gain access to nearly 135 projects. Samsung internal coding were being exposed on GitLab due to it being configured as public without any password protection – thus meaning that anyone could access them, and download the source code.",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

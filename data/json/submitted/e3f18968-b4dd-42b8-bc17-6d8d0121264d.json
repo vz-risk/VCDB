@@ -1,0 +1,117 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "month": 5,
+            "year": 2019
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "101 to 1000",
+        "industry": "541613",
+        "state": "CO",
+        "victim_id": "Ifficient"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 8000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "created": "2019-09-23T21:35:30.607Z",
+        "dbir_year": 2020,
+        "modified": "2020-03-01T02:27:28.404Z",
+        "sub_source": "priority",
+        "timeline": {
+            "notification": {
+                "day": 16,
+                "month": 5,
+                "year": 2019
+            }
+        },
+        "master_id": "e3f18968-b4dd-42b8-bc17-6d8d0121264d",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "github": "13673"
+    },
+    "confidence": "Medium",
+    "discovery_notes": "discovered by security researcher Sanyam Jain",
+    "incident_id": "b1a00430-de1e-11e9-b511-f75921c18742",
+    "reference": "https://www.databreaches.net/unsecured-survey-database-exposes-info-of-8-million-people/ ; https://www.bleepingcomputer.com/news/security/unsecured-survey-database-exposes-info-of-8-million-people/",
+    "security_incident": "Confirmed",
+    "summary": "An unsecured database has exposed the personal information of 8 million people from the U.S. who participated in online surveys, sweepstakes, and requests for free product samples.  […] Sanyam Jain, an independent security researcher and member of the GDI Foundation, discovered an unsecured Elasticsearch database that exposed the personal information of 8 million people who submitted entries to these types of sites.  As is often the case, identifying and then notifying the database owner to get unsecured data secured was not a walk in the park. Jain had reportedly found references to “userenroll.com” in the records. That domain belongs to an online marketing firm called PathEvolution.  Abrams reports that Jain reached out to Amazon for assistance notifying them when he was unable to do so. For his part, Abrams reports:  Ultimately, I was able to track down the owner of the database by finding that PathEvolution was owned by a parent company named Ifficient, w",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

@@ -1,0 +1,113 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "month": 5,
+            "year": 2019
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 3
+        }
+    },
+    "victim": {
+        "country": [
+            "IN"
+        ],
+        "region": [
+            "142034"
+        ],
+        "employee_count": "11 to 100",
+        "industry": "541613",
+        "victim_id": "Chtrbox"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 49000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 49000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "created": "2019-09-27T06:21:04.852Z",
+        "dbir_year": 2020,
+        "modified": "2020-03-01T02:26:45.890Z",
+        "sub_source": "priority",
+        "timeline": {
+            "notification": {
+                "day": 21,
+                "month": 5,
+                "year": 2019
+            }
+        },
+        "master_id": "1ff340ad-b60e-4651-99d5-f0b8d90727af",
+        "analysis_status": "Validated",
+        "analyst": "swidup",
+        "github": "13501"
+    },
+    "confidence": "High",
+    "incident_id": "85bd5560-e0ae-11e9-8cfd-bf57b38104b7",
+    "reference": "https://www.govinfosecurity.com/database-may-have-exposed-instagram-data-for-49-million-a-12503; https://z6mag.com/2019/05/27/company-denies-unethical-collection-of-ig-influencer-data-following-online-exposure/",
+    "security_incident": "Confirmed",
+    "summary": "There's been a potential leak of personally identifiable information from Instagram, but it's not clear yet whether the data came directly came from the social media company.  Security researcher Anurag Sen found a database online that appeared to contain profile data for 49 million Instagram users, including their email addresses and phone numbers - data that is supposed to be private. Instagram has at least 1 billion active monthly users.  Sen brought the database to the attention of TechCrunch, which traced the owner to Mumbai-based Chtrbox, a social media company. The database, which was hosted on Amazon Web Services, was left open without password protection on the internet. Chrtbox has since pulled it offline. ",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}
