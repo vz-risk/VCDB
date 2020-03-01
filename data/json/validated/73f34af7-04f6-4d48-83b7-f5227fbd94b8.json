@@ -1,0 +1,141 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Data mishandling",
+        "Possession abuse",
+        "Unapproved hardware"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Cashier"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "M - Payment card"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Processed"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "64d305c0-1d03-11ea-b94e-893211cca703",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2019-12-13T01:38:32.236Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Cashier scans customer card into square reader."
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "ia",
+        "summary": "Cashier makes fraudulent charges against customer account."
+      }
+    ],
+    "github": "14278",
+    "master_id": "73f34af7-04f6-4d48-83b7-f5227fbd94b8",
+    "modified": "2020-03-01T01:38:54.900Z",
+    "timeline": {
+      "notification": {
+        "day": 29,
+        "month": 9,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.local10.com/news/florida/miami-dade/vendor-arrested-after-charging-fan-724-for-2-beers-during-dolphins-game",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A beer vendor was arrested Sunday at Hard Rock Stadium after using a Square reader to charge more than $700 to a fan's credit card during a Miami Dolphins game, police said.  Nathaniel Collier, 33, faces charges of third-degree grand theft and possession of a skimming device.  According to an arrest affidavit, the victim ordered two beers from Collier during Miami's 30-10 loss to the Los Angeles Chargers and gave him his credit card to pay for them. But police said Collier used his personal card reader to charge the victim $724.  The victim was notified of the charge by his bank a short time later.  Collier was taken into custody without incident. Police said he had a Square credit card reader in his possession.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 29,
+      "month": 9,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "711320",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Hard Rock Stadium"
+  }
+}

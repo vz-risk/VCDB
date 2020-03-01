@@ -1,0 +1,121 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 300000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "0a3ed660-c8ef-11e9-9c16-3f32faecab86",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2019-08-27T22:34:12.627Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "13885",
+    "master_id": "4f2a96c1-da89-4d05-b4b3-aedfa2bd0fbb",
+    "modified": "2020-03-01T02:27:37.499Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 1,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/a-misconfigured-aws-bucket-exposed-personal-and-counseling-logs-of-almost-300000-indian-employees/  ; https://www.techdirt.com/articles/20190808/13213742745/indian-counseling-company-files-criminal-complaint-against-blogger-who-informed-it-about-sensitive-data-leak.shtml",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On May 16, a researcher discovered that 1to1Help was exposing data in a misconfigured Amazon s3 bucket. When they eventually had time to look at the data, they found that were were more than 300,000 records with personal and sensitive information in the exposed bucket. The researcher then contacted this site to share their findings.  Beginning on June 10, DataBreaches.net attempted to notify 1to1Help.net of the exposure so that they could secure their database.  Emails sent to the site on June 10 and June 11 received no reply and by June 18, the bucket was still unsecured. An India-based cybersecurity firm that has assisted this site in the past in making notifications in India, BanBreach, also attempted to reach out to the firm, but did not reach anyone.  After yet another week went by with no response from 1to1Help.net and finding that the bucket was still not secured,  DataBreaches.net decided to start contacting some of 1to1Help\u2019s larger corporate clients, hoping that if their clients called them to say, \u201cHey, our data is exposed,\u201d they\u2019d get action.  On June 26, I spoke with a top privacy official for the U.S. headquarters of one of the multinational firms affected by the 1to1Help leak and explained the situation to her. I also started reaching out via email to other large corporate clients of 1to1Help.net. Two of the firms were immediately responsive and indicated that they were reaching out to 1to1Help.net  On July 14, I finally got a response from Anil Bisht, the Director of 1to1Help.net.",
+  "targeted": "NA",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Months",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 16,
+      "month": 5,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Small",
+    "industry": "624190",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "1to1 Help"
+  }
+}

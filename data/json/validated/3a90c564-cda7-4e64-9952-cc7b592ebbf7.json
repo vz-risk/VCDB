@@ -1,0 +1,156 @@
+{
+  "action": {
+    "malware": {
+      "name": "Lockcrypt ",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Email attachment"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 48,
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - End-user"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 48
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "360167d0-15e4-11ea-997d-ff527b87f439",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2019-12-03T21:17:48.105Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Got someone to click something and install ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware got installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encrypted stuff"
+      }
+    ],
+    "github": "10612",
+    "master_id": "3a90c564-cda7-4e64-9952-cc7b592ebbf7",
+    "modified": "2019-12-03T21:17:48.105Z",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 12,
+        "year": 2017
+      }
+    }
+  },
+  "reference": "https://www.wsoctv.com/news/local/mecklenburg-county-offices-experience-system-wide-computer-outage/658993421,https://www.fox46charlotte.com/news/hackers-freeze-mecklenburg-county-servers-demand-23000,https://blog.knowbe4.com/48-servers-of-north-carolina-county-held-hostage-by-lockcrypt-ransomware,https://spectrumlocalnews.com/nc/charlotte/news/2018/04/17/mecklenburg-county-s-it-proposes-more-funds-for-cyber-security-",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Mecklenburg County North Carolina got hit with ransomware ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 5,
+      "month": 12,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "921110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Mecklenburg County"
+  }
+}

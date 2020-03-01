@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Used stolen creds to access email",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - End-user"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3582,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3582,
+      "data_victim": [
+        "Employee",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "notes": "Phishing email to disclose credentials",
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    },
+    "unknown": false
+  },
+  "incident_id": "25660520-0fbd-11ea-936a-1ffb751fb68b",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1
+      }
+    },
+    "created": "2019-11-26T01:07:07.474Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Compromise user credentials through phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen creds for accessing emails"
+      }
+    ],
+    "github": "14520",
+    "master_id": "da642551-e525-4547-a518-95b8ed3c3a30",
+    "modified": "2019-11-26T01:07:07.474Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 1,
+        "month": 11,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.prnewswire.com/news-releases/select-heath-network-provides-notice-of-data-security-incident-300957936.html,https://www.hipaajournal.com/solara-medical-supplies-and-select-health-network-report-phishing-attacks/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Mishawaka, IN-based physician hospital organization, Select Health Network, has also announced that the protected health information of certain individuals has potentially been compromised as a result of a phishing attack.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 21
+    },
+    "incident": {
+      "day": 22,
+      "month": 5,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "524114",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Select Health"
+  }
+}
