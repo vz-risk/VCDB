@@ -1,116 +1,118 @@
 {
-  "action": {
-    "hacking": {
-      "result": [
-        "Exfiltrate",
-        "Infiltrate"
-      ],
-      "variety": [
-        "Use of stolen creds"
-      ],
-      "vector": [
-        "Unknown"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "country": [
-        "Unknown"
-      ],
-      "motive": [
-        "Unknown"
-      ],
-      "region": [
-        "000000"
-      ],
-      "variety": [
-        "Unknown"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "amount": 1,
-        "variety": "S - Mail"
-      }
-    ],
-    "cloud": [
-      "Unknown"
-    ],
-    "total_amount": 1
-  },
-  "attribute": {
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 18470,
-          "variety": "Medical"
-        }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 18470,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": "Unknown",
-  "incident_id": "030ca130-e922-11e9-b01d-8d8474fb7a4b",
-  "plus": {
-    "analysis_status": "Validated",
-    "analyst": "planglois",
-    "created": "2019-10-07T21:02:34.501Z",
-    "dbir_year": 2020,
-    "event_chain": [
-      {
-        "action": "hak",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "cp"
-      }
-    ],
-    "github": "10611",
-    "master_id": "1b5fb12b-f187-48d1-a346-17afd1694a6c",
-    "modified": "2020-01-10T19:30:44.794Z",
-    "sub_source": "phidbr",
+    "source_id": "vcdb",
     "timeline": {
-      "notification": {
-        "day": 7,
-        "month": 12,
-        "year": 2017
-      }
-    }
-  },
-  "reference": "http://www.fox2detroit.com/news/local-news/personal-information-compromised-for-nearly-20000-henry-ford-health-system-patients;https://www.wxyz.com/news/more-than-18k-henry-ford-health-system-patients-affected-in-data-breach;https://www.healthdatamanagement.com/news/hackers-use-email-credentials-to-get-access-to-data-at-henry-ford",
-  "schema_version": "1.3.4",
-  "security_incident": "Confirmed",
-  "source_id": "vcdb",
-  "summary": "Attackers gained access to hospital's email accounts",
-  "targeted": "Opportunistic",
-  "timeline": {
-    "incident": {
-      "day": 3,
-      "month": 10,
-      "year": 2017
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "10001 to 25000",
-    "industry": "621111",
-    "locations_affected": 1,
-    "region": [
-      "019021"
-    ],
-    "state": "MI",
-    "victim_id": "Henry Ford Health System"
-  }
+        "incident": {
+            "day": 3,
+            "month": 10,
+            "year": 2017
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "10001 to 25000",
+        "industry": "621111",
+        "locations_affected": 1,
+        "state": "MI",
+        "victim_id": "Henry Ford Health System"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ],
+            "region": [
+                "000000"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Mail"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 18470,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 18470
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "created": "2019-10-07T21:02:34.501Z",
+        "dbir_year": 2020,
+        "modified": "2020-03-07T05:10:02.354Z",
+        "sub_source": "phidbr",
+        "timeline": {
+            "notification": {
+                "day": 7,
+                "month": 12,
+                "year": 2017
+            }
+        },
+        "master_id": "1b5fb12b-f187-48d1-a346-17afd1694a6c",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "github": "10611"
+    },
+    "confidence": "High",
+    "incident_id": "030ca130-e922-11e9-b01d-8d8474fb7a4b",
+    "reference": "http://www.fox2detroit.com/news/local-news/personal-information-compromised-for-nearly-20000-henry-ford-health-system-patients;https://www.wxyz.com/news/more-than-18k-henry-ford-health-system-patients-affected-in-data-breach;https://www.healthdatamanagement.com/news/hackers-use-email-credentials-to-get-access-to-data-at-henry-ford",
+    "security_incident": "Confirmed",
+    "summary": "Attackers gained access to hospital's email accounts",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
 }
