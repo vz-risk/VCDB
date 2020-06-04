@@ -1,0 +1,169 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Elevate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "the CLOP ransomware group"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "ae1b6a50-a1bb-11ea-aa67-0b6b068266ad",
+  "notes": "COVID-19",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1,
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-05-29T20:03:38.729Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "15510",
+    "sub_source": "covid19",
+    "master_id": "d4e21914-d3b0-46bd-bb1c-69a2f0a52e1e",
+    "modified": "2020-05-29T20:03:38.729Z",
+    "timeline": {
+      "notification": {
+        "day": 28,
+        "month": 4,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://securityboulevard.com/2020/04/cybercriminals-leak-execupharm-internal-documents-after-ransomware-attack/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A successful ransomware attack was deployed on March 13 against ExecuPharm, a subsidiary of the U.S. Biopharmaceutical giant Parexel, according to a recent announcement made by the company.  Unlike typical ransomware attacks, where bad actors encrypt data and demand payment in exchange for the decryption keys, the perps have also started leaking confidential information found on ExecuPharm\u2019s network. Discovered to be the handiwork of the CLOP ransomware group, the attack was initiated through phishing emails sent out to ExecuPharm employees.  In the letter sent to the Office of The Vermont Attorney General, the company explains that, \u201ca data security incident that compromised select corporate and personal information\u201d happened after \u201cunknown individual encrypted ExecuPharm servers and sought a ransom in exchange for decryption.\u201d  The organization also mentioned that bad actors could \u201chave accessed and/or shared select personal information relating to ExecuPharm personnel, as well as information relating to select personnel of Parexel, whose information was stored on ExecuPharms\u2019s data Network\u201d.  The company also believes that confidential employee files were accessed during the attack, and does not rule out a potential leak of sensitive personal information, including:  \u2022 Beneficiary information including Social security numbers \u2022 Taxpayer ID/EIN \u2022 Driver\u2019s License numbers \u2022 Passport numbers \u2022 Bank account numbers \u2022 Credit card numbers \u2022 National Insurance numbers \u2022 National ID numbers \u2022 IBAN/SWIFT numbers  With such varied personal information, the bad actors hit a gold mine. Leaked financial information along with ID information can be used to impersonate victims and ultimately commit fraud.  As a result, the company has notified local authorities and the FBI, and contracted cybersecurity experts to investigate the incident. ExecuPharm said it has restored its servers and upgraded its network security to prevent further attacks.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 13,
+      "month": 3,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "industry": "325412",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "ExecuPharm"
+  }
+}

@@ -116,7 +116,7 @@ class Subsource():
           for plabel in self.cfg['priority_labels']:
             if any(plabel in label.name.lower() for label in issue.labels):
               issue_map[str(issue.number)] = plabel
-              break
+              break # NOTE: this causes only the first label found to be used.  This may result in unintended behavior. - GDB 200604
 
 #      ## DEBUG:
 #      with open("/Users/v685573/issue_map.json", 'r') as filehandle:
@@ -131,7 +131,8 @@ class Subsource():
           gh_id = incident['plus'].get('github', '')
           if gh_id in self.issue_map.keys():
             #print("{0} in map".format(gh_id))
-            if incident['plus'].get('sub_source', '') != self.issue_map[gh_id]:
+            # the not in bla be low is important as otherwise legitimate labels can be overwritten. - GDB 200604
+            if not incident['plus'].get('sub_source', '') in self.cfg['priority_labels'] and incident['plus'].get('sub_source', '') != self.issue_map[gh_id]:
               logging.warning("Incident {0} has plus.sub_source set to '{1}', however it should be '{3}'' based on the tags in github issue {2}.".format(
                   incident['plus'].get('master_id', "no_master_id"),
                   incident['plus'].get('sub_source', 'no_sub_source'),
