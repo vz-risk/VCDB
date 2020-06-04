@@ -64,7 +64,8 @@ __author__ = "Gabriel Bassett"
 ## Labels in priority order (higher up takes precidence)
 PRIORITIZED_LABELS = [
   "priority",
-  "phidbr"
+  "phidbr",
+  "covid19"
 ]
 
 cfg = {
