@@ -1,0 +1,175 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Unknown"
+      },
+      {
+        "amount": 1,
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Unknown"
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "8f722150-a118-11ea-878c-ff8a51fa1e8f",
+  "notes": "COVID-19",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-05-29T02:38:07.092Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Successful phish"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied from server"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Server encrypted and held for ransom"
+      }
+    ],
+    "github": "15606",
+    "master_id": "2a074bee-5cae-4a2b-a7b4-28d9862f6a02",
+    "modified": "2020-05-29T02:38:07.092Z",
+    "sub_source": "covid19"
+  },
+  "reference": "https://www.foxbusiness.com/technology/hacker-hits-magellan-health-with-ransomware-attack; https://www.infosecurity-magazine.com/news/us-health-giant-hooked-with/; https://www.scmagazine.com/home/security-news/magellan-health-warns-ransomware-attack-exposed-pii/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ransomware name and shame on healthcare company during pandemic.  Magellan Health is warning customers that an April 11 ransomware attack may have affected their personal information.  A Mandiant investigation determined an \u201cunauthorized actor gained access to Magellan\u2019s systems after sending a phishing email on April 6\u201d impersonating one of the company\u2019s clients, the company said in a notice from Magellan Senior Vice President and Chief Compliance Officer John J. DiBernardi. Before launching ransomware the third party \u201cexfiltrated a subset of data\u201d from one of Magellan\u2019s corporate servers that contained customer PII, including names, addresses, employee ID numbers and W-2 or 1099 details such as Social Security numbers or Taxpayer ID numbers. \u201cIn limited instances, and only with respect to certain current employees, the unauthorized actor also used a piece of malware designed to steal login credentials and passwords.\u201d ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 11,
+      "month": 4,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Magellan Health"
+  }
+}

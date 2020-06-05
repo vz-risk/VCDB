@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 22000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "9641f940-a1b5-11ea-aa67-0b6b068266ad",
+  "notes": "COVID-19",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-05-29T19:22:03.622Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "15556",
+    "master_id": "985e0520-7342-4d65-ab43-a121b74a345d",
+    "modified": "2020-05-29T19:22:19.552Z",
+    "sub_source": "covid19",
+    "timeline": {
+      "notification": {
+        "day": 5,
+        "month": 5,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/so-much-for-their-moratorium-on-attacking-healthcare-entities-maze-team-attacks-a-plastic-surgeon/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Despite having proclaimed that they would not be attacking medical entities during the pandemic, Maze Team has attacked another medical entity: a Bellevue, Washington-based plastic surgeon who specializes in surgery of the eye and facial areas. Dr. Kristin Tarbet\u2019s website does not provide any notice or indication of trouble, but Maze claims to have successfully attacked them on May 1, and offers plenty of proof of attack.  As part of its proof, Maze dumped a number of files with protected health information. One spread sheet for patient appointments contained approximately 39000 entries. A small number of entries were test data, but the rest appeared to be real data, where there might be multiple entries/rows for any one patient. For each patient, there was a first name and last name, date of birth, date of appointment, type of appointment, purpose of appointment, length of appointment, and any comment. Patient addresses, phone numbers, and insurance information were not included in this particular spreadsheet, but were included in other spreadsheets that also contained patients\u2019 email addresses, home and mobile numbers, and for some patients, Social Security numbers. Yet other files contained   specific medical information such as diagnostic codes, treatment codes, complaints, allergies, and medications that the patient was on, height, weight, blood pressure, respiration rate, and other notes. And yet another file contained insurance information.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 5,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Dr. Kristin Tarbert Plastic Surgery Offices"
+  }
+}
