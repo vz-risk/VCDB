@@ -141,6 +141,8 @@ class Subsource():
               ))
               if self.cfg['fix']:
                 incident['plus']['sub_source'] = self.issue_map[gh_id]
+          elif incident['plus'].get('sub_source', '') in PRIORITIZED_LABELS:
+            pass # if the sub_source is already a priority sub-source, leave it.
           else:
             #print("{0} not in map".format(gh_id))
             if 'sub_source' in incident['plus']:
