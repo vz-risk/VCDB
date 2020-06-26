@@ -121,12 +121,26 @@ parser.add_argument('-z', '--zip',
 parser.add_argument('-r', '--recurse',
                     help='Recurse into sub directories that may contain additional incidents.',
                     action='store_true')
+parser.add_argument('--source', 
+                    help='The source being joined. This will be used in the filename so simple strings ' + \
+                         'are recommended.',
+                    default='vcdb')
+parser.add_argument('--limit',
+                    help='The maximum number of json to join in a list within a single file.  ' + \
+                    'If more files exist than the limit, additional files will be created.  ' + \
+                    'If --zip is set, they will all be zipped together.',
+                    type=int,
+                    default=25000)
+parser.add_argument('--delete',
+                    help='If set, the incidents joined will then be deleted.',
+                    action='store_true')
 args = parser.parse_args()
 args = {k:v for k,v in vars(args).items() if v is not None}
 
 ## Set up Logging
 updateLogger({'log_level': args['loglevel'], 'log_file': args.get('log', None)})
 
+#print(args) # DEBUG
 
 
 ## EXECUTION
@@ -151,26 +165,37 @@ def main(args):
 
     incidents = list()
     try:
-        for file in files:
-            logging.debug(file)
-            with open(file, 'r') as filehandle:
+        for i in range(len(files)):
+            if i % args['limit'] == 0:
+              filenum = int(i / args['limit'])
+              #print(filenum) # DEBUG
+              incidents.append(list())
+            logging.debug(files[i])
+            with open(files[i], 'r') as filehandle:
                 i = json.load(filehandle)
-                incidents.append(i)
+                incidents[filenum].append(i)
     except:
-        logging.error("failure on file {0}.".format(file))
+        logging.error("failure on file {0}.".format(files[i]))
+
         raise
 
     if not os.path.exists(args['output']): os.makedirs(args['output'])
-    out_file = os.path.join(args['output'], "vcdb.json")
-    incidents = json.dumps(incidents)
     if args['zip']:
-        logging.debug('Zipping output file.')
-        zf = zipfile.ZipFile(out_file + ".zip", mode='w')
-        zf.writestr("vcdb.json", incidents + "\n", zipfile.ZIP_DEFLATED)
-        zf.close()
-    else:
-        with open(out_file, 'w') as filehandle:
-            filehandle.write(incidents + "\n")
+        zf = zipfile.ZipFile(os.path.join(args['output'], args['source'] + ".json.zip"), mode='w')
+    for i in range(len(incidents)):
+      incidents_str = json.dumps(incidents[i])
+      if args['zip']:
+          zf.writestr(args['source'] + "_" + str(i + 1) + "-of-" + str(len(incidents)) +  ".json", incidents_str + "\n", zipfile.ZIP_DEFLATED)
+      else:
+          with open(os.path.join(args['output'], args['source'] + "_" + str(i + 1) + "-of-" + str(len(incidents)) +  ".json"), 'w') as filehandle:
+              filehandle.write(incidents + "\n")
+    if args['zip']:
+          zf.close()
+
+    if args['delete']:
+        logging.info('Deleting all joined files.')
+        for file in files:
+            os.remove(file)
 
     logging.info('Ending main loop.')
 
