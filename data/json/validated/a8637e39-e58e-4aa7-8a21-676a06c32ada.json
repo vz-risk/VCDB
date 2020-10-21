@@ -1,0 +1,149 @@
+{
+  "action": {
+    "unknown": {
+      "notes": "3rd party data processor compromised to leak database.",
+      "result": [
+        "Elevate",
+        "Exfiltrate",
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3400000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 3400000,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3400000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored encrypted",
+        "Stored unencrypted",
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "Discovered through criminal forums and marketplaces",
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "bad077c0-0ccf-11eb-9ca0-972c112a0cb8",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "analyst_notes": "NOTE: because the partner compromised was not disclosed, there may be more secondary victims that have not yet provided notification.",
+    "asset_os": [
+      "Unknown"
+    ],
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown",
+        "partner_data": "Yes",
+        "partner_number": 3400000
+      }
+    },
+    "created": "2020-10-13T02:34:41.205Z",
+    "dbir_year": 2021,
+    "github": "15895",
+    "master_id": "a8637e39-e58e-4aa7-8a21-676a06c32ada",
+    "modified": "2020-10-13T02:34:51.034Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 11,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://hotforsecurity.bitdefender.com/blog/live-auction-marketplace-confirms-data-breach-after-bad-actor-puts-user-database-up-for-sale-on-the-dark-web-23728.html,https://www.antiquesandthearts.com/liveauctioneers-hacked-3-4-million-users-info-for-sale-to-highest-bidder-on-web/,https://art-crime.blogspot.com/2020/08/34-million-liveauctioneers-users-suffer.html,",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "company's database found for sale. DFIR confirms breach of partner data processor.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 19,
+      "month": 6,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "000000"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "liveauctioneers:454112"
+      ]
+    }
+  }
+}
