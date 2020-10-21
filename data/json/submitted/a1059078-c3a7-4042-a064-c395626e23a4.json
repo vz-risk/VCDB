@@ -1,0 +1,106 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 8,
+            "day": 14
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "victim_id": "Global Tel Link",
+        "industry": "5179",
+        "employee_count": "101 to 1000"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 300000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2020-09-28T21:30:31.131Z",
+        "created": "2020-09-28T21:30:31.131Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 9,
+                "day": 4
+            }
+        },
+        "master_id": "a1059078-c3a7-4042-a064-c395626e23a4",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "16211"
+    },
+    "incident_id": "98cb1610-01a5-11eb-b177-5f49668a9776",
+    "security_incident": "Confirmed",
+    "reference": "https://www.macobserver.com/link/telmate-data-leak/ ; https://www.techtimes.com/articles/252301/20200905/beware-11-million-inmates-personal-convos-with-their-families-leaked-telmate-exposes-their-contacts-data-online.htm",
+    "summary": "Telmate, a service used by incarcerated inmates at US prisons to communicate with their friends and loved ones, has exposed a database containing tens of millions of call logs, private messages, and personal information about inmates and their contacts. The database was exposed on the web without a password or any other authentication required to access it.  Comparitech security researcher Bob Diachenko on August 13, 2020 discovered the unsecured database and immediately reported it to Global Tel Link, the company that owns and operates Telmate. The company, to its credit, responded within two hours and secured the database an hour later, but it’s possible that other unauthorized parties accessed it prior to Diachenko’s disclosure.  Telmate makes GettingOut, a service and app for iOS and Android that facilitates monitored inmate communications via voice and video calls, text and photo messages, and voicemail.",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

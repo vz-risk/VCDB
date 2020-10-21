@@ -1,0 +1,113 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 7,
+            "day": 12
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "victim_id": "Adit, Inc.",
+        "employee_count": "11 to 100",
+        "industry": "541511",
+        "state": "TX"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 3100000
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "availability": {
+            "variety": [
+                "Destruction"
+            ],
+            "notes": "database was destroyed by bot"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2020-09-09T00:04:50.887Z",
+        "created": "2020-09-09T00:04:50.887Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 8,
+                "day": 13
+            }
+        },
+        "master_id": "812c954b-e2f3-4825-b40e-29ca49248af2",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "16087"
+    },
+    "incident_id": "caea2e30-f203-11ea-9eb3-fb45745214a6",
+    "security_incident": "Confirmed",
+    "reference": "https://siliconangle.com/2020/08/11/3-1m-records-tied-medical-software-company-adit-found-exposed-online/ ; https://healthitsecurity.com/news/medical-software-database-exposes-personal-data-of-3.1m-patients",
+    "summary": "More than 3 million user records tied to a medical software company called Adit have been found exposed online and may have been stolen by malicious actors.  Discovered by security researcher Bob Diachenko, who revealed it today, the data included full names, email addresses, home and work phone numbers, marital status, sex and medical practice name. The database was completely unsecured with no password or other authentication required to access it.  The company is somewhat difficult to track down. Diachenko noted that it took him some time to tie the database to Adit. While the company appears to have a website it was down at the time of writing. What is known is that the company offers software for online bookings and patient management at medical and dental practices. An Archive.org record from June shows that the company offers what it calls the “ultimate all-in-one practice growth platform.”  Diachenko found the database on July 13 and tried to reach out to the company with no success. The database is said to have been destroyed a week later and could have been possibly stolen by the meow bot. As with all personally identifiable information, the data could be used to phish or scam those listed in the database.  “This researcher’s discovery of Adit’s unsecured database and disclosure to the company is a textbook practice that ethical security researchers will do to help organizations proactively identify and close vulnerabilities before they can be exploited by bad actors,” Casey Ellis, founder and chief technology officer of crowdsourced cybersecurity platform company Bugcrowd Inc., told SiliconANGLE. “Unfortunately, Adit’s failure to respond to the researcher in time allowed a bot to delete and possibly steal the critical information belonging to millions of patients that were in the database.”  The exposure highlights the failure of both public and private sector organizations to cooperate with ethical security researchers, he added. “Organizations across all industries can benefit from having a vulnerability disclosure program in place,” he said. “This is because humans are prone to error and, when developers feel rushed to bring a new product or innovation to market, they will make mistakes along the way.”  Anurag Kahol, co-founder and CTO of cloud access security broker Bitglass Inc., noted that Gartner Inc. forecasts global information security spending to reach $123 billion this year, yet organizations continue to be plagued by easily preventable security failures like this one.  “This incident highlights how most organizations lack full visibility and control over their data, which are two critical components needed for a mature security program and to proactively prevent leaks and breaches,” Kahol said. “Obtaining full visibility and control over corporate data starts with a multifaceted approach to security. Specifically, solutions that enforce real-time access control, encrypt sensitive data at rest and manage the sharing of data with external parties can help proactively prevent data leakage.”",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
