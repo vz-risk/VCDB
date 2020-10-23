@@ -1,0 +1,137 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 4,
+            "day": 12
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "country": [
+            "BR"
+        ],
+        "region": [
+            "019005"
+        ],
+        "victim_id": "Natura",
+        "employee_count": "25001 to 50000",
+        "industry": "446120",
+        "locations_affected": 1,
+        "state": "BR-SP"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 2
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 2
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 290000,
+                    "variety": "Personal"
+                },
+                {
+                    "amount": 40001,
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 290001
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-10-24T02:09:15.814Z",
+        "created": "2020-10-24T02:09:15.814Z",
+        "master_id": "5977ab2c-597f-45da-a15d-7406d47cd59f",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "partner_data": "No",
+                "credit_monitoring": "Unknown"
+            }
+        },
+        "github": "15637"
+    },
+    "incident_id": "a00223a0-156f-11eb-b788-65a639ed21e8",
+    "security_incident": "Confirmed",
+    "reference": "https://thehackernews.com/2020/05/natura-data-breach.html,https://www.hackread.com/brazis-cosmetic-giant-natura-leaked-192m-records/,https://secalerts.co/article/192-million-records-compromised-in-cosmetic-giants-data-leak/aaffcaf9, https://tecnoblog.net/340039/natura-expoe-dados-pessoais-de-250-mil-clientes-em-servidores-desprotegidos/",
+    "summary": "Internet exposed AWS databases",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

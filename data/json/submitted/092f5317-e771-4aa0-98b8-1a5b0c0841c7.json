@@ -1,0 +1,128 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 2
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 3
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "country": [
+            "CY"
+        ],
+        "region": [
+            "150039"
+        ],
+        "victim_id": "Covve",
+        "locations_affected": 1,
+        "industry": "518210",
+        "employee_count": "11 to 100"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 23000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 23000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-10-24T02:20:12.693Z",
+        "created": "2020-10-24T02:20:12.693Z",
+        "master_id": "092f5317-e771-4aa0-98b8-1a5b0c0841c7",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "partner_data": "No"
+            }
+        },
+        "github": "15636"
+    },
+    "incident_id": "47209780-1574-11eb-b788-65a639ed21e8",
+    "security_incident": "Confirmed",
+    "reference": "https://portswigger.net/daily-swig/covve-revealed-as-source-of-data-breach-impacting-23m-individuals,https://www.bankinfosecurity.com/developer-in-cyprus-claims-breach-contacts-app-a-14295",
+    "summary": "exposed ES database",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
