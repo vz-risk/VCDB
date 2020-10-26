@@ -1,0 +1,110 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 300000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "98cb1610-01a5-11eb-b177-5f49668a9776",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2020-09-28T21:30:31.131Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "16211",
+    "master_id": "a1059078-c3a7-4042-a064-c395626e23a4",
+    "modified": "2020-09-28T21:30:31.131Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 9,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.macobserver.com/link/telmate-data-leak/ ; https://www.techtimes.com/articles/252301/20200905/beware-11-million-inmates-personal-convos-with-their-families-leaked-telmate-exposes-their-contacts-data-online.htm",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Telmate, a service used by incarcerated inmates at US prisons to communicate with their friends and loved ones, has exposed a database containing tens of millions of call logs, private messages, and personal information about inmates and their contacts. The database was exposed on the web without a password or any other authentication required to access it.  Comparitech security researcher Bob Diachenko on August 13, 2020 discovered the unsecured database and immediately reported it to Global Tel Link, the company that owns and operates Telmate. The company, to its credit, responded within two hours and secured the database an hour later, but it\u2019s possible that other unauthorized parties accessed it prior to Diachenko\u2019s disclosure.  Telmate makes GettingOut, a service and app for iOS and Android that facilitates monitored inmate communications via voice and video calls, text and photo messages, and voicemail.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 8,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "5179",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Global Tel Link"
+  }
+}

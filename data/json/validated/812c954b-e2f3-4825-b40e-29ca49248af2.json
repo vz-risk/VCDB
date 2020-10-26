@@ -1,0 +1,117 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 3100000,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "notes": "database was destroyed by bot",
+      "variety": [
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "caea2e30-f203-11ea-9eb3-fb45745214a6",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2020-09-09T00:04:50.887Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "16087",
+    "master_id": "812c954b-e2f3-4825-b40e-29ca49248af2",
+    "modified": "2020-09-09T00:04:50.887Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 13,
+        "month": 8,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://siliconangle.com/2020/08/11/3-1m-records-tied-medical-software-company-adit-found-exposed-online/ ; https://healthitsecurity.com/news/medical-software-database-exposes-personal-data-of-3.1m-patients",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "More than 3 million user records tied to a medical software company called Adit have been found exposed online and may have been stolen by malicious actors.  Discovered by security researcher Bob Diachenko, who revealed it today, the data included full names, email addresses, home and work phone numbers, marital status, sex and medical practice name. The database was completely unsecured with no password or other authentication required to access it.  The company is somewhat difficult to track down. Diachenko noted that it took him some time to tie the database to Adit. While the company appears to have a website it was down at the time of writing. What is known is that the company offers software for online bookings and patient management at medical and dental practices. An Archive.org record from June shows that the company offers what it calls the \u201cultimate all-in-one practice growth platform.\u201d  Diachenko found the database on July 13 and tried to reach out to the company with no success. The database is said to have been destroyed a week later and could have been possibly stolen by the meow bot. As with all personally identifiable information, the data could be used to phish or scam those listed in the database.  \u201cThis researcher\u2019s discovery of Adit\u2019s unsecured database and disclosure to the company is a textbook practice that ethical security researchers will do to help organizations proactively identify and close vulnerabilities before they can be exploited by bad actors,\u201d Casey Ellis, founder and chief technology officer of crowdsourced cybersecurity platform company Bugcrowd Inc., told SiliconANGLE. \u201cUnfortunately, Adit\u2019s failure to respond to the researcher in time allowed a bot to delete and possibly steal the critical information belonging to millions of patients that were in the database.\u201d  The exposure highlights the failure of both public and private sector organizations to cooperate with ethical security researchers, he added. \u201cOrganizations across all industries can benefit from having a vulnerability disclosure program in place,\u201d he said. \u201cThis is because humans are prone to error and, when developers feel rushed to bring a new product or innovation to market, they will make mistakes along the way.\u201d  Anurag Kahol, co-founder and CTO of cloud access security broker Bitglass Inc., noted that Gartner Inc. forecasts global information security spending to reach $123 billion this year, yet organizations continue to be plagued by easily preventable security failures like this one.  \u201cThis incident highlights how most organizations lack full visibility and control over their data, which are two critical components needed for a mature security program and to proactively prevent leaks and breaches,\u201d Kahol said. \u201cObtaining full visibility and control over corporate data starts with a multifaceted approach to security. Specifically, solutions that enforce real-time access control, encrypt sensitive data at rest and manage the sharing of data with external parties can help proactively prevent data leakage.\u201d",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 12,
+      "month": 7,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "541511",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Adit, Inc."
+  }
+}
