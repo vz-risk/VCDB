@@ -1,0 +1,124 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 12,
+            "day": 11
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "country": [
+            "JP"
+        ],
+        "region": [
+            "142030"
+        ],
+        "victim_id": "Honda",
+        "employee_count": "Over 100000",
+        "industry": "441110",
+        "locations_affected": 1
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 26000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 26000,
+            "notes": "Security researcher identifying the breach indicated 976 million records in database with 1 million records containing customer data.  Victim indicates that only 26000 unique customers were breached."
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "sub_source": "priority",
+        "modified": "2020-11-10T04:58:56.616Z",
+        "created": "2020-11-10T04:58:56.616Z",
+        "master_id": "763ebacb-a697-4d6f-8d95-7a4e01a3346a",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "partner_data": "No"
+            }
+        },
+        "asset_os": [
+            "Unknown"
+        ],
+        "github": "14718"
+    },
+    "incident_id": "e48a2e70-22dd-11eb-b221-a300329fb9cf",
+    "confidence": "Medium",
+    "summary": "cloud exposed database",
+    "reference": "https://www.infosecurity-magazine.com/news/honda-leak-hits-26000-north/,https://siliconangle.com/2019/12/18/honda-exposes-customer-data-unsecured-elasticsearch-database-second-time-year/,https://www.informationsecuritybuzz.com/expert-comments/leaky-honda-database-exposes-976m-records-expert-commentary/",
+    "security_incident": "Confirmed",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
