@@ -1,0 +1,139 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 10,
+            "day": 1
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Broadvoice",
+        "employee_count": "101 to 1000",
+        "industry": "517919",
+        "locations_affected": 1,
+        "state": "US-CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "amount": 1,
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "country": [
+            "US"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 10000,
+                    "variety": "Personal"
+                },
+                {
+                    "amount": 277200000,
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 10000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-11-11T02:27:06.911Z",
+        "created": "2020-11-11T02:27:06.911Z",
+        "master_id": "12950ae0-7d58-4f84-9c74-82bfc3b0cb35",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "partner_data": "No"
+            }
+        },
+        "asset_os": [
+            "Not applicable"
+        ],
+        "github": "16422"
+    },
+    "incident_id": "3cb621c0-237f-11eb-a2fc-cdee479fbead",
+    "security_incident": "Confirmed",
+    "reference": "https://threatpost.com/broadvoice-leaks-350m-records-voicemail-transcripts/160158/,https://www.bankinfosecurity.com/sensitive-voicemail-transcripts-exposed-a-15203https://www.techradar.com/news/clone-350-million-customer-details-leaked-in-broadvoice-scandal,https://www.hipaajournal.com/exposed-broadvoice-databases-contained-350-million-records-including-health-data/",
+    "summary": "internet-exposed elastic search database found by security researcher.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

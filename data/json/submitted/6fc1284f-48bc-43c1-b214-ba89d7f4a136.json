@@ -1,0 +1,162 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2016
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Beneficial Bank",
+        "employee_count": "11 to 100",
+        "industry": "522110",
+        "state": "US-PA"
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Forgery"
+            ],
+            "vector": [
+                "Documents"
+            ],
+            "target": [
+                "Cashier"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "US"
+            ],
+            "region": [
+                "019021"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Other"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "notes": "relationship consultant"
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "Unknown"
+            }
+        ],
+        "country": [
+            "US"
+        ],
+        "notes": "Asset used to get PII for identity theft not disclosed in article"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "value_chain": {
+        "cash-out": {
+            "variety": [
+                "Direct"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "ppl",
+                "attribute": "cp"
+            },
+            {
+                "actor": "ext",
+                "action": "soc",
+                "asset": "usr",
+                "attribute": "ia"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2020-11-11T03:29:37.670Z",
+        "created": "2020-11-11T03:29:37.670Z",
+        "master_id": "6fc1284f-48bc-43c1-b214-ba89d7f4a136",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2017,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "12354"
+    },
+    "incident_id": "d942ffe0-2398-11eb-a2fc-cdee479fbead",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bizjournals.com/philadelphia/news/2018/10/12/former-bank-employee-charged-in-424k-id-theft.html",
+    "summary": "city policy data found on criminal forum",
+    "confidence": "Medium",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
