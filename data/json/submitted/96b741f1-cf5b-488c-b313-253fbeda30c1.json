@@ -1,0 +1,152 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 6,
+            "day": 28
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Weeks",
+            "value": 2
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 2
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "country": [
+            "CA"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "TransUnion",
+        "employee_count": "1001 to 10000",
+        "industry": "561450",
+        "locations_affected": 1,
+        "state": "CA-ON"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 37000
+                },
+                {
+                    "variety": "Credentials",
+                    "amount": 1
+                },
+                {
+                    "variety": "Bank",
+                    "amount": 37000
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 37001
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "value_chain": {
+        "targeting": {
+            "variety": [
+                "Lost or stolen credentials"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Distracting"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2020-11-12T04:27:43.785Z",
+        "created": "2020-11-12T04:27:43.785Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 9,
+                "day": 19
+            }
+        },
+        "master_id": "96b741f1-cf5b-488c-b313-253fbeda30c1",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2020,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "14326"
+    },
+    "incident_id": "4041a7b0-246a-11eb-b042-01be07ea3379",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bleepingcomputer.com/news/security/credit-info-exposed-in-transunion-data-security-incident/,https://www.itworldcanada.com/article/canadian-credit-reporting-agency-compromised-through-third-party/422576,https://www.scmagazine.com/home/security-news/stolen-credentials-used-to-access-transunion-canadas-consumer-credit-files/,",
+    "summary": "credential stuffing on financial website breaches PII (enough for identity theft)",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

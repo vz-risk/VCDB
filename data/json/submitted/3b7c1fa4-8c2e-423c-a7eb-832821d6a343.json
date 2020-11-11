@@ -1,0 +1,132 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Key Ring",
+        "employee_count": "11 to 100",
+        "industry": "518210",
+        "locations_affected": 1,
+        "state": "US-TX"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 5
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "country": [
+            "US"
+        ],
+        "total_amount": 5
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 14000000
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 14000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-11-12T04:07:04.393Z",
+        "created": "2020-11-12T04:07:04.393Z",
+        "master_id": "3b7c1fa4-8c2e-423c-a7eb-832821d6a343",
+        "analysis_status": "Validated",
+        "analyst": "gbassett",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "asset_os": [
+            "Unknown"
+        ],
+        "github": "15401"
+    },
+    "incident_id": "fc8a4190-2468-11eb-b042-01be07ea3379",
+    "security_incident": "Confirmed",
+    "reference": "https://www.infosecurity-magazine.com/news/key-ring-app-data-leak-exposes-44m/,https://www.itsecuritynews.info/key-ring-app-data-leak-exposes-44-million-images/",
+    "summary": "exposed s3 bucket found by security researcher",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
