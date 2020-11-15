@@ -1,0 +1,149 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 6,
+            "day": 3
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "victim_id": "Arbiter Sports",
+        "industry": "541511",
+        "state": "UT",
+        "employee_count": "11 to 100"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Elevate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Backup"
+            },
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "notes": "It appears they tried to encrypt files but not clear if they succeeded. "
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "It is unclear if they succeed in encyption."
+            }
+        ],
+        "modified": "2020-11-10T23:47:16.068Z",
+        "created": "2020-11-10T23:47:16.068Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 8,
+                "day": 24
+            }
+        },
+        "master_id": "a7f28a7f-23d1-4fce-8416-7a456cfe5785",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes",
+                "credit_monitoring": "Yes",
+                "credit_monitoring_years": 1
+            }
+        },
+        "github": "16182"
+    },
+    "incident_id": "2c2e82c0-237a-11eb-b77f-316b5c5dd5eb",
+    "security_incident": "Confirmed",
+    "reference": "https://oag.ca.gov/system/files/Arbiter%20-%20California%20Notification.pdf ; https://www.soccerwire.com/news/over-500000-referee-and-sports-accounts-reportedly-exposed-in-hack-of-arbitersports/",
+    "summary": "ArbiterSports, the leading platform used by colleges, high schools and youth sports organizations to manage and pay assignments of sports officials, suffered a malicious hack this past summer, according to several public reports and confirmed by SoccerWire through research of court records in multiple states.  The attack reportedly involved over 500,000 accounts and resulted in hackers obtaining “Account username and password, name, address, date of birth, email address, and Social Security number”.  The company claims they have paid the requested ransom to the attackers and received evidence they subsequently deleted the stolen data.  If you referee sports in the United States, odds are you have at some point had an account with ArbiterSports. If so, despite assurances from Arbiter they successfully agreed with their attackers to delete the data stolen in the attack, it is still highly recommended you take immediate action to protect yourself from identity theft and potential financial devastation, should the hack lead to criminals gaining access to your bank accounts.  According to a disclosure letter sent to Arbiter’s users, the breach occurred sometime in the week leading up to July 15, 2020, the date which company first noticed the hack. However, this exhaustive list of records published by the Indiana Attorney General’s office lists the date of the initial breach as June 3, 2020. It also reveals that a total of 539,309 accounts were accessed. Multiple filings and notifications confirm the hack resulted in the theft of “account username and password, name, address, date of birth, email address, and Social Security number” of the accounts listed.  They reportedly were able to identify and contact the unauthorized party, who demanded payment from Arbiter in exchange for the promise to delete the stolen files. According to information provided by Arbiter, they and the hackers eventually reached a ransom agreement, leading to Arbiter’s they had “obtained confirmation that the unauthorized party deleted the files.”  Despite the attack being confirmed to have occurred prior to July 15, and seemingly as far back as June 3, it wasn’t until August 24 that ArbiterSports reported a security breach to multiple states’ Attorney General’s offices, via their D.C.-based law firm BakerHostetler.  The community of referees effected, however, remain skeptical of the promise of a hacker to actually delete all data, especially given the amount of time elapsed between the breach and the so-called confirmation of deletion.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

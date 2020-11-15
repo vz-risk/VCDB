@@ -1,0 +1,102 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 3
+        }
+    },
+    "victim": {
+        "country": [
+            "GB"
+        ],
+        "victim_id": "Keepnet Labs",
+        "industry": "423690",
+        "employee_count": "1 to 10"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Other"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "database left exposed on internet"
+            }
+        ],
+        "modified": "2020-11-13T02:45:20.180Z",
+        "created": "2020-11-13T02:45:20.180Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 6,
+                "day": 9
+            }
+        },
+        "master_id": "c01677ed-f486-4e05-8c80-72a263b98032",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "15358"
+    },
+    "incident_id": "2a735790-2522-11eb-af35-ed9bb3f10d5f",
+    "security_incident": "Confirmed",
+    "reference": "https://iapp.org/news/a/keepnet-labs-breach-exposes-5-billion-records/ ; https://securityaffairs.co/wordpress/100198/data-breach/uk-security-firm-data-leak.html",
+    "summary": "The expert Bob Diachenko has discovered an unsecured Elasticsearch install belonging to a UK security firm that contained 5 billion records of data leaked in previous incidents that took place between 2012 and 2019.   “On March 16th I have found an unprotected and thus publicly available Elasticsearch instance which appeared to be managed by a UK-based security company, according to the  SSL certificate and reverse DNS records.” wrote Security Discovery’s researcher Bob Diachenko. “The irony of that discovery is that it was a ‘data breach database’, an enormously huge collection of previously reported (and, perhaps, non-reported) security incidents spanning 2012-2019 era.”  The huge trove of data is composed of two collections, one containing 5,088,635,374 records, and the second one that was being updated in real-time has over 15 million records.  Exposed data include hashtype, leak year, password (hashed, encrypted or plaintext, depending on the leak), email, email domain, and source of the leak (i.e. Adobe, Last.fm, Twitter, LinkedIn, Tumblr, VK and others).  Most of the data come from previously known sources, it could expose affected people to scams and phishing campaigns.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

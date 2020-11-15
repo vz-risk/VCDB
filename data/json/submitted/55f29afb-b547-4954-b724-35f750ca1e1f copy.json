@@ -1,0 +1,134 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 7
+        }
+    },
+    "victim": {
+        "country": [
+            "ES"
+        ],
+        "victim_id": "Adif",
+        "industry": "237310",
+        "employee_count": "10001 to 25000"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Elevate"
+            ],
+            "name": "Windows REvil ransomware"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Victim organization"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "notes": "Confirmed the confidentiality attribute because attacker took and viewed data before encrypting and tried to extort money."
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "attacker gets malware on system"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "attacker views data before encrypting"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "attacker encrypts data"
+            }
+        ],
+        "modified": "2020-11-11T02:06:06.659Z",
+        "created": "2020-11-11T02:06:06.659Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 7,
+                "day": 23
+            }
+        },
+        "master_id": "55f29afb-b547-4954-b724-35f750ca1e1f",
+        "analysis_status": "Validated",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "15954"
+    },
+    "incident_id": "0cb7fc70-238c-11eb-b77f-316b5c5dd5eb",
+    "security_incident": "Confirmed",
+    "reference": "https://www.itwire.com/security/windows-revil-ransomware-used-to-attack-spanish-govt-firm.html ; https://www.railjournal.com/technology/adif-hit-by-cyberattack/",
+    "summary": "Cyber criminals have used the Windows REvil ransomware to attack Adif, an infrastructure company owned by the Spanish Government, and have published data which was stolen from its dark Web site.  The attackers have apparently hit the organisation twice before, and threatened a third attack as soon as the data was published.  \"We advise you to get in touch immediately. We have personal information including correspondence, contracts and other accounting (total 800 gigabytes of data),\" they said in a note posted online.  \"If you do not comply with our terms, your data will be published in the public domain. We will continue to download your data until you contact us,\" they added in surprisingly good English. According to its website, ADIF, the Administrator of Railway Infrastructure, is a state-owned company that answers to the Transport Ministry. The site said Adif played a leading role in promoting the railway sector, working towards converting it into the ideal mode of transport and facilitating access to the infrastructure under fair conditions.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
