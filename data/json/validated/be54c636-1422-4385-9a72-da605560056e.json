@@ -1,0 +1,130 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "amount": 8000000,
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8000000,
+      "data_victim": [
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "cca737a0-2470-11eb-b042-01be07ea3379",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "No",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2020-11-12T04:58:59.487Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "15324",
+    "master_id": "be54c636-1422-4385-9a72-da605560056e",
+    "modified": "2020-11-12T04:58:59.487Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://tamebay.com/2020/03/change-your-amazon-mws-credentials-following-vat-service-app-breach.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Exposed cloud database containing PII of customers",
+  "targeted": "NA",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 5
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "month": 2,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "industry": "000",
+    "region": [
+      "000000"
+    ]
+  }
+}

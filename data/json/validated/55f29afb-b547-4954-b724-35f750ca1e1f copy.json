@@ -1,0 +1,143 @@
+{
+  "action": {
+    "malware": {
+      "name": "Windows REvil ransomware",
+      "result": [
+        "Elevate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "notes": "Confirmed the confidentiality attribute because attacker took and viewed data before encrypting and tried to extort money.",
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "0cb7fc70-238c-11eb-b77f-316b5c5dd5eb",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "Hylender",
+    "created": "2020-11-11T02:06:06.659Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "attacker gets malware on system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "attacker views data before encrypting"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "attacker encrypts data"
+      }
+    ],
+    "github": "15954",
+    "master_id": "55f29afb-b547-4954-b724-35f750ca1e1f",
+    "modified": "2020-11-11T02:06:06.659Z",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.itwire.com/security/windows-revil-ransomware-used-to-attack-spanish-govt-firm.html ; https://www.railjournal.com/technology/adif-hit-by-cyberattack/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Cyber criminals have used the Windows REvil ransomware to attack Adif, an infrastructure company owned by the Spanish Government, and have published data which was stolen from its dark Web site.  The attackers have apparently hit the organisation twice before, and threatened a third attack as soon as the data was published.  \"We advise you to get in touch immediately. We have personal information including correspondence, contracts and other accounting (total 800 gigabytes of data),\" they said in a note posted online.  \"If you do not comply with our terms, your data will be published in the public domain. We will continue to download your data until you contact us,\" they added in surprisingly good English. According to its website, ADIF, the Administrator of Railway Infrastructure, is a state-owned company that answers to the Transport Ministry. The site said Adif played a leading role in promoting the railway sector, working towards converting it into the ideal mode of transport and facilitating access to the infrastructure under fair conditions.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "ES"
+    ],
+    "employee_count": "10001 to 25000",
+    "industry": "237310",
+    "region": [
+      "150039"
+    ],
+    "victim_id": "Adif"
+  }
+}
