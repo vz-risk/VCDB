@@ -70,6 +70,14 @@
     }
   },
   "victim": {
+    "government": {
+      "Federal": "The highest level of government of the country",
+      "Regional": "Government of a subdividion of a country such as a region, state, province, parish, territory, etc",
+      "Local": "The lowest level of government of the country",
+      "Unknown": "The level of government was not known.",
+      "Other": "The level of government was known but not listed. (Use sparingly. The top is Federal, the bottom is Local, everything else is regional.)",
+      "NA": "The victim was not part of a government of any level"
+    },
     "employee_count": {
       "Small": "Small organizations (1,000 employees or less)",
       "1 to 10": "1 to 10 employees",
@@ -334,6 +342,7 @@
       "ZA": "South Africa",
       "ZM": "Zambia",
       "ZW": "Zimbabwe",
+      "XK": "Kosovo",
       "Other": "Other"
     },
     "revenue": {
@@ -501,7 +510,13 @@
         "YER": "YER - Yemeni Rial",
         "ZAR": "ZAR - South African Rand",
         "ZMK": "ZMK - Zambian Kwacha",
-        "ZWD": "ZWD - Zimbabwean Dollar A/06"
+        "ZWD": "ZWD - Zimbabwean Dollar A/06",
+        "XBT": "Bitcoin (also BTC)",
+        "BCH": "BCH - Bitcoin Cash",
+        "Ether": "ETH - Ether",
+        "Litecoin": "LTC - Litecoin",
+        "XMR": "Monero",
+        "ZEC": "Zcash"
       }
     }
   },
@@ -547,7 +562,7 @@
         "SSI injection": "SSI injection. Child of 'Exploit vuln'.",
         "URL redirector abuse": "URL redirector abuse. Child of 'Exploit vuln'.",
         "Use of backdoor or C2": "Use of Backdoor or C2 channel",
-        "Use of stolen creds": "Use of stolen authentication credentials",
+        "Use of stolen creds": "Use of stolen authentication credentials (including credential stuffing)",
         "User breakout": "Elevation of privilege by another customer in shared environment. Child of 'Exploit vuln'.",
         "Virtual machine escape": "Virtual machine escape. Child of 'Exploit vuln'.",
         "XML attribute blowup": "XML attribute blowup. Child of 'Exploit vuln'.",
@@ -576,9 +591,14 @@
         "Unknown": "Unknown"
       },
       "result": {
-        "Infiltrate": "The hacking action infiltrated the victim",
+        "Infiltrate": "The hacking action resulted in additional security access",
         "Exfiltrate": "The hacking action exfiltrated data from the victim",
-        "Elevate": "The hacking action resulted in additional permissions"
+        "Elevate": "The hacking action resulted in additional security permissions",
+        "Lateral movement": "The hacking action used security access or permissions already acuired",
+        "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Other": "The result of the hacking action is not listed",
+        "Unknown": "The result of the hacking action is unknown",
+        "NA": "The hacking action did not have a result"
       }
     },
     "malware": {
@@ -595,6 +615,7 @@
         "Client-side attack": "Client-side or browser attack (e.g., redirection, XSS, MitB)",
         "Cryptocurrency mining": "Cryptocurrency mining, whether or not click fraud. Child of 'Click fraud and cryptocurrency mining'.",
         "Destroy data": "Destroy or corrupt stored data",
+        "In-memory": "(malware never stored to persistent storage)",
         "Modify data": "Malware which compromises a legitimate file rather than creating new filess",
         "Disable controls": "Disable or interfere with security controls",
         "DoS": "DoS attack",
@@ -604,7 +625,7 @@
         "Export data": "Export data to another site or system",
         "Packet sniffer": "Packet sniffer (capture data from network)",
         "Password dumper": "Password dumper (extract credential hashes)",
-        "Ram scraper": "Ram scraper or memory parser (capture data from volatile memory)",
+        "RAM scraper": "RAM scraper or memory parser (capture data from volatile memory)",
         "Ransomware": "Ransomware (encrypt or seize stored data)",
         "RAT": "Remote Access Trojan.  Parent of 'Backdoor' and 'Trojan'",
         "Rootkit": "Rootkit (maintain local privileges and stealth)",
@@ -631,15 +652,21 @@
         "Remote injection": "Remotely injected by agent (i.e. via SQLi)",
         "Removable media": "Removable storage media or devices",
         "Software update": "Included in automated software update",
-        "Web download": "Web via user-executed or downloaded content",
-        "Web drive-by": "Web via auto-executed or \"drive-by\" infection",
+        "Web application": "Web application. Parent of 'Web application - download' and 'Web application - drive-by.",
+        "Web application - download": "Web via user-executed or downloaded content. Child of 'Web application'.",
+        "Web application - drive-by": "Web via auto-executed or \"drive-by\" infection. Child of 'Web application'.",
         "Other": "Other",
         "Unknown": "Unknown"
       },
       "result": {
-        "Infiltrate": "The malware action infiltrated the victim",
+        "Infiltrate": "The malware action resulted in additional security access",
         "Exfiltrate": "The malware action exfiltrated data from the victim",
-        "Elevate": "The malware action resulted in additional permissions"
+        "Elevate": "The malware action resulted in additional security permissions",
+        "Lateral movement": "The malware action used security access or permissions already acuired",
+        "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Other": "The result of the malware action is not listed",
+        "Unknown": "The result of the malware action is unknown",
+        "NA": "The malware action did not have a result"
       }
     },
     "social": {
@@ -695,9 +722,14 @@
         "Unknown": "Unknown"
       },
       "result": {
-        "Infiltrate": "The social action infiltrated the victim",
+        "Infiltrate": "The social action resulted in additional security access",
         "Exfiltrate": "The social action exfiltrated data from the victim",
-        "Elevate": "The social action resulted in additional permissions"
+        "Elevate": "The social action resulted in additional security permissions",
+        "Lateral movement": "The social action used security access or permissions already acuired",
+        "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Other": "The result of the social action is not listed",
+        "Unknown": "The result of the social action is unknown",
+        "NA": "The social action did not have a result"
       }
     },
     "error": {
@@ -727,6 +759,7 @@
         "Inadequate technology": "Inadequate or insufficient technology resources",
         "Other": "Other",
         "Random error": "Random error (no reason, no fault)",
+        "Web application": "Web application",
         "Unknown": "Unknown"
       }
     },
@@ -736,7 +769,7 @@
         "Email misuse": "Inappropriate use of email or IM",
         "Illicit content": "Storage or distribution of illicit content",
         "Knowledge abuse": "Abuse of private or entrusted knowledge",
-        "Net misuse": "Inappropriate use of network or Web access",
+        "Net misuse": "Inappropriate use of network or Web access including cloud services",
         "Possession abuse": "Abuse of physical access to asset",
         "Privilege abuse": "Abuse of system access privileges",
         "Snap picture": "Actor photographs the confidentiality data variety.",
@@ -751,13 +784,19 @@
         "Non-corporate": "Non-corporate facilities or networks",
         "Physical access": "Physical access within corporate facility",
         "Remote access": "Remote access connection to corporate network (i.e. VPN)",
+        "Web application": "Web application",
         "Other": "Other",
         "Unknown": "Unknown"
       },
       "result": {
-        "Infiltrate": "The misuse action infiltrated the victim",
+        "Infiltrate": "Do not use. Misuse inherently implies having permission so none can be gained.",
         "Exfiltrate": "The misuse action exfiltrated data from the victim",
-        "Elevate": "The misuse action resulted in additional permissions"
+        "Elevate": "Do not use. Misuse inherently implies having permission so none can be elevated.",
+        "Lateral movement": "The misuse action used security access or permissions already acuired",
+        "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Other": "The result of the misuse action is not listed",
+        "Unknown": "The result of the misuse action is unknown",
+        "NA": "The misuse action did not have a result"
       }
     },
     "physical": {
@@ -781,22 +820,24 @@
         "Partner vehicle": "Partner vehicle (e.g., delivery truck)",
         "Personal residence": "Personal residence",
         "Personal vehicle": "Personal vehicle",
-        "Privileged access": "Held privileged access to location",
         "Public facility": "Public facility or area",
         "Public vehicle": "Public vehicle (e.g., plane, taxi)",
-        "Uncontrolled location": "The location was uncontrolled (public)",
         "Victim grounds": "Victim outdoor grounds",
         "Victim public area": "Victim public or customer area (e.g., lobby, storefront)",
         "Victim secure area": "Victim high security area (e.g., server room, R&D labs)",
         "Victim work area": "Victim private or work area (e.g., office space)",
-        "Visitor privileges": "Given temporary visitor access",
         "Unknown": "Unknown",
         "Other": "Other"
       },
       "result": {
-        "Infiltrate": "The physical action infiltrated the victim",
+        "Infiltrate": "The physical action resulted in additional security access",
         "Exfiltrate": "The physical action exfiltrated data from the victim",
-        "Elevate": "The physical action resulted in additional permissions"
+        "Elevate": "The physical action resulted in additional security permissions",
+        "Lateral movement": "The physical action used security access or permissions already acuired",
+        "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Other": "The result of the physical action is not listed",
+        "Unknown": "The result of the physical action is unknown",
+        "NA": "The physical action did not have a result"
       }
     },
     "environmental": {
@@ -830,9 +871,14 @@
     },
     "unknown": {
       "result": {
-        "Infiltrate": "The hacking action infiltrated the victim",
-        "Exfiltrate": "The hacking action exfiltrated data from the victim",
-        "Elevate": "The hacking action resulted in additional permissions"
+        "Infiltrate": "The environmental action resulted in additional security access",
+        "Exfiltrate": "The environmental action exfiltrated data from the victim",
+        "Elevate": "The environmental action resulted in additional security permissions",
+        "Lateral movement": "The environmental action used security access or permissions already acuired",
+        "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Other": "The result of the environmental action is not listed",
+        "Unknown": "The result of the environmental action is unknown",
+        "NA": "The environmental action did not have a result"
       }
     }
   },
@@ -847,7 +893,7 @@
         "Force majeure": "Force majeure (nature and chance)",
         "Former employee": "Former employee (no longer had access)",
         "Nation-state": "Nation-state",
-        "Organized crime": "Organized or professional criminal group",
+        "Organized crime": "Any criminal(s) or group with a level of organization",
         "State-affiliated": "State-sponsored or affiliated group",
         "Terrorist": "Terrorist group",
         "Unaffiliated": "Unaffiliated person(s)",
@@ -1118,6 +1164,7 @@
         "ZA": "South Africa",
         "ZM": "Zambia",
         "ZW": "Zimbabwe",
+        "XK": "Kosovo",
         "Other": "Other"
       }
     },
@@ -1433,6 +1480,7 @@
         "ZA": "South Africa",
         "ZM": "Zambia",
         "ZW": "Zimbabwe",
+        "XK": "Kosovo",
         "Other": "Other"
       }
     }
@@ -1475,7 +1523,8 @@
         "P - Cashier": "People - Cashier",
         "P - Customer": "People - Customer",
         "P - Developer": "People - Developer",
-        "P - End-user": "People - End-user",
+        "P - End-user": "People - End-user of the victim's products and/or services. Child of 'P - End-user or employee'",
+        "P - End-user or employee": "Person - End-user or regular employee not otherwise listed. Parent of 'P - End-user' or 'P - Other employee'",
         "P - Executive": "People - Senior staff with legal responsibility such as board members and corporate officers",
         "P - Finance": "People - Finance",
         "P - Former employee": "People - Former employee",
@@ -1484,7 +1533,8 @@
         "P - Human resources": "People - Human resources",
         "P - Maintenance": "People - Maintenance",
         "P - Manager": "People - Manager",
-        "P - Partner": "People - Partner",
+        "P - Other employee": "Person - Regular employee not otherwise listed. Child of 'P - End-user or employee'",
+        "P - Partner": "People - Partner (B2B)",
         "P - System admin": "People - Administrator",
         "P - Other": "People - Variety known but not listed",
         "P - Unknown": "People - Variety not known",
@@ -1548,11 +1598,11 @@
       "Other": "Owner known but not listed"
     },
     "cloud": {
-      "On-Premise Asset(s)": "On premise assets were involved in the incident.",
+      "On-Premise Asset(s)": "On premise (including colo) assets were involved in the incident.",
       "External Cloud Asset(s)": "(cloud.Yes) Cloud assets were involved in the incident",
       "Other": "Cloud hosting known but not listed",
       "Unknown": "The involvement of cloud assets was not measured",
-      "NA": " (cloud.No) Cloud is not applicable to this incident"
+      "NA": " (cloud.No) Cloud is not applicable to this incident. Only use if computer's weren't involved (people, media, etc). Do not use for Desktops or other user assets."
     },
     "hosting": {
       "External - unknown environment": "A third party provided hosted the affected asset, but it is unknown whether the victim organization\u2019s environment was shared or dedicated.",
@@ -1829,6 +1879,7 @@
       "ZA": "South Africa",
       "ZM": "Zambia",
       "ZW": "Zimbabwe",
+      "XK": "Kosovo",
       "Other": "Other"
     }
   },
@@ -1875,10 +1926,10 @@
         "Stored encrypted": "Stored encrypted. (Also mark 'Stored'.)",
         "Stored unencrypted": "Stored unencrypted. (Also mark 'Stored'.)",
         "Transmitted": "Transmitted",
-        "Transmitted encrypted": "Transmitted encrypted. (Also mark 'Trasnmitted.')",
-        "Transmitted unencrypted": "Transmitted unencrypted. (Also mark 'Trasnmitted.')",
+        "Transmitted encrypted": "Transmitted encrypted. (Also mark 'Transmitted.')",
+        "Transmitted unencrypted": "Transmitted unencrypted. (Also mark 'Transmitted.')",
         "Other": "Data state known but not listed.",
-        "Unknown": "Data stat not known",
+        "Unknown": "Data state not known",
         "Printed": "Data printed in human-readable format"
       }
     },
@@ -1944,8 +1995,7 @@
         "Fraud detection": "fraud detection (e.g., CPP)",
         "Incident response": "Notified while investigating another incident",
         "Law enforcement": "notified by law enforcement or government agency",
-        "Monitoring service": "managed security event monitoring service",
-        "Other": "Discovery method was external and known but not listed",
+        "Other": "Discovery method was external and known but not listed including related 3rd parties",
         "Security researcher": "security researcher attempting to identify insecure data",
         "Suspicious traffic": "Report of suspicious traffic",
         "Unknown": "unknown",
@@ -2001,6 +2051,7 @@
     "non-distribution services": {
       "variety": {
         "Hashcracking": "i.e. converting hashes into the text that produce them",
+        "C2": "Command and control. Separate from distribution of mawlare or bots, this is how they are maintained",
         "Counter AV": "Services for testing if malware is detected by anti-virus",
         "VPN": "A VPN service (either formally or informally hosted) is used by the actor to obscure their source",
         "Proxy": "A proxy service (either formally or informally hosted) is used by the actor to obscure their source",
@@ -2020,9 +2071,10 @@
         "Vulnerabilities": "Knowledge of software vulnerabilities, both at an organization or associated with a specific vendor's product, used to pick them as a target.",
         "Misconfigurations": "Knowledge of system misconfigurations used to pick an organization as a target",
         "Weaknesses": "Knowledge of weaknesses other than vulnerability and misconfigurations used to pick an organization as a target",
+        "Partner": "The actor used access to a partner to target the victim.",
         "Personal Information": "Information on individuals such as title, interests, physical location, etc, used to pick an organization as a target",
         "Organizational Information": "Information on an organization such as org chart, technologies in use, financial assets, etc, used to pick them as a target",
-        "NA": "No type of targeting was necessary",
+        "NA": "No type of targeting was necessary. (This includes targeted.Targeted since the victim was chosen without targeting.",
         "Other": "The variety of targeting was known, but is not listed",
         "Unknown": "Nothing is known about the need for or type of targeting investment other than it was present."
       }
@@ -2032,7 +2084,9 @@
         "Website": "Malicious content shared intentionally, including bullet-proof hosting",
         "Botnet": "For content distributed from a collection of bots.",
         "Compromised server": "malicious content added to a benign server, such as a webserver, by the actor, without the permission or necessarily knowledge of the server\u2019s owner",
+        "Direct": "Distributed directly from the actor's computer",
         "Email": "Distribution by email including anonymous/one time and spam",
+        "Parnter": "The actor distributed the attack to the victim through a partner, (i.e. supply chain attack).",
         "Phone": "Distribution over the Plain Old Telephone System (POTS).",
         "Loader": "malware that loads other malware",
         "NA": "No type of distribution was necessary",
@@ -2064,7 +2118,7 @@
         "Bank": "Financial institution based money laundering.",
         "Provide service": "See distribution and non-distribution services for potential examples",
         "Company": "Trade-based, shell companies, under/over paying, cash-intensive businesses, etc, used for money laundering",
-        "NA": "No type of cmoney laundering was necessary",
+        "NA": "No type of money laundering was necessary",
         "Other": "The variety of money laundering was known, but is not listed",
         "Unknown": "Nothing is known about the need for or type of money laundering other than it was present."
       }
@@ -2262,7 +2316,13 @@
       "YER": "YER - Yemeni Rial",
       "ZAR": "ZAR - South African Rand",
       "ZMK": "ZMK - Zambian Kwacha",
-      "ZWD": "ZWD - Zimbabwean Dollar A/06"
+      "ZWD": "ZWD - Zimbabwean Dollar A/06",
+      "XBT": "Bitcoin (also BTC)",
+      "BCH": "BCH - Bitcoin Cash",
+      "Ether": "ETH - Ether",
+      "Litecoin": "LTC - Litecoin",
+      "XMR": "Monero",
+      "ZEC": "Zcash"
     }
   },
   "cost_corrective_action": {
@@ -2272,99 +2332,26 @@
     "Unknown": "Unknown"
   },
   "plus": {
-    "attack_difficulty_subsequent": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "Not Applicable": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "pci": {
-      "req_12": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_11": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_9": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_10": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_6": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_2": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "merchant_level": {
-        "Level 1": "No label.",
-        "Level 2": "No label.",
-        "Level 3": "No label.",
-        "Level 4": "No label.",
-        "Unknown": "No label."
-      },
-      "req_1": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_7": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_8": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "compliance_status": {
-        "Not Compliant": "No label.",
-        "Found Compliant": "No label.",
-        "Unknown": "No label."
-      },
-      "req_5": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_3": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_4": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": {
+          "Yes": "Credit monitoring was offered",
+          "No": "Credit monitoring was not offered",
+          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
+          "Unknown": "No information is known about if credit monitoring was offered"
+        },
+        "data_abuse": {
+          "Yes": "Data was misused or abused",
+          "No": "Data was not misused or abused",
+          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
+          "Unknown": "No information is known about if the data was abused"
+        },
+        "partner_data": {
+          "Yes": "Partner data was compromised",
+          "No": "Partner data was not compromised",
+          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
+          "Unknown": "No information is known about if partner data was compromised"
+        }
       }
     },
     "event_chain": {
@@ -2372,6 +2359,12 @@
         "ext": "External",
         "int": "Internal",
         "prt": "Partner",
+        "unk": "Unknown"
+      },
+      "attribute": {
+        "au": "Availability",
+        "cp": "Confidentiality",
+        "ia": "Integrity",
         "unk": "Unknown"
       },
       "asset": {
@@ -2393,13 +2386,127 @@
         "phy": "Physical",
         "soc": "Social",
         "unk": "Unknown"
-      },
-      "attribute": {
-        "au": "Availability",
-        "cp": "Confidentiality",
-        "ia": "Integrity",
-        "unk": "Unknown"
       }
+    },
+    "analysis_status": {
+      "In-progress": "Incident is currently being entered.",
+      "Needs review": "Coding of the incident is completed but has not been reviewed.",
+      "First pass": "The incident has been reviewed by a one team member.",
+      "Reviewed": "The incident has been reviewed by two team members.",
+      "Finalized": "The incident has been reviewed by a single person reviewing all data for consistency across sources.",
+      "Ineligible": "Does not meet the criteria to be included in the corpus."
+    },
+    "attack_difficulty_subsequent": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "NA": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
+    },
+    "pci": {
+      "req_1": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_6": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_12": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_5": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_3": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_9": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_2": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_11": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_7": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "compliance_status": {
+        "Not Compliant": "No label.",
+        "Found Compliant": "No label.",
+        "Unknown": "No label."
+      },
+      "req_4": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_8": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_10": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "merchant_level": {
+        "Level 1": "No label.",
+        "Level 2": "No label.",
+        "Level 3": "No label.",
+        "Level 4": "No label.",
+        "Unknown": "No label."
+      }
+    },
+    "security_maturity": {
+      "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.",
+      "Defined": "Processes are defined, documented, standardized and integrated into each other.",
+      "Managed": "Basic processes are established and there is a level of discipline to stick to these processes.",
+      "Measured": "Processes are quantitatively managed in accordance with agreed-upon metrics.",
+      "Optimizing": "Continuous process improvement by quantitative feedback and testing.",
+      "Unknown": "The organizations level of maturity is unknown."
+    },
+    "attack_difficulty_initial": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "NA": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
     },
     "asset_os": {
       "Android": "No label.",
@@ -2413,24 +2520,7 @@
       "webOS": "No label.",
       "Windows": "No label.",
       "Windows Phone": "No label.",
-      "Not applicable": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "security_maturity": {
-      "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.",
-      "Defined": "Processes are defined, documented, standardized and integrated into each other.",
-      "Managed": "Basic processes are established and there is a level of discipline to stick to these processes.",
-      "Measured": "Processes are quantitatively managed in accordance with agreed-upon metrics.",
-      "Optimizing": "Continuous process improvement by quantitative feedback and testing.",
-      "Unknown": "The organizations level of maturity is unknown."
-    },
-    "attack_difficulty_legacy": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "Not Applicable": "No label.",
+      "NA": "No label.",
       "Unknown": "No label.",
       "Other": "No label."
     },
@@ -2446,42 +2536,12 @@
       "No": "No label.",
       "Unknown": "No label."
     },
-    "attribute": {
-      "confidentiality": {
-        "credit_monitoring": {
-          "Yes": "Credit monitoring was offered",
-          "No": "Credit monitoring was not offered",
-          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
-          "Unknown": "No information is known about if credit monitoring was offered"
-        },
-        "partner_data": {
-          "Yes": "Partner data was compromised",
-          "No": "Partner data was not compromised",
-          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
-          "Unknown": "No information is known about if partner data was compromised"
-        },
-        "data_abuse": {
-          "Yes": "Data was abused or maliciously misused",
-          "No": "Data was not abused or maliciously misused",
-          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
-          "Unknown": "No information is known about if the data was abused"
-        }
-      }
-    },
-    "analysis_status": {
-      "In-progress": "Incident is currently being entered.",
-      "Needs review": "Incident has been coded and may have been validated, but requires review by a team member before adding.",
-      "First pass": "Coding of the incident is completed.",
-      "Validated": "The incident has been coded and reviewed.",
-      "Finalized": "The incident has been reviewed by Marc.",
-      "Ineligible": "Does not meet the criteria to be included in the corpus."
-    },
-    "attack_difficulty_initial": {
+    "attack_difficulty_legacy": {
       "High": "No label.",
       "Moderate": "No label.",
       "Low": "No label.",
       "Very Low": "No label.",
-      "Not Applicable": "No label.",
+      "NA": "No label.",
       "Unknown": "No label.",
       "Other": "No label."
     }

@@ -125,7 +125,7 @@ parser.add_argument('--source',
                     help='The source being joined. This will be used in the filename so simple strings ' + \
                          'are recommended.',
                     default='vcdb')
-parser.add_argument('--limit',
+parser.add_argument('--size',
                     help='The maximum number of json to join in a list within a single file.  ' + \
                     'If more files exist than the limit, additional files will be created.  ' + \
                     'If --zip is set, they will all be zipped together.',
@@ -166,8 +166,8 @@ def main(args):
     incidents = list()
     try:
         for i in range(len(files)):
-            if i % args['limit'] == 0:
-              filenum = int(i / args['limit'])
+            if i % args['size'] == 0:
+              filenum = int(i / args['size'])
               #print(filenum) # DEBUG
               incidents.append(list())
             logging.debug(files[i])
