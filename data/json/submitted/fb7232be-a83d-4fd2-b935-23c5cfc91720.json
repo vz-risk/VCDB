@@ -1,0 +1,128 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 12,
+            "day": 4
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 2
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Wyze Labs",
+        "employee_count": "11 to 100",
+        "industry": "3343",
+        "locations_affected": 1,
+        "state": "WA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": "ES database misconfigured"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 2400000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "ES misconfigured and leaked me some data"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-10-06T19:03:29.834Z",
+        "created": "2020-10-06T18:47:41.398Z",
+        "dbir_year": 2021,
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 12,
+                "day": 19
+            }
+        },
+        "master_id": "fb7232be-a83d-4fd2-b935-23c5cfc91720",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "14768"
+    },
+    "incident_id": "b0f77c10-07e0-11eb-9be5-67f56bbd8cb4",
+    "security_incident": "Confirmed",
+    "reference": "https://www.geekwire.com/2020/smart-camera-startup-wyze-sued-following-data-breach-exposed-customer-information/",
+    "summary": "Wyze a smart device vendor misconfigured their ES instance and leaked details on 2.4 million customers ",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

@@ -1,0 +1,159 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 8,
+            "day": 26
+        },
+        "discovery": {
+            "value": 19,
+            "unit": "Weeks"
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Mille Lacs Health System ",
+        "employee_count": "101 to 1000",
+        "industry": "622110",
+        "locations_affected": 1,
+        "state": "MN"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "Use stolen creds to access email accounts"
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - Unknown"
+            },
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Phishing email convinced ppl to do silly things"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "Phished ppl give out creds"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Hackers used stolen creds to access system"
+            }
+        ],
+        "sub_source": "phidbr",
+        "modified": "2020-10-05T17:18:57.187Z",
+        "created": "2020-10-05T17:18:42.262Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 6,
+                "day": 2
+            }
+        },
+        "master_id": "b63e3fd6-df5c-4132-b09a-432fa3249d72",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "15729"
+    },
+    "incident_id": "c29df010-070a-11eb-ab9e-fb89bdbaf0c7",
+    "security_incident": "Confirmed",
+    "reference": "https://www.messagemedia.co/millelacs/community/health/mlhs-email-security-breach/article_7a8149d2-a4e8-11ea-b433-b7fe621219bd.html",
+    "summary": "Mille Lacs Health System email accounts were access by unauthorized external parties",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

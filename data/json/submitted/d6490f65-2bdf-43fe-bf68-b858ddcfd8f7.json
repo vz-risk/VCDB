@@ -1,0 +1,115 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Square Panda",
+        "employee_count": "11 to 100",
+        "industry": "6117",
+        "locations_affected": 1,
+        "state": "CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1,
+        "notes": "S3 bucket"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 15000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Student"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 15000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured s3 bucket"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-08-26T21:59:20.515Z",
+        "created": "2020-08-26T21:59:20.515Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 7,
+                "day": 14
+            }
+        },
+        "master_id": "d6490f65-2bdf-43fe-bf68-b858ddcfd8f7",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "github": "15935-4"
+    },
+    "incident_id": "49b96ff0-e7c3-11ea-8ff0-e3594c873b30",
+    "security_incident": "Confirmed",
+    "reference": "https://cisomag.eccouncil.org/data-breaches-on-e-learning-platforms/",
+    "summary": "The U.S.-based online education platform Square Panda lost around 15,000 personal records (1MB) of parents and teachers due to misconfiguration",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

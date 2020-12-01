@@ -1,0 +1,144 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 12
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "victim_id": "Center for Health Care Services",
+        "employee_count": "1001 to 10000",
+        "industry": "621330",
+        "locations_affected": 1,
+        "state": "TX"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Unknown"
+            ],
+            "data_disclosure": "Potentially"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Law enforcement"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "somehow gained access to server"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "installed ransomware"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "malware accessed data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypted stuff"
+            }
+        ],
+        "sub_source": "phidbr",
+        "modified": "2020-11-25T19:57:59.031Z",
+        "created": "2020-11-25T19:57:59.031Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 12,
+                "day": 27
+            }
+        },
+        "master_id": "f97d2ba7-37ae-4204-8a3b-2cd6e37468a2",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "github": "14766"
+    },
+    "incident_id": "4bdf80d0-2f2b-11eb-be94-ff2f41197b3c",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bleepingcomputer.com/news/security/criminals-pull-hard-before-xmas-attack-us-health-industry/",
+    "summary": "Ransomware attacks yet another hospital, this time the Center for Health Care Services (CHSC) ",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

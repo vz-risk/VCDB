@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020
+        }
+    },
+    "victim": {
+        "country": [
+            "AU"
+        ],
+        "region": [
+            "009053"
+        ],
+        "victim_id": "Bigfooty.com",
+        "employee_count": "Small",
+        "industry": "711211",
+        "locations_affected": 1
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1,
+        "notes": "Elasticsearch server"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 50000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 50000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Elasticsearch server misconfigured"
+            }
+        ],
+        "sub_source": "Priority",
+        "modified": "2020-10-02T17:41:19.601Z",
+        "created": "2020-10-02T17:41:10.240Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 5,
+                "day": 29
+            }
+        },
+        "master_id": "404dfc19-7eb7-478b-a75b-7fcf701dfffb",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "15703"
+    },
+    "incident_id": "4a774680-04b3-11eb-8c43-8ded27596b66",
+    "security_incident": "Confirmed",
+    "reference": "https://securityboulevard.com/2020/05/bigfooty-com-leaks-70-million-records-from-sports-fan-members/",
+    "summary": "Bigfooty.com had a big oopsy and leaked 70m records through an open elasticsearch server",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

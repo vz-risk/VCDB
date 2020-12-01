@@ -1,0 +1,154 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2018
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "LeafFilter",
+        "employee_count": "101 to 1000",
+        "industry": "238390",
+        "locations_affected": 1,
+        "state": "OH"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            },
+            {
+                "variety": "P - Unknown",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 2
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Phishing email sent and convinced ppl to disclose info"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "person discloses info"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Use of stolen creds to access email"
+            }
+        ],
+        "modified": "2020-11-16T20:32:37.866Z",
+        "created": "2020-11-16T20:32:37.866Z",
+        "timeline": {
+            "notification": {
+                "year": 2018,
+                "month": 8,
+                "day": 21
+            }
+        },
+        "master_id": "0166176d-0eac-4d2e-98ea-e4db9c5d52c0",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "12479"
+    },
+    "incident_id": "97b72df0-2819-11eb-8365-4f57e2156a07",
+    "security_incident": "Confirmed",
+    "reference": "https://www.businesswire.com/news/home/20181107005636/en/Federman-Sherwood-Announces-Filing-Class-Action-Lawsuit",
+    "summary": "LeafFitler a gutter protection system fell victim to a phishing attack which resulted in the compromise of sensitive information",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

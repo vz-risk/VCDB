@@ -1,0 +1,152 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 8
+        }
+    },
+    "victim": {
+        "country": [
+            "CA"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Medisys Health Group",
+        "employee_count": "101 to 1000",
+        "industry": "6215",
+        "locations_affected": 1
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 60000,
+                    "variety": "Personal"
+                },
+                {
+                    "amount": 60000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Potentially",
+            "data_total": 60000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Actor somehow got access to systems"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Ransomware had access to data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Ransomware encrypts"
+            }
+        ],
+        "sub_source": "PHIDBR",
+        "modified": "2020-10-13T18:09:54.823Z",
+        "created": "2020-10-13T18:09:45.150Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 9,
+                "day": 4
+            }
+        },
+        "master_id": "a70a2757-242a-4866-a4e1-de9180069055",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "16333"
+    },
+    "incident_id": "55cbb290-0d5b-11eb-835c-77358de149b1",
+    "security_incident": "Confirmed",
+    "reference": "https://globalnews.ca/news/7367127/medisys-data-breach/",
+    "summary": "Medisys Health Group reported a ransomware attack impacting the information of 60,000 patients",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

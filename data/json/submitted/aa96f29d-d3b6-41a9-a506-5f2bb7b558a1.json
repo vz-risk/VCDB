@@ -1,0 +1,131 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 7
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "victim_id": "Truman Medical Centers",
+        "employee_count": "101 to 1000",
+        "industry": "6221",
+        "locations_affected": 1,
+        "state": "MO"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Theft"
+            ],
+            "vector": [
+                "Personal vehicle"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "U - Laptop",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "NA"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 114446,
+                    "variety": "Medical"
+                },
+                {
+                    "amount": 114446,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 114446
+        },
+        "availability": {
+            "variety": [
+                "Loss"
+            ]
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Reported by employee"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp",
+                "summary": "user device was stolen"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "au",
+                "summary": "Device is now gone"
+            }
+        ],
+        "sub_source": "phidbr",
+        "modified": "2020-11-25T20:54:55.650Z",
+        "created": "2020-11-25T20:54:55.650Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 12,
+                "day": 17
+            }
+        },
+        "master_id": "aa96f29d-d3b6-41a9-a506-5f2bb7b558a1",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "github": "14700"
+    },
+    "incident_id": "0c2d7550-2f35-11eb-be94-ff2f41197b3c",
+    "security_incident": "Confirmed",
+    "reference": "https://www.beckershospitalreview.com/cybersecurity/stolen-laptop-potentially-exposes-114-000-missouri-hospital-patients.html",
+    "summary": "Truman medical staff had their laptop stolen from their car which contained 114,446 patient's information",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}

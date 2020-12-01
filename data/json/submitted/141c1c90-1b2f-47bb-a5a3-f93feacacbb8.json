@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Software MacKiev",
+        "employee_count": "101 to 1000",
+        "industry": "541511",
+        "locations_affected": 1,
+        "state": "MA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 60000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 60000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured ES server to be externally facing"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-10-26T19:11:00.325Z",
+        "created": "2020-10-26T19:11:00.325Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 7,
+                "day": 22
+            }
+        },
+        "master_id": "141c1c90-1b2f-47bb-a5a3-f93feacacbb8",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "15937"
+    },
+    "incident_id": "7b58a9b0-179b-11eb-a388-210bf038e9e5",
+    "security_incident": "Confirmed",
+    "reference": "https://threatpost.com/leak-exposes-private-data-of-genealogy-service-users/157612/",
+    "summary": "Software MacKiev, makers of the Family Tree Maker software, exposed the data of 60,000 users in an unsecured ElasticSearch server",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

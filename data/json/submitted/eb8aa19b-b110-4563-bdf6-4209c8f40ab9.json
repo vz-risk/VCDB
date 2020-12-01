@@ -1,0 +1,116 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 7,
+            "day": 13
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Texas Physician House Calls",
+        "employee_count": "Small",
+        "industry": "621111",
+        "locations_affected": 1,
+        "state": "TX"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Code repository",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 5000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 5000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Publishes private repo"
+            }
+        ],
+        "sub_source": "phidbr",
+        "modified": "2020-09-15T00:02:15.211Z",
+        "created": "2020-09-15T00:02:15.211Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 8,
+                "day": 17
+            }
+        },
+        "master_id": "eb8aa19b-b110-4563-bdf6-4209c8f40ab9",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "github": "16118-3"
+    },
+    "incident_id": "632842e0-f6c3-11ea-b6fa-6deaa5aa80b0",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/wp-content/uploads/No-need-to-hack-when-its-leaking.pdf",
+    "summary": "TEXAS PHYSICIAN HOUSE CALLS developers publish private repo which includes a hardcoded backdoor and patient information",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1_3_4"
+}

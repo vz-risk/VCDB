@@ -1,0 +1,151 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2016
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "victim_id": "Micron Technology",
+        "employee_count": "10001 to 25000",
+        "industry": "334419",
+        "locations_affected": 1
+    },
+    "action": {
+        "social": {
+            "variety": [
+                "Bribery"
+            ],
+            "vector": [
+                "In-person"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Competitor"
+            ],
+            "motive": [
+                "Espionage"
+            ],
+            "country": [
+                "TW"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Espionage"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            },
+            {
+                "variety": "P - End-user",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 900,
+                    "variety": "Secrets"
+                }
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 900
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Log review"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "recruit insider"
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "internal actor stole data"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2020-11-20T01:33:07.299Z",
+        "created": "2020-11-20T01:33:07.299Z",
+        "timeline": {
+            "notification": {
+                "year": 2018,
+                "month": 6
+            }
+        },
+        "master_id": "d6a5d860-ae85-4fb4-ada5-f4cf8fa4d11a",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "11651"
+    },
+    "incident_id": "52ab63f0-2aa0-11eb-9486-e305299943be",
+    "security_incident": "Confirmed",
+    "reference": "https://financialpost.com/pmn/business-pmn/taiwans-umc-pleads-guilty-fined-60-mln-in-trade-secret-theft-case",
+    "summary": "Micron Technology had trade secrets stolen by a chinese-government owned competitor by recruiting internal engineers ",
+    "targeted": "Targeted",
+    "schema_version": "1_3_4"
+}

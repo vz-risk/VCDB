@@ -1,0 +1,124 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 6,
+            "day": 25
+        },
+        "discovery": {
+            "unit": "Weeks"
+        }
+    },
+    "victim": {
+        "country": [
+            "FR"
+        ],
+        "region": [
+            "150155"
+        ],
+        "victim_id": "Ledger",
+        "employee_count": "101 to 1000",
+        "industry": "52",
+        "locations_affected": 1
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "notes": "used stolen api key"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 1000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1000000
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Log review"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "used stolen creds to steal data"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2020-10-19T19:18:44.556Z",
+        "created": "2020-10-19T19:18:25.765Z",
+        "dbir_year": 2021,
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 7,
+                "day": 29
+            }
+        },
+        "master_id": "fd853a66-8d81-4f09-bc8d-04da76b97ca4",
+        "analysis_status": "Validated",
+        "analyst": "planglois",
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "15991"
+    },
+    "incident_id": "b9f1df80-121d-11eb-a3ae-53136ea5d4e6",
+    "security_incident": "Confirmed",
+    "reference": "https://www.ledger.com/addressing-the-july-2020-e-commerce-and-marketing-data-breach",
+    "summary": "Legder experienced a breach using stolen api key ",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1_3_4"
+}
