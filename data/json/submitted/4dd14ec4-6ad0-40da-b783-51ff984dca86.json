@@ -1,116 +1,116 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 100000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "CY"
-        ],
-        "region": [
-            "142145"
-        ],
-        "victim_id": "Mailfire",
-        "employee_count": "Small",
-        "industry": "518210"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 100000,
+      "data_victim": [
+        "Partner"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "3226e3d0-0254-11eb-8781-bfb630cdf748",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 100000,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Partner"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 100000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "ES server misconfigured"
-            }
-        ],
-        "modified": "2020-09-29T17:22:01.313Z",
-        "created": "2020-09-29T17:22:01.313Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 9,
-                "day": 3
-            }
-        },
-        "master_id": "4dd14ec4-6ad0-40da-b783-51ff984dca86",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "16256"
-    },
-    "incident_id": "3226e3d0-0254-11eb-8781-bfb630cdf748",
-    "security_incident": "Confirmed",
-    "reference": "https://www.vpnmentor.com/blog/report-mailfire-leak/",
-    "summary": "Email marketing company misconfigured elasticsearch database expose 100ks of user information",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "created": "2020-09-29T17:22:01.313Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "ES server misconfigured"
+      }
+    ],
+    "github": "16256",
+    "master_id": "4dd14ec4-6ad0-40da-b783-51ff984dca86",
+    "modified": "2020-09-29T17:22:01.313Z",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 9,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.vpnmentor.com/blog/report-mailfire-leak/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Email marketing company misconfigured elasticsearch database expose 100ks of user information",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "CY"
+    ],
+    "employee_count": "Small",
+    "industry": "518210",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Mailfire"
+  }
 }

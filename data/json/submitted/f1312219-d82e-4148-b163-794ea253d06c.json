@@ -1,150 +1,150 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 5,
-            "day": 16
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 102800,
+          "variety": "Personal"
         }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 102800,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
     },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Dynasplint Systems",
-        "employee_count": "11 to 100",
-        "industry": "339112",
-        "locations_affected": 1,
-        "state": "MD"
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "Unknown"
-        ]
-    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "4d62af30-0259-11eb-8781-bfb630cdf748",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 102800,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially",
-            "data_total": 102800
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "unk",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Actor gains access to environment"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Ransomware is deployed"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Data is exfil "
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "Ransomware encrypts crap"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-09-29T17:48:50.232Z",
-        "created": "2020-09-29T17:48:50.232Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 8,
-                "day": 6
-            }
-        },
-        "master_id": "f1312219-d82e-4148-b163-794ea253d06c",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "16053"
-    },
-    "incident_id": "4d62af30-0259-11eb-8781-bfb630cdf748",
-    "security_incident": "Confirmed",
-    "reference": "https://www.hipaajournal.com/dynasplint-systems-data-breach-impacts-almost-103000-individuals/",
-    "summary": "Dynasplint Systems were compromised in a ransomware attack potentially impacting 102800 individuals",
-    "confidence": "High",
-    "targeted": "Unknown",
-    "schema_version": "1_3_4"
+    "created": "2020-09-29T17:48:50.232Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Actor gains access to environment"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware is deployed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data is exfil "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encrypts crap"
+      }
+    ],
+    "github": "16053",
+    "master_id": "f1312219-d82e-4148-b163-794ea253d06c",
+    "modified": "2020-09-29T17:48:50.232Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 8,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/dynasplint-systems-data-breach-impacts-almost-103000-individuals/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Dynasplint Systems were compromised in a ransomware attack potentially impacting 102800 individuals",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 5,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "339112",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "Dynasplint Systems"
+  }
 }

@@ -1,123 +1,123 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 12
-        },
-        "discovery": {
-            "unit": "Days",
-            "value": 12
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "N - Firewall"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 300000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Oklahoma Department of Securities",
-        "employee_count": "11 to 100",
-        "industry": "92",
-        "locations_affected": 1,
-        "state": "OK"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "N - Firewall",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 300000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "43e4b860-0fcc-11eb-afe7-87eff9df4bdb",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 300000,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 300000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
+    "created": "2020-10-16T20:33:32.630Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured firewall exposed ppl's data"
+      }
+    ],
+    "github": "15321",
+    "master_id": "5a83fdbf-08d0-4325-99fd-05a4249b6629",
+    "modified": "2020-10-16T20:33:32.630Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "month": 4,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.governing.com/security/Oklahoma-Accused-of-Negligence-in-Massive-Data-Breach.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Oklahoma Department of Securities misconfigured a firewall exposing more than 300k ppl's sensitive information",
+  "targeted": "NA",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 12
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured firewall exposed ppl's data"
-            }
-        ],
-        "sub_source": "priority",
-        "modified": "2020-10-16T20:33:32.630Z",
-        "created": "2020-10-16T20:33:32.630Z",
-        "timeline": {
-            "notification": {
-                "year": 2019,
-                "month": 4
-            }
-        },
-        "master_id": "5a83fdbf-08d0-4325-99fd-05a4249b6629",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "15321"
-    },
-    "incident_id": "43e4b860-0fcc-11eb-afe7-87eff9df4bdb",
-    "security_incident": "Confirmed",
-    "reference": "https://www.governing.com/security/Oklahoma-Accused-of-Negligence-in-Massive-Data-Breach.html",
-    "summary": "Oklahoma Department of Securities misconfigured a firewall exposing more than 300k ppl's sensitive information",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "incident": {
+      "month": 12,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "92",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "OK",
+    "victim_id": "Oklahoma Department of Securities"
+  }
 }

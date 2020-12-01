@@ -1,121 +1,121 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2018,
-            "month": 10,
-            "day": 31
-        }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Xybion",
-        "employee_count": "101 to 1000",
-        "industry": "511210",
-        "locations_affected": 1,
-        "state": "NJ"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Publishing error"
-            ],
-            "vector": [
-                "Carelessness"
-            ],
-            "notes": "published private repo "
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Developer"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Code repository",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 7000,
-                    "variety": "Medical"
-                },
-                {
-                    "amount": 1,
-                    "variety": "Credentials"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially",
-            "data_total": 7001
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured code repo"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-09-15T00:02:31.408Z",
-        "created": "2020-09-14T23:30:25.363Z",
-        "dbir_year": 2021,
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 8,
-                "day": 17
-            }
+  "action": {
+    "error": {
+      "notes": "published private repo ",
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Code repository"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7000,
+          "variety": "Medical"
         },
-        "master_id": "fb42ccf4-fe61-457b-82e3-e41cd6b23596",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "github": "16118-1"
-    },
-    "incident_id": "04ebc920-f6bb-11ea-b6fa-6deaa5aa80b0",
-    "security_incident": "Confirmed",
-    "reference": "https://www.databreaches.net/wp-content/uploads/No-need-to-hack-when-its-leaking.pdf",
-    "summary": "Xybion software developer accidentally published private repo with valid credentials",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 7001,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "04ebc920-f6bb-11ea-b6fa-6deaa5aa80b0",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2020-09-14T23:30:25.363Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured code repo"
+      }
+    ],
+    "github": "16118-1",
+    "master_id": "fb42ccf4-fe61-457b-82e3-e41cd6b23596",
+    "modified": "2020-09-15T00:02:31.408Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 17,
+        "month": 8,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/wp-content/uploads/No-need-to-hack-when-its-leaking.pdf",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Xybion software developer accidentally published private repo with valid credentials",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 31,
+      "month": 10,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "511210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "Xybion"
+  }
 }

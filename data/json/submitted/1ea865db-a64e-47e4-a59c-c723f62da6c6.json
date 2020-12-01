@@ -1,124 +1,124 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 8
+  "action": {
+    "error": {
+      "variety": [
+        "Programming error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      },
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "s3 permissions were also weirdly configured",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1500000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "Unknown"
-        ],
-        "region": [
-            "000000"
-        ],
-        "victim_id": "3Fun",
-        "employee_count": "Small",
-        "industry": "511210",
-        "locations_affected": 1
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Programming error"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Developer"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Web application",
-                "amount": 1
-            },
-            {
-                "variety": "S - File",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1,
-        "notes": "s3 permissions were also weirdly configured"
-    },
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 1500000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "0ffd1380-1792-11eb-a388-210bf038e9e5",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 1500000,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially",
-            "data_total": 1500000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Systems misconfigured to be overly permissive "
-            }
-        ],
-        "sub_source": "random",
-        "modified": "2020-10-26T18:13:07.740Z",
-        "created": "2020-10-26T18:13:07.740Z",
-        "timeline": {
-            "notification": {
-                "year": 2019,
-                "month": 8,
-                "day": 8
-            }
-        },
-        "master_id": "1ea865db-a64e-47e4-a59c-c723f62da6c6",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "13900"
-    },
-    "incident_id": "0ffd1380-1792-11eb-a388-210bf038e9e5",
-    "security_incident": "Confirmed",
-    "reference": "https://techcrunch.com/2019/08/08/group-dating-app-3fun-security-flaws/",
-    "summary": "Poorly designed swinger friendly app 3Fun was found to have many unfun vulnerabilities which disclosed a lot of very private information on all of their users",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "created": "2020-10-26T18:13:07.740Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Systems misconfigured to be overly permissive "
+      }
+    ],
+    "github": "13900",
+    "master_id": "1ea865db-a64e-47e4-a59c-c723f62da6c6",
+    "modified": "2020-10-26T18:13:07.740Z",
+    "sub_source": "random",
+    "timeline": {
+      "notification": {
+        "day": 8,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://techcrunch.com/2019/08/08/group-dating-app-3fun-security-flaws/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Poorly designed swinger friendly app 3Fun was found to have many unfun vulnerabilities which disclosed a lot of very private information on all of their users",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Small",
+    "industry": "511210",
+    "locations_affected": 1,
+    "region": [
+      "000000"
+    ],
+    "victim_id": "3Fun"
+  }
 }

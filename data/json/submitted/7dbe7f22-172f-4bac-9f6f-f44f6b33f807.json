@@ -1,114 +1,114 @@
 {
-    "source_id": "vcdb",
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2500000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2500000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "9a3e1770-f6b7-11ea-b6fa-6deaa5aa80b0",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2020-09-14T22:49:27.596Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured data leaks data"
+      }
+    ],
+    "github": "16121",
+    "master_id": "7dbe7f22-172f-4bac-9f6f-f44f6b33f807",
+    "modified": "2020-09-14T22:49:27.596Z",
+    "sub_source": "phidbr, priority",
     "timeline": {
-        "incident": {
-            "year": 2020
-        }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Cense",
-        "employee_count": "Small",
-        "industry": "518210",
-        "locations_affected": 1,
-        "state": "NY"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 2500000,
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 2500000
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured data leaks data"
-            }
-        ],
-        "sub_source": "phidbr, priority",
-        "modified": "2020-09-14T22:49:27.596Z",
-        "created": "2020-09-14T22:49:27.596Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 7,
-                "day": 7
-            }
-        },
-        "master_id": "7dbe7f22-172f-4bac-9f6f-f44f6b33f807",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "github": "16121"
-    },
-    "incident_id": "9a3e1770-f6b7-11ea-b6fa-6deaa5aa80b0",
-    "security_incident": "Confirmed",
-    "reference": "https://securethoughts.com/medical-data-of-auto-accident-victims-exposed-online/",
-    "summary": "Cense, a AI bot system, misconfigured a system that leaked 2.5 million medical records",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+      "notification": {
+        "day": 7,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://securethoughts.com/medical-data-of-auto-accident-victims-exposed-online/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Cense, a AI bot system, misconfigured a system that leaked 2.5 million medical records",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Cense"
+  }
 }

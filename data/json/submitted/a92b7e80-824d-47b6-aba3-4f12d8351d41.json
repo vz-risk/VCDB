@@ -1,125 +1,125 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2018,
-            "month": 10,
-            "day": 7
-        },
-        "discovery": {
-            "unit": "Years",
-            "value": 2
+  "action": {
+    "error": {
+      "variety": [
+        "Programming error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 10974,
+          "variety": "Medical"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "The Little Clinic",
-        "employee_count": "101 to 1000",
-        "industry": "621111",
-        "locations_affected": 1,
-        "state": "TN"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Programming error"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Developer"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Web application",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 10974,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "cbdb8fc0-070f-11eb-ab9e-fb89bdbaf0c7",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 10974,
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 10974
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "internal": {
-            "variety": [
-                "Unknown"
-            ]
-        }
+    "created": "2020-10-05T17:56:53.382Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Application goofed and patient data was publicly accessible"
+      }
+    ],
+    "github": "15684",
+    "master_id": "a92b7e80-824d-47b6-aba3-4f12d8351d41",
+    "modified": "2020-10-05T17:56:53.382Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 22,
+        "month": 6,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/tn-the-little-clinic-notifies-more-than-10000-patients-after-discovering-glitch-in-online-appointment-system/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Technical issue allows Little Clinic patients to be accessible by  unauthorized third party",
+  "targeted": "NA",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 2
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Application goofed and patient data was publicly accessible"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-10-05T17:56:53.382Z",
-        "created": "2020-10-05T17:56:53.382Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 6,
-                "day": 22
-            }
-        },
-        "master_id": "a92b7e80-824d-47b6-aba3-4f12d8351d41",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "15684"
-    },
-    "incident_id": "cbdb8fc0-070f-11eb-ab9e-fb89bdbaf0c7",
-    "reference": "https://www.databreaches.net/tn-the-little-clinic-notifies-more-than-10000-patients-after-discovering-glitch-in-online-appointment-system/",
-    "security_incident": "Confirmed",
-    "summary": "Technical issue allows Little Clinic patients to be accessible by  unauthorized third party",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "incident": {
+      "day": 7,
+      "month": 10,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "621111",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "TN",
+    "victim_id": "The Little Clinic"
+  }
 }

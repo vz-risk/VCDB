@@ -1,146 +1,146 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 3,
-            "day": 10
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         },
-        "compromise": {
-            "unit": "Minutes"
+        {
+          "variety": "Personal"
         },
-        "exfiltration": {
-            "unit": "Seconds"
-        },
-        "discovery": {
-            "unit": "Days",
-            "value": 1
+        {
+          "variety": "Credentials"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Corporate Benefit Marketing",
-        "employee_count": "11 to 100",
-        "industry": "5418",
-        "locations_affected": 1,
-        "state": "CA"
-    },
-    "action": {
-        "hacking": {
-            "variety": [
-                "Use of stolen creds"
-            ],
-            "vector": [
-                "Web application"
-            ],
-            "result": [
-                "Exfiltrate",
-                "Infiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Unknown"
-            ],
-            "motive": [
-                "Unknown"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Mail",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "c4225740-0256-11eb-8781-bfb630cdf748",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Medical"
-                },
-                {
-                    "variety": "Personal"
-                },
-                {
-                    "variety": "Credentials"
-                }
-            ],
-            "data_victim": [
-                "Customer",
-                "Partner"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes"
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "internal": {
-            "variety": [
-                "Unknown"
-            ]
-        }
+    "created": "2020-09-29T17:36:04.275Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Gained credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used credentials on mail server to gain access"
+      }
+    ],
+    "github": "16166",
+    "master_id": "d0f2e6e3-0207-4d2b-a26e-8ca0da8c7e18",
+    "modified": "2020-09-29T17:40:12.335Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "month": 4,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://oag.ca.gov/system/files/Patriot%20CBM%20Breach%20Letter.pdf",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Stolen credentials leading to email account being accessed ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "hak",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Gained credentials"
-            },
-            {
-                "action": "hak",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "used credentials on mail server to gain access"
-            }
-        ],
-        "modified": "2020-09-29T17:40:12.335Z",
-        "created": "2020-09-29T17:36:04.275Z",
-        "dbir_year": 2021,
-        "sub_source": "phidbr",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 4
-            }
-        },
-        "master_id": "d0f2e6e3-0207-4d2b-a26e-8ca0da8c7e18",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "16166"
+    "discovery": {
+      "unit": "Days",
+      "value": 1
     },
-    "incident_id": "c4225740-0256-11eb-8781-bfb630cdf748",
-    "security_incident": "Confirmed",
-    "reference": "https://oag.ca.gov/system/files/Patriot%20CBM%20Breach%20Letter.pdf",
-    "summary": "Stolen credentials leading to email account being accessed ",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+    "exfiltration": {
+      "unit": "Seconds"
+    },
+    "incident": {
+      "day": 10,
+      "month": 3,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "5418",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Corporate Benefit Marketing"
+  }
 }

@@ -1,162 +1,162 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 12,
-            "day": 2
-        }
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
     },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Medical Diagnostic Laboratories ",
-        "employee_count": "101 to 1000",
-        "industry": "541711",
-        "locations_affected": 1,
-        "state": "NJ"
+    "malware": {
+      "name": "Maze",
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 231,
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 231
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
     },
-    "action": {
-        "hacking": {
-            "variety": [
-                "Unknown"
-            ],
-            "vector": [
-                "Unknown"
-            ]
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
         },
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "name": "Maze"
+        {
+          "variety": "Medical"
         }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
     },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "U - Desktop or laptop",
-                "amount": 231
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 231
-    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "cc4a4b80-07dd-11eb-9be5-67f56bbd8cb4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Secrets"
-                },
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Victim organization"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes"
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "unk",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Somehow gained access to environment"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "usr",
-                "attribute": "ia",
-                "summary": "deployed ransomware"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "usr",
-                "attribute": "cp",
-                "summary": "exfiled data"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "usr",
-                "attribute": "au",
-                "summary": "Encrypted data"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-10-06T18:31:57.786Z",
-        "created": "2020-10-06T18:31:57.786Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 1,
-                "day": 23
-            }
-        },
-        "master_id": "2ba6d672-0fac-4ba2-8642-9aac334fa214",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Yes"
-            }
-        },
-        "github": "14926"
-    },
-    "incident_id": "cc4a4b80-07dd-11eb-9be5-67f56bbd8cb4",
-    "security_incident": "Confirmed",
-    "reference": "https://www.bleepingcomputer.com/news/security/maze-ransomware-not-getting-paid-leaks-data-left-and-right/",
-    "summary": "Medical Diagnostic Laboratories got hit with Maze ransomware and had it's data leaked by the threat actor",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+    "created": "2020-10-06T18:31:57.786Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Somehow gained access to environment"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "deployed ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "exfiled data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "au",
+        "summary": "Encrypted data"
+      }
+    ],
+    "github": "14926",
+    "master_id": "2ba6d672-0fac-4ba2-8642-9aac334fa214",
+    "modified": "2020-10-06T18:31:57.786Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 1,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/maze-ransomware-not-getting-paid-leaks-data-left-and-right/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Medical Diagnostic Laboratories got hit with Maze ransomware and had it's data leaked by the threat actor",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 2,
+      "month": 12,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "541711",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "Medical Diagnostic Laboratories "
+  }
 }

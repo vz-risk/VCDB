@@ -1,123 +1,123 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2014
-        },
-        "discovery": {
-            "unit": "Years",
-            "value": 4
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "s3 bucket",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 236000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Turf & Needle",
-        "employee_count": "Small",
-        "industry": "442110",
-        "locations_affected": 1,
-        "state": "FL"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - File",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1,
-        "notes": "s3 bucket"
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 236000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "c2210820-1461-11eb-ac54-3bea5c26f172",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 236000,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 236000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Unrelated 3rd party"
-            ]
-        }
+    "created": "2020-10-22T16:52:36.115Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured s3 bucket"
+      }
+    ],
+    "github": "14624",
+    "master_id": "d0ec2b76-89d2-4747-b3a3-702fe5842ea4",
+    "modified": "2020-10-22T16:52:36.115Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 12,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.azcentral.com/story/money/business/consumers/2019/12/03/report-tuft-needle-customer-data-exposed-internet/2595427001/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Tuft & Needle accidentally exposed 236k customer data for four years on an unsecured server",
+  "targeted": "NA",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 4
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured s3 bucket"
-            }
-        ],
-        "sub_source": "priority",
-        "modified": "2020-10-22T16:52:36.115Z",
-        "created": "2020-10-22T16:52:36.115Z",
-        "timeline": {
-            "notification": {
-                "year": 2019,
-                "month": 12,
-                "day": 3
-            }
-        },
-        "master_id": "d0ec2b76-89d2-4747-b3a3-702fe5842ea4",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "14624"
-    },
-    "incident_id": "c2210820-1461-11eb-ac54-3bea5c26f172",
-    "security_incident": "Confirmed",
-    "reference": "https://www.azcentral.com/story/money/business/consumers/2019/12/03/report-tuft-needle-customer-data-exposed-internet/2595427001/",
-    "summary": "Tuft & Needle accidentally exposed 236k customer data for four years on an unsecured server",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "incident": {
+      "year": 2014
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "industry": "442110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Turf & Needle"
+  }
 }

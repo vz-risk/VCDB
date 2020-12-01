@@ -1,143 +1,143 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2017,
-            "month": 9,
-            "day": 22
-        },
-        "compromise": {
-            "unit": "Hours"
-        },
-        "discovery": {
-            "unit": "Weeks",
-            "value": 5
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Cryptocurrency mining"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
     },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Decatur County General Hospital",
-        "employee_count": "101 to 1000",
-        "industry": "622110",
-        "state": "TX"
+    "integrity": {
+      "variety": [
+        "Repurpose",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "partner": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "83ec8e30-034f-11eb-9654-9589698754ac",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "created": "2020-10-09T05:23:13.943Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown hacking action gains access to EHR server."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware is installed."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Cryptocurrency miner is activated, repurposing the system for an unintended purpose."
+      }
+    ],
+    "github": "10942",
+    "master_id": "6335666d-8c9d-42d3-9b6c-d3b5cbc9bdde",
+    "modified": "2020-10-09T05:23:13.943Z"
+  },
+  "reference": "https://securityboulevard.com/2018/02/hospital-warns-24000-patients-that-its-emr-system-was-hacked-to-mine-cryptocurrency/; https://healthitsecurity.com/news/decatur-county-general-emr-security-incident-impacts-24k; https://www.databreaches.net/tennessee-hospital-notifies-24000-patients-after-emr-system-attacked-with-cryptocurrency-mining-software/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 27, 2017, we received a security incident report from our EMR system vendor indicating that unauthorized software had been installed on the server the vendor supports on our behalf. The unauthorized software was installed to generate digital currency, more commonly known as \u201ccryptocurrency.\u201d Although the hospital\u2019s investigation is ongoing, they believe that an unauthorized individual accessed the server housing the EMR system to inject the software. The goal of the attack did not appear to be the acquisition or exfiltration of patients\u2019 personally identifiable information or protected health information, and the hospital has no evidence that PII or PHI was acquired or viewed. But as is the case so often, they could not definitively prove that there was no access or viewing, and so, they must notify patients. \u00a0Information contained on the affected server included demographic information such as patient names, addresses, dates of birth, and Social Security numbers, clinical information such as diagnosis and treatment information, and other information such as insurance billing information.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours"
     },
-    "action": {
-        "hacking": {
-            "variety": [
-                "Unknown"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Infiltrate"
-            ]
-        },
-        "malware": {
-            "variety": [
-                "Cryptocurrency mining"
-            ],
-            "vector": [
-                "Direct install"
-            ]
-        }
+    "discovery": {
+      "unit": "Weeks",
+      "value": 5
     },
-    "actor": {
-        "external": {
-            "variety": [
-                "Unaffiliated"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "On-Premise Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially"
-        },
-        "integrity": {
-            "variety": [
-                "Repurpose",
-                "Software installation"
-            ]
-        }
-    },
-    "discovery_method": {
-        "partner": {
-            "variety": [
-                "Unknown"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "hak",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "unk",
-                "summary": "Unknown hacking action gains access to EHR server."
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Malware is installed."
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Cryptocurrency miner is activated, repurposing the system for an unintended purpose."
-            }
-        ],
-        "modified": "2020-10-09T05:23:13.943Z",
-        "created": "2020-10-09T05:23:13.943Z",
-        "master_id": "6335666d-8c9d-42d3-9b6c-d3b5cbc9bdde",
-        "analysis_status": "Validated",
-        "analyst": "swidup",
-        "dbir_year": 2021,
-        "github": "10942"
-    },
-    "incident_id": "83ec8e30-034f-11eb-9654-9589698754ac",
-    "security_incident": "Confirmed",
-    "reference": "https://securityboulevard.com/2018/02/hospital-warns-24000-patients-that-its-emr-system-was-hacked-to-mine-cryptocurrency/; https://healthitsecurity.com/news/decatur-county-general-emr-security-incident-impacts-24k; https://www.databreaches.net/tennessee-hospital-notifies-24000-patients-after-emr-system-attacked-with-cryptocurrency-mining-software/",
-    "summary": "On November 27, 2017, we received a security incident report from our EMR system vendor indicating that unauthorized software had been installed on the server the vendor supports on our behalf. The unauthorized software was installed to generate digital currency, more commonly known as “cryptocurrency.” Although the hospital’s investigation is ongoing, they believe that an unauthorized individual accessed the server housing the EMR system to inject the software. The goal of the attack did not appear to be the acquisition or exfiltration of patients’ personally identifiable information or protected health information, and the hospital has no evidence that PII or PHI was acquired or viewed. But as is the case so often, they could not definitively prove that there was no access or viewing, and so, they must notify patients.  Information contained on the affected server included demographic information such as patient names, addresses, dates of birth, and Social Security numbers, clinical information such as diagnosis and treatment information, and other information such as insurance billing information.",
-    "confidence": "High",
-    "targeted": "Unknown",
-    "schema_version": "1_3_4"
+    "incident": {
+      "day": 22,
+      "month": 9,
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Decatur County General Hospital"
+  }
 }

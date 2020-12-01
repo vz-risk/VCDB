@@ -1,140 +1,140 @@
 {
-    "source_id": "vcdb",
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "9c35e170-2f2e-11eb-be94-ff2f41197b3c",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2020-11-25T20:39:10.971Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "somehow gained access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware gained access to data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts stuff"
+      }
+    ],
+    "github": "14828",
+    "master_id": "5becb40e-ec7d-4b17-8c4d-b2a2eecc2cbf",
+    "modified": "2020-11-25T20:44:03.645Z",
+    "sub_source": "phidbr",
     "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 10,
-            "day": 27
-        }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "victim_id": "Children's Choice Pediatrics",
-        "employee_count": "11 to 100",
-        "industry": "621112",
-        "locations_affected": 1,
-        "state": "TX"
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially"
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "unk",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "unk",
-                "summary": "somehow gained access"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "malware installed"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "malware gained access to data"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "ransomware encrypts stuff"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-11-25T20:44:03.645Z",
-        "created": "2020-11-25T20:39:10.971Z",
-        "dbir_year": 2021,
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 1,
-                "day": 7
-            }
-        },
-        "master_id": "5becb40e-ec7d-4b17-8c4d-b2a2eecc2cbf",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "github": "14828"
-    },
-    "incident_id": "9c35e170-2f2e-11eb-be94-ff2f41197b3c",
-    "security_incident": "Confirmed",
-    "reference": "https://www.beckershospitalreview.com/cybersecurity/texas-children-s-healthcare-provider-alerts-patients-of-ransomware-attack.html",
-    "summary": "Children's Choice Pediactrics experienced a ransomware attack",
-    "confidence": "High",
-    "targeted": "Unknown",
-    "schema_version": "1_3_4"
+      "notification": {
+        "day": 7,
+        "month": 1,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.beckershospitalreview.com/cybersecurity/texas-children-s-healthcare-provider-alerts-patients-of-ransomware-attack.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Children's Choice Pediactrics experienced a ransomware attack",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 10,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "621112",
+    "locations_affected": 1,
+    "state": "TX",
+    "victim_id": "Children's Choice Pediatrics"
+  }
 }

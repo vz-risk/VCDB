@@ -1,146 +1,146 @@
 {
-    "source_id": "vcdb",
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "74513c70-2814-11eb-8365-4f57e2156a07",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
+    "created": "2020-11-16T19:23:00.360Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Gained access to system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "access data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Boom ransomwared "
+      }
+    ],
+    "github": "15953",
+    "master_id": "2cc80c2f-5989-45dc-a885-87d027fe17e0",
+    "modified": "2020-11-16T19:23:00.360Z",
     "timeline": {
-        "incident": {
-            "year": 2020
-        }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Eerie Community College",
-        "employee_count": "101 to 1000",
-        "industry": "611310",
-        "locations_affected": 1,
-        "state": "NY"
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown"
-            },
-            {
-                "variety": "U - Desktop or laptop"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Unknown"
-                }
-            ],
-            "data_victim": [
-                "Unknown"
-            ],
-            "state": [
-                "Unknown"
-            ],
-            "data_disclosure": "Potentially"
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "unk",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Gained access to system"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "installed malware"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "access data"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "Boom ransomwared "
-            }
-        ],
-        "modified": "2020-11-16T19:23:00.360Z",
-        "created": "2020-11-16T19:23:00.360Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 7,
-                "day": 22
-            }
-        },
-        "master_id": "2cc80c2f-5989-45dc-a885-87d027fe17e0",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "github": "15953"
-    },
-    "incident_id": "74513c70-2814-11eb-8365-4f57e2156a07",
-    "security_incident": "Confirmed",
-    "reference": "https://www.wkbw.com/news/local-news/erie-community-college-hit-with-ransomware-attack",
-    "summary": "Eerie Community College as hit by Ransomware ",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+      "notification": {
+        "day": 22,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.wkbw.com/news/local-news/erie-community-college-hit-with-ransomware-attack",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Eerie Community College as hit by Ransomware ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "611310",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Eerie Community College"
+  }
 }

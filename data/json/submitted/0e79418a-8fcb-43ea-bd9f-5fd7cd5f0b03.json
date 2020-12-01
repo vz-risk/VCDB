@@ -1,126 +1,126 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
         },
-        "containment": {
-            "unit": "Days",
-            "value": 1
+        {
+          "variety": "Credentials"
         }
-    },
-    "victim": {
-        "country": [
-            "ES"
-        ],
-        "region": [
-            "150155"
-        ],
-        "victim_id": "Decathlon ",
-        "employee_count": "50001 to 100000",
-        "industry": "451110",
-        "locations_affected": 1
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 123000000,
+      "data_victim": [
+        "Customer",
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "3c9545a0-07db-11eb-9be5-67f56bbd8cb4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Personal"
-                },
-                {
-                    "variety": "Credentials"
-                }
-            ],
-            "data_victim": [
-                "Customer",
-                "Employee",
-                "Victim organization"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 123000000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
+    "created": "2020-10-06T18:11:15.248Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured ES "
+      }
+    ],
+    "github": "15206",
+    "master_id": "0e79418a-8fcb-43ea-bd9f-5fd7cd5f0b03",
+    "modified": "2020-10-06T18:11:15.248Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 17,
+        "month": 2,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.infosecurity-magazine.com/news/sports-giant-decathlon-leaks-123/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Decathlon misconfigured database resulting in leaking 123 million records, which includes personal data",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured ES "
-            }
-        ],
-        "sub_source": "priority",
-        "modified": "2020-10-06T18:11:15.248Z",
-        "created": "2020-10-06T18:11:15.248Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 2,
-                "day": 17
-            }
-        },
-        "master_id": "0e79418a-8fcb-43ea-bd9f-5fd7cd5f0b03",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "15206"
-    },
-    "incident_id": "3c9545a0-07db-11eb-9be5-67f56bbd8cb4",
-    "security_incident": "Confirmed",
-    "reference": "https://www.infosecurity-magazine.com/news/sports-giant-decathlon-leaks-123/",
-    "summary": "Decathlon misconfigured database resulting in leaking 123 million records, which includes personal data",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "ES"
+    ],
+    "employee_count": "50001 to 100000",
+    "industry": "451110",
+    "locations_affected": 1,
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Decathlon "
+  }
 }

@@ -1,169 +1,169 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 12
-        },
-        "discovery": {
-            "unit": "Days"
-        },
-        "containment": {
-            "unit": "Days",
-            "value": 5
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "U - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 5
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
     },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Hackensack Meridian Health",
-        "employee_count": "25001 to 50000",
-        "industry": "622110",
-        "locations_affected": 1,
-        "state": "NJ"
-    },
-    "action": {
-        "hacking": {
-            "variety": [
-                "Unknown"
-            ],
-            "vector": [
-                "Unknown"
-            ]
-        },
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown"
-            },
-            {
-                "variety": "U - Unknown"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ]
-    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "18bfa490-07e5-11eb-9be5-67f56bbd8cb4",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially"
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ],
-            "duration": {
-                "unit": "Days",
-                "value": 5
-            }
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
+    "created": "2020-10-06T19:20:39.440Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "somehow got access to environment"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "deployed ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "potentially access data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encrypted data"
+      }
+    ],
+    "github": "14692",
+    "master_id": "97f11e7a-27db-448b-a68c-82a2ee5b8dad",
+    "modified": "2020-10-06T19:20:39.440Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 13,
+        "month": 12,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.nj.com/business/2019/12/hackensack-meridian-hospital-chain-confirms-ransomware-attack-last-week.html",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Hackensack Meridian health network confirms ransomware attack last week",
+  "targeted": "Unknown",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 5
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "unk",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "somehow got access to environment"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "deployed ransomware"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "potentially access data"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "Encrypted data"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-10-06T19:20:39.440Z",
-        "created": "2020-10-06T19:20:39.440Z",
-        "timeline": {
-            "notification": {
-                "year": 2019,
-                "month": 12,
-                "day": 13
-            }
-        },
-        "master_id": "97f11e7a-27db-448b-a68c-82a2ee5b8dad",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "14692"
+    "discovery": {
+      "unit": "Days"
     },
-    "incident_id": "18bfa490-07e5-11eb-9be5-67f56bbd8cb4",
-    "security_incident": "Confirmed",
-    "reference": "https://www.nj.com/business/2019/12/hackensack-meridian-hospital-chain-confirms-ransomware-attack-last-week.html",
-    "summary": "Hackensack Meridian health network confirms ransomware attack last week",
-    "confidence": "High",
-    "targeted": "Unknown",
-    "schema_version": "1_3_4"
+    "incident": {
+      "month": 12,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "industry": "622110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "Hackensack Meridian Health"
+  }
 }

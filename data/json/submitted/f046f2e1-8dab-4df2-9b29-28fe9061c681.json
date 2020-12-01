@@ -1,132 +1,132 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 11
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
         },
-        "containment": {
-            "unit": "Days"
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Other"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "TrueDialog",
-        "employee_count": "11 to 100",
-        "industry": "518210",
-        "locations_affected": 1,
-        "state": "TX"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "notes": "Stored on open ES",
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "d3b74ea0-120e-11eb-a3ae-53136ea5d4e6",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Personal"
-                },
-                {
-                    "variety": "Internal"
-                },
-                {
-                    "variety": "Credentials"
-                },
-                {
-                    "variety": "Other"
-                }
-            ],
-            "data_victim": [
-                "Customer",
-                "Victim organization"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes",
-            "notes": "Stored on open ES"
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
+    "created": "2020-10-19T18:20:04.042Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Sys admin misconfigured ES server"
+      }
+    ],
+    "github": "14627",
+    "master_id": "f046f2e1-8dab-4df2-9b29-28fe9061c681",
+    "modified": "2020-10-19T18:20:04.042Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 26,
+        "month": 11,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://www.vpnmentor.com/blog/report-truedialog-leak/?=truedialog-exposed-data",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "TrueDialog accidentally left a database open containing millions of sms messages",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Days"
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Sys admin misconfigured ES server"
-            }
-        ],
-        "sub_source": "priority",
-        "modified": "2020-10-19T18:20:04.042Z",
-        "created": "2020-10-19T18:20:04.042Z",
-        "timeline": {
-            "notification": {
-                "year": 2019,
-                "month": 11,
-                "day": 26
-            }
-        },
-        "master_id": "f046f2e1-8dab-4df2-9b29-28fe9061c681",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "14627"
-    },
-    "incident_id": "d3b74ea0-120e-11eb-a3ae-53136ea5d4e6",
-    "security_incident": "Confirmed",
-    "reference": "https://www.vpnmentor.com/blog/report-truedialog-leak/?=truedialog-exposed-data",
-    "summary": "TrueDialog accidentally left a database open containing millions of sms messages",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "incident": {
+      "month": 11,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "TrueDialog"
+  }
 }

@@ -1,113 +1,113 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 5
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "GB"
-        ],
-        "region": [
-            "150155"
-        ],
-        "victim_id": "South East Coast Ambulance",
-        "employee_count": "Small",
-        "industry": "621910",
-        "locations_affected": 1
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "43212eb0-04b2-11eb-8c43-8ded27596b66",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Employee"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially"
-        }
+      "confidentiality": {
+        "data_abuse": "No"
+      }
     },
-    "discovery_method": {
-        "unknown": true
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Server misconfigured that allowed additional 7 unathorized ppl to access data (even if they didn't actually access it)"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-10-02T17:29:24.869Z",
-        "created": "2020-10-02T17:29:24.869Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 7,
-                "day": 15
-            }
-        },
-        "master_id": "f09b34cd-7f82-4aac-b2c3-ddf058a72548",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "No"
-            }
-        },
-        "github": "15907"
-    },
-    "incident_id": "43212eb0-04b2-11eb-8c43-8ded27596b66",
-    "security_incident": "Confirmed",
-    "reference": "https://www.kentonline.co.uk/ashford/news/data-breach-at-ambulance-service-230388/",
-    "summary": "South East Coast Ambulance Service left an internal server exposable to internal to unauthorized people",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "created": "2020-10-02T17:29:24.869Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Server misconfigured that allowed additional 7 unathorized ppl to access data (even if they didn't actually access it)"
+      }
+    ],
+    "github": "15907",
+    "master_id": "f09b34cd-7f82-4aac-b2c3-ddf058a72548",
+    "modified": "2020-10-02T17:29:24.869Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 15,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.kentonline.co.uk/ashford/news/data-breach-at-ambulance-service-230388/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "South East Coast Ambulance Service left an internal server exposable to internal to unauthorized people",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "Small",
+    "industry": "621910",
+    "locations_affected": 1,
+    "region": [
+      "150155"
+    ],
+    "victim_id": "South East Coast Ambulance"
+  }
 }

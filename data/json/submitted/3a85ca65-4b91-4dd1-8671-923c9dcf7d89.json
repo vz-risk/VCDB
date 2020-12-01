@@ -1,149 +1,149 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
         }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
     },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "R1 RCM",
-        "employee_count": "10001 to 25000",
-        "industry": "524126",
-        "locations_affected": 1,
-        "state": "IL"
-    },
-    "action": {
-        "malware": {
-            "variety": [
-                "Ransomware"
-            ],
-            "vector": [
-                "Unknown"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Organized crime"
-            ],
-            "motive": [
-                "Financial"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Unknown"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ]
-    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "c5516ea0-0d5d-11eb-835c-77358de149b1",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Personal"
-                },
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Potentially"
-        },
-        "integrity": {
-            "variety": [
-                "Software installation"
-            ]
-        },
-        "availability": {
-            "variety": [
-                "Obscuration"
-            ]
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Actor disclosure"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "unk",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Actor somehow gained access"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "ia",
-                "summary": "Ransomware installed"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Data accessed"
-            },
-            {
-                "action": "mal",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "au",
-                "summary": "Data encrypted"
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-10-13T18:24:14.294Z",
-        "created": "2020-10-13T18:24:14.294Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 8,
-                "day": 20
-            }
-        },
-        "master_id": "3a85ca65-4b91-4dd1-8671-923c9dcf7d89",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "16090"
-    },
-    "incident_id": "c5516ea0-0d5d-11eb-835c-77358de149b1",
-    "security_incident": "Confirmed",
-    "reference": "https://krebsonsecurity.com/2020/08/medical-debt-collection-firm-r1-rcm-hit-in-ransomware-attack/",
-    "summary": "R1 RCM a medical debt collection agency was hit by ransomware",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+    "created": "2020-10-13T18:24:14.294Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Actor somehow gained access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted"
+      }
+    ],
+    "github": "16090",
+    "master_id": "3a85ca65-4b91-4dd1-8671-923c9dcf7d89",
+    "modified": "2020-10-13T18:24:14.294Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 20,
+        "month": 8,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://krebsonsecurity.com/2020/08/medical-debt-collection-firm-r1-rcm-hit-in-ransomware-attack/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "R1 RCM a medical debt collection agency was hit by ransomware",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "industry": "524126",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "R1 RCM"
+  }
 }

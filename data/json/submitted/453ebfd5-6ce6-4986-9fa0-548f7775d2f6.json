@@ -1,124 +1,124 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020
-        },
-        "containment": {
-            "unit": "Days",
-            "value": 2
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "S3 bucket",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2700000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Friendemic",
-        "employee_count": "11 to 100",
-        "industry": "541613",
-        "locations_affected": 1,
-        "state": "UT"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - File",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1,
-        "notes": "S3 bucket"
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2700000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "e9af58f0-2290-11eb-940b-ff2256f17cee",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 2700000,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 2700000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
+    "created": "2020-11-09T18:44:16.988Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured s3 bucket"
+      }
+    ],
+    "github": "16408",
+    "master_id": "453ebfd5-6ce6-4986-9fa0-548f7775d2f6",
+    "modified": "2020-11-09T18:44:16.988Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 10,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.hackread.com/marketing-firm-friendemic-customer-records-exposed/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Friendemic left an unsecured s3 bucket which leaked ",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 2
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured s3 bucket"
-            }
-        ],
-        "sub_source": "priority",
-        "modified": "2020-11-09T18:44:16.988Z",
-        "created": "2020-11-09T18:44:16.988Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 10,
-                "day": 10
-            }
-        },
-        "master_id": "453ebfd5-6ce6-4986-9fa0-548f7775d2f6",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "16408"
-    },
-    "incident_id": "e9af58f0-2290-11eb-940b-ff2256f17cee",
-    "security_incident": "Confirmed",
-    "reference": "https://www.hackread.com/marketing-firm-friendemic-customer-records-exposed/",
-    "summary": "Friendemic left an unsecured s3 bucket which leaked ",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "industry": "541613",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "UT",
+    "victim_id": "Friendemic"
+  }
 }

@@ -1,127 +1,127 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2012
-        }
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Knowledge abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Espionage"
+      ],
+      "variety": [
+        "Competitor"
+      ]
     },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "victim_id": "Turret Labs",
-        "employee_count": "1 to 10",
-        "industry": "5182",
-        "locations_affected": 1,
-        "state": "NC"
-    },
-    "action": {
-        "misuse": {
-            "variety": [
-                "Knowledge abuse"
-            ],
-            "vector": [
-                "LAN access"
-            ],
-            "result": [
-                "Exfiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "external": {
-            "variety": [
-                "Competitor"
-            ],
-            "motive": [
-                "Espionage"
-            ]
+    "partner": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Espionage"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
         },
-        "partner": {
-            "motive": [
-                "Espionage"
-            ],
-            "country": [
-                "Unknown"
-            ]
+        {
+          "variety": "Source code"
         }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Web application",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "c8489ae0-2da4-11eb-8132-47626699b560",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglos",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Internal"
-                },
-                {
-                    "variety": "Source code"
-                }
-            ],
-            "data_victim": [
-                "Victim organization"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes"
-        }
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
     },
-    "discovery_method": {
-        "internal": {
-            "variety": [
-                "Other"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "mis",
-                "actor": "prt",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "partner took data and gave it to competitor"
-            }
-        ],
-        "modified": "2020-11-23T21:14:28.747Z",
-        "created": "2020-11-23T21:14:05.570Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 1,
-                "day": 22
-            }
-        },
-        "master_id": "a4ea58d1-d31b-44db-b0f7-77a5e0f542f3",
-        "analysis_status": "Validated",
-        "analyst": "planglos",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Yes"
-            }
-        },
-        "github": "14924"
-    },
-    "incident_id": "c8489ae0-2da4-11eb-8132-47626699b560",
-    "security_incident": "Confirmed",
-    "reference": "https://theloadstar.com/cargosprint-stole-our-tech-to-set-up-as-a-competitor-claims-software-developer/",
-    "summary": "Turret labs had data about and designs of their product stolen by employee of a partner who gave up the data to Turret labs competitor",
-    "confidence": "High",
-    "targeted": "Targeted",
-    "schema_version": "1_3_4"
+    "created": "2020-11-23T21:14:05.570Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "partner took data and gave it to competitor"
+      }
+    ],
+    "github": "14924",
+    "master_id": "a4ea58d1-d31b-44db-b0f7-77a5e0f542f3",
+    "modified": "2020-11-23T21:14:28.747Z",
+    "timeline": {
+      "notification": {
+        "day": 22,
+        "month": 1,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://theloadstar.com/cargosprint-stole-our-tech-to-set-up-as-a-competitor-claims-software-developer/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Turret labs had data about and designs of their product stolen by employee of a partner who gave up the data to Turret labs competitor",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "year": 2012
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "industry": "5182",
+    "locations_affected": 1,
+    "state": "NC",
+    "victim_id": "Turret Labs"
+  }
 }

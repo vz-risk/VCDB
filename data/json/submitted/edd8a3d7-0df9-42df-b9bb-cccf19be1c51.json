@@ -1,119 +1,119 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "S3 bucket",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 150000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "country": [
-            "MX"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Televisa",
-        "employee_count": "25001 to 50000",
-        "industry": "518210",
-        "locations_affected": 1
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - File",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1,
-        "notes": "S3 bucket"
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 150000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "81bcac30-025a-11eb-8781-bfb630cdf748",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 150000,
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 150000
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured s3 bucket"
-            }
-        ],
-        "sub_source": "Priority",
-        "modified": "2020-09-29T18:53:46.585Z",
-        "created": "2020-09-29T18:53:20.328Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 7,
-                "day": 21
-            }
-        },
-        "master_id": "edd8a3d7-0df9-42df-b9bb-cccf19be1c51",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "15934"
-    },
-    "incident_id": "81bcac30-025a-11eb-8781-bfb630cdf748",
-    "security_incident": "Confirmed",
-    "reference": "https://cisomag.eccouncil.org/fut-fantastico-data-breach/",
-    "summary": "Fut Fantastico had a misconfigured S3 bucket which leaked info on 150k users",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1_3_4"
+    "created": "2020-09-29T18:53:20.328Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured s3 bucket"
+      }
+    ],
+    "github": "15934",
+    "master_id": "edd8a3d7-0df9-42df-b9bb-cccf19be1c51",
+    "modified": "2020-09-29T18:53:46.585Z",
+    "sub_source": "Priority",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://cisomag.eccouncil.org/fut-fantastico-data-breach/",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Fut Fantastico had a misconfigured S3 bucket which leaked info on 150k users",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "MX"
+    ],
+    "employee_count": "25001 to 50000",
+    "industry": "518210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Televisa"
+  }
 }

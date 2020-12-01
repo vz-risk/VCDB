@@ -1,134 +1,134 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2019,
-            "month": 6
-        },
-        "compromise": {
-            "unit": "Seconds"
-        },
-        "exfiltration": {
-            "unit": "NA"
-        },
-        "discovery": {
-            "unit": "Years",
-            "value": 1
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 700,
+          "variety": "Medical"
         }
-    },
-    "victim": {
-        "country": [
-            "US"
-        ],
-        "region": [
-            "019021"
-        ],
-        "victim_id": "Geisinger",
-        "employee_count": "25001 to 50000",
-        "industry": "621111",
-        "locations_affected": 1,
-        "state": "PA"
-    },
-    "action": {
-        "misuse": {
-            "variety": [
-                "Privilege abuse"
-            ],
-            "vector": [
-                "LAN access"
-            ],
-            "result": [
-                "Exfiltrate",
-                "Infiltrate"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Unknown"
-            ],
-            "motive": [
-                "Unknown"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 700,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "b0c1eb30-0250-11eb-8781-bfb630cdf748",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "planglois",
     "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 700,
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 700
-        }
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
     },
-    "discovery_method": {
-        "internal": {
-            "variety": [
-                "Unknown"
-            ]
-        }
+    "created": "2020-09-29T17:03:39.575Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal actor access db "
+      }
+    ],
+    "github": "16279",
+    "master_id": "b24939f9-e4e5-4fce-a165-4faf9582a930",
+    "modified": "2020-09-29T17:03:39.575Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 18,
+        "month": 9,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.timesleader.com/news/802549/802549",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Employee misuses access to patient data to look up patients not required or their job",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Seconds"
     },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "mis",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Internal actor access db "
-            }
-        ],
-        "sub_source": "phidbr",
-        "modified": "2020-09-29T17:03:39.575Z",
-        "created": "2020-09-29T17:03:39.575Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 9,
-                "day": 18
-            }
-        },
-        "master_id": "b24939f9-e4e5-4fce-a165-4faf9582a930",
-        "analysis_status": "Validated",
-        "analyst": "planglois",
-        "dbir_year": 2021,
-        "attribute": {
-            "confidentiality": {
-                "data_abuse": "Unknown"
-            }
-        },
-        "github": "16279"
+    "discovery": {
+      "unit": "Years",
+      "value": 1
     },
-    "incident_id": "b0c1eb30-0250-11eb-8781-bfb630cdf748",
-    "security_incident": "Confirmed",
-    "reference": "https://www.timesleader.com/news/802549/802549",
-    "summary": "Employee misuses access to patient data to look up patients not required or their job",
-    "confidence": "High",
-    "targeted": "Opportunistic",
-    "schema_version": "1_3_4"
+    "exfiltration": {
+      "unit": "NA"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "industry": "621111",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Geisinger"
+  }
 }
