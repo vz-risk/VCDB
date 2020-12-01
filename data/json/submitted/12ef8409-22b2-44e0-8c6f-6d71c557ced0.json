@@ -1,0 +1,134 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Unknown"
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 13000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "a260dfa0-a0f9-11ea-878c-ff8a51fa1e8f",
+  "notes": "COVID-19",
+  "plus": {
+    "analysis_status": "Validated",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-05-28T22:58:34.799Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unknown action installs malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Malware encryption triggered"
+      }
+    ],
+    "github": "15615",
+    "sub_source": "covid19",
+    "master_id": "12ef8409-22b2-44e0-8c6f-6d71c557ced0",
+    "modified": "2020-05-28T22:58:34.799Z"
+  },
+  "reference": "https://www.abc.net.au/news/2020-05-15/mybudget-blames-ransomware-for-system-outage-amid-coronavirus/12252316; https://www.abc.net.au/news/2020-06-03/hackers-threaten-to-release-data-stolen-in-mybudget-cyberattack/12313464",
+  "schema_version": "1.3.4",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Money management company MyBudget has confirmed a ransomware attack is the cause of a nationwide systems outage that has left 13,000 customers in financial limbo.  The Adelaide-based company said its systems were likely compromised as it quickly moved its employees onto work-from-home arrangements amid coronavirus, and that it could not rule out the possibility that clients' data was put at risk.  The company's payment and messaging services, app and client portal have been down since Saturday.  In a statement today, MyBudget said there was \"no credible evidence that significant data was accessed or will be misused\".  \"However we can't rule this out and are taking all cautionary measures,\" the company said.  The company said it was working with leading external cyber security experts and was \"doing everything possible to get systems back online in a safe and secure manner\".  \"As a result of the investigations undertaken so far, we have confirmed that this activity is the result of a third-party-deployed ransomware,\" the company said.  Although MyBudget insisted there was no evidence of a breach, it said it would be advising customers and staff of measures they could take to keep their data safe.  \"In the coming days we will be taking the precautionary measure of advising all clients and staff of steps they can take to protect against potential data misuse,\" the company said.  \"As we know more, we will advise our clients and employees as appropriate.\"  The company also said it was working with law enforcement, the Office of the Australian Information Commissioner and the Australian Cyber Security Centre to ensure \"appropriate action is taken\".  MyBudget is among Australia's largest personal budget management services, having engaged with more than 100,000 clients since it began operating in 1999.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 5,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "industry": "51919",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "MyBudget"
+  }
+}
