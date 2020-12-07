@@ -1,0 +1,172 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Netwalker"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 50000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 50000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "c2c5d350-04ad-11eb-8c43-8ded27596b66",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-10-02T17:22:02.892Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Somehow bad guys got in"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied off"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Server encrypted"
+      }
+    ],
+    "github": "15933",
+    "master_id": "505642fc-3cad-40d0-a356-320ea0b8ab53",
+    "modified": "2020-10-02T17:22:02.892Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 20,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/lorien-health-services-discloses-ransomware-attack-affecting-nearly-50-000/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Lorien Health Services in Maryland experienced a name and shame ransomware attack (Netwalker) ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "623110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "Lorien Health Services"
+  }
+}

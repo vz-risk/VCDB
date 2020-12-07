@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 28000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 28001,
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Repurpose"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "f79a5290-2da2-11eb-8132-47626699b560",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-11-23T20:46:24.568Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "somehow got access to credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Used stolen creds to access email address and repurpose it"
+      }
+    ],
+    "github": "12445",
+    "master_id": "18ece4e0-caae-410c-ad8f-1ddd37444c0e",
+    "modified": "2020-11-23T20:58:51.009Z",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 10,
+        "year": 2018
+      }
+    }
+  },
+  "reference": "http://www.latimes.com/local/lanow/la-me-ln-girl-scouts-data-breach-20181025-story.html",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Girl Scouts of Orange County experienced a breach when someone gained access to one of their email accounts",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Seconds"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 30,
+      "month": 9,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "813410",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Girl Scouts of Orange County"
+  }
+}

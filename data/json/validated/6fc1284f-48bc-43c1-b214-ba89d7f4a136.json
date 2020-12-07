@@ -1,0 +1,171 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Cashier"
+      ],
+      "variety": [
+        "Forgery"
+      ],
+      "vector": [
+        "Documents"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "notes": "relationship consultant",
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "Unknown"
+      },
+      {
+        "variety": "P - Cashier"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "notes": "Asset used to get PII for identity theft not disclosed in article"
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "d942ffe0-2398-11eb-a2fc-cdee479fbead",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2020-11-11T03:29:37.670Z",
+    "dbir_year": 2017,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "ppl",
+        "attribute": "cp"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia"
+      }
+    ],
+    "github": "12354",
+    "master_id": "6fc1284f-48bc-43c1-b214-ba89d7f4a136",
+    "modified": "2020-11-11T03:29:37.670Z"
+  },
+  "reference": "https://www.bizjournals.com/philadelphia/news/2018/10/12/former-bank-employee-charged-in-424k-id-theft.html",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "city policy data found on criminal forum",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2016
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Direct"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "522110",
+    "region": [
+      "019021"
+    ],
+    "state": "US-PA",
+    "victim_id": "Beneficial Bank"
+  }
+}

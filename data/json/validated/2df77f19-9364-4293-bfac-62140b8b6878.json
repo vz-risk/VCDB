@@ -1,0 +1,157 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 16600,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 16600,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "827ac000-0fd7-11eb-afe7-87eff9df4bdb",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2020-10-16T22:00:02.039Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "somehow gained access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "ransomware had access to data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypted crap"
+      }
+    ],
+    "github": "15447",
+    "master_id": "2df77f19-9364-4293-bfac-62140b8b6878",
+    "modified": "2020-10-16T22:00:02.039Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 14,
+        "month": 4,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/phi-of-16600-patients-potentially-compromised-in-ransomware-attack-on-andrews-braces/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Andrews Braces a NV orthodontics practice experienced a ransomware attack that impacted 16k patients",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621210",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NV",
+    "victim_id": "Andrews Braces"
+  }
+}
