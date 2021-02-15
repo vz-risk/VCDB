@@ -1,0 +1,117 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 8,
+            "day": 31
+        },
+        "compromise": {
+            "unit": "Seconds"
+        },
+        "exfiltration": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "BG"
+        ],
+        "region": [
+            "150151"
+        ],
+        "industry": "541511",
+        "employee_count": "11 to 100"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Programming error"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "notes": "SQLi flaw on web application"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 1900000
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1900000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Error created vuln that exposed records"
+            }
+        ],
+        "modified": "2021-02-15T05:10:57.733Z",
+        "created": "2021-02-15T05:10:57.733Z",
+        "master_id": "a38196e0-d15b-4a87-a6b9-9ccc99a19d9d",
+        "analysis_status": "Finalized",
+        "analyst": "Pinto",
+        "dbir_year": 2021,
+        "asset_os": [
+            "Unknown"
+        ],
+        "github": "16456"
+    },
+    "incident_id": "e21ebe30-6f04-11eb-abae-df57f584edbc",
+    "security_incident": "Confirmed",
+    "reference": "https://europeangaming.eu/portal/latest-news/2020/10/22/79947/mmo-game-street-mobster-leaking-data-of-1-9-million-users-due-to-critical-vulnerability/",
+    "summary": "Attackers could exploit the SQL Injection flaw to compromise the game’s database and steal user data. Sec Researcher found and disclosed, not sure if the whole thing was breached.",
+    "confidence": "High",
+    "targeted": "NA",
+    "discovery_notes": "CyberNews.com Investigation team",
+    "schema_version": "1.3.5"
+}
