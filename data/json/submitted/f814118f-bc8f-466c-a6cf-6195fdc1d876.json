@@ -1,0 +1,112 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "ES"
+        ],
+        "victim_id": "Onlinevitalus",
+        "employee_count": "Unknown",
+        "industry": "54",
+        "locations_affected": 1
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 752000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 752000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured aws s3"
+            }
+        ],
+        "modified": "2021-02-19T01:58:56.568Z",
+        "created": "2021-02-19T01:58:56.568Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 12,
+                "day": 9
+            }
+        },
+        "master_id": "f814118f-bc8f-466c-a6cf-6195fdc1d876",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "github": "14654"
+    },
+    "incident_id": "ab68ff30-722a-11eb-a74a-79ed152e0098",
+    "security_incident": "Confirmed",
+    "reference": "https://techcrunch.com/2019/12/09/birth-certificate-applications-exposed/",
+    "summary": "Onlinevitalus accidentally left an s3 bucket open with like 750k ppl's sensitive information. Way to go",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1.3.5"
+}
