@@ -1,0 +1,115 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020
+        },
+        "containment": {
+            "unit": "Weeks",
+            "value": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Clubilion",
+        "employee_count": "Small",
+        "industry": "511210",
+        "locations_affected": 1
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured ES server"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2021-02-19T19:51:53.845Z",
+        "created": "2021-02-19T19:51:45.188Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 7,
+                "day": 9
+            }
+        },
+        "master_id": "98d6db20-bcdb-42bb-b007-bc5b0e97d1e6",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "github": "15876"
+    },
+    "incident_id": "9e6d7ba0-72be-11eb-a674-05cfd55ad89e",
+    "security_incident": "Confirmed",
+    "reference": "https://securityboulevard.com/2020/07/data-leak-on-online-gambling-app-puts-millions-of-users-at-risk-of-cyber-attacks/",
+    "summary": "Clubilion a creator of mobile gambling apps left an elasticsearch database open with no creds none the less",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1.3.5"
+}
