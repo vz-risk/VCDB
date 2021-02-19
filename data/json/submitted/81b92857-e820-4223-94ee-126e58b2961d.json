@@ -1,0 +1,120 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "FR"
+        ],
+        "victim_id": "Kinoapp",
+        "employee_count": "Small",
+        "industry": "511210"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 42000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 42000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Misconfigured server"
+            }
+        ],
+        "sub_source": "priority",
+        "modified": "2021-02-19T21:23:11.232Z",
+        "created": "2021-02-19T21:23:11.232Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 4,
+                "day": 12
+            }
+        },
+        "master_id": "81b92857-e820-4223-94ee-126e58b2961d",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "15501"
+    },
+    "incident_id": "ab9f1f90-72c8-11eb-a674-05cfd55ad89e",
+    "security_incident": "Confirmed",
+    "reference": "https://www.vpnmentor.com/blog/report-kinomap-leak/",
+    "summary": "Kinomap app left an unsecured database with over 42m records which was discovered by security researchers",
+    "confidence": "High",
+    "targeted": "NA",
+    "schema_version": "1.3.5"
+}
