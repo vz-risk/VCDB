@@ -1,0 +1,168 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 2,
+            "day": 27
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "CA"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Simon Fraser University",
+        "employee_count": "1001 to 10000",
+        "industry": "611310"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Brute force"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            },
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Student"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "brute force attack"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "use of stolen creds"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "system encrypted"
+            }
+        ],
+        "modified": "2021-02-19T20:55:27.877Z",
+        "created": "2021-02-19T20:53:54.746Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 3,
+                "day": 2
+            }
+        },
+        "master_id": "55d40c3a-fda5-4761-a9b2-178089433fba",
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "15241"
+    },
+    "incident_id": "d994b160-72c0-11eb-a46e-831b23dc7360",
+    "reference": "https://www.citynews1130.com/2020/03/02/breach-of-privacy-affecting-personal-information-at-sfu/ ; https://bc.ctvnews.ca/personal-information-of-students-faculty-at-b-c-university-exposed-in-recent-data-breach-1.4835336  ; https://www.cbc.ca/news/canada/british-columbia/sfu-ransomware-attack-1.5732027",
+    "security_incident": "Confirmed",
+    "summary": "A canadian college was the victim of a ransomware attack which also exposed staff and student data who joined the college before june 20, 2019.  faculty, staff, students, alumni, and retirees saying electronic data was exposed on Feb. 27 and informed people to change their passwords to SFU email and accounts. The breach impacted those who joined the university prior to June, 20, 2019.  “While it does not appear that any SFU Computing accounts have been compromised, changing your password now will significantly mitigate that risk,” the letter reads.  It informs people they could be at risk of unsolicited emails or identity theft since student ID numbers, birth dates, full names, course enrolment, email addresses, and encrypted passwords were exposed.  According to the letter, the university came under a ransomware attack that found “a weakness in the way information was handled.”",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.5"
+}

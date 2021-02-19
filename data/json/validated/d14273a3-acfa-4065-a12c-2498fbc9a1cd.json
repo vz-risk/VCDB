@@ -1,0 +1,126 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 1,
+            "day": 30
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 8
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Institute of International Education (IIE)",
+        "employee_count": "101 to 1000",
+        "industry": "611710",
+        "state": "NY"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ],
+            "job_change": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 2
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 2
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Student"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfigured db's open to internet"
+            }
+        ],
+        "modified": "2021-02-19T21:23:53.635Z",
+        "created": "2021-02-19T21:23:53.635Z",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 2,
+                "day": 14
+            }
+        },
+        "master_id": "d14273a3-acfa-4065-a12c-2498fbc9a1cd",
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "15107"
+    },
+    "incident_id": "54c44f00-72c4-11eb-a46e-831b23dc7360",
+    "security_incident": "Confirmed",
+    "reference": "https://www.infosecurity-magazine.com/news/education-nonprofit-leaks-data/ ; http://www.digitaljournal.com/business/international-education-institute-involved-in-major-data-breach/article/567106",
+    "summary": "A US education non-profit appears to have unwittingly leaked the personal information of thousands of students after leaving two online MongoDB databases exposed.  The privacy snafu was discovered by noted researcher Bob Diachenko and affected the Institute of International Education (IIE), an organization set up to promote educational and cultural exchanges with other countries.  “Although the database itself did not contain documents, it did contain links with active access tokens to documents stored elsewhere,” explained Security Discovery. “Links to passport scans, application forms, visas, emails, and other documents were discovered.”  Also among the leaked data were medical forms, funding information, student dossiers, US arrival documents and tax forms.  As the links to the sensitive personal documents were contained in around three million log files, it’s hard to estimate the total number of affected students, but Diachenko claimed they run into the thousands “if not more.”  Two identical MongoDB databases hosted at different IP addresses were left unsecured in the same manner, allowing anyone scanning for exposed systems to open them and take a look inside.  If either database was accessed it could provide a treasure trove of sensitive information for use in follow-on fraud, according to Security Discovery.  “An identity thief couldn’t ask for a better payload. The alarming amount of personal and financial data would make it easy for a criminal to open up new accounts and lines of credit in victims’ names, for example,” it warned.  “College-aged students are prime targets for identity theft because they often have clean credit reports and decent credit scores. We strongly urge impacted students to check their credit reports regularly in the upcoming months. Tax fraud is another threat, so impacted students should be on the lookout for tax scams during the upcoming tax season.”  Although IIE secured the data on February 6, eight days after being alerted to the leak by Diachenko, it did not respond personally to any of his messages, or to provide any public comment to those affected.",
+    "confidence": "High",
+    "targeted": "NA",
+    "discovery_notes": "Bob Diachenko discovered it",
+    "schema_version": "1.3.5"
+}

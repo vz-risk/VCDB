@@ -1,0 +1,111 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 1,
+            "day": 29
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "11 to 100",
+        "state": "CA",
+        "industry": "522320"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 6700000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfigured db left open to internet"
+            }
+        ],
+        "modified": "2021-02-19T23:30:21.488Z",
+        "created": "2021-02-19T23:29:51.560Z",
+        "master_id": "66f9c7d4-4c2a-48d6-9746-1e6ebbe6bce4",
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2021,
+        "github": "14969"
+    },
+    "incident_id": "26fe7430-72d6-11eb-a46e-831b23dc7360",
+    "security_incident": "Confirmed",
+    "reference": "https://www.scmagazine.com/home/security-news/cloud-security/cornerstone-payment-systems-leaves-database-open-exposes-6-7m-records/",
+    "summary": "Cornerstone Payment Systems, which processes payments for pro-life groups, churches, ministries and other organizations with a similar Christian bent, left a database unprotected, exposing 6.7 million records from 2013 until the present.  Information housed by the database included names, email addresses and physical addresses as well as card and merchant information, expiration dates and the last four digits of cards used in payment, according to a TechCrunch report. Transaction details, such as merchants, type of payment, times and dates are also stored on the database discovered by security researcher Anurag Sen.  Tustin, Calif.-based Cornerstone, which bills itself as “committed to separating ourselves from the industry through a commitment to Christ,” did not encrypt the database but seems to have used tokenization, the report said.",
+    "confidence": "Medium",
+    "targeted": "NA",
+    "discovery_notes": "Anurag Sen discovered db",
+    "schema_version": "1.3.5"
+}
