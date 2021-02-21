@@ -1,0 +1,109 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 2
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "Unknown"
+        ],
+        "industry": "5412",
+        "employee_count": "Unknown"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "notes": "Database exposed on AWS"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 8000000
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "modified": "2021-02-22T07:35:29.409Z",
+        "created": "2021-02-22T07:35:03.128Z",
+        "master_id": "5456801a-f314-4b60-9a8c-f4e8afef612c",
+        "analysis_status": "Finalized",
+        "analyst": "Pinto",
+        "dbir_year": 2021,
+        "github": "15324"
+    },
+    "incident_id": "5dd57d30-749a-11eb-b6c3-130fdd35ca3d",
+    "security_incident": "Confirmed",
+    "reference": "https://tamebay.com/2020/03/change-your-amazon-mws-credentials-following-vat-service-app-breach.html",
+    "summary": "A VAT services company appears to have hosted an unsecured database on AWS with millions of sale records including customer names, email addresses, shipping addresses, purchases, and the last four digits of credit card numbers. Also in the database were hundreds of thousands of Amazon Marketplace Web Services (MWS) queries, an MWS authenticaiton token, AWS access key ID, and a secret key.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.5"
+}
