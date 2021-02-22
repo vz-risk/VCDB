@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "After gaining control of the accounts, the actors posted messages to get followers of the accounts to send them bitcoin.",
+      "result": [
+        "Other"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Helpdesk"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "GB"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "150154"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Helpdesk"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "cd8d7dc0-74a5-11eb-a956-8766d2dd0181",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-02-22T08:47:32.530Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Socially engineered help desk to gain control of accounts"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Tweets sent masquerading as account holder encouraging followers to send bitcoin"
+      }
+    ],
+    "github": "15911",
+    "master_id": "9e6012c6-7e2d-416c-9d03-fa50f0ffb982",
+    "modified": "2021-02-22T08:47:32.530Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://news.softpedia.com/news/bill-gates-elon-musk-apple-twitter-accounts-hacked-530548.shtml; https://www.washingtonpost.com/technology/2020/07/15/musk-gates-twitter-hack/; https://krebsonsecurity.com/2020/07/whos-behind-wednesdays-epic-twitter-hack/; https://www.bigcountryhomepage.com/news/tech-news/twitter-says-attackers-successfully-targeted-some-of-our-employees-to-gain-internal-tools/; https://www.windowscentral.com/twitter-says-130-accounts-targeted-45-compromised-security-breach; https://www.tampabay.com/news/crime/2020/07/31/17-year-old-in-tampa-arrested-for-hack-of-prominent-twitter-accounts/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Twitter accounts of several high-profile users, many of which were \u201cverified\u201d on the social network, have been hacked, with malicious actors posting messages that encouraged followers to send money to a certain Bitcoin address.  The affected Twitter accounts include Bill Gates, Elon Musk, Coinbase, Coindesk, Jeff Bezos, Joe Bezos, Uber, and others.  \u201cEveryone is asking me to give back, and now is the time. I am doubling all payments sent to my BTC address for the next 30 minutes. You send $1,000, I send you back $2,000,\u201d the fake message posted on Bill Gates\u2019 Twitter account read.  All messages posted by the cybercriminals behind the hack have already been removed, and Twitter even blocked the accounts from tweeting as an investigation started.  As for how the hack was possible, Twitter says it discovered a coordinated social engineering attack that was aimed at its employees. Most of the targets had access to internal systems and tools, and this how the malicious actors ended up with access to the high-profile accounts.  \u201cWe know they used this access to take control of many highly-visible (including verified) accounts and Tweet on their behalf. We\u2019re looking into what other malicious activity they may have conducted or information they may have accessed and will share more here as we have it,\u201d Twitter says.  A 17-year-old from Tampa is at the center of a Twitter hack scheme which gave him and two others access to the high-profile accounts of Bill Gates, Barack Obama and many other celebrities with millions of followers, authorities say.  Graham Ivan Clark was arrested Friday at his home in Greater Northdale, according to the Hillsborough State Attorney\u2019s Office. The two others charged Friday are 22-year-old Nima Fazeli of Orlando and 19-year-old Mason Sheppard of the United Kingdom, according to the U.S. Attorney\u2019s Office in California.  Clark\u2019s scheme was to steal the identities of prominent people, then post messages in their names directing victims to send Bitcoin to accounts he owned. The accounts received more than 400 transfers and he reaped more than $100,000 in Bitcoin in just one day, the state attorney\u2019s office said Friday.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Twitter"
+  }
+}
