@@ -1,0 +1,154 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2021
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "ZA"
+        ],
+        "employee_count": "Unknown",
+        "industry": "722511",
+        "locations_affected": 1
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Possession abuse"
+            ],
+            "vector": [
+                "Physical access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ],
+            "notes": "Copied credit cards while working as waiter"
+        },
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Victim public area"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Cashier"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "M - Payment card"
+            },
+            {
+                "variety": "U - POS terminal"
+            }
+        ],
+        "cloud": [
+            "NA"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Processed"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Fraudulent transaction",
+                "Hardware tampering"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Fraud detection"
+            ]
+        }
+    },
+    "value_chain": {
+        "cash-out": {
+            "variety": [
+                "Direct"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "med",
+                "attribute": "cp",
+                "summary": "copied cards being handled"
+            },
+            {
+                "action": "phy",
+                "actor": "int",
+                "asset": "ter",
+                "attribute": "ia",
+                "summary": "installed skimmer"
+            },
+            {
+                "action": "phy",
+                "actor": "int",
+                "asset": "ter",
+                "attribute": "cp",
+                "summary": "skimmer stole cards as well"
+            }
+        ],
+        "modified": "2021-06-10T18:38:15.702Z",
+        "created": "2021-06-10T18:38:15.702Z",
+        "timeline": {
+            "notification": {
+                "year": 2021,
+                "month": 3,
+                "day": 21
+            }
+        },
+        "master_id": "04c9e345-5521-422e-aaff-6507ca0d4003",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2021,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "17479"
+    },
+    "incident_id": "607d5130-c9f8-11eb-8af5-ed6b4a3c0fb5",
+    "security_incident": "Confirmed",
+    "reference": "https://www.ofm.co.za/article/sa/302814/waiter-nabbed-for-card-skimming-worth-r50-000-",
+    "summary": "A 32-year-old waiter has been arrested for duplicating patrons' bank cards at a Midstream Estate restaurant in Olifantsfontein.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.5"
+}
