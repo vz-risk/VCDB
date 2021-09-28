@@ -1,0 +1,165 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2017
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "AT&T",
+        "employee_count": "Over 100000",
+        "industry": "517312"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Other"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Bribery"
+            ],
+            "vector": [
+                "IM"
+            ],
+            "target": [
+                "Unknown"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "Remote access"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        },
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            },
+            {
+                "variety": "P - Unknown",
+                "amount": 3
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Modify configuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Law enforcement"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Bribed internal employees"
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Internal users gave up credenetials to bad person"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Credentials were used to unlock phones"
+            }
+        ],
+        "modified": "2021-07-14T19:05:13.385Z",
+        "created": "2021-07-14T19:05:13.385Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 8,
+                "day": 5
+            }
+        },
+        "master_id": "88379a93-5c9d-4b0f-a3b9-70349d06980d",
+        "analysis_status": "Finalized",
+        "analyst": "planglois",
+        "dbir_year": 2022,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "14279"
+    },
+    "incident_id": "e0a3af20-e4b1-11eb-8ef6-fbb8d39928b9",
+    "security_incident": "Confirmed",
+    "reference": "https://arstechnica.com/tech-policy/2019/08/att-employees-took-bribes-to-unlock-phones-and-plant-malware-doj-says/#:~:text=In%20all%2C%20AT%26T%20insiders%20received,cell%20phones%2C%20the%20government%20alleged.&text=AT%26T%20generally%20locks%20phones%20to,being%20used%20with%20other%20carriers.",
+    "summary": "AT&T Workers took $1 million in bribes to unlock 2 million phones, DOJ says",
+    "targeted": "Targeted",
+    "schema_version": "1.3.5"
+}

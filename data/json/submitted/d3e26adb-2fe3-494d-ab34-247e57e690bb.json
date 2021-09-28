@@ -1,0 +1,161 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 11,
+            "day": 23
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Minutes"
+        },
+        "containment": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Wright Global Graphics",
+        "industry": "323111",
+        "employee_count": "101 to 1000",
+        "locations_affected": 1,
+        "state": "NC"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Email attachment"
+            ],
+            "result": [
+                "Deploy payload"
+            ],
+            "notes": "Ryuk"
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "U - Desktop"
+            },
+            {
+                "variety": "S - Unknown"
+            },
+            {
+                "variety": "P - Unknown"
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "Potentially"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "social engineer a user"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "malware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypted stuff"
+            }
+        ],
+        "modified": "2021-07-14T18:22:57.125Z",
+        "created": "2021-07-14T18:22:57.125Z",
+        "timeline": {
+            "notification": {
+                "year": 2021,
+                "month": 4,
+                "day": 14
+            }
+        },
+        "master_id": "d3e26adb-2fe3-494d-ab34-247e57e690bb",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2022,
+        "github": "17458"
+    },
+    "incident_id": "bad2cd90-e4ab-11eb-8ef6-fbb8d39928b9",
+    "security_incident": "Confirmed",
+    "reference": "https://bedtimesmagazine.com/2021/04/how-wright-global-graphics-handled-a-data-breach/",
+    "summary": "Wright Global Graphics experiences a ransomware attack that started from a phishing email",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.5"
+}
