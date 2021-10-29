@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
-  "description": "VERIS VCDB Schema 1.3.5.",
+  "description": "VERIS VCDB Schema 1.3.6.",
   "properties": {
     "incident_id": {
       "type": "string",
@@ -197,10 +197,12 @@
           "type": "string"
         },
         "secondary": {
+          "description": "Secondary victims indicates that the breach being coded is the first part of a supply chain breach.",
           "additionalProperties": false,
           "minProperties": 1,
           "properties": {
             "amount": {
+              "definition": "The number of known secondary victims. Should always be a positive number if victim_id is filled in.  May not represent all victims if some are unknown.",
               "type": "integer"
             },
             "notes": {
@@ -227,7 +229,7 @@
               "type": "integer"
             },
             "iso_currency_code": {
-              "description": "ISO_4217 currency code. <a href='https://en.wikipedia.org/wiki/ISO_4217' target='_blank'>More Info</a>",
+              "description": "ISO4217 currency code. <a href='https://w.wiki/3Sfv' target='_blank'>More Info</a>",
               "type": "string"
             }
           },
@@ -616,7 +618,7 @@
           "type": "object"
         },
         "internal": {
-          "description": "The victim or a part thereof (such as an employee). <a href='http://veriscommunity.net/actors.html#section-internal' target='_blank'>More Info</a>",
+          "description": "The victim or a part thereof (such as an employee). <a href='http://veriscommunity.net/actors.html#section-internal' target='_blank'>More Info</a>.  Unless it is an error or intentional breaking of rules (misuse), the actor MUST be acting maliciously.",
           "additionalProperties": false,
           "properties": {
             "variety": {
@@ -657,7 +659,7 @@
           "type": "object"
         },
         "partner": {
-          "description": "An entity with an organizational relationship to the victim, but not the victim. <a href='http://veriscommunity.net/actors.html#section-partner' target='_blank'>More Info</a>",
+          "description": "An entity with an organizational relationship to the victim, but not the victim (such as a customer or supplier). <a href='http://veriscommunity.net/actors.html#section-partner' target='_blank'>More Info</a>",
           "additionalProperties": false,
           "properties": {
             "motive": {
@@ -1042,7 +1044,7 @@
       "type": "string"
     },
     "value_chain": {
-      "description": "Capabilities and investments an attacker must aquire prior to the actions on target.  May be internal to the actors organization (vertically integrated org), or external (purchased in a criminal market).",
+      "description": "Capabilities and investments an attacker must acquire prior to the actions on target, (either by purchase or investment in creating).  May be internal to the actors organization (vertically integrated org), or external (purchased in a criminal market).",
       "minProperties": 1,
       "additionalProperties": false,
       "properties": {
@@ -1198,7 +1200,7 @@
           "type": "string"
         },
         "iso_currency_code": {
-          "description": "ISO_4217 currency code. <a href='https://en.wikipedia.org/wiki/ISO_4217' target='_blank'>More Info</a>",
+          "description": "ISO4217 currency code. <a href='https://w.wiki/3Sfv' target='_blank'>More Info</a>",
           "type": "string"
         },
         "overall_amount": {
@@ -1274,7 +1276,7 @@
           "type": "string"
         },
         "analysis_status": {
-          "description": "In-progress (not yet complete) -> Needs review (complete but not reviewed) -> First pass (One person has reviewed) -> Reviewed (Two people have reviewed) -> Finalized (Reviewed by single person reviewing all data)",
+          "description": "In-progress (not yet complete) -> Ready for review (complete but not reviewed by DBIR team) -> First pass (One person has reviewed) -> Reviewed (Two people have reviewed) -> Finalized (Reviewed by single person reviewing all data)",
           "minLength": 1,
           "type": "string"
         },
@@ -1579,7 +1581,12 @@
     "schema_version": {
       "description": "Schema version in use. This should be 1.3.4 for this schema.",
       "type": "string",
-      "default": "1.3.5"
+      "default": "1.3.6"
+    },
+    "schema_name": {
+      "description": "Name of Schema.  This can be used to signal to software reading the schema which it is.  Common values are 'verisc', 'dbir', and 'vcdb'.",
+      "type": "string",
+      "default": "verisc"
     }
   },
   "required": [
