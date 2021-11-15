@@ -1,0 +1,177 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Executive"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "IR"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "name": [
+        "Hezbollah"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      },
+      {
+        "amount": 1,
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Classified"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "349c1500-38d0-11ec-b42b-a7ad11fc87ee",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-10-29T23:06:54.803Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "phished victim"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used stolen creds to access mail and other drives to exfiltrate data"
+      }
+    ],
+    "github": "17774",
+    "master_id": "b3b9a774-568b-4aab-aa51-79a84c03353d",
+    "modified": "2021-10-29T23:06:54.803Z",
+    "timeline": {
+      "notification": {
+        "day": 15,
+        "month": 6,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://news.softpedia.com/news/iran-said-to-hack-former-israeli-army-chief-of-staff-access-his-entire-computer-533222.shtml",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A cybercriminal working for Iran attacked the computer of a former IDF chief of staff and gained access to his entire computer database, says Times of Israel.    Channel 10 identified the hacker as Yaser Balaghi. He reportedly bragged about the hack afterward, but also unknowingly left a trail of his identity. This oversight forced Iran to shut down the cyber operation that had targeted 1,800 people worldwide, including Israeli army generals, Persian Gulf human rights defenders, and academics.  The Times of Israel first reported on the Iranian hacking operation two weeks ago after Check Point, an Israeli cybersecurity firm, revealed its existence. Check Point information was also highlighted in a Channel 10 report on Tuesday. The CEO of Check Point Software Technologies, Gil Shwed, told Israel Radio in late January that the attack began two months earlier and that targets received email messages aimed at installing malware on their computers.  More than a quarter of the recipients opened the emails, unintentionally downloading spyware and allowing the hackers to steal data from their hard drives.  In the last two years, Hezbollah and the Iranian regime attacked Israel several times  Several cyberattacks have been launched against Israel in the last two years. According to officials, some of the infiltration efforts were carried out by hackers associated with Hezbollah and the Iranian government.  In late January, Energy Minister Yuval Steinitz stated that Israel's Electric Authority was the subject of a serious cyberattack. However, he did not specify where the attack was coming from.  In June, the Israeli cybersecurity firm ClearSky announced that it had detected a continuous wave of cyberattacks originating from Iran against targets in Israel and in the Middle East, with Israeli generals again among the targets. According to the company, the purpose is espionage or other nation-state interests.  According to ClearSky, the hackers use techniques such as targeted phishing, in which they employ fake websites that appear legitimate and trustworthy to obtain user identification data. They managed to penetrate 40 targets in Israel and 500 internationally. In Israel, the targets included retired generals, employees of security consulting firms, and academic scholars.  Shwed warned that the rate of cyberattacks exceeds the rate of investment in cybersecurity.  According to Gadi Tirosh, the managing partner of Jerusalem Venture Partners and one of the country's most active investors in the industry, Israel is second only to the US in cybersecurity technology.  Currently, there are 173 companies in Israel that are large enough to attract venture capital and other major investors. According to a report released earlier this month by the Israel Venture Capital (IVC) Research Center, there are currently 430 cyber companies in Israel, with an average of 52 new cyber startups launched each year since 2000.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Persona"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "928110",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Israeli Defense Force"
+  }
+}

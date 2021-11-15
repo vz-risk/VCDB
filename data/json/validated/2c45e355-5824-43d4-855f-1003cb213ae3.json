@@ -1,0 +1,165 @@
+{
+  "action": {
+    "malware": {
+      "name": "PrintNightmare",
+      "result": [
+        "Deploy payload",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Ransomware"
+      ],
+      "vector": [
+        "Download by malware"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Vice Society",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5393,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "3b63e2b0-35b4-11ec-be76-613d00a742ca",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "created": "2021-10-25T23:43:01.338Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "exploited vuln and installed ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "gained access to confidential data as it was found on darknet"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "executed ransomware"
+      }
+    ],
+    "github": "18049",
+    "master_id": "2c45e355-5824-43d4-855f-1003cb213ae3",
+    "modified": "2021-10-25T23:43:01.338Z",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 11,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://marketresearchtelecast.com/switzerland-citizen-and-municipality-data-published-on-darknet/142498/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "At the end of May, the municipal administration of the tranquil town of Rolle in French-speaking Switzerland was the victim of a cyber attack. This became known to the public recently through research on the news portal watson.ch. The result of the attack: The data of all residents and other documents have been quite easy to find on the Darknet since mid-June, according to Watson.   Numerous sensitive data stocks now in the Darknet The news portal reports of a \u201cmassive data leak\u201d and a \u201clarge amount of internal and confidential documents\u201d that are accessible on the Darknet. Several media outlets investigated and found, in addition to detailed personal data on residents and those of community employees and companies, the Outlook mailboxes of the former mayor and the head of administration as well as documents on the community\u2019s financial planning. Even certificates with school grades from schoolchildren and information from children who were infected with the coronavirus can now be found on the Darknet. The annual assessments and comments can be seen from the community employees, writes the NZZ. Presumably, according to Watson, the criminals were able to access a server in the community for a long time and extract large amounts of data unnoticed.   The city council of Rolle initially claimed to Watson that it had no knowledge of a cyber attack, writes the news portal. Confronted by Watson with documents from the Darknet, the local government initially refused to comment. Then, last weekend, Mayor Monique Choulat-Pugnale finally admitted to the Vaud daily 24 heures that she had discovered a break in her IT systems at the end of May.Cyber \u200b\u200bcriminals entered the community\u2019s computer network via ransomware attacks \u2013 presumably through a vulnerability in the operating system. The mayor stressed that the community had not paid a ransom. But it was only a \u201cminor attack\u201d. Only e-mails that contained \u201cno sensitive data\u201d were hacked, the president said. According to 24 heures, the mayor is also responsible for the IT systems of the community in Rolle. In a press release, the community finally announced that it had completely restored the data from current backups. But that was apparently difficult because the perpetrators had encrypted data on some administration servers and prevented access.   With the support of the Federal Computer Emergency Center (GovCERT), the Cantonal Police of Vaud and a specialized company, the IT systems were restored. However, this took ten days. Meanwhile, according to media reports, the community withheld the scope of the incident from the public \u2013 \u201con the advice of cybersecurity experts and in order not to increase the community\u2019s vulnerability\u201d.  Cyber \u200b\u200bcriminals likely took advantage of \u201cPrintNightmare\u201d vulnerability An IT specialist turned to Le Temps and reported that he had discovered an Excel table on the Darknet with the sometimes sensitive data of 5393 residents of the community. The newspaper then exposed the full extent of the attack, thereby confirming the Watson article.  The Watson journalists attribute the attack to the cyber criminal group \u201cVice Society\u201d, which, according to the IT security experts at Cisco Talos, specializes in attacks on small and medium-sized companies as well as on public institutions. The one used by the cyber criminals Ransomware is said to use the \u201cPrintNightmare\u201d vulnerability in the Windows printing system to have. Vice Society ransomware has been detected by experts since June and, according to their findings, is a variant of \u201cHelloKitty\u201d ransomware, which is also used for attacks on Windows and Linux IT systems, primarily for small to medium-sized targets.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 11
+    },
+    "incident": {
+      "day": 28,
+      "month": 5,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Exploit Kits",
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CH"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Local"
+    ],
+    "industry": "999300",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Municipality of Rolle"
+  }
+}

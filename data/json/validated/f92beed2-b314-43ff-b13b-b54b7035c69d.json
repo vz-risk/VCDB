@@ -1,0 +1,136 @@
+{
+  "action": {
+    "error": {
+      "notes": "left open to internet with no password or other basic security",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 323000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "discovered by website planet with Jeremiah Fowler",
+  "incident_id": "9a202c40-d921-11eb-8217-91ad7b220efe",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "asset_os": [
+      "Windows"
+    ],
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "No",
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2021-06-30T02:49:57.507Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "left database open to internet"
+      }
+    ],
+    "github": "16947",
+    "master_id": "f92beed2-b314-43ff-b13b-b54b7035c69d",
+    "modified": "2021-06-30T02:49:57.507Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 1,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://threatpost.com/criminal-domestic-case-cook-county-leak23k-sensitive-court-records/163336/ ; https://www.securitymagazine.com/articles/94423-277-cook-county-illinois-records-exposed",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A non-password protected database exposed 323,000 court records for at least four months, according to researchers. The database exposed the names of various people involved in sensitive criminal, domestic-abuse or child-custody court cases, related to a county in Illinois.  Researchers from Website Planet (in conjunction with security researcher Jeremiah Fowler) said they don\u2019t know who owns the exposed database in question. The data is related to Cook County, home to the city of Chicago and which has 5.1 million residents (making it the second most populous county in the U.S., behind Los Angeles county), they said.  \u201cOn January 29th, 2021, the Cook County Bureau of Technology reached out to us to inform us that the server did not belong to the Cook County government,\u201d said researchers with Website Planet in an update on Jan. 31. \u201cThe owner of the server was still unknown as of that day.\u201d",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Months",
+      "value": 5
+    },
+    "incident": {
+      "day": 26,
+      "month": 9,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Regional"
+    ],
+    "industry": "922110",
+    "notes": "PLEASE NOTE*- It is unknown who the actual victim organization was. It could be government related but could also be some sort of legal aid etc. ",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Cook County Illinois"
+  }
+}

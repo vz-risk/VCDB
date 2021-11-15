@@ -1,0 +1,132 @@
+{
+  "action": {
+    "error": {
+      "notes": "left servers with default creds",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 3,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 3
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 21000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "posted on criminal forum for sale",
+  "incident_id": "6f951100-de8c-11eb-92f2-17e9027f1a94",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "No",
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-07-07T23:03:34.473Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "left database with default credentials resulting in data being stolen and sold on criminal forum"
+      }
+    ],
+    "github": "17148",
+    "master_id": "d20b66d1-a928-4b47-aa15-27a3bd78f838",
+    "modified": "2021-07-07T23:03:34.473Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 26,
+        "month": 1,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://cybernews.com/security/one-of-the-biggest-android-vpns-hacked-data-of-21-million-users-from-3-android-vpns-put-for-sale-online/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A user on a popular hacker forum is selling three databases that purportedly contain user credentials and device data stolen from three different Android VPN services \u2013 SuperVPN, GeckoVPN, and ChatVPN \u2013 with 21 million user records being sold in total. The VPN services whose data has been allegedly exfiltrated by the hacker are SuperVPN, which is considered as one of the most popular (and dangerous) VPNs on Google Play with 100,000,000+ installs on the Play store, as well as GeckoVPN (1,000,000+ installs) and ChatVPN (50,000+ installs).  The forum user is selling deeply sensitive device data and login credentials \u2013 email addresses and randomly generated strings used as passwords \u2013 of more than 21 million VPN users for an undisclosed sum.   We reached out to SuperVPN, GeckoVPN, and ChatVPN and asked the providers if they could confirm that the leak was genuine but we have received no responses at the time of writing this report. The author of the forum post is selling three archives, two of which allegedly contain a variety of data apparently collected by the providers from more than 21,000,000 SuperVPN, GeckoVPN, and ChatVPN users, including:  Email addresses Usernames Full names Country names Randomly generated password strings Payment-related data Premium member status and its expiration date The forum post author is also offering potential buyers to sort the data by country. The random password strings might indicate that the VPN user accounts could be linked with their Google Play store accounts where the users downloaded their VPN apps from. ",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "notes": "reference online said it claims to be located somewhere else but is actually a chinese company",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "victim_id": [
+        "Gecko VPN",
+        "ChatVPN"
+      ]
+    },
+    "victim_id": "SuperSoftTech"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "RansomEXX ransomware gang"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "notes": "some data was published to prove it was downloaded prior to encryption",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "50244a90-35d3-11ec-be76-613d00a742ca",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-10-26T20:54:20.238Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware installed on systems - unclear how this was done"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data was downloaded prior to execution of ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "executed ransomware"
+      }
+    ],
+    "github": "17989",
+    "master_id": "6ea33b70-d58f-43eb-902f-d002488ae9d4",
+    "modified": "2021-10-26T20:54:20.238Z",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 8,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://news.softpedia.com/news/gigabyte-suffers-data-breach-following-ransomware-attack-533713.shtml ; https://www.bleepingcomputer.com/news/security/computer-hardware-giant-gigabyte-hit-by-ransomexx-ransomware/; http://nunewsindustry.com/gigabyte-ransomware-attack-rasomexx-gang-stole-112gb-of-data/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "According to Bleeping Computer, Gigabyte was the target of a ransomware attack last week and are currently being blackmailed with the exposure of 112GB of the stolen data.  The corporation announced that it shut down its IT infrastructure and that a small number of servers were impacted, but there are indications that the attack was more widespread. Multiple websites owned by the company were also affected by the incident, including its support site and elements of the company's Chinese website.  RansomEXX claimed to have taken 112GB of sensitive internal data as well as information from the American Megatrends Git Repository, among other things. Intel and AMD processors details as well as a debug document are suspected to be among the sensitive info. Although Gigabyte has said it plans to report the theft to authorities, the company did not provide any clues on whether they intend to pay the ransom.  The ransom note contains a link to a private page that only the victim is supposed to access to test decrypting a single file and leave an email address so that negotiations for the ransom can begin. Taiwanese motherboard maker Gigabyte has been hit by the RansomEXX ransomware gang, who threaten to publish 112GB of stolen data unless a ransom is paid.  Gigabyte is best known for its motherboards, but also manufactures other computer components and hardware, such as graphics cards, data center servers, laptops, and monitors. The attack occurred late Tuesday night into Wednesday and forced the company to shut down systems in Taiwan. The incident also affected multiple websites of the company, including its support site and portions of the Taiwanese website While Gigabyte has not officially stated what ransomware operation performed the attack, BleepingComputer has learned it was conducted by the RansomEXX gang.  When the RansomEXX operators encrypt a network, they will create ransom notes on each encrypted device.  These ransom notes contain a link to a non-public page meant to only be accessible to the victim to test the decryption of one file and to leave an email address to begin ransom negotiations.  Today, a source sent BleepingComputer a link to a non-public RansomEXX leak page for Gigabytes Technologies, where the threat actors claim to have stolen 112GB of data during the attack.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 5,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "332510",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Gigabyte"
+  }
+}
