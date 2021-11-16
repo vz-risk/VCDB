@@ -658,6 +658,7 @@
         "Email other": "Email sub-variety known, but not one of those listed (attachment, link, autoexecute, etc). Child of 'Email'",
         "Instant messaging": "Instant Messaging",
         "Network propagation": "Network propagation",
+        "Partner": "Partner connection or credential. (Indicates supply chain breach.)",
         "Remote injection": "Remotely injected by agent (i.e. via SQLi)",
         "Removable media": "Removable storage media or devices",
         "Software update": "Included in automated software update",
@@ -687,6 +688,7 @@
         "Extortion": "Extortion or blackmail",
         "Forgery": "Forgery or counterfeiting (fake hardware, software, documents, etc)",
         "Influence": "Influence tactics (Leveraging authority or obligation, framing, etc)",
+        "Partner": "Partner connection or credential. (Indicates supply chain breach.)",
         "Phishing": "Any type of *ishing.  Phishing always involves getting data from the victim. Phishing usually has some element of pretexting, but often it doesn\u2019t rise to the level of an invented scenario. E.g. A fake google login page isn\u2019t really pretexting.",
         "Pretexting": "Pretexting (dialogue leveraging invented scenario).  Unlike 'Phishing', does not transfer data. (A fraudulent transfer or changing a bank account on a business account is not really disclosing data.",
         "Propaganda": "Propaganda or disinformation",
@@ -2351,73 +2353,13 @@
     "Unknown": "Unknown"
   },
   "plus": {
-    "attack_difficulty_subsequent": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "NA": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "event_chain": {
-      "action": {
-        "env": "Environmental",
-        "err": "Error",
-        "hak": "Hacking",
-        "mal": "Malware",
-        "mis": "Misuse",
-        "phy": "Physical",
-        "soc": "Social",
-        "unk": "Unknown"
-      },
-      "attribute": {
-        "au": "Availability",
-        "cp": "Confidentiality",
-        "ia": "Integrity",
-        "unk": "Unknown"
-      },
-      "actor": {
-        "ext": "External",
-        "int": "Internal",
-        "prt": "Partner",
-        "unk": "Unknown"
-      },
-      "asset": {
-        "emb": "Embedded",
-        "med": "Media",
-        "net": "Network",
-        "ppl": "People",
-        "srv": "Server",
-        "ter": "Public terminal",
-        "usr": "User device",
-        "unk": "Unknown"
-      }
-    },
-    "attribute": {
-      "confidentiality": {
-        "data_abuse": {
-          "Yes": "Data was misused or abused",
-          "No": "Data was not misused or abused",
-          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
-          "Unknown": "No information is known about if the data was abused"
-        },
-        "partner_data": {
-          "Yes": "Partner data was compromised",
-          "No": "Partner data was not compromised",
-          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
-          "Unknown": "No information is known about if partner data was compromised"
-        },
-        "credit_monitoring": {
-          "Yes": "Credit monitoring was offered",
-          "No": "Credit monitoring was not offered",
-          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
-          "Unknown": "No information is known about if credit monitoring was offered"
-        }
-      }
-    },
     "pci": {
-      "req_12": {
+      "compliance_status": {
+        "Not Compliant": "No label.",
+        "Found Compliant": "No label.",
+        "Unknown": "No label."
+      },
+      "req_6": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2429,7 +2371,7 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_6": {
+      "req_1": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2441,19 +2383,7 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_7": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_1": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_2": {
+      "req_11": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2472,7 +2402,7 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_11": {
+      "req_2": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2484,12 +2414,19 @@
         "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "compliance_status": {
-        "Not Compliant": "No label.",
-        "Found Compliant": "No label.",
+      "req_4": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
         "Unknown": "No label."
       },
-      "req_4": {
+      "req_7": {
+        "In Place": "No label.",
+        "Not In Place": "No label.",
+        "Not Applicable": "No label.",
+        "Unknown": "No label."
+      },
+      "req_12": {
         "In Place": "No label.",
         "Not In Place": "No label.",
         "Not Applicable": "No label.",
@@ -2502,12 +2439,102 @@
         "Unknown": "No label."
       }
     },
+    "asset_os": {
+      "Android": "No label.",
+      "Apple iOS": "No label.",
+      "BlackBerry OS": "No label.",
+      "Linux": "No label.",
+      "Mac OSX": "No label.",
+      "Mainframe": "No label.",
+      "Symbian": "No label.",
+      "Unix": "No label.",
+      "webOS": "No label.",
+      "Windows": "No label.",
+      "Windows Phone": "No label.",
+      "NA": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
+    },
     "unknown_unknowns": {
       "Assets that had unknown network connections or accessibility": "No label.",
       "Assets that had unknown user accounts or privileges": "No label.",
       "Assets unknown or unclaimed by the organization (or business group affected)": "No label.",
       "Data the organization did not know existed on a particular asset": "No label.",
       "Unknown": "No label."
+    },
+    "event_chain": {
+      "action": {
+        "env": "Environmental",
+        "err": "Error",
+        "hak": "Hacking",
+        "mal": "Malware",
+        "mis": "Misuse",
+        "phy": "Physical",
+        "soc": "Social",
+        "unk": "Unknown"
+      },
+      "asset": {
+        "emb": "Embedded",
+        "med": "Media",
+        "net": "Network",
+        "ppl": "People",
+        "srv": "Server",
+        "ter": "Public terminal",
+        "usr": "User device",
+        "unk": "Unknown"
+      },
+      "actor": {
+        "ext": "External",
+        "int": "Internal",
+        "prt": "Partner",
+        "unk": "Unknown"
+      },
+      "attribute": {
+        "au": "Availability",
+        "cp": "Confidentiality",
+        "ia": "Integrity",
+        "unk": "Unknown"
+      }
+    },
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": {
+          "Yes": "Credit monitoring was offered",
+          "No": "Credit monitoring was not offered",
+          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
+          "Unknown": "No information is known about if credit monitoring was offered"
+        },
+        "data_abuse": {
+          "Yes": "Data was misused or abused",
+          "No": "Data was not misused or abused",
+          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
+          "Unknown": "No information is known about if the data was abused"
+        },
+        "partner_data": {
+          "Yes": "Partner data was compromised",
+          "No": "Partner data was not compromised",
+          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
+          "Unknown": "No information is known about if partner data was compromised"
+        }
+      }
+    },
+    "attack_difficulty_legacy": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "NA": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
+    },
+    "attack_difficulty_initial": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "NA": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
     },
     "analysis_status": {
       "In-progress": "Incident is currently being entered.",
@@ -2517,7 +2544,7 @@
       "Finalized": "The incident has been reviewed by a single person reviewing all data for consistency across sources.",
       "Ineligible": "Does not meet the criteria to be included in the corpus."
     },
-    "attack_difficulty_legacy": {
+    "attack_difficulty_subsequent": {
       "High": "No label.",
       "Moderate": "No label.",
       "Low": "No label.",
@@ -2538,31 +2565,6 @@
       "Yes": "No label.",
       "No": "No label.",
       "Unknown": "No label."
-    },
-    "asset_os": {
-      "Android": "No label.",
-      "Apple iOS": "No label.",
-      "BlackBerry OS": "No label.",
-      "Linux": "No label.",
-      "Mac OSX": "No label.",
-      "Mainframe": "No label.",
-      "Symbian": "No label.",
-      "Unix": "No label.",
-      "webOS": "No label.",
-      "Windows": "No label.",
-      "Windows Phone": "No label.",
-      "NA": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "attack_difficulty_initial": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "NA": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
     }
   }
 }

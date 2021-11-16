@@ -658,6 +658,7 @@
         "Email other", 
         "Instant messaging", 
         "Network propagation", 
+        "Partner", 
         "Remote injection", 
         "Removable media", 
         "Software update", 
@@ -687,6 +688,7 @@
         "Extortion", 
         "Forgery", 
         "Influence", 
+        "Partner", 
         "Phishing", 
         "Pretexting", 
         "Propaganda", 
@@ -2351,73 +2353,13 @@
     "Unknown"
   ], 
   "plus": {
-    "attack_difficulty_subsequent": [
-      "High", 
-      "Moderate", 
-      "Low", 
-      "Very Low", 
-      "NA", 
-      "Unknown", 
-      "Other"
-    ], 
-    "event_chain": {
-      "action": [
-        "env", 
-        "err", 
-        "hak", 
-        "mal", 
-        "mis", 
-        "phy", 
-        "soc", 
-        "unk"
-      ], 
-      "attribute": [
-        "au", 
-        "cp", 
-        "ia", 
-        "unk"
-      ], 
-      "actor": [
-        "ext", 
-        "int", 
-        "prt", 
-        "unk"
-      ], 
-      "asset": [
-        "emb", 
-        "med", 
-        "net", 
-        "ppl", 
-        "srv", 
-        "ter", 
-        "usr", 
-        "unk"
-      ]
-    }, 
-    "attribute": {
-      "confidentiality": {
-        "data_abuse": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ], 
-        "partner_data": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ], 
-        "credit_monitoring": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ]
-      }
-    }, 
     "pci": {
-      "req_12": [
+      "compliance_status": [
+        "Not Compliant", 
+        "Found Compliant", 
+        "Unknown"
+      ], 
+      "req_6": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2429,7 +2371,7 @@
         "Not Applicable", 
         "Unknown"
       ], 
-      "req_6": [
+      "req_1": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2441,19 +2383,7 @@
         "Not Applicable", 
         "Unknown"
       ], 
-      "req_7": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_1": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_2": [
+      "req_11": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2472,7 +2402,7 @@
         "Not Applicable", 
         "Unknown"
       ], 
-      "req_11": [
+      "req_2": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2484,12 +2414,19 @@
         "Not Applicable", 
         "Unknown"
       ], 
-      "compliance_status": [
-        "Not Compliant", 
-        "Found Compliant", 
+      "req_4": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
         "Unknown"
       ], 
-      "req_4": [
+      "req_7": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_12": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2502,12 +2439,102 @@
         "Unknown"
       ]
     }, 
+    "asset_os": [
+      "Android", 
+      "Apple iOS", 
+      "BlackBerry OS", 
+      "Linux", 
+      "Mac OSX", 
+      "Mainframe", 
+      "Symbian", 
+      "Unix", 
+      "webOS", 
+      "Windows", 
+      "Windows Phone", 
+      "NA", 
+      "Unknown", 
+      "Other"
+    ], 
     "unknown_unknowns": [
       "Assets that had unknown network connections or accessibility", 
       "Assets that had unknown user accounts or privileges", 
       "Assets unknown or unclaimed by the organization (or business group affected)", 
       "Data the organization did not know existed on a particular asset", 
       "Unknown"
+    ], 
+    "event_chain": {
+      "action": [
+        "env", 
+        "err", 
+        "hak", 
+        "mal", 
+        "mis", 
+        "phy", 
+        "soc", 
+        "unk"
+      ], 
+      "asset": [
+        "emb", 
+        "med", 
+        "net", 
+        "ppl", 
+        "srv", 
+        "ter", 
+        "usr", 
+        "unk"
+      ], 
+      "actor": [
+        "ext", 
+        "int", 
+        "prt", 
+        "unk"
+      ], 
+      "attribute": [
+        "au", 
+        "cp", 
+        "ia", 
+        "unk"
+      ]
+    }, 
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ], 
+        "data_abuse": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ], 
+        "partner_data": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ]
+      }
+    }, 
+    "attack_difficulty_legacy": [
+      "High", 
+      "Moderate", 
+      "Low", 
+      "Very Low", 
+      "NA", 
+      "Unknown", 
+      "Other"
+    ], 
+    "attack_difficulty_initial": [
+      "High", 
+      "Moderate", 
+      "Low", 
+      "Very Low", 
+      "NA", 
+      "Unknown", 
+      "Other"
     ], 
     "analysis_status": [
       "In-progress", 
@@ -2517,7 +2544,7 @@
       "Finalized", 
       "Ineligible"
     ], 
-    "attack_difficulty_legacy": [
+    "attack_difficulty_subsequent": [
       "High", 
       "Moderate", 
       "Low", 
@@ -2538,31 +2565,6 @@
       "Yes", 
       "No", 
       "Unknown"
-    ], 
-    "asset_os": [
-      "Android", 
-      "Apple iOS", 
-      "BlackBerry OS", 
-      "Linux", 
-      "Mac OSX", 
-      "Mainframe", 
-      "Symbian", 
-      "Unix", 
-      "webOS", 
-      "Windows", 
-      "Windows Phone", 
-      "NA", 
-      "Unknown", 
-      "Other"
-    ], 
-    "attack_difficulty_initial": [
-      "High", 
-      "Moderate", 
-      "Low", 
-      "Very Low", 
-      "NA", 
-      "Unknown", 
-      "Other"
     ]
   }
 }
