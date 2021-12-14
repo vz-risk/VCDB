@@ -688,7 +688,6 @@
         "Extortion", 
         "Forgery", 
         "Influence", 
-        "Partner", 
         "Phishing", 
         "Pretexting", 
         "Propaganda", 
@@ -702,6 +701,7 @@
         "Email", 
         "IM", 
         "In-person", 
+        "Partner", 
         "Phone", 
         "Removable media", 
         "SMS", 
@@ -2359,31 +2359,31 @@
         "Found Compliant", 
         "Unknown"
       ], 
-      "req_6": [
+      "req_4": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
         "Unknown"
       ], 
-      "req_8": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_1": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_9": [
+      "req_2": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
         "Unknown"
       ], 
       "req_11": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_7": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_10": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2396,31 +2396,7 @@
         "Level 4", 
         "Unknown"
       ], 
-      "req_3": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_2": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_5": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_4": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_7": [
+      "req_6": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
@@ -2432,37 +2408,44 @@
         "Not Applicable", 
         "Unknown"
       ], 
-      "req_10": [
+      "req_3": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_9": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_1": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_5": [
+        "In Place", 
+        "Not In Place", 
+        "Not Applicable", 
+        "Unknown"
+      ], 
+      "req_8": [
         "In Place", 
         "Not In Place", 
         "Not Applicable", 
         "Unknown"
       ]
     }, 
-    "asset_os": [
-      "Android", 
-      "Apple iOS", 
-      "BlackBerry OS", 
-      "Linux", 
-      "Mac OSX", 
-      "Mainframe", 
-      "Symbian", 
-      "Unix", 
-      "webOS", 
-      "Windows", 
-      "Windows Phone", 
-      "NA", 
-      "Unknown", 
-      "Other"
-    ], 
-    "unknown_unknowns": [
-      "Assets that had unknown network connections or accessibility", 
-      "Assets that had unknown user accounts or privileges", 
-      "Assets unknown or unclaimed by the organization (or business group affected)", 
-      "Data the organization did not know existed on a particular asset", 
-      "Unknown"
-    ], 
     "event_chain": {
+      "actor": [
+        "ext", 
+        "int", 
+        "prt", 
+        "unk"
+      ], 
       "action": [
         "env", 
         "err", 
@@ -2471,6 +2454,12 @@
         "mis", 
         "phy", 
         "soc", 
+        "unk"
+      ], 
+      "attribute": [
+        "au", 
+        "cp", 
+        "ia", 
         "unk"
       ], 
       "asset": [
@@ -2482,23 +2471,28 @@
         "ter", 
         "usr", 
         "unk"
-      ], 
-      "actor": [
-        "ext", 
-        "int", 
-        "prt", 
-        "unk"
-      ], 
-      "attribute": [
-        "au", 
-        "cp", 
-        "ia", 
-        "unk"
       ]
     }, 
+    "analysis_status": [
+      "In-progress", 
+      "Ready for review", 
+      "First pass", 
+      "Reviewed", 
+      "Finalized", 
+      "Ineligible"
+    ], 
+    "attack_difficulty_initial": [
+      "High", 
+      "Moderate", 
+      "Low", 
+      "Very Low", 
+      "NA", 
+      "Unknown", 
+      "Other"
+    ], 
     "attribute": {
       "confidentiality": {
-        "credit_monitoring": [
+        "partner_data": [
           "Yes", 
           "No", 
           "Other", 
@@ -2510,7 +2504,7 @@
           "Other", 
           "Unknown"
         ], 
-        "partner_data": [
+        "credit_monitoring": [
           "Yes", 
           "No", 
           "Other", 
@@ -2527,31 +2521,33 @@
       "Unknown", 
       "Other"
     ], 
-    "attack_difficulty_initial": [
-      "High", 
-      "Moderate", 
-      "Low", 
-      "Very Low", 
+    "unknown_unknowns": [
+      "Assets that had unknown network connections or accessibility", 
+      "Assets that had unknown user accounts or privileges", 
+      "Assets unknown or unclaimed by the organization (or business group affected)", 
+      "Data the organization did not know existed on a particular asset", 
+      "Unknown"
+    ], 
+    "asset_os": [
+      "Android", 
+      "Apple iOS", 
+      "BlackBerry OS", 
+      "Linux", 
+      "Mac OSX", 
+      "Mainframe", 
+      "Symbian", 
+      "Unix", 
+      "webOS", 
+      "Windows", 
+      "Windows Phone", 
       "NA", 
       "Unknown", 
       "Other"
     ], 
-    "analysis_status": [
-      "In-progress", 
-      "Ready for review", 
-      "First pass", 
-      "Reviewed", 
-      "Finalized", 
-      "Ineligible"
-    ], 
-    "attack_difficulty_subsequent": [
-      "High", 
-      "Moderate", 
-      "Low", 
-      "Very Low", 
-      "NA", 
-      "Unknown", 
-      "Other"
+    "unfollowed_policies": [
+      "Yes", 
+      "No", 
+      "Unknown"
     ], 
     "security_maturity": [
       "Initial", 
@@ -2561,10 +2557,14 @@
       "Optimizing", 
       "Unknown"
     ], 
-    "unfollowed_policies": [
-      "Yes", 
-      "No", 
-      "Unknown"
+    "attack_difficulty_subsequent": [
+      "High", 
+      "Moderate", 
+      "Low", 
+      "Very Low", 
+      "NA", 
+      "Unknown", 
+      "Other"
     ]
   }
 }
