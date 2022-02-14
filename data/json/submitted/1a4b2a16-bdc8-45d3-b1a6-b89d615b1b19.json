@@ -1,0 +1,156 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Alto City",
+        "employee_count": "Small",
+        "industry": "92",
+        "locations_affected": 1,
+        "state": "FL"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Email attachment"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "U - Desktop or laptop"
+            },
+            {
+                "variety": "S - File"
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "phishing email"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia",
+                "summary": "ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Server encrypted"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2021-10-21T18:06:52.173Z",
+        "created": "2021-10-21T18:06:52.173Z",
+        "timeline": {
+            "notification": {
+                "year": 2016,
+                "month": 3,
+                "day": 26
+            }
+        },
+        "master_id": "1a4b2a16-bdc8-45d3-b1a6-b89d615b1b19",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2017,
+        "github": "7473"
+    },
+    "incident_id": "1f7ba790-3276-11ec-a962-0f8a4d8d5131",
+    "security_incident": "Confirmed",
+    "reference": "https://www.jacksonvilleprogress.com/news/alto-city-office-battles-ransomware-issue/article_0f9ac6ee-f2e4-11e5-bea2-ebc9266adf96.html",
+    "summary": "An Alto city employee unknowingly opened an email attachment to download the alleged invoice, when a virus “grabbed files inside the computer and encrypted them, saying we had to pay a ransom of $500 to get our files back",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.5"
+}

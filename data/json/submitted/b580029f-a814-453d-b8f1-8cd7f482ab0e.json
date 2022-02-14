@@ -1,0 +1,122 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2016,
+            "month": 12
+        }
+    },
+    "victim": {
+        "government": [
+            "Regional"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Wright County",
+        "employee_count": "101 to 1000",
+        "industry": "92",
+        "locations_affected": 1,
+        "state": "MN"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Data mishandling"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "Convenience"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 1000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "copied database over to usb"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2021-11-09T01:40:15.900Z",
+        "created": "2021-11-09T01:40:02.450Z",
+        "timeline": {
+            "notification": {
+                "year": 2017,
+                "month": 7
+            }
+        },
+        "master_id": "b580029f-a814-453d-b8f1-8cd7f482ab0e",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2018,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "github": "12724"
+    },
+    "schema_name": "vcdb",
+    "incident_id": "c2ddddc0-40d3-11ec-b81c-33d442e55df8",
+    "security_incident": "Confirmed",
+    "reference": "https://www.fox9.com/news/wright-county-alerting-residents-of-data-breach-involving-county-employee",
+    "summary": "Wright County developer copied over sensitive data from a database to test something at home",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.6"
+}

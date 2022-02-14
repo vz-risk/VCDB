@@ -1,0 +1,158 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 8,
+            "day": 10
+        },
+        "compromise": {
+            "unit": "Minutes"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Association of National Advertisers",
+        "employee_count": "101 to 1000",
+        "industry": "541810",
+        "locations_affected": 1,
+        "state": "DC"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail"
+            },
+            {
+                "variety": "P - End-user or employee"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials",
+                    "amount": 1
+                },
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Infrastructure monitoring"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "phishing email"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "User discloses credentials"
+            },
+            {
+                "action": "env",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "use stolen credentials to access platform"
+            }
+        ],
+        "sub_source": "random",
+        "modified": "2021-11-01T17:32:27.331Z",
+        "created": "2021-11-01T17:32:27.331Z",
+        "timeline": {
+            "notification": {
+                "year": 2019,
+                "month": 1,
+                "day": 31
+            }
+        },
+        "master_id": "b366c18a-4a41-49ca-8120-3916e22696a7",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2020,
+        "github": "13024"
+    },
+    "incident_id": "b85091d0-3b16-11ec-ba5b-a1f2db3b8242",
+    "security_incident": "Confirmed",
+    "reference": "https://www.mediapost.com/publications/article/331362/ana-suffers-phishing-attack-possible-theft-of-dat.html",
+    "summary": "Association of National Advertisers Suffers Phishing Attack, Possible Theft Of Data ",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "schema_version": "1.3.5"
+}
