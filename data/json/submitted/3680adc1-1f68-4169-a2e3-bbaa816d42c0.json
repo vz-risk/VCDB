@@ -1,0 +1,189 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 4
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 10
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "secondary": {
+            "victim_id": [
+                "Walla Walla Veterans Affairs Medical Center;61",
+                "Montana VA;923140",
+                "Texas Medicaid;923130"
+            ]
+        },
+        "victim_id": "Benefit Recovery Specialists Inc ",
+        "employee_count": "101 to 1000",
+        "industry": "524292",
+        "locations_affected": 1
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Partner",
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 275000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Cryptocurrency"
+            ]
+        }
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "used stolen creds to access environment"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypted stuff"
+            }
+        ],
+        "modified": "2022-02-16T00:27:53.145Z",
+        "created": "2022-02-16T00:15:51.383Z",
+        "sub_source": "priority",
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 6,
+                "day": 13
+            }
+        },
+        "master_id": "3680adc1-1f68-4169-a2e3-bbaa816d42c0",
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2022,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes",
+                "partner_data": "Yes"
+            }
+        },
+        "github": "15896"
+    },
+    "schema_name": "vcdb",
+    "incident_id": "df942480-8e92-11ec-a600-657ec2694f8f",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bankinfosecurity.com/billing-vendor-breach-affects-275000-a-14607",
+    "summary": "BSRI is breached when an employee's credentials are used to access the environment and deploy ransomware",
+    "confidence": "High",
+    "targeted": "Unknown",
+    "schema_version": "1.3.6"
+}
