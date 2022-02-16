@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Backdoor or C2",
+        "Spyware/Keylogger"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Grudge"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)",
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "notes": "deleted files",
+      "variety": [
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Defacement",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "dd70efd0-8e65-11ec-a600-657ec2694f8f",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2022-02-15T19:04:00.497Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "somehow installed keylogger"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "keylogger collected data"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "used stolen creds to access servers and resources"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Used stolen creds to delete data"
+      }
+    ],
+    "github": "17697",
+    "master_id": "388a30e1-4cfd-41b2-9a57-7c1913b67196",
+    "modified": "2022-02-15T19:04:00.497Z",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 5,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/nh-sentenced-to-over-a-year-in-prison-for-hacking-police-department-in-revenge-for-drug-arrest/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "After an arrest on heroin possession charges, some dude goes out on a hacking rampage, targeting the police station that arrested him",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NH",
+    "victim_id": "Auburn police department"
+  }
+}
