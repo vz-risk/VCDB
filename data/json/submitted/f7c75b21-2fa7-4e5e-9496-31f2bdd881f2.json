@@ -1,0 +1,150 @@
+{
+    "source_id": "vcdb",
+    "timeline": {
+        "incident": {
+            "year": 2021,
+            "month": 6
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 4
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Epilepsy Foundation of Texas",
+        "employee_count": "11 to 100",
+        "industry": "624190",
+        "state": "TX"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail"
+            },
+            {
+                "variety": "P - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT",
+            "NA"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 2824,
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 2824
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Employee(s) fall for phishing email."
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Creds are used to gain access to email account; steal data."
+            }
+        ],
+        "modified": "2021-11-18T22:39:48.042Z",
+        "created": "2021-11-18T22:39:48.042Z",
+        "timeline": {
+            "notification": {
+                "year": 2021,
+                "month": 10
+            }
+        },
+        "master_id": "f7c75b21-2fa7-4e5e-9496-31f2bdd881f2",
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "dbir_year": 2022,
+        "github": "18151"
+    },
+    "schema_name": "vcdb",
+    "incident_id": "f8336440-4894-11ec-be64-495e033b0bce",
+    "security_incident": "Confirmed",
+    "reference": "https://healthitsecurity.com/news/3-indiana-clinics-suffer-healthcare-data-breaches; https://www.prnewswire.com/news-releases/epilepsy-foundation-of-texas-provides-notice-of-privacy-event-301389718.html",
+    "summary": "On or around June 8, 2021, the Epilepsy Foundation of Texas discovered fraudulent emails being sent out of an employee email account. Upon discovery, the Epilepsy Foundation of Texas contacted its IT personnel who determined that the email account had been the subject of a phishing attack. ",
+    "confidence": "High",
+    "targeted": "Unknown",
+    "schema_version": "1.3.6"
+}
