@@ -1,0 +1,188 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT",
+      "NA"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 209719,
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 209719,
+      "data_victim": [
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "notes": "Fraudulent transaction was initiated but not successful.  This is also the method they were caught.",
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "discovery_notes": "The actors were caught as they were trying to make a fraudulent transaction. ",
+  "incident_id": "c3907cc0-4635-11ec-b26b-73b5a62f8946",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2021-11-15T22:14:00.606Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee successfully phished"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen creds used"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Fraudulent transaction attempted"
+      }
+    ],
+    "github": "17907",
+    "master_id": "f2183225-6765-4e30-94df-8c4ac6dad7ff",
+    "modified": "2021-11-15T22:35:33.578Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://healthitsecurity.com/news/clearbalancedata-incidentimpactsover-200000uspatientspii; https://www.beckershospitalreview.com/cybersecurity/200-000-patients-exposed-after-hackers-tried-to-wire-money-from-clearbalance-funds.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ClearBalance, a California-based company, is notifying over 200,000 customers that their personally identifiable information (PII) may have been stolen during a recent email hacking event. ",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 1.5
+    },
+    "incident": {
+      "day": 8,
+      "month": 3,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "5222",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "ClearBalance"
+  }
+}

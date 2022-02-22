@@ -1,0 +1,170 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor or C2"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Source code"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "b5e17810-9372-11ec-a39a-3584eb2df2ab",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-02-22T08:26:17.361Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown hacking action for initial access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware is installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "16740",
+    "master_id": "2b65a5d8-0095-4682-b2a7-f5a92f66e952",
+    "modified": "2022-02-22T08:26:17.361Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.nytimes.com/2020/12/08/technology/fireeye-hacked-russians.html;  https://www.marketwatch.com/story/fireeye-stock-drops-as-cybersecurity-company-reveals-it-was-hacked-11607462414;  https://www.fireeye.com/blog/products-and-services/2020/12/fireeye-shares-details-of-recent-cyber-attack-actions-to-protect-community.html;  https://www.securityweek.com/solarwinds-says-18000-customers-may-have-used-compromised-product;  https://www.theregister.com/2021/01/19/fireeye_solarwinds_code/;  https://sec.report/Document/0001628280-20-017451/; \u2028https://www.zdnet.com/article/sec-filings-solarwinds-says-18000-customers-are-impacted-by-recent-hack/; \u2028https://www.crowdstrike.com/blog/sunspot-malware-technical-analysis/;  https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach;  https://www.statesman.com/story/business/2020/12/17/report-says-austins-city-network-hacked-city-says-critical-systems-not-affected/3948516001/;  https://theintercept.com/2020/12/17/russia-hack-austin-texas/;  https://www.reuters.com/article/usa-cyber-amazoncom/exclusive-us-treasury-breached-by-hackers-backed-by-foreign-government-sources-idUSL1N2IT0I8;  https://abcnews.go.com/Business/wireStory/us-treasury-department-computer-hack-74704505;  https://krebsonsecurity.com/2020/12/u-s-treasury-commerce-depts-hacked-through-solarwinds-compromise/;  https://www.securityweek.com/solarwinds-says-18000-customers-may-have-used-compromised-product;  https://www.govinfosecurity.com/former-dhs-leader-shares-details-on-solarwinds-attack-a-16388?rf=2021-04-14_ENEWS_SUB_GIS__Slot1_ART16388&mkt_tok=MDUxLVpYSS0yMzcAAAF8b_LTPx_1-t3ARfjMZOBr15gwRs5eUYXHuYw4NSf5KIXi4Zpx9yvg2JwwRCItI5yCxKp4pE6jelcloJxxrImUqGu7WM5dgAf6Zde3f3c2M_He5Go;  https://www.crn.com/news/security/microsoft-breached-via-solarwinds-as-scope-of-destruction-widens-report;  https://www.pcmag.com/news/microsoft-hit-by-solarwinds-breach-says-it-isolated-and-removed-the-malware;  https://www.zdnet.com/article/microsoft-was-also-breached-in-recent-solarwinds-supply-chain-hack-report/;  https://www.cyberscoop.com/microsoft-solar-winds-hackers-supernova-backdoor/;  https://www.databreaches.net/microsoft-says-russians-hacked-its-network-viewing-source-code/;  https://krebsonsecurity.com/2021/01/sealed-u-s-court-records-exposed-in-solarwinds-breach/;  https://www.wsj.com/articles/solarwinds-hack-victims-from-tech-companies-to-a-hospital-and-university-11608548402?mod=djemalertNEWS;  https://www.reuters.com/article/us-global-cyber-malwarebytes/malwarebytes-says-some-of-its-emails-were-breached-by-solarwinds-hackers-idUSKBN29O2CB?il=0;  https://www.theregister.com/2021/01/20/malwarebytes_reports_breach_of_its/;  https://www.theregister.com/2021/01/07/jetbrains_solarwinds_accusation/;  https://www.nytimes.com/2021/01/06/us/politics/russia-cyber-hack.html;  https://www.reuters.com/article/us-global-cyber-jetbrains/fbi-probe-of-major-hack-includes-project-management-software-from-jetbrains-sources-idUSKBN29B2RR;  https://www.cyberscoop.com/mimecast-solarwinds-software-certificate-russia/;  https://www.crn.com/news/security/mimecast-breach-linked-to-solarwinds-hack-allowed-cloud-services-access;  https://www.bleepingcomputer.com/news/security/mimecast-solarwinds-hackers-stole-some-of-our-source-code/;  https://www.databreaches.net/solarwinds-hackers-targeted-nasa-federal-aviation-administration-networks/;  https://thehill.com/policy/cybersecurity/537067-us-payroll-agency-targeted-by-chinese-hackers-report",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "SolarWinds disclosed on Sunday that a nation-state hacker group breached its network and inserted malware in updates for Orion, a software application for IT inventory management and monitoring.  The trojanized Orion update allowed attackers to deploy additional and highly stealthy malware on the networks of SolarWinds customers. But while initial news reports on Sunday suggested that all of SolarWinds' customers were impacted, in SEC documents filed today, SolarWinds said that of its 300,000 total customers, only 33,000 were using Orion, a software platform for IT inventory management and monitoring, and that fewer than 18,000 are believed to have installed the malware-laced update. ",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Exploit"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 10,
+      "victim_id": [
+        "NASA; 92",
+        "Federal Aviation Administration; 92",
+        "US Department of Agriculture; 92",
+        "Mimecast",
+        "Malwarebytes",
+        "Cisco Systems ",
+        "US Courts; 92",
+        "Microsoft",
+        "US Treasury; 92",
+        "City of Austin; 92"
+      ]
+    },
+    "state": "TX",
+    "victim_id": "SolarWinds"
+  }
+}

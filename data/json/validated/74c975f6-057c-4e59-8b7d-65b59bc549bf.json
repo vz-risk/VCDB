@@ -1,0 +1,201 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown how the actor gained initial access.",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1656569,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1656569,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "9ad8d9a0-92c8-11ec-a39a-3584eb2df2ab",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-02-21T12:23:01.585Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unknown action for initial access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware is installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encryption triggered"
+      }
+    ],
+    "github": "17537",
+    "master_id": "74c975f6-057c-4e59-8b7d-65b59bc549bf",
+    "modified": "2022-02-21T12:23:01.585Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.beckershospitalreview.com/cybersecurity/3-hospitals-added-to-capturerx-data-breach-victim-toll-17-hospitals-healthcare-organizations-affected.html; https://www.vnews.com/Gifford-reports-vendor-data-breach-40284473 https://www.prnewswire.com/news-releases/capturerx--notice-of-data-incident-301284905.html;  https://bismarcktribune.com/news/state-and-regional/thrifty-drug-discloses-security-breach/article_102ad9ff-3cc5-54ea-8078-1f1ce19e3386.html;  https://www.databreaches.net/capturerx-notice-of-data-incident/;  https://www.wktv.com/content/news/Faxton-St-Lukes-Healthcare-faces-data-breach-potentially-exposing-information-on-thousands-of-patients-574354251.html;  https://wnbf.com/lourdes-prescription-information-compromised/ https://www.hipaajournal.com/capturerx-ransomware-attack-affects-multiple-healthcare-provider-clients/;  https://www.beckershospitalreview.com/cybersecurity/47-000-bcbs-kansas-city-members-exposed-through-vendor-breach.html;  https://www.tiogapublishing.com/the_wellsboro_mansfield_gazette/news/local/ data-breached-for-upmc-cole-wellsboro-patients/article_65342070-e8fc-54e8-bbfd-e25b3b13dfb0.html;  https://www.valleycentral.com/news/local-news/brownsville-health-center-experiences-data-breach-patient-data-accessed/;  https://www.beckershospitalreview.com/cybersecurity/7-500-ascension-patients-added-to-tally-of-capturerx-data-breach-victims-8-hospitals-healthcare-providers-affected.html;  https://www.pressrepublican.com/news/local_news/hudson-headwaters-reports-vendor-data-breach/article_2f3c89c3-37d8-50ac-a2a1-f0b4f155c44c.html;  https://www.wabi.tv/2021/05/19/several-pchc-patients-fell-victim-to-data-breach/ https://www.adirondackdailyenterprise.com/news/local-news/2021/05/data-breach-exposes-local-adk-health-patient-information/;  https://buffalonews.com/news/local/kaleida-health-reveals-third-party-data-breach-of-600-pharmacy-patients-information/article_60f3ef10-b9d7-11eb-87f1-337b1a4eae11.html;  https://www.databreaches.net/updating-capturerx-incident-impacted-almost-2-mllion-people/;  https://www.scdailypress.com/2021/05/21/vendor-hack-exposes-hms-patient-rx-info/;  https://www.ozarksfirst.com/local-news/local-news-local-news/12000-jordan-valley-community-health-center-patients-affected-by-big-nationwide-data-breach/;  https://wtov9.com/news/local/trinity-health-system-reports-data-breach-more-than-9000-affected;  https://www.informnny.com/abc50-now/massena-hospital-alerts-patients-of-third-party-administrator-data-breach/;  https://www.kroxam.com/2021/06/02/altru-warns-of-third-party-vendor-capturerx-data-breach/;  https://www.tristatehomepage.com/news/echo-community-healthcare-impacted-by-data-breach/;  https://www.kxro.com/data-breach-with-harbor-regional-health-vendor-potentially-affected-patients-contacted/;  https://www.postandcourier.com/kingstree/news/notice-of-capturerx-data-breach/article_979240b8-c561-11eb-ac1f-fb6223ac78eb.html;  https://www.postandcourier.com/kingstree/news/notice-of-capturerx-data-breach/article_979240b8-c561-11eb-ac1f-fb6223ac78eb.html;  https://www.wgrz.com/article/news/local/catholic-health-patients-from-mount-saint-marys-sisters-of-charity-hospitals-impacted-by-data-breach/71-5aa750ff-b1ea-40d6-a889-2d4ec538eec7; https://healthitsecurity.com/news/catholic-health-impacted-by-capturerx-data-breach-patients-phi-exposed https://healthitsecurity.com/news/capturerx-data-breach-hits-metrohealth-system-16-others;  https://www.delmarvanow.com/story/news/local/maryland/2021/06/23/tidalhealth-hit-data-breach-targeted-capturerx/5322228001/;  https://www.beckershospitalreview.com/cybersecurity/class-action-targets-capturerx-over-breach-that-exposed-2-4m-patients-data.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ransomware attack on partner exposes the data of over 1 million patients.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 2,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 29,
+      "victim_id": [
+        "Faxton St. Luke's Healthcare; 621",
+        "Trinity Twin City Hospital; 621",
+        "Jones Memorial Hospital; 621",
+        "Hudson Headwaters Health Network; 621",
+        "UPMC; 621",
+        "Gifford Health Care; 621",
+        "Ascension St. Joseph Hospital; 621",
+        "Brownsville Community Health Center; 621",
+        "Massena (N.Y.) Hospital; 621",
+        "Lourdes Hospital; 621",
+        "Ascension Standish (Mich.) Hospital; 621",
+        "Adirondack Health; 621",
+        "Kaleida Health; 621",
+        "Bayhealth; 621",
+        "MetroHealth System; 621",
+        "Penobscot Community Health Care; 621",
+        "Walmart; 45211",
+        "Thrifty Drug Stores Inc.; 446110",
+        "BlueCross BlueShield of Kansas City; 5241",
+        "Hidalgo Medical Services; 621",
+        "Jordan Valley Community Health Center; 621",
+        "St. Lawrence Health; 621",
+        "Altru Health System; 621",
+        "ECHO Community Healthcare; 621",
+        "Harbor Regional Health; 621",
+        "HopeHealth; 621",
+        "TidalHealth; 621",
+        "Bayhealth; 621",
+        "Gifford Health Care; 621"
+      ]
+    },
+    "state": "TX",
+    "victim_id": "CaptureRX"
+  }
+}
