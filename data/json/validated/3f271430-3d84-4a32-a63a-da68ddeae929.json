@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1474000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1474000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Repurpose"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "loss": [
+      {
+        "amount": 600000,
+        "rating": "Moderate",
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "notes": "Fine",
+    "overall_amount": 600000,
+    "overall_rating": "Painful"
+  },
+  "incident_id": "0d9e1290-9376-11ec-a39a-3584eb2df2ab",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 2
+      }
+    },
+    "created": "2022-02-24T06:58:02.960Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unknown hacking action for initial access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      }
+    ],
+    "github": "16346",
+    "master_id": "3f271430-3d84-4a32-a63a-da68ddeae929",
+    "modified": "2022-02-24T06:59:41.147Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.calhipaa.com/email-account-breaches-at-alameda-health-system-eyemed-vision-care-and-century-specialty-script/; https://www.govinfosecurity.com/ny-fines-vision-benefits-firm-600000-for-2020-breach-a-18368",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "EyeMed Vision Care LLC located in Ohio is a vision benefits firm, which discovered unauthorized access to its corporate email mailbox. The unauthorized person used the account to distribute phishing emails to contacts in the address book. On July 1, 2020, EyeMedVision Care discovered the breach and secured the account immediately.  A breach investigation confirmed that the unauthorized person got access to the email account on June 24, 2020. The email account held the electronic protected health information (ePHI) of people who presently or have formerly got vision benefits from EyeMed. The following information is contained in the email account: names, dates of birth, email addresses, addresses, telephone numbers, and vision insurance account/identification numbers. Some persons likewise had their diagnoses and eye conditions, treatment data, and full or partial Social Security numbers included in the account.  It wasn\u2019t possible to ascertain if any of the details were viewed or gotten by the hacker during the time the email account was accessible. Nevertheless, there is no information received that indicate the misuse of any data. EyeMed Vision Care provided the affected people a two-year complimentary credit monitoring and identity protection services membership.  EyeMed has since provided its workers with extra security awareness training and has carried out stricter security procedures for authorized access to its network.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 6
+    },
+    "incident": {
+      "day": 24,
+      "month": 6,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Exploit"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621320",
+    "region": [
+      "019021"
+    ],
+    "state": "OH",
+    "victim_id": "EyeMed Vision Care"
+  }
+}
