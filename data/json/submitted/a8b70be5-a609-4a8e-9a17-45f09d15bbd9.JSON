@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "06019440-141c-11ed-bbec-35a645e8fbd2",
+    "security_incident": "Confirmed",
+    "reference": "https://www.securitymagazine.com/articles/96996-security-firm-securitas-exposed-airports-employees-in-data-breach; https://blog.malwarebytes.com/privacy-2/2022/02/securitas-breached-3tb-of-airport-employee-records-exposed/",
+    "summary": "An unsecured AWS server, found open to the public Internet, is the root cause of a huge compromise of data of airport employees in Colombia and Peru. This server, according to a report, belongs to Securitas, a Stockholm-based multinational company that provides security services like security guarding, fire and safety, and supply-chain risk management among others.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "a8b70be5-a609-4a8e-9a17-45f09d15bbd9",
+        "modified": "2022-08-05T00:48:20.940Z",
+        "created": "2022-08-05T00:36:51.076Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Security researcher finds misconfigured datastore open to anyone"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "partner_data": "Yes"
+            }
+        },
+        "github": "18493"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "SE"
+        ],
+        "region": [
+            "150155"
+        ],
+        "secondary": {
+            "victim_id": [
+                "El Dorado International Airport;48811",
+                "Alfonso Bonilla Aragón International Airport;48811",
+                "José María Córdova International Airport;48811",
+                "Aeropuerto Internacional Jorge Chávez;48811"
+            ],
+            "amount": 4
+        },
+        "victim_id": "Securitas",
+        "industry": "561612",
+        "employee_count": "Over 100000"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Partner"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

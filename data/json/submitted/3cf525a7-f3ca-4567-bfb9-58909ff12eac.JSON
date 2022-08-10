@@ -1,0 +1,108 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "ded03580-0d08-11ed-9141-192d7c736152",
+    "security_incident": "Confirmed",
+    "reference": "https://www.infosecurity-magazine.com/news/heart-patients-data-exposed/; https://southdenver.com/wp-content/uploads/2022/03/SDCA_Substitute-Notice.pdf; https://www.oodaloop.com/briefs/2022/03/14/over-500000-patients-hit-by-data-breaches-at-healthcare-firms-in-alabama-colorado/",
+    "summary": "The protected health information (PHI) of hundreds of thousands of heart patients may have been exposed during a cyber-attack on South Denver Cardiology Associates (SDCA).  In a recent privacy incident notice issued to its patients, the healthcare provider disclosed that its network had been breached in January 2022. The unknown perpetrator(s) gained access to files containing information on 287,652 patients during the attack.  SDCA said: “On January 4 2022, we identified unusual activity within our computer network. We immediately initiated our incident response process, which included taking steps to secure the network and shutting off select computer systems. ",
+    "confidence": "High",
+    "plus": {
+        "master_id": "3cf525a7-f3ca-4567-bfb9-58909ff12eac",
+        "modified": "2022-07-27T01:21:37.748Z",
+        "created": "2022-07-27T00:32:06.744Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "cp",
+                "summary": "Hacker accesses medical records"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "github": "18590"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "South Denver Cardiology Associates",
+        "industry": "621111",
+        "employee_count": "101 to 1000",
+        "state": "CO"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 287652,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 287652
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

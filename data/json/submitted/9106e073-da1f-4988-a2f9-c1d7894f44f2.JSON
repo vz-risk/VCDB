@@ -1,0 +1,110 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "06019440-141c-11ed-bbec-35a645e8fbd2",
+    "security_incident": "Confirmed",
+    "reference": "https://mobilesyrup.com/2019/11/03/information-breach-camgirl-sites-exposes-millions-of-users/; https://techcrunch.com/2019/11/03/camgirl-network-exposed-millions-users/",
+    "summary": "A number of popular “camgirl” sites have exposed millions of sex workers and users after the company running the sites left the back-end database unprotected.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "a8b70be5-a609-4a8e-9a17-45f09d15bbd9",
+        "modified": "2022-08-05T00:59:17.185Z",
+        "created": "2022-08-05T00:36:51.076Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Security researcher finds misconfigured datastore open to anyone"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "partner_data": "Yes"
+            }
+        },
+        "github": "14429"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 11
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "ES"
+        ],
+        "region": [
+            "150155"
+        ],
+        "victim_id": "VTS Media",
+        "industry": "541810",
+        "employee_count": "101 to 1000"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Partner"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
