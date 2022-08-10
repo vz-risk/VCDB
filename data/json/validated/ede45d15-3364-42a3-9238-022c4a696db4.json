@@ -1,109 +1,109 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 1,
-            "day": 23
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3100000,
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "government": [
-            "NA"
-        ],
-        "country": [
-            "DE"
-        ],
-        "region": [
-            "150155"
-        ],
-        "victim_id": "Buchbinder ",
-        "employee_count": "1001 to 10000",
-        "industry": "532111"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Personal",
-                    "amount": 3100000
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 3100000
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "misconfigured db left open to internet"
-            }
-        ],
-        "modified": "2021-02-19T23:42:24.327Z",
-        "created": "2021-02-19T23:35:46.692Z",
-        "master_id": "ede45d15-3364-42a3-9238-022c4a696db4",
-        "analysis_status": "Reviewed",
-        "analyst": "Hylender",
-        "dbir_year": 2021,
-        "github": "14927"
-    },
-    "incident_id": "251f6910-72d8-11eb-a46e-831b23dc7360",
-    "security_incident": "Confirmed",
-    "reference": "https://www.n-tv.de/wirtschaft/Datenpanne-bei-Autovermieter-Buchbinder-article21526642.html ; https://borncity.com/win/2020/01/23/datenleck-beim-autovermieter-buchbinder/",
-    "summary": "German car rental company Buchbinder exposed the personal information of over 3.1 million customers including federal ministry employees, diplomats, and celebrities, all of it stored within a ten terabytes MSSQL backup database left unsecured on the Internet.  The German company runs a worldwide network of over 5000 car rental stations directed by partners and franchise holders, with clients from  \"IMPORTANT INFORMATION - Dear customers, we have been informed of a data leak that affected our systems,\" Buchbinder's notification says.  \"We are currently in the process of reviewing the matter and will come back to you shortly with more informations.\"more than 100 countries.   Buchbinder is currently investigating the security breach according to a notification displayed on the company's website. After analyzing the open database, Nehls discovered that the German car rental company exposed the data of more than 3 million of its customers on the Internet as reported by c't and DIE ZEIT, with the stored data going back as far as 2003.",
-    "confidence": "Medium",
-    "targeted": "NA",
-    "schema_version": "1.3.5"
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3100000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "251f6910-72d8-11eb-a46e-831b23dc7360",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2021-02-19T23:35:46.692Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "misconfigured db left open to internet"
+      }
+    ],
+    "github": "14927",
+    "master_id": "ede45d15-3364-42a3-9238-022c4a696db4",
+    "modified": "2021-02-19T23:42:24.327Z"
+  },
+  "reference": "https://www.n-tv.de/wirtschaft/Datenpanne-bei-Autovermieter-Buchbinder-article21526642.html ; https://borncity.com/win/2020/01/23/datenleck-beim-autovermieter-buchbinder/",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "German car rental company Buchbinder exposed the personal information of over 3.1 million customers including federal ministry employees, diplomats, and celebrities, all of it stored within a ten terabytes MSSQL backup database left unsecured on the Internet.  The German company runs a worldwide network of over 5000 car rental stations directed by partners and franchise holders, with clients from  \"IMPORTANT INFORMATION - Dear customers, we have been informed of a data leak that affected our systems,\" Buchbinder's notification says.  \"We are currently in the process of reviewing the matter and will come back to you shortly with more informations.\"more than 100 countries.   Buchbinder is currently investigating the security breach according to a notification displayed on the company's website. After analyzing the open database, Nehls discovered that the German car rental company exposed the data of more than 3 million of its customers on the Internet as reported by c't and DIE ZEIT, with the stored data going back as far as 2003.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 1,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "DE"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "532111",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Buchbinder "
+  }
 }

@@ -1,0 +1,184 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "article stated that they use stolen creds to login remotely",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "name": "avvadon",
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "cc1e6070-3bf2-11ec-963f-f964320be408",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-11-02T21:41:06.822Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "use of stolen creds to access system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware installed on system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "executed ransomware"
+      }
+    ],
+    "github": "17749",
+    "master_id": "da6e618c-6428-4199-afb2-5ad50c5b27b3",
+    "modified": "2021-11-02T21:41:06.822Z",
+    "timeline": {
+      "notification": {
+        "day": 31,
+        "month": 5,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://mexiconewsdaily.com/news/lottery-agency-mum-after-hack/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A group of hackers that claims to have infiltrated the computer servers of the National Lottery (Lotenal) has threatened to reveal confidential information if the agency refuses to cooperate with it.  A criminal group claims to have accessed Lotenal\u2019s servers last Thursday using Avaddon ransomware, malicious software (also known as malware) that has been used in numerous cyberattacks in several countries.  The group demanded the payment of a ransom within 10 days in exchange for not leaking information it stole. The amount it is asking for is unknown. \u201c\u2026 We have data such as all contracts and agreements from 2009 to 2021, legal documents, correspondence, finance, notarial data, outsourcing, and much more,\u201d the group said in a statement published online. \u201cAlso remember that data cannot be decrypted without our general decryptor. And your site will be attacked by a DDoS [distributed denial of service] attack,\u201d it said.  Lotenal has neither confirmed nor denied that it was the victim of a cyberattack. It said on Friday that it was updating its systems and that this was causing some interruptions to its online services. On Saturday, the criminal group published another statement. \u201cApparently the [agency] does not quite understand the seriousness of this situation and wants to hide the fact that they were hacked and we stole data from their servers,\u201d it said.  \u201c\u2026 What if we say that we have a lot of confidential data (see photo below), such as sexual harassment in the workplace, unpleasant incidents and a lot of dirt associated with your [agency]? If you continue to lie to everyone and do not contact us on this fact, then we, in turn, are ready to surprise all who follow the news related to our blow to your companies with very interesting documents that we have.\u201d  The group published an image of a redacted federal government document about a case in which a Lotenal cleaner was a victim of sexual harassment. According to Hiram Caramillo, co-founder and director of information security at the cybersecurity consulting firm Seekurity, groups that use ransomware such as Avaddon are \u201ccriminals that earn millions of dollars\u201d through extortion.  He said that Lotenal should be working to ensure that Avaddon ransomware is no longer being used to infiltrate its systems. Caramillo also said the lottery agency must identify what information has been stolen.  \u201cIt\u2019s not the first time that a company that has been hacked denies the attack,\u201d he said, referring to Lotenal\u2019s decision not to publicly acknowledge the cyberattack. Nor is it the first time that ransomware groups respond to companies that refuse to cooperate, he said. \u201cThe same situation has already happened several times,\u201d Caramillo said.  According to the United States Federal Bureau of Investigation (FBI), Avaddon ransomware was first advertised on Russian-language hacking forums as a ransomware-as-a-service, or RaaS, product. Raas refers to the sale of malware to would-be hackers via a subscription model. Hackers that do not have the skills to write and deliver their own ransomware code to victims can do so by buying Raas products on the dark web. The ransomware developers typically get a cut of the victim\u2019s payment.  According to the cybersecurity research company Group-IB, almost two-thirds of ransomware attacks worldwide that it analyzed during 2020 came from cybercriminals operating on a RaaS model.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 5,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "MX"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "713290",
+    "region": [
+      "019021",
+      "019013"
+    ],
+    "victim_id": "Lotenal (National Lottery of Mexico)"
+  }
+}

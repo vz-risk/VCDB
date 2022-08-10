@@ -1,0 +1,183 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Finance"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Finance"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "5ae8bdb0-1fa5-11ec-aba2-27b717aed560",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-09-27T19:50:17.734Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen creds to access email"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Change configuration of email"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Send email requesting update to bank"
+      }
+    ],
+    "github": "15130",
+    "master_id": "9335df6f-fc4c-4ad9-96c3-e443c0e0a3d9",
+    "modified": "2021-09-27T19:50:17.734Z",
+    "timeline": {
+      "notification": {
+        "day": 17,
+        "month": 2,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.theconstructionindex.co.uk/news/view/main-contractor-feels-the-pain-from-subbies-hacked-email",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Construction contractor ended up being the target of BEC attack",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Direct"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses",
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "23",
+    "region": [
+      "150154"
+    ]
+  }
+}

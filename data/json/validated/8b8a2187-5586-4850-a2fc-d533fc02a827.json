@@ -1,0 +1,114 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Convenience"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 422000000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 422000000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "8af89b60-4278-11ec-b979-154550188709",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2021-11-11T04:00:25.516Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Someone stands up a database with millions of medical records without any controls.  Security researcher finds it."
+      }
+    ],
+    "github": "18204",
+    "master_id": "8b8a2187-5586-4850-a2fc-d533fc02a827",
+    "modified": "2021-11-11T04:00:25.516Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.techradar.com/news/millions-of-healthcare-records-exposed-in-mega-data-breach; https://www.infosecurity-magazine.com/news/misconfigured-database-leaks-880-m/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A non-password protected database containing millions of healthcare records and 68.53GB of medical related data has reportedly been discovered by security researcher Jeremiah Fowler and the Website Planet research team.  The medical records in the exposed database apparently contain patient IDs, physician notes and other detailed medical data on patients in the US. While some of this data was encrypted, the notes and information on physicians were in plain text.  The physician notes in the database provide intimate details of patient illnesses, treatments, medications, family, social and even emotional issues. In addition to being very complete descriptions, Fowler and the Website Planet research team were surprised by just how many small details were included in these notes.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Deep6.AI"
+  }
+}

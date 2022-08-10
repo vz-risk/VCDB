@@ -1,0 +1,148 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6000,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "36d29450-d9aa-11eb-96ea-fd8a03dbb673",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2021-06-30T18:14:07.234Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "gained credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used credentials to access email"
+      }
+    ],
+    "github": "15986",
+    "master_id": "fcff3640-5c23-407f-9fca-7a11fcda0b8b",
+    "modified": "2021-06-30T18:14:07.234Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 28,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.detroitnews.com/story/business/2020/07/28/beaumont-hospital-announces-security-breach-accounts/5530757002/",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Beaumont Hospital staff had email accounts access by unauthorized third party resulting in a breach notification for 6k people",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 6
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 3,
+      "month": 1,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62151",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Beaumont Hospital"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "action": {
+    "malware": {
+      "name": "Qakbot",
+      "result": [
+        "Deploy payload",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Ransomware",
+        "Trojan"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "58d91310-3bea-11ec-963f-f964320be408",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "created": "2021-11-02T19:59:21.580Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "trojan installed on system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware installed on system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "executed ransomware"
+      }
+    ],
+    "github": "17727",
+    "master_id": "80f0147f-a39d-487c-b4c2-00c280643d54",
+    "modified": "2021-11-02T19:59:21.580Z",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 1,
+        "year": 2021
+      }
+    }
+  },
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "FujiFilm is investigating a ransomware attack and has shut down portions of its network to prevent the attack's spread.  FujiFilm, also known as just Fuji, is a Japanese multinational conglomerate headquartered in Tokyo, Japan, which initially started in optical film and cameras. It has grown to include pharmaceuticals, storage devices, photocopiers and printers (XEROX), and digital cameras. Today, FUJIFILM announced that their Tokyo headquarters suffered a cyberattack Tuesday night that they indicate is a ransomware attack.  \"FUJIFILM Corporation is currently carrying out an investigation into possible unauthorized access to its server from outside of the company. As part of this investigation, the network is partially shut down and disconnected from external correspondence,\" FUJIFILM said in a statement.  \"We want to state what we understand as of now and the measures that the company has taken. In the late evening of June 1, 2021, we became aware of the possibility of a ransomware attack. As a result, we have taken measures to suspend all affected systems in coordination with our various global entities.\"  \"We are currently working to determine the extent and the scale of the issue. We sincerely apologize to our customers and business partners for the inconvenience this has caused.\"  Due to the partial network outage, FUJIFILM USA has added an alert to the top of their website stating that they are experiencing network problems that are impacting their email and phone systems. While Fujifilm is keeping tight-lipped on further details, such as the identity of the ransomware used in the attack, Bleeping Computer reports that the company\u2019s servers have been infected by Qbot. Advanced Intel CEO Vitali Kremez told the publication that the company\u2019s systems were hit by the 13-year-old Trojan, typically initiated by phishing, last month.  The creators of Qbot, also known as QakBot or QuakBot, have a long history of partnering with ransomware operators. It previously worked with the ProLock and Egregor ransomware gangs, but is currently said to be linked with the notorious REvil group.  \u201cInitial forensic analysis suggests that the ransomware attack on Fujifilm started with a Qbot trojan infection last month, which gave hackers a foothold in the company\u2019s systems with which to deliver the secondary ransomware payload,\u201d Ray Walsh, digital privacy expert at ProPrivacy, told TechCrunch. \u201cMost recently, the Qbot trojan has been actively exploited by the REvil hacking collective, and it seems highly plausible that the Russian-based hackers are behind this cyberattack.\u201d  REvil, also known as Sodinokibi, not only encrypts a victim\u2019s files but also exfiltrates data from their network. The hackers typically threaten to publish the victim\u2019s files if their ransom isn\u2019t paid. But a site on the dark web used by REvil to publicize stolen data appeared offline at the time of writing.  Ransomware attacks have been on the rise since the start of the COVID-19 pandemic, so much so that they have become the biggest single money earner for cybercriminals. Threat hunting and cyber intelligence firm Group-IB estimates that the number of ransomware attacks grew by more than 150% in 2020, and that the average ransom demand increased more than twofold to $170,000.  At the time of writing, it\u2019s unclear whether Fujifilm has paid any ransom to the hackers responsible for the attack on its systems.",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 6,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Ransomware",
+        "Trojan"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "423410",
+    "region": [
+      "019005",
+      "142030"
+    ],
+    "victim_id": "Fuji Film"
+  }
+}

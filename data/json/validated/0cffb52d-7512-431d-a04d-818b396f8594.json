@@ -1,102 +1,102 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 2,
-            "day": 13
+  "action": {
+    "error": {
+      "notes": "article is vague. It sounds as though the app would allow anyone to access and download memeber info",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
         }
-    },
-    "victim": {
-        "government": [
-            "Federal"
-        ],
-        "country": [
-            "IL"
-        ],
-        "victim_id": "State of Israel Likud party",
-        "employee_count": "Unknown",
-        "industry": "813940"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ],
-            "notes": "article is vague. It sounds as though the app would allow anyone to access and download memeber info"
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Developer"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database"
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Customer"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes"
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp"
-            }
-        ],
-        "modified": "2021-02-19T23:06:44.413Z",
-        "created": "2021-02-19T23:06:14.231Z",
-        "master_id": "0cffb52d-7512-431d-a04d-818b396f8594",
-        "analysis_status": "Reviewed",
-        "analyst": "Hylender",
-        "dbir_year": 2021,
-        "github": "15067"
-    },
-    "incident_id": "f44895d0-72ca-11eb-a46e-831b23dc7360",
-    "security_incident": "Confirmed",
-    "reference": "https://www.thedailybeast.com/app-used-by-netanyahus-party-leaks-personal-data-of-over-6-million-israelis ;  https://www.jpost.com/Israel-Elections/Personal-info-of-6m-Israelis-leaked-after-Likud-uploads-voter-info-617048 ; https://www.algemeiner.com/2020/02/12/following-likud-app-breach-regulator-descends-on-offices-of-suspected-developer/",
-    "summary": "The personal information of over six million citizens was leaked after Benjamin Netanyahu’s Likud party uploaded the full register of Israeli voters to an app, Haaretz reported Sunday. The information includes full names, identity card numbers, addresses, genders, phone numbers, and other personal details. The registry was uploaded by Likud to the Elector app, which the party uses on election day. The vulnerability in the application reportedly allowed for anyone to easily download the entire voter registry on a computer. A similar leak happened in 2006 when an Interior Ministry employee stole the population registry and published it illegally. Likud has previously been at the center of security breaches, including multiple web leaks of the party’s voter database. Israeli political parties receive the information of voters before the elections and vow to protect their privacy. They are not permitted to copy, permanently erase, or transfer the registry once the election is over.  Feed-b, the Elector app developer, said the breach was a “one-off incident that was immediately dealt with,” and said that they have since strengthened security measures. It is not known how many people gained access to the personal data—which includes users in countries abroad such as the United States, Russia, and China—and downloaded it.",
-    "confidence": "High",
-    "targeted": "NA",
-    "schema_version": "1.3.5"
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "f44895d0-72ca-11eb-a46e-831b23dc7360",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2021-02-19T23:06:14.231Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "15067",
+    "master_id": "0cffb52d-7512-431d-a04d-818b396f8594",
+    "modified": "2021-02-19T23:06:44.413Z"
+  },
+  "reference": "https://www.thedailybeast.com/app-used-by-netanyahus-party-leaks-personal-data-of-over-6-million-israelis ;  https://www.jpost.com/Israel-Elections/Personal-info-of-6m-Israelis-leaked-after-Likud-uploads-voter-info-617048 ; https://www.algemeiner.com/2020/02/12/following-likud-app-breach-regulator-descends-on-offices-of-suspected-developer/",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The personal information of over six million citizens was leaked after Benjamin Netanyahu\u2019s Likud party uploaded the full register of Israeli voters to an app, Haaretz reported Sunday. The information includes full names, identity card numbers, addresses, genders, phone numbers, and other personal details. The registry was uploaded by Likud to the Elector app, which the party uses on election day. The vulnerability in the application reportedly allowed for anyone to easily download the entire voter registry on a computer. A similar leak happened in 2006 when an Interior Ministry employee stole the population registry and published it illegally. Likud has previously been at the center of security breaches, including multiple web leaks of the party\u2019s voter database. Israeli political parties receive the information of voters before the elections and vow to protect their privacy. They are not permitted to copy, permanently erase, or transfer the registry once the election is over.  Feed-b, the Elector app developer, said the breach was a \u201cone-off incident that was immediately dealt with,\u201d and said that they have since strengthened security measures. It is not known how many people gained access to the personal data\u2014which includes users in countries abroad such as the United States, Russia, and China\u2014and downloaded it.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 13,
+      "month": 2,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "813940",
+    "victim_id": "State of Israel Likud party"
+  }
 }

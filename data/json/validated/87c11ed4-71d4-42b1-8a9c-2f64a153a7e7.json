@@ -1,0 +1,172 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Finance"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Finance"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Employee"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Misrepresentation",
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "b77a2a20-1c79-11ec-bbb1-d17b99816d46",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-09-23T18:33:58.977Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Used stolen credentials to access email and modify configurations"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "used ceo email to initiate fraud"
+      }
+    ],
+    "github": "16072",
+    "master_id": "87c11ed4-71d4-42b1-8a9c-2f64a153a7e7",
+    "modified": "2021-09-23T18:33:58.977Z",
+    "timeline": {
+      "notification": {
+        "day": 11,
+        "month": 8,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.bankinfosecurity.com/bec-scam-costs-trading-firm-virtu-financial-69-million-a-14804",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "BEC Scam Costs Trading Firm Virtu Financial $6.9 Million",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 13,
+      "month": 5,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523120",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Virtu Financial"
+  }
+}

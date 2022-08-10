@@ -1,123 +1,123 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 2,
-            "day": 10
-        }
-    },
-    "victim": {
-        "government": [
-            "NA"
-        ],
-        "country": [
-            "FR"
-        ],
-        "region": [
-            "150155"
-        ],
-        "victim_id": "NextMotion",
-        "employee_count": "11 to 100",
-        "industry": "621512"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Developer"
-            ],
-            "motive": [
-                "NA"
-            ],
-            "job_change": [
-                "Unknown"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Medical"
-                },
-                {
-                    "variety": "Personal"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "notes": "does not give a number of patients  but says thousands of them.",
-            "data_total": 900000
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "misconfigured db exposed thousands of nude patient pics"
-            }
-        ],
-        "modified": "2021-02-19T21:36:59.621Z",
-        "created": "2021-02-19T21:36:59.621Z",
-        "timeline": {
-            "notification": {
-                "year": 2020,
-                "month": 2,
-                "day": 14
-            }
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         },
-        "master_id": "b7741fd7-586a-402f-b2c2-2e2062801edb",
-        "analysis_status": "First pass",
-        "analyst": "Hylender",
-        "dbir_year": 2021,
-        "github": "15106"
-    },
-    "incident_id": "7a723c10-72c6-11eb-a46e-831b23dc7360",
-    "security_incident": "Confirmed",
-    "reference": "https://www.cnet.com/news/plastic-surgery-images-and-invoices-leak-from-unsecured-database/",
-    "summary": "Thousands of images, videos and records pertaining to plastic surgery patients were left on an unsecured database where they could be viewed by anyone with the right IP address, researchers said Friday. The data included about 900,000 records, which researchers say could belong to thousands of different patients.  The data was generated at clinics around the world using software made by French imaging company NextMotion. Images in the database included before-and-after photos of cosmetic procedures. Those photos often contained nudity, the researchers said. Other records included images of invoices that contained information that would identify a patient. The database is now secured.  Researchers Noam Rotem and Ran Locar found the exposed database. They published their research with vpnMentor, a security website that rates VPN services and earns commissions when readers make purchases. Rotem said he sees exposed health care databases all too often as part of his web-mapping project, which looks for exposed data.",
-    "confidence": "High",
-    "targeted": "NA",
-    "discovery_notes": "Researchers Noam Rotem and Ran Locar found the exposed database.",
-    "schema_version": "1.3.5"
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 900000,
+      "data_victim": [
+        "Patient"
+      ],
+      "notes": "does not give a number of patients  but says thousands of them.",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "Researchers Noam Rotem and Ran Locar found the exposed database.",
+  "incident_id": "7a723c10-72c6-11eb-a46e-831b23dc7360",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "created": "2021-02-19T21:36:59.621Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "misconfigured db exposed thousands of nude patient pics"
+      }
+    ],
+    "github": "15106",
+    "master_id": "b7741fd7-586a-402f-b2c2-2e2062801edb",
+    "modified": "2021-02-19T21:36:59.621Z",
+    "timeline": {
+      "notification": {
+        "day": 14,
+        "month": 2,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.cnet.com/news/plastic-surgery-images-and-invoices-leak-from-unsecured-database/",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Thousands of images, videos and records pertaining to plastic surgery patients were left on an unsecured database where they could be viewed by anyone with the right IP address, researchers said Friday. The data included about 900,000 records, which researchers say could belong to thousands of different patients.  The data was generated at clinics around the world using software made by French imaging company NextMotion. Images in the database included before-and-after photos of cosmetic procedures. Those photos often contained nudity, the researchers said. Other records included images of invoices that contained information that would identify a patient. The database is now secured.  Researchers Noam Rotem and Ran Locar found the exposed database. They published their research with vpnMentor, a security website that rates VPN services and earns commissions when readers make purchases. Rotem said he sees exposed health care databases all too often as part of his web-mapping project, which looks for exposed data.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 10,
+      "month": 2,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "NextMotion"
+  }
 }

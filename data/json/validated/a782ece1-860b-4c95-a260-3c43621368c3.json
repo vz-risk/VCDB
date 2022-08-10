@@ -1,0 +1,190 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2019-19781",
+      "result": [
+        "Deploy payload",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "name": "DoppelPaymer",
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Proxy"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "818273e0-0749-11ec-863c-8359987c65e0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-08-30T17:37:21.743Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploited Critix vuln"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stole data out"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installs itself"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts things"
+      }
+    ],
+    "github": "15220",
+    "master_id": "a782ece1-860b-4c95-a260-3c43621368c3",
+    "modified": "2021-08-30T17:37:30.952Z",
+    "timeline": {
+      "notification": {
+        "day": 26,
+        "month": 2,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://diriga.com/2020/02/26/bretagne-telecom-fell-victim-of-doppelpaymer-ransomware-attack/",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Bretagne T\u00e9l\u00e9com Fell Victim Of DoppelPaymer Ransomware Attack",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 2,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "517911",
+    "locations_affected": 1,
+    "region": [
+      "150155"
+    ],
+    "victim_id": " Bretagne T\u00e9l\u00e9com"
+  }
+}

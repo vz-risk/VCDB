@@ -1,0 +1,236 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2021-27101, CVE-2021-27102, CVE-2021-27103, CVE-2021-27104",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "CLOP"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - Firewall"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5786739,
+      "data_victim": [
+        "Customer",
+        "Partner",
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "fb411460-92cd-11ec-a39a-3584eb2df2ab",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-02-22T07:56:33.620Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Zero day hacks deployed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware downloaded"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption is triggered"
+      }
+    ],
+    "github": "16942",
+    "master_id": "a0678e99-ba6a-488a-99ac-5a552c0d21a3",
+    "modified": "2022-02-22T08:02:21.604Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.reuters.com/article/us-australia-cyber-asic/australias-securities-regulator-says-server-hit-by-cyber-security-breach-idUSKBN29U0S7;  https://www.databreaches.net/fears-grow-data-hacked-from-reserve-bank-may-be-leaked-by-clop-ransomware-group/;  https://www.theregister.com/2021/01/25/asic_accellion_breach/;  https://toronto.ctvnews.ca/cyberattack-hits-vaccine-records-for-thousands-of-durham-region-children-ctv-news-investigation-1.5543525;  https://www.khq.com/news/washington-state-auditors-office-suffers-security-breach-seattle-times-reports/article_641dbe82-62ac-11eb-9063-a33a89824152.html;  https://www.geekwire.com/2021/data-breach-exposes-1-6-million-washington-state-residents-filed-unemployment-claims-2020/;  https://www.law.com/americanlawyer/2021/02/03/vendor-responsible-for-goodwin-breach-has-some-other-big-law-clients/;  https://www.law.com/americanlawyer/2021/02/03/vendor-responsible-for-goodwin-breach-has-some-other-big-law-clients/;  https://www.abajournal.com/news/article/goodwin-procter-reports-data-breach-due-to-hack-of-third-party-vendor;  https://news.bloomberglaw.com/us-law-week/goodwin-procter-says-it-was-hit-by-data-breach-of-vendor;  https://denver.cbslocal.com/2021/02/09/cu-cyberattack-personal-information-compromised-students-employees/; https://www.zdnet.com/article/singtel-hit-by-third-party-vendors-security-breach-customer-data-may-be-leaked/; https://portswigger.net/daily-swig/australian-research-institute-confirms-likely-data-breach-after-third-party-accellion-hack;  https://www.databreaches.net/accellions-data-breach-left-clients-in-tough-position-pay-extortion-to-criminals-or-have-their-data-dumped/ ;  https://www2.ljworld.com/news/public-safety/2021/feb/19/medical-data-personal-data-targeted-as-part-of-hack-of-dillons-pharmacy-locations/;  https://www.darkreading.com/attacks-breaches/accellion-data-breach-resulted-in-extortion-attempts-against-multiple-victims/d/d-id/1340226;  https://www.itnews.com.au/news/transport-for-nsw-data-stolen-in-accellion-breach-561396;  https://news.softpedia.com/news/nsw-health-confirms-data-breach-due-to-accellion-flaws-533148.shtml;  https://www.zdnet.com/article/airplane-maker-bombardier-data-posted-on-ransomware-leak-site-following-fta-hack/  accellion-fta-attack-mandiant-report-full.pdf;  https://blog.qualys.com/vulnerabilities-research/2021/03/03/qualys-update-on-accellion-fta-security-incident?mkt_tok=Nzk3LUVOSS03NDIAAAF7mZPnKjzUmeOE09Edz3OhZSR1Uc5vm_fQJtNPvv3uYHqwGiNzJ2JCc237PKMqyZlB72W-t5KRq8TWDcsjsf-IJotyeRpfAGmpiWFQEJsN7zgJvLk;  https://www.teiss.co.uk/qualys-victim-of-accellion-fta-vulnerability/;  https://blog.qualys.com/vulnerabilities-research/2021/04/02/qualys-update-on-accellion-fta-security-incident https://www.freightwaves.com/news/csx-probes-security-incident-as-hackers-leak-data;  https://www.cbc.ca/news/canada/nova-scotia/nova-scotia-health-employees-pension-plan-security-breach-1.5939806;  https://www.reuters.com/article/dataprivacy-accellion-latham/accellion-taps-latham-as-fallout-spreads-from-data-breach-idUSL2N2L31D5;  https://www.zdnet.com/article/flagstar-bank-customer-data-breached-through-accellion-hack/;  https://www.databreaches.net/trillium-community-health-plan-members-impacted-by-accellion-breach/;  https://www.databreaches.net/ca-personal-data-of-50000-n-s-health-care-workers-may-have-been-compromised-by-accellion-breach/;  https://www.databreaches.net/southern-illinois-university-school-of-medicine-impacted-by-accellion-breach-notifies-patients/;  https://news.bloomberglaw.com/tech-and-telecom-law/centene-sues-accellion-over-personal-health-data-exposed-in-hack;  https://healthitsecurity.com/news/accellion-breach-tally-for-centenes-subsidiaries-1.3m-patients-impacted;  https://www.beckershospitalreview.com/cybersecurity/ransomware-attack-exposes-27-000-arizona-health-plan-members-data-for-2-5-weeks.html;  https://www.computerweekly.com/news/252498363/Oil-giant-Shell-hit-through-Accellion-FTA-breach;  https://news.softpedia.com/news/morgan-stanley-suffers-data-breach-following-accellion-fta-s-attack-533491.shtml;  https://edscoop.com/university-of-colorado-u-miami-ransomware-accellion/;  https://news.yahoo.com/310-000-records-compromised-university-181145836.html;  http://sjvsun.com/news/health/calviva-health-hit-with-data-breach/;  https://ucnet.universityofcalifornia.edu/news/2021/03/uc-part-of-nationwide-cyber-attack.html;  https://www.ucdavis.edu/news/uc-among-targets-nationwide-cyberattack;  https://portswigger.net/daily-swig/uc-berkeley-confirms-data-breach-becomes-latest-victim-of-accellion-cyber-attack;  https://yucommentator.org/2021/04/hackers-steal-yu-students-and-employees-personal-information-in-accellion-security-breach/;  https://www.mercurynews.com/2021/04/01/investigation-underway-into-stanford-personal-data-breach;  https://www.thecrimson.com/article/2021/4/2/experts-explain-hbs-data-breach/;  https://csnews.com/racetrac-shell-impacted-third-party-cybersecurity-incident;  https://www.beckershospitalreview.com/cybersecurity/hackers-download-trinity-health-patients-phi-5-details.html;  https://medcitynews.com/2021/04/500000-trinity-health-patients-affected-in-widespread-accellion-data-breach/;  https://www.evergreenhealth.com/data-breach-notice;  https://www.databreaches.net/toronto-hit-by-potential-cyber-breach-from-accellion-file-transfer-software/;  https://www.abajournal.com/news/article/jones-day-documents-hacked-in-vendor-breach-reveal-chicago-drone-program-details?;  https://news.softpedia.com/news/accellion-s-failure-to-warn-rbnz-of-security-flaws-led-to-hack-533099.shtml;  https://www.beckershospitalreview.com/cybersecurity/accellion-data-breach-victims-topple-3-47-million-10-hospital-healthcare-orgs-hit.html;  https://www.reuters.com/legal/litigation/accellion-reaches-81-mln-settlement-resolve-data-breach-litigation-2022-01-13/; ",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Accellion's FTA product was compromised through a series of zero day exploits. Many client's were impacted. A number of those client's data was posted to the name and shame website of the threat actor.  Ransomware was deployed to many, and litigation settlements happened.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Exploit",
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 40,
+      "victim_id": [
+        "Kindertots Child Care Centre; 61",
+        "Australian Securities and Investments Commission; 921",
+        "Reserve Bank of New Zealand; 52",
+        "Washington State; 92",
+        "Goodwin Procter; 541110",
+        "University of Colorado; 61",
+        "Singtel; 4431",
+        "QIMR Berghofer Medical Research Institute; 61",
+        "American Bureau of Shipping",
+        "Danaher.com",
+        "Royal Bank of New Zealand; 52",
+        "Allens law firm",
+        "Kroger",
+        "Transport for NSW",
+        "NSW Health; 62",
+        "Bombardier",
+        "Qualys",
+        "CSX",
+        "Nova Scotia Health Employees' Pension Plan",
+        "Flagstar Bank; 52",
+        "Trillium Community Health Plan; 62",
+        "Southern Illinois University School of Medicine; 61",
+        "Centene",
+        "Arizona Complete Health; 62",
+        "Shell",
+        "Morgan Stanley",
+        "University of Colorado, Boulder; 61",
+        "University of Miami; 61",
+        "CalViva Health; 62",
+        "Health Net Community Solutions, Inc ; 62",
+        "University of California; 61",
+        "Yeshiva University; 61",
+        "Stanford School of Medicine; 61",
+        "Harvard Business School; 61",
+        "RaceTrac Petroleum Inc. ",
+        "Trinity Health; 62",
+        "EvergreenHealth; 62",
+        "City of Toronto; 92",
+        "Jones Day",
+        "California Health & Wellness; 62"
+      ]
+    },
+    "state": "CA",
+    "victim_id": "Accellion"
+  }
+}

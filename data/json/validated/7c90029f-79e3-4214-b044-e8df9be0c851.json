@@ -1,107 +1,107 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 2,
-            "day": 4
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
         }
-    },
-    "victim": {
-        "government": [
-            "NA"
-        ],
-        "country": [
-            "IN"
-        ],
-        "region": [
-            "142034"
-        ],
-        "victim_id": "Breach Candy Hospital",
-        "employee_count": "Unknown",
-        "industry": "622110"
-    },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Carelessness"
-            ]
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "Developer"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database",
-                "amount": 1
-            }
-        ],
-        "cloud": [
-            "External Cloud Asset(s)"
-        ],
-        "role": [
-            "IT"
-        ],
-        "total_amount": 1
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "variety": "Medical"
-                }
-            ],
-            "data_victim": [
-                "Patient"
-            ],
-            "state": [
-                "Stored unencrypted"
-            ],
-            "data_disclosure": "Yes"
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "ext",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "medical images db left open to internet"
-            }
-        ],
-        "modified": "2021-02-19T23:52:56.174Z",
-        "created": "2021-02-19T23:16:05.270Z",
-        "dbir_year": 2021,
-        "master_id": "7c90029f-79e3-4214-b044-e8df9be0c851",
-        "analysis_status": "Reviewed",
-        "analyst": "Hylender",
-        "github": "15020"
-    },
-    "incident_id": "d8f1f1a0-72d4-11eb-a46e-831b23dc7360",
-    "security_incident": "Confirmed",
-    "reference": "https://tech.economictimes.indiatimes.com/news/internet/one-million-healthcare-records-leaked/73911735 ; https://inc42.com/buzz/india-healthcare-data-leak-over-120-mn-medical-images-exposed/ ; ",
-    "summary": "Nearly one million medical files and 107 million related medical images of Indian patients, including X-rays and scans, are freely accessible on the internet, an investigation by German security firm Greenbone Networks has found.  The records and images include details such as patient name, date of birth and ID, name of the medical institution, ailment, physician names and other sensitive details.  ET has reviewed a screenshot containing a list of patient names. ET also accessed a web portal link that allows access to, and downloads of, medical images of patients.  The servers on which these records are stored have been left vulnerable, Greenbone said.  Medical practitioners use a file format known as Digital Imaging and Communications in Medicine (DICOM) to store and share medical images. These DICOM images are typically stored in a picture archiving and communications system (PACS) server, which allows for easy access and storage. ",
-    "confidence": "Medium",
-    "targeted": "NA",
-    "schema_version": "1.3.5"
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "d8f1f1a0-72d4-11eb-a46e-831b23dc7360",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2021-02-19T23:16:05.270Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "medical images db left open to internet"
+      }
+    ],
+    "github": "15020",
+    "master_id": "7c90029f-79e3-4214-b044-e8df9be0c851",
+    "modified": "2021-02-19T23:52:56.174Z"
+  },
+  "reference": "https://tech.economictimes.indiatimes.com/news/internet/one-million-healthcare-records-leaked/73911735 ; https://inc42.com/buzz/india-healthcare-data-leak-over-120-mn-medical-images-exposed/ ; ",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Nearly one million medical files and 107 million related medical images of Indian patients, including X-rays and scans, are freely accessible on the internet, an investigation by German security firm Greenbone Networks has found.  The records and images include details such as patient name, date of birth and ID, name of the medical institution, ailment, physician names and other sensitive details.  ET has reviewed a screenshot containing a list of patient names. ET also accessed a web portal link that allows access to, and downloads of, medical images of patients.  The servers on which these records are stored have been left vulnerable, Greenbone said.  Medical practitioners use a file format known as Digital Imaging and Communications in Medicine (DICOM) to store and share medical images. These DICOM images are typically stored in a picture archiving and communications system (PACS) server, which allows for easy access and storage. ",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 4,
+      "month": 2,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Breach Candy Hospital"
+  }
 }

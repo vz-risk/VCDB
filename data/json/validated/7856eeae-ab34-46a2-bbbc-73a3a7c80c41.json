@@ -1,0 +1,193 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Backdoor",
+        "Ransomware",
+        "Backdoor or C2"
+      ],
+      "vector": [
+        "Download by malware",
+        "Email"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 9,
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 9
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially"
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "70704a30-da78-11eb-bcc7-b7194a064c3e",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2021-07-01T18:35:05.962Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "human phished"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware accesses data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts things"
+      }
+    ],
+    "github": "15064",
+    "master_id": "7856eeae-ab34-46a2-bbbc-73a3a7c80c41",
+    "modified": "2021-07-01T18:35:05.962Z",
+    "timeline": {
+      "notification": {
+        "day": 7,
+        "month": 2,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.ajc.com/news/breaking-news/ransomware-attack-hits-rockdale-county-servers-impacts-some-services/gfYVTZ93c1Sbr1UbObEqKP/",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Rockland County GA impacted by ransomware",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 2,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "92",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Rockland County, GA"
+  }
+}

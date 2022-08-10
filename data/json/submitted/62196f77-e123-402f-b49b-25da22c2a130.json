@@ -1,124 +1,124 @@
 {
-    "source_id": "vcdb",
-    "timeline": {
-        "incident": {
-            "year": 2020,
-            "month": 6,
-            "day": 28
+  "action": {
+    "error": {
+      "notes": "Unencrypted Elasticsearch",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6700000,
+          "variety": "Personal"
         },
-        "compromise": {
-            "unit": "Seconds"
-        },
-        "containment": {
-            "unit": "Months",
-            "value": 2
+        {
+          "variety": "Internal"
         }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6700000,
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted",
+        "Stored"
+      ]
+    }
+  },
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "4b526b10-748f-11eb-b6c3-130fdd35ca3d",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "Pinto",
+    "created": "2021-02-22T06:16:32.625Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured elasticsearch database "
+      }
+    ],
+    "github": "16314",
+    "master_id": "62196f77-e123-402f-b49b-25da22c2a130",
+    "modified": "2021-02-22T06:16:32.625Z"
+  },
+  "reference": "https://www.infosecurity-magazine.com/news/fashion-retailer-brandbq-seven/",
+  "schema_version": "1.3.6",
+  "source_id": "vcdb",
+  "summary": "A European fashion retailer has become the latest big-name brand to expose personal data on millions of its customers after misconfiguring a cloud database.  Researchers at vpnMentor discovered the unencrypted Elasticsearch server on June 28 and parent company BrandBQ finally secured it around a month later, on August 20.",
+  "timeline": {
+    "compromise": {
+      "unit": "Seconds"
     },
-    "victim": {
-        "government": [
-            "NA"
-        ],
-        "country": [
-            "PL"
-        ],
-        "region": [
-            "150151"
-        ],
-        "victim_id": "BrandBQ",
-        "industry": "448",
-        "employee_count": "101 to 1000"
+    "containment": {
+      "unit": "Months",
+      "value": 2
     },
-    "action": {
-        "error": {
-            "variety": [
-                "Misconfiguration"
-            ],
-            "vector": [
-                "Unknown"
-            ],
-            "notes": "Unencrypted Elasticsearch"
-        }
-    },
-    "actor": {
-        "internal": {
-            "variety": [
-                "System admin"
-            ],
-            "motive": [
-                "NA"
-            ]
-        }
-    },
-    "asset": {
-        "assets": [
-            {
-                "variety": "S - Database"
-            }
-        ],
-        "cloud": [
-            "Unknown"
-        ],
-        "role": [
-            "IT"
-        ]
-    },
-    "attribute": {
-        "confidentiality": {
-            "data": [
-                {
-                    "amount": 6700000,
-                    "variety": "Personal"
-                },
-                {
-                    "variety": "Internal"
-                }
-            ],
-            "data_victim": [
-                "Customer",
-                "Victim organization"
-            ],
-            "state": [
-                "Stored unencrypted",
-                "Stored"
-            ],
-            "data_disclosure": "Yes",
-            "data_total": 6700000
-        }
-    },
-    "discovery_method": {
-        "external": {
-            "variety": [
-                "Security researcher"
-            ]
-        }
-    },
-    "value_chain": {
-        "targeting": {
-            "variety": [
-                "Weaknesses"
-            ]
-        }
-    },
-    "plus": {
-        "event_chain": [
-            {
-                "action": "err",
-                "actor": "int",
-                "asset": "srv",
-                "attribute": "cp",
-                "summary": "Misconfigured elasticsearch database "
-            }
-        ],
-        "modified": "2021-02-22T06:16:32.625Z",
-        "created": "2021-02-22T06:16:32.625Z",
-        "master_id": "62196f77-e123-402f-b49b-25da22c2a130",
-        "analysis_status": "Finalized",
-        "analyst": "Pinto",
-        "dbir_year": 2021,
-        "github": "16314"
-    },
-    "incident_id": "4b526b10-748f-11eb-b6c3-130fdd35ca3d",
-    "summary": "A European fashion retailer has become the latest big-name brand to expose personal data on millions of its customers after misconfiguring a cloud database.  Researchers at vpnMentor discovered the unencrypted Elasticsearch server on June 28 and parent company BrandBQ finally secured it around a month later, on August 20.",
-    "reference": "https://www.infosecurity-magazine.com/news/fashion-retailer-brandbq-seven/",
-    "schema_version": "1.3.5"
+    "incident": {
+      "day": 28,
+      "month": 6,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "targeting": {
+      "variety": [
+        "Weaknesses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "PL"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "448",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "BrandBQ"
+  }
 }

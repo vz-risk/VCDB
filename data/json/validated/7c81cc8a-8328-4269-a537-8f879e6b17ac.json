@@ -1,0 +1,185 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Email misuse",
+        "Knowledge abuse",
+        "Possession abuse",
+        "Privilege abuse",
+        "Snap picture"
+      ],
+      "vector": [
+        "LAN access",
+        "Physical access"
+      ]
+    },
+    "social": {
+      "target": [
+        "Manager"
+      ],
+      "variety": [
+        "Bribery"
+      ],
+      "vector": [
+        "In-person"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Competitor"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Espionage",
+        "Financial"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "M - Documents"
+      },
+      {
+        "variety": "P - Manager"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Printed",
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "cbe5edd0-30da-11ec-9798-915a6ecdc137",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-10-19T16:59:37.383Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Bribed internal employee"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Internal actor took pictures of document"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Took documents from server"
+      }
+    ],
+    "github": "15211",
+    "master_id": "7c81cc8a-8328-4269-a537-8f879e6b17ac",
+    "modified": "2021-10-19T16:59:37.383Z",
+    "timeline": {
+      "notification": {
+        "day": 26,
+        "month": 2,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.canyon-news.com/peninsula-hotel-files-complaint-against-ex-employee-for-corporate-espionage/105613",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Peninsula Hotel Files Complaint Against Ex-Employee",
+  "targeted": "Targeted",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 15
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2015
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "721110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "The Peninsula Hotels"
+  }
+}

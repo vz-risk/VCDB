@@ -1,0 +1,180 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT",
+      "NA"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2824,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2824,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "f8336440-4894-11ec-be64-495e033b0bce",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2021-11-18T22:39:48.042Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee(s) fall for phishing email."
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Creds are used to gain access to email account; steal data."
+      }
+    ],
+    "github": "18151",
+    "master_id": "f7c75b21-2fa7-4e5e-9496-31f2bdd881f2",
+    "modified": "2021-11-18T22:39:48.042Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "month": 10,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://healthitsecurity.com/news/3-indiana-clinics-suffer-healthcare-data-breaches; https://www.prnewswire.com/news-releases/epilepsy-foundation-of-texas-provides-notice-of-privacy-event-301389718.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On or around June 8, 2021, the Epilepsy Foundation of Texas discovered fraudulent emails being sent out of an employee email account. Upon discovery, the Epilepsy Foundation of Texas contacted its IT personnel who determined that the email account had been the subject of a phishing attack. ",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 4
+    },
+    "incident": {
+      "month": 6,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "624190",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Epilepsy Foundation of Texas"
+  }
+}

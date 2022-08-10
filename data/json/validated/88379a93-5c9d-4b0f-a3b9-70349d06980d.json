@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Other"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Remote access"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Bribery"
+      ],
+      "vector": [
+        "IM"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 3,
+        "variety": "P - Unknown"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify configuration"
+      ]
+    }
+  },
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "e0a3af20-e4b1-11eb-8ef6-fbb8d39928b9",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-07-14T19:05:13.385Z",
+    "dbir_year": 2020,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Bribed internal employees"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal users gave up credenetials to bad person"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Credentials were used to unlock phones"
+      }
+    ],
+    "github": "14279",
+    "master_id": "88379a93-5c9d-4b0f-a3b9-70349d06980d",
+    "modified": "2021-07-14T19:05:13.385Z",
+    "timeline": {
+      "notification": {
+        "day": 5,
+        "month": 8,
+        "year": 2019
+      }
+    }
+  },
+  "reference": "https://arstechnica.com/tech-policy/2019/08/att-employees-took-bribes-to-unlock-phones-and-plant-malware-doj-says/#:~:text=In%20all%2C%20AT%26T%20insiders%20received,cell%20phones%2C%20the%20government%20alleged.&text=AT%26T%20generally%20locks%20phones%20to,being%20used%20with%20other%20carriers.",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "AT&T Workers took $1 million in bribes to unlock 2 million phones, DOJ says",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "year": 2017
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "517312",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "AT&T"
+  }
+}

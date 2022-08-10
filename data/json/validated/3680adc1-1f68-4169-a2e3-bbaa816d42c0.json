@@ -1,0 +1,202 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 275000,
+      "data_victim": [
+        "Employee",
+        "Partner",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "df942480-8e92-11ec-a600-657ec2694f8f",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2022-02-16T00:15:51.383Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used stolen creds to access environment"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypted stuff"
+      }
+    ],
+    "github": "15896",
+    "master_id": "3680adc1-1f68-4169-a2e3-bbaa816d42c0",
+    "modified": "2022-02-16T00:27:53.145Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 13,
+        "month": 6,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.bankinfosecurity.com/billing-vendor-breach-affects-275000-a-14607",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "BSRI is breached when an employee's credentials are used to access the environment and deploy ransomware",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 10
+    },
+    "incident": {
+      "month": 4,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524292",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 3,
+      "victim_id": [
+        "Walla Walla Veterans Affairs Medical Center;61",
+        "Montana VA;923140",
+        "Texas Medicaid;923130"
+      ]
+    },
+    "victim_id": "Benefit Recovery Specialists Inc "
+  }
+}

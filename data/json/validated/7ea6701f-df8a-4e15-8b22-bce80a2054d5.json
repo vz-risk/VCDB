@@ -1,0 +1,126 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1900000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "aee052a0-1570-11ec-8375-f10617ad68c4",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2021-09-14T21:11:09.091Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "error "
+      }
+    ],
+    "github": "18022",
+    "master_id": "7ea6701f-df8a-4e15-8b22-bce80a2054d5",
+    "modified": "2021-09-14T21:11:09.091Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 16,
+        "month": 8,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/secret-terrorist-watchlist-with-2-million-records-exposed-online/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July this year, Security Discovery researcher Bob Diachenko came across a plethora of JSON records in an exposed Elasticsearch cluster that piqued his interest. The 1.9 million-strong recordset contained sensitive information on people, including their names, country citizenship, gender, date of birth, passport details, and no-fly status.  The exposed server was indexed by search engines Censys and ZoomEye, indicating Diachenko may not have been the only person to come across the list: Additionally, the researcher noticed some elusive fields such as \"tag,\" \"nomination type,\" and \"selectee indicator,\" that weren't immediately understood by him.  \"That was the only valid guess given the nature of data plus there was a specific field named 'TSC_ID',\" Diachenko told BleepingComputer, which hinted to him the source of the recordset could be the Terrorist Screening Center (TSC).  FBI's TSC is used by multiple federal agencies to manage and share consolidated information for counterterrorism purposes.  The agency maintains the classified watchlist called the Terrorist Screening Database, sometimes also referred to as the \"no-fly list.\"  Such databases are regarded as highly sensitive in nature, considering the vital role they play in aiding national security and law enforcement tasks.",
+  "targeted": "NA",
+  "timeline": {
+    "containment": {
+      "unit": "Weeks",
+      "value": 4
+    },
+    "incident": {
+      "day": 16,
+      "month": 7,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Federal Bureau of Investigation"
+  }
+}

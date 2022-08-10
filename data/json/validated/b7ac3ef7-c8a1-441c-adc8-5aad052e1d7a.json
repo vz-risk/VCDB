@@ -1,0 +1,185 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Customer"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Customer"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "a0af9dc0-327c-11ec-a962-0f8a4d8d5131",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-10-21T18:59:00.039Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp",
+        "summary": "Gained stolen creds"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen creds to acccess CRM and dump data"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Used stolen information to scam customerss"
+      }
+    ],
+    "github": "15967",
+    "master_id": "b7ac3ef7-c8a1-441c-adc8-5aad052e1d7a",
+    "modified": "2021-10-21T18:59:00.039Z",
+    "timeline": {
+      "notification": {
+        "day": 22,
+        "month": 7,
+        "year": 2020
+      }
+    }
+  },
+  "reference": "https://www.financemagnates.com/forex/brokers/pepperstone-blames-3rd-party-vendor-for-users-data-breach/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "3rd party partner was compromised via malware which resulted Pepperstone's client data being taken",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Bot",
+        "Payload",
+        "Trojan"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "C2"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Lost or stolen credentials",
+        "Partner"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523120",
+    "locations_affected": 1,
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Pepperstone"
+  }
+}

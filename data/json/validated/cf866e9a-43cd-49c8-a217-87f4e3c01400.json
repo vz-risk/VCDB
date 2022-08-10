@@ -1,0 +1,127 @@
+{
+  "action": {
+    "error": {
+      "notes": "ElastticSearch server left with no password or other security.",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "Discovered by WizCase",
+  "incident_id": "e89b3be0-d821-11eb-a5a2-812629c6bc41",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "asset_os": [
+      "Windows"
+    ],
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "No",
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2021-06-28T20:45:55.663Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "ElasticSearch server left open to the internet discovered by security researchers."
+      }
+    ],
+    "github": "17714",
+    "master_id": "cf866e9a-43cd-49c8-a217-87f4e3c01400",
+    "modified": "2021-06-28T20:45:55.663Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 2,
+        "month": 6,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://www.infosecurity-magazine.com/news/battle-galaxy-gamers-data-leak/ ; https://www.teiss.co.uk/battle-for-the-galaxy-server-data-leak/",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A Chinese game developer has accidentally leaked nearly six million player profiles for the popular title Battle for the Galaxy after misconfiguring a cloud database, Infosecurity has learned.  AMT Games, which has produced a string of mobile and social titles with tens of millions of downloads between them, exposed 1.5TB of data via an Elasticsearch server.  A research team at reviews site WizCase found the trove, which contained 5.9 million player profiles, two million transactions, and 587,000 feedback messages.  Profiles typically feature player IDs, usernames, country, total money spent on the game, and Facebook, Apple or Google account data if the user linked these with their game account.  Feedback messages contain account IDs, feedback ratings and users' email addresses. At the same time, transaction data includes price, item purchased, time of purchase, payment provider, and sometimes buyer IP addresses, according to WizCase.  The firm warned exposed users that their data might have been picked up by opportunistic cyber-criminals searching for misconfigured databases. Data on how much money individuals have spent on the site could enable fraudsters to target the biggest spenders, it added.  WizCase warned that \"it is common for unethical hackers and criminals on the internet to use personal data to create trustworthy phishing emails. The more information they possess, the more believable these emails look.\"  It went on add that confidential information such as email addresses and user issues with the service could enable bad actors to \"pose as game support and direct users to malicious websites where their credit card details can be stolen.\"  The firm urged gamers to input the minimum amount of personal information possible when purchasing or setting up an account and parents not to lend children their credit cards.  WizCase said it reached out to AMT Games with news of the data breach but did not receive a response. The company later disabled access to the database.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 2,
+      "month": 6,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541515",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "AMT"
+  }
+}
