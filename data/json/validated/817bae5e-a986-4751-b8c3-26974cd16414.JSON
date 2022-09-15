@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1500000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1500000,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "fda1f2b0-0d2a-11ed-9141-192d7c736152",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2022-07-27T04:36:21.339Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured AWS Server found by external security researcher"
+      }
+    ],
+    "github": "18493",
+    "master_id": "817bae5e-a986-4751-b8c3-26974cd16414",
+    "modified": "2022-07-27T04:47:01.593Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.securitymagazine.com/articles/96996-security-firm-securitas-exposed-airports-employees-in-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Securitas, a leading security services provider of on-site guarding and risk management, suffered a data breach, which exposed 1.5 million files. Based in Sweden and with branches throughout the world, Securitas provides a full suite of security services and products for corporate clients across various industries and employs more than 350,000 people in 48 markets.     The data exposure, discovered by the cybersecurity team at SafetyDetectives, is believed to impact clients within Latin America in the aviation industry. One of the company\u2019s Amazon S3 buckets was left open, exposing employee PII and sensitive company data of at least four airports in Colombia and Peru: El Dorado International Airport, Alfonso Bonilla Arag\u00f3n International Airport, Jos\u00e9 Mar\u00eda C\u00f3rdova International Airport in Colombia and Aeropuerto Internacional Jorge Ch\u00e1vez in Peru. Other files may have exposed other airports.     The SafetyDetectives team observed two primary databases containing the information of Securitas employees and airport employees, photos of ID cards and other unmarked images, including full names, pictures of employees, occupations and national ID numbers. The bucket contained:    Device models of cameras used. GPS locations of photos (with coordinates and GPS maps). Times and date of photos.   Unmarked photos also exposed the data of Securitas clients, airport employees and associated businesses. ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "SE"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561612",
+    "region": [
+      "150155",
+      "150154"
+    ],
+    "victim_id": "Securitas"
+  }
+}
