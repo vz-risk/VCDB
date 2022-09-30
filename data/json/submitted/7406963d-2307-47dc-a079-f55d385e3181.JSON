@@ -1,0 +1,184 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "9239e4c0-3dc6-11ed-8ffa-ebb9abb0c009",
+    "reference": "https://portswigger.net/daily-swig/data-breach-at-australian-pension-provider-spirit-super-impacts-50k-victims-following-phishing-attack",
+    "security_incident": "Confirmed",
+    "summary": "Users w/ MFA still gets phished. Mail compromised. 50k people's data at risk.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "7406963d-2307-47dc-a079-f55d385e3181",
+        "modified": "2022-09-27T00:38:24.796Z",
+        "created": "2022-09-26T23:10:58.444Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "attribute": "ia",
+                "asset": "ppl",
+                "summary": "person phished"
+            },
+            {
+                "summary": "creds used to log in to email",
+                "action": "hak",
+                "actor": "ext",
+                "attribute": "cp",
+                "asset": "srv"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "gbassett",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "18693"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 5,
+            "day": 19
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "AU"
+        ],
+        "region": [
+            "009053"
+        ],
+        "victim_id": "Spirit Supe",
+        "employee_count": "101 to 1000",
+        "industry": "525110"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Other employee"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user or employee"
+            },
+            {
+                "variety": "S - Mail"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials",
+                    "amount": 1
+                },
+                {
+                    "variety": "Bank",
+                    "amount": 50000
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Customer"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 50001
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Email"
+            ]
+        },
+        "non-distribution services": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "money laundering": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

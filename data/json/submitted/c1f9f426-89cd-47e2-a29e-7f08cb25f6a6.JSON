@@ -1,0 +1,171 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "00659670-3b55-11ed-a11a-bb811330b875",
+    "summary": "phishing compromising email.  notifying people w/ personal info in the emails just in case",
+    "security_incident": "Confirmed",
+    "confidence": "Medium",
+    "reference": "https://www.hipaajournal.com/healthback-holdings-email-security-breach-affects-21000-individuals/",
+    "plus": {
+        "master_id": "c1f9f426-89cd-47e2-a29e-7f08cb25f6a6",
+        "modified": "2022-09-26T18:35:16.090Z",
+        "created": "2022-09-23T20:32:58.327Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "attribute": "ia",
+                "asset": "ppl"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "gbassett",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "credit_monitoring": "Yes"
+            }
+        },
+        "github": "18871"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 6,
+            "day": 1
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 8
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Healthback Holdings",
+        "employee_count": "101 to 1000",
+        "industry": "621610",
+        "state": "US-OK"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user or employee"
+            },
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Medical",
+                    "amount": 21114
+                }
+            ],
+            "data_victim": [
+                "Unknown"
+            ],
+            "data_disclosure": "Yes",
+            "notes": "Creds were definitely disclosed, however the PHI is really only Potentially"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Email"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
