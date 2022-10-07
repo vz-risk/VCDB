@@ -1,0 +1,222 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "712016a0-4597-11ed-9a6c-911ade1670b5",
+    "reference": "https://www.databreaches.net/ny-empress-ems-hit-by-hive-ransomware/,https://www.bleepingcomputer.com/news/security/new-york-ambulance-service-discloses-data-breach-after-ransomware-attack/",
+    "security_incident": "Confirmed",
+    "summary": "The details of the attack describe a standard double-extortion ransomware incident ",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "71600b1d-41cc-45b4-8fad-23254dcd477b",
+        "modified": "2022-10-06T22:30:34.281Z",
+        "created": "2022-10-06T21:53:45.867Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "attribute": "unk",
+                "asset": "unk",
+                "summary": "unknown infiltration"
+            },
+            {
+                "summary": "hacking to look around",
+                "attribute": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "action": "hak"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "attribute": "cp",
+                "asset": "srv",
+                "summary": "steal data"
+            },
+            {
+                "actor": "ext",
+                "attribute": "au",
+                "asset": "srv",
+                "action": "mal",
+                "summary": "ransomware"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 7,
+                "day": 14
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "gbassett",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "18978"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 5,
+            "day": 26
+        },
+        "exfiltration": {
+            "unit": "Weeks",
+            "value": 6
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Empress EMS",
+        "industry": "621910",
+        "employee_count": "101 to 1000",
+        "state": "US-NY"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "Infiltration unknown"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Hive"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "Unknown"
+            },
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 31855
+                },
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Patient",
+                "Customer",
+                "Victim organization"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        },
+        "non-distribution services": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Cryptocurrency"
+            ]
+        },
+        "money laundering": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Distracting"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

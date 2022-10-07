@@ -1,0 +1,129 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "c0d35a90-4678-11ed-9a6c-911ade1670b5",
+    "summary": "misconfiguration exposed sensitive sharepoint information",
+    "reference": "https://www.nola.com/news/crime_police/article_f297c436-5488-11ec-97ea-8fb5c22da4c1.html",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "plus": {
+        "master_id": "ea15ce0a-19b0-45c2-9cba-2b529368d8f9",
+        "modified": "2022-10-08T00:54:35.014Z",
+        "created": "2022-10-08T00:46:36.345Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "attribute": "cp",
+                "asset": "srv",
+                "summary": "misconfigured sharepoint server hosting PHI"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "gbassett",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No"
+            }
+        },
+        "asset_os": [
+            "Windows"
+        ],
+        "github": "18319"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 10,
+            "day": 5
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Tulane University Police Department",
+        "employee_count": "101 to 1000",
+        "industry": "922120",
+        "state": "US-LA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": "sharepoint with open permissions"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Other"
+            ]
+        }
+    },
+    "value_chain": {
+        "NA": true
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6",
+    "discovery_notes": "discovered by newspaper editors"
+}

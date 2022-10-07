@@ -1,0 +1,189 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "bd2fec90-459d-11ed-9a6c-911ade1670b5",
+    "security_incident": "Confirmed",
+    "summary": "manager stole creds and used them to unlock/unblock phones",
+    "reference": "https://abc7.com/t-mobile-store-unlocking-phone-scheme-argishti-khudaverdyan-of-burbank-eagle-rock-t-mobile/12096082/",
+    "confidence": "High",
+    "plus": {
+        "master_id": "02620773-d19c-4c20-b84e-fb298949948b",
+        "modified": "2022-10-08T02:52:23.447Z",
+        "created": "2022-10-06T22:38:50.457Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "prt",
+                "attribute": "cp",
+                "asset": "ppl",
+                "summary": "stole creds"
+            },
+            {
+                "action": "hak",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "ia",
+                "summary": "used creds to unlock phones"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "gbassett",
+        "dbir_year": 220,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "18853"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2019,
+            "month": 6
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "t-mobile",
+        "employee_count": "50001 to 100000",
+        "industry": "517210",
+        "state": "US-CA"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Physical access",
+                "Web application"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email",
+                "Phone"
+            ],
+            "target": [
+                "Other employee"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "misuse": {
+            "variety": [
+                "Knowledge abuse",
+                "Net misuse"
+            ],
+            "vector": [
+                "Physical access"
+            ]
+        }
+    },
+    "actor": {
+        "partner": {
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "US"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            },
+            {
+                "variety": "P - Helpdesk"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 30,
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Modify data"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Fraud detection"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Persona",
+                "Email"
+            ]
+        },
+        "non-distribution services": {
+            "variety": [
+                "Unknown"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses",
+                "Organizational Information"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email",
+                "Phone",
+                "Website"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Provide service"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Insignificant"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
