@@ -1,0 +1,232 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "437a2880-0f46-11ed-935e-2fa00f6a742d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.tripwire.com/state-of-security/latest-security-news/school-district-spend-314k-rebuilding-servers-malware-attack/",
+    "summary": "Rockingham County School District experienced a ransomware attack that cost over 300k to fix",
+    "confidence": "High",
+    "plus": {
+        "master_id": "2cee8326-35f2-40ba-945d-e7d7d36cd8c7",
+        "modified": "2022-07-29T18:08:01.261Z",
+        "created": "2022-07-29T17:56:37.256Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "phishing employee"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia",
+                "summary": "malware installed on system"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "actor access data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "ransomware instaled"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypts things"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2018,
+                "month": 1,
+                "day": 3
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2019,
+        "github": "10779"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2017,
+            "month": 12,
+            "day": 11
+        },
+        "compromise": {
+            "unit": "Days",
+            "value": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Rockingham County School District ",
+        "employee_count": "1001 to 10000",
+        "industry": "611110",
+        "locations_affected": 1,
+        "state": "NC"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Backdoor"
+            ],
+            "vector": [
+                "Backdoor"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Backdoor or C2",
+                "RAT",
+                "Trojan",
+                "Downloader",
+                "Exploit misconfig",
+                "Ransomware"
+            ],
+            "vector": [
+                "C2",
+                "Download by malware",
+                "Email attachment"
+            ],
+            "name": "Emotet"
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user or employee"
+            },
+            {
+                "variety": "S - Unknown",
+                "amount": 20
+            },
+            {
+                "variety": "U - Desktop or laptop",
+                "amount": 3000
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Student"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Bot",
+                "Email",
+                "Payload",
+                "Ransomware"
+            ]
+        },
+        "non-distribution services": {
+            "variety": [
+                "C2"
+            ]
+        },
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        },
+        "distribution": {
+            "variety": [
+                "Email",
+                "Compromised server"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Cryptocurrency"
+            ]
+        }
+    },
+    "impact": {
+        "loss": [
+            {
+                "variety": "Response and recovery",
+                "amount": 314000
+            }
+        ],
+        "overall_rating": "Damaging",
+        "overall_amount": 314000
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

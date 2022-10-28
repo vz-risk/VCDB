@@ -1,0 +1,115 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "ce48c6e0-1290-11ed-b2f5-3585c75e0457",
+    "security_incident": "Confirmed",
+    "reference": "https://techcrunch.com/2018/10/15/donald-daters-a-dating-app-for-trump-supporters-leaked-its-users-data/",
+    "summary": "Donalddaters mobile app was misconfigured and leaked all 1600 users data at their launch day.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "2796fa8e-d8db-47d8-a0c5-c6d99321380f",
+        "modified": "2022-08-02T22:49:43.268Z",
+        "created": "2022-08-02T22:27:46.383Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconifgured app to leak credentials to firehosedb"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2018,
+                "month": 10,
+                "day": 15
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2019,
+        "github": "12362"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 10
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "DonaldDate",
+        "employee_count": "1 to 10",
+        "industry": "51",
+        "locations_affected": 1
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 1600,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1600
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

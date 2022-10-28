@@ -1,0 +1,166 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "c41cc610-0f4a-11ed-935e-2fa00f6a742d",
+    "security_incident": "Confirmed",
+    "reference": "https://oag.ca.gov/system/files/Eichenbaum%20-%20SSN%20-%20Redacted%20%2810149322x7AB84%29.pdf",
+    "summary": "Eichenbaum Comer & Ratynets A.A.C.accounting firm was compromised when an employee fell victim to a phishing attack that resulted in an external actor accessing that user's inbox and some customer's data",
+    "confidence": "High",
+    "plus": {
+        "master_id": "984fc61b-2424-4bfd-b5e2-e3eb375f0dbd",
+        "modified": "2022-07-29T18:45:18.928Z",
+        "created": "2022-07-29T18:28:51.058Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "phishing email"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "convinced compromise of credentials"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "used stolen creds to access system"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2020,
+                "month": 3,
+                "day": 7
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "18586"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2020,
+            "month": 10,
+            "day": 4
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Eichenbaum Comer & Ratynets A.A.C",
+        "employee_count": "101 to 1000",
+        "industry": "541200"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            },
+            {
+                "variety": "P - End-user or employee",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 2
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials",
+                    "amount": 1
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "value_chain": {
+        "targeting": {
+            "variety": [
+                "Email addresses"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

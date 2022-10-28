@@ -1,0 +1,157 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "35497490-1983-11ed-ac8d-a1874ec50e39",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bleepingcomputer.com/news/security/segway-store-hacked-to-steal-customers-credit-cards/",
+    "summary": "Magecart stealing credit cards from the Segway website",
+    "plus": {
+        "master_id": "4c208018-b7e7-4d23-8ce1-42069c22f8f4",
+        "modified": "2022-08-11T18:47:57.555Z",
+        "created": "2022-08-11T18:38:04.377Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "found some way to access the system"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "installed skimmer"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "stole cc data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 1,
+                "day": 25
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "18456"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 1,
+            "day": 6
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 19
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Segway",
+        "employee_count": "101 to 1000",
+        "industry": "488490"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Export data",
+                "Capture app data"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ],
+            "notes": "Magecart",
+            "name": "Magecart"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

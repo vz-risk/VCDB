@@ -1,0 +1,217 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "eb76efe0-4e3f-11ed-9185-8d15ab5b74e6",
+    "security_incident": "Confirmed",
+    "reference": "https://www.scmagazine.com/analysis/ransomware/ransomware-attack-on-billing-vendor-leads-to-data-theft-for-942k-patients",
+    "summary": "Ransomware incident against  Practice Resources impacts over 942,138  from 28 different healthcare vendor providers",
+    "confidence": "High",
+    "plus": {
+        "master_id": "c9636d80-276c-431a-ba65-be950e3d65f5",
+        "modified": "2022-10-17T21:42:21.255Z",
+        "created": "2022-10-17T21:19:55.870Z",
+        "sub_source": "phidbir",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "unknown initial access"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfilled data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypts stuff"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 4,
+                "day": 12
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "partner_data": "Yes",
+                "partner_number": 942138
+            }
+        },
+        "github": "18926"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 4
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "secondary": {
+            "victim_id": [
+                "Achieve Physical Therapy; 621340",
+                "CNY Obstetrics and Gynecology; 622110",
+                "Community Memorial Hospital; 622110",
+                "Crouse Health Hospital;622110",
+                "Crouse Medical Practice;622110",
+                "Family Care Medical Group;622110",
+                "Fitness Forum Physical Therapy;621340",
+                "FLH Medical;622110",
+                "Greece Dermatological Associates;622110",
+                "Guidone Physical Therapy;621340",
+                "Hamilton Orthopedic Surgery & Sports Medicine;621340",
+                "Helendale Dermatological and Medical Spa;622110",
+                "Kudos Medical;622110",
+                "Laboratory Alliance of Central New York;622110",
+                "Liverpool Physical Therapy;621340",
+                "Michael J Paciorek;622110",
+                "Nephrology Associates of Watertown;622110",
+                "Nephrology Hypertension Associates of CNY;622110",
+                "Orthopedics East;622110",
+                "Salvation Army;622110",
+                "Soldiers & Sailors Memorial Hospital;622110",
+                "St. Joseph’s Medical;622110",
+                "Surgical Care West;622110",
+                "Syracuse Endoscopy Associates;622110",
+                "Syracuse Gastroenterological Associates;622110",
+                "Syracuse Pediatrics;622110",
+                "Tully Physical Therapy;621340",
+                "Upstate Community Medical;622110"
+            ],
+            "amount": 28
+        },
+        "victim_id": "Practice Resources",
+        "employee_count": "11 to 100",
+        "industry": "541219",
+        "locations_affected": 1,
+        "state": "NY"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown initial access"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 942138,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient",
+                "Partner"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 942138
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        },
+        "cash-out": {
+            "variety": [
+                "Cryptocurrency"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

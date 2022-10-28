@@ -1,0 +1,111 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "59af4850-0f60-11ed-935e-2fa00f6a742d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hstoday.us/subject-matter-areas/transportation/report-breach-exposes-hundreds-of-thousands-of-transportation-industry-credit-records/",
+    "confidence": "High",
+    "summary": "Misconfigured database exposed 800k records from TransCredit transportation company",
+    "plus": {
+        "master_id": "ce0b28ae-a4c9-40c4-8018-14c78e957a53",
+        "modified": "2022-07-29T21:39:52.005Z",
+        "created": "2022-07-29T21:03:21.429Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "misconfigured database"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 1,
+                "day": 11
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "github": "18413"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "TransCredit",
+        "employee_count": "1001 to 10000",
+        "industry": "484121",
+        "locations_affected": 1,
+        "state": "FL"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 822789,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

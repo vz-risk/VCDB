@@ -1,0 +1,134 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "50a8f9c0-4a4a-11ed-b987-7f1d15bc4f21",
+    "security_incident": "Confirmed",
+    "reference": "https://www.govinfosecurity.com/iranian-steelmaker-halts-production-following-cyberattack-a-19465",
+    "summary": "Iranian Steel producer had to halt its manufacturing as a result of a cyber attack targeting it's control systems",
+    "confidence": "High",
+    "plus": {
+        "master_id": "d8d278fe-8950-4090-b6fe-79f7c2f9a475",
+        "modified": "2022-10-13T19:11:39.420Z",
+        "created": "2022-10-12T20:24:15.964Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "unknown initial access to org environment"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "used access to control systems to change settings"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Ended up cause physical damage to the steelplant"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 6,
+                "day": 27
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "github": "18732"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "IR"
+        ],
+        "victim_id": "Khouzestan Steel Company",
+        "employee_count": "1001 to 10000",
+        "industry": "331200"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown",
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ]
+        },
+        "unknown": {
+            "notes": "Unknown initial action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Activist"
+            ],
+            "motive": [
+                "Ideology"
+            ],
+            "name": [
+                "Predatory Sparrow"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - ICS"
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "OT"
+        ],
+        "country": [
+            "IR"
+        ]
+    },
+    "attribute": {
+        "integrity": {
+            "variety": [
+                "Modify configuration"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Destruction"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
