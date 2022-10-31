@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown way of getting credentials",
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 12358,
+          "variety": "Bank"
+        },
+        {
+          "amount": 12358,
+          "variety": "Personal"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 12358,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "72d0e420-3a84-11ed-a8d9-e567d58abfd4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2022-09-22T18:40:05.475Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp",
+        "summary": "unknown means of access credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen credentials to steal email data"
+      }
+    ],
+    "github": "18713",
+    "master_id": "9bc7c268-6fa8-468d-953b-2942c38090bc",
+    "modified": "2022-09-22T18:58:27.600Z",
+    "timeline": {
+      "notification": {
+        "day": 31,
+        "month": 3,
+        "year": 2022
+      }
+    }
+  },
+  "reference": "https://www.jdsupra.com/legalnews/texas-gulf-bank-confirms-data-breach-3357465/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Texas bank confirms that unauthorized individuals accessed a users inbox ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 4
+    },
+    "incident": {
+      "day": 13,
+      "month": 1,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "targeting": {
+      "variety": [
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "522110",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Texas Gulf Bank "
+  }
+}

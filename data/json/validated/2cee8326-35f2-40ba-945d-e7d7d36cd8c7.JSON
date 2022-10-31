@@ -1,0 +1,241 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Backdoor"
+      ],
+      "vector": [
+        "Backdoor"
+      ]
+    },
+    "malware": {
+      "name": "Emotet",
+      "variety": [
+        "Backdoor or C2",
+        "RAT",
+        "Trojan",
+        "Downloader",
+        "Exploit misconfig",
+        "Ransomware",
+        "Backdoor"
+      ],
+      "vector": [
+        "C2",
+        "Download by malware",
+        "Email attachment"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 20,
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "amount": 3000,
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Student"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "amount": 314000,
+        "variety": "Response and recovery"
+      }
+    ],
+    "overall_amount": 314000,
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "437a2880-0f46-11ed-935e-2fa00f6a742d",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2022-07-29T17:56:37.256Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "phishing employee"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "malware installed on system"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "actor access data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware instaled"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts things"
+      }
+    ],
+    "github": "10779",
+    "master_id": "2cee8326-35f2-40ba-945d-e7d7d36cd8c7",
+    "modified": "2022-07-29T18:08:01.261Z",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 1,
+        "year": 2018
+      }
+    }
+  },
+  "reference": "https://www.tripwire.com/state-of-security/latest-security-news/school-district-spend-314k-rebuilding-servers-malware-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Rockingham County School District experienced a ransomware attack that cost over 300k to fix",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 11,
+      "month": 12,
+      "year": 2017
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Bot",
+        "Email",
+        "Payload",
+        "Ransomware"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email",
+        "Compromised server"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "C2"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Rockingham County School District "
+  }
+}

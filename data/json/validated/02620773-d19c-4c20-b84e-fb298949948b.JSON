@@ -1,0 +1,200 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Physical access",
+        "Web application"
+      ]
+    },
+    "misuse": {
+      "variety": [
+        "Knowledge abuse",
+        "Net misuse"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    },
+    "social": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "target": [
+        "Other employee",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email",
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "partner": {
+      "country": [
+        "US"
+      ],
+      "industry": "000",
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "019021"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Other employee"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Helpdesk"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 30,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 30,
+      "data_victim": [
+        "Employee"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify data"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Fraud detection"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Insignificant"
+  },
+  "incident_id": "bd2fec90-459d-11ed-9a6c-911ade1670b5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-10-06T22:38:50.457Z",
+    "dbir_year": 220,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "prt",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "stole creds"
+      },
+      {
+        "action": "hak",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "used creds to unlock phones"
+      }
+    ],
+    "github": "18853",
+    "master_id": "02620773-d19c-4c20-b84e-fb298949948b",
+    "modified": "2022-10-08T02:52:23.447Z"
+  },
+  "reference": "https://abc7.com/t-mobile-store-unlocking-phone-scheme-argishti-khudaverdyan-of-burbank-eagle-rock-t-mobile/12096082/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "manager stole creds and used them to unlock/unblock phones",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 5
+    },
+    "incident": {
+      "month": 6,
+      "year": 2019
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Provide service"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Persona",
+        "Email"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email",
+        "Phone",
+        "Website"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses",
+        "Organizational Information"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "517210",
+    "region": [
+      "019021"
+    ],
+    "state": "US-CA",
+    "victim_id": "t-mobile"
+  }
+}

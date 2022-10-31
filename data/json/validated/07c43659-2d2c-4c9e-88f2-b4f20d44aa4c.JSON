@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "authenticate with SSN only",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Brute force"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 290000000,
+        "rating": "Major",
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 290000000,
+    "overall_rating": "Painful"
+  },
+  "incident_id": "d42bf5c0-3467-11ed-b144-457a87672420",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "gbassett",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-09-15T01:00:06.429Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp"
+      }
+    ],
+    "github": "17484",
+    "master_id": "07c43659-2d2c-4c9e-88f2-b4f20d44aa4c",
+    "modified": "2022-09-15T01:18:56.574Z"
+  },
+  "reference": "https://www.kwch.com/2021/04/21/kdol-looking-into-possible-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Kansas department of labor site used SSN as only identifier to retrieve PII.  Used by scammers to get data to defraud Kansas of $290 million in unemployment claims.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "containment": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 2,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "926110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "US-KS",
+    "victim_id": "Kansas Department of Labor (KDOL)"
+  }
+}

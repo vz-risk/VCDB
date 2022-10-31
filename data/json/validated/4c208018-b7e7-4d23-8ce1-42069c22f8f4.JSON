@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "name": "Magecart",
+      "notes": "Magecart",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Export data",
+        "Capture app data"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Processed"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "35497490-1983-11ed-ac8d-a1874ec50e39",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-08-11T18:38:04.377Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "found some way to access the system"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed skimmer"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "stole cc data"
+      }
+    ],
+    "github": "18456",
+    "master_id": "4c208018-b7e7-4d23-8ce1-42069c22f8f4",
+    "modified": "2022-08-11T18:47:57.555Z",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 1,
+        "year": 2022
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/segway-store-hacked-to-steal-customers-credit-cards/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Magecart stealing credit cards from the Segway website",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 19
+    },
+    "incident": {
+      "day": 6,
+      "month": 1,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "488490",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Segway"
+  }
+}

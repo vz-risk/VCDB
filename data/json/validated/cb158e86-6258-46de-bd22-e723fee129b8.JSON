@@ -1,0 +1,137 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Knowledge abuse",
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Remote access",
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Created account",
+        "Fraudulent transaction",
+        "Misrepresentation",
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Fraud detection"
+      ]
+    }
+  },
+  "incident_id": "ec67a0f0-4027-11ed-a8d9-e567d58abfd4",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "planglois",
+    "created": "2022-09-29T22:52:53.247Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "added her email to other people's accounts"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Changed persons account information to deposit in their bank acccount"
+      }
+    ],
+    "github": "17895",
+    "master_id": "cb158e86-6258-46de-bd22-e723fee129b8",
+    "modified": "2022-09-29T23:10:03.658Z",
+    "timeline": {
+      "notification": {
+        "day": 8,
+        "month": 7,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://www.freep.com/story/news/local/michigan/detroit/2021/07/08/feds-state-unemployment-fraud-hacked-accounts-autumn-mims/7904125002/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Michigan Unemployment Insurance employee used her access to fradulently redirect funds to her personal acccount ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Months"
+    },
+    "exfiltration": {
+      "unit": "NA"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Fraud"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923130",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Michigan Unemployment Insurance Agency"
+  }
+}

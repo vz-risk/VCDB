@@ -1,0 +1,210 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "notes": "BEC",
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Email"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown exfiltration of credentials",
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "amount": 212509,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 212510,
+      "data_victim": [
+        "Employee",
+        "Patient",
+        "Victim organization"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "94feee20-464b-11ed-9a6c-911ade1670b5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "gbassett",
+    "created": "2022-10-07T19:23:15.459Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp",
+        "summary": "steal creds"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use creds to log into email server"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineer someone into financial transfer"
+      }
+    ],
+    "github": "18380",
+    "master_id": "4ea5274f-7f17-4505-8af7-e4c9cadba7e5",
+    "modified": "2022-10-07T20:01:54.977Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 19,
+        "month": 11,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://www.healthcareinfosecurity.com/clinic-notifies-212500-about-2020-breach-involving-fraud-a-18238,https://www.scmagazine.com/analysis/breach/213k-florida-digestive-health-patients-informed-of-2020-data-compromise",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "BEC",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 12,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Fraud"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Persona"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Email",
+        "Unknown"
+      ]
+    },
+    "money laundering": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "US-FL",
+    "victim_id": "Florida Digestive Health Specialists"
+  }
+}

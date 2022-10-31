@@ -1,0 +1,207 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown action to get credentials",
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Patient",
+        "Partner"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "c51567c0-2881-11ed-bdae-91b81469f75a",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2022-08-30T20:35:34.076Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "unknown means of breaching credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used credentials to steal emails"
+      }
+    ],
+    "github": "18383",
+    "master_id": "a4ebcca4-0b05-41de-8b1b-a4a1fabcd70e",
+    "modified": "2022-08-30T21:01:19.227Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 1,
+        "year": 2022
+      }
+    }
+  },
+  "reference": "https://healthitsecurity.com/news/business-associate-data-breach-impacts-32-healthcare-organizations",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": " - More than 30 healthcare organizations were impacted by a business associate data breach targeted at Ciox Health, a clinical data technology company.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 3
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 24,
+      "month": 6,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "targeting": {
+      "variety": [
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541513",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 32,
+      "victim_id": [
+        " AdventHealth \u2013 Orlando;622110",
+        " Alabama Orthopaedic Specialists;622110",
+        "Baptist Memorial Health Care;622110",
+        " Butler Health Systems;622110",
+        "Cameron Memorial Community Hospital;622110",
+        "Centra Health;622110",
+        "Children\u2019s Healthcare of Atlanta;622110",
+        " Coastal Family Health Center;622110",
+        "Copley Hospital;622110",
+        "DeSoto Memorial Hospital Health System;622110",
+        "EvergreenHealth;622110",
+        "Hoag Health System;622110",
+        "Hospital Sisters Health System;622110",
+        "Huntsville Hospital Health System;622110",
+        "Indiana University Health;622110",
+        "McLeod Health System;622110",
+        "MD Partners;622110",
+        " Niagara Falls Memorial Medical Center Health System;622110",
+        "Northern Light Mercy Hospital;622110",
+        "Northwestern Medicine;622110",
+        "Ohio State University Health System;622110",
+        "OrthoConnecticut;622110",
+        "Prisma Health \u2013 Greenville Health System;622110",
+        "Prisma Health \u2013 Palmetto Health;622110",
+        "Sarasota County Public Hospital District d/b/a Sarasota Memorial Health Care System;622110",
+        "Trinity Health \u2013 Holy Cross Hospital;622110",
+        "Trinity Health \u2013 Mount Carmel Health System;622110",
+        "Trinity Health \u2013 Saint Alphonsus Health System;622110",
+        "Trinity Health \u2013 St. Francis Medical Center;622110",
+        "Trinity Health \u2013 St. Joseph Mercy Health System;622110",
+        "Union Hospital Healthcare System;622110",
+        " Women\u2019s Health Specialist;622110"
+      ]
+    },
+    "victim_id": " Ciox Health"
+  }
+}
