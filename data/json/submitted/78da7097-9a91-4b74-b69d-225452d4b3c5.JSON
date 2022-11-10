@@ -1,0 +1,126 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "b83d13d0-44c5-11ed-a916-a1b9ec4e3e46",
+    "security_incident": "Confirmed",
+    "reference": "https://www.fox2detroit.com/news/city-of-detroit-retirees-data-breach-causes-concern",
+    "summary": "accidental publishing error that exposed SS# and other personal info of retirees of City of Detroit. ",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "78da7097-9a91-4b74-b69d-225452d4b3c5",
+        "modified": "2022-10-05T21:04:31.504Z",
+        "created": "2022-10-05T20:52:30.861Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 7,
+                "day": 14
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "No",
+                "credit_monitoring": "Yes"
+            }
+        },
+        "github": "18845"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 7,
+            "day": 27
+        },
+        "containment": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019020"
+        ],
+        "victim_id": "City of Detroit",
+        "employee_count": "1001 to 10000",
+        "industry": "92",
+        "state": "MI"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Customer"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
