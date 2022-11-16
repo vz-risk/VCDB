@@ -1,0 +1,160 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "57920d90-5480-11ed-92c8-2df42efe4bf9",
+    "security_incident": "Confirmed",
+    "reference": "https://www.databreaches.net/nj-serv-behavioral-health-system-remains-quiet-about-alleged-ransomware-attack-in-may/",
+    "summary": "SERV Behavioral Health System in New Jersey provides Social, Educational, Residential, and Vocational services to children and adults with adults and children trying to cope with serious mental illness or a developmental disability.  On May 26, their files were allegedly encrypted by Hive ransomware team. On July 14, Hive added SERV BHS to their leak site, presumably because BHS wasn’t paying their ransom demand.  BHS did not respond to an email inquiry DataBreaches sent on July 14.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "da935b48-b908-4f36-9d83-c55b8c36332f",
+        "modified": "2022-10-25T21:27:57.073Z",
+        "created": "2022-10-25T21:16:12.009Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "unknown initial action"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware triggered"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 7,
+                "day": 16
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2023,
+        "github": "18898"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 5,
+            "day": 26
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "SERV Behavioral Health System ",
+        "industry": "621330",
+        "employee_count": "101 to 1000",
+        "state": "NJ"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Web application - download"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ],
+            "name": "HIVE"
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown initial action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "RU"
+            ],
+            "region": [
+                "150151"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            },
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
