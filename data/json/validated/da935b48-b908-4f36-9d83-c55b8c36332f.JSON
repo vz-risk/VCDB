@@ -1,0 +1,173 @@
+{
+  "action": {
+    "malware": {
+      "name": "HIVE",
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Web application - download",
+        "Web application"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown initial action",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "57920d90-5480-11ed-92c8-2df42efe4bf9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2022-10-25T21:16:12.009Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "unknown initial action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware triggered"
+      }
+    ],
+    "github": "18898",
+    "master_id": "da935b48-b908-4f36-9d83-c55b8c36332f",
+    "modified": "2022-10-25T21:27:57.073Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 16,
+        "month": 7,
+        "year": 2022
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/nj-serv-behavioral-health-system-remains-quiet-about-alleged-ransomware-attack-in-may/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "SERV Behavioral Health System in New Jersey provides Social, Educational, Residential, and Vocational services to children and adults with adults and children trying to cope with serious mental illness or a developmental disability.  On May 26, their files were allegedly encrypted by Hive ransomware team. On July 14, Hive added SERV BHS to their leak site, presumably because BHS wasn\u2019t paying their ransom demand.  BHS did not respond to an email inquiry DataBreaches sent on July 14.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 5,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621330",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "SERV Behavioral Health System "
+  }
+}

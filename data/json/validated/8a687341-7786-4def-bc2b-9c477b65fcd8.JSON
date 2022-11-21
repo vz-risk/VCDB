@@ -1,0 +1,155 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "name": "Ryuk",
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "cc063f50-0c4d-11ed-91ff-0b0a6a79f02d",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2022-07-26T00:12:59.333Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed software"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data"
+      }
+    ],
+    "github": "17074",
+    "master_id": "8a687341-7786-4def-bc2b-9c477b65fcd8",
+    "modified": "2022-07-26T00:33:47.035Z",
+    "timeline": {
+      "notification": {
+        "day": 19,
+        "month": 2,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://www.databreaches.net/cyber-%E2%80%8B%E2%80%8Battack-afnor-admits-to-being-confronted-with-ryuk-ransomware/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Irony of the calendar, while the President of the Republic, Emmanuel Macron, announced, this Thursday, February 18 at noon, the allocation of one billion euros , as part of the recovery plan, to cybersecurity , Afnor shut down the services it exposes on the Internet, starting with its website.   Initially, and again this afternoon, the French standardization association reported a \"technical problem\" in response to those who wondered about the situation, on Twitter. The library of the University of Angers also alerted to the unavailability of a database dependent on Afnor, stating: \u201cfollowing a cyberattack, Afnor had to interrupt its services\u201d.  Reached by telephone, on his initiative, a spokesperson for the association recognizes that it is a \u201clarge-scale\u201d cyberattack and that it led to the detonation of ransomware  : Ryuk. But no detail, at this stage, neither on the extent of the encrypted park nor on the chronology of the attack.  Since the beginning of the year, Ryuk has been observed in particular in Houilles, at the Dax hospital center, and at the Villefranche-sur-Sa\u00f4ne hospital . And that wouldn't be a coincidence. According to our sources, the operators of Ryuk, Darkside and Revil are currently proving to be particularly active. For the first, we will remember in particular the attack on Sopra Steria last fall.  The French standardization association is preparing for several weeks of deep cleaning, before being able to relaunch all of its services. And we can hope that this is an opportunity to modernize an infrastructure, some elements of which were exposed on the Internet before the attack and were, to say the least, aging.  Afnor is unfortunately not the only organization to leng",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 18,
+      "month": 2,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "000",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Afnor (French Standardization Agency)"
+  }
+}

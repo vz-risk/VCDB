@@ -1,0 +1,164 @@
+{
+  "action": {
+    "malware": {
+      "notes": "ransomware was installed on systems",
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown action to infiltrate victim organization",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT",
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "7cc465e0-44c7-11ed-a916-a1b9ec4e3e46",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2022-10-05T21:05:10.078Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "unknown action to infiltrate "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "executed malware on systems"
+      }
+    ],
+    "github": "18747",
+    "master_id": "da86feeb-bc47-48cc-a084-b1595d2d6a2b",
+    "modified": "2022-10-05T21:18:25.884Z",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 6,
+        "year": 2022
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/automotive-hose-maker-nichirin-hit-by-ransomware-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Nichirin-Flex U.S.A, a subsidiary of the Japanese car and motorcycle hose maker Nichirin, has been hit by a ransomware attack causing the company to take the network offline.  The attack occurred on June 14, 2022, and the company reacted as soon as it detected the unauthorized access on its network and moved operations into manual mode. In an official statement [PDF, Japanese] yesterday, Nichirin underlines that system recovery has been prioritized to resume business operations. The company is currently investigating how the unauthorized access happened and is trying to determine \"the effects of information leakage.\"  Additionally, the firm's website had to be taken down temporarily until experts were able to determine the extent of the ransomware attack impact, but it's now back online.  For now, the U.S. network segment remains isolated from the rest of Nichirin's infrastructure, and there are no signs that the ransomware actors were able to pivot outside of it.  In a separate notice, Nichirin is warning clients and employees of the possibility of receiving emails that impersonate the firm, suggesting that the ransomware attack was possible through phishing.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 6,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "336300",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Nichirin Flex - USA"
+  }
+}
