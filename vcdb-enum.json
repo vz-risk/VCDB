@@ -538,6 +538,7 @@
         "Forced browsing", 
         "Format string attack", 
         "Fuzz testing", 
+        "Hijack", 
         "HTTP request smuggling", 
         "HTTP request splitting", 
         "HTTP response smuggling", 
@@ -600,6 +601,7 @@
         "Elevate", 
         "Lateral movement", 
         "Deploy payload", 
+        "Persist", 
         "Other", 
         "Unknown", 
         "NA"
@@ -674,6 +676,7 @@
         "Elevate", 
         "Lateral movement", 
         "Deploy payload", 
+        "Persist", 
         "Other", 
         "Unknown", 
         "NA"
@@ -690,6 +693,7 @@
         "Influence", 
         "Phishing", 
         "Pretexting", 
+        "Prompt bombing", 
         "Propaganda", 
         "Scam", 
         "Spam", 
@@ -739,6 +743,7 @@
         "Elevate", 
         "Lateral movement", 
         "Deploy payload", 
+        "Persist", 
         "Other", 
         "Unknown", 
         "NA"
@@ -757,7 +762,6 @@
         "Misconfiguration", 
         "Misdelivery", 
         "Misinformation", 
-        "Omission", 
         "Physical accidents", 
         "Programming error", 
         "Publishing error", 
@@ -807,6 +811,7 @@
         "Elevate", 
         "Lateral movement", 
         "Deploy payload", 
+        "Persist", 
         "Other", 
         "Unknown", 
         "NA"
@@ -849,6 +854,7 @@
         "Elevate", 
         "Lateral movement", 
         "Deploy payload", 
+        "Persist", 
         "Other", 
         "Unknown", 
         "NA"
@@ -890,6 +896,7 @@
         "Elevate", 
         "Lateral movement", 
         "Deploy payload", 
+        "Persist", 
         "Other", 
         "Unknown", 
         "NA"
@@ -1508,6 +1515,7 @@
         "M - Flash drive", 
         "M - Payment card", 
         "M - Smart card", 
+        "M - SIM card", 
         "M - Tapes", 
         "M - Other", 
         "M - Unknown", 
@@ -1914,8 +1922,10 @@
           "Digital certificate", 
           "Internal", 
           "Medical", 
+          "Multi-factor credential", 
           "Payment", 
           "Personal", 
+          "Sensitive Personal", 
           "Secrets", 
           "Source code", 
           "System", 
@@ -2353,42 +2363,295 @@
     "Unknown"
   ], 
   "plus": {
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ], 
+        "partner_data": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ], 
+        "data_abuse": [
+          "Yes", 
+          "No", 
+          "Other", 
+          "Unknown"
+        ]
+      }
+    }, 
     "pci": {
-      "compliance_status": [
-        "Not Compliant", 
-        "Found Compliant", 
-        "Unknown"
-      ], 
-      "req_4": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_2": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_11": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_7": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_10": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
+      "requirements": {
+        "req_6": {
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_7": {
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ]
+        }, 
+        "req_12": {
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_11": {
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_3": {
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_10": {
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ]
+        }, 
+        "req_1": {
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_9": {
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_5": {
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_8": {
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_4": {
+          "assessed": [
+            "Yes", 
+            "No"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ]
+        }, 
+        "req_2": {
+          "in_place": [
+            "Yes", 
+            "Partial Yes", 
+            "No", 
+            "Not Assessed"
+          ], 
+          "breach_cause": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "breach_contribute": [
+            "Yes", 
+            "No", 
+            "Unknown"
+          ], 
+          "assessed": [
+            "Yes", 
+            "No"
+          ]
+        }
+      }, 
       "merchant_level": [
         "Level 1", 
         "Level 2", 
@@ -2396,54 +2659,41 @@
         "Level 4", 
         "Unknown"
       ], 
-      "req_6": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_12": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_3": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_9": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_1": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_5": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
-        "Unknown"
-      ], 
-      "req_8": [
-        "In Place", 
-        "Not In Place", 
-        "Not Applicable", 
+      "compliance_status": [
+        "Not Compliant", 
+        "Found Compliant", 
         "Unknown"
       ]
     }, 
+    "attack_difficulty_initial": [
+      "High", 
+      "Moderate", 
+      "Low", 
+      "Very Low", 
+      "NA", 
+      "Unknown", 
+      "Other"
+    ], 
+    "unfollowed_policies": [
+      "Yes", 
+      "No", 
+      "Unknown"
+    ], 
     "event_chain": {
-      "actor": [
-        "ext", 
-        "int", 
-        "prt", 
+      "asset": [
+        "emb", 
+        "med", 
+        "net", 
+        "ppl", 
+        "srv", 
+        "ter", 
+        "usr", 
+        "unk"
+      ], 
+      "attribute": [
+        "au", 
+        "cp", 
+        "ia", 
         "unk"
       ], 
       "action": [
@@ -2456,23 +2706,20 @@
         "soc", 
         "unk"
       ], 
-      "attribute": [
-        "au", 
-        "cp", 
-        "ia", 
-        "unk"
-      ], 
-      "asset": [
-        "emb", 
-        "med", 
-        "net", 
-        "ppl", 
-        "srv", 
-        "ter", 
-        "usr", 
+      "actor": [
+        "ext", 
+        "int", 
+        "prt", 
         "unk"
       ]
     }, 
+    "unknown_unknowns": [
+      "Assets that had unknown network connections or accessibility", 
+      "Assets that had unknown user accounts or privileges", 
+      "Assets unknown or unclaimed by the organization (or business group affected)", 
+      "Data the organization did not know existed on a particular asset", 
+      "Unknown"
+    ], 
     "analysis_status": [
       "In-progress", 
       "Ready for review", 
@@ -2481,7 +2728,7 @@
       "Finalized", 
       "Ineligible"
     ], 
-    "attack_difficulty_initial": [
+    "attack_difficulty_subsequent": [
       "High", 
       "Moderate", 
       "Low", 
@@ -2489,44 +2736,6 @@
       "NA", 
       "Unknown", 
       "Other"
-    ], 
-    "attribute": {
-      "confidentiality": {
-        "partner_data": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ], 
-        "data_abuse": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ], 
-        "credit_monitoring": [
-          "Yes", 
-          "No", 
-          "Other", 
-          "Unknown"
-        ]
-      }
-    }, 
-    "attack_difficulty_legacy": [
-      "High", 
-      "Moderate", 
-      "Low", 
-      "Very Low", 
-      "NA", 
-      "Unknown", 
-      "Other"
-    ], 
-    "unknown_unknowns": [
-      "Assets that had unknown network connections or accessibility", 
-      "Assets that had unknown user accounts or privileges", 
-      "Assets unknown or unclaimed by the organization (or business group affected)", 
-      "Data the organization did not know existed on a particular asset", 
-      "Unknown"
     ], 
     "asset_os": [
       "Android", 
@@ -2544,11 +2753,6 @@
       "Unknown", 
       "Other"
     ], 
-    "unfollowed_policies": [
-      "Yes", 
-      "No", 
-      "Unknown"
-    ], 
     "security_maturity": [
       "Initial", 
       "Defined", 
@@ -2557,7 +2761,7 @@
       "Optimizing", 
       "Unknown"
     ], 
-    "attack_difficulty_subsequent": [
+    "attack_difficulty_legacy": [
       "High", 
       "Moderate", 
       "Low", 

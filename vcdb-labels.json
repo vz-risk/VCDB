@@ -538,6 +538,7 @@
         "Forced browsing": "Forced browsing or predictable resource location. Child of 'Exploit vuln'.",
         "Format string attack": "Format string attack. Child of 'Exploit vuln'.",
         "Fuzz testing": "Fuzz testing. Child of 'Exploit vuln'.",
+        "Hijack": "To assume control over and steal functionality for an illicit purpose (e.g. Hijacking phone number intercept SMS verification codes)",
         "HTTP request smuggling": "HTTP request smuggling. Child of 'Exploit vuln'.",
         "HTTP request splitting": "HTTP request splitting. Child of 'Exploit vuln'.",
         "HTTP response smuggling": "HTTP response smuggling. Child of 'Exploit vuln'.",
@@ -565,7 +566,7 @@
         "SQLi": "SQL injection. Child of 'Exploit vuln'.",
         "SSI injection": "SSI injection. Child of 'Exploit vuln'.",
         "URL redirector abuse": "URL redirector abuse. Child of 'Exploit vuln'.",
-        "Use of stolen creds": "Use of stolen authentication credentials (including credential stuffing)",
+        "Use of stolen creds": "Use of stolen or default authentication credentials (including credential stuffing)",
         "User breakout": "Elevation of privilege by another customer in shared environment. Child of 'Exploit vuln'.",
         "Virtual machine escape": "Virtual machine escape. Child of 'Exploit vuln'.",
         "XML attribute blowup": "XML attribute blowup. Child of 'Exploit vuln'.",
@@ -600,6 +601,7 @@
         "Elevate": "The hacking action resulted in additional security permissions",
         "Lateral movement": "The hacking action used security access or permissions already acuired",
         "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Persist": "The action resulted in some form of persistence on the system",
         "Other": "The result of the hacking action is not listed",
         "Unknown": "The result of the hacking action is unknown",
         "NA": "The hacking action did not have a result"
@@ -674,6 +676,7 @@
         "Elevate": "The malware action resulted in additional security permissions",
         "Lateral movement": "The malware action used security access or permissions already acuired",
         "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Persist": "The action resulted in some form of persistence on the system",
         "Other": "The result of the malware action is not listed",
         "Unknown": "The result of the malware action is unknown",
         "NA": "The malware action did not have a result"
@@ -681,7 +684,7 @@
     },
     "social": {
       "variety": {
-        "Baiting": "Baiting (planting infected media)",
+        "Baiting": "Prepare malicious content in a location where a victim is likely to interact with it. (e.g. SEO - vect: websites, left usbs- vect: removable media, etc)",
         "Bribery": "Bribery or solicitation",
         "Elicitation": "Elicitation (subtle extraction of info through conversation)",
         "Evade Defenses": "Modification of the action (rather than the system, as in 'Disable controls') to avoid detection.",
@@ -690,6 +693,7 @@
         "Influence": "Influence tactics (Leveraging authority or obligation, framing, etc)",
         "Phishing": "Any type of *ishing.  Phishing always involves getting data from the victim. Phishing usually has some element of pretexting, but often it doesn\u2019t rise to the level of an invented scenario. E.g. A fake google login page isn\u2019t really pretexting.",
         "Pretexting": "Pretexting (dialogue leveraging invented scenario).  Unlike 'Phishing', does not transfer data. (A fraudulent transfer or changing a bank account on a business account is not really disclosing data.",
+        "Prompt bombing": "Bombarding the user with MFA prompts to get them to accept the login request",
         "Propaganda": "Propaganda or disinformation",
         "Scam": "Online scam or hoax (e.g., scareware, 419 scam, auction fraud)",
         "Spam": "Spam (unsolicited or undesired email and advertisements)",
@@ -739,6 +743,7 @@
         "Elevate": "The social action resulted in additional security permissions",
         "Lateral movement": "The social action used security access or permissions already acuired",
         "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Persist": "The action resulted in some form of persistence on the system",
         "Other": "The result of the social action is not listed",
         "Unknown": "The result of the social action is unknown",
         "NA": "The social action did not have a result"
@@ -757,7 +762,6 @@
         "Misconfiguration": "Misconfiguration",
         "Misdelivery": "Misdelivery (send wrong info or to wrong recipient)",
         "Misinformation": "Misinformation (unintentionally giving false info)",
-        "Omission": "Omission (something intended, but not done)",
         "Physical accidents": "Physical accidents (e.g., drops, bumps, spills)",
         "Programming error": "Programming error (flaws or bugs in custom code). This is the error equivalent of the hacking/malware 'Exploit vuln' enumerations.",
         "Publishing error": "Publishing error (private info to public doc or site)",
@@ -807,6 +811,7 @@
         "Elevate": "Do not use. Misuse inherently implies having permission so none can be elevated.",
         "Lateral movement": "The misuse action used security access or permissions already acuired",
         "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Persist": "The action resulted in some form of persistence on the system",
         "Other": "The result of the misuse action is not listed",
         "Unknown": "The result of the misuse action is unknown",
         "NA": "The misuse action did not have a result"
@@ -849,6 +854,7 @@
         "Elevate": "The physical action resulted in additional security permissions",
         "Lateral movement": "The physical action used security access or permissions already acuired",
         "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Persist": "The action resulted in some form of persistence on the system",
         "Other": "The result of the physical action is not listed",
         "Unknown": "The result of the physical action is unknown",
         "NA": "The physical action did not have a result"
@@ -890,6 +896,7 @@
         "Elevate": "The environmental action resulted in additional security permissions",
         "Lateral movement": "The environmental action used security access or permissions already acuired",
         "Deploy payload": "e.g. cryptomining, ransomware, etc",
+        "Persist": "The action resulted in some form of persistence on the system",
         "Other": "The result of the environmental action is not listed",
         "Unknown": "The result of the environmental action is unknown",
         "NA": "The environmental action did not have a result"
@@ -1224,7 +1231,7 @@
         "Personal issues": "Personal issues",
         "Promoted": "Recently promoted",
         "Reprimanded": "Recently reprimanded",
-        "Resigned": "Preparing to resign or recently resigned",
+        "Resigned": "Preparing to resign",
         "Other": "Other",
         "Unknown": "Unknown"
       }
@@ -1508,6 +1515,7 @@
         "M - Flash drive": "Media - Flash drive or card",
         "M - Payment card": "Media - Payment card (e.g., magstripe, EMV)",
         "M - Smart card": "Media - Identity smart card",
+        "M - SIM card": "Media  - Subscriber Identity Module found in mobile devices ",
         "M - Tapes": "Media - Backup tapes",
         "M - Other": "Media - Variety known but not listed",
         "M - Unknown": "Media - Variety not known",
@@ -1910,12 +1918,14 @@
           "Bank": "Bank account data",
           "Classified": "Classified information",
           "Copyrighted": "Copyrighted material",
-          "Credentials": "Authentication credentials (e.g., pwds, OTPs, biometrics)",
+          "Credentials": "Authentication credentials, such as username and password",
           "Digital certificate": "Digital certificate",
           "Internal": "Sensitive internal data (e.g., plans, reports, emails)",
           "Medical": "Medical records",
+          "Multi-factor credential": "Any additional authentication methods, aside from Username and password (e.g., OTP, biometrics)",
           "Payment": "Payment card data (e.g., PAN, PIN, CVV2, Expiration)",
-          "Personal": "Personal or identifying information (e.g., addr, ID#, credit score)",
+          "Personal": "Personal or identifying information (e.g., addr, Email address, credit score)",
+          "Sensitive Personal": "Data which impacts a person's livelihood, quality of life, and ability to participate in daily activities such as SSNs or other National ID",
           "Secrets": "Trade secrets",
           "Source code": "Source code",
           "System": "System information (e.g., config info, open services)",
@@ -2353,41 +2363,294 @@
     "Unknown": "Unknown"
   },
   "plus": {
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": {
+          "Yes": "Credit monitoring was offered",
+          "No": "Credit monitoring was not offered",
+          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
+          "Unknown": "No information is known about if credit monitoring was offered"
+        },
+        "partner_data": {
+          "Yes": "Partner data was compromised",
+          "No": "Partner data was not compromised",
+          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
+          "Unknown": "No information is known about if partner data was compromised"
+        },
+        "data_abuse": {
+          "Yes": "Data was misused or abused",
+          "No": "Data was not misused or abused",
+          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
+          "Unknown": "No information is known about if the data was abused"
+        }
+      }
+    },
     "pci": {
-      "compliance_status": {
-        "Not Compliant": "No label.",
-        "Found Compliant": "No label.",
-        "Unknown": "No label."
-      },
-      "req_4": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_2": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_11": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_7": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_10": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
+      "requirements": {
+        "req_6": {
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_7": {
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          }
+        },
+        "req_12": {
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_11": {
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_3": {
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_10": {
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          }
+        },
+        "req_1": {
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_9": {
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_5": {
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_8": {
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_4": {
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          }
+        },
+        "req_2": {
+          "in_place": {
+            "Yes": "No label",
+            "Partial Yes": "No label.",
+            "No": "No label.",
+            "Not Assessed": "No label."
+          },
+          "breach_cause": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "breach_contribute": {
+            "Yes": "No label",
+            "No": "No label.",
+            "Unknown": "No label."
+          },
+          "assessed": {
+            "Yes": "No label.",
+            "No": "No label."
+          }
+        }
       },
       "merchant_level": {
         "Level 1": "No label.",
@@ -2396,54 +2659,41 @@
         "Level 4": "No label.",
         "Unknown": "No label."
       },
-      "req_6": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_12": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_3": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_9": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_1": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_5": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
-        "Unknown": "No label."
-      },
-      "req_8": {
-        "In Place": "No label.",
-        "Not In Place": "No label.",
-        "Not Applicable": "No label.",
+      "compliance_status": {
+        "Not Compliant": "No label.",
+        "Found Compliant": "No label.",
         "Unknown": "No label."
       }
     },
+    "attack_difficulty_initial": {
+      "High": "No label.",
+      "Moderate": "No label.",
+      "Low": "No label.",
+      "Very Low": "No label.",
+      "NA": "No label.",
+      "Unknown": "No label.",
+      "Other": "No label."
+    },
+    "unfollowed_policies": {
+      "Yes": "No label.",
+      "No": "No label.",
+      "Unknown": "No label."
+    },
     "event_chain": {
-      "actor": {
-        "ext": "External",
-        "int": "Internal",
-        "prt": "Partner",
+      "asset": {
+        "emb": "Embedded",
+        "med": "Media",
+        "net": "Network",
+        "ppl": "People",
+        "srv": "Server",
+        "ter": "Public terminal",
+        "usr": "User device",
+        "unk": "Unknown"
+      },
+      "attribute": {
+        "au": "Availability",
+        "cp": "Confidentiality",
+        "ia": "Integrity",
         "unk": "Unknown"
       },
       "action": {
@@ -2456,22 +2706,19 @@
         "soc": "Social",
         "unk": "Unknown"
       },
-      "attribute": {
-        "au": "Availability",
-        "cp": "Confidentiality",
-        "ia": "Integrity",
-        "unk": "Unknown"
-      },
-      "asset": {
-        "emb": "Embedded",
-        "med": "Media",
-        "net": "Network",
-        "ppl": "People",
-        "srv": "Server",
-        "ter": "Public terminal",
-        "usr": "User device",
+      "actor": {
+        "ext": "External",
+        "int": "Internal",
+        "prt": "Partner",
         "unk": "Unknown"
       }
+    },
+    "unknown_unknowns": {
+      "Assets that had unknown network connections or accessibility": "No label.",
+      "Assets that had unknown user accounts or privileges": "No label.",
+      "Assets unknown or unclaimed by the organization (or business group affected)": "No label.",
+      "Data the organization did not know existed on a particular asset": "No label.",
+      "Unknown": "No label."
     },
     "analysis_status": {
       "In-progress": "Incident is currently being entered.",
@@ -2481,7 +2728,7 @@
       "Finalized": "The incident has been reviewed by a single person reviewing all data for consistency across sources.",
       "Ineligible": "Does not meet the criteria to be included in the corpus."
     },
-    "attack_difficulty_initial": {
+    "attack_difficulty_subsequent": {
       "High": "No label.",
       "Moderate": "No label.",
       "Low": "No label.",
@@ -2489,44 +2736,6 @@
       "NA": "No label.",
       "Unknown": "No label.",
       "Other": "No label."
-    },
-    "attribute": {
-      "confidentiality": {
-        "partner_data": {
-          "Yes": "Partner data was compromised",
-          "No": "Partner data was not compromised",
-          "Other": "Neither 'yes' nor 'no' describes whether partner data was compromised",
-          "Unknown": "No information is known about if partner data was compromised"
-        },
-        "data_abuse": {
-          "Yes": "Data was misused or abused",
-          "No": "Data was not misused or abused",
-          "Other": "Neither 'yes' nor 'no' describes data abuse in this case.",
-          "Unknown": "No information is known about if the data was abused"
-        },
-        "credit_monitoring": {
-          "Yes": "Credit monitoring was offered",
-          "No": "Credit monitoring was not offered",
-          "Other": "Neither 'yes' nor 'no' describes whether credit monitoring was offered",
-          "Unknown": "No information is known about if credit monitoring was offered"
-        }
-      }
-    },
-    "attack_difficulty_legacy": {
-      "High": "No label.",
-      "Moderate": "No label.",
-      "Low": "No label.",
-      "Very Low": "No label.",
-      "NA": "No label.",
-      "Unknown": "No label.",
-      "Other": "No label."
-    },
-    "unknown_unknowns": {
-      "Assets that had unknown network connections or accessibility": "No label.",
-      "Assets that had unknown user accounts or privileges": "No label.",
-      "Assets unknown or unclaimed by the organization (or business group affected)": "No label.",
-      "Data the organization did not know existed on a particular asset": "No label.",
-      "Unknown": "No label."
     },
     "asset_os": {
       "Android": "No label.",
@@ -2544,11 +2753,6 @@
       "Unknown": "No label.",
       "Other": "No label."
     },
-    "unfollowed_policies": {
-      "Yes": "No label.",
-      "No": "No label.",
-      "Unknown": "No label."
-    },
     "security_maturity": {
       "Initial": "Processes are ad-hoc, chaotic, or actually few processes are defined.",
       "Defined": "Processes are defined, documented, standardized and integrated into each other.",
@@ -2557,7 +2761,7 @@
       "Optimizing": "Continuous process improvement by quantitative feedback and testing.",
       "Unknown": "The organizations level of maturity is unknown."
     },
-    "attack_difficulty_subsequent": {
+    "attack_difficulty_legacy": {
       "High": "No label.",
       "Moderate": "No label.",
       "Low": "No label.",
