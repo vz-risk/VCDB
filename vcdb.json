@@ -21,6 +21,7 @@
     },
     "source_id": {
       "type": "string",
+      "description": "Source of the data (eg vcdb, vzir, hr dept)",
       "default": "vcdb"
     },
     "campaign_id": {
@@ -994,7 +995,7 @@
           "type": "object"
         },
         "internal": {
-          "description": "Discovered by an external partner.",
+          "description": "Discovered by entity within the victim organization.",
           "additionalProperties": false,
           "properties": {
             "variety": {
@@ -1282,7 +1283,8 @@
         },
         "analyst": {
           "minLength": 1,
-          "type": "string"
+          "type": "string",
+          "description": "Individual coding the incident. Please use a consistent format, like [first_initial][last_name] (e.g. asmith)"
         },
         "analyst_notes": {
           "minLength": 1,
@@ -1417,19 +1419,13 @@
         },
         "pci": {
           "additionalProperties": false,
+          "type": "object",
           "properties": {
             "compliance_status": {
               "minLength": 1,
               "type": "string"
             },
             "merchant_level": {
-              "enum": [
-                "Level 1",
-                "Level 2",
-                "Level 3",
-                "Level 4",
-                "Unknown"
-              ],
               "minLength": 1,
               "type": "string"
             },
@@ -1437,60 +1433,329 @@
               "minLength": 1,
               "type": "string"
             },
-            "req_1": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_2": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_3": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_4": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_5": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_6": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_7": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_8": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_9": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_10": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_11": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "req_12": {
-              "minLength": 1,
-              "type": "string"
-            },
             "status_determined": {
               "minLength": 1,
               "type": "string"
+            },
+            "requirements": {
+              "additionalProperties": false,
+              "properties": {
+                "req_1": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_2": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_3": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_4": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_5": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_6": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_7": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_8": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_9": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_10": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_11": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "req_12": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "assessed": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "in_place": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_cause": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "breach_contribute": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "notes": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
             }
-          },
-          "type": "object"
+          }
         },
         "security_maturity": {
           "description": "How would you rate the maturity of the victim's overall security program?",
@@ -1579,14 +1844,14 @@
       "properties": {}
     },
     "schema_version": {
-      "description": "Schema version in use. This should be 1.3.4 for this schema.",
+      "description": "Schema version in use. This should be 1.3.7 for this schema.",
       "type": "string",
-      "default": "1.3.6"
+      "default": "1.3.7"
     },
     "schema_name": {
       "description": "Name of Schema.  This can be used to signal to software reading the schema which it is.  Common values are 'verisc', 'dbir', and 'vcdb'.",
       "type": "string",
-      "default": "vcdb"
+      "default": "verisc"
     }
   },
   "required": [
