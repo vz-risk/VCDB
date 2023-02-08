@@ -1,0 +1,104 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "fb529910-a357-11ed-bbe0-ed1bdce32b2a",
+    "security_incident": "Confirmed",
+    "reference": "https://www.itnews.com.au/news/toyota-says-about-296000-pieces-of-customer-info-possibly-leaked-586230; https://www.bleepingcomputer.com/news/security/toyota-discloses-data-leak-after-access-key-exposed-on-github/; https://www.scmagazine.com/brief/data-security/nearly-300k-toyota-customers-impacted-by-data-leak",
+    "summary": "Toyota Motor Corporation is warning that customers' personal information may have been exposed after an access key was publicly available on GitHub for almost five years.  Toyota T-Connect is the automaker's official connectivity app that allows owners of Toyota cars to link their smartphone with the vehicle's infotainment system for phone calls, music, navigation, notifications integration, driving data, engine status, fuel consumption, and more.  Toyota discovered recently that a portion of the T-Connect site source code was mistakenly published on GitHub and contained an access key to the data server that stored customer email addresses and management numbers.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "042d9e14-2c51-4c8d-b6a2-ffb0af1cb694",
+        "modified": "2023-02-03T08:22:33.721Z",
+        "created": "2023-02-03T08:16:19.233Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Customer data published to github"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "github": "19075"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 10
+        },
+        "discovery": {
+            "unit": "Years",
+            "value": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "JP"
+        ],
+        "victim_id": "Toyota Motor Corporation",
+        "industry": "336110",
+        "employee_count": "Over 100000"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Web application"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Code repository"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 296019,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 296019
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "e5304eb0-4b3d-11ed-97e9-d97d698656bd",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bleepingcomputer.com/news/security/angry-it-admin-wipes-employer-s-databases-gets-7-years-in-prison/",
+    "summary": "Han Bing, a former database administrator for Lianjia, a Chinese real-estate brokerage giant, has been sentenced to 7 years in prison for logging into corporate systems and deleting the company's data.  Bing allegedly performed the act in June 2018, when he used his administrative privileges and \"root\" account to access the company's financial system and delete all stored data from two database servers and two application servers.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "a57fe93a-f70b-4bd4-bbdf-4a18fc50c3ea",
+        "modified": "2022-10-14T05:17:18.026Z",
+        "created": "2022-10-14T04:27:52.860Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "au",
+                "summary": "System administrator deletes data."
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "18684"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2018,
+            "month": 6
+        },
+        "discovery": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "CN"
+        ],
+        "region": [
+            "142030"
+        ],
+        "victim_id": "Lianjia",
+        "employee_count": "Over 100000",
+        "industry": "531"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Other"
+            ],
+            "notes": "Data destruction"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "Grudge"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 2
+            },
+            {
+                "variety": "S - Web application",
+                "amount": 2
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_disclosure": "No"
+        },
+        "availability": {
+            "variety": [
+                "Destruction"
+            ],
+            "duration": {
+                "unit": "Months"
+            }
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Reported by employee"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

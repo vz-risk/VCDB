@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "27c22ff0-4fc6-11ed-b425-911ebaacea9c",
+    "security_incident": "Confirmed",
+    "reference": "https://www.reuters.com/world/us/michigan-election-worker-charged-with-tampering-with-voting-equipment-2022-09-29/",
+    "summary": "An election worker in a western Michigan town has been charged with two felonies after allegedly inserting a flash drive into a computer containing confidential voter registration data during an election in August, local officials said on Wednesday.  At the Aug. 2 primary, an election worker was seen inserting a USB drive into the computer used to administer the election at a precinct in Gaines Township in Kent County, according to a statement by county clerk Lisa Posthumus Lyons.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "d6ed8a0a-a442-422d-a037-7ea050b16ad7",
+        "modified": "2022-10-19T23:03:21.916Z",
+        "created": "2022-10-19T22:53:20.751Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "asset": "usr",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Volunteer inserts usb stick to steal voter data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2022,
+                "month": 9,
+                "day": 29
+            }
+        },
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "github": "19031"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 8,
+            "day": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "Regional"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Kent County Michigan",
+        "employee_count": "1001 to 10000",
+        "state": "MI",
+        "industry": "921190"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Unapproved hardware"
+            ],
+            "vector": [
+                "Physical access"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "End-user"
+            ],
+            "motive": [
+                "Ideology"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "U - Desktop",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Reported by employee"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

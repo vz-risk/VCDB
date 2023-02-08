@@ -1,0 +1,134 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "309e9240-4fca-11ed-b425-911ebaacea9c",
+    "security_incident": "Confirmed",
+    "reference": "https://www.theregister.com/2022/09/28/fast_company_hack_apple_news/; https://www.spiceworks.com/it-security/data-security/news/fast-company-data-breach/",
+    "summary": "Apple News shut down Fast Company's news channel after \"an incredibly offensive alert\" was sent to subscribers following a hack of the business publication on Tuesday evening.  Fast Company also took down its website \"until we are certain the situation has been resolved,\" according to a Tuesday night tweet.  As of Wednesday morning, the company's site displayed a 404 error.  Miscreants breached Fast Company's content management system then the publication's Apple News channel sent \"two obscene and racist push notifications\" to subscribers, according to a series of Fast Company tweets:",
+    "confidence": "High",
+    "plus": {
+        "master_id": "aad213fa-5d63-4272-ba55-f7a3c8513b99",
+        "modified": "2022-10-19T23:35:42.393Z",
+        "created": "2022-10-19T23:22:13.604Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "cp",
+                "summary": "Attacker gets in with bad password"
+            },
+            {
+                "action": "hak",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "ia",
+                "summary": "Attacker inserts offensive content into CMS"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "github": "19047"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 9,
+            "day": 28
+        },
+        "discovery": {
+            "unit": "Minutes"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Fast Company",
+        "industry": "511110",
+        "employee_count": "1001 to 10000",
+        "state": "NY"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Fun"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Unknown"
+                }
+            ],
+            "data_victim": [
+                "Unknown"
+            ],
+            "state": [
+                "Unknown"
+            ],
+            "data_disclosure": "Potentially"
+        },
+        "integrity": {
+            "variety": [
+                "Modify data",
+                "Defacement"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "targeting": {
+            "variety": [
+                "Lost or stolen credentials"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

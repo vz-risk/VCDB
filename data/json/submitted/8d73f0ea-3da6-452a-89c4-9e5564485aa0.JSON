@@ -1,0 +1,177 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "713e5010-a3e9-11ed-8c67-f3bb261b8cc7",
+    "security_incident": "Confirmed",
+    "reference": "https://www.scmagazine.com/analysis/incident-response/healthcare-vendor-accused-of-concealed-ransomware-lengthy-service-outages; https://healthitsecurity.com/news/illinois-gastroenterology-group-data-breach-impacts-228k; https://portswigger.net/daily-swig/us-eye-clinic-suffers-data-breach-impacting-92-000-patients; https://wcfcourier.com/news/local/wolfe-clinic-warns-of-customer-data-breach/article_89042145-b4d9-5c6f-94b1-d1e62585e34a.html; https://healthitsecurity.com/news/ia-eye-clinic-adds-543k-to-eye-care-leaders-data-breach-tally",
+    "summary": "Eye Care Leaders, which offers an ophthalmology-specific EMR solution, suffered unauthorized access to its myCare Integrity system in December 2021. Since ECL began notifying impacted organizations of the incident in March, more than two dozen organizations have submitted individual breach reports to OCR.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "84135648-558e-49c3-a162-a4d2b1ab720a",
+        "modified": "2023-02-04T05:59:36.666Z",
+        "created": "2023-02-04T01:37:34.097Z",
+        "event_chain": [
+            {
+                "summary": "Unknown initial action",
+                "actor": "ext",
+                "attribute": "unk",
+                "action": "unk",
+                "asset": "srv"
+            },
+            {
+                "summary": "Malware installed",
+                "actor": "ext",
+                "attribute": "ia",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Data exfiltrated",
+                "actor": "ext",
+                "attribute": "cp",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Databases deleted",
+                "attribute": "au",
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv"
+            },
+            {
+                "summary": "Encryption triggered",
+                "actor": "ext",
+                "attribute": "au",
+                "action": "mal",
+                "asset": "srv"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "18670"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 7
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "secondary": {
+            "victim_id": [
+                "Wolfe Clinic P.C; 621320",
+                "Mattax Neu Prater Eye Center; 621320",
+                "EvergreenHealth; 621320",
+                "IA Eye Clinic; 621320"
+            ],
+            "amount": 1
+        },
+        "victim_id": "Eye Care Leaders",
+        "employee_count": "101 to 1000",
+        "industry": "511210",
+        "state": "NC"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Deploy payload",
+                "Infiltrate"
+            ],
+            "notes": "Unknown initial action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 92361,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 92361,
+            "notes": "Posted by actor on the dark web"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration",
+                "Destruction"
+            ],
+            "notes": "\"According to Eye Care Leaders, on or around December 4, 2021, an unauthorized party accessed myCare Integrity data and deleted databases and system configuration files.\""
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
