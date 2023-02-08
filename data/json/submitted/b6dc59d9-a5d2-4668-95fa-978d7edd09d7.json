@@ -1,154 +1,155 @@
 {
-  "action": {
-    "malware": {
-      "result": [
-        "Deploy payload",
-        "Exfiltrate"
-      ],
-      "variety": [
-        "Ransomware"
-      ],
-      "vector": [
-        "Direct install"
-      ]
-    },
-    "unknown": {
-      "notes": "Unknown how the actor gained initial access.",
-      "result": [
-        "Infiltrate"
-      ]
-    }
-  },
-  "actor": {
-    "external": {
-      "motive": [
-        "Financial"
-      ],
-      "variety": [
-        "Organized crime"
-      ]
-    }
-  },
-  "asset": {
-    "assets": [
-      {
-        "variety": "S - Unknown"
-      }
-    ],
-    "cloud": [
-      "Unknown"
-    ],
-    "role": [
-      "IT"
-    ]
-  },
-  "attribute": {
-    "availability": {
-      "variety": [
-        "Obscuration"
-      ]
-    },
-    "confidentiality": {
-      "data": [
-        {
-          "amount": 500000,
-          "variety": "Medical"
+    "action": {
+        "malware": {
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ],
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ]
+        },
+        "unknown": {
+            "notes": "Unknown how the actor gained initial access.",
+            "result": [
+                "Infiltrate"
+            ]
         }
-      ],
-      "data_disclosure": "Yes",
-      "data_total": 500000,
-      "data_victim": [
-        "Patient"
-      ],
-      "state": [
-        "Stored unencrypted"
-      ]
     },
-    "integrity": {
-      "variety": [
-        "Software installation"
-      ]
-    }
-  },
-  "confidence": "High",
-  "discovery_method": {
-    "external": {
-      "variety": [
-        "Actor disclosure"
-      ]
-    }
-  },
-  "incident_id": "388a7320-8e78-11ec-ab9f-33907697f3a6",
-  "plus": {
-    "analysis_status": "Reviewed",
-    "analyst": "swidup",
+    "actor": {
+        "external": {
+            "motive": [
+                "Financial"
+            ],
+            "variety": [
+                "Organized crime"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
     "attribute": {
-      "confidentiality": {
-        "data_abuse": "Yes"
-      }
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        },
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 500000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 500000,
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ]
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
     },
-    "created": "2022-02-16T00:28:02.259Z",
-    "dbir_year": 2022,
-    "event_chain": [
-      {
-        "action": "unk",
-        "actor": "ext",
-        "asset": "unk",
-        "attribute": "unk",
-        "summary": "Unknown action for initial access"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "ia",
-        "summary": "Malware is installed"
-      },
-      {
-        "action": "mal",
-        "actor": "ext",
-        "asset": "srv",
-        "attribute": "au",
-        "summary": "Ransomware encryption triggered"
-      }
-    ],
-    "github": "17603",
-    "master_id": "b6dc59d9-a5d2-4668-95fa-978d7edd09d7",
-    "modified": "2022-02-16T00:28:02.259Z"
-  },
-  "reference": "https://www.databreaches.net/ia-wolfe-eye-clinic-victim-of-lorenz-threat-actors/; https://kwwl.com/2021/06/22/february-data-breach-exposed-wolfe-eye-clinic-patient-information/",
-  "schema_name": "vcdb",
-  "schema_version": "1.3.7",
-  "source_id": "vcdb",
-  "summary": "Ransomware name and shame",
-  "targeted": "Unknown",
-  "timeline": {
-    "incident": {
-      "day": 8,
-      "month": 2,
-      "year": 2021
-    }
-  },
-  "value_chain": {
-    "development": {
-      "variety": [
-        "Ransomware"
-      ]
-    }
-  },
-  "victim": {
-    "country": [
-      "US"
-    ],
-    "employee_count": "101 to 1000",
-    "government": [
-      "NA"
-    ],
-    "industry": "621320",
-    "region": [
-      "019021"
-    ],
-    "state": "IA",
-    "victim_id": "Wolfe Eye Clinic"
-  }
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2022-02-16T00:28:02.259Z",
+        "modified": "2023-02-09T00:30:23.430Z",
+        "master_id": "b6dc59d9-a5d2-4668-95fa-978d7edd09d7",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "unk",
+                "summary": "Unknown action for initial access"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Malware is installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Ransomware encryption triggered"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "dbir_year": 2022,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "17603"
+    },
+    "timeline": {
+        "incident": {
+            "day": 8,
+            "month": 2,
+            "year": 2021
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        }
+    },
+    "victim": {
+        "country": [
+            "US"
+        ],
+        "employee_count": "101 to 1000",
+        "government": [
+            "NA"
+        ],
+        "industry": "621320",
+        "region": [
+            "019021"
+        ],
+        "state": "IA",
+        "victim_id": "Wolfe Eye Clinic"
+    },
+    "source_id": "vcdb",
+    "confidence": "High",
+    "reference": "https://www.databreaches.net/ia-wolfe-eye-clinic-victim-of-lorenz-threat-actors/; https://kwwl.com/2021/06/22/february-data-breach-exposed-wolfe-eye-clinic-patient-information/",
+    "summary": "Ransomware name and shame",
+    "targeted": "Unknown",
+    "security_incident": "Confirmed",
+    "incident_id": "388a7320-8e78-11ec-ab9f-33907697f3a6",
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
 }
