@@ -1,0 +1,176 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Executive"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "f593edc0-3bfd-11ec-963f-f964320be408",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "created": "2021-11-02T23:35:13.378Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "actor hacked into victim network - unknown how they did "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "many victim systems including logistics, email and online platform were down for some time"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "extortion demands from actor"
+      }
+    ],
+    "master_id": "a1773acb-5d51-414b-b5c6-21cb2321174d",
+    "modified": "2023-02-09T00:53:26.488Z",
+    "timeline": {
+      "notification": {
+        "day": 1,
+        "month": 6,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://securityboulevard.com/2021/06/data-breach-at-german-supermarket-chain-tegut/",
+  "schema_name": "dbir",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The German supermarket chain \u201ctegut\u201d was recently the target of a cyberattack (source in German) and on April 24 the company activated emergency procedures that shut down their entire central IT network and disconnected it from the internet. While done to limit the exposure of sensitive data, these measures also had side effects including gaps in their supply chain and other services that lasted for weeks. Despite these mitigation efforts, the attackers have already begun to publish company and customer data on the dark web. Tegut is a Swiss-owned supermarket chain that operates about 280 stores across central and southern Germany. They have had an annual turnover of over 1 billion EUR every year since 2017.  What kind of data was affected?  According to a press release from May 27, the attackers began publishing answers that customers had given to market research surveys, primarily those who were members of their customer rewards program \u201cGuteKarte\u201d. The leaks also included personal data, including home addresses, email addresses, and telephone numbers.  A week before that, it was announced that company data had been published online. According to the press release from May 18, it could not be ruled out that the affected company data included personal data of employees.   What services were affected during the shutdown? Due to the emergency shut down, customers and employees experienced the following issues:   The email server was shut down so requests couldn\u2019t be sent requests to the company per email. This service was restored on May 9. Certain products were unavailable for a time because the central logistics program was taken offline and wasn\u2019t able to automatically process the need for restocking.  Stores had to manually track their stock and, while the email server was shut down as well, restocking orders had to be placed via telephone. Most types of gift certificates couldn\u2019t be purchased or processed for payment until May 21. Certain areas of their website had to be deactivated, including the customer login portal, which came back online on May 25 and required customers to change their passwords. What motivated the attack?  The company has suggested that the incremental release of the stolen data by attackers is intended to increase \u201cpressure\u201d on them. In the press release following the second publication of stolen data, the company\u2019s CEO commented (translated from German), \u201cwe will not reward criminal activity and we will not enter into negotiations with criminals. It is clear to us that the attackers are now increasing the pressure on [our company] and want to provoke uncertainty among our customers, employees, and suppliers in order to assert their demands.\u201d It was not revealed in the press release what those demands are.  How has the company responded? Emergency protocols were activated on April 24 which involved shutting down the company\u2019s central IT network and disconnecting it from the internet.  Since then, regular press releases have been published and chronicled on their website.  Customers were asked to change their passwords before logging back into their online portal.  The breach has been reported to the authorities and affected customers have been notified.  A new logistics app has been released ahead of schedule that enabled stores to begin restocking their shelves as quickly as possible.",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 4,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "DE"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Tegut"
+  }
+}

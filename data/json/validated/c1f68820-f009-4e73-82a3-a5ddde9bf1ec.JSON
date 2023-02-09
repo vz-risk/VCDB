@@ -1,0 +1,124 @@
+{
+  "action": {
+    "misuse": {
+      "notes": "Data destruction",
+      "result": [
+        "Other"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Grudge"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 2,
+        "variety": "S - Database"
+      },
+      {
+        "amount": 2,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Months"
+      },
+      "variety": [
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "No"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "e5304eb0-4b3d-11ed-97e9-d97d698656bd",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-10-14T04:27:52.860Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "System administrator deletes data."
+      }
+    ],
+    "github": "18684",
+    "master_id": "a57fe93a-f70b-4bd4-bbdf-4a18fc50c3ea",
+    "modified": "2022-10-14T05:17:18.026Z"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/angry-it-admin-wipes-employer-s-databases-gets-7-years-in-prison/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Han Bing, a former database administrator for Lianjia, a Chinese real-estate brokerage giant, has been sentenced to 7 years in prison for logging into corporate systems and deleting the company's data.  Bing allegedly performed the act in June 2018, when he used his administrative privileges and \"root\" account to access the company's financial system and delete all stored data from two database servers and two application servers.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "531",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Lianjia"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Backdoor"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Classified"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "ee0bef70-3ccb-11ec-b63a-33c287a8ec4a",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2021-11-03T21:49:43.342Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "some unknown hacking vector to upload backdoor"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "backdoor installed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Backdoor is used to exfil data"
+      }
+    ],
+    "master_id": "ba5146ad-a359-4dd1-94b5-566a20f77e03",
+    "modified": "2023-02-09T01:06:17.998Z",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 6,
+        "year": 2021
+      }
+    }
+  },
+  "reference": "https://news.softpedia.com/news/nato-s-cloud-platform-has-been-hacked-533282.shtml",
+  "schema_name": "dbir",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Everis an infrastructure provider was hacked and had one of it's client's (NATO) data stolen and held ransom by hackers",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Payload"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "ES"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "locations_affected": 1,
+    "region": [
+      "150039"
+    ],
+    "victim_id": "Everis"
+  }
+}

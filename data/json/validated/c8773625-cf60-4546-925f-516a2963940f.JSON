@@ -1,0 +1,195 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 150000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 150000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "11ab76e0-a359-11ed-bbe0-ed1bdce32b2a",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-02-03T08:24:06.222Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered"
+      }
+    ],
+    "github": "18192",
+    "master_id": "0c1f13d2-b617-4654-8e6b-37d10c100ddc",
+    "modified": "2023-02-04T06:53:47.763Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.beckershospitalreview.com/cybersecurity/phi-stolen-from-vendor-in-ransomware-attack-exposing-humana-and-anthem-patients.html; https://sports.yahoo.com/wolf-haldenstein-adler-freeman-herz-151300096.html; https://www.villagehealth.com/-/media/davita/project/villagehealth/assets/practicemax-notice.ashx?la=en-us&hash=71CB2FD2F848CC2664CB3338FC86EB0B85200407; https://www.classaction.org/news/practicemax-facing-class-action-over-2021-data-breach-affecting-150k-patient; https://thecyberwire.com/newsletters/privacy-briefing/4/148",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "PracticeMax is notifying certain patients that their information may have been exposed during an information security event. VillageHealth1 operates on behalf of health plans to coordinate care for members who have certain clinical conditions. VillageHealth uses PracticeMax to share information about members with their health plan. The PracticeMax network experienced an information security event during which it was subject to unauthorized access, beginning on April 17, 2021 and ending on May 5, 2021. On May 1, 2021, upon discovery of the incident, PracticeMax immediately initiated a review of the incident, engaged legal counsel and began working with a security forensics firm to conduct a thorough investigation. On August 19, 2021, PracticeMax notified VillageHealth that it had determined which VillageHealth patients\u2019 personal information may have been accessed by an unauthorized party, and that this access may have occurred between April 17, 2021 and May 5, 2021. The information that was potentially accessed may have included first and last name, date of birth, address, phone number, member ID number and clinical data. Some individual\u2019s Social Security Number may have been accessed.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 17,
+      "month": 4,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "561",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 2,
+      "victim_id": [
+        "Humana; 524114",
+        "Anthem; 524114"
+      ]
+    },
+    "state": "AZ",
+    "victim_id": "PracticeMax"
+  }
+}

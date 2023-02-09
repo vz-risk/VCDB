@@ -1,0 +1,197 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Morgan County Schools",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Evade Defenses",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "REvil"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1500,
+        "variety": "S - Configuration or patch management"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "bd056f50-92a2-11ec-a39a-3584eb2df2ab",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2022-02-21T11:44:41.850Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploited vuln"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware is installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encryption triggered"
+      }
+    ],
+    "github": "17871",
+    "master_id": "52f6276a-67f3-4333-b3e9-57f0da5f859e",
+    "modified": "2023-02-09T00:30:09.928Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.wired.com/story/kaseya-supply-chain-ransomware-attack-msps/ https://kelo.com/2021/07/02/200-businesses-hit-by-ransomware-after-breach-at-florida-it-firm/; \ufeff\ufeffhttps://helpdesk.kaseya.com/hc/en-gb/articles/4403440684689-Important-Notice-July-2nd-2021;  https://securelist.com/revil-ransomware-attack-on-msp-companies/103075/ https://thehackernews.com/2021/07/revil-used-0-day-in-kaseya-ransomware.html;  https://www.huntress.com/blog/rapid-response-kaseya-vsa-mass-msp-ransomware-incident;  https://www.reddit.com/r/msp/comments/ocggbv/crticial_ransomware_incident_in_progress/;  https://www.govinfosecurity.com/kaseya-obtains-decryption-tool-after-revil-ransomware-hit-a-17129?; rf=2021-07-23_ENEWS_SUB_GIS__Slot1_ART17129&mkt_tok=MDUxLVpYSS0yMzcAAAF-cu2kGlR_TZABd6OAZu0iBl6nMlOFsHI1ibOhjBVhMikrMO1pAkGOyVeJs6YOkNJa972oKnU3jYAQ1SlHU1NEiCtI5LHFvlUU64pkB2IEnt41Ovc;  https://doublepulsar.com/kaseya-supply-chain-attack-delivers-mass-ransomware-event-to-us-companies-76e4ec6ec64b;  https://gizmodo.com/kaseya-is-making-its-customers-sign-non-disclosure-agre-1847356517;  https://www.rnz.co.nz/news/national/446225/kaseya-ransomware-attack-hits-new-zealand-kindergartens;  https://www.theage.com.au/world/europe/swedish-supermarket-chain-shut-as-massive-cyber-attack-spreads-20210704-p586p6.html;  https://www.wsmv.com/news/locals-impacted-by-kasea-ransomware-attack/article_0c3a100a-ddd4-11eb-bf4d-8b9e9ae6a212.html;  https://www.bikebiz.com/silverfish-uk-affected-by-us-ransomware-attack/;  https://news.softpedia.com/news/hundreds-of-u-s-companies-hit-by-massive-ransomware-attacks-533428.shtml;  https://www.databreaches.net/wv-morgan-county-schools-computers-hit-by-kaseya-attack/; ",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "It was probably inevitable that the two dominant cybersecurity threats of the day\u2014supply chain attacks and ransomware\u2014would combine to wreak havoc. That\u2019s precisely what happened Friday afternoon, as the notorious REvil criminal group successfully encrypted the files of hundreds of businesses in one swoop, apparently thanks to compromised IT management software.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Exploit",
+        "Ransomware"
+      ]
+    },
+    "distribution": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "non-distribution services": {
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Vulnerabilities"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1500,
+      "victim_id": [
+        "Macleans College; 61",
+        "St Peters School; 61",
+        "Coop; 4451",
+        "Nashville Computer",
+        "Silverfish UK",
+        "Morgan County Schools; 61"
+      ]
+    },
+    "state": "FL",
+    "victim_id": "Kaseya"
+  }
+}

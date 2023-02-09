@@ -1,0 +1,148 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2102436,
+          "variety": "Payment"
+        },
+        {
+          "amount": 2102436,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2102436,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "0abcae20-a3e1-11ed-8c67-f3bb261b8cc7",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1,
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-02-04T00:37:26.146Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Hacker steals lots of data"
+      }
+    ],
+    "github": "18295",
+    "master_id": "0b40cf13-a967-4119-be6c-09ee59937d7c",
+    "modified": "2023-02-04T06:36:11.360Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.databreaches.net/dna-diagnostics-center-notifying-more-than-2-million-people-who-used-a-national-genetic-testing-service/; https://www.bleepingcomputer.com/news/security/dna-testing-firm-discloses-data-breach-affecting-21-million-people/; https://www.jdsupra.com/legalnews/data-breach-alert-dna-diagnostics-1109913/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "DNA Diagnostics Center (DDC), an Ohio-based DNA testing company, has disclosed a hacking incident that affects 2,102,436 persons.  The incident resulted in a confirmed data breach that occurred between May 24, 2021, and July 28, 2021, and the firm concluded its internal investigation on October 29, 2021.  The information that the hackers accessed includes the following: Full names Credit card number + CVV Debit card number + CVV Financial account number Platform account password The compromised database contained older backups dating between 2004 and 2012, and it\u2019s not linked to the active systems and databases used by DDC today.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 3
+    },
+    "incident": {
+      "day": 24,
+      "month": 5,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621511",
+    "region": [
+      "019021"
+    ],
+    "state": "OH",
+    "victim_id": "DNA Diagnostics Center"
+  }
+}
