@@ -1,0 +1,133 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Abuse of functionality",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 167000000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 114000000,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 167000000,
+      "data_victim": [
+        "Employee",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "d15cc8d0-a99a-11ed-aa48-c57b469b256d",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2023-02-11T07:29:52.093Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Servers hack, data stolen"
+      }
+    ],
+    "github": "18328",
+    "master_id": "c0d4fd7e-ee0c-4f2a-8df6-69daea99702d",
+    "modified": "2023-02-13T12:08:18.120Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.itnews.com.au/news/gravatar-profile-add-on-leaks-data-on-millions-of-users-573607; https://thedigitalhacker.com/firefox-confirmed-wordpress-gravatar-data-breach-in-mails/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Details of just under 114 million users in hackers' hands. Users who have signed up for password breach monitoring through the HaveIBeenPwned service are being alerted to a large-scale data leak by Gravatar, an add-on service for user profiles owned by Automattic, the company behind blogging platform WordPress.  \"In October 2020, a security researcher published a technique for scraping large volumes of data from Gravatar, the service for providing globally unique avatars,\" HaveIBeenPwned warned.  The researcher is Advantio penetration tester Carlo di Dato, who discovered it was possible to get and enumerate user profile data from Gravatar via the JSON data interchange format.  As a result of the vulnerability, \"167 million names, usernames and MD5 hashes of email addresses used to reference users' avatars were subsequently scraped and distributed within the hacking community,\" HaveIBeenPwned said.  Of the MD5 hashes, just under 114 million were cracked and distributed alongside the source hash, thus disclosing the original email address and accompanying data.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Gravatar"
+  }
+}
