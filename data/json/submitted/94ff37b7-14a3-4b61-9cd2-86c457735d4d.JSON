@@ -1,0 +1,182 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "3bfddee0-abe4-11ed-b4d6-0500e8fbd88a",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "summary": "Okta was impacted with a breach when LAPSUS$ were able to access an engineer's desktop",
+    "plus": {
+        "master_id": "94ff37b7-14a3-4b61-9cd2-86c457735d4d",
+        "modified": "2023-02-14T03:51:07.653Z",
+        "created": "2023-02-14T02:20:26.574Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "send phishing"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "capture mfa"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "access code environment"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "modify system"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 2022,
+                "month": 3,
+                "year": 10
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes",
+                "partner_data": "Yes"
+            }
+        },
+        "github": "18603"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Okta",
+        "employee_count": "1001 to 10000",
+        "industry": "51"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application",
+                "VPN",
+                "Desktop sharing"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing",
+                "Pretexting",
+                "Prompt bombing"
+            ],
+            "vector": [
+                "SMS",
+                "IM"
+            ],
+            "target": [
+                "End-user or employee",
+                "Developer"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "LAPSUS$"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Code repository"
+            },
+            {
+                "variety": "U - Laptop"
+            },
+            {
+                "variety": "P - Unknown"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Multi-factor credential"
+                },
+                {
+                    "variety": "System"
+                },
+                {
+                    "variety": "Source code"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Victim organization",
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Modify configuration"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

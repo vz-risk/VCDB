@@ -1,0 +1,132 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "41007120-abe2-11ed-b4d6-0500e8fbd88a",
+    "security_incident": "Confirmed",
+    "summary": "Hacker's using stolen credentials were able to access Woolworth's environment and steal 2.2M MyDeal's customer details",
+    "confidence": "High",
+    "reference": "https://www.theguardian.com/australia-news/2022/oct/15/woolworths-says-22-million-mydeal-customers-details-exposed-in-data-breach",
+    "plus": {
+        "master_id": "9871b25f-aaf9-48fc-85fb-d5c851604cd3",
+        "modified": "2023-02-14T02:16:34.475Z",
+        "created": "2023-02-14T02:06:15.986Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "found way of stealing credentials"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "used stolen creds to steal customer data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 2022,
+                "month": 10,
+                "year": 15
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "19096"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 10
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "AU"
+        ],
+        "victim_id": "WoolWorth",
+        "employee_count": "Large",
+        "industry": "454100"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 22000000
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}
