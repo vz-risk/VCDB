@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Call center"
+      ],
+      "variety": [
+        "Pretexting",
+        "Extortion"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Call center"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "d15cc8d0-a99a-11ed-aa48-c57b469b256d",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-02-11T07:29:52.093Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Call center employee successfully pretexted"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion attempt by actor"
+      }
+    ],
+    "github": "18251",
+    "master_id": "c0d4fd7e-ee0c-4f2a-8df6-69daea99702d",
+    "modified": "2023-02-13T12:17:33.701Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://blog.robinhood.com/news/2021/11/8/data-security-incident; https://www.cnet.com/tech/services-and-software/robinhood-data-breach-exposed-7-million-customers/; https://techcrunch.com/2021/11/09/robinhood-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Stock trading platform Robinhood, perhaps best known for its association with the GameStop rollercoaster earlier this year, announced Monday that it experienced a data breach Nov. 3. The company reported that the incident affected a little more than 7 million customers, with varying amounts of data leaked.  The largest part of the breach leaked email addresses for about 5 million customers, according to the company's press release, with full names being leaked for a separate 2 million customers. That same press release indicated that 310 people may have names, dates of birth and ZIP codes leaked, and \"more extensive account details\" for roughly 10 customers. No Social Security, bank account or debit card information is believed to have been exposed. The company says it's in the process of contacting the people affected by the breach.   The company said in a blog post that a malicious hacker had socially engineered a customer service representative over the phone November 3 to get access to customer support systems. That allowed the hacker to obtain customer names and email addresses, but also the additional full names, dates of birth and ZIP codes of 310 customers.  Robinhood said that 10 customers had \u201cmore extensive account details revealed.\u201d Robinhood did not say what information specifically, though no Social Security numbers, bank account numbers or debit card numbers were exposed and caused no immediate financial loss to customers.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 11,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523000",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Robinhood"
+  }
+}
