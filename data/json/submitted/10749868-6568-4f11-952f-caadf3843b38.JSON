@@ -1,0 +1,124 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "d15cc8d0-a99a-11ed-aa48-c57b469b256d",
+    "security_incident": "Confirmed",
+    "reference": "https://www.kpax.com/news/local-news/flathead-county/logan-health-reports-data-breach; https://healthitsecurity.com/news/logan-health-reaches-4.3m-settlement-following-healthcare-data-breach-lawsuit; https://helenair.com/news/state-and-regional/govt-and-politics/logan-health-reports-data-breach/article_3d900e6f-038a-5a91-a9f8-28fa6225f05a.html; https://www.scmagazine.com/analysis/breach/logan-health-cyberattack-server-hack-leads-to-data-access-of-214k-people; https://oag.ca.gov/system/files/Logan%20-%20Sample%20Notice.pdf; https://www.scmagazine.com/analysis/breach/alleging-security-failures-caused-data-breach-patients-sue-montanas-logan-health",
+    "summary": "Logan Health Medical Center has informed patients that they were involved in a “highly sophisticated criminal attack” on their information technology systems on November 22, 2021.  The incident occurred when there was unauthorized access to a Logan Health file server.  Logan Health has hired a third-party forensic expert to investigate the incident and on Jan. 5 it was determined that there was unauthorized access to files that contained protected health information related to patients.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "c0d4fd7e-ee0c-4f2a-8df6-69daea99702d",
+        "modified": "2023-02-13T11:57:40.948Z",
+        "created": "2023-02-11T07:29:52.093Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "asset": "srv",
+                "summary": "Servers hack, data stolen",
+                "actor": "ext",
+                "attribute": "cp"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "partner_data": "Yes",
+                "credit_monitoring": "Yes",
+                "credit_monitoring_years": 1
+            }
+        },
+        "github": "18558"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2021,
+            "month": 11,
+            "day": 22
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Logan Health Medical Center",
+        "employee_count": "1001 to 10000",
+        "industry": "622",
+        "state": "MT"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 213543,
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient",
+                "Employee"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 213543
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

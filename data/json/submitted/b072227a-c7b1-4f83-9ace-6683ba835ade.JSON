@@ -1,0 +1,176 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "73a3b310-a996-11ed-aa48-c57b469b256d",
+    "security_incident": "Confirmed",
+    "reference": "https://7news.com.au/news/cyber-security/medibank-group-detects-cyberattack-takes-several-services-offline-as-a-precaution-c-8534253; https://www.arnnet.com.au/article/702328/health-insurer-medibank-hit-by-cyber-incident/; https://www.reuters.com/technology/australias-medibank-reports-cyber-incident-2022-10-13/; https://www.reuters.com/business/healthcare-pharmaceuticals/medibank-says-hacker-accessed-data-97-mln-customers-refuses-pay-ransom-2022-11-06/; https://www.cshub.com/attacks/news/hacker-releases-stolen-medibank-data-on-the-dark-web; https://www.bodyandsoul.com.au/health/womens-health/the-medibank-hack-was-deeply-misogynistic-act-but-we-can-change-that/news-story/7594abcca1047ad97a64870bae12abfb; https://www.news.com.au/technology/online/hacking/new-twist-in-medibank-hack-nightmare-as-email-reveals-staff-details-also-compromised/news-story/cb53edc006b8b2c5c2ebacce7bc89812",
+    "summary": "One of Australia’s largest private health insurers has revealed it was the target of a possible cyberattack.  Medibank Group on Thursday said it had detected “unusual activity” on its network a day earlier.  Medibank Private Ltd (MPL.AX), Australia's biggest health insurer, on Monday said no ransom payment will be made to the criminal responsible for a recent data theft, wherein around 9.7 million current and former customers' data was compromised. The hacker that stole 200GB worth of customer data from Australian health insurance provider Medibank has released files containing some of the data on the dark web. In the days following the release of hundreds of \"abortion files\" to the dark web, there's one way that Australian women can reclaim their power around this deeply misogynist act.  The Medibank data breach has already impacted 9.7 million customers – and now, that staggering number has increased even further, after it emerged that staff details had also been compromised. Around 5.1 million Medibank customers, 2.8 million ahm customers and 1.8 million international customers were affected after the credentials of a staff member with high-level access to Medibank systems were obtained and sold to hackers on a Russian cyber criminal forum.  The group has been releasing highly sensitive customer data on a dark web blog linked to the REVil Russian ransomware group since last week, including information about people’s mental health status, drug and alcohol use and previous pregnancy terminations which may include non-viable pregnancy such as foetal anomaly, ectopic pregnancy, molar pregnancy, miscarriages and readmission for complications such as infection.  But an email sent to Medibank employees seen by news.com.au has revealed that hundreds of current and former employees had also been impacted, along with millions of customers.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "b072227a-c7b1-4f83-9ace-6683ba835ade",
+        "modified": "2023-02-11T07:25:42.460Z",
+        "created": "2023-02-11T06:58:36.866Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "unk",
+                "summary": "Unknown initial action"
+            },
+            {
+                "summary": "Malware installed",
+                "action": "mal",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "ia"
+            },
+            {
+                "summary": "Data exfiltrated",
+                "attribute": "cp",
+                "actor": "ext",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Encryption triggered",
+                "attribute": "au",
+                "actor": "ext",
+                "action": "mal",
+                "asset": "srv"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2023,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "19082"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 10,
+            "day": 12
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "AU"
+        ],
+        "victim_id": "Medibank",
+        "employee_count": "1001 to 10000",
+        "industry": "632"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Lateral movement"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ],
+            "notes": "Unknown initial action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "RU"
+            ],
+            "name": [
+                "REVil"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 7900000,
+                    "variety": "Medical"
+                },
+                {
+                    "amount": 1800000,
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 9700000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
