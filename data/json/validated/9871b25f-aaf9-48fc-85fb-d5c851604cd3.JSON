@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 22000000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "41007120-abe2-11ed-b4d6-0500e8fbd88a",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-02-14T02:06:15.986Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "found way of stealing credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used stolen creds to steal customer data"
+      }
+    ],
+    "github": "19096",
+    "master_id": "9871b25f-aaf9-48fc-85fb-d5c851604cd3",
+    "modified": "2023-02-14T02:16:34.475Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 2022,
+        "month": 10,
+        "year": 15
+      }
+    }
+  },
+  "reference": "https://www.theguardian.com/australia-news/2022/oct/15/woolworths-says-22-million-mydeal-customers-details-exposed-in-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Hacker's using stolen credentials were able to access Woolworth's environment and steal 2.2M MyDeal's customer details",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "NA"
+    ],
+    "industry": "454100",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "WoolWorth"
+  }
+}
