@@ -1,0 +1,107 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "30dbfdd0-736c-11ee-8da1-4f2f8c80e63f",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cmswire.com/digital-experience/chatgpt-suffers-first-data-breach-exposes-personal-information/; https://www.bleepingcomputer.com/news/security/openai-chatgpt-payment-data-leak-caused-by-open-source-bug/; https://securityintelligence.com/articles/chatgpt-confirms-data-breach/",
+    "summary": "The breach came during a March 20 outage and exposed payment-related and other personal information of 1.2% of the ChatGPT Plus subscribers who were active during a specific nine-hour window, according to a blog post by OpenAI Friday, March 24.  \"In the hours before we took ChatGPT offline on Monday, it was possible for some users to see another active user’s first and last name, email address, payment address, the last four digits (only) of a credit card number, and credit card expiration date. Full credit card numbers were not exposed at any time,\" OpenAI officials wrote today.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "308cb98b-ccac-482a-85d7-914bffd71071",
+        "modified": "2023-10-26T23:18:20.499Z",
+        "created": "2023-10-26T02:25:00.845Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Code upgrade caused customers to be able to see other customer's queries."
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "github": "19629"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "OpenAI",
+        "employee_count": "101 to 1000",
+        "industry": "516",
+        "state": "CA"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Publishing error"
+            ],
+            "vector": [
+                "Web application"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "NA"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Customer"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

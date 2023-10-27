@@ -1,0 +1,123 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "d2d4f030-7509-11ee-8da1-4f2f8c80e63f",
+    "security_incident": "Confirmed",
+    "reference": "https://theatlantavoice.com/two-former-amazon-employees-plead-guilty-to-committing-10m-in-fraud/",
+    "summary": "Kayricka Wortham and Demetrius Hines have pleaded guilty to defrauding Amazon.com, Inc., and stealing nearly $10 million from the company, while employed at the company in managerial and loss prevention roles.   “The defendants abused their trusted positions to steal nearly $10 million from the company over the course of just a few months,” said U.S. Attorney Ryan K. Buchanan. “This staggering fraud was fueled by pure greed, as evidenced by the high-end real estate, luxury cars, and expensive jewelry that the defendants quickly accumulated with their fraudulent proceeds.”  “These defendants attempted to hide their scheme in plain sight by using their unique roles within their company to conceal the actions from which they fraudulently benefitted,” said U.S. Secret Service Atlanta Special Agent in Charge Steven Baisel. “The defendants ultimately learned that the highly skilled investigators with the Secret Service are uniquely proficient in their work to uncover illicit financial schemes, regardless of attempts to evade law enforcement. I am proud of the investigative team responsible for bringing these defendants before our justice system.”  According to U.S. Attorney Buchanan, the charges and other information presented in court: Kayricka Wortham and Demetrius Hines used their positions at Amazon.com, Inc., to submit more than $10 million in fictitious invoices for fake vendors, causing Amazon to pay approximately $9.4 million to Wortham, Hines, and their co-conspirators. From about August 2020 to March 2022, Wortham worked as an Operations Manager at Amazon. She was employed at the company’s warehouse in Smyrna, Georgia. In her position, Wortham supervised others and acted with authority to approve new vendors and the payment of vendor invoices.  Hines was a Loss Prevention Multi-Site Lead at Amazon. He also worked at the Smyrna warehouse and at other company sites. In his position, Hines was responsible for preventing loss, monitoring security risks, and protecting people, products, and information at Amazon. Wortham, who was the leader of the scheme, provided fake vendor information to unknowing subordinates and asked them to input the information into Amazon’s vendor system. Once the information was entered, Wortham approved the fake vendors, thereby enabling those vendor accounts to submit invoices to Amazon. Wortham and her co-conspirators, including Hines, then submitted fictitious invoices for payment. These invoices falsely represented that the fake vendors had provided goods and services to Amazon. The payments for these invoices, typically approved by Wortham, went to bank accounts controlled by Wortham and her co-conspirators.  Wortham recruited other individuals to act as purported vendor contacts for the fake vendors entered into Amazon’s system. She recruited Hines into the scheme and asked him to supply individuals’ information that could be used as fake vendor contacts.  In total, Wortham and her co-conspirators received about $9.4 million from the scheme. They spent the fraudulent proceeds for personal benefit, including purchasing real estate, luxury cars, and expensive jewelry.  As part of her sentencing, Kayricka Wortham, a/k/a “Kayricka Dupree,” a/k/a “Kayricka Young,” 31, of Atlanta, Georgia, will forfeit more than $2.7 million in fraudulent proceeds seized from multiple bank accounts, a residence located in Smyrna, that was purchased with over $900,000 in fraudulent proceeds, and a 2019 Lamborghini Urus, a 2021 Dodge Durango, a 2022 Tesla Model X, a 2018 Porsche Panamera, and a Kawasaki ZX636 motorcycle, all of which were purchased with fraudulent proceeds.  Demetrius Hines, 35, of Smyrna, Georgia, will forfeit more than $600,000 in fraudulent proceeds seized from multiple bank accounts and a 2022 Suzuki GSX1300 Motorcycle, a 2013 Ford Shelby Mustang, a 2021 Ford F-150 Black Widow, a Rolex Day-Date watch, a diamond bracelet, and a diamond necklace, all of which were purchased with fraudulent proceeds.  Wortham and Hines pleaded guilty to conspiracy to commit wire fraud. Sentencing for Wortham is scheduled for March 8, 2023, at 10:30 a.m., before U.S. District Judge Timothy C. Batten, Sr. Sentencing for Hines is scheduled for March 8, 2023, at 11:00 a.m., before Judge Batten.  Brittany Hudson, 37, of Atlanta, Georgia, has also been charged with conspiracy to commit wire fraud. The Criminal Information alleges that Hudson was in a relationship with Wortham and owned a business, Legend Express LLC, which contracted with Amazon to deliver packages to customers. Hudson allegedly conspired with Wortham to submit fictitious invoices for fake vendors as part of the scheme. Her case is pending.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "60bcf409-4755-4730-9344-02481eb5f745",
+        "modified": "2023-10-28T05:40:28.151Z",
+        "created": "2023-10-28T03:45:54.740Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Internal actor shares data inappropriately."
+            },
+            {
+                "action": "mis",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Fraudulent transactions created"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "19213"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 12
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "industry": "445110",
+        "employee_count": "Over 100000",
+        "victim_id": "Amazon",
+        "state": "GA"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Manager"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "NA"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Other",
+                    "amount": 1600
+                }
+            ],
+            "data_victim": [
+                "Victim organization"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Fraudulent transaction"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

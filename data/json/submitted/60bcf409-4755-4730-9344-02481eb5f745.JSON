@@ -1,0 +1,105 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "d2d4f030-7509-11ee-8da1-4f2f8c80e63f",
+    "security_incident": "Confirmed",
+    "reference": "https://news.yahoo.com/former-wichita-police-captain-leaked-110000813.html",
+    "summary": "Wendell Nicholson has been granted diversion after leaking confidential police records to a Walmart security guard while he was a captain in the Wichita Police Department.  Nicholson, a 29-year veteran who retired one day before he was charged with eight felony computer crimes in March, signed the diversion agreement May 23, court records show.  Nicholson admitted he is guilty of all charges, and the Sedgwick County District Attorney’s Office agreed to drop the case as long as he stays out of trouble for one year and abides by the terms of the diversion agreement.  The leaked records included body camera video of a police shooting, details about an internal investigation into text messages sent by SWAT team members and gang list information. Other records included DEA bulletins, shooting reviews, victim and suspect identities, information about gang feuds and murder suspects, and an image of homicide victims.  Those records are typically withheld by the city or barred from disclosure by state law.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "60bcf409-4755-4730-9344-02481eb5f745",
+        "modified": "2023-10-28T03:59:17.288Z",
+        "created": "2023-10-28T03:45:54.740Z",
+        "event_chain": [
+            {
+                "action": "mis",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Internal actor shares data inappropriately."
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "github": "19829"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Wichita Police Department",
+        "industry": "922120",
+        "employee_count": "101 to 1000",
+        "state": "KS"
+    },
+    "action": {
+        "misuse": {
+            "variety": [
+                "Privilege abuse"
+            ],
+            "vector": [
+                "LAN access"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Manager"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "NA"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

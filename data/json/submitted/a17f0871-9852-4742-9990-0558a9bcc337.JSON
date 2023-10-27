@@ -1,0 +1,106 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "30dbfdd0-736c-11ee-8da1-4f2f8c80e63f",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hackread.com/india-truck-brokerage-company-data-leak/; https://www.phishprotection.com/announcements/cybersecurity-updates-for-the-week-6-of-2023",
+    "summary": "India’s largest freight delivery and truck brokerage company, FR8, recently faced a severe data leak problem. According to phishing protection researcher Anurag Sen who works with Italian cyber security firm FlashStart, FR8 exposed over 140 gigabytes of data, which anyone can access without a password or security authentication.  According to a post on Hackread.com, the leaked data contains sensitive information like customer records, payment details, and invoices across India. It also includes other personal data like employees’ and customers’ names, addresses, and contact numbers. FR8 claims that it is “India’s largest truck and transport service company” and operates in more than 60 cities.  On January 30, 2023, Anurag discovered the server on Shodan while searching for misconfigured cloud databases. The security researchers informed FR8 regarding the leak but received no response. FR8’s only e-mail address available to the public is bouncing back with every e-mail. The leaked data contains:     Full name   Mobile number   Internal document   Delivery Full address   Bank payment details   Delivery Vehicle Details   Internal employee details",
+    "confidence": "High",
+    "plus": {
+        "master_id": "308cb98b-ccac-482a-85d7-914bffd71071",
+        "modified": "2023-10-26T02:44:52.316Z",
+        "created": "2023-10-26T02:25:00.845Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Database in the cloud spun up with no controls"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "github": "19445"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "IN"
+        ],
+        "region": [
+            "142034"
+        ],
+        "victim_id": "Fr8",
+        "employee_count": "101 to 1000",
+        "industry": "492210"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

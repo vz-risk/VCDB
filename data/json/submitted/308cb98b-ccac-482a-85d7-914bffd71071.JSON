@@ -1,0 +1,108 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "30dbfdd0-736c-11ee-8da1-4f2f8c80e63f",
+    "security_incident": "Confirmed",
+    "reference": "https://techcrunch.com/2023/05/31/toyota-customer-data-leak-years/; https://www.bleepingcomputer.com/news/security/toyota-finds-more-misconfigured-servers-leaking-customer-info/",
+    "summary": "Toyota Motor Corporation has discovered two additional misconfigured cloud services that leaked car owners' personal information for over seven years.  This finding came after the Japanese carmaker conducted a thorough investigation on all cloud environments managed by Toyota Connected Corporation after previously discovering a misconfigured server that exposed the location data of over 2 million customers for ten years.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "308cb98b-ccac-482a-85d7-914bffd71071",
+        "modified": "2023-10-26T02:34:30.113Z",
+        "created": "2023-10-26T02:25:00.845Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "asset": "srv",
+                "actor": "int",
+                "attribute": "cp",
+                "summary": "Database in the cloud spun up with no controls"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "github": "19800"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "JP"
+        ],
+        "region": [
+            "142000"
+        ],
+        "victim_id": "Toyota",
+        "employee_count": "Over 100000",
+        "industry": "336111"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 2
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 260000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 260000
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Incident response"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
