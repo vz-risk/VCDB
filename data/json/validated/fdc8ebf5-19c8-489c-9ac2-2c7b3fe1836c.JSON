@@ -1,0 +1,117 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1600,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1600,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "d2d4f030-7509-11ee-8da1-4f2f8c80e63f",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-10-28T03:45:54.740Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal actor shares data inappropriately."
+      }
+    ],
+    "github": "19241",
+    "master_id": "60bcf409-4755-4730-9344-02481eb5f745",
+    "modified": "2023-10-28T05:33:04.362Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://healthitsecurity.com/news/ga-health-system-reports-healthcare-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Georgia-based Emory Healthcare reported a healthcare data breach that impacted more than 1,000 individuals and potentially exposed protected health information (PHI).  Through a notice from the United States Department of Labor (DOL), Emory Healthcare became aware of an employee inappropriately accessing at least 1,600 patient records between December 2020 and December 2021.  Further investigation revealed that the now-former employee released demographic information from several hundred employees to individuals involved in unemployment benefits fraud. The potentially impacted demographic information included names, dates of birth, and Social Security numbers. Investigators found no evidence that any medical histories, tests, laboratory results, diagnosis and treatment plans, or insurance information were compromised.  During the investigation, Emory Healthcare stated it has \u201cfully cooperated with law enforcement during the investigation, arrest, and prosecution of individuals involved in the matter and will continue to do so as the case moves forward. EHC followed the instructions of the DOJ regarding the timing of this notification and is now notifying patients whose information is believed to have been involved in this incident and for whom EHC had last known addresses.\u201d",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "ga",
+    "victim_id": "Emory Healthcare"
+  }
+}
