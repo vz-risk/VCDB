@@ -1,0 +1,157 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "edbe9c20-7a6d-11ee-b391-931271d090d0",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "reference": "https://www.bleepingcomputer.com/news/security/kroll-data-breach-exposes-info-of-ftx-blockfi-genesis-creditors/; https://www.scmagazine.com/brief/kroll-suffers-data-breach-after-sim-swapping-attack; https://coinculture.com/au/business/ftx-bankruptcy-claims-agent-kroll-faces-data-breach-sensitive-information-leaked/",
+    "summary": "Multiple reports on social media warn of a data breach at financial and risk advisory company Kroll that resulted in exposing to an unauthorized third-party the personal data of some credit claimants.  Kroll, who is facilitating claims for insolvent companies FTX, BlockFi, and Genesis Global Holdco, has confirmed that one of its employees was the victim of a SIM-swapping attack.  Hackers stole the Kroll employee's phone number and used it to gain access to some files with personal data of bankruptcy claimants.  FTX and BlockFi posted on X today that a security incident at Kroll involving unauthorized third-party access on its systems exposed “limited, non-sensitive customer data of specific claimants.”  tweets.  In a statement today, Kroll says that a threat actor on August 19 targeted a T-Mobile account belonging to a Kroll employee and managed to steal the phone number of a Kroll employee.  \"As a result, it appears the threat actor gained access to certain files containing personal information of bankruptcy claimants in the matters of BlockFi, FTX and Genesis. Immediate actions were taken to secure the three affected accounts\" - Kroll",
+    "plus": {
+        "master_id": "5db746db-c1c7-4b39-bec8-99ab60ed9993",
+        "modified": "2023-11-04T04:26:41.825Z",
+        "created": "2023-11-04T00:25:05.378Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "asset": "ppl",
+                "actor": "ext",
+                "attribute": "ia",
+                "summary": "Social engineered the customer service person to perform a sim swap"
+            },
+            {
+                "action": "soc",
+                "asset": "usr",
+                "actor": "ext",
+                "attribute": "au",
+                "summary": "After sim swap, employee looses access to phone."
+            },
+            {
+                "action": "hak",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "cp",
+                "summary": "Leveraged access to get into systems of company and stole data."
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "github": "19931"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 8
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Kroll",
+        "industry": "541614",
+        "employee_count": "1001 to 10000",
+        "state": "NY"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Other network service",
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Pretexting"
+            ],
+            "vector": [
+                "Partner"
+            ],
+            "target": [
+                "Customer"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            },
+            {
+                "variety": "P - Call center",
+                "amount": 1
+            },
+            {
+                "variety": "U - Telephone",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Misrepresentation",
+                "Alter behavior",
+                "Fraudulent transaction"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Interruption"
+            ],
+            "notes": "Employee lost access to their phone"
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}
