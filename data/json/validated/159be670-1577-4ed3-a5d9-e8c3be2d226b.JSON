@@ -1,0 +1,120 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 48844292,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 48844292,
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Record count is from 2022 number of voters registered and is likely an undercount.  The registers held at the time of the cyber-attack include the name and address of anyone in Great Britain who was registered to vote between 2014 and 2022, the names of those registered as overseas voters during the same period, and the names and addresses of anyone registered in Northern Ireland in 2018. "
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "edbe9c20-7a6d-11ee-b391-931271d090d0",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-11-04T00:25:05.378Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unknown hacking caused a breach."
+      }
+    ],
+    "github": "19891",
+    "master_id": "5db746db-c1c7-4b39-bec8-99ab60ed9993",
+    "modified": "2023-11-04T04:54:42.197Z"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/uk-electoral-commission-data-breach-exposes-8-years-of-voter-data/; https://www.electoralcommission.org.uk/privacy-policy/public-notification-cyber-attack-electoral-commission-systems",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The UK Electoral Commission disclosed a massive data breach exposing the personal information of anyone who registered to vote in the United Kingdom between 2014 and 2022.  The disclosure comes ten months after the Commission first detected the breach and two years after the initial breach occurred, raising questions about why it took so long to report the incident to the public. In the \"public notification of cyber-attack,\" the Commission says they first detected the attack in October 2022 but since learned that threat actors breached their systems much earlier, in August 2021. As part of this cyberattack, the threat actors accessed the government agency's servers holding its email, control systems, and copies of electoral registers.  \"They were able to access reference copies of the electoral registers, held by the Commission for research purposes and to enable permissibility checks on political donations,\" warns the data breach notification. \"The registers held at the time of the cyber-attack include the name and address of anyone in the UK who registered to vote between 2014 and 2022, as well as the names of those registered as overseas voters.\"  However, the exposed election registers did not contain the personal information of those who registered anonymously.  The Electoral Commission says the exposed voter information includes:  Personal data contained in email system of the Commission: Name, first name and surname. Email addresses (personal and/or business). Home address if included in a webform or email. Contact telephone number (personal and/or business). Content of the webform and email that may contain personal data. Any personal images sent to the Commission. Personal data contained in Electoral Register entries: Name, first name and surname Home address in register entries Date on which a person achieves voting age that year. During the attack, the threat actors had access to the Commission's email server, exposing any internal and external communications with the agency.  The Commission says that the cyberattack had no impact on any elections or an individual's voter registration.  The agency is downplaying the attack stating that no voter registration was modified and that \"much of it is already in the public domain.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 14
+    },
+    "incident": {
+      "month": 8,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Federal"
+    ],
+    "industry": "541",
+    "region": [
+      "150155",
+      "150154"
+    ],
+    "victim_id": "Electoral Commission"
+  }
+}
