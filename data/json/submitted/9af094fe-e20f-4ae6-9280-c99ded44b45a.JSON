@@ -1,6 +1,6 @@
 {
     "plus": {
-        "modified": "2023-11-14T04:53:24.713Z",
+        "modified": "2023-11-15T05:43:24.171Z",
         "created": "2023-11-09T04:09:02.281Z",
         "master_id": "9af094fe-e20f-4ae6-9280-c99ded44b45a",
         "event_chain": [
@@ -10,6 +10,13 @@
                 "asset": "srv",
                 "attribute": "cp",
                 "summary": "File Transfer Server Hacked"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Extortion attempt"
             }
         ],
         "timeline": {
@@ -71,13 +78,24 @@
                 "Exploit vuln"
             ],
             "vector": [
-                "Other"
+                "Web application"
             ],
             "result": [
                 "Exfiltrate"
             ],
             "notes": "Exploited software vulnerability in the third party file transfer solution (GoAnywhere MFT)",
             "cve": "CVE-2023-0669"
+        },
+        "social": {
+            "variety": [
+                "Extortion"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ]
         }
     },
     "actor": {
@@ -97,6 +115,9 @@
         "assets": [
             {
                 "variety": "S - File"
+            },
+            {
+                "variety": "P - End-user or employee"
             }
         ],
         "cloud": [
@@ -121,10 +142,19 @@
             ],
             "data_disclosure": "Yes",
             "data_total": 103000
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
         }
     },
     "discovery_method": {
-        "unknown": true
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
     },
     "impact": {
         "overall_rating": "Painful"
@@ -136,5 +166,6 @@
     "confidence": "High",
     "incident_id": "0ad40b90-7e7b-11ee-afcd-0587b0cf6415",
     "schema_name": "vcdb",
-    "schema_version": "1.3.7"
+    "schema_version": "1.3.7",
+    "discovery_notes": "Published on website + extortion"
 }
