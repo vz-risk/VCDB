@@ -1,0 +1,186 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "0279F9F0-E3FD-484B-A536-537BB6A5257D",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cybersecurity-insiders.com/list-of-victimized-companies-of-moveit-cyber-attack/",
+    "summary": "MOVEit vulnerability exploited.  Data stolen.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "68D03230-8C4D-4C58-B132-C45AE4FBE027",
+        "modified": "2023-12-02T07:10:10.154Z",
+        "created": "2023-11-18T01:42:54.036Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "ia",
+                "summary": "Vuln exploited"
+            },
+            {
+                "action": "mal",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "ia",
+                "summary": "Software installation"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Data stolen"
+            },
+            {
+                "action": "soc",
+                "asset": "ppl",
+                "actor": "ext",
+                "attribute": "ia",
+                "summary": "Extortion for payment"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "19817"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "WESTERN GOVERNORS UNIVERSITY",
+        "employee_count": "Large",
+        "industry": "611310",
+        "state": "UT"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit vuln",
+                "Backdoor"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ],
+            "cve": "CVE-2023-34362; CVE-2023-35036; CVE-2023-35708",
+            "notes": "Exploited software vulnerability in the third party file transfer solution (MOVEit)"
+        },
+        "malware": {
+            "variety": [
+                "Backdoor"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Extortion"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user"
+            ],
+            "result": [
+                "Other"
+            ],
+            "notes": "Money extorted on threat of data exposure."
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "RU"
+            ],
+            "name": [
+                "Cl0p ransomware group"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File"
+            },
+            {
+                "variety": "P - End-user"
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Exploit"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}
