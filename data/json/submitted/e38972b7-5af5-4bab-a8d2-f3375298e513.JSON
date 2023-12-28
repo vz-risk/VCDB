@@ -1,0 +1,167 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "07284a50-8e21-11ee-8e0f-01920077cf74",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cbc.ca/news/canada/sudbury/school-board-cyber-attack-1.6702456",
+    "summary": "Huron-Superior Catholic District School Board employees likely affected by cyber attack from ransomware group",
+    "confidence": "High",
+    "plus": {
+        "master_id": "e38972b7-5af5-4bab-a8d2-f3375298e513",
+        "modified": "2023-11-29T00:15:37.394Z",
+        "created": "2023-11-29T00:05:00.021Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "unknown initial access vector"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfil data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "install ransomware"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypts stuff"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2023,
+                "month": 1,
+                "day": 5
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "Yes",
+                "credit_monitoring_years": 1
+            }
+        },
+        "github": "19308"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 12,
+            "day": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "CA"
+        ],
+        "victim_id": "Huron-Superior Catholic District School Board",
+        "employee_count": "101 to 1000",
+        "industry": "611110"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Royal"
+            ],
+            "notes": "Royal"
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

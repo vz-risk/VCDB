@@ -1,0 +1,165 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "4a94b130-84c0-11ee-898d-0f9c5bf59690",
+    "security_incident": "Confirmed",
+    "reference": "https://www.poconorecord.com/story/news/2023/02/20/blackcat-ransomware-group-targets-pennsylvania-physicians-office/69924684007/",
+    "summary": "BlackCat Ransomware group impacts Lehigh Valley Health Network",
+    "confidence": "High",
+    "plus": {
+        "master_id": "dffc8d67-ce56-41e7-8e29-e7a7b0993d33",
+        "modified": "2023-11-17T01:53:08.250Z",
+        "created": "2023-11-17T01:39:51.491Z",
+        "sub_source": "PHIDBR",
+        "event_chain": [
+            {
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "unk",
+                "summary": "unknown initial vector"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "cp",
+                "summary": "data exfiled "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia",
+                "summary": "ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "au",
+                "summary": "ransomware encrypts things"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 6,
+                "month": 2,
+                "year": 2023
+            }
+        },
+        "analysis_status": "First pass",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "19531"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Lehigh Valley Health Network ",
+        "employee_count": "10001 to 25000",
+        "industry": "621111",
+        "state": "PA"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ],
+            "name": "BlackCat"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "BlackCat"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "U - Desktop",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

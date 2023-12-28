@@ -1,0 +1,170 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "c7a4ef30-83d2-11ee-898d-0f9c5bf59690",
+    "security_incident": "Confirmed",
+    "reference": "https://www.scmagazine.com/brief/indianapolis-housing-agency-ransomware-attack-hits-over-200k-individuals",
+    "summary": "Indianapolis Housing Agency ransomware attack hits over 200K individuals",
+    "confidence": "High",
+    "plus": {
+        "master_id": "44f78411-bc75-4a51-b378-6d136b46aa81",
+        "modified": "2023-11-15T21:43:10.764Z",
+        "created": "2023-11-15T21:19:41.091Z",
+        "event_chain": [
+            {
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "unknown initial compromise",
+                "action": "unk"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfil data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "install ransomware"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "encrypt data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2023,
+                "month": 1,
+                "day": 31
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "Yes",
+                "credit_monitoring_years": 1
+            }
+        },
+        "github": "19425"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 11
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Indianapolis Housing Agency",
+        "employee_count": "101 to 1000",
+        "industry": "925110",
+        "state": "IN"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate",
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 219000,
+                    "variety": "Personal"
+                },
+                {
+                    "amount": 219000,
+                    "variety": "Sensitive Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 219000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

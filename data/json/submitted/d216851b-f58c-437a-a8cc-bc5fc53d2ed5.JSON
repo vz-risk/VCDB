@@ -1,0 +1,130 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "170304c0-7f02-11ee-a021-bbe4713468e2",
+    "security_incident": "Confirmed",
+    "reference": "https://www.shawlocal.com/sauk-valley/news/government/2023/06/16/idhs-more-than-2800-dixon-walmart-shoppers-link-card-data-stolen-benefits-suspended/",
+    "summary": " More than 2,800 people who shopped at the Dixon Walmart this spring lost their SNAP benefits after an illegal skimming device stole their Link card data, causing them to get canceled, at least temporarily, the Illinois Department of Human Services has confirmed",
+    "confidence": "High",
+    "plus": {
+        "master_id": "d216851b-f58c-437a-a8cc-bc5fc53d2ed5",
+        "modified": "2023-11-09T18:20:30.351Z",
+        "created": "2023-11-09T18:15:44.781Z",
+        "event_chain": [
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "ia",
+                "summary": "skimmer installed"
+            },
+            {
+                "action": "phy",
+                "actor": "ext",
+                "asset": "ter",
+                "attribute": "cp",
+                "summary": "skimmer skims data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2023,
+                "day": 16,
+                "month": 6
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "19843"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Walmart",
+        "employee_count": "Over 100000",
+        "industry": "452111",
+        "state": "IL"
+    },
+    "action": {
+        "physical": {
+            "variety": [
+                "Skimmer"
+            ],
+            "vector": [
+                "Public facility"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "T - PED pad",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "On-Premise Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 2800,
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Processed"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 2800
+        },
+        "integrity": {
+            "variety": [
+                "Hardware tampering"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

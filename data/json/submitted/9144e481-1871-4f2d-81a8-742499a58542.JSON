@@ -1,0 +1,119 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "dd80c1e0-7efe-11ee-a021-bbe4713468e2",
+    "security_incident": "Confirmed",
+    "summary": "Another security calamity for Capita: An unsecured AWS bucket exposes tax payers information ",
+    "reference": "https://www.theregister.com/2023/05/17/another_security_calamity_for_capita/",
+    "confidence": "High",
+    "plus": {
+        "master_id": "9144e481-1871-4f2d-81a8-742499a58542",
+        "modified": "2023-11-09T17:56:51.246Z",
+        "created": "2023-11-09T17:52:39.806Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfigured s3 bucket"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 2023,
+                "month": 5,
+                "year": 17
+            }
+        },
+        "analysis_status": "Finalized",
+        "analyst": "planglois",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "partner_data": "Yes"
+            }
+        },
+        "github": "19781"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "GB"
+        ],
+        "victim_id": "Capita",
+        "employee_count": "50001 to 100000",
+        "industry": "56"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Bank"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Unknown"
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

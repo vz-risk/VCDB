@@ -1,0 +1,133 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "864f3510-83f8-11ee-898d-0f9c5bf59690",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hipaajournal.com/highmark-health-phishing-attack-affects-300000-patients/",
+    "summary": "Highmark Health notified 300,000 individuals of a phishing attack that potentially compromised protected health information",
+    "confidence": "High",
+    "plus": {
+        "master_id": "08f967bc-7a84-4bff-8923-ea898abb8de6",
+        "modified": "2023-11-16T01:58:49.359Z",
+        "created": "2023-11-16T01:49:52.354Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "cp",
+                "summary": "unknown means of compromising credentials"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "used stolen credentails to access inbox"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2023,
+                "month": 2,
+                "day": 6
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2024,
+        "github": "19450"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 12,
+            "day": 13
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Highmark Health",
+        "industry": "524114",
+        "employee_count": "1001 to 10000",
+        "state": "PA"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical",
+                    "amount": 275000
+                },
+                {
+                    "variety": "Sensitive Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 275000
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

@@ -1,0 +1,164 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "4369df70-7f2a-11ee-a021-bbe4713468e2",
+    "security_incident": "Confirmed",
+    "reference": "https://www.channelnews.com.au/eftpos-provider-smartpay-hit-by-cyber-attack/",
+    "summary": "EFTPOS Provider Smartpay Hit By Ransomware, Customer Data Stolen",
+    "confidence": "High",
+    "plus": {
+        "master_id": "52efd1ae-1a07-4f38-8eee-7b191dcae6aa",
+        "modified": "2023-11-09T23:08:23.296Z",
+        "created": "2023-11-09T23:03:19.143Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "asset": "srv",
+                "actor": "ext",
+                "attribute": "unk",
+                "summary": "unknown initial action"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfil data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "install ransomware"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransowmare encrypts stuff"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 19,
+                "year": 2023,
+                "month": 7
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "19847"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 6,
+            "day": 10
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "NZ"
+        ],
+        "victim_id": "SmartPay",
+        "employee_count": "11 to 100",
+        "industry": "522320"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}
