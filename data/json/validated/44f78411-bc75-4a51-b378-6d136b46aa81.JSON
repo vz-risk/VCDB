@@ -1,0 +1,188 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 219000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 219000,
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 219000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "c7a4ef30-83d2-11ee-898d-0f9c5bf59690",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1
+      }
+    },
+    "created": "2023-11-15T21:19:41.091Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "unknown initial compromise"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "exfil data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "install ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypt data"
+      }
+    ],
+    "github": "19425",
+    "master_id": "44f78411-bc75-4a51-b378-6d136b46aa81",
+    "modified": "2023-11-15T21:43:10.764Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 31,
+        "month": 1,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.scmagazine.com/brief/indianapolis-housing-agency-ransomware-attack-hits-over-200k-individuals",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Indianapolis Housing Agency ransomware attack hits over 200K individuals",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "925110",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Indianapolis Housing Agency"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "name": "magecart",
+      "variety": [
+        "Capture app data"
+      ],
+      "vector": [
+        "Web application - download",
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "b1c2bd90-84b9-11ee-898d-0f9c5bf59690",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-11-17T00:52:38.121Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "unknown hacking technique to deploy skimmer malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Capture payment card and make some jerk some money"
+      }
+    ],
+    "github": "19357",
+    "master_id": "488db67e-956e-4a4c-a876-b8d686c8c994",
+    "modified": "2023-11-17T01:08:45.862Z",
+    "timeline": {
+      "notification": {
+        "day": 12,
+        "month": 1,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.itworldcanada.com/article/hackers-compromised-ontario-liquor-board-website-stole-customer-data/521617",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ontario Liquor Control Board. website compromised through magecart type of attack",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 5
+    },
+    "incident": {
+      "day": 5,
+      "month": 1,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "926150",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Ontario Liquor Control Board"
+  }
+}

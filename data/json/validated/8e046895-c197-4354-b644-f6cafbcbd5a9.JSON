@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other network service",
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Customer"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "U - Telephone"
+      },
+      {
+        "amount": 1,
+        "variety": "P - Call center"
+      },
+      {
+        "variety": "P - Customer"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "notes": "Employee lost access to their phone",
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Misrepresentation",
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "edbe9c20-7a6d-11ee-b391-931271d090d0",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-11-04T00:25:05.378Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineered the customer service person to perform a sim swap"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "au",
+        "summary": "After sim swap, employee looses access to phone."
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Leveraged access to get into systems of company and stole data."
+      }
+    ],
+    "github": "19931",
+    "master_id": "5db746db-c1c7-4b39-bec8-99ab60ed9993",
+    "modified": "2023-11-04T04:26:41.825Z"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/kroll-data-breach-exposes-info-of-ftx-blockfi-genesis-creditors/; https://www.scmagazine.com/brief/kroll-suffers-data-breach-after-sim-swapping-attack; https://coinculture.com/au/business/ftx-bankruptcy-claims-agent-kroll-faces-data-breach-sensitive-information-leaked/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Multiple reports on social media warn of a data breach at financial and risk advisory company Kroll that resulted in exposing to an unauthorized third-party the personal data of some credit claimants.  Kroll, who is facilitating claims for insolvent companies FTX, BlockFi, and Genesis Global Holdco, has confirmed that one of its employees was the victim of a SIM-swapping attack.  Hackers stole the Kroll employee's phone number and used it to gain access to some files with personal data of bankruptcy claimants.  FTX and BlockFi posted on X today that a security incident at Kroll involving unauthorized third-party access on its systems exposed \u201climited, non-sensitive customer data of specific claimants.\u201d  tweets.  In a statement today, Kroll says that a threat actor on August 19 targeted a T-Mobile account belonging to a Kroll employee and managed to steal the phone number of a Kroll employee.  \"As a result, it appears the threat actor gained access to certain files containing personal information of bankruptcy claimants in the matters of BlockFi, FTX and Genesis. Immediate actions were taken to secure the three affected accounts\" - Kroll",
+  "targeted": "Targeted",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 6
+    },
+    "incident": {
+      "month": 8,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541614",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Kroll"
+  }
+}

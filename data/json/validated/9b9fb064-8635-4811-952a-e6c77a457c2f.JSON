@@ -1,0 +1,196 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Painful"
+  },
+  "incident_id": "3e8ce780-7a53-11ee-9204-4fdb0b8318b5",
+  "notes": "This URL contains more information: https://www.hipaajournal.com/phi-of-320000-patients-affected-by-onix-group-ransomware-attack/",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "etgifford",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes"
+      }
+    },
+    "created": "2023-11-03T21:14:04.536Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial Access"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "data encrypted"
+      }
+    ],
+    "github": "19804",
+    "master_id": "9b9fb064-8635-4811-952a-e6c77a457c2f",
+    "modified": "2023-11-07T01:37:57.260Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 26,
+        "month": 5,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.jdsupra.com/legalnews/onix-group-llc-announces-data-breach-4296104/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "March 27, 2023 Onix Group (business administration service provider in Kennett Square, Pennsylvania, 50 employees) was the target of a ransomeware attack from March 20 - 27, 2023. The network was taken offline as soon as the incident was discovered. Attackers gained access to 319,500 customer's names, social security numbers, date of birth, scheduling, billing, direct deposit, health plan enrollment, and clinical (PHI) information. ",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 7
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 20,
+      "month": 3,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "5611",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Onix Group, LLC"
+  }
+}

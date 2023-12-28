@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 53000000,
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 53000000
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    },
+    "unknown": true
+  },
+  "incident_id": "edbe9c20-7a6d-11ee-b391-931271d090d0",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-11-04T00:25:05.378Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Actor hacked into hot wallets"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Actor stole cryptocurrency from wallets"
+      }
+    ],
+    "github": "19953",
+    "master_id": "5db746db-c1c7-4b39-bec8-99ab60ed9993",
+    "modified": "2023-11-04T01:11:44.864Z"
+  },
+  "reference": "https://announcement.coinex.com/hc/en-us/articles/19187420867348-Latest-Progress-of-the-Hacking-Attack-on-Sep-12-2023-Updated-on-Sep-14-; https://www.securityweek.com/north-korean-hackers-steal-53-million-in-cryptocurrency-from-coinex/; https://timesofindia.indiatimes.com/business/international-business/coinex-invites-hackers-to-negotiate-after-suffering-data-breach/articleshow/103748858.cms",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "North Korean hackers are suspected of stealing roughly $53 million worth of cryptocurrency from crypto exchange CoinEx, after a private key was leaked.  The incident was identified on September 12, when the exchange observed \u201canomalous withdrawals from several hot wallet addresses\u201d in which CoinEx was temporarily storing user assets.  \u201cIt is currently preliminarily determined that the cause of the incident was the leakage of the hot wallet private key,\u201d the company explains in an incident notification. While CoinEx did not share details on the stolen amounts, organizations tracking the involved crypto addresses have determined that roughly $53 million in Bitcoin, Ethereum, Smart Chain Coin, TRON, and other cryptocurrency was stolen in the heist.",
+  "targeted": "Targeted",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 12,
+      "month": 9,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "HK"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523160",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "CoinEx"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Scan network"
+      ],
+      "vector": [
+        "VPN"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Akira"
+      ],
+      "notes": "Akira",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 767000,
+      "data_victim": [
+        "Employee",
+        "Victim organization",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "e0f2dfa0-7e79-11ee-a021-bbe4713468e2",
+  "plus": {
+    "analysis_status": "Finalized",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2023-11-09T02:00:42.522Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used stolen credentials against the vpn"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "scanned environment"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stole data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Installed ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts stuff"
+      }
+    ],
+    "github": "20011",
+    "master_id": "7553bf0d-3737-4d02-9ead-9a52097040ce",
+    "modified": "2023-11-09T02:18:58.712Z",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 10,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/us-energy-firm-shares-how-akira-ransomware-hacked-its-systems/#google_vignette",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Akira ransomware targeted BHI energy firm using stolen vpn credentials from a contractor",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 8
+    },
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "exfiltration": {
+      "unit": "Days",
+      "value": 5
+    },
+    "incident": {
+      "day": 30,
+      "month": 5,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Lost or stolen credentials"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "33531",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "BHI Energy"
+  }
+}

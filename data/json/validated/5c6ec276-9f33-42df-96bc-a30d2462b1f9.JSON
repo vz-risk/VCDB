@@ -1,0 +1,167 @@
+{
+  "action": {
+    "error": {
+      "notes": "Bad configuration on the external storage",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    },
+    "hacking": {
+      "notes": "Accessed the S3 bucket that was open",
+      "variety": [
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 11270000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 11270000,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "67dd0700-79a4-11ee-bc37-a72cd56f0af8",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "apinto & kgerber",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes"
+      }
+    },
+    "created": "2023-11-03T00:22:31.920Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfig on the external storage device"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Someone found and republished the data"
+      }
+    ],
+    "github": "19904",
+    "master_id": "5c6ec276-9f33-42df-96bc-a30d2462b1f9",
+    "modified": "2023-11-03T04:54:19.576Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 7,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.healthcarefinancenews.com/news/hca-sends-notice-patients-informing-them-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "HCA Healthcare had 11.27 million personal data entries \"stolen\" from an external storage area for an e-mail generating app or process they had. They mention that they confirmed that an external party gpt access to it and republished, however this reads like a textbook Error case. SW is a wonderful person and let me get away with coding only one.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Seconds"
+    },
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "month": 6,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622",
+    "region": [
+      "019021"
+    ],
+    "state": "TN",
+    "victim_id": "HCA Healthcare"
+  }
+}

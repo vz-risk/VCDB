@@ -1,0 +1,169 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "5a6b4830-7efd-11ee-a021-bbe4713468e2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2023-11-09T17:41:50.387Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "phishing email"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "user discloses credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "attacker uses creds vs email system"
+      }
+    ],
+    "github": "19775",
+    "master_id": "d624a1ba-68f3-40bb-8fad-46c1299881e5",
+    "modified": "2023-11-09T17:49:58.000Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.databreaches.net/phishing-attack-affects-texas-patients-at-least-130000-impacted/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Phishing attack against South Texas Health System  affects Texas patients ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "development": {
+      "variety": [
+        "Email",
+        "Website"
+      ]
+    },
+    "targeting": {
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "South Texas Health System "
+  }
+}

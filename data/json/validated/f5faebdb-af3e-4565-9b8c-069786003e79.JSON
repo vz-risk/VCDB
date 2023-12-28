@@ -1,0 +1,140 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3253822,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3253822,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "loss": [
+      {
+        "amount": 3300000,
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_amount": 3300000,
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "30dbfdd0-736c-11ee-8da1-4f2f8c80e63f",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-10-26T02:25:00.845Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Server hacked, patient records stolen"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data destroyed"
+      }
+    ],
+    "github": "19499",
+    "master_id": "308cb98b-ccac-482a-85d7-914bffd71071",
+    "modified": "2023-10-27T01:25:02.941Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/3-million-settlement-proposed-to-resolve-20-20-eye-care-network-data-breach-lawsuit/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A security breach was detected in January 2021, when suspicious activity was identified in its AWS cloud storage environment. The forensic investigation confirmed that AWS S3 storage buckets were accessed by the attackers, the contents of those buckets were downloaded, then the data in the buckets were deleted. The environment contained the protected health information of health plan members, including names, Social Security numbers, dates of birth, member ID numbers, and health insurance information.  The nature of the attack meant it was not possible to determine which individuals had been affected and the extent to which data were stolen, so notification letters were sent to the 3,253,822 individuals potentially affected by the breach. Notifications were sent to affected individuals in May 2021 and complimentary credit monitoring and identity theft protection services were offered. The breach was attributed to insider wrongdoing, which left plan members\u2019 data exposed over the Internet.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 2,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "iCare Acquisitions"
+  }
+}

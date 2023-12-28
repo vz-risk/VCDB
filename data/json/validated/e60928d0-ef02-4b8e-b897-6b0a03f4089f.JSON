@@ -1,0 +1,106 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Doctor or nurse"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "d2d4f030-7509-11ee-8da1-4f2f8c80e63f",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-10-28T03:45:54.740Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal actor shares data inappropriately."
+      }
+    ],
+    "github": "19636",
+    "master_id": "60bcf409-4755-4730-9344-02481eb5f745",
+    "modified": "2023-10-28T04:41:25.914Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.ksn.com/news/health/wichita-health-care-practice-had-hipaa-information-breach/; https://www.msn.com/en-us/health/other/wichita-health-care-practice-had-hipaa-information-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "New Medical Health Care and Restoration Health, also known as New Medical, announced Thursday it had discovered that some patients were affected by a HIPAA breach of information. A news release says New Medical recently discovered a person who was employed by New Medical in Oct. 2022 provided a patient list to someone who was not employed with the practice and did not have the authorization to receive the list.  New Medical says the person who received the list was assisting a physician who was departing the practice. They believe the person received the list around Oct. 27, 2022. and provided it to the physician who left the practice.New Medical says they only recently discovered the list was shared and likely used to contact the patients and set appointments at the new practice of the departed physician. They say they do not believe it was used for identity or medical ID theft.  The information stolen consisted of names, phone numbers, addresses, emails, birthdays, and other demographic information.\u201cIt may have also included the name and/or address of a patient\u2019s employer, patient\u2019s emergency contact information, name and address of the patient\u2019s guarantor, preferred pharmacy, and information about insurance including subscriber number and group number. The documents did not include any medical or diagnosis information, and no financial information, credit card/debit card numbers, bank account numbers or social security numbers were included,\u201d A news release said.  If your personal information has been compromised, New Medical says they will notify you to provide additional information.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 3,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621511",
+    "region": [
+      "019021"
+    ],
+    "state": "KS",
+    "victim_id": "New Medical Health Care and Restoration Health"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "name": "Play",
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Play"
+      ],
+      "notes": "Play",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "30f611f0-8df9-11ee-8e0f-01920077cf74",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2023-11-28T19:19:50.287Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "unknown initial access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data gone"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts things"
+      }
+    ],
+    "github": "19485",
+    "master_id": "f196a73d-58d5-4a2d-b06d-3fb004aaa911",
+    "modified": "2023-11-28T19:29:35.489Z",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 2,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/a10-networks-confirms-data-breach-after-play-ransomware-attack/#google_vignette",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The California-based networking hardware manufacturer \u2018A10 Networks\u2019 has confirmed to BleepingComputer that the Play ransomware gang briefly gained access to its IT infrastructure and compromised data.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 1,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "423430",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "A10 Networks"
+  }
+}

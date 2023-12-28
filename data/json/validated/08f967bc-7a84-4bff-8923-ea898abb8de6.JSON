@@ -1,0 +1,145 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 275000,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 275000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "864f3510-83f8-11ee-898d-0f9c5bf59690",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2023-11-16T01:49:52.354Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp",
+        "summary": "unknown means of compromising credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used stolen credentails to access inbox"
+      }
+    ],
+    "github": "19450",
+    "master_id": "08f967bc-7a84-4bff-8923-ea898abb8de6",
+    "modified": "2023-11-16T01:58:49.359Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 2,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/highmark-health-phishing-attack-affects-300000-patients/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Highmark Health notified 300,000 individuals of a phishing attack that potentially compromised protected health information",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 13,
+      "month": 12,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524114",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Highmark Health"
+  }
+}

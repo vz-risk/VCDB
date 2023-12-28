@@ -1,0 +1,106 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "30dbfdd0-736c-11ee-8da1-4f2f8c80e63f",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "created": "2023-10-26T02:25:00.845Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exposed due to misconfiguration"
+      }
+    ],
+    "github": "19409",
+    "master_id": "308cb98b-ccac-482a-85d7-914bffd71071",
+    "modified": "2023-10-27T02:11:21.620Z"
+  },
+  "reference": "https://www.thehindu.com/sci-tech/technology/android-role-playing-game-guidus-leaks-data-of-100000-users-report/article66439053.ece",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A popular Android mobile role-playing game (RPG), Guidus, leaked data of some 100,000 users, according to a report by Cybernews. The data leak happened through unsecured access to Firebase, Google\u2019s mobile application development platform which provides cloud-based database services. The leak includes user game progress, which could lead to attackers deleting the data causing users to lose their progress without the ability to recover it.Developers of the app had also left keys hardcoded into the user side which could allow cybercriminals to access sensitive data which could be used to target victims, the report shared.  Researchers also found that the app hardcoded data on the client side of the app making it vulnerable to further data leaks. The amount of data in the app\u2019s firebase instance, however, was found to be so big that due to Google\u2019s data transferring policies threat, actors could not acquire all the data.  Guidus currently has more than 100,000 downloads on the Google App store with a 4.2-star rating based on over 16,000 reviews.  Researchers at Cybernews also analysed over 33,000 Android apps and discovered that over 14,000 apps had Firebase URLs on their end with over 600 with links to open Firebase instances which could lead to cybercriminals gaining access to sensitive information by examining the public information of an app.  ALSO READ  Explained | What are password managers, and can they be hacked?",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Guidus"
+  }
+}
