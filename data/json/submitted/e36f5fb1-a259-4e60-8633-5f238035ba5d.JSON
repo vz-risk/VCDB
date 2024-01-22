@@ -1,0 +1,204 @@
+{
+    "plus": {
+        "modified": "2024-01-23T01:53:43.866Z",
+        "created": "2023-12-21T06:13:17.510Z",
+        "master_id": "e36f5fb1-a259-4e60-8633-5f238035ba5d",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "System access - intial installation"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Malware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Data copied"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Data encrypted"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 1,
+                "month": 3,
+                "year": 2023
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Erika Trigg Gifford",
+        "dbir_year": 2024,
+        "github": "19556"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 2,
+            "day": 6
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 12
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Minneapolis Public Schools",
+        "employee_count": "1001 to 10000",
+        "industry": "923110",
+        "state": "MN"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload",
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Medusa"
+            ],
+            "notes": "ransomware group Medusa "
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            },
+            {
+                "variety": "S - File"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 105617
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Bank"
+                },
+                {
+                    "variety": "Internal"
+                },
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Sensitive Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Student"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 105617
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "impact": {
+        "loss": [
+            {
+                "variety": "Business disruption",
+                "rating": "Major",
+                "amount": 105617
+            }
+        ],
+        "overall_rating": "Damaging",
+        "notes": "students and teachers were locked out of IT assets"
+    },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "https://therecord.media/minneapolis-public-schools-still-investigating-what-caused-encryption-event; https://www.kare11.com/article/news/local/minneapolis-public-schools-confirms-hackers-released-personal-data/89-8e682442-2da4-434f-8e03-19f5d08009fe; https://apps.web.maine.gov/online/aeviewer/ME/40/839d2bfc-d5bd-45ce-8ab0-69902280a2ad.shtml; https://apps.web.maine.gov/online/aeviewer/ME/40/839d2bfc-d5bd-45ce-8ab0-69902280a2ad/4ff042a2-bb81-4902-a58c-1eb3e452ea59/document.html",
+    "summary": "Minneapolis Public Schools (MPS), HQ: Minneapolis, MN, EMP: 5506, NAICS: 923110 (public education) announced Mar 01, 2023 it had experienced an “encryption event” on Feb 18, 2023. Immediate steps were taken to secure the MPS environment. Investigation showed the actor had access between Feb 06 - 18, 2023. A $1 million ransom has been placed on the personal data of 105,617 people recently stolen from Minneapolis Public Schools by the ransomware group Medusa on their dark web website. The deadline for responding was March 17, 2023. Leaked data (going as far back as 1995): payroll, health information, union grievances, civil rights investigations, personal phone numbers, home addresses, and personal email addresses of staff, students, and parents, teacher employment information and salaries, grant information, contracts, names of student sexual assault victims, school bank account deposit records, student IDs including photos. MPS restored systems and did not pay the ransom. MPS started notifying impacted individuals Apr 07, 2023. Investigation was completed Jul 24, 2023. Impacted individuals are offered 24 months of credit monitoring through Experian.",
+    "confidence": "High",
+    "notes": "Ransomware attack by Medusa ransomware group",
+    "incident_id": "5bd70f50-9f8d-11ee-8e63-1509e2d0c1ae",
+    "targeted": "Unknown",
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7",
+    "discovery_notes": "Medusa put up a video announcing the hack on their dark web website"
+}
