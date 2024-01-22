@@ -1,0 +1,168 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "794a1420-78d1-11ee-883f-1da00fe89b12",
+    "security_incident": "Confirmed",
+    "reference": "https://www.scmagazine.com/brief/lockbit-warns-leak-of-cdw-data ; https://www.itworldcanada.com/article/ransomware-gang-threatens-to-release-stolen-cdw-corp-data/548620",
+    "summary": "The LockBit ransomware gang is threatening to release data on Wedneday stolen from CDW Corp., a major IT reseller and services provider in the U.S., Canada and the U.K..  The Register says it was told by a gang member that Lockbit made the decision because negotiations over the ransom fee broke down.  “As soon as the timer [on the Lockbit data leak site] runs out, you will be able to see all the information, the negotiations are over and are no longer in progress. We have refused the ridiculous amount offered,” The Register quotes the gang member saying.  LockBit listed CDW Corp. as one of its victims early last month.  UPDATE: The LockBit gang’s data leak site says it demanded US$80 million, and CDW offered US$1.1 million.  It isn’t known how much data was stolen, or whether it includes personal information of employees and customers as well as corporate information.  IT World Canada has asked CDW Corp. for comment.  The issue of whether to pay a ransomware gang is complex for an organization. While many governments and law enforcement agencies around the world urge organizations not to pay, they also say it is a matter up to management — although in some countries it could be illegal. An organization’s decision will depend upon the sensitivity of the data stolen.  Another factor, however, is what the organization will get for shelling out. Paying is supposed to get the victim firm decryption keys to unscramble encrypted data. Sometimes those keys don’t work. Payment should also come with a promise from the gang to delete copies of the stolen data it holds. Whether that promise will be kept is a question.  According to a study by Cybereason, 80 per cent of organizations who paid a ransom demand were hit by ransomware a second time, with 68 per cent of respondents saying the second attack came less than a month later and threat actors demanded a higher ransom amount.  Experts repeatedly say organizations unprepared for a ransomware attack are the ones that are squeezed the most to pay.  Headquartered in Illinois, CDW generated net sales of US$22 billion in its last fiscal year. The company was incorporated in 1984, and soon after became Computer Discount Warehouse. By 1997 it had generated sales of over US$1 billion. In 2003, after buying the assets of Micro Warehouse, that firm’s Canadian business became CDW Canada. It entered the U.K. in 2014 after buying 35 per cent a leading British technology services and solutions company, completely taking it over a year later.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "45c075c6-a4ae-4062-a964-08d670bdf010",
+        "modified": "2023-11-01T21:28:29.129Z",
+        "created": "2023-11-01T21:12:37.346Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "unknown first action to gain access to network"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "installed ransomware "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "took copy of data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "executed ransomware"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2023,
+                "month": 10,
+                "day": 11
+            }
+        },
+        "analyst": "Hylender",
+        "dbir_year": 2024,
+        "github": "19990"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 9,
+            "day": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "GB"
+        ],
+        "region": [
+            "150155"
+        ],
+        "victim_id": " CDW Corp.",
+        "employee_count": "10001 to 25000",
+        "industry": "541519"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ],
+            "notes": "installed ransomware after taking a copy of data"
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown initial action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Lockbit"
+            ],
+            "notes": "LockBit"
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Internal"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Victim organization"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "value_chain": {
+        "development": {
+            "variety": [
+                "Ransomware"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Damaging"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

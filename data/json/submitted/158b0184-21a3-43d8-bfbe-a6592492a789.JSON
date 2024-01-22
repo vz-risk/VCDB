@@ -1,0 +1,143 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "a5a53a70-7806-11ee-a9cf-35532141bb65",
+    "security_incident": "Confirmed",
+    "reference": "https://blockclubchicago.org/2023/10/10/community-first-medical-center-in-portage-park-suffers-large-scale-data-breach/  ; https://www.cfmedicalcenter.com/data-security-incident/ ; https://www.hipaajournal.com/community-first-medical-center-data-breach/ ",
+    "summary": "PORTAGE PARK — A Northwest Side hospital is offering free credit monitoring to thousands of patients whose personal information was accessed in a “data security incident.”  Community First Medical Center, 5645 W. Addison St., suffered a massive data breach July 12 and notified patients in a letter sent out Sept. 26. A notice of the breach was also posted to the hospital’s website.  The security incident included unauthorized access to full names, telephone numbers, email addresses, Social Security numbers, medical record numbers and Medicare numbers by a third party, the hospital said in its notice. The breach affected 216,047 patients, according to the HIPAA Journal.  “CFMC has no evidence that any personal information has been or will be misused as a direct result of this incident,” hospital officials wrote. “CFMC is committed to maintaining the privacy of personal information in its possession and has taken many precautions to safeguard it. CFMC continually evaluates and modifies its practices to enhance the security and privacy of the personal information it maintains.”  Hospital officials said people whose Social Security numbers were accessed are eligible for free credit monitoring.  Community First officials also recommended anyone affected by the breach place a security freeze and fraud alert on their credit report, according to the five-page letter sent to patients. The Federal Trade Commission offers more recommendations and steps for reporting identity theft on its website.  The hospital was not required to notify the Illinois Department of Public Health about the breach, but was required by federal law to notify the public, a hospital spokesperson said.  To determine if your data was part of the breach and see if you are eligible for free credit monitoring, call the hospital’s toll-free number at (844) 725-0399.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "158b0184-21a3-43d8-bfbe-a6592492a789",
+        "modified": "2023-10-31T21:10:48.304Z",
+        "created": "2023-10-31T21:00:43.927Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "unknown first action to gain access to network"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "located and exfiltrated data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2023,
+                "month": 9,
+                "day": 28
+            }
+        },
+        "analysis_status": "First pass",
+        "analyst": "Hylender",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "Yes"
+            }
+        },
+        "github": "19986"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 7,
+            "day": 12
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Community First Medical Center",
+        "employee_count": "101 to 1000",
+        "industry": "622100",
+        "state": "IL"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown first action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 216000
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}

@@ -1,0 +1,102 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "1a823110-780a-11ee-a9cf-35532141bb65",
+    "security_incident": "Confirmed",
+    "summary": "Update: An early analysis of a suspected breach of D.C. Board of Elections data has determined that hackers accessed voter records from 2019 through early 2022.  According to a statement from the DCBOE on Monday night, the analysis found the breach impacted less than 4,000 voter records. The information comes from voters who participated in DCBOE’s canvas process from August 9, 2019 to Jan. 25, 2022, a count that’s conducted every odd-numbered year to ensure the board’s voter roll is updated.  DCBOE did not provide exactly what voter information was compromised, as the review of the hack is still ongoing. Once complete, the board will reach out to impacted individuals.  The board’s website is still down, but people can register to vote online or submit a form in-person at a DCBOE office.  Original: A hacking group claims to have breached D.C.’s Board of Elections records, accessing 600,000 lines of U.S. voter data, according to the DCBOE.  The board became aware on Thursday, Oct. 6 that a hacking group known as RansomVC had claimed responsibility for a data breach, DCBOE said in a statement released late Friday afternoon. The voter records were accessed through DataNet, a web server used by DCBOE. No internal databases were directly compromised, according to the board.  Multiple federal and local law enforcement agencies are investigating the hack, including the FBI, Homeland Security, and D.C.’s Office of the Chief Technology Officer, according to the agency.  The board shut down its website upon learning of the breach and is conducting vulnerability scans of its networks. A spokesperson did not immediately return DCist/WAMU’s request for updated information on Monday morning; it’s unclear when the website will be back up and running normally.  While some voter information is public record — like names, addresses, and party affiliation — other data is not, including things like contact information, social security numbers, or birth dates.  RansomVC does not appear to have targeted D.C. agencies before. According to a Washington Post report, the group posted the data for sale on its dark web site, with a statement claiming to have accessed 600,000 lines of voter information. The Post also found the data for sale on a dark web hacking forum, with one post including the address and personal information of three apparent D.C. voters.  A spokesperson for DCBOE couldn’t confirm the authenticity of the posts.  The breach follows several other hacks of city agencies over the years. Most recently, DC Health Link, the city’s online exchange that allows customers and businesses to shop for private health insurance, suffered a data breach that impacted more than 50,000 customers. In 2022, a ransomware group claimed responsibility for a data breach at Events DC, the city’s quasi-public conventions and sports agency, and claimed to have published employee information on the dark web. And in 2021, a hacking group called Babuk stole and posted files from the Metropolitan Police Department after first demanding a $4 million ransom payment from the city.The District of Columbia Board of Elections (DCBOE) says that a threat actor who breached a web server operated by the DataNet Systems hosting provider in early October may have obtained access to the personal information of all registered voters.  The entire voter roll that may have been exposed contains a wide range of personally identifiable information (PII), including driver's license numbers, dates of birth, partial social security numbers, and contact information such as phone numbers and email addresses.  \"Today, DCBOE learned the full voter roll MAY have been accessed in the breach of DataNet Systems' database server,\" the agency tweeted.",
+    "reference": "https://dcist.com/story/23/10/09/dc-board-of-elections-voter-information-data-hack/",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "6ee7c8dd-f862-423f-ac20-dd49ac609b3f",
+        "modified": "2023-10-31T22:25:56.592Z",
+        "created": "2023-10-31T21:25:28.481Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "stole voter data"
+            }
+        ],
+        "analysis_status": "First pass",
+        "analyst": "Hylender",
+        "dbir_year": 2024
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 10,
+            "day": 9
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "District of Columbia Voter Board",
+        "industry": "921190",
+        "state": "DC",
+        "employee_count": "Unknown"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.6"
+}
