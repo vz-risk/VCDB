@@ -1,0 +1,140 @@
+{
+  "action": {
+    "error": {
+      "notes": "IT company improperly configured database",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "partner": {
+      "country": [
+        "IE"
+      ],
+      "industry": "541511",
+      "motive": [
+        "NA"
+      ],
+      "region": [
+        "150154",
+        "150155"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "ownership": [
+      "Victim"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 500000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 500000,
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "6ae05590-772b-11ee-a9cf-35532141bb65",
+  "notes": "github 20019",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2023-10-30T18:51:25.545Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "misconfigured db was viewed by security researcher"
+      }
+    ],
+    "master_id": "fbd32390-e5e1-4a9a-af90-634209504d31",
+    "modified": "2023-10-30T19:26:24.946Z",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 10,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.independent.ie/irish-news/thousands-of-drivers-have-sensitive-data-exposed-to-hackers-in-major-it-breach/a1379036136.html ; https://www.siliconrepublic.com/enterprise/garda-car-seizure-database-exposed-breach ; https://www.thesun.ie/news/11531205/urgent-warning-thousands-drivers-confidential-data-breach/ ; https://www.hackread.com/contractor-data-breach-irish-national-police-vehicle-seizure/",
+  "schema_name": "dbir",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A database containing over half a million records (500,000) hosting sensitive information associated with vehicle seizures by the Irish National Police, Garda S\u00edoch\u00e1na was leaked online.  Cybersecurity researcher Jeremiah Fowler made the discovery and promptly alerted the authorities after finding the unsecured database, highlighting the potential risks to the affected individuals.  The breach involved a non-password-protected database, totalling 521,043 records, which included notices of automobile seizure, destruction notices, release documents, scanned identification documents, insurance investigation inquiries, certificates of vehicle registration, and other pertinent documentation relevant to the detention of vehicles.  Furthermore, the database contained spreadsheets and monthly reports containing extensive vehicle and registration information, names of vehicle owners, contractor details, and other potentially sensitive data, amounting to a substantial 271.8 gigabytes in size.  Under Irish law, when a vehicle is seized, the registered owner must present several documents, including identification, insurance documents, and receipts for taxes and recovery/storage charges.  Given that the database contained an average of 2 to 5 documents for each individual case, it is estimated that approximately 150,000 vehicle owners could be affected by this breach. Fowler\u2019s findings align with the estimation that around 30,000 vehicles are detained each year, as reported in a 2020 article by the Irish Examiner. Notably, the records retrieved from the exposed database span multiple years, dating back to 2017.  According to Fowler\u2019s blog post, at first, it was unclear who owned the database due to the numerous towing and storage companies mentioned in the documents. However, all documents referenced the Garda S\u00edoch\u00e1na. Fowler promptly sent a responsible disclosure notice directly to the Garda, which resulted in the database being secured later that day.  Further investigation revealed that the database was owned by a private technology contractor based in Limerick, Ireland, rather than the Garda S\u00edoch\u00e1na. The contractor quickly responded to the breach, cooperating with Fowler to confirm the security of the records and assess whether any unauthorized parties had accessed them.  While the exposed records are officially related to the Garda\u2019s seizure and storage of vehicles, it\u2019s essential to clarify that the Garda S\u00edoch\u00e1na was not directly responsible for the misconfiguration of the cloud storage repository that led to the data breach.",
+  "targeted": "NA",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 23,
+      "month": 10,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "IE"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "150154",
+      "150155"
+    ],
+    "victim_id": "Unknown IT company"
+  }
+}

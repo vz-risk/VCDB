@@ -1,0 +1,135 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Tanaka",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "Actor put info on web for sale.",
+  "incident_id": "460a10b0-7822-11ee-a9cf-35532141bb65",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "created": "2023-11-01T00:18:29.435Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "unknown first action"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "exfiltrated data"
+      }
+    ],
+    "github": "19934",
+    "master_id": "7911880e-230f-4de4-a32f-9bebefdd5e4e",
+    "modified": "2023-11-01T00:47:54.150Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.infosecurity-magazine.com/news/ayush-jharkhand-hacked/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The threat actor known as Tanaka recently has been observed sharing a post titled \u201cbitsphere.in\u201d on an English-speaking hacking forum, shedding light on a significant data leak.   According to a new blog post by CloudSEK, the impacted entity is the official state website for the Ministry of Ayush in Jharkhand, India, which provides vital information about Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy medications.  The leaked database, totaling 7.3 MB in size, reportedly contains over 320,000 patient records, including personally identifiable information (PII) and medical diagnoses. The breach also exposed login information, usernames, passwords and phone numbers of doctors associated with the website.  Upon investigation, it became evident that the compromised data originated from the servers of ayush.jharkhand.gov.in, which were developed by bitsphere.in.   In their technical article, CloudSEK explained this attribution was established by cross-referencing chatbot and blog post data shared by the threat actor with publicly available information on the website.  CloudSEK wrote: \u201c[The] chatbot on the Ayush jharkhand\u2019s website reverts the same data as mentioned in the \u2018chatbot_ayush_reply\u2019 table in the leaked database.\u201d  The firm added that the potential impact of this breach is substantial, as the leaked data could be exploited for account takeovers, brute force attacks and sophisticated phishing campaigns.  Read more on phishing: Social Media Phishing \u2013 The 2023 Cybersecurity Threat  To mitigate these risks, it is imperative for potentially affected individuals to implement robust security measures, including a strong password policy, multi-factor authentication (MFA), endpoint patching and secure handling of secrets.  Furthermore, organizations are advised not to store unencrypted secrets in public repositories and refrain from sharing sensitive information unencrypted on messaging platforms. Continuous monitoring for unusual account activities and regular scans for exposed credentials are crucial steps in maintaining data security.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "923120",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Ministry of Ayush"
+  }
+}

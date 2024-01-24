@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "article says that criminal group in question explots weak passwords. That is why I selected this variety.",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "notes": "again, taken from the article regarding groups tactics",
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Capture stored data",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Karakurt"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 411400,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "92398b20-77fd-11ee-a9cf-35532141bb65",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1,
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-10-31T19:55:45.874Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "used stolen, default, or easily guessable credentials"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "capture data malware installed"
+      }
+    ],
+    "github": "20004",
+    "master_id": "e13f3fbd-bc7e-47a0-8d04-535c12ff040c",
+    "modified": "2023-10-31T20:13:46.219Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 28,
+        "month": 7,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.bankinfosecurity.com/victim-count-doubles-in-heart-institute-data-theft-hack-a-23325",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The number of people affected by a Tennessee cardiac care clinic hack has more than doubled to 411,000 since the healthcare group first reported the incident to regulators in July. Cybercriminal group Karakurt claimed responsibility for the attack, which has so far triggered five class action suits.  See Also: Navigating SEC Compliance: A Comprehensive Approach to Cybersecurity Resilience  The Chattanooga Heart Institute told the Maine attorney general in a supplemental data breach report filed on Oct. 6 that the total number of affected individuals in a cyberattack on its IT network discovered in April 17 had risen to nearly 411,400 people - including 47 Maine residents.  The Chattanooga, Tennessee-based group in July reported to the U.S. Department of Health and Human Services and the Maine state regulator that the incident had affected 170,450 individuals, including five Maine residents (see: Tennessee Heart Clinic Tells 170,000 of Hacking, Data Breach).  The Chattanooga Heart Institute includes three vascular surgeons and 27 cardiologists at four locations in Tennessee and one in Georgia. In its breach notice, the cardiac practice said its ongoing investigation into the incident had determined that an \"unauthorized third party\" gained access to its network between March 8 and March 16 and obtained copies of some of the data from its systems containing confidential patient information.  The firm said hackers did not retrieve data directly from the group's electronic medical record system. Potentially compromised information includes name, mailing address, email address, phone number, birthdate, driver's license number, Social Security number, account information, health insurance information, diagnosis and condition information, lab results, medications and other clinical, demographic or financial information.  The cardiac care clinic so far faces five proposed federal class action lawsuits involving the incident. The lawsuits allege, among other claims, that the clinic was negligent in its failure to protect plaintiffs' and class members' sensitive information.  \"Since defendant's discovery of the attack, Karakurt, a financially motivated cybercrime group that steals data before demanding payment from victims by threatening its publication, has publicly claimed responsibility for it,\" alleges the lawsuit filed by plaintiff Stephen Cahill on Aug. 15 in a Tennessee federal court.  \"This criminal group relies exclusively on data theft to extort victims but does not deploy ransomware to encrypt files and systems. Instead, the group exploits vulnerabilities or weak credentials of the computer network. Once inside the network, it uses off-the-shelf tools and applications, often native to the victim system, to meet its objectives,\" the lawsuit complaint alleges.  \"Plaintiff and class members have been damaged by the compromise and exfiltration of their private information in the data breach, and by the severe disruption to their lives as a direct and foreseeable consequence of this data breach,\" the complaint alleges. As a result of the data breach, plaintiffs and class members face a heightened and imminent risk of fraud and identity theft, among other crimes, the lawsuit alleges.  The HHS' Health Sector Cybersecurity Coordination Center issued an alert in August 2022, warning that the \"relatively new cybercrime group\" had carried out attacks globally, including against several U.S.-based healthcare and public health sector entities.  Cahill's lawsuit, as well as the other proposed class actions, seeks damages and a court order for The Chattanooga Heart Institute to improve its data security practices.  An attorney representing The Chattanooga Heart Institute did not immediately respond to Information Security Media Group's request for comment and for additional details about the incident, including why the number of affected individuals has climbed so steeply since July.  Regulatory attorney Paul Hales of the Hales Law Group, which is not involved in The Chattanooga Heart Institute case, said several factors are likely contributing to why the number of individuals affected by the breach has climbed so dramatically as the investigation into the incident continues.  \"Protected health information received by The Chattanooga Heart Institute resides in a vast information network including Chattanooga's business associates and the Organized Health Care Arrangement in which Chattanooga participates,\" he said. \"The ongoing investigation may be discovering disclosures of PHI from multiple locations compromised by the cyberattack. Malicious software is designed to migrate stealthily through information systems.\"  Notification of all major HIPAA breaches must be made within 60 days of discovery, including subsequent breaches discovered during an ongoing investigation, he said. Sometimes additional critical information about a data breach is uncovered as the investigation continues, after initial breach notification and reporting have been done.  \"Expert forensic analysis, including examination of the systemwide procedural safeguards is necessary to highlight vulnerabilities in Chattanooga's extended health information system that caused the breach,\" he said.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 8,
+      "month": 3,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "TN",
+    "victim_id": "The Chattanooga Heart Institute"
+  }
+}

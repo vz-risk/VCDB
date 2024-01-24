@@ -1,0 +1,179 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown first action",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Akira Ransomware Group",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Copyrighted"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "109b5700-78df-11ee-883f-1da00fe89b12",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Unknown"
+      }
+    },
+    "created": "2023-11-01T22:49:54.673Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "unknown first action to gain access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "stole data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "triggered encryption"
+      }
+    ],
+    "github": "19951",
+    "master_id": "ad89d68d-a2f0-465d-9bf9-f97d5a0f909e",
+    "modified": "2023-11-02T21:17:47.007Z",
+    "timeline": {
+      "notification": {
+        "day": 15,
+        "month": 9,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3234590/hong-kongs-cyberport-apologises-over-data-theft-and-vows-improve-security-insists-no-human-error",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "American Steel & Aluminum Co., Inc. has allegedly fallen victim to the Akira ransomware group.   This malicious group, known for its relentless attacks on various sectors, has claimed access to a staggering 70GB of American Steel & Aluminum\u2019s data, including sensitive project information, financial documents, and employee details.   If it\u2019s true, the American Steel & Aluminum data breach will put a lot of pressure on the company as the stolen data can be used to target victims in the government and non-government sectors.  However, the threat actor have not listed the exact names of the files, folders, and documents.  The Cyber Express has also reached out to the company to learn more about this alleged American Steel & Aluminum data breach. We will update this report once we receive an official statement or response from the company.  Regrettably, this incident involving American Steel & Aluminum is not an isolated case within the industry.  Another major player in the sector, Reliance Steel & Aluminum & Co., recently experienced a similar breach.  Suspecting unauthorized activity within their information network, Reliance Steel & Aluminum & Co. initiated an investigation that confirmed an unauthorized actor had accessed specific network systems.  American Steel & Aluminum Data Breach and Recent Cyber Attacks During this unauthorized access period, private data from Reliance Steel & Aluminum & Co. systems was compromised, affecting many individuals.  The extent to which this private information has been exploited for criminal purposes remains unknown. It is worth noting that the full impact of such data breaches often unfolds over months or even years.  Reliance Steel & Aluminum & Co. has begun notifying affected individuals and has also engaged with state authorities to ensure public protection against potential misuse of the stolen data.  Notorious for its activities, the Akira ransomware group has emerged as a significant threat actor targeting the steel and aluminum industry and the broader health sector worldwide.  Federal authorities have warned the health sector about the imminent threats posed by Akira, a ransomware-as-a-service group that surfaced approximately six months ago.  Akira\u2019s modus operandi involves double-extortion attacks, encompassing data theft followed by ransomware encryption.  The threat actor has been observed employing phishing emails, malicious websites, drive-by download attacks, and Trojans to infiltrate its targets.  Notably, researchers have detected similarities between Akira and the disbanded Conti ransomware group, such as code overlap, the use of ChaCha 2008 encryption, and key generation methods resembling those used by Conti.  Moreover, Akira shares commonalities with Conti regarding directory exclusions during encryption and cryptocurrency wallets used for transactions.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Payload"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "423510",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "American Steel and Aluminum"
+  }
+}

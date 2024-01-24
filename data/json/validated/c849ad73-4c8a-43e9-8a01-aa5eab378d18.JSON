@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 250000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 250000000,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "put info on forum for sale.",
+  "incident_id": "ae25a5a0-7800-11ee-a9cf-35532141bb65",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-10-31T20:18:01.211Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "exploited vuln in API and exfiltrated data"
+      }
+    ],
+    "github": "19989",
+    "master_id": "c849ad73-4c8a-43e9-8a01-aa5eab378d18",
+    "modified": "2023-10-31T20:33:14.855Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.makeuseof.com/hit-by-duoling-data-breach-what-to-do-next/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The public learned of the issue in January 2023, when data from 2.6 million customer accounts was put up for sale on a hacking forum for $1,500.  The forum is now closed. However, security researchers from VX-Underground found the data being sold on a new version of the forum for eight site credits, which translates to about $2.13.  The hacker claims to have scraped the data from an exposed API and shared a sample from 1,000 accounts. The attacker likely fed email addresses from past breaches into the API to check if they were linked to active Duolingo accounts, creating a dataset with public and non-public data.The explanation from a Duolingo spokesperson is that the data was scraped from public profile information. However, it\u2019s hard to accept this assertion fully since the scraped data included users\u2019 real names, public logins, language-learning progress, and email addresses, which are typically not public.According to a Surfshark research, the Duolingo data breach hit the US hardest, affecting almost 1 million accounts. South Sudan ranked second with 175,000 impacted accounts, followed by Spain (123,000), France (105,000), and the UK (98,000).  Each compromised email account had around five data points leaked, including their name, username, profile picture, language, and country. In some cases, all of a user\u2019s details were exposed.Data brokers often collect scraped social media data and sell it to third parties for various purposes, including marketing. Cybercriminals, however, may use the leaked data of Duolingo users to execute social engineering attacks, like targeted phishing attacks, using the victims\u2019 real names and valid email addresses.Those affected could receive tailored phishing emails\u2014like discounted language courses\u2014thanks to leaked names, Duolingo course progress, and home country details. These emails could also include travel invitations to countries where the language you\u2019re learning is spoken.  The cybercriminals may also impersonate Duolingo and send emails with links to what appears to be the paid version of Duolingo or a premium course. If you click these links and enter your payment details, the attacker can steal your information.  How to Deal With the Duolingo Data Breach Data scrapping from websites and apps is a well-known issue affecting many major tech companies. For instance, in April 2021, data from around 500 million LinkedIn users was scraped.  If you suspect your data was leaked in the breach, there are steps you can take to address it. One of them is checking if your information was compromised by visiting the HaveIBeenPwned website. This claims all the breached Duolingo data was already in its database.  To prevent phishing, carefully inspect emails, especially urgent ones. Verify sender addresses, don\u2019t click on suspicious links and attachments, and consider installing antivirus software for enhanced protection against malware in phishing emails.Beware of impersonation attacks and never share sensitive information like usernames and passwords via email, as Duolingo doesn\u2019t ask for such details in emails. Also, follow vendor advice, change your password, and consider setting up two-factor authentication.  What if you\u2019re unsure about the security measures Duolingo took to protect user data? Or perhaps you have doubts about the effectiveness of your actions? In that case, you can try out other language-learning apps.  Protect Your Data and Strengthen Your Defenses Data breaches have become increasingly common, and the stolen details can serve various purposes, from marketing to cyberattacks, including phishing attempts. Currently, malicious actors have access to many Duolingo users\u2019 information, including their real names and email addresses.  To address data breaches, users should take proactive steps, including learning how to identify potential breaches and impersonation attempts and combat phishing attacks.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "DuoLingo"
+  }
+}

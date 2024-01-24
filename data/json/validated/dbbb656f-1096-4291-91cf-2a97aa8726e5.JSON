@@ -1,0 +1,136 @@
+{
+  "action": {
+    "error": {
+      "notes": "cloud storage location maintained and used by a former service provider",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "notes": "cloud storage location maintained and used by a former service provider",
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "cloud storage location maintained and used by a former service provider",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 20211007
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 20211007,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "Actor posted data for sale on Breach forum",
+  "impact": {
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "34c25220-9b60-11ee-b607-85600d104e11",
+  "notes": "cloud storage location by former provider",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika Trigg Gifford",
+    "created": "2023-12-15T21:39:59.939Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfiguration"
+      }
+    ],
+    "github": "19440",
+    "master_id": "dbbb656f-1096-4291-91cf-2a97aa8726e5",
+    "modified": "2024-01-23T13:46:54.907Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 1,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.hackread.com/instant-checkmate-truthfinder-data-breach/; https://www.truthfinder.com/security-incident-alert/; https://www.pkware.com/blog/monthly-breach-report-march-2023-edition",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "PeopleConnect, HQ: San Diego, CA: EMP: 74, NAICS: 56199 (technology, information and internet, information and document management, business services). On Jan 21, 2023, unidentified hackers leaked a 2019 backup database of two of their subscription-based background check services: TruthFinder (online service that enables users to search for information about people, businesses, and phone numbers) and Instant Checkmate (online tool that provides users with access to public records) on Breach Forum. The databases (2.9 GB CSV files. Upon extraction the data set was 7 GB) contained 20,211,007 customer accounts created from 2011 \u2013 2019 before the backup was created on Apr 16, 2019. Data: names, phone numbers, email addresses, password hashes, and password reset tokens. The data came from a cloud storage location maintained and used by a former service provider. The owner of the Breached forum where the data was posted also confirmed the data was exfiltrated from an exposed database backup found by a forum member. ",
+  "targeted": "NA",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 56
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2019
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "56199",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "PeopleConnect"
+  }
+}

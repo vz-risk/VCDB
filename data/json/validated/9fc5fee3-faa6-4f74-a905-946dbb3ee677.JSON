@@ -1,0 +1,209 @@
+{
+  "action": {
+    "malware": {
+      "notes": "Ransomware attack w/exfil",
+      "result": [
+        "Exfiltrate",
+        "Persist"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial system access",
+      "result": [
+        "Infiltrate",
+        "Elevate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 254000,
+      "data_victim": [
+        "Customer"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "variety": "Brand damage"
+      }
+    ],
+    "notes": "October 18, 2022 CMS determined PII and PHI was compromised. December 1, 2022 CMS determined data breach was a \"major incident\".",
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "dbc27cd0-83f0-11ee-94c6-6fecd7388f85",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "No"
+      }
+    },
+    "created": "2023-11-16T02:54:59.742Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "System access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted"
+      }
+    ],
+    "github": "19622",
+    "master_id": "9fc5fee3-faa6-4f74-a905-946dbb3ee677",
+    "modified": "2024-01-23T13:16:11.637Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 9,
+        "month": 10,
+        "year": 2022
+      }
+    }
+  },
+  "reference": "https://potomacofficersclub.com/news/cms-project-subcontractor-suffers-cyber-attack/; https://www.cms.gov/newsroom/press-releases/cms-responding-data-breach-subcontractor; https://www.healthcareitnews.com/news/cms-subcontractor-hit-ransomware",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Healthcare Management Solutions, LLC (HMS), HQ: West Virginia, NAICS: 56561, 130 employees (Information Technology, Federal Oversight for Healthcare Facility Compliance, Data Collection, Analysis, and Reporting, Secure Web-based Portals, IV&V, Helpdesks, Healthcare Delivery Analysis, Software Development, and Medical Record Review and Analysis)., is a subcontractor to ASRC Federal Data Solutions, LLC project for the Centers for Medicare and Medicaid Services (CMS). HMS suffered a ransomware attack that affected 254,000 Medicare beneficiaries: Name, Address, Date of Birth, Phone Number, Medicare Beneficiary Identifier, Banking information including routing and account numbers, Medicare entitlement/enrollment/premium information. Social Security Numbers. October 8, 2022 HMS had a ransomware attack. On October 9, 2022 CMS was notified. October 18, 2022 CMS determined PII and PHI was compromised. December 1, 2022 CMS determined data breach was a \"major incident\".",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 10
+    },
+    "discovery": {
+      "unit": "Seconds"
+    },
+    "exfiltration": {
+      "unit": "Seconds"
+    },
+    "incident": {
+      "day": 8,
+      "month": 10,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541611",
+    "region": [
+      "019021"
+    ],
+    "state": "WV",
+    "victim_id": "Healthcare Management Solutions, LLC"
+  }
+}

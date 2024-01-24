@@ -1,0 +1,175 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "webshell instalation",
+      "result": [
+        "Infiltrate",
+        "Persist"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "webshell",
+      "result": [
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "Capture app data",
+        "Capture stored data",
+        "Export data"
+      ],
+      "vector": [
+        "Remote injection"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 297117,
+      "data_victim": [
+        "Customer"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "trying to sell database on an online forum",
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "b22948c0-9acc-11ee-b607-85600d104e11",
+  "notes": "Webshell was installed June 2018: discovered and removed Jan 23, 2023",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika Trigg Gifford",
+    "created": "2023-12-15T04:04:04.812Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Webapp hacked to install webshell"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "webshell steals data"
+      }
+    ],
+    "github": "19434",
+    "master_id": "4b0714fa-7cda-48fc-918e-9f6c8a23fda4",
+    "modified": "2024-01-23T13:40:59.748Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 10,
+        "month": 1,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.businesskorea.co.kr; https://www.news18.com/news/tech/110000-more-users-affected-in-lg-uplus-data-breach-report-6999787.html ; https://www.koreatimes.co.kr/www/tech/2023/02/419_345585.html; https://en.yna.co.kr/view/AEN20230712008000320; https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&mCode=C020010000&nttId=9030#LINK; https://koreajoongangdaily.joins.com/2023/02/16/business/tech/Korea-LG-U-Data-leakage/20230216185735270.html; https://www.databreaches.net/kr-pipc-sanctions-lg-u-telecom-imposes-administrative-penalty-of-5-3-million-for-breach-along-with-corrective-orders/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "LG Uplus (LG U+), HQ: Seoul, South Korea, EMP: 10262, NAICS: 517112 (wireless telephone, telecommunications) Jan 10, 2023 disclosed on its website a data breach of 297,117 customers: name, birthday, address, and phone number. On Jan. 02, 2023 a group claiming that it hacked the LG U+ attempted to sell the information on an online forum. The investigation into the breach discovered that during the development of the Customer Authentication System (CAS), webshell inspection, webshell detection, and blocking policies were not applied, leaving it vulnerable allowing a webshell to be uploaded in June 2018. The webshell was discovered and deleted January 23, 2023. The investigation also discovered basic security equipment such as firewalls, intrusion prevention system (IPS), and web firewall were not installed or, if installed, security policies were not properly applied. NOTE: Following the information security breach, the company underwent a total of five DDoS attacks on Jan29, 2023 and Feb 04, 2023, causing internet service failures.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Years",
+      "value": 5
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 2,
+      "month": 1,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "517112",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "LG Uplus"
+  }
+}

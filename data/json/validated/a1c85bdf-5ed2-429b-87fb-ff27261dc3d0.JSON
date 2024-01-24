@@ -1,0 +1,179 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown action to infiltrate",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 236000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 236000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "90052650-77fa-11ee-a9cf-35532141bb65",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1
+      }
+    },
+    "created": "2023-10-31T19:34:13.685Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "attacker used unknown action to gain access to network"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "actor installed malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "data encrypted"
+      }
+    ],
+    "github": "20013",
+    "master_id": "a1c85bdf-5ed2-429b-87fb-ff27261dc3d0",
+    "modified": "2023-10-31T19:44:16.064Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 19,
+        "month": 10,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/236000-fairfax-oral-and-maxillofacial-surgery-ransomware-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Fairfax Oral and Maxillofacial Surgery in Virginia has confirmed that the protected health information of up to 235,931 individuals was potentially compromised in a ransomware attack in May 2023. The security incident was detected on May 16, 2023, when files were encrypted on its systems. The forensic investigation determined that an unauthorized third party had access to its network between May 15 and May 16, 2023.  According to the breach notification submitted to the Maine Attorney General, the investigation did not find any evidence of data theft, although the possibility that files were stolen could not be ruled out. The review of the files on the affected parts of the network determined they contained information such as names, driver\u2019s license numbers, health insurance information, medical history information, and for some individuals, Social Security numbers. Fairfax Oral and Maxillofacial Surgery said it has taken steps to reduce the risk of this type of incident occurring in the future, including enhancing its technical security measures. A complimentary one-year membership to the Experian IdentityWorksSM Credit 3B service has been offered to the affected individuals.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 15,
+      "month": 5,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "NA"
+    ],
+    "industry": "621210",
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "Fairfax Oral and Maxillofacial Surgery"
+  }
+}

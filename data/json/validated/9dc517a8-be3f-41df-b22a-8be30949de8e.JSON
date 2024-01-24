@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "unknown": {
+      "notes": "first action unknown",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "The organization saw the user creds for sale on the dark web.",
+  "incident_id": "48a7f6a0-782e-11ee-aff5-65f5e013890e",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "created": "2023-11-01T01:44:27.787Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "unknown action to gain initial access."
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used executives credentials to download data."
+      }
+    ],
+    "github": "19932",
+    "master_id": "9dc517a8-be3f-41df-b22a-8be30949de8e",
+    "modified": "2023-11-01T01:55:58.612Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 9,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/freecycle-confirms-massive-data-breach-impacting-7-million-users/ ; https://eandt.theiet.org/content/articles/2023/09/major-data-breach-leaks-passwords-for-seven-million-freecycle-users/ ; https://topclassactions.com/lawsuit-settlements/privacy/data-breach/freecycle-confirms-data-breach-affecting-7m-users/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Freecycle said its servers suffered a data breach that may have exposed sensitive information for more than seven million users on the site.  The breach included usernames, user IDs, email addresses and passwords, and the firm has asked registered members to change their passwords.  Freecycle is a non-profit organisation that coordinates a worldwide network of \u2018gifting\u2019 groups in a bid to divert reusable goods from landfills.  The firm said the breach has been closed and it has been reported to the Information Commissioner\u2019s Office (ICO) in the UK and authorities in the US.  In a post on its site, it said: \u201cOn August 30th we became aware of a data breach on Freecycle.org. As a result, we are advising all members to change your passwords as soon as possible. We apologise for the inconvenience.\u201d  According to Bleepingcomputer.com, a hacker offered up the data for sale on a hacking forum in late May, although the source of the breach was only discovered last Wednesday.   An analysis of the breach showed that hackers were able to gain access to the credentials of Freecycle founder and executive director Deron Beal, which in turn gave them access to member details and forum posts.  Freecycle has around 11 million members in its userbase, from more than 5,300 towns worldwide.  While not the largest UK data breach, the incident still ranks relatively high in regards to the number of users affected.  In July 2017, hackers gained unauthorised access to about 10 million personal records and almost six million payment cards from Dixons Carphone (now Currys), which affected almost 14 million customers, by installing malicious software on over 5,000 tills across various locations across England. The ICO later fined the company \u00a3500,000 over its failure to secure its internal systems.  The second largest breach occurred in 2015, when credit monitoring firm Equifax admitted that details of more than 15 million UK customers had been accessed over a five-year period.  The ICO has not yet commented on the Freecycle breach or whether it plans to fine the firm.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 30,
+      "month": 5,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "53",
+    "region": [
+      "150154",
+      "150111"
+    ],
+    "victim_id": "Freecycle "
+  }
+}

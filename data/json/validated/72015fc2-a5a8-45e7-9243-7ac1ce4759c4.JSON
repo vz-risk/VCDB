@@ -1,0 +1,237 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Lateral movement"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Ransomed.vc and the Everest Ransomware Group",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 400000000,
+      "data_victim": [
+        "Victim organization"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "c9330f10-7736-11ee-a9cf-35532141bb65",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2023-10-30T20:12:48.257Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "phished employee"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "use of stolen creds"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "executed ransomware"
+      }
+    ],
+    "github": "20017",
+    "master_id": "72015fc2-a5a8-45e7-9243-7ac1ce4759c4",
+    "modified": "2023-10-30T20:26:33.263Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 18,
+        "month": 10,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.classaction.org/news/400m-records-stolen-in-2023-state-farm-data-breach-class-action-lawsuit-says",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "State Farm faces a proposed class action lawsuit after 400 million records were reportedly accessed and stolen by hackers during an August 2023 data breach.   Want to stay in the loop on class actions that matter to you? Sign up for ClassAction.org\u2019s free weekly newsletter here.   The 33-page lawsuit alleges State Farm lacked adequate systems and procedures to properly safeguard consumers\u2019 highly sensitive personal data, allowing hackers to use ransomware to steal roughly 400 million records from the insurer\u2019s systems around August 28 of this year. The filing contends that the incident could have been prevented had State Farm properly vetted and monitored its systems.   \u201cHad State Farm seriously intended to protect the consumer Personal Information in its possession, it could have done so,\u201d the suit contests, noting that the major insurance company is \u201cwell aware of the risk posed by phishing schemes.\u201d   The case, initially filed in Illinois Circuit Court on September 13, says that State Farm has yet to notify victims that their data \u201cmay be in the hands of cyber criminals.\u201d According to the suit, the information State Farm collects in its regular course of business includes consumers\u2019 names, mailing and billing addresses, phone numbers, email addresses, Social Security numbers, dates of birth, driver\u2019s license numbers, bank account and credit card numbers, health insurance data, demographic details, billing and claims data, and much more.   \u201cTrust and confidence are key components of Plaintiffs\u2019 and class members\u2019 relationship with State Farm,\u201d the complaint reads. \u201cWithout it, Plaintiffs and class members would not have provided State Farm with, or allowed State Farm to collect, their most sensitive information in the first place.\u201d   Per the lawsuit, two ransomware groups have claimed responsibility for the State Farm data breach, Ransomed.vc and the Everest Ransomware Group. The case states that news outlets who monitor developments on the dark web have reported that the two groups are \u201cfrequent collaborators, with overlapping leadership.\u201d   According to the suit, Ransomed and Everest posted on August 29 about how they successfully infiltrated State Farm\u2019s data storage security, claiming to have come away with \u201ccomplete customer insurance details, containing a total of 400 million records.\u201d The case says that the groups, whose resum\u00e9 reportedly includes data breaches against Transunion, AT&T, NASA and other corporations and government entities, gave State Farm a deadline of September 5, 2023 before they would sell the stolen information to third parties.   \u201cIn many cases, Everest and Ransomed sell the stolen data to anyone willing to pay for access,\u201d the lawsuit shares. \u201cIn others, they simply make the data available online for anyone to download and view.\u201d   Because the State Farm data breach was executed by known ransomware groups, proposed class members\u2019 information is \u201cirrefutably in the possession of known bad actors,\u201d the suit stresses. The complaint adds that although the exact method by which Ransomed and Everest breached State Farm\u2019s systems is unknown, past attacks by the groups have generally involved \u201cphishing\u201d attempts, whereby a malicious email is sent to an employee of a target company.   \u201cIn such a phishing scheme, the data breach occurs when the employee clicks a link in the phishing email, executing malicious software which allows the hacker to access the entity\u2019s computer systems and databases,\u201d the case explains.   The lawsuit relays that State Farm data breach victims must now live with a substantially increased risk of identity theft and fraud.   The case looks to cover all United States residents whose personal information was compromised as a result of the data breach. ",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 28,
+      "month": 8,
+      "year": 2022
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Ransomware",
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524210",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "State Farm Insurance"
+  }
+}
