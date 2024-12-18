@@ -1,0 +1,117 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "adb23ac0-a063-11ef-859f-c58fde63a385",
+    "security_incident": "Confirmed",
+    "reference": "https://databreaches.net/2024/09/23/one-third-of-the-us-populations-background-info-is-now-public/",
+    "summary": "MC2 Data left a database unprotected which exposed an absurd amount of US citizen data (mostly personal)",
+    "confidence": "High",
+    "plus": {
+        "master_id": "01034482-f586-412a-9127-1d1354a9f22c",
+        "modified": "2024-11-12T00:45:28.565Z",
+        "created": "2024-11-12T00:32:24.812Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfig db and data go bye bye"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 23,
+                "month": 9,
+                "year": 2024
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2025,
+        "github": "21093"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 8
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "MC2 Data",
+        "employee_count": "1 to 10",
+        "industry": "561611"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "System admin"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Sensitive Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Victim organization"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 103316633
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

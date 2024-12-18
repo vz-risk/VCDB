@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
-  "description": "VERIS VCDB Schema 1.3.6.",
+  "description": "VERIS VCDB Schema 1.4.0.",
   "properties": {
     "incident_id": {
       "type": "string",
@@ -52,7 +52,7 @@
           "properties": {
             "year": {
               "type": "integer",
-              "maximum": 2050, 
+              "maximum": 2050,
               "minimum": 1950
             },
             "month": {
@@ -789,7 +789,7 @@
                   "Integer overflows",
                   "LDAP injection",
                   "Mail command injection",
-                  "MitM",
+                  "AitM",
                   "Null byte injection",
                   "Offline cracking",
                   "OS commanding",
@@ -907,7 +907,7 @@
                   "Cryptocurrency mining",
                   "Destroy data",
                   "In-memory",
-                  "MitM",
+                  "AitM",
                   "Modify data",
                   "Disable controls",
                   "DoS",
@@ -1197,6 +1197,7 @@
                   "Illicit content",
                   "Knowledge abuse",
                   "Net misuse",
+                  "Password or Session Sharing",
                   "Possession abuse",
                   "Privilege abuse",
                   "Snap picture",
@@ -2720,6 +2721,7 @@
                   "variety": {
                     "type": "string",
                     "enum": [
+                      "API key ",
                       "Bank",
                       "Classified",
                       "Copyrighted",
@@ -2732,6 +2734,7 @@
                       "Personal",
                       "Sensitive Personal",
                       "Secrets",
+                      "Session key",
                       "Source code",
                       "System",
                       "Virtual currency",
@@ -3554,15 +3557,7 @@
         "analysis_status": {
           "description": "In-progress (not yet complete) -> Ready for review (complete but not reviewed by DBIR team) -> First pass (One person has reviewed) -> Reviewed (Two people have reviewed) -> Finalized (Reviewed by single person reviewing all data)",
           "minLength": 1,
-          "type": "string",
-          "enum": [
-            "In-progress",
-            "Ready for review",
-            "First pass",
-            "Reviewed",
-            "Finalized",
-            "Ineligible"
-          ]
+          "type": "string"
         },
         "analyst": {
           "minLength": 1,
@@ -3586,23 +3581,7 @@
         },
         "asset_os": {
           "items": {
-            "type": "string",
-            "enum": [
-              "Android",
-              "Apple iOS",
-              "BlackBerry OS",
-              "Linux",
-              "Mac OSX",
-              "Mainframe",
-              "Symbian",
-              "Unix",
-              "webOS",
-              "Windows",
-              "Windows Phone",
-              "NA",
-              "Unknown",
-              "Other"
-            ]
+            "type": "string"
           },
           "minItems": 1,
           "type": "array",
@@ -3610,42 +3589,15 @@
         },
         "attack_difficulty_initial": {
           "minLength": 1,
-          "type": "string",
-          "enum": [
-            "High",
-            "Moderate",
-            "Low",
-            "Very Low",
-            "NA",
-            "Unknown",
-            "Other"
-          ]
+          "type": "string"
         },
         "attack_difficulty_legacy": {
           "minLength": 1,
-          "type": "string",
-          "enum": [
-            "High",
-            "Moderate",
-            "Low",
-            "Very Low",
-            "NA",
-            "Unknown",
-            "Other"
-          ]
+          "type": "string"
         },
         "attack_difficulty_subsequent": {
           "minLength": 1,
-          "type": "string",
-          "enum": [
-            "High",
-            "Moderate",
-            "Low",
-            "Very Low",
-            "NA",
-            "Unknown",
-            "Other"
-          ]
+          "type": "string"
         },
         "attribute": {
           "additionalProperties": false,
@@ -3655,13 +3607,7 @@
               "properties": {
                 "credit_monitoring": {
                   "minLength": 1,
-                  "type": "string",
-                  "enum": [
-                    "Yes",
-                    "No",
-                    "Other",
-                    "Unknown"
-                  ]
+                  "type": "string"
                 },
                 "credit_monitoring_years": {
                   "minLength": 1,
@@ -3671,23 +3617,11 @@
                 "data_abuse": {
                   "description": "The data was used for fraud, used mischievously, used maliciously, or otherwise abused.",
                   "minLength": 1,
-                  "type": "string",
-                  "enum": [
-                    "Yes",
-                    "No",
-                    "Other",
-                    "Unknown"
-                  ]
+                  "type": "string"
                 },
                 "partner_data": {
                   "minLength": 1,
-                  "type": "string",
-                  "enum": [
-                    "Yes",
-                    "No",
-                    "Other",
-                    "Unknown"
-                  ]
+                  "type": "string"
                 },
                 "partner_number": {
                   "minLength": 1,
@@ -3723,51 +3657,19 @@
             "properties": {
               "action": {
                 "minLength": 1,
-                "type": "string",
-                "enum": [
-                  "env",
-                  "err",
-                  "hak",
-                  "mal",
-                  "mis",
-                  "phy",
-                  "soc",
-                  "unk"
-                ]
+                "type": "string"
               },
               "actor": {
                 "minLength": 1,
-                "type": "string",
-                "enum": [
-                  "ext",
-                  "int",
-                  "prt",
-                  "unk"
-                ]
+                "type": "string"
               },
               "asset": {
                 "minLength": 1,
-                "type": "string",
-                "enum": [
-                  "emb",
-                  "med",
-                  "net",
-                  "ppl",
-                  "srv",
-                  "ter",
-                  "usr",
-                  "unk"
-                ]
+                "type": "string"
               },
               "attribute": {
                 "minLength": 1,
-                "type": "string",
-                "enum": [
-                  "au",
-                  "cp",
-                  "ia",
-                  "unk"
-                ]
+                "type": "string"
               },
               "summary": {
                 "minLength": 1,
@@ -3799,23 +3701,11 @@
           "properties": {
             "compliance_status": {
               "minLength": 1,
-              "type": "string",
-              "enum": [
-                "Not Compliant",
-                "Found Compliant",
-                "Unknown"
-              ]
+              "type": "string"
             },
             "merchant_level": {
               "minLength": 1,
-              "type": "string",
-              "enum": [
-                "Level 1",
-                "Level 2",
-                "Level 3",
-                "Level 4",
-                "Unknown"
-              ]
+              "type": "string"
             },
             "notes": {
               "minLength": 1,
@@ -3833,39 +3723,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -3879,39 +3749,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -3925,39 +3775,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -3971,39 +3801,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4017,39 +3827,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4063,39 +3853,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4109,39 +3879,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4155,39 +3905,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4201,39 +3931,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4247,39 +3957,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4293,39 +3983,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4339,39 +4009,19 @@
                   "properties": {
                     "assessed": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No"
-                      ]
+                      "type": "string"
                     },
                     "in_place": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "Partial Yes",
-                        "No",
-                        "Not Assessed"
-                      ]
+                      "type": "string"
                     },
                     "breach_cause": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "breach_contribute": {
                       "minLength": 1,
-                      "type": "string",
-                      "enum": [
-                        "Yes",
-                        "No",
-                        "Unknown"
-                      ]
+                      "type": "string"
                     },
                     "notes": {
                       "minLength": 1,
@@ -4388,15 +4038,7 @@
         "security_maturity": {
           "description": "How would you rate the maturity of the victim's overall security program?",
           "minLength": 1,
-          "type": "string",
-          "enum": [
-            "Initial",
-            "Defined",
-            "Managed",
-            "Measured",
-            "Optimizing",
-            "Unknown"
-          ]
+          "type": "string"
         },
         "timeline": {
           "additionalProperties": false,
@@ -4424,23 +4066,11 @@
         },
         "unfollowed_policies": {
           "minLength": 1,
-          "type": "string",
-          "enum": [
-            "Yes",
-            "No",
-            "Unknown"
-          ]
+          "type": "string"
         },
         "unknown_unknowns": {
           "items": {
-            "type": "string",
-            "enum": [
-              "Assets that had unknown network connections or accessibility",
-              "Assets that had unknown user accounts or privileges",
-              "Assets unknown or unclaimed by the organization (or business group affected)",
-              "Data the organization did not know existed on a particular asset",
-              "Unknown"
-            ]
+            "type": "string"
           },
           "minItems": 1,
           "type": "array",
@@ -4498,9 +4128,9 @@
       "properties": {}
     },
     "schema_version": {
-      "description": "Schema version in use. This should be 1.3.7 for this schema.",
+      "description": "Schema version in use. This should be 1.4.0 for this schema.",
       "type": "string",
-      "default": "1.3.7"
+      "default": "1.4.0"
     },
     "schema_name": {
       "description": "Name of Schema.  This can be used to signal to software reading the schema which it is.  Common values are 'verisc', 'dbir', and 'vcdb'.",
