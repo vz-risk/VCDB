@@ -2,7 +2,7 @@
   "action": {
     "hacking": {
       "cve": "CVE-2023-34362; CVE-2023-35036; CVE-2023-35708",
-      "notes": "Exploited software vulnerability in the third party file transfer solution (MOVEit)",
+      "notes": "Exploited software vulnerability in the third party file transfer solution (MOVEit)\nVERIS 1_3_7 to 1_4_0 Migration script, to fix extortion and ransomware attacks",
       "result": [
         "Infiltrate"
       ],
@@ -15,31 +15,18 @@
       ]
     },
     "malware": {
+      "notes": "\nVERIS 1_3_7 to 1_4_0 Migration script, to fix extortion and ransomware attacks",
       "result": [
         "Exfiltrate"
       ],
       "variety": [
         "Backdoor",
-        "Backdoor or C2"
+        "Backdoor or C2",
+        "Ransomware"
       ],
       "vector": [
-        "Direct install"
-      ]
-    },
-    "social": {
-      "notes": "Money extorted on threat of data exposure.",
-      "result": [
-        "Other"
-      ],
-      "target": [
-        "End-user",
-        "End-user or employee"
-      ],
-      "variety": [
-        "Extortion"
-      ],
-      "vector": [
-        "Email"
+        "Direct install",
+        "Remote injection"
       ]
     }
   },
@@ -64,12 +51,6 @@
   },
   "asset": {
     "assets": [
-      {
-        "variety": "P - End-user or employee"
-      },
-      {
-        "variety": "P - End-user"
-      },
       {
         "variety": "S - File"
       },
@@ -101,7 +82,6 @@
     },
     "integrity": {
       "variety": [
-        "Alter behavior",
         "Software installation"
       ]
     }
@@ -161,7 +141,7 @@
   },
   "reference": "https://apps.web.maine.gov/online/aeviewer/ME/40/0fe3c883-ac94-4f92-a420-8f4494a82e80.shtml",
   "schema_name": "vcdb",
-  "schema_version": "1.3.7",
+  "schema_version": "1.4.0",
   "security_incident": "Confirmed",
   "source_id": "vcdb",
   "summary": "MOVEit vulnerability exploited.  Data stolen.",
