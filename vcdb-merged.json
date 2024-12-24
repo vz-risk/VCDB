@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "description": "VERIS VCDB Schema 1.4.0.",
   "properties": {
     "incident_id": {
@@ -3653,23 +3653,55 @@
         },
         "event_chain": {
           "items": {
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
               "action": {
                 "minLength": 1,
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "env",
+                  "err",
+                  "hak",
+                  "mal",
+                  "mis",
+                  "phy",
+                  "soc",
+                  "unk"
+                ]
               },
               "actor": {
                 "minLength": 1,
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "ext",
+                  "int",
+                  "prt",
+                  "unk"
+                ]
               },
               "asset": {
                 "minLength": 1,
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "emb",
+                  "med",
+                  "net",
+                  "ppl",
+                  "srv",
+                  "ter",
+                  "usr",
+                  "unk"
+                ]
               },
               "attribute": {
                 "minLength": 1,
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "au",
+                  "cp",
+                  "ia",
+                  "unk"
+                ]
               },
               "summary": {
                 "minLength": 1,
