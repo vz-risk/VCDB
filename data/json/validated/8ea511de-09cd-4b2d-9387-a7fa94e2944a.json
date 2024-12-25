@@ -1,0 +1,207 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Darkside"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days"
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 4400000,
+        "rating": "Moderate",
+        "variety": "Other"
+      }
+    ],
+    "overall_amount": 4400000,
+    "overall_min_amount": 4400000,
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "8ba0ea10-bf36-11eb-a64d-8b45ca6f7953",
+  "malware": {
+    "result": [
+      "Deploy payload"
+    ],
+    "variety": [
+      "Ransomware"
+    ],
+    "vector": [
+      "Direct install"
+    ]
+  },
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2021-05-22T06:38:02.126Z",
+    "dbir_year": 2021,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered"
+      }
+    ],
+    "master_id": "8ea511de-09cd-4b2d-9387-a7fa94e2944a",
+    "modified": "2023-02-09T00:43:06.157Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.dailymail.co.uk/news/article-9556971/US-pipeline-company-halts-operations-cyberattack.html; https://www.bloomberg.com/news/articles/2021-05-09/colonial-hackers-stole-data-thursday-ahead-of-pipeline-shutdown; https://apple.news/AhL-qjcmJQIejGfVbXsS82A; https://news.softpedia.com/news/colonial-pipeline-paid-5-million-ransom-requested-by-hackers-532909.shtml; https://www.bloomberg.com/news/articles/2021-05-13/colonial-pipeline-paid-hackers-nearly-5-million-in-ransom; https://zetter.substack.com/p/anatomy-of-one-of-the-first-darkside; https://zetter.substack.com/p/ransomware-infection-on-colonial; https://zetter.substack.com/p/biden-declares-state-of-emergency; https://www.foxbusiness.com/lifestyle/colonial-pipeline-american-airlines-flights-cyberattack; https://www.flightglobal.com/networks/full-impact-of-us-pipeline-shutdown-still-unclear-american-reroutes-two-flights/143686.article; https://www.colpipe.com/news/press-releases/media-statement-colonial-pipeline-system-disruption",
+  "schema_name": "dbir",
+  "schema_version": "1.3.5",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Billing system for the pipeline was infected with ransomware.  The company shut the pipeline down because they wouldn't know how to bill for the fuel delivered.  ",
+  "targeted": "Unknown",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 10
+    },
+    "incident": {
+      "month": 5,
+      "year": 2021
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "486910",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Colonial Pipeline"
+  }
+}
