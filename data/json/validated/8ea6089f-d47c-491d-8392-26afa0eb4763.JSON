@@ -1,0 +1,133 @@
+{
+  "action": {
+    "error": {
+      "notes": "misconfigured Kibana instanced",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Inadequate processes"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 11000000,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Minor",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "44f63150-99f0-11ee-89dc-614b8d944829",
+  "notes": "misconfigured Kibana instance exploited ",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika Trigg Gifford/apinto",
+    "created": "2023-12-14T01:46:12.326Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "kibana misconfig"
+      }
+    ],
+    "github": "19378",
+    "master_id": "8ea6089f-d47c-491d-8392-26afa0eb4763",
+    "modified": "2025-01-16T09:36:30.756Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.thehindu.com/sci-tech/technology/hr-portal-myrocketco-data-breach-exposes-information-of-indian-employees-report/article66396467.ece; https://cybernews.com/security/hr-platform-data-leak/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Rocket (aka Myrocket.co, RocketApp, Rocket by BetterPlace), HQ: Bengaluru, Karnataka, India, Emp: 1000, NAICS 541612: (provides end-to-end recruitment solutions and HR services to companies in India). On December 12, 2022, the Cybernews research team (cybernews.com) discovered a publicly accessible database with 260GB of sensitive personal data belonging to Rocket. The database contained information for 11,000,000 accounts: (2,000,000 employees and 9,000,000 candidates): name, phone number, addresses, resumes bank details, parent\u2019s names, date of birth, salary, payslip, tax information, driver\u2019s license, voter ID, resumes, and job interview related information. The breach was caused by the misconfiguration of a newly created Kibana (data visualization and exploration tool used for log and time-series analytics, application monitoring, and operational intelligence use cases) instance. The discovered database was not protected by authentication, allowing threat actors to modify the data, changing salary amounts and details of bank accounts used for salary payments. Rocket mitigated the vulnerability after they were notified by Cybernews.",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 12,
+      "month": 12,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541612",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Myrocket.com"
+  }
+}

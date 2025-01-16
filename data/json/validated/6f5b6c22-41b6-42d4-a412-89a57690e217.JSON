@@ -1,0 +1,211 @@
+{
+  "action": {
+    "malware": {
+      "notes": "INC RANSOM claimed responsability",
+      "result": [
+        "Exfiltrate",
+        "Elevate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "initial access method not known",
+      "result": [
+        "Lateral movement",
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "INC RANSOM"
+      ],
+      "notes": "Could not find attack method - INC RANSOM is known for spearphishing",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "notes": "7143 patients",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 15
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7143,
+          "variety": "Personal"
+        },
+        {
+          "amount": 7143,
+          "variety": "Medical"
+        },
+        {
+          "amount": 7143,
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7143,
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "disrupted access to certain systems / probably by Ransomware being triggered",
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Business disruption"
+      },
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      },
+      {
+        "variety": "Response and recovery"
+      }
+    ],
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "ae5dc830-6577-11ef-bf5d-c7aac65e2994",
+  "notes": "Undisclosed attack method. Could not find anything that hinted of attack method.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika Trigg Gifford/apinto",
+    "created": "2024-08-29T02:56:57.267Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "unknown initial vector"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "ransomware installation"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data exfil"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "data encryption"
+      }
+    ],
+    "github": "20103",
+    "master_id": "6f5b6c22-41b6-42d4-a412-89a57690e217",
+    "modified": "2025-01-16T07:39:19.859Z",
+    "sub_source": "phidbr",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 4,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.nbcsandiego.com/news/local/tri-city-healthcare-halts-emergency-operations-after-ransomware-attack-source/3351170/, https://www.kpbs.org/news/local/2023/12/11/ransomware-group-reportedly-posts-some-tri-city-medical-center-documents-to-dark-web, https://oag.ca.gov/system/files/2024-04-04%20-%20Tri-City%20-%20CA%20Regulatory%20Notification%20Letter.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Tri-City Healthcare, Oceanside, CA , 500 employees , NAICS 622110 (General Medical and Surgical Hospital),  Staff noticed a security breach (disrupted access to certain systems) around 7 AM, Nov 9, 2023. Investigation showed access to network around Nov 8, 2023. INC RANSOM claimed responsibility and posted records of 7143 people on the dark web: patient authorization forms, financial records, name, phone number, social security number. April 4, 2024 letters mailed to 7143 residents. 12 months identity protection. Undisclosed attack method.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 8,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Tri-City Healthcare"
+  }
+}

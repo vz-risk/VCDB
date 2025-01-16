@@ -1,0 +1,254 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "credentials gotten through Phishing",
+      "result": [
+        "Infiltrate",
+        "Deploy payload",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Other employee",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Other employee"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2700000,
+          "variety": "Medical"
+        },
+        {
+          "amount": 2700000,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "amount": 2700000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2700000,
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Nids"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "38b606a0-79f0-11ef-927d-1558a141866c",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford/apinto",
+    "analyst_notes": "Success phish. Encrypted systems recovered through backups",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1
+      }
+    },
+    "created": "2024-09-24T04:10:12.234Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "system access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "use of stolen credential"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "data encrypted"
+      }
+    ],
+    "github": "20281",
+    "master_id": "3bcfa35d-017b-4a65-ac79-cb7670aff23a",
+    "modified": "2025-01-16T06:58:26.406Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 12,
+        "month": 12,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/eso-solutions-data-breach/, https://healthitsecurity.com/news/healthcare-software-company-notifies-2.7m-individuals-of-data-breach, https://www.paubox.com/news/eso-solutions-announces-data-breach-impacting-15-hospitals, https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/bd939a31-70fd-4f7c-99cf-d6b87906489f.shtml, https://phishingtackle.com/articles/eso-solutions-hit-by-major-ransomware-attack-impacting-2-7-million-patients/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ESO Solutions, HQ: Austin, TX, EMP: 722, NAICS: 511210 (Software Publishers), On Sept 17, 2024 hackers gained access to ESO\u2019s systems. This was not discovered until Sept 28, 2024, when suspicious activity was seen on its network. Files were encrypted and files were recovered from backups. The data of 2,700,000 individuals was exfiltrated: names, date of birth, injury and treatment dates and info, contact info, and SSNs. The breach impacted 15 hospitals. Notification letters were sent Dec 12, 2023 and credit monitoring offered through Kroll for 12 months. Two class action lawsuits were filed in January, 2024. The data breach involved the unauthorized access to a protected health information-containing email account belonging to an employee of ESO.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 11
+    },
+    "incident": {
+      "day": 17,
+      "month": 9,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "ESO Solutions"
+  }
+}
