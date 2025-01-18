@@ -1,0 +1,220 @@
+{
+    "plus": {
+        "modified": "2025-01-17T06:41:36.508Z",
+        "created": "2023-11-18T02:41:46.658Z",
+        "master_id": "9a3466d9-f4a9-41a5-b77c-edf61e0e7918",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Phishing with malware or ways to achieve access to install it"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Unknown hacking step"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Malware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Data copied"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Data encrypted"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "Erika T Gifford/apinto",
+        "analyst_notes": "Aug 24, 2023 “Rhysida”, ransomware-as-a-service group, took credit for the attack, advertising stolen information on the Dark Web for sale for 50 Bitcoins (approx.$1.3MM). The group drops an eponymous ransomware via phishing emails and Cobalt Strike to breach the network and deploy payload.",
+        "dbir_year": 2024,
+        "github": "19962"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 7,
+            "day": 31
+        },
+        "compromise": {
+            "unit": "Unknown",
+            "value": 3
+        },
+        "exfiltration": {
+            "unit": "Days",
+            "value": 3
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 3
+        },
+        "containment": {
+            "unit": "Weeks",
+            "value": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Prospect Medical Holdings, Inc",
+        "employee_count": "10001 to 25000",
+        "industry": "62622"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ],
+            "notes": "Cobalt Strike to breach the network "
+        },
+        "malware": {
+            "variety": [
+                "Ransomware",
+                "Backdoor or C2"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ],
+            "name": "Rysidia ransomware",
+            "notes": "Cobalt Strike and Ransomware"
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Other employee"
+            ],
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "Initial access"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "notes": "Aug 24, 2023 “Rhysida”, ransomware-as-a-service group, took credit for the attack, advertising stolen information on the Dark Web for sale for 50 Bitcoins (approx.$1.3MM). "
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            },
+            {
+                "variety": "P - Other employee"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Sensitive Personal"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Employee",
+                "Patient"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 372376
+        },
+        "integrity": {
+            "variety": [
+                "Software installation",
+                "Alter behavior"
+            ],
+            "notes": "eponymous malware"
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Weeks",
+                "value": 6
+            }
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "impact": {
+        "loss": [
+            {
+                "variety": "Business disruption",
+                "rating": "Major"
+            }
+        ],
+        "overall_rating": "Damaging",
+        "notes": "Medical care and ambulances were diverted to other providers/hospitals, nearly half of elected procedures were cancelled, over a 6-week period there were times when X-rays or CT scans could not be processed. It took six weeks to get services back online. The attack caused massive financial loss. A deal for Yale New Haven Health to purchase three hospitals in October 2022 could fall through due to this attack."
+    },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "https://www.jdsupra.com/legalnews/prospect-medical-holdings-confirms-8735339/; https://www.wafb.com/prnewswire/2023/11/07/privacy-alert-prospect-medical-holdings-under-investigation-data-breach-patient-records/?outputType=amp; https://ctmirror.org/2023/11/15/ct-echn-data-breach-prospect-medical-cyberattack/; https://www.wtnh.com/news/connecticut/3-connecticut-hospitals-contact-residents-impacted-by-data-breach/; https://ctmirror.org/2023/10/01/ct-prospect-medical-holdings-hospitals-cyberattack-yale-sale/; https://ctmirror.org/2023/09/26/hospital-execs-to-lamont-lawmakers-seal-the-yale-prospect-deal/; https://www.hipaajournal.com/prospect-medical-holdings-cyberattack-puts-connecticut-hospital-deal-at-risk/; https://www.scmagazine.com/news/rhysida-claims-responsibility-for-ransomware-attacks-on-prospect-medical-holdings; https://securityboulevard.com/2023/10/a-closer-look-at-prospect-medical-holdings-ransomware-nightmare/",
+    "summary": "Prospect Medical Holdings, Inc, HQ: Los Angeles, California, NAICS: 62622, Emp: 18000 (own hospitals, medical groups, provide healthcare services). HHS Office for Civil Rights breach portal indicates 342376 individuals (employee and patient) information was disclosed: name, address, date of birth, diagnosis, lab results, medications, treatment information, health insurance, provider/facility name, treatment dates, financial information, social security numbers, corporate documents, and patient records. Aug 24, 2023 “Rhysida”, ransomware-as-a-service group, took credit for the attack, advertising stolen information on the Dark Web for sale for 50 Bitcoins (approx.$1.3MM). The group drops an eponymous ransomware via phishing emails and Cobalt Strike to breach the network and deploy payload. Initial notifications to individuals affected went out Sept 29, 2023. For those with Social Security Numbers disclosed, Prospect offers two years of credit monitoring and identity protection services through IDX. Unauthorized access was gained between July 31 – Aug 3. Ransomware was executed Aug 3, 2023 @04:30. Prospect employees turned on their computers to find ransomware email sent at 09:44. Medical care and ambulances were diverted to other providers/hospitals, nearly half of elected procedures were cancelled, over a 6-week period there were times when X-rays or CT scans could not be processed. Sept 12, 2023 all services back online. The attack caused massive financial loss. A deal for Yale New Haven Health to purchase three hospitals in October 2022 could fall through due to this attack.",
+    "confidence": "High",
+    "incident_id": "57df2020-8581-11ee-8fb0-814d6811f064",
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7",
+    "discovery_notes": "Employees were sent an email Aug 3, 2023 @ 09:44 from \"Rhysida\" ransomware-as-a-service group telling them about the ransomware."
+}
