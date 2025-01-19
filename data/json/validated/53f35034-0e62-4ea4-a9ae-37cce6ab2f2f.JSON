@@ -1,0 +1,205 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2023-4966",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Desktop sharing software"
+      ]
+    },
+    "malware": {
+      "notes": "Lockbit",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "LockBit"
+      ],
+      "notes": "LockBit",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Remote access"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 285000,
+          "variety": "Bank"
+        },
+        {
+          "amount": 285000,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "amount": 285000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 285000,
+      "data_victim": [
+        "Customer"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "d9db5b80-768e-11ef-927d-1558a141866c",
+  "notes": "A $2.4 million Planet Home Lending data breach settlement received preliminary approval from the court on May 13, 2024, resolving the class action lawsuit detailed on this page. The $2,425,000 data breach settlement covers all individuals in the United States were sent notice by Planet Home Lending that their private information may have been impacted in the data breach. According to the plaintiffs\u2019 motion for preliminary settlement approval, the Planet Home Lending data breach impacted roughly 285,000 people.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford/apinto",
+    "analyst_notes": "LockBit exploited Citrix Bleed vulnerability",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 2
+      }
+    },
+    "created": "2024-09-19T20:55:38.425Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "exploit vuln citrix"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "data encrypted"
+      }
+    ],
+    "github": "20371",
+    "master_id": "53f35034-0e62-4ea4-a9ae-37cce6ab2f2f",
+    "modified": "2025-01-17T07:03:55.493Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://nationalmortgageprofessional.com/news/planet-home-lending-discloses-ransomware-attack#:~:text=%22Planet%20was%20one%20of%20many,its%20recent%20global%20ransomware%20campaigns., https://www.classaction.org/news/november-2023-planet-home-lending-data-breach-triggers-class-action#:~:text=The%20%242%2C425%2C000%20data%20breach%20settlement,impacted%20in%20the%20data%20breach.",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A $2.4 million Planet Home Lending data breach settlement received preliminary approval from the court on May 13, 2024, resolving the class action lawsuit detailed on this page.   Don\u2019t miss out on settlement news like this. Sign up for ClassAction.org\u2019s free weekly newsletter here.   The $2,425,000 data breach settlement covers all individuals in the United States were sent notice by Planet Home Lending that their private information may have been impacted in the data breach. According to the plaintiffs\u2019 motion for preliminary settlement approval, the Planet Home Lending data breach impacted roughly 285,000 people.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 15,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522291",
+    "region": [
+      "019021"
+    ],
+    "state": "CT",
+    "victim_id": "Planet Home Lending"
+  }
+}
