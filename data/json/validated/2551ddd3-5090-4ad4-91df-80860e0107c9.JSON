@@ -1,0 +1,210 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2023-4966",
+      "notes": "CitrixBleed",
+      "result": [
+        "Elevate",
+        "Infiltrate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Lockbit 3.0",
+      "result": [
+        "Elevate",
+        "Persist"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "LockBit 3.0"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "N - Firewall"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "AU"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 3
+      },
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Business disruption"
+      }
+    ],
+    "notes": "The estimated damages are in the millions of dollars, as many of the stranded containers hold time-sensitive goods such as blood plasma, wagyu beef, and lobsters.",
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "47536bf0-66e8-11ef-bf5d-c7aac65e2994",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika Trigg Gifford/apinto",
+    "analyst_notes": "CitrixBleed exploited by LockBit 3.0",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2024-08-30T22:55:28.687Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "cp",
+        "summary": "initial access via vuln"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware install"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware data exfil"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "malware encrypt/ interrupt"
+      }
+    ],
+    "github": "20114",
+    "master_id": "2551ddd3-5090-4ad4-91df-80860e0107c9",
+    "modified": "2025-01-23T02:22:34.197Z"
+  },
+  "reference": "https://infra.economictimes.indiatimes.com/news/ports-shipping/australia-ports-firm-fights-to-restore-operations-after-cyber-incident/105167314, https://www.bleepingcomputer.com/news/security/dp-world-cyberattack-blocks-thousands-of-containers-in-ports/, , https://www.linkedin.com/pulse/case-study-dp-world-cyber-incident-phoenix-technocyber-e5iwf/, https://maritime-executive.com/article/widely-exploited-vulnerability-likely-cause-of-dp-world-australia-s-attack#:~:text=They%20warned%20that%20the%20notorious,steps%20to%20address%20the%20issue.",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "DP World, Dubai, UAE, 108,000 Employees, NAICS 483111 (Deep Sea, Freight Transportation), had a cyberattack Nov 10, 2023. DP World disconnected its network affecting Australian operations for three days, resuming operations Nov 13, 2023 Ports affected: Sydney, Melbourne, Brisbane, and Fremantle.  DP World manages almost 40% of goods flowing in and out of Australia and the company needed a week to clear a backlog of more than 30,000 freight containers. IT Team detected unauthorized access to the Australian corporate network. Data Exfiltration: Some of the impacted data includes the personal information of current and previous employees of DP World Australia: telephone number, address, driver\u2019s licenses. The incident was particularly linked to an unpatched vulnerability known as CitrixBleed. Australian Security Center, CISA, and FBI warned that Russian hacker group LockBit 3.0 thought to be exploiting vulnerability/",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 10,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "NA"
+    ],
+    "industry": "483111",
+    "locations_affected": 4,
+    "region": [
+      "009053"
+    ],
+    "victim_id": "DP World"
+  }
+}
