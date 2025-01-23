@@ -1,14 +1,8 @@
 {
-    "source_id": "vcdb",
-    "incident_id": "27C13E31-F87D-4DEE-9EA9-A3854E339EFC",
-    "security_incident": "Confirmed",
-    "reference": "https://www.sec.gov/Archives/edgar/data/1575434/000095017023042372/very-20230630.htm",
-    "summary": "MOVEit vulnerability exploited.  Data stolen.",
-    "confidence": "High",
     "plus": {
-        "master_id": "5A1A84A6-5B58-4141-A76E-D26C87C5E56E",
-        "modified": "2023-12-02T07:10:10.154Z",
+        "modified": "2025-01-24T06:01:32.400Z",
         "created": "2023-11-18T01:42:54.036Z",
+        "master_id": "5A1A84A6-5B58-4141-A76E-D26C87C5E56E",
         "event_chain": [
             {
                 "action": "hak",
@@ -30,13 +24,6 @@
                 "asset": "srv",
                 "attribute": "cp",
                 "summary": "Data stolen"
-            },
-            {
-                "action": "soc",
-                "asset": "ppl",
-                "actor": "ext",
-                "attribute": "ia",
-                "summary": "Extortion for payment"
             }
         ],
         "analysis_status": "Finalized",
@@ -67,8 +54,7 @@
         ],
         "victim_id": "VERICITY",
         "employee_count": "101 to 1000",
-        "industry": "industry",
-        "state": "state"
+        "industry": "424110"
     },
     "action": {
         "hacking": {
@@ -87,7 +73,8 @@
         },
         "malware": {
             "variety": [
-                "Backdoor"
+                "Backdoor",
+                "Ransomware"
             ],
             "vector": [
                 "Direct install"
@@ -95,21 +82,6 @@
             "result": [
                 "Exfiltrate"
             ]
-        },
-        "social": {
-            "variety": [
-                "Extortion"
-            ],
-            "vector": [
-                "Email"
-            ],
-            "target": [
-                "End-user"
-            ],
-            "result": [
-                "Other"
-            ],
-            "notes": "Money extorted on threat of data exposure."
         }
     },
     "actor": {
@@ -132,9 +104,6 @@
         "assets": [
             {
                 "variety": "S - File"
-            },
-            {
-                "variety": "P - End-user"
             }
         ],
         "cloud": [
@@ -148,7 +117,7 @@
         "confidentiality": {
             "data": [
                 {
-                    "variety": "attribute.confidentiality.data.variety"
+                    "variety": "Personal"
                 }
             ],
             "data_victim": [
@@ -166,7 +135,6 @@
             ]
         }
     },
-    "targeted": "Opportunistic",
     "discovery_method": {
         "external": {
             "variety": [
@@ -181,6 +149,13 @@
             ]
         }
     },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "https://www.sec.gov/Archives/edgar/data/1575434/000095017023042372/very-20230630.htm",
+    "summary": "MOVEit vulnerability exploited.  Data stolen.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "incident_id": "27C13E31-F87D-4DEE-9EA9-A3854E339EFC",
     "schema_name": "vcdb",
     "schema_version": "1.3.7"
 }

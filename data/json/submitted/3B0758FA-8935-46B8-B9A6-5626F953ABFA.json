@@ -1,14 +1,8 @@
 {
-    "source_id": "vcdb",
-    "incident_id": "DC168CA0-4854-4539-9313-06073C01D8F2",
-    "security_incident": "Confirmed",
-    "reference": "https://www.sec.gov/Archives/edgar/data/1071236/000107123623000072/rrbi-20230630.htm",
-    "summary": "MOVEit vulnerability exploited.  Data stolen.",
-    "confidence": "High",
     "plus": {
-        "master_id": "3B0758FA-8935-46B8-B9A6-5626F953ABFA",
-        "modified": "2023-12-02T07:10:10.154Z",
+        "modified": "2025-01-24T05:56:51.741Z",
         "created": "2023-11-18T01:42:54.036Z",
+        "master_id": "3B0758FA-8935-46B8-B9A6-5626F953ABFA",
         "event_chain": [
             {
                 "action": "hak",
@@ -30,13 +24,6 @@
                 "asset": "srv",
                 "attribute": "cp",
                 "summary": "Data stolen"
-            },
-            {
-                "action": "soc",
-                "asset": "ppl",
-                "actor": "ext",
-                "attribute": "ia",
-                "summary": "Extortion for payment"
             }
         ],
         "analysis_status": "Finalized",
@@ -67,8 +54,7 @@
         ],
         "victim_id": "Red River Bancshares",
         "employee_count": "101 to 1000",
-        "industry": "industry",
-        "state": "state"
+        "industry": "525"
     },
     "action": {
         "hacking": {
@@ -87,7 +73,8 @@
         },
         "malware": {
             "variety": [
-                "Backdoor"
+                "Backdoor",
+                "Ransomware"
             ],
             "vector": [
                 "Direct install"
@@ -95,21 +82,6 @@
             "result": [
                 "Exfiltrate"
             ]
-        },
-        "social": {
-            "variety": [
-                "Extortion"
-            ],
-            "vector": [
-                "Email"
-            ],
-            "target": [
-                "End-user"
-            ],
-            "result": [
-                "Other"
-            ],
-            "notes": "Money extorted on threat of data exposure."
         }
     },
     "actor": {
@@ -132,9 +104,6 @@
         "assets": [
             {
                 "variety": "S - File"
-            },
-            {
-                "variety": "P - End-user"
             }
         ],
         "cloud": [
@@ -148,7 +117,7 @@
         "confidentiality": {
             "data": [
                 {
-                    "variety": "attribute.confidentiality.data.variety"
+                    "variety": "Personal"
                 }
             ],
             "data_victim": [
@@ -166,7 +135,6 @@
             ]
         }
     },
-    "targeted": "Opportunistic",
     "discovery_method": {
         "external": {
             "variety": [
@@ -181,6 +149,13 @@
             ]
         }
     },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "https://www.sec.gov/Archives/edgar/data/1071236/000107123623000072/rrbi-20230630.htm",
+    "summary": "MOVEit vulnerability exploited.  Data stolen.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "incident_id": "DC168CA0-4854-4539-9313-06073C01D8F2",
     "schema_name": "vcdb",
     "schema_version": "1.3.7"
 }

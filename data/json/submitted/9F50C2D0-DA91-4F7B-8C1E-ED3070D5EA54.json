@@ -1,14 +1,8 @@
 {
-    "source_id": "vcdb",
-    "incident_id": "65EC0E00-D711-4349-A4A7-D23DC1A82F86",
-    "security_incident": "Confirmed",
-    "reference": "https://www.cybersecurity-insiders.com/list-of-victimized-companies-of-moveit-cyber-attack/",
-    "summary": "MOVEit vulnerability exploited.  Data stolen.",
-    "confidence": "High",
     "plus": {
-        "master_id": "9F50C2D0-DA91-4F7B-8C1E-ED3070D5EA54",
-        "modified": "2023-12-02T07:10:10.154Z",
+        "modified": "2025-01-24T06:11:16.475Z",
         "created": "2023-11-18T01:42:54.036Z",
+        "master_id": "9F50C2D0-DA91-4F7B-8C1E-ED3070D5EA54",
         "event_chain": [
             {
                 "action": "hak",
@@ -30,13 +24,6 @@
                 "asset": "srv",
                 "attribute": "cp",
                 "summary": "Data stolen"
-            },
-            {
-                "action": "soc",
-                "asset": "ppl",
-                "actor": "ext",
-                "attribute": "ia",
-                "summary": "Extortion for payment"
             }
         ],
         "analysis_status": "Finalized",
@@ -66,9 +53,9 @@
             "019021"
         ],
         "victim_id": "CITIZEN’S BANK",
-        "employee_count": "employee_count",
-        "industry": "industry",
-        "state": "state"
+        "employee_count": "Large",
+        "industry": "522110",
+        "state": "RI"
     },
     "action": {
         "hacking": {
@@ -87,7 +74,8 @@
         },
         "malware": {
             "variety": [
-                "Backdoor"
+                "Backdoor",
+                "Ransomware"
             ],
             "vector": [
                 "Direct install"
@@ -95,21 +83,6 @@
             "result": [
                 "Exfiltrate"
             ]
-        },
-        "social": {
-            "variety": [
-                "Extortion"
-            ],
-            "vector": [
-                "Email"
-            ],
-            "target": [
-                "End-user"
-            ],
-            "result": [
-                "Other"
-            ],
-            "notes": "Money extorted on threat of data exposure."
         }
     },
     "actor": {
@@ -132,9 +105,6 @@
         "assets": [
             {
                 "variety": "S - File"
-            },
-            {
-                "variety": "P - End-user"
             }
         ],
         "cloud": [
@@ -148,7 +118,7 @@
         "confidentiality": {
             "data": [
                 {
-                    "variety": "attribute.confidentiality.data.variety"
+                    "variety": "Personal"
                 }
             ],
             "data_victim": [
@@ -166,7 +136,6 @@
             ]
         }
     },
-    "targeted": "Opportunistic",
     "discovery_method": {
         "external": {
             "variety": [
@@ -181,6 +150,13 @@
             ]
         }
     },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "https://www.cybersecurity-insiders.com/list-of-victimized-companies-of-moveit-cyber-attack/",
+    "summary": "MOVEit vulnerability exploited.  Data stolen.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "incident_id": "65EC0E00-D711-4349-A4A7-D23DC1A82F86",
     "schema_name": "vcdb",
     "schema_version": "1.3.7"
 }
