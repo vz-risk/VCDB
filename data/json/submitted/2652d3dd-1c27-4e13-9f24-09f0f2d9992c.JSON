@@ -1,0 +1,182 @@
+{
+    "plus": {
+        "modified": "2025-01-23T07:47:01.548Z",
+        "created": "2023-11-29T23:23:56.512Z",
+        "master_id": "2652d3dd-1c27-4e13-9f24-09f0f2d9992c",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Webapp hacked w/ MOVEit"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Data exfil"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 29,
+                "month": 6,
+                "year": 2023
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Erika Trigg Gifford/apinto",
+        "analyst_notes": "Cannot find how Actor gained access",
+        "dbir_year": 2024,
+        "attribute": {
+            "confidentiality": {
+                "partner_data": "Yes"
+            }
+        },
+        "github": "19885"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2022,
+            "month": 12,
+            "day": 22
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown",
+            "value": 3
+        },
+        "discovery": {
+            "unit": "Months"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "secondary": {
+            "victim_id": [
+                "National Student Clearinghouse; 611710"
+            ]
+        },
+        "victim_id": "Lansing Community College",
+        "industry": "6113",
+        "employee_count": "1001 to 10000"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit vuln"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ],
+            "notes": "MOVEit on Partner infra",
+            "cve": "CVE-2023-34362"
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Sensitive Personal",
+                    "amount": 757832
+                },
+                {
+                    "variety": "Personal",
+                    "amount": 757832
+                }
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 757832,
+            "notes": "Credit monitoring for a year was only offered to students from Maine."
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "impact": {
+        "loss": [
+            {
+                "variety": "Brand damage",
+                "rating": "Major"
+            }
+        ],
+        "overall_rating": "Damaging"
+    },
+    "source_id": "vcdb",
+    "summary": "Lansing Community College, HQ: Lansing, Michigan, EMP: 1802, NAICS: 616113 (college, adult education) 757,832 student/alumni records breached: names, social security numbers. Breach occurred between Dec 22, 2022 – Mar 14, 2023, LCC became aware of suspicious activity on its network Mar 14, 2023, investigation completed May 24, 2023, notification Jun 29, 2023. Maine victims offered one year of ID theft protection and credit monitoring. ",
+    "security_incident": "Confirmed",
+    "reference": "https://cybernews.com/news/lansing-community-college-cyberattack/; https://www.lansingstatejournal.com/story/news/2023/11/13/data-breaches-lansing-community-college-lawsuits-court/71491333007/; https://www.lcc.edu/alert.html; https://www.prnewswire.com/news-releases/console--associates-pc-lansing-community-college-data-breach-leaks-up-to-757k-social-security-numbers-301870793.html",
+    "confidence": "High",
+    "incident_id": "b1ab9600-8ed3-11ee-b532-77239ecadeef",
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}
