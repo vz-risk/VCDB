@@ -1,0 +1,214 @@
+{
+  "action": {
+    "malware": {
+      "name": "ALPHAV",
+      "result": [
+        "Exfiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial vector not known",
+      "result": [
+        "Infiltrate",
+        "Lateral movement"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ALPHV (BlackCat) "
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "notes": "2 terabytes of data was taken"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "discovery_notes": "employee found their PII on the dark web",
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Response and recovery"
+      }
+    ],
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "f66b71a0-60ad-11ef-9e46-dd4b4f37ae39",
+  "notes": "Hard to find information. An interview with a circuit court judge, Judge Miller, said he was notified of the breach on Sep 29, 2024 and that lawyers should train their office personnel to identify suspicious email. Discover was made by an employee who found their info on the darkweb.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T. Gifford/apinto",
+    "asset_os": [
+      "Unknown"
+    ],
+    "attack_difficulty_initial": "Very Low",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "No"
+      }
+    },
+    "created": "2024-08-23T00:42:55.163Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "initial unknown action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware install"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware exfil data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "mailware encrypt"
+      }
+    ],
+    "github": "19979",
+    "master_id": "1005b09a-0439-450b-bd69-e664f9225767",
+    "modified": "2025-01-23T02:06:09.478Z",
+    "timeline": {
+      "notification": {
+        "day": 2,
+        "month": 10,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.floridabar.org/the-florida-bar-news/chief-judge-john-miller-details-the-first-circuits-massive-cyberattack/, tps://www.bleepingcomputer.com/news/security/alphv-ransomware-gang-claims-attack-on-florida-circuit-court/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "#19979 Florida Circuit Court, Pensacola, FL, Public Administration NAICS 922110 (part of the First Judicial Circuit, Northwest Florida: Escambia, Okaloosa, Santa Rosa, and Walton Counties, 25 employees, United States. Ransomware attack by ALPHV (BlackCat) posted breached data information on their website, claiming to have two terabytes of files. Acquired SSNs, Taxpayer identification number, date of birth, driver\u2019s license information, state identification number, health and insurance information, tax returns, and CVs of employees, including judges, network map of court systems, complete with local and remote service creds. ALPHV was able to get into the backup system since \u201cit was connected to the main system\u201d. Breach discovered Sep 29, 2023, hired Mandiant to investigate. Oct 02, 2023 the courts notified the public. Court found out about the compromised data after an employee found their own PII on the darkweb. A circuit court judge, Judge Miller, stated lawyers should train their office personnel to identify suspicious emails.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 29,
+      "month": 9,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Regional"
+    ],
+    "industry": "922110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Florida Circuit Court"
+  }
+}
