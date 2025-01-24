@@ -1,0 +1,178 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate",
+        "Persist"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown initial actions",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "Unknown"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2385646,
+          "variety": "Personal"
+        },
+        {
+          "amount": 2385646,
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2385646,
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "7a400450-76a2-11ef-927d-1558a141866c",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford/apinto",
+    "analyst_notes": "could not find how the servers were compromised, no group claimed responsibility. ",
+    "created": "2024-09-19T23:16:07.957Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "unk",
+        "summary": "Unknown initial actions"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installation"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware exfil data"
+      }
+    ],
+    "github": "20293",
+    "master_id": "ce1165e8-89e5-4dd3-a891-5e3241f12400",
+    "modified": "2025-01-23T12:48:21.021Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 12,
+        "year": 2023
+      }
+    }
+  },
+  "reference": "https://www.news9.com/story/658a1080d47ad8065ccccffa/hackers-claim-they-stole-data-of-more-than-2-million-integris-health-patients, https://www.hipaajournal.com/integris-health-data-breach/, https://www.bleepingcomputer.com/news/security/integris-health-says-data-breach-impacts-24-million-patients/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "INTEGRIS Health, HQ: Oklahoma City, OK, EMP: 5,807, NAICS: 621111 (Offices of Physicians (except Mental Health Specialists)). Had a cyberattack on Nov 28, 2023. Attack affects approximately 2,385,646 individuals. On Dec 24, 2024, the hackers sent an email to victims: \"Integris Health (integrisok.com) was breached on November 2023. The data of over 2 million patients was compromised including SSN, DOB, Address, Phone, Insurance Information, and Employer Information. This data will sell on the darknet and be used for fraud and identity theft. If you are receiving this message, your data have been compromised. We provide a sample of your data as proof. We have contacted Integris Health, but they refuse to resolve this issue. We give you the opportunity to remove your personal data from our databases before we sell the entire database to data brokers on Jan 5 2024.\u201d The email continues \u201cA buyer can also purchase data without exclusive rights for 3$. In this case, the data will still be listed on the shop. You can remove your data from our shop and protect it from future fraud by purchasing exclusive rights on it (50$).\" INTEGRIS is offering one year of monitoring.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 28,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "OK",
+    "victim_id": "INTEGRIS Health"
+  }
+}

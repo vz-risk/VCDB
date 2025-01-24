@@ -1,0 +1,185 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "\"an unauthorized third party gained access to one of our business applications\"",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "misuse": {
+      "notes": "Avis stated the cause was Insider Wrongdoing",
+      "result": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Avis stated cause was Insider Wrongdoing",
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 299006,
+          "variety": "Personal"
+        },
+        {
+          "amount": 299006,
+          "variety": "Payment"
+        },
+        {
+          "amount": 299006,
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 299006,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "impact": {
+    "loss": [
+      {
+        "rating": "Minor",
+        "variety": "Brand damage"
+      }
+    ],
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "5b116e90-87ee-11ef-b77d-ef1c26b0e176",
+  "notes": "Insider wrongdoing was stated as the cause. I could not find any other information.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford/apinto",
+    "analyst_notes": "Insider wrongdoing was stated as the cause. I could not find any other information.",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1
+      }
+    },
+    "created": "2024-10-11T23:32:07.161Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "\"insider wrongdoing\""
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Webapp accessed by 3rd party"
+      }
+    ],
+    "github": "21025",
+    "master_id": "b199822e-b338-4d6b-b2c5-37008efaf156",
+    "modified": "2025-01-23T08:26:43.288Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 4,
+        "month": 9,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.crn.com/news/security/2024/avis-car-rental-customers-hit-by-hack-data-breach?itc=refresh, https://www.bleepingcomputer.com/news/security/car-rental-giant-avis-data-breach-impacts-over-299-000-customers/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "AVIS Rent A Car System LLC, HQ: Parsippany, NJ, Emp: 24500, NAICS:  532111 (Passenger Car Rental). Avis sent letters to 299,006 customers on Sep 04, 2024 whose information was accessed in a data breach: customer names, mailing addresses, email addresses, phone numbers, dates of birth, credit card numbers and expiration dates, and driver\u2019s license numbers. The breach was discovered Aug 05, 2024 Investigation showed the threat actor accessed a business application on Aug 03, 2024 and Aug 06, 2024. \u201cInsider wrongdoing\u201d was blamed for the breach. Avis is offering one-year credit and identity monitoring through Equifax. Class action lawsuit was filed Sep 18, 2024.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 5,
+      "month": 8,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "532111",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "AVIS Rent A Car System LLC"
+  }
+}

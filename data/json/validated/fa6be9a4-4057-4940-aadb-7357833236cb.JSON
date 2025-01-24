@@ -1,0 +1,176 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Elevate",
+        "Persist"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial attack vector",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Data on operational and backup servers cannot be accessed. Cannot find where a ransom was demanded.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - VoIP adapter"
+      },
+      {
+        "variety": "S - Backup"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "country": [
+      "GB"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially"
+    },
+    "integrity": {
+      "notes": "encrypted data on servers and backup servers",
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "discovery_notes": "Discovered when the website was reported to be offline. ",
+  "impact": {
+    "iso_currency_code": "GBP",
+    "loss": [
+      {
+        "rating": "Major",
+        "variety": "Business disruption"
+      }
+    ],
+    "overall_max_amount": 500000,
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "8b49b0e0-661a-11ef-bf5d-c7aac65e2994",
+  "notes": "Local government - Dell helped triage - cannot find details on hack itself.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika Trigg Gifford/apinto",
+    "created": "2024-08-29T22:22:46.383Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "unk",
+        "summary": "unknown first action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "ransomware encrypts"
+      }
+    ],
+    "github": "20099",
+    "master_id": "fa6be9a4-4057-4940-aadb-7357833236cb",
+    "modified": "2025-01-23T13:06:47.949Z"
+  },
+  "reference": "https://www.bbc.com/news/uk-scotland-highlands-islands-67355465, https://www.bbc.com/news/articles/c6pyv2nqle5o,  https://therecord.media/ransomware-attack-costing-scottish-commune-million",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "#20099 Western Isles Local Authority: Comhairle nan Eilean Siar, Stornoway, Scotland, 326 employees, NAICS  921190 Other Government General Support. Nov 7, 2023 data on operational and backup servers cannot be accessed. Discovered when the website was reported to be offline. No evidence of data extraction. Affected phone systems, email, benefit payments, children and adult social care services, tax billing, and tax payments. Cost to recover: $6245000 estimate (500K Pounds)",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 7,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Local"
+    ],
+    "industry": "921190",
+    "region": [
+      "150154",
+      "150155"
+    ],
+    "victim_id": "Western Isles Local Authority: Comhairle nan Eilean Siar"
+  }
+}

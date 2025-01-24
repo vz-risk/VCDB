@@ -1,0 +1,414 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1594000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1594000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "493ee1d0-94fc-11ec-a39a-3584eb2df2ab",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2022-02-24T08:02:58.500Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unknown hacking action for initial access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Copy of data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption is triggered"
+      }
+    ],
+    "github": "15920",
+    "master_id": "1c0b5aaa-b9bf-466e-a0da-38647458d4b9",
+    "modified": "2025-01-24T03:23:45.864Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.zdnet.com/article/cloud-provider-stopped-ransomware-attack-but-had-to-pay-ransom-demand-anyway/;  https://www.computing.co.uk/news/4021003/blackbaud-ransomware-hackers-access-unencrypted-banking-login-credentials;  https://www.thenonprofittimes.com/npt_articles/breaking-blackbaud-hacked-ransom-paid/;  https://oag.ca.gov/system/files/Oakwood%20-%20California%20Notification.pdf;  https://www.wabi.tv/2020/08/19/husson-university-latest-to-announce-data-breach/;  https://scvnews.com/coc-foundation-database-caught-in-blackbaud-ransomware-attack/;  https://www.corneliustoday.com/loaves-fishes-notified-of-data-security-breach/;  https://oag.ca.gov/system/files/Fort%20Hays%20-%20CA%20Notice%20LTR.pdf;  https://triblive.com/local/regional/phipps-conservancy-says-members-safe-despite-data-breach-that-disclose-some-info/;  https://www.dailycamera.com/2020/09/08/boulder-community-health-foundation-grantees-potentially-affected-by-data-breach/;  https://abcnews4.com/news/local/roper-st-francis-healthcare-addresses-security-incident-at-blackbaud;  https://www.courier-journal.com/story/news/2020/09/08/uk-healthcare-patients-affected-third-party-data-breach/5747394002/;  https://delawarebusinessnow.com/2020/11/bayhealth-reports-data-breach-tied-to-fund-raising-software-vendor/;  https://www.databreaches.net/university-of-york-hit-by-cyber-attack-personal-details-of-students-and-staff-may-have-been-stolen/;  https://kfor.com/news/local/ou-alumni-donor-information-exposed-in-ransomware-attack/;  https://www.winknews.com/2020/08/12/fgcu-nch-among-several-hit-with-data-breach-to-donor-info/;  https://www.bbc.com/news/uk-england-norfolk-53809015?intlink_from_url=https://www.bbc.com/news/technology&link_location=live-reporting-story;  https://www.ktts.com/2020/08/26/evangel-university-notifies-alumni-donors-of-data-breach/;  https://www.ledger-enquirer.com/news/local/article245667120.html;  https://www.darkreading.com/attacks-breaches/inova-suffers-third-party-data-breach/d/d-id/1338872;  https://www.mytwintiers.com/news-cat/local-news/guthrie-patients-possibly-affected-by-blackbaud-data-breach/;  https://www.databreaches.net/ransomware-attack-on-cloud-services-provider-affects-charities-and-not-for-profits/;  https://www.dallasnews.com/business/technology/2020/08/03/bush-presidential-center-boy-scouts-of-america-texas-tech-foundation-among-hundreds-hit-in-blackbaud-ransomware-attack/;  https://www.sightsavers.org/news/2020/08/blackbaud-statement-uk/;  https://www.northjersey.com/story/news/health/2020/08/07/cyber-attack-hackensack-meridian-health-group-alerts-data-breach/3324653001/;  https://assets.speakcdn.com/assets/2531/data_breach_2020.pdf;  https://oklahoman.com/article/5668806/catholic-archdiocese-shares-information-about-data-security-breachbrblackbaud-inc-said-the-incident-was-a-ransomware-attack;  https://portswigger.net/daily-swig/blackbaud-ransomware-attack-exposed-donor-data-from-two-uk-charities;  https://krcrtv.com/news/local/security-breach-at-enloe-medical-results-in-patient-information-theft;  https://www.golocalprov.com/news/risd-announces-data-has-been-hacked-data-breach-and-attempted-ransomeware-a;  https://www.providencejournal.com/news/20200728/ransomware-attack-hits-ric-foundation-providence-childrenrsquos-museum;  https://www.record-courier.com/news/20200804/kent-state-wksu-among-those-affected-by-ransomware-attack;  https://www.yorkshireeveningpost.co.uk/business/consumer/leeds-piano-competition-confirm-blackbaud-ransomware-breach-2933087;  https://www.businesspost.ie/business/irish-charities-hit-in-global-ransomware-hack-attack-0f4bcd15;  https://www.nevadaappeal.com/news/data-about-unr-alumni-donors-may-have-been-stolen-in-may/;  https://www.journalism.cuny.edu/2020/09/notification-of-recent-blackbaud-data-breach/;  https://www.yhc.edu/databreach;  https://ambrose.edu/ambrose-response-blackbaud-data-breach;  https://www.sunjournal.com/2020/08/01/diocese-of-portland-information-stolen-in-cyberattack/;  https://www.stltoday.com/news/local/crime-and-courts/missouri-historical-society-donor-data-compromised-as-part-of-cyber-breach/article_d52f990e-8104-5b35-ad25-5bd183caa767.html;  http://thecatholicspiritwv.org/diocese-notified-of-ransomware-cyber-attack-on-one-of-its-service-providers/;  https://www.theday.com/local-news/20200929/otis-library-donors-information-part-of-large-cyberattack-at-fundraising-company;  https://www.poughkeepsiejournal.com/story/news/local/2020/09/11/nuvance-health-announces-third-party-data-breach/3470232001/;  https://www.stleonards-fife.org/news-information/blackbaud-data-security-breach-notification-from-st-leonards;  https://www.mlive.com/news/2020/08/parishioners-personal-information-was-accessed-in-database-breach-in-northern-michigan.html;  https://alumni.norwich.edu/emailviewonwebpage.aspx?erid=17666446&trid=e18d3d24-b145-4989-9ef7-9b1af48018af;  https://scvnews.com/csun-others-possibly-affected-by-massive-hack-of-tech-provider-blackbaud/;  https://www.counton2.com/news/local-news/charleston-county-news/musc-impacted-by-blackbaud-data-breach/;  https://oag.ca.gov/system/files/Sample%20Notice%20of%20Data%20Breach%20-%20Blackbaud%20July%202020%20CWSL.pdf;  https://www.kentonline.co.uk/canterbury/news/homeless-charity-hit-by-data-breach-231819/;  https://www.wgrz.com/article/news/local/data-breach-at-erie-county-library-causes-some-personal-information-to-be-shared/71-dbd9f5f0-edfe-4478-9525-636690038287;  https://www.thechronicleherald.ca/news/local/information-on-qeii-foundation-donors-may-have-been-accessed-by-hacker-483613/;  https://cwuobserver.com/15632/news/cwu-foundation-data-breached-in-security-incident/ https://vtdigger.org/2020/07/23/breach-at-huge-donor-database-firm-hits-home-for-vermont-nonprofits/;  https://www.cincinnati.com/story/news/local/hamiltoncounty/2020/09/16/hackers-cincinnati-twin-towers-residents-data-stolen/5804286002/;  https://wqow.com/2020/08/06/uwec-foundation-members-possibly-impacted-by-data-breach/;  https://www.wabi.tv/2020/08/06/northern-light-health-foundation-responding-to-blackbaud-data-breach/;  https://www.modernhealthcare.com/cybersecurity/fundraising-database-breach-affects-657000-maine-health-system;  https://www.poz.com/article/aids-foundation-chicago-reports-data-breach;  https://www.stamfordadvocate.com/local/article/CT-Audubon-Society-alerts-donors-to-data-security-15543192.php;  https://rmhccni.org/news/blackbaud-breach/;  https://www.radioexe.co.uk/news-and-features/local-news/exeter-university-hit-by-data-breach/;  https://www.newschannelnebraska.com/story/43204233/wayne-state-foundation-data-breach-affects-more-than-donors;  https://www.prnewswire.com/news-releases/berkshire-farm-center--services-for-youth-inc-provides-notice-of-a-data-breach-301136083.html;  https://www.kare11.com/article/news/local/como-zoo-donors-informed-of-data-breach/89-de9f58f6-a1e7-4cfa-8e96-7f7c27c9e2b8;  https://www.leinsterleader.ie/news/business/565593/maynooth-university-graduates-personal-data-may-have-been-stolen-in-cybercriminal-ransomware-hack.html;  https://www.mlive.com/news/grand-rapids/2020/08/data-breach-impacts-john-ball-zoo-donors.html;  https://www.wgrz.com/article/news/local/buffalo-science-museum-vendor-hit-by-data-breach/71-905195fd-b834-4406-9f00-361b3345217e;  https://www.modernhealthcare.com/technology/northwestern-memorial-data-hacked-56000-individuals-exposed;  https://foundation.northshore.org/notice-of-third-party-data-breach;  https://www.bridgeport.edu/notifications/security/2020-09-08/blackbaud-data-breach-notification;  https://www.bbc.com/news/technology-53516413#;  https://www.databreachtoday.com/blackbaud-ransomware-victim-count-climbing-a-14972;  https://www.hrw.org/news/2020/07/22/breach-hrw-database-hosted-blackbaud#;  https://www.paraquad.org/notice/;   https://www.easternnewmexiconews.com/story/2020/10/04/news/data-security-breach-announced/166761.html;   https://rmchcharity.org.uk/blackbaud-statement;   https://www.newsandstar.co.uk/news/18621179.data-breach-university-cumbria/;   https://www.dallasnews.com/news/2020/10/02/utsw-patient-data-among-information-hacked-in-third-party-ransomware-attack/;   https://www.wabe.org/press-releases/blackbaud-data-breach/;   https://www.newschannel5.com/news/ywca-of-nashville-middle-tennessee-affected-by-data-security-breach;   https://davidshepherd.org/news/notice-of-data-breach/;   https://www.wvuf.org/news-publications/news/2020/07/23/blackbaud-data-security-incident;   https://www.bradenton.com/news/local/article244926187.html;   https://www.khq.com/news/state/st-joseph-school-notifies-donors-of-data-security-event/article_2190db97-4d4c-5cd8-aeb8-c15a92856318.html;   https://salinapost.com/posts/354d249b-c0d3-483f-9d3f-d64745187039;   https://www.mercyhousing.org/2020/08/unsuccessful-blackbaud-data-breach/;   https://www.preventcancer.org/2020/08/notice-of-blackbaud-data-breach/;   https://auburnexaminer.com/multicare-foundation-addresses-security-incident-on-blackbaud-fundraising-platform/;   https://ssw.edu/news/blackbaud-security-breach/;   https://www.wbtv.com/2020/09/05/atrium-alerts-patients-ransomware-data-breach-one-hospitals-vendors/;   https://westerngazette.ca/news/students-alumni-data-breached-in-third-party-ransomware-attack/article_2529fe3c-cdfd-11ea-b8b3-279bfae097d1.html;   https://www.reconstructingjudaism.org/news/data-breach-notification;   https://nvrh.org/wp-content/uploads/2020/07/7-27-20-Notice-of-Data-Breach-for-Website-1.pdf;   https://www.childrensdayton.org/the-hub/hospital-donors-impacted-data-breach;   https://www.witn.com/2020/09/14/vidant-medical-center-announces-security-breach-involving-patient-information/;   https://www.abcactionnews.com/news/local-news/i-team-investigates/tampa-bay-donors-personal-information-may-have-been-compromised-in-ransomware-attack;   https://www.newsobserver.com/news/business/article245140810.html;   https://www.brunel.ac.uk/news-and-events/news/articles/Blackbaud-response;   https://current.org/2020/08/npr-stations-respond-to-blackbaud-ransomware-attack/?wallit_nosession=1;   https://triblive.com/local/ahn-donors-may-have-been-exposed-to-data-breach-officials-say/;   https://abc7ny.com/business/data-breach-of-memorial-sloan-kettering-fundraising-software/6423594/;   https://www.telegram.com/news/20200914/umass-memorial-notifies-patients-of-data-breach;   https://www.miltonkeynes.co.uk/news/crime/bletchley-parks-software-suppliers-computer-system-hacked-data-breach-ransomware-attack-2940092;   https://www.thecrimson.com/article/2020/8/13/blackbaud-data-breach/;   https://www.sharonherald.com/pennsylvania/news/sru-reports-vendor-security-breach/article_95afafc6-c6e6-5744-bfc2-f3d98781bfc9.html;   https://www.theadvocate.com/baton_rouge/news/business/article_6542973e-e3f3-11ea-b577-571f3d887e49.html;   https://au.news.yahoo.com/blackbaud-hack-more-uk-universities-122722905.html;   https://www.hughes.cam.ac.uk/blackbaud-data-breach/;   https://kfor.com/news/local/bishop-mcguinness-catholic-high-school-affected-by-third-party-data-breach/;   https://www.businessrecord.com/Content/Default/All-Latest-News/Article/STEM-council-one-of-three-Iowa-entities-notified-by-Blackbaud-of-ransomware-attack/-3/248/91001;   https://chroniclet.com/news/235498/oberlin-college-warns-donors-of-massive-data-breach/;   https://www.govtech.com/security/Buffalo-NY-Area-Hospitals-Disclose-Recent-Data-Breach.html;   https://www.prnewswire.com/news-releases/montefiore-notifies-individuals-affected-by-blackbaud-cyberattack-301130472.html;   https://www.azmirror.com/blog/great-hearts-academies-students-and-parents-were-victims-of-data-breach/;   https://www.dmu.edu/news/2020/07/des-moines-university-response-to-blackbaud-data-breach/;   https://www.centralillinoisproud.com/news/local-news/osf-addresses-data-breach-of-one-of-its-vendors/;   https://mtstandard.com/news/state-and-regional/medical-group-announces-data-breach-of-patient-information-at-montana-hospitals/article_681f7d82-5e19-576f-9eb4-8585099cac5b.html;   https://www.shropshirestar.com/news/crime/2020/08/05/hope-house-childrens-hospice-attacked-by-cyber-criminals/;   https://www.govtech.com/security/Brief-Hackers-May-Have-Breached-Library-Donor-Data-in-New-York.html;   https://www.kpvi.com/news/local_news/cyber-hackers-target-isu-alumni-information-for-ransom/article_7c126502-f6f9-11ea-b606-e768cba9217a.html;   https://venturacollegefoundation.org/blackbaud/;   https://www.houstonfoodbank.org/news-re-notification-of-service-provider-data-breach/;   https://www.13newsnow.com/article/news/local/data-breach-impacts-chesapeake-regional-healthcare/291-60ddb8cc-d073-4650-8d48-afe72178acd9;   https://www.readingchronicle.co.uk/news/18607481.reading-university-makes-statement-cyber-attack-data/;   https://www.newsday.com/long-island/suffolk/stony-brook-university-hospital-1.49516418;   https://eyeandear.org/blackbaud-inc-data-breach/;   https://www.skylandtrail.org/news/blackbaud-data-security-breach/;   https://finance.yahoo.com/news/joslin-diabetes-center-notice-data-235500934.html;   https://en.brinkwire.com/news/homeless-charity-crisis-suffers-data-breach-through-software-provider-blackbaud/;   https://www.stamfordadvocate.com/local/article/Stamford-Hospital-Patient-info-may-have-been-15698310.php;   https://www.startribune.com/minnesota-s-second-largest-health-care-data-breach-hits-children-s-allina/572430632/;   https://oag.ca.gov/ecrime/databreach/reports/sb24-193131;   https://www.theday.com/local-news/20201014/lm-hospital-donor-information-hacked-in-ransomware-attack;   https://www.prnewswire.com/news-releases/devereux-foundation-notice-of-blackbaud-data-event-301130665.html;   https://oag.ca.gov/system/files/EHF%20Privacy%20Breach%20Notice_9.2020.pdf;   https://www.stljewishlight.com/news/local/jewish-federation-data-breached-in-cyber-attack/article_d8866ea0-d81d-11ea-b811-13a4c060de36.html;   https://www.thestar.co.uk/education/sheffield-hallam-university-confirms-data-breach-global-ransomware-attack-2924944;   https://www.fox61.com/article/news/local/blackbaud-data-breach-impacts-yale-new-haven-hospital/520-773afc19-f6ef-4ed6-be95-ce818cccfa6b;   https://www.sussexcountian.com/story/news/local/2021/01/05/blackbaud-hack-exposed-beebe-patient-donor-info/4112064001/;   http://realradio804.com/blackbaud-fundraising-database-ransomware-breach-included-riverside-foundation-donors/;   https://www.tmj4.com/news/local-news/froedtert-hospital-says-patient-information-was-stolen-in-data-breach;   https://udallas.edu/news/2020/notice-of-blackbaud-data-breach.php;   https://www.cancerresearch.org/news/2020/cri-statement-on-blackbaud-data-breach;   https://www.theartnewspaper.com/news/smithsonian-confirms-that-its-donor-data-was-potentially-breached-in-ransomware-attack;   https://www.nbcsandiego.com/news/local/rady-childrens-hospital-notifying-patients-of-data-breach-involving-personal-information/2433819/;   https://www.syracuse.com/schools/2020/12/manlius-pebble-hill-school-victim-of-nationwide-ransomware-attack.html;   https://www.eveningexpress.co.uk/fp/news/local/rgu-and-aberdeen-university-alumni-data-hit-by-breach/;   https://news4sanantonio.com/news/local/ut-health-says-may-cyberattack-saw-patient-names-addresses-and-phone-numbers-stolen;   https://www.citizensvoice.com/news/geisinger-reports-data-security-breach/article_f6ee4c68-73bf-5a12-92c7-9abd19ed3e59.html;   https://www.postcrescent.com/story/news/2020/09/25/xavier-catholics-schools-victim-blackbaud-data-breach/3537305001/;   https://www.glasgowlive.co.uk/news/st-aloysuis-university-strathclyde-hack-18675681;   https://securityboulevard.com/2020/10/sisters-of-charity-health-system-informs-patients-of-data-breach/;   https://www.nbc12.com/2020/09/22/vmfa-notifies-patrons-data-breach/;   https://www.news4jax.com/news/local/2020/09/23/flagler-college-says-alumni-donor-database-was-target-of-ransomware-attack/;    https://news.umanitoba.ca/third-party-service-provider-experiences-data-breach/;    https://www.greenwichtime.com/local/article/Greenwich-Hospital-Some-patient-data-exposed-in-15636237.php;    https://www.northwood.edu/news/northwood-universitys-response-to-blackbaud-data-breach;    https://www.wtsp.com/article/tech/data-breach-of-software-company-used-by-adventhhealth-may-have-obtained-donor-information/67-568498a3-5a58-4c04-aedd-56f038525a13;    https://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=12352091;    https://www.moodyonthemarket.com/spectrum-health-lakeland-alerts-patients-to-data-breach/;    https://abc7ny.com/museum-of-natural-history-american-data-breach-hackers/7090773/;    https://www.kcbd.com/2020/07/28/texas-tech-foundation-information-part-international-data-security-breach/;    https://www.bbc.com/news/technology-53567699;    https://www.databreaches.net/northern-light-health-reports-data-breach-linked-to-blackbaud-incident/ ;    https://wgme.com/news/local/northern-light-health-reports-data-breach;    https://www.chroniclelive.co.uk/news/north-east-news/newcastle-university-hit-data-breach-18676400;    https://www.prnewswire.com/news-releases/notice-of-blackbaud-data-incident-301256301.html https://timesofsandiego.com/crime/2020/07/29/ransomware-stole-donor-data-of-san-diego-charities-francis-parker-school/;  https://www.kcci.com/article/iowa-state-foundation-confirms-ransomware-attack-through-third-party-source/33463838;  https://www.trinitylaban.ac.uk/news/blackbaud-data-breach;  https://news.uga.edu/information-about-blackbaud-security-incident/;  https://universitystar.com/40974/news/texas-state-launches-investigation-into-cyber-attack/;  https://www.cnn.com/2020/07/30/politics/bush-center-may-hack/index.html;  https://www.wspa.com/news/national/south-carolina-aquarium-impacted-by-a-recent-data-breach/;  https://www.toronto.com/news-story/10128053-camh-western-donors-affected-by-data-breach/;  https://www.pressherald.com/2020/07/30/preble-street-donors-warned-about-potential-hack/;  https://www.wsbradio.com/news/local/uga-reports-computer-security-breach/EJVXYGI6W5FJVK5DTCLRDIDJOE/;  https://www.citynews1130.com/2020/07/30/bc-cancer-foundation-donors-data-breach/;  https://www.odt.co.nz/news/dunedin/campus/university-of-otago/alumni-details-possibly-risk-after-cyber-attack;  https://www.magd.cam.ac.uk/news/blackbaud-data-breach;  https://www.suspectfile.com/blackbaud-data-breach-university-college-k-12-terza-parte/;  https://www.databreaches.net/some-patients-are-first-finding-out-about-blackbaud-ransomware-incident-now/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.6",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Blackbaud, one of the world\u2019s largest providers of financial and fundraising technology to nonprofits, was hacked and paid a ransom to have the hijacked data destroyed by the cybercriminals.  Officials learned of the intrusion in May and called in law enforcement and independent forensics experts to work with Blackbaud\u2019s own security team, a Blackbaud spokesperson said. The teams were able to prevent the blocking of system access for users and the fully encrypting of files.  Blackbaud officials first realized something was wrong when staff detected malicious activity internally. Once the attack was stopped the criminals contacted Blackbaud with the ransom demand. Company officials spoke on the record but not for direct attribution.  Blackbaud declined to disclose how much was paid to the cybercriminals but it was done using Bitcoin. The firm also declined to say which data center was the entry point or how many are used by Blackbaud.  The cybercriminals were able to remove a copy of a subset of data from Blackbaud\u2019s self-hosted environment. Credit card information, bank account information, or Social Security numbers were not stolen, according to the spokesperson.  Officials said they have confirmation that the stolen data was destroyed after the ransom was paid. 'We have no reason to believe that any data went beyond the cybercriminal, was or will be misused or will be disseminated or otherwise made available publicly,' the spokesperson said.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2020
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "variety": [
+        "Ransomware"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 228,
+      "victim_id": [
+        "Oakwood School; 61",
+        "Husson University; 61",
+        "College of the Canyons Foundation; 61",
+        "Loaves & Fishes ; 813",
+        "Fort Hays State University; 61",
+        "Phipps Conservancy; 813",
+        "Boulder Community Health Foundation; 813",
+        "Roper St. Francis; 61",
+        "University of Kentucky Healthcare; 62",
+        "Bayhealth; 62",
+        "University of York; 61",
+        "University of Oklahoma; 61",
+        "FGCU; 813",
+        "NCH; 813",
+        "East Anglia's Children's Hospices; 62",
+        "EVANGEL UNIVERSITY; 61",
+        "Piedmont Healthcare; 62",
+        "Inova Health Systems; 62",
+        "Guthrie; 813",
+        "Boy Scouts; 813",
+        "Sightsavers; 62",
+        "Hackensack Meridian Health; 62",
+        "Maritime Aquarium",
+        "Archdiocese of Oklahoma City; 813110",
+        "Catholic Charities of Oklahoma City; 813110",
+        "Oklahoma Catholic Radio; 813110",
+        "Catholic Foundation of Oklahoma; 813110",
+        "Bishop McGuinness Catholic High School; 61",
+        "the Vatican Observatory; 813110",
+        "Mines Advisory Group",
+        "The Christie",
+        "Enloe Medical Center; 62",
+        "Rhode Island School of Design ; 61",
+        "Rhode Island College Foundation; 813",
+        "Providence Children\u2019s Museum",
+        "Kent State; 61",
+        "Leeds Piano Competition",
+        "NUI Galway; 61",
+        "VSO Ireland",
+        "University of Nevada; 61",
+        "Craig Newmark Graduate School of Journalism CUNY Foundation; 61",
+        "Young Harris College; 61",
+        "Ambrose University; 61",
+        "Diocese of Portland; 813110",
+        "Missouri Historical Society",
+        "Diocese of Wheeling-Charleston; 813110",
+        "Otis Library",
+        "Nuvance Health; 62",
+        "St Leonards School; 61",
+        "Diocese of Gaylord; 813110",
+        "Norwich University; 61",
+        "California State University; 61",
+        "MUSC",
+        "QEII Hospital; 62",
+        "CWU Foundation; 813",
+        "Vermont Foodbank; 813",
+        "Middlebury College; 61",
+        "Vermont Public Radio",
+        "UW-Eau Claire Foundation; 813",
+        "Northern Light Health Foundation; 813",
+        "AIDS Foundation Chicago; 813",
+        "Connecticut Audubon Society; 813",
+        "Exeter University; 61",
+        "Ronald McDonald House; 813",
+        "Wayne State Foundation; 813",
+        "Berkshire Farm Center & Services for Youth, Inc.; 813",
+        "Como Zoo",
+        "Maynooth University; 61",
+        "John Ball Zoo",
+        "Buffalo Museum of Science",
+        "Northwestern Memorial HealthCare; 62",
+        "NorthShore University; 61",
+        "University of Bridgeport; 61",
+        "University of YorkOxford Brookes University; 61",
+        "Loughborough University; 61",
+        "University of Leeds; 61",
+        "University of London; 61",
+        "University of Reading; 61",
+        "University College, Oxford; 61",
+        "Ambrose University; 61",
+        "Human Rights Watch; 813",
+        "Young Minds, 813",
+        "Rhode Island School of Design; 61",
+        "University of Exeter; 61",
+        "Saint Luke's Foundation; 813",
+        "MultiCare Health System; 62",
+        "University of Florida Health; 62",
+        "The Guthrie Clinic - 92,000; 62",
+        "Main Line Health; 62",
+        "Aveanna Healthcare; 62",
+        "Northwestern Memorial HealthCare; 62",
+        "Spectrum Health; 62",
+        "Atrium Health; 62",
+        "Paraquad",
+        "Presbyterian Healthcare Services; 62",
+        "Manchester Foundation Trust Charity; 813",
+        "University of Cumbria; 61",
+        "UT Southwestern Medical Center; 62",
+        "Public Broadcasting Atlanta",
+        "YWCA of Nashville & Middle Tennessee",
+        "David Shepherd Wildlife Foundation",
+        "West Virginia University Foundation; 813",
+        "Bishop Museum",
+        "St. Joseph School; 61",
+        "Emporia State University; 61",
+        "Mercy Housing",
+        "Prevent Cancer Foundation; 813",
+        "Multicare Foundation; 813",
+        "Seminary of the Southwest; 813110",
+        "Atrium Health; 62",
+        "Western University; 62",
+        "Reconstructing Judaism; ",
+        "Northeastern Vermont Regional Hospital; 62",
+        "Dayton Children\u2019s Hospital; 62",
+        "Vidant Health; 62",
+        "Food Bank of Central & Eastern NC",
+        "Brunel University London; 61",
+        "New Hampshire Public Radio",
+        "KPBS",
+        "San Diego State University; 61",
+        "Allegheny Health Network; 62",
+        "Memorial Sloan Kettering; 62",
+        "UMass Memorial; 62",
+        "Bletchley Park",
+        "Harvard Alumni Affairs and Development; 813",
+        "Slippery Rock University; 61",
+        "Our Lady of the Lake Regional Medical Center; 62",
+        "De Montfort University; 61",
+        "University of Strathclyde; 61",
+        "University of Exeter; 61",
+        "University of York; 61",
+        "Oxford Brookes University; 61",
+        "Loughborough University; 61",
+        "University of Leeds; 61",
+        "University of London; 61",
+        "University of Reading; 61",
+        "University College, Oxford; 61",
+        "Middlebury College, Vermont; 61",
+        "West Virginia University; 61",
+        "New College of Florida; 61",
+        "Cheverus High School: Catholic High School Portland; 61",
+        "The Bishop Strachan School; 61",
+        "University of North Florida; 61",
+        "Rhode Island School of Design; 61",
+        "Choir with No Name",
+        "Vermont Foodbank",
+        "Vermont Public Radio",
+        "Northwest Immigrant Rights Project; 813",
+        "University of Cambridge Hughes Hall; 61",
+        "Bishop McGuinness Catholic High School; 61",
+        "STEM Advisory Council; 813",
+        "Oberlin College; 61",
+        "Roswell Park Alliance, Catholic Health; 62",
+        "Montefiore Medical Center; 62",
+        "Great Hearts Academies; 61",
+        "Des Moines University; 61",
+        "OSF HealthCare Systems; 62",
+        "SCL Health; 62",
+        "Hope House Children\u2019s Hospice; 62",
+        "Buffalo and Erie County Public Library",
+        "Idaho State Alumni; 813",
+        "Ventura College Foundation; 813",
+        "Houston Food Bank; 813",
+        "Chesapeake Regional Healthcare; 62",
+        "Reading University; 61",
+        "Stony Brook University Hospital and Mount Sinai South Nassau Hospital; 62",
+        "The Eye and Ear Foundation of Pittsburg; 62",
+        "Skyland Trail",
+        "Joslin Diabetes Center; 62",
+        "Crisis",
+        "Stamford Hospital; 62",
+        "Children's Minnesota, Allina Health; 62",
+        "University of Detroit Mercy; 61",
+        "Lawrence + Memorial Hospital; 62",
+        "Devereux Advanced Behavioral Health; 62",
+        "Emanate Health Foundation; 62",
+        "Jewish Federation of St. Louis; 813",
+        "Sheffield Hallam University; 61",
+        "Yale-New Haven Hospital; 62",
+        "Beebe Healthcare; 62",
+        "Riverside Health System; 62",
+        "Froedtert Hospital; 62",
+        "University of Dallas; 61",
+        "Cancer Research Institute; 62",
+        "Smithsonian",
+        "Rady Children's Hospital; 62",
+        "Manlius Pebble Hill school; 61",
+        "Aberdeen University and Robert Gordon University; 61",
+        "UT Health San Antonio; 62",
+        "Geisinger",
+        "St. Francis Xavier Catholic Schools; 61",
+        "St Aloysuis' College and University of Strathclyde; 61",
+        "Sisters of Charity Health System; 62",
+        "Virginia Museum of Fine Arts",
+        "Flagler College; 61",
+        "University of Manitoba; 61",
+        "Greenwich Hospital; 62",
+        "Northwood University; 61",
+        "AdventHealth; 62",
+        "University of Auckland; 61",
+        "Spectrum Health Lakeland; 62",
+        "Museum of Natural History",
+        "Texas Tech Foundation; 813",
+        "The Wallich",
+        "UK National Trust; 62",
+        "Life Flight of Maine; 62",
+        "The Opportunity Alliance",
+        "Maine Cancer Foundation; 62",
+        "Newcastle University; 61",
+        "Convoy of hope; 813",
+        "Francis Parker School system; 61",
+        "San Diego Public Library Foundation",
+        "Iowa State Foundation; 813",
+        "Trinity Laban and Blackheath Halls",
+        "University of Georgia; 61",
+        "State of Texas; 92",
+        "George W. Bush Presidential Center",
+        "South Carolina Aquarium",
+        "Centre for Addiction and Mental Health; 62",
+        "Preble Street",
+        "University of Georgia; 61",
+        "BC Cancer Foundation; 62",
+        "University of Otago; 61",
+        "Magdalene College; 61",
+        "Little Hill Foundation for the Rehabilitation of Alcoholics, Inc. d/b/a Alina Lodge; 62",
+        "California Western School of Law; 61",
+        "Porchlight",
+        "Erie County Library"
+      ]
+    },
+    "state": "SC",
+    "victim_id": "Blackbaud"
+  }
+}
