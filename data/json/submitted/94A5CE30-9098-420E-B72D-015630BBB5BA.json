@@ -1,14 +1,8 @@
 {
-    "source_id": "vcdb",
-    "incident_id": "94A5CE30-9098-420E-B72D-015630BBB5BA",
-    "security_incident": "Confirmed",
-    "reference": "https://federalnewsnetwork.com/cybersecurity/2023/06/energy-department-among-several-federal-agencies-hit-by-moveit-breach/; https://federalnewsnetwork.com/cybersecurity/2023/06/energy-department-among-several-federal-agencies-hit-by-moveit-breach/",
-    "summary": "MOVEit vulnerability exploited.  Data stolen.",
-    "confidence": "High",
     "plus": {
-        "master_id": "FD449B52-84FB-408E-BF7A-27127838279E",
-        "modified": "2023-12-02T07:10:10.154Z",
+        "modified": "2025-01-24T08:17:57.972Z",
         "created": "2023-11-18T01:42:54.036Z",
+        "master_id": "FD449B52-84FB-408E-BF7A-27127838279E",
         "event_chain": [
             {
                 "action": "hak",
@@ -30,13 +24,6 @@
                 "asset": "srv",
                 "attribute": "cp",
                 "summary": "Data stolen"
-            },
-            {
-                "action": "soc",
-                "asset": "ppl",
-                "actor": "ext",
-                "attribute": "ia",
-                "summary": "Extortion for payment"
             }
         ],
         "analysis_status": "Finalized",
@@ -67,8 +54,7 @@
         ],
         "victim_id": "19817",
         "employee_count": "25001 to 50000",
-        "industry": "Large",
-        "state": "921"
+        "industry": "921"
     },
     "action": {
         "hacking": {
@@ -87,7 +73,8 @@
         },
         "malware": {
             "variety": [
-                "Backdoor"
+                "Backdoor",
+                "Ransomware"
             ],
             "vector": [
                 "Direct install"
@@ -95,21 +82,6 @@
             "result": [
                 "Exfiltrate"
             ]
-        },
-        "social": {
-            "variety": [
-                "Extortion"
-            ],
-            "vector": [
-                "Email"
-            ],
-            "target": [
-                "End-user"
-            ],
-            "result": [
-                "Other"
-            ],
-            "notes": "Money extorted on threat of data exposure."
         }
     },
     "actor": {
@@ -132,9 +104,6 @@
         "assets": [
             {
                 "variety": "S - File"
-            },
-            {
-                "variety": "P - End-user"
             }
         ],
         "cloud": [
@@ -158,7 +127,6 @@
                 "Stored unencrypted"
             ],
             "data_disclosure": "Yes"
-
         },
         "integrity": {
             "variety": [
@@ -167,7 +135,6 @@
             ]
         }
     },
-    "targeted": "Opportunistic",
     "discovery_method": {
         "external": {
             "variety": [
@@ -182,6 +149,13 @@
             ]
         }
     },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "https://federalnewsnetwork.com/cybersecurity/2023/06/energy-department-among-several-federal-agencies-hit-by-moveit-breach/; https://federalnewsnetwork.com/cybersecurity/2023/06/energy-department-among-several-federal-agencies-hit-by-moveit-breach/",
+    "summary": "MOVEit vulnerability exploited.  Data stolen.",
+    "confidence": "High",
+    "targeted": "Opportunistic",
+    "incident_id": "94A5CE30-9098-420E-B72D-015630BBB5BA",
     "schema_name": "vcdb",
     "schema_version": "1.3.7"
 }
