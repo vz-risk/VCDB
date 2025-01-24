@@ -1,0 +1,209 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "f994ae10-da0f-11ef-94f8-638529e3ff3b",
+    "security_incident": "Confirmed",
+    "reference": "https://www.prnewswire.com/news-releases/privacy-alert-saint-xavier-university-under-investigation-for-data-breach-of-over-210-000-student-and-employee-records-302303493.html;  https://www.securityweek.com/210000-impacted-by-year-old-saint-xavier-university-data-breach/",
+    "summary": "Saint Xavier University last week started notifying over 210,000 individuals that their personal information was compromised in a data breach in July 2023.  The incident was discovered on July 21, 2023, but the investigation into the matter revealed that the unauthorized access to the university’s systems occurred weeks before.  Between June 29 and July 18, SXU says, the attackers downloaded certain files from its systems, including files containing personal information. As a result of the data breach, the threat actor stole the private, personal information of SXU's current and former students, current and former employees, and applicants for admission. The breach also affected the parents and guardians of SXU students and the dependents, spouses, and beneficiaries of SXU employees. On October 30, 2024, however, the university began sending written notifications to the potentially impacted individuals. SXU recently informed students and employees that the following private information may have been stolen in the breach: Social Security numbers, driver's license or state identification card numbers, passport information, financial account information, medical information, biometric information, health insurance information, student identification numbers, dates of birth, payment card information, and account access information. Saint Xavier University is offering 12 months of free credit monitoring services to the potentially affected individuals and is providing them with guidance on how to protect their information.  While SXU did not say what type of cyberattack it fell victim to, the Alphv/BlackCat ransomware gang claimed responsibility for the incident in August 2023.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "b86e6787-cc90-4fe9-b8bd-c727627f6ce4",
+        "modified": "2025-01-24T13:13:49.453Z",
+        "created": "2025-01-24T12:59:21.842Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "initial hacking actions"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installation"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "malware exfils data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "malware encrypts"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 30,
+                "month": 10,
+                "year": 2024
+            }
+        },
+        "analysis_status": "Finalized",
+        "analyst": "apinto",
+        "analyst_notes": "Ransomware w/ ALPHAV/Blackcat",
+        "dbir_year": 2025,
+        "attribute": {
+            "confidentiality": {
+                "credit_monitoring": "Yes",
+                "credit_monitoring_years": 1
+            }
+        },
+        "github": "21283"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 6,
+            "day": 29
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 3
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Saint Xavier University",
+        "industry": "61611",
+        "employee_count": "1001 to 10000",
+        "state": "IL"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ],
+            "notes": "Unknown initial hacking action"
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Elevate",
+                "Exfiltrate",
+                "Persist"
+            ],
+            "notes": "ALPHAV Ransomware",
+            "name": "ALPHAV Ransomware"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "ALPHAV / Blackcat"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "country": [
+            "US"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 212267
+                },
+                {
+                    "amount": 212267,
+                    "variety": "Sensitive Personal"
+                },
+                {
+                    "amount": 212267,
+                    "variety": "Bank"
+                },
+                {
+                    "amount": 212267,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 212267
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "impact": {
+        "loss": [
+            {
+                "variety": "Legal and regulatory"
+            }
+        ],
+        "notes": "Class action lawsuit",
+        "overall_rating": "Distracting"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0",
+    "discovery_notes": "Claimed responsibility in Aug 2023"
+}
