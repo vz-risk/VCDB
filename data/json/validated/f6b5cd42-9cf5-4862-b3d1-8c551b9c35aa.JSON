@@ -1,0 +1,139 @@
+{
+  "action": {
+    "unknown": {
+      "notes": "suspect data set came from a hacked from a contractor or publisher partner",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "VN"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "KryptonZambie",
+        "RobinHouse"
+      ],
+      "region": [
+        "142000",
+        "142035"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 183754481,
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 183754481,
+      "data_victim": [
+        "Customer",
+        "Other"
+      ],
+      "notes": "system accessed had been decommissioned in 2022, could have been shared by or hacked from a contractor or publisher partner",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "discovery_notes": "BleepingComputer forwarded the post from KryptonZambie on BreachForums stating they had the data to sell and posted a sample of the data",
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "f2cb11a0-da78-11ef-9cb2-9be04a5c3719",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford/apinto",
+    "analyst_notes": "Decommissioned server hacked, old records exfiltrated. RobinHouse/KryptonZambie posted on BreachForums. Could not find how they hacked the server. Their blog mentions Remote File Inclusion (RFI), Local File Inclusion (LFI), and SQL injection",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2025-01-25T00:30:47.610Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Webapp Hacked"
+      }
+    ],
+    "github": "21307",
+    "master_id": "f6b5cd42-9cf5-4862-b3d1-8c551b9c35aa",
+    "modified": "2025-01-25T05:07:40.867Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.troyhunt.com/inside-the-demandscience-by-pure-incubation-data-breach/, https://www.bleepingcomputer.com/news/security/leaked-info-of-122-million-linked-to-b2b-data-aggregator-breach/, https://cybelangel.com/pure-incubation-ventures-leak-threat-note/?ref=troyhunt.com, https://threats.wiz.io/all-actors/kryptonzambie, https://www.resecurity.com/blog/article/misinformation-and-hacktivist-campaigns-target-the-philippines-amidst-rising-tensions-with-china, https://www.itpro.com/security/cyber-attacks/breach-at-b2b-data-broker-exposes-over-100-million-records, https://www.malwarebytes.com/blog/news/2024/11/122-million-peoples-business-contact-info-leaked-by-data-broker, https://www.itgovernance.co.uk/blog/global-data-breaches-and-cyber-attacks-in-february-2024-719366482-records-breached, https://www.cm-alliance.com/cybersecurity-blog/biggest-cyber-attacks-data-breaches-ransomware-attacks-february-2024, https://www.itgovernanceusa.com/blog/cybersecurity-and-data-privacy-in-the-usa-february-26-march-3-2024, https://www.theregister.com/2024/11/13/demandscience_data/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "DemandScience (part of Pure Incubation Ventures), HQ: Danvers MA, Emp: 1,100, NAICS: 541910 (Marketing Research and Public Opinion Polling), operates in seven countries, had a data breach of 183,754,481 records through a B2B data aggregator breach (collecting, compiling, and organizing data from public sources to create a comprehensive dataset of Business Contact Information, valuable for digital marketers and advertisers in creating rich \"profiles\" used to generate leads or marketing information.). On Feb 02, 2024, Vietnamese Threat Actor \u201cRobinHouse\u201d (another alias for KryptonZambie) accessed an exposed system. Two specific tables within the company\u2019s database were compromised: One of the tables contained details on potential members, while the other stored information on contacts. The data set included names, email addresses, addresses, phone number, company name, job title, and social media links. Feb 28, 2024, \u201cKryptonZambie\u201d began selling the records on BreachForums (6000USD, negotiable), claiming they were stolen from an exposed Pure Incubation system. The breach was discovered by DemandScience when BleepingComputer forwarded the post from BreachForums. In a statement, DemandScience stated they did not find evidence of a breach on their current operational systems, their systems were secured behind \u201cfirewall/VPN access/Access control/intrusion detection systems\u201d and that they will continue to monitor the situation. They later admitted to Troy Hunt (founder Have I Been Pwned) that the system accessed had been decommissioned in 2022. Another statement from the company: \u201cWe concluded that some older Pure Incubation data could have been shared by or hacked from a contractor or publisher partner, but do not have proof. We are continuing to monitor the situation, so it would not be appropriate to expand further at this point.\u201d. On Aug 15, 2024 KryptonZambie made the dataset available for eight credits (a few USD). 122MM unique email addresses were added to Have I Been Pwned.",
+  "targeted": "Targeted",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 26
+    },
+    "incident": {
+      "day": 2,
+      "month": 2,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541910",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "DemandScience (part of Pure Incubation Ventures)"
+  }
+}

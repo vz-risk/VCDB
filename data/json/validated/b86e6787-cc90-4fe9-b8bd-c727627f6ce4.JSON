@@ -1,0 +1,224 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Unknown initial hacking action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "name": "ALPHAV Ransomware",
+      "notes": "ALPHAV Ransomware",
+      "result": [
+        "Elevate",
+        "Exfiltrate",
+        "Persist"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ALPHAV / Blackcat"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 212267,
+          "variety": "Personal"
+        },
+        {
+          "amount": 212267,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "amount": 212267,
+          "variety": "Bank"
+        },
+        {
+          "amount": 212267,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 212267,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "Claimed responsibility in Aug 2023",
+  "impact": {
+    "loss": [
+      {
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "notes": "Class action lawsuit",
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "f994ae10-da0f-11ef-94f8-638529e3ff3b",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "apinto",
+    "analyst_notes": "Ransomware w/ ALPHAV/Blackcat",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 1
+      }
+    },
+    "created": "2025-01-24T12:59:21.842Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "initial hacking actions"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installation"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware exfils data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "malware encrypts"
+      }
+    ],
+    "github": "21283",
+    "master_id": "b86e6787-cc90-4fe9-b8bd-c727627f6ce4",
+    "modified": "2025-01-24T13:13:49.453Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 30,
+        "month": 10,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.prnewswire.com/news-releases/privacy-alert-saint-xavier-university-under-investigation-for-data-breach-of-over-210-000-student-and-employee-records-302303493.html;  https://www.securityweek.com/210000-impacted-by-year-old-saint-xavier-university-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Saint Xavier University last week started notifying over 210,000 individuals that their personal information was compromised in a data breach in July 2023.  The incident was discovered on July 21, 2023, but the investigation into the matter revealed that the unauthorized access to the university\u2019s systems occurred weeks before.  Between June 29 and July 18, SXU says, the attackers downloaded certain files from its systems, including files containing personal information. As a result of the data breach, the threat actor stole the private, personal information of SXU's current and former students, current and former employees, and applicants for admission. The breach also affected the parents and guardians of SXU students and the dependents, spouses, and beneficiaries of SXU employees. On October 30, 2024, however, the university began sending written notifications to the potentially impacted individuals. SXU recently informed students and employees that the following private information may have been stolen in the breach: Social Security numbers, driver's license or state identification card numbers, passport information, financial account information, medical information, biometric information, health insurance information, student identification numbers, dates of birth, payment card information, and account access information. Saint Xavier University is offering 12 months of free credit monitoring services to the potentially affected individuals and is providing them with guidance on how to protect their information.  While SXU did not say what type of cyberattack it fell victim to, the Alphv/BlackCat ransomware gang claimed responsibility for the incident in August 2023.",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "incident": {
+      "day": 29,
+      "month": 6,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "61611",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Saint Xavier University"
+  }
+}

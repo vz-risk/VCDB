@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "\"the group used sophisticated methods to infiltrate American telecom infrastructure through vulnerabilities including Cisco Systems routers\"",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other network service"
+      ]
+    },
+    "unknown": {
+      "notes": "Series of unknown actions",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate",
+        "Elevate",
+        "Persist",
+        "Lateral movement"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CN"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "name": [
+        "Salt Typhoon / APT40"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - Public WAN"
+      },
+      {
+        "variety": "N - Router or switch"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "OT",
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "Includes call records as \"other\""
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Distracting"
+  },
+  "incident_id": "d8bb2c80-d949-11ef-94f8-638529e3ff3b",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "apinto",
+    "analyst_notes": "Salt Typhoon / Charter Communications",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2025-01-23T13:21:06.376Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "exploit vuln on Cisco systems?"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "unknown initial actions to create persistent access"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "unknown actions to extract call records and other info"
+      }
+    ],
+    "github": "21315",
+    "master_id": "9f7ce2fa-ba40-4889-9430-55819ac3fa00",
+    "modified": "2025-01-25T06:02:11.116Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://securityaffairs.com/171127/apt/t-mobile-victim-chinese-breach-of-telco-firms.html; https://www.bleepingcomputer.com/news/security/t-mobile-confirms-it-was-hacked-in-recent-wave-of-telecom-breaches/; https://www.bleepingcomputer.com/news/security/atandt-verizon-reportedly-hacked-to-target-us-govt-wiretapping-platform/;https://www.theregister.com/2024/10/07/verizon_att_lumen_salt_typhoon/; https://techcrunch.com/2024/11/14/us-confirms-china-backed-hackers-breached-telecom-providers-to-steal-wiretap-data/; https://content.govdelivery.com/accounts/USDHSCISA/bulletins/3c1b400; https://www.reuters.com/technology/cybersecurity/large-number-americans-metadata-stolen-by-chinese-hackers-senior-official-says-2024-12-04/; https://www.csoonline.com/article/3632044/more-telecom-firms-were-breached-by-chinese-hackers-than-previously-reported.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Multiple U.S. broadband providers, including Verizon, AT&T, and Lumen Technologies, have been breached by a Chinese hacking group tracked as Salt Typhoon, the Wall Street Journal reports. The Wall Street Journal reports that T-Mobile\u2019s network was breached in a Chinese cyber-espionage campaign targeting U.S. and international telecom firms. Hackers linked to Chinese intelligence aimed to spy on cellphone communications of high-value targets. It\u2019s unclear if T-Mobile customers\u2019 data, including calls or communication records, was compromised. The cyber campaign is attributed to the China-linked APT group Salt Typhoon, which is also known as FamousSparrow, UNC2286, and GhostEmperor. Salt Typhoon is a China-linked APT group active since at least 2019. The Chinese APT focuses on government entities and telecommunications companies in Southeast Asia. According to the WSJ, the group used sophisticated methods to infiltrate American telecom infrastructure through vulnerabilities including Cisco Systems routers, and investigators suspect the hackers relied on artificial intelligence or machine learning to further their espionage operations , people familiar with the matter said. The attackers penetrated at least some of that infrastructure over eight months or more. Salt Typhoon\u2019s latest victims include Charter, Consolidated, and Windstream, underscoring the widening scope of China's cyberespionage campaign against critical US infrastructure.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 3,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "517112",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Charter Communications"
+  }
+}
