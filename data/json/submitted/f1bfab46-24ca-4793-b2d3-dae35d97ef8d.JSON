@@ -1,0 +1,161 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "4d3cd370-db60-11ef-94f8-638529e3ff3b",
+    "security_incident": "Confirmed",
+    "reference": "https://investor.livanova.com/news-releases/news-release-details/livanova-issues-notice-us-patients-regarding-cybersecurity; https://cybernews.com/news/livanova-ransomware-attack/;  https://www.securityweek.com/livanova-usa-discloses-data-breach-impacting-130000-individuals/ ",
+    "confidence": "High",
+    "summary": "Medical device manufacturer LivaNova USA is sending notifications to 130,000 individuals warning that their personal information was compromised in an October 2023 data breach. The incident, according to a notification letter to the impacted individuals, was identified on November 19, roughly one month after hackers breached its network. LivaNova says it took certain systems offline in response to the incident, without sharing further details on the nature of attack. In December 2023, however, the LockBit ransomware gang claimed responsibility for the incident and for the theft of 2.2 terabytes of data from the company. the Company is aware that the information, which varied by impacted individual, included data such as name, contact information (e.g., phone number, email and postal address), Social Security number, date of birth, medical information (e.g., treatment, condition, diagnosis, prescription, physician, medical record number and device serial number), and health insurance information.  the company confirmed that the company had incurred costs of around $2.6 million in Q4, 2023, as a result of the attack.",
+    "plus": {
+        "master_id": "f1bfab46-24ca-4793-b2d3-dae35d97ef8d",
+        "modified": "2025-01-27T05:04:09.115Z",
+        "created": "2025-01-26T05:06:53.095Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "initial attack vector"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installation"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "data exfil"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "apinto",
+        "analyst_notes": "Lockbit. Assuming no encryption because it took a month for the victim to notice",
+        "dbir_year": 2025,
+        "github": "20763"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 10
+        },
+        "discovery": {
+            "unit": "Months",
+            "value": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "LivaNova USA",
+        "employee_count": "1001 to 10000",
+        "industry": "334510"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ],
+            "notes": "Unknown initial access vector"
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Persist",
+                "Exfiltrate"
+            ],
+            "name": "Lockbit Malware"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Lockbit RaaS"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 13000
+                },
+                {
+                    "variety": "Medical",
+                    "amount": 13000
+                },
+                {
+                    "variety": "Sensitive Personal",
+                    "amount": 13000
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 13000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "impact": {
+        "overall_rating": "Distracting",
+        "overall_amount": 2600000,
+        "iso_currency_code": "USD"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

@@ -1,0 +1,175 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "1cc08190-dc2a-11ef-94f8-638529e3ff3b",
+    "security_incident": "Confirmed",
+    "reference": "https://www.oregonlive.com/commuting/2023/06/massive-hack-of-oregon-dmv-system-puts-estimated-35-million-driver-license-and-id-card-info-at-risk-officials-say.html;  https://www.oregonlive.com/commuting/2024/04/oregon-sued-on-behalf-of-35-million-whose-private-driver-license-id-card-data-was-stolen-in-data-breach.html",
+    "confidence": "High",
+    "summary": "June 20, 2023 Article. The Oregon Driver and Motor Vehicle Services confirmed Thursday that an estimated 3.5 million driver’s license and identification card files were compromised when the agency was hacked two weeks ago. Agency spokesperson Michelle Godfrey said Thursday that the agency realized on Monday — four days ago — that the breach had extended to about 90% of the state’s driver’s license and ID card files. After the news organization’s inquiry, the Department of Transportation issued a press release saying the agency was among “many organizations” affected by the breach as a result of a “global hack of the data transfer software MOVEit Transfer.” “Sensitive personal information” on millions of holders of driver’s licenses and ID cards were compromised, the agency said. ncluding names, addresses, dates of birth, last four digits of Social Security numbers, heights and weights – were hacked in May 2023 by a Russian cybergang, (cl0p)",
+    "plus": {
+        "master_id": "e393444c-7f3f-4143-915f-626aeca24bf0",
+        "modified": "2025-01-27T05:21:49.477Z",
+        "created": "2025-01-27T05:11:30.089Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Initial vuln exploit"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware instalation"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "data exfil"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "apinto",
+        "analyst_notes": "MoveIT - Ransomware - cl0p timing",
+        "dbir_year": 2025,
+        "github": "20667"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 5,
+            "day": 30
+        },
+        "discovery": {
+            "unit": "Weeks",
+            "value": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "Regional"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "Oregon DMV",
+        "state": "OR",
+        "employee_count": "1001 to 10000",
+        "industry": "926120"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit vuln"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ],
+            "notes": "MOVEit",
+            "cve": "CVE-2023-34362"
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Persist"
+            ],
+            "name": "cl0p Ransomware"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "RU"
+            ],
+            "region": [
+                "150151"
+            ],
+            "name": [
+                "cl0p"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 3500000,
+                    "variety": "Personal"
+                },
+                {
+                    "amount": 3500000,
+                    "variety": "Sensitive Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 3500000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "impact": {
+        "loss": [
+            {
+                "variety": "Legal and regulatory",
+                "rating": "Moderate",
+                "min_amount": 10000000
+            }
+        ],
+        "notes": "class action lawsuit",
+        "overall_rating": "Distracting"
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}
