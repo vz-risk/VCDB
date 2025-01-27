@@ -1,0 +1,146 @@
+{
+  "action": {
+    "error": {
+      "notes": "software flaw from a third party vendor",
+      "variety": [
+        "Programming error"
+      ],
+      "vector": [
+        "Inadequate processes"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "notes": "Accessed the faulty software",
+      "variety": [
+        "End-user"
+      ]
+    },
+    "partner": {
+      "country": [
+        "US"
+      ],
+      "industry": "000",
+      "motive": [
+        "NA"
+      ],
+      "notes": "Software error from 3rd party",
+      "region": [
+        "019021"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 451000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 451000,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "amount": 451000,
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 451000,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "68c90150-dc2c-11ef-94f8-638529e3ff3b",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "apinto",
+    "analyst_notes": "Error from 3rd party software, only internal people saw it.",
+    "created": "2025-01-27T05:27:56.645Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "error in software developed by 3rd party"
+      },
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "internal employees not noticing the data leak was happeneing"
+      }
+    ],
+    "github": "20662",
+    "master_id": "eb8f5d8a-c1ed-4a19-8c34-f69367fae58a",
+    "modified": "2025-01-27T05:53:30.333Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 29,
+        "month": 4,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://cybernews.com/news/jp-morgan-security-incident/; https://www.pionline.com/defined-contribution/jp-morgan-data-breach-exposes-451000-retirement-savers",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "More than 451,000 individuals were affected by a data breach that occurred at J.P. Morgan Chase Bank, the company disclosed in a regulatory filing with the Office of the Maine Attorney General on April 29. The bank said that a software issue in a vendor-provided system allowed users to access retirement plan participants\u2019 records that they were not entitled to see. The \u201cincorrect entitlements\u201d were limited to three authorized system users who as part of their job regularly access this type of information and have an obligation to safekeep it. Once the bank became aware of the software issue on Feb. 23, it corrected the users\u2019 access issue and tested and applied a software update, according to the filing. Personal, Sensitive Personal, Banking info. The company has disclosed that the incident occurred in August 2021 but was only discovered in February 2024.",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 3
+    },
+    "incident": {
+      "month": 8,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "52211",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "JP Morgan Chase Bank"
+  }
+}

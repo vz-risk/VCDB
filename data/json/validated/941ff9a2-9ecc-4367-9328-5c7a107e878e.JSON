@@ -1,0 +1,157 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Unknown initial hacking action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Magecard-like implant",
+      "result": [
+        "Exfiltrate",
+        "Persist"
+      ],
+      "variety": [
+        "Capture app data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 206238,
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 206238,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Break in discovered"
+      ]
+    }
+  },
+  "incident_id": "8634d160-da97-11ef-94f8-638529e3ff3b",
+  "plus": {
+    "analysis_status": "Finalized",
+    "analyst": "apinto",
+    "analyst_notes": "Magecart-like incident, skimmed 200k credit cards",
+    "created": "2025-01-25T05:09:39.831Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "initial attack vector"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installation"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "skimming activity by Magecart-like"
+      }
+    ],
+    "github": "21274",
+    "master_id": "941ff9a2-9ecc-4367-9328-5c7a107e878e",
+    "modified": "2025-01-25T06:22:59.863Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.forbes.com/sites/larsdaniel/2024/11/10/200000-selectblinds-customers-exposed-in-card-skimming-data-breach/; https://therecord.media/selectblinds-customers-credit-card-info-data-breach-website-malware",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In a significant cybersecurity incident that remained undetected for nearly nine months, SelectBlinds, an Arizona-based window coverings retailer, has disclosed a massive data breach affecting 206,238 customers. The breach began on Jan. 7 and was only discovered on Sept. 28, when the company identified suspicious activity on its website SelectBlinds discovered that attackers had gained access to customers' names, email addresses, shipping and billing information, phone numbers, and most critically, complete payment card details including card numbers, expiration dates and CVV security codes. For customers who logged into their accounts during checkout, their website credentials were also compromised The attack methodology bears the hallmarks of sophisticated e-skimming operations, commonly known as Magecart attacks. These attacks represent an increasingly prevalent threat in the e-commerce landscape, where cybercriminals inject malicious JavaScript code into website checkout pages.  In SelectBlinds' case, \"an unauthorized third party embedded malware on the SelectBlinds website that allowed data scraping on sales transactions that were entered on the check-out page\". ",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 9
+    },
+    "incident": {
+      "day": 7,
+      "month": 1,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "33792",
+    "region": [
+      "019021"
+    ],
+    "state": "AZ",
+    "victim_id": "SelectBlinds"
+  }
+}
