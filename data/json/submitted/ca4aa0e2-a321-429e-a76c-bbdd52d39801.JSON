@@ -1,0 +1,150 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "86fa0f00-dfee-11ef-8e7d-5bcd93832819",
+    "security_incident": "Confirmed",
+    "reference": "https://thecyberexpress.com/kadokawa-data-breach-affecting-people/",
+    "summary": "Kadokawa Corporation, a major Japanese publisher, has confirmed a significant data breach affecting 254,241 individuals due to a cyberattack. The Kadokawa data breach, discovered on June 8, was revealed following a thorough investigation by third-party cybersecurity experts.  The cyberattack on Kadokawa, which targeted the Group’s data center, specifically affected DWANGO Co., Ltd., a subsidiary known for its Niconico services.  Details of the Kadokawa Data Breach Kadokawa’s announcement detailed the extent of the information compromised in the ransomware attack. The affected data in Kadokawa data breach includes:  Business Partners: Personal information (names, dates of birth, addresses, telephone numbers, email addresses, pseudonyms, bank account details, etc.) of some business partners of DWANGO Co., Ltd., and its affiliates. Former Employees: Personal information of former employees of DWANGO Co., Ltd., and its affiliated companies. Interviewees: Personal details of individuals interviewed by DWANGO Co., Ltd., and its affiliates. Students and Educators: Personal data of current students, graduates, parents, applicants, and document requesters from N Progressive School and N/S High Schools, including information on educational background and student status. Employees: Personal information of all employees of DWANGO Co., Ltd., including contract and temporary workers, and some employees of affiliated and sibling companies. In addition to personal data, the Kadokawa data breach also included company information such as contracts with business partners, internal documents, and information about companies operated by former employees.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "ca4aa0e2-a321-429e-a76c-bbdd52d39801",
+        "modified": "2025-01-31T22:21:23.681Z",
+        "created": "2025-01-31T22:15:03.152Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "gained access through unknown action"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "installed ransomware"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfiltrated data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "encrypted data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 8,
+                "month": 6,
+                "year": 2024
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2025,
+        "github": "20930"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "JP"
+        ],
+        "victim_id": "Kadokawa Corporation",
+        "industry": "511130",
+        "employee_count": "1001 to 10000"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 250000
+                }
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

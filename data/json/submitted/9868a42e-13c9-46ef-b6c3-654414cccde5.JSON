@@ -1,0 +1,102 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "a0021b90-e021-11ef-8e7d-5bcd93832819",
+    "security_incident": "Confirmed",
+    "reference": "https://www.securityweek.com/life360-says-personal-information-stolen-from-tile-customer-support-platform/",
+    "confidence": "Medium",
+    "summary": "Location tracking company Life360 this week disclosed a data breach impacting personal information stored on a customer support platform.  The incident, Life360 revealed, was identified after a threat actor contacted it claiming to be in the possession of the stolen information, with the intent to extort the company. The hackers appear to have targeted systems associated with Life360 subsidiary Tile.   “We promptly initiated an investigation into the potential incident and detected unauthorized access to a Tile customer support platform (but not our Tile service platform),” the company said in a data breach notice.  The potentially compromised information, Life360 said, includes names, addresses, phone numbers, email addresses, and Tile device identification numbers.  “It does not include more sensitive information, such as credit card numbers, passwords or log-in credentials, location data, or government-issued identification numbers, because the Tile customer support platform did not contain these information types,” the company said.  According to Life360, no other Tile systems beyond the customer support platform appear to have been affected by the data breach.  “We have taken and will continue to take steps designed to further protect our systems from bad actors, and we have reported this event and the extortion attempt to law enforcement,” the location tracking company said.  Life360 shared no details on the identity of the attackers, nor did it say whether it conceded to the threat actor’s extortion demands. No information on how the data breach occurred has been provided either.",
+    "plus": {
+        "master_id": "9868a42e-13c9-46ef-b6c3-654414cccde5",
+        "modified": "2025-02-01T04:41:01.408Z",
+        "created": "2025-02-01T04:20:49.481Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "used stolen credentials to access server and steal data "
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2025,
+        "github": "20786"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Life360",
+        "industry": "511210",
+        "employee_count": "101 to 1000",
+        "state": "CA"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ],
+            "notes": "One article said they used admin creds "
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

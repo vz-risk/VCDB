@@ -1,0 +1,148 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "fb321010-e012-11ef-8e7d-5bcd93832819",
+    "security_incident": "Confirmed",
+    "reference": "https://observenow.com/2024/07/major-data-breach-exposes-personal-information-of-nearly-8-million-angel-one-customers/ ; https://www.business-standard.com/companies/news/broking-firm-angel-one-rocked-by-massive-data-leak-8-mn-users-affected-124071000156_1.html. ;   https://economictimes.indiatimes.com/tech/technology/personal-data-of-almost-8-million-angel-one-customers-leaked-online/articleshow/111612380.cms?from=mdr",
+    "summary": "In a significant data breach, the personal information of approximately 7.9 million customers of Mumbai-based stock broking firm Angel One was exposed online on Tuesday. The leaked data, which appeared on a hacker portal, includes sensitive details such as names, addresses, contact numbers, and even bank account information of the affected individuals. The hacker also claimed access to the customers’ stock holdings and profit and loss statements, as seen in a copy of the data dump reviewed by ET.  A private cybersecurity consultant who examined the data indicated that it appears to be from around 2023, and the hacker has only released a portion of it so far. The consultant suggested that a ransomware demand might have been involved, though the specifics of any interactions between the hackers and the company remain unclear, given that the data dump is over a year old.  On April 21, 2023, Angel One had reported a data breach in a stock exchange filing, acknowledging that certain client profile data and client holding data might have been accessed unauthorizedly. However, the company has not yet confirmed the current claims. Emailed queries to Angel One for comments went unanswered.  The cybersecurity consultant also highlighted that despite the potential age of the data, it remains valuable to spammers and scammers who target active traders, posing significant risks due to the exposure of bank account details.  Angel One, India’s third-largest stock broking company with around 6.5 million active traders, reported a total operational revenue of Rs 1,357 crore and a net profit of Rs 339 crore for FY24.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "82a79a52-632f-435a-b4c6-469cfe88b65f",
+        "modified": "2025-02-01T02:44:22.669Z",
+        "created": "2025-02-01T02:36:00.017Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "unknown action to gain access "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfiltration of data "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "data encrypted"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "month": 7,
+                "year": 2024
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2025,
+        "github": "20883"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "IN"
+        ],
+        "victim_id": "Angel One",
+        "employee_count": "1001 to 10000",
+        "industry": "523120"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown action to gain access"
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}
