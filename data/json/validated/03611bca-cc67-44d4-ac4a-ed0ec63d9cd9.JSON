@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "NA"
+      ],
+      "target": [
+        "Executive"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Executive"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "1fba0990-e0ab-11ef-bb83-fdfe95aef2b7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-02-01T20:45:04.809Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "unknown hacking action to gain access and exfiltrate data"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "attempted to extort money company with threats to post data"
+      }
+    ],
+    "github": "20645",
+    "master_id": "03611bca-cc67-44d4-ac4a-ed0ec63d9cd9",
+    "modified": "2025-02-01T20:59:05.411Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://cybernews.com/news/piping-rock-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Piping Rock, a US-based producer of vitamins and dietary supplements, has allegedly been breached, with attackers accessing over 2.1 million emails.  An ad for the company\u2019s data recently appeared on a well-known data leak forum. The culprit claims that the personal details of nearly a million customers lie within 2.1 million stolen emails.  The Cybernews research team has looked into the data sample that the attacker provided and concluded that the information appears to be legitimate.  We\u2019ve reached out to Piping Rock for comment but did not receive a response before publishing.  The attacker claims to have obtained the personal details of 957,384 of the company\u2019s customers, including:  Email addresses Names Phone numbers Home addresses Purchases The attacker\u2019s post reads, \u201cThe management suddenly just stopped in the middle of negotiations,\u201d implying that the hacker has been discussing the data theft with the company.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "325411",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Piping Rock"
+  }
+}

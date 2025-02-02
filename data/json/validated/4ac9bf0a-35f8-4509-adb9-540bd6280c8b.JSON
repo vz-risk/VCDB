@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2500000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "fef7ef70-e0c7-11ef-bb83-fdfe95aef2b7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-02-02T00:11:45.255Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "use of stolen credentials "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "exfiltrated data "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data "
+      }
+    ],
+    "github": "19811",
+    "master_id": "4ac9bf0a-35f8-4509-adb9-540bd6280c8b",
+    "modified": "2025-02-02T00:22:41.882Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.360dx.com/business-news/enzo-biochem-data-25m-patients-breached-ransomware-attack#.ZHkgPOzMJdc.  ;   https://www.hipaajournal.com/enzo-biochem-hipaa-settlement-ny-nj-cty/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Old and shared employee passwords led to a stunning data breach at a healthcare company that compromised patient data for over 331,000 New Jersey residents, according to New Jersey Attorney General Mathew Platkin.  Platkin's office announced a multi-state settlement with New York-based Enzo Biochem, which provided diagnostic testing at laboratories in New York, Connecticut, and New Jersey.  A data breach in 2023 exposed the personal data of over 2.4 million people in the U.S., including 331,600 people in New Jersey, according to Platkin.    As a result of the agreement, Platkin says Enzo will pay a $4.5 million penalty to New Jersey, New York, and Connecticut, and has agreed to strengthen its data security practices.  New Jersey will receive more than $930,000 under the terms of the agreement.    Read More: 'Stunning' data breach at NJ healthcare company, AG says | https://wpgtalkradio.com/stunning-data-breach-at-nj-healthcare-company-ag-says/?utm_source=tsmclip&utm_medium=referralOne of the passwords used in the cyberattack has not been changed for at least ten years.  \"It is stunning that as recently as last year, this healthcare company apparently did not abide by basic security precautions for online accounts, such as instructing its employees not to share passwords,\u201d Platkin said in a statement, \"Businesses of all kinds, and especially healthcare firms, must make robust cybersecurity a top priority. Poor data security and privacy practices make it easy for cybercriminals to exploit technological vulnerabilities and gain access to sensitive health information.\"  Once the cybercriminals were logged in using the employee credentials, they installed malicious software on several of Enzo\u2019s systems.  They were then able to steal patient information that included: names, addresses, dates of birth, phone numbers, Social Security numbers, and medical treatment/diagnosis information.  Due to a lack of system monitoring, Enzo did not become aware of the attack for several days, according to Platkin.    Read More: 'Stunning' data breach at NJ healthcare company, AG says | https://wpgtalkradio.com/stunning-data-breach-at-nj-healthcare-company-ag-says/?utm_source=tsmclip&utm_medium=referral",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541714",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Enzo Biochem"
+  }
+}

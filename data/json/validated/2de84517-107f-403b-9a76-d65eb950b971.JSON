@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 123000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 123000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "60130180-dff3-11ef-8e7d-5bcd93832819",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-01-31T22:49:45.368Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "TA gained access via unknown action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "took data "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encryrpted data"
+      }
+    ],
+    "github": "20927",
+    "master_id": "2de84517-107f-403b-9a76-d65eb950b971",
+    "modified": "2025-01-31T22:59:20.232Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 18,
+        "month": 7,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.securityweek.com/marinemax-notifying-123000-of-data-breach-following-ransomware-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Boat dealer MarineMax is informing more than 123,000 individuals about a data breach resulting from a ransomware attack launched against the company earlier this year.  The incident came to light in March, when MarineMax, one of the world\u2019s largest retailers of recreational boats and yachts, revealed in an SEC filing that it was targeted in a cyberattack that had caused some disruption.   The Rhysida ransomware group took credit for the attack, auctioning data allegedly stolen from the company.   Screenshots published at the time by the hackers suggested they had obtained financial documents and spreadsheets, among other types of files. MarineMax informed the Maine Attorney General\u2019s Office this week that the incident resulted in a data breach impacting more than 123,000 people.   The company initially said the compromised environment did not store any sensitive data, but it\u2019s now telling impacted customers that the hackers acquired some files, including ones containing their personal information.   Affected individuals are being provided two years of free credit monitoring and identity restoration services.   The Rhysida ransomware group emerged in May 2023 and it continues to be active, targeting organizations in various sectors, including government, IT, manufacturing, healthcare, and education.      ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 3,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "441222",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "MarineMax Boats "
+  }
+}

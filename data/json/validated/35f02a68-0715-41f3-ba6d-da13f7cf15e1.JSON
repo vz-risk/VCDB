@@ -1,0 +1,173 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Alphv and BlackCat - both took credit but unknown which was actual TA"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 100000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 100000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "01d78410-dfe9-11ef-8e7d-5bcd93832819",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-01-31T21:35:32.305Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "gained access via unknown hacking action "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "TA took copy of data"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data"
+      }
+    ],
+    "github": "20983",
+    "master_id": "35f02a68-0715-41f3-ba6d-da13f7cf15e1",
+    "modified": "2025-01-31T21:45:33.384Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 19,
+        "month": 8,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/cyberattacks-on-ny-oh-senior-care-providers-affect-181000-individuals/ ;https://www.securityweek.com/100000-impacted-by-jewish-home-lifecare-data-breach/  ;  ",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Jewish Home Lifecare, doing business as The New Jewish Home in New York City, has notified the Maine Attorney General about unauthorized access to the personal and protected health information of up to 104,234 individuals. The nonprofit senior health care system identified unauthorized access to its network on January 7, 2024. Assisted by third-party forensics experts, it was confirmed that an unauthorized third party accessed certain files on its network. The review of those files took until July 17, 2024, when it was confirmed that they contained sensitive information. The notification letter to the Maine Attorney General does not state what types of information were involved, and at the time of writing, there is no substitute breach notice on The New Jewish Home website. Individual notifications state the types of information that were compromised in the incident. Notification letters were sent to the affected individuals on August 16, 2024, and those individuals have been offered complimentary credit monitoring and identity theft protection services for 12 months. The New Jewish Home said steps have been taken to better protect the information in its care\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 7,
+      "month": 1,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Jewish Home Lifecare"
+  }
+}

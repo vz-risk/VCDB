@@ -1,0 +1,175 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 252000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "64c1d190-e0b9-11ef-bb83-fdfe95aef2b7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-02-01T22:27:13.577Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "TA used unknown hacking action to gain access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed malwlare"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "stole data "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data "
+      }
+    ],
+    "github": "20357",
+    "master_id": "647fbed9-213b-42b0-80b8-5a0636feb889",
+    "modified": "2025-02-01T22:36:30.292Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 24,
+        "month": 1,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://healthitsecurity.com/news/mississippi-health-system-suffers-ransomware-attack-253k-individuals-impacted",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Singing River Health System in Mississippi suffered a ransomware attack in August 2023 that resulted in a data breach. The breach impacted 252,890 individuals in total, according to a notice provided to the Maine Attorney General\u2019s Office.   Singing River identified unauthorized access between August 16 and 19, later determining that the incident was a \u201cmalicious and sophisticated ransomware attack.\u201d The health system worked to promptly respond to the incident and assess its systems.  The health system said it doesn\u2019t believe that any information has been misused as a result of the incident, but victims are entitled to 12 months of credit monitoring services. The breach potentially exposed names, dates of birth, Social Security numbers, addresses, medical information, and health insurance.   Singing River Hospital System said this week close to 900,000 patients had their personal information disclosed to hackers as the result of a 2023 ransomware attack, a number much larger than previously reported. The Pascagoula-based business earlier said it thought the breach involved only about 250,000 patients. The new information came to light in a filing Singing River made in the state of Maine. Several medical and tech trade publications reviewed that paperwork and published stories this week. According to Comparitech, a publication reporting cybersecurity news, Singing River \u201cmore than tripled the victim count from an August 2023 data breach. The Mississippi healthcare provider has sent breach notifications to a total of 895,204 individuals, up from the previous number of 252,980.\u201d Names, Social Security numbers, dates of birth, addresses, medical information, and health information are among the compromised data, several of the publications reported. Singing River says it \u201cis unaware of any misuse of individual information\u201d and is contacting patients \u201cout of an abundance of caution.\u201d ",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2023
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622000",
+    "region": [
+      "019021"
+    ],
+    "state": "MS",
+    "victim_id": "Singing River Hospital "
+  }
+}

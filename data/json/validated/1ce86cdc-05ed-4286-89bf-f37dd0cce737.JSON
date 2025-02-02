@@ -1,0 +1,106 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "google cloud storage bucket left unprotected",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "7b544080-e0bb-11ef-bb83-fdfe95aef2b7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-02-01T22:42:10.440Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "misconfigured google cloud storage bucket"
+      }
+    ],
+    "github": "20343",
+    "master_id": "1ce86cdc-05ed-4286-89bf-f37dd0cce737",
+    "modified": "2025-02-01T22:51:35.837Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "month": 1,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://github.com/vz-risk/VCDB/issues/20343#:~:text=https%3A//cybernews.com/security/coronalabeu%2Dtests%2Dleak%2Dexpose%2Dpatient%2Ddata/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The COVID-19 testing platform, Coronalab.eu, has exposed a database containing 11.8 million patient records, including COVID-19 certificates, test records, passport numbers, and other sensitive details.  While the Covid-19 pandemic is slowly becoming a distant memory, the data we gave away during the outbreak is not.  Coronalab.eu, a Dutch online platform for Covid-19 testing, left a misconfigured Google Cloud Storage bucket with 1.7 million files, covering 11.7 million records on individuals from 44 countries, the Cybernews research team has revealed.  The open bucket was dubbed \u201cprod,\u201d suggesting that Coronalab used it to store and manage data used in their operational and production IT environments.  The team discovered the open bucket in late November, with Coronalab fixing the issue after being contacted.  We contacted the platform and its owners, medical lab Microbe & Lab, for comment about the leak but did not receive a reply before publishing this article.  What sensitive data was exposed? Researchers claim that among the nearly 2 million exposed files, they\u2019ve discovered 120K Covid certificates in QR code formats and 32K comma-separated values (CSV) files with over 11.7 million Covid test results.  The exposed documents cover a period from 2020 until 2022. The leak exposed a trove of sensitive and personally identifiable user data, including:  Patients\u2019 names Nationality Dates of birth Passport numbers Covid test results Email addresses Phone numbers Destination country if the test was taken for traveling reasons According to the team, the majority of leaked data likely belonged to Dutch nationals, as almost 89% of total leaked phone numbers came from the Netherlands. A further 1.5% were UK-based, 1.2% were from the USA, 0.8% were from Germany, and 0.8% were from Italy.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "62151",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Coronalab"
+  }
+}

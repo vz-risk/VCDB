@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "notes": "used a data scraping software to obtain data ",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Other"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "DrOne"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 800000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "740e10c0-e0c6-11ef-bb83-fdfe95aef2b7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-02-02T00:00:42.700Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "unknown action to gain access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "took data from site"
+      }
+    ],
+    "github": "20097",
+    "master_id": "3ca34f14-8197-43c5-a140-e6c736e42e5d",
+    "modified": "2025-02-02T00:11:00.028Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.hackread.com/hacker-leaks-scraped-chess-com-user-records/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "he scraped Chess.com data was leaked on Breach Forums on November 8th, 2023 by a threat actor operating under the alias \u2018DrOne.\u2019 Chess.com is a highly popular online platform for chess enthusiasts and a social networking website. As of 2023, the platform boasts more than 150 million registered users, indicating that the leaked records account for approximately only 0.533% of the total user base.  The database was disclosed on November 8th, 2023 on Breach Forums, a well-known platform for hackers and cybercrime activities. Interestingly, this forum recently saw another threat actor leaking a scraped database from LinkedIn just a couple of days prior, which contained information from 25 million users.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 8,
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "516210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "chess.com"
+  }
+}

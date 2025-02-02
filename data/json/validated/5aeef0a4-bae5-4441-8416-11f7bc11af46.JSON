@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "fb4daa30-e019-11ef-8e7d-5bcd93832819",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-02-01T03:26:06.675Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "unknown action to gain access "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data exfiltrated "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "triggered ransomware"
+      }
+    ],
+    "github": "20826",
+    "master_id": "5aeef0a4-bae5-4441-8416-11f7bc11af46",
+    "modified": "2025-02-01T03:44:15.056Z",
+    "sub_source": "priority"
+  },
+  "reference": "20826",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "(Reuters) \u2013 Evolve Bank and Trust confirmed on Wednesday it was the victim of a cybersecurity incident that involved customers\u2019 data being illegally released on the dark web.  A spokesperson for the Arkansas-based lender said they have engaged appropriate law enforcement agencies to aid in their investigation and response efforts.  \u201cWe will offer all impacted customers (end users) complimentary credit monitoring with identity theft protection services. Those affected will be contacted directly with instructions on how to enroll in these protective measures,\u201d the spokesperson added.  The U.S. Federal Reserve had said earlier this month it had ordered Evolve to bolster its risk management programs around fintech partnerships as well as anti-money laundering laws.  Cybercrime group Lockbit 3.0 posted data hacked from Evolve on Tuesday, according to a Bloomberg News report, which also said the hackers had given the Fed until Tuesday afternoon to meet its ransom demands in exchange for not posting sensitive data from an alleged hack of the central bank.  In a post on social media platform X, Mercury said Evolve\u2019s security breach included some account numbers and deposit balances associated with the fintech company and that affected customers have been notified of preventative steps.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 6,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522210",
+    "region": [
+      "019021"
+    ],
+    "state": "AR",
+    "victim_id": "Evolve Bank and Trust "
+  }
+}
