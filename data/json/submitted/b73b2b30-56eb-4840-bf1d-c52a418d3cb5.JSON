@@ -1,0 +1,157 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "1b7b9de0-e1ae-11ef-82ac-ff675e604920",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "reference": "https://www.jdsupra.com/legalnews/infosys-mccamish-systems-data-breach-6464383/; https://www.jdsupra.com/legalnews/data-breach-at-infosys-mccamish-affects-1942624/; https://securityaffairs.com/165015/data-breach/infosys-mccamish-systems-data-breach-lockbit.html",
+    "summary": "\"Infosys McCamish Systems (IMS) revealed that the 2023 data breach following the LockBit ransomware attack impacted 6 million individuals.  IMS specializes in providing business process outsourcing (BPO) and information technology (IT) services specifically tailored for the insurance and financial services industries.  Infosys McCamish Systems (IMS) disclosed the security breach on November 3, 2023, in a filing with SEC, the company reported it was the victim of a cyberattack that resulted in the non-availability of certain applications and systems.  McCamish immediately launched an investigation into the incident and worked on the remediation with the help of cybersecurity consultants.  At the time, the company did not reveal the type of attack it suffered, however, on November 4, the LockBit ransomware gang claimed responsibility for the attack.  The company restored the impacted systems by December 31, it also estimated the losses caused by the incident will be at least $30 million.  “On the basis of analysis conducted by the cybersecurity firm, McCamish believes that certain data was exfiltrated by unauthorized third parties during the incident and this exfiltrated data included certain customer data. McCamish has engaged a third-party e- discovery vendor in assessing the extent and nature of such data. This review process is ongoing. McCamish may incur additional costs including indemnities or damages/claims, which are indeterminable at this time.” reads the statement sent to the SEC. “Infosys had previously communicated the occurence of this cybersecurity incident to BSE Limited, National Stock Exchange of India Limited, New York Stock Exchange and to United States Securities and Exchange Commission on November 3, 2023.”  In February, Bank of America began notifying some customers following the IMS data breach. The bank sent notification letters to 57,000 customers, informing them that their personal information has been compromised  Now the company revealed that the 2023 data breach after the LockBit ransomware attack impacted 6 million individuals.  The investigation determined that threat actors gained access to the company systems between October 29, 2023, and November 2, 2023.  “The in-depth cyber forensic investigation determined that unauthorized activity occurred between October 29, 2023, and November 2, 2023.” reads the data breach notification sent by the company to the impacted individuals. “Through the investigation, it was also determined that data was subject to unauthorized access and acquisition. With the assistance of third-party eDiscovery experts, retained through outside counsel, IMS proceeded to conduct a thorough and time-intensive review of the data at issue to identify the personal information subject to unauthorized access and acquisition and determine to whom the personal information relates. IMS has notified its impacted organizations of the Incident and of the compromise of any personal information pertaining to them.”  “The sensitive personal data of 6,078,263 people has been compromised. Now, victims’ names, Social Security numbers, financial information, and medical information may be in the hands of criminals, putting victims at a greater risk of identity theft and other frauds.” reads a press release published by the company.  “On June 27, 2024, Infosys McCamish filed a notice with the Attorney General of Maine describing a data breach affecting consumers nationwide. In this notice, Infosys McCamish explains that customers of Oceanview Life & Annuity Company were among those affected. However, in previous filings, Infosys McCamish has indicated that customers of other companies were also affected, including Union Labor Life Insurance, Newport Group, Inc., and more.”  IMS determined that exposed data includes:      Names,     Social Security numbers,     Medical information,     Biometric data,     Financial account information, and     Passport numbers.  The company is not aware of any abuses of the exposed data, however, it offered twenty-four months of complimentary credit monitoring to current customers for individuals associated with those customers  “Although we are unaware of any instances since the Incident occurred in which the personal information has been fraudulently used, IMS is nevertheless offering impacted individuals complimentary credit monitoring for twenty-four (24) months and dedicated call center services as well as providing guidance on how to protect against identity theft and fraud, including advising individuals to report any suspected identity theft or fraud to their financial institutions.” concludes the notification. “IMS is also providing individuals with information on how to place a fraud alert and security freeze on one’s credit file, information on protecting against tax fraud, the contact details for the national credit reporting agencies, information on how to obtain a free credit report, a reminder to remain vigilant for fraud and identity theft by reviewing account statements and monitoring credit reports, and encouragement to contact the Federal Trade Commission, their Attorney General, and law enforcement to report attempted or actual identity theft and fraud.”\"",
+    "plus": {
+        "master_id": "595bcbd3-9100-4c45-ae29-808bfdf3bbfa",
+        "modified": "2025-02-03T06:08:11.711Z",
+        "created": "2025-02-03T05:38:57.342Z",
+        "event_chain": [
+            {
+                "summary": "Unknown initial action",
+                "actor": "ext",
+                "attribute": "unk",
+                "action": "unk",
+                "asset": "srv"
+            },
+            {
+                "summary": "Malware installed",
+                "actor": "ext",
+                "attribute": "ia",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Data stolen",
+                "attribute": "cp",
+                "actor": "ext",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Encryption triggered.",
+                "actor": "ext",
+                "attribute": "au",
+                "action": "mal",
+                "asset": "srv"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "dbir_year": 2025,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "20843"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 6
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "secondary": {
+            "victim_id": [
+                "Bank of America; 522110",
+                "Oceanview Life & Annuity; 5241"
+            ]
+        },
+        "victim_id": "Infosys McCamish Systems (IMS)",
+        "industry": "541512",
+        "employee_count": "101 to 1000",
+        "state": "GA"
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "LockBit"
+            ]
+        }
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "Unknown initial action."
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 6000000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 6000000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

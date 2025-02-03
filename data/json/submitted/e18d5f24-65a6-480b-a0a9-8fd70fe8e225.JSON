@@ -1,0 +1,149 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "1b7b9de0-e1ae-11ef-82ac-ff675e604920",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "reference": "https://www.bleepingcomputer.com/news/security/nissan-is-investigating-cyberattack-and-potential-data-breach/; https://www.securityweek.com/ransomware-group-claims-100-gb-of-data-stolen-from-nissan/; https://www.hackread.com/nissan-data-breach-100000-customers-employees/; https://www.cpomagazine.com/cyber-security/nissan-oceania-data-breach-impacts-100000-individuals-in-australia-and-new-zealand/; https://www.infosecurity-magazine.com/news/employees-social-security-nissan/",
+    "summary": "Nissan has revealed that over 53,000 of its North America employees have had their personal data breached following a ransomware attack on its systems in late 2023.  The information accessed by the threat actor are employees’ names or other personal identifiers in combination with their social security numbers.  The Japanese-based car manufacturer made the disclosure in a data breach notification filed to the Office of the Maine Attorney General on May 15, 2024.",
+    "plus": {
+        "master_id": "595bcbd3-9100-4c45-ae29-808bfdf3bbfa",
+        "modified": "2025-02-03T08:36:21.316Z",
+        "created": "2025-02-03T05:38:57.342Z",
+        "event_chain": [
+            {
+                "summary": "Unknown initial action",
+                "actor": "ext",
+                "attribute": "unk",
+                "action": "unk",
+                "asset": "srv"
+            },
+            {
+                "summary": "Malware installed",
+                "actor": "ext",
+                "attribute": "ia",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Data stolen",
+                "attribute": "cp",
+                "actor": "ext",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Encryption triggered.",
+                "actor": "ext",
+                "attribute": "au",
+                "action": "mal",
+                "asset": "srv"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "dbir_year": 2025,
+        "github": "20236"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 5
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "JP"
+        ],
+        "victim_id": "Nissan",
+        "industry": "441110",
+        "employee_count": "10001 to 25000"
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Akira"
+            ]
+        }
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "Unknown initial action."
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Remote access"
+            },
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 100000
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 100000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

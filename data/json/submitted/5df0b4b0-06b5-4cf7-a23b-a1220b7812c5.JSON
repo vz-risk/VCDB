@@ -1,0 +1,151 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "1b7b9de0-e1ae-11ef-82ac-ff675e604920",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "reference": "https://www.marketwatch.com/story/vf-corp-says-cyber-security-breach-is-expected-to-impact-its-business-1003bcb7; https://www.barrons.com/articles/vf-stock-security-breach-df323ce2; https://www.cpomagazine.com/cyber-security/apparel-giant-vf-corporations-ransomware-attack-leaked-pii-of-over-35-million-customers/; https://cybernews.com/news/vans-data-breach-fraud-risk/; https://www.theregister.com/2024/03/24/vans_breach_disclosure/",
+    "summary": "Apparel Giant VF Corporation’s Ransomware Attack Leaked PII of over 35 Million Customers https://www.cpomagazine.com/cyber-security/apparel-giant-vf-corporations-ransomware-attack-leaked-pii-of-over-35-million-customers/  Apparel brands Timberland, Dickies, Smartwool, Vans, and The North Face owner, VF Corp., disclosed that the December ransomware attack leaked data, including personally identifiable information of over 35 million customers. VF Corp did not describe the ransomware attack as such but indicated that the hackers disrupted operations after “encrypting some IT systems.” The attacker’s identity remained undisclosed, although the ALPHV/BlackCat ransomware group had claimed responsibility.",
+    "plus": {
+        "master_id": "595bcbd3-9100-4c45-ae29-808bfdf3bbfa",
+        "modified": "2025-02-03T08:30:08.991Z",
+        "created": "2025-02-03T05:38:57.342Z",
+        "event_chain": [
+            {
+                "summary": "Unknown initial action",
+                "actor": "ext",
+                "attribute": "unk",
+                "action": "unk",
+                "asset": "srv"
+            },
+            {
+                "summary": "Malware installed",
+                "actor": "ext",
+                "attribute": "ia",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Data stolen",
+                "attribute": "cp",
+                "actor": "ext",
+                "action": "mal",
+                "asset": "srv"
+            },
+            {
+                "summary": "Encryption triggered.",
+                "actor": "ext",
+                "attribute": "au",
+                "action": "mal",
+                "asset": "srv"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "dbir_year": 2025,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "20267"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 12
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "victim_id": "VF Corporation",
+        "industry": "315250",
+        "employee_count": "25001 to 50000",
+        "state": "CO"
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Alphv/BlackCat"
+            ]
+        }
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "Unknown initial action."
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 35500000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 35500000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}

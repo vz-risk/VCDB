@@ -1,0 +1,104 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "7ce9ade0-e1c9-11ef-82ac-ff675e604920",
+    "security_incident": "Confirmed",
+    "confidence": "High",
+    "reference": "https://techcrunch.com/2023/12/19/comcast-xfinity-hackers-36-million-customers/; https://news.bloomberglaw.com/business-and-practice/comcast-says-hackers-may-have-stolen-some-xfinity-passwords; https://www.bleepingcomputer.com/news/security/xfinity-discloses-data-breach-affecting-over-35-million-people/; https://github.com/vz-risk/VCDB/files/13719117/Notice.To.Customers.of.Data.Security.Incident.pdf; https://www.csoonline.com/article/1267774/hackers-steal-data-from-millions-of-xfinity-customers-via-citrix-bleed-vulnerability.html",
+    "summary": " Comcast’s residential cable unit, Xfinity, has been hit by a cybersecurity breach in which hackers exploiting a critical vulnerability dubbed Citrix Bleed accessed the confidential information of nearly 36 million customers.  The vulnerability is embedded in certain Citrix networking devices that are widely used across major corporations. Citrix responded with patches in early October, but the delay in implementation by many companies left them vulnerable.  “Citrix Bleed is dangerous because it allows malicious users to access sensitive data coupled with the fact that it affects commonly used Citrix devices in large organizations,” said Josh Amishav, the CEO of cybersecurity firm Breachsense. “This means that the vulnerability can be exploited en masse, leading to significant data breaches.”",
+    "plus": {
+        "master_id": "ab24ec69-e16f-445b-9a01-bc21e4a258da",
+        "modified": "2025-02-03T10:46:43.368Z",
+        "created": "2025-02-03T08:54:57.214Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Hackers stole data"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "dbir_year": 2025,
+        "github": "20268"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2023,
+            "month": 12,
+            "day": 19
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "employee_count": "Over 100000",
+        "industry": "515210",
+        "victim_id": "Comcast",
+        "state": "PA"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit vuln"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate"
+            ],
+            "cve": "CVE-2023-4966"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unaffiliated"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal",
+                    "amount": 36000000
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 36000000
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.3.7"
+}
