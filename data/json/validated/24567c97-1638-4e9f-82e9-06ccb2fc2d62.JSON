@@ -1,0 +1,193 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5599699,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5599699
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "12110f5f-8f7b-4164-9d81-12440fd66c92",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2025-02-03T05:38:57.342Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee fell for a phish"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "20695",
+    "master_id": "140c3b6a-4314-4f96-8a6a-cf324bbafab7",
+    "modified": "2025-02-03T06:29:58.397Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.wbay.com/2024/05/13/ascension-continues-investigate-security-breach/; https://www.crn.com/news/security/2024/ascension-systems-are-being-restored-after-cyberattack; https://www.healthcaredive.com/news/ascension-lawsuits-ransomware-attack-cybersecurity/716248/; https://wskg.org/regional-news/2024-05-16/guthrie-lourdes-hospital-still-struggling-with-effects-of-ascension-cyberattack; https://www.michiganpublic.org/health/2024-06-12/ascension-employee-mistake-allowed-ransomware-attackers-access; https://www.infosecurity-magazine.com/news/ascension-attack-employee/; https://www.bleepingcomputer.com/news/security/ascension-health-data-of-56-million-stolen-in-ransomware-attack/; https://themercury.com/news/ascension-to-inform-5-6-million-patients-whose-info-was-involved-in-breach/article_adeed73c-c3b8-11ef-9451-0b6040eb569f.html; https://www.mcknightsseniorliving.com/news/ascension-living-residents-employees-among-6-million-affected-by-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ascension has revealed that ransomware attackers gained access to its systems after an employee accidently downloaded a malicious file.  The incident, which took place in May 2024, forced the US private healthcare provider to divert ambulances and postpone patient appointments.  Additionally, the attack prevented access to electronic health records (EHR), and took down various systems used to book tests, procedures and medications. Ascension is still working to restore its systems. The attack has been determined to be ransomware.  In an update on June 12, the spokesperson said the company had identified the source of the attack, stating: \u201cAn individual working in one of our facilities accidentally downloaded a malicious file that they thought was legitimate.\u201d  There is no further information about the source of the malicious file, but it seems likely to be a phishing-related attack.  Ascension emphasized that it has no reason to believe the employee acted maliciously, describing it as an \u201chonest mistake.\u201dThe Ascension spokesperson also said there is evidence that indicates the attackers stole files that may contain protected health information (PHI) and personally identifiable information (PII) of patients.  These files came from seven severs used by associates primarily for daily and routine tasks.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    },
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "6221",
+    "region": [
+      "019021"
+    ],
+    "state": "MO",
+    "victim_id": "Ascension"
+  }
+}

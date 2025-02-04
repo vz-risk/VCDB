@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 765000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 765000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "f2809da1-c3c0-4808-9279-3952466aa33c",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T03:29:49.983Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "System unprotected on the network"
+      }
+    ],
+    "github": "21184",
+    "master_id": "f779e3d7-13f9-4613-a4f7-509508f86971",
+    "modified": "2025-02-03T03:45:35.099Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://cybernews.com/security/taiwan-visitors-exposed-in-massive-data-leak-owlting/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Blockchain technology solutions company OwlTing has inadvertently exposed 765,000 users' sensitive data by leaving open access to its AWS storage (S3). The spill mostly affected hotel guests in Taiwan.  On July 29th, the Cybernews research team, during a routine investigation using OSINT methods, discovered a misconfigured Amazon S3 bucket storing a massive amount of files. S3 buckets are simple cloud storage containers on Amazon Web Services (AWS), similar to file folders for storing files.  Over 168,000 CSV and XLSX documents in the bucket contained the personally identifiable information (PII) of over 765,000 customers.  The leak was attributed to OwlTing, a Taiwanese company that serves global travel, food safety, hospitality, media, and other e-commerce sectors and offers well-recognized blockchain solutions.  The company confirmed the incident and took appropriate actions to close the leak. However, it somewhat downplayed the severity, saying, \u201cThe incident did not involve any sensitive data.\u201d  \u201cThe leakage of personal information such as full names, phone numbers, and hotel reservation details can lead to various forms of identity theft and fraud, posing serious risks to the affected individuals,\u201d Cybernews researchers warn.  The exposed data appears to be related to hotel management services and mostly contained booking data from popular platforms, such as Booking, Expedia, and others.  The leaked data includes the following:      Full Names     Phone numbers and some email addresses     Hotel booking details, such as dates for orders, check-ins and check-outs, room numbers and types, amounts paid and outstanding, currency, and the reservation service used for booking.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 24,
+      "month": 7,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "OwlTing"
+  }
+}

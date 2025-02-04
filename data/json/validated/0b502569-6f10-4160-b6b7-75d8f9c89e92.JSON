@@ -1,0 +1,166 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action.",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Ansgar"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 12900000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 12900000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "0448f9ea-7fa6-406f-bcaf-5d1107ac7975",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2025-02-03T05:38:57.342Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "20708",
+    "master_id": "5196714b-be27-4a52-9964-c6f4dd1ef24a",
+    "modified": "2025-02-03T06:20:21.573Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.itnews.com.au/news/medisecure-hit-by-cyber-security-breach-607992; https://www.smh.com.au/technology/police-investigate-large-scale-healthcare-data-breach-20240516-p5je66.html; https://www.abc.net.au/news/2024-05-16/health-organisation-part-of-large-scale-ransomware-data-breach/103856582; https://www.9news.com.au/national/health-data-breach-australia-cyber-security-coordinator/0c0467df-e444-4c03-9073-e97e2a4db55a; https://www.securityweek.com/medisecure-data-breach-impacts-12-9-million-individuals/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Australian digital prescription services provider MediSecure has confirmed that the personal and health information of 12.9 million individuals was stolen in an April 2024 ransomware attack.  The incident, which came to light in May, involved a database server containing the sensitive information of individuals who received services from MediSecure between March 2019 and November 2023.  \u201cMediSecure is unable to identify the specific impacted individuals despite making all reasonable efforts to do so due to the complexity of the data set,\u201d the company said in an updated incident notice.  According to the company, the server hosted semi-structured and unstructured data across multiple data sets, which made identifying the affected individuals not practicable without \u201cincurring substantial cost that MediSecure was not in a financial position to meet\u201d.  The attackers stole 6.5 terabytes of data before deploying the file-encrypting ransomware, but MediSecure was able to restore it using a clean backup.  The potentially stolen information, the company says, includes names, dates of birth, gender, addresses, phone numbers, email addresses, individual healthcare identifiers, Medicare card numbers and individual identifiers, prescription medication, and Pensioner Concession, Commonwealth Seniors, Healthcare Concession, Department of Veterans\u2019 Affairs (DVA) card numbers and expiry. ",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "4461",
+    "region": [
+      "019021",
+      "009053"
+    ],
+    "victim_id": "MediSecure"
+  }
+}

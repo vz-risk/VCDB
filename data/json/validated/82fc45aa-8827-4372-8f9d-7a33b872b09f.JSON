@@ -1,0 +1,170 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action.",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 267000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 267000,
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "ec454e6f-d180-4625-8996-cc91f595431b",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T05:38:57.342Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "20056",
+    "master_id": "03233f06-a2a1-40c7-998e-2307f4b755e0",
+    "modified": "2025-02-03T08:42:47.528Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://toronto.ctvnews.ca/five-ontario-hospitals-say-data-stolen-in-cyberattack-has-been-published-online-1.6628608; https://windsor.ctvnews.ca/hospitals-affected-by-cyberattack-say-stolen-patient-data-may-be-publicized-1.6624689; https://www.databreaches.net/exclusive-daixin-team-claims-responsibility-for-attacks-affecting-canadian-hospitals-starts-leaking-data/; https://www.databreaches.net/update-sensitive-patient-data-leaked-from-transform-ransomware-incident/; https://www.bluewaterhealth.ca/news/update-on-cyber-attacks-at-regional-hospitals-1; https://www.bleepingcomputer.com/news/security/transform-says-ransomware-data-breach-affects-267-000-patients/; https://www.cp24.com/news/five-ontario-hospitals-send-326k-letters-to-patients-whose-info-was-stolen-in-cyberattack-1.6832463",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Shared service provider TransForm has published an update on the cyberattack that recently impacted operations in multiple hospitals in Ontario, Canada, clarifying that it was a ransomware attack.  The organization confirms that the attackers managed to steal a database containing information on 5.6 million patient visits, corresponding to approximately 267,000 unique individuals.  TransForm is a not-for-profit, shared service organization founded by five hospitals in Erie St. Clair, Ontario, to manage their IT, supply chain, and accounts payable.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 5,
+      "victim_id": [
+        "Bluewater Health;621",
+        "Chatham-Kent Health Alliance;621",
+        "Erie Shores HealthCare;621",
+        "H\u00f4tel-Dieu Grace Healthcare;621",
+        "Windsor Regional Hospital;621"
+      ]
+    },
+    "victim_id": "TransForm"
+  }
+}

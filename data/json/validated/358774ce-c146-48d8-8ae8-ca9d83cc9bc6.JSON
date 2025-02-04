@@ -1,0 +1,119 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Programming error"
+      ],
+      "vector": [
+        "Inadequate processes"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    },
+    "partner": {
+      "country": [
+        "US"
+      ],
+      "industry": "000",
+      "motive": [
+        "NA"
+      ],
+      "region": [
+        "019021"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "No"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "13c75c636-69d5-4324-b9c8-038d29f9061d",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T03:29:49.983Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Code error pushed to customer machines caused widespread outages."
+      }
+    ],
+    "github": "20919",
+    "master_id": "39ac6441-15d0-4e52-89e1-c8b6646ea0b6",
+    "modified": "2025-02-03T05:36:10.509Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.cisa.gov/news-events/alerts/2024/07/19/widespread-it-outage-due-crowdstrike-update; https://github.com/user-attachments/files/16515991/CrowdStrike-PIR-Executive-Summary.pdf; https://github.com/user-attachments/files/16515993/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf; https://www.forbes.com/sites/kateoflahertyuk/2024/07/19/crowdstrike-windows-outage-what-happened-and-what-to-do-next/; https://techcrunch.com/2024/07/24/crowdstrike-offers-a-10-apology-gift-card-to-say-sorry-for-outage/; https://www.darkreading.com/cybersecurity-operations/crowdstrike-outage-losses-estimated-staggering-54b",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 19, 2024, at 04:09 UTC, a Rapid Response Content update for the Falcon sensor was published to Windows hosts running sensor version 7.11 and above. This update was to gather telemetry on new threat techniques observed by CrowdStrike, but triggered crashes (BSOD) on systems that were online between 04:09 and 05:27 UTC. Mac and Linux hosts were not impacted. Windows hosts that were not online, or did not connect during this period, were not impacted. Why It Happened: Cause of Incident The crashes were due to a defect in the Rapid Response Content, which went undetected during validation checks. When the content was loaded by the Falcon sensor, this caused an out-of- bounds memory read, leading to Windows crashes (BSOD).",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 19,
+      "month": 7,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5182",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Crowdstrike"
+  }
+}

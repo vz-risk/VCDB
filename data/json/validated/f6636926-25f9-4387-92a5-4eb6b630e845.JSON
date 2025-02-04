@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1700000,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1700000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "2e8eee47-7450-4f68-9934-f0f26fa38b15",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T03:29:49.983Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "System unprotected on the network"
+      }
+    ],
+    "github": "21026",
+    "master_id": "d0fee4b5-e98d-43fc-a0e9-145e63fe123f",
+    "modified": "2025-02-03T03:52:18.567Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.hipaajournal.com/exposed-database-confidant-health/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A cybersecurity researcher has found an exposed healthcare database containing mental health and substance abuse treatment records that could be accessed via the Internet without a password.  Researcher Jeremiah Fowler traced the database to Confidant Health, an Austin, TX-based company that has an AI-powered platform that connects individuals with therapists, psychiatrists, and providers of addiction treatment services. The company serves individuals in the states of Connecticut, Florida, New Hampshire, Texas, and Virginia.  Fowler identified around 126,000 files and 1.7 million logging records, which included sensitive personally identifiable information of patients, therapists, and healthcare professionals. The exposed information included names, addresses, driver\u2019s license information, state IDs, Medicaid cards, prescription medications, medical record requests, drug test results, and other health information. Audio recordings of sessions and text transcripts had also been exposed.  Fowler notified Confidant Health about the exposed data, was told that the incident would be investigated, and access to the database was restricted within a few hours. It is unclear for how long the data was exposed, whether it was accessed by unauthorized individuals, or if the database was managed by Confidant Health or a third party. Fowler has written about the discovery on VPNMentor. Confidant Health\u2019s website suggests it is a HIPAA-covered entity and has received a HIPAA Seal of Compliance. At present, a data breach is not listed on the HHS\u2019 Office for Civil Rights for Confidant Health.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621",
+    "region": [
+      "019021"
+    ],
+    "state": "CT",
+    "victim_id": "Confidant Health"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action.",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "SpaceBears"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1500000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1500000
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "90785d90-58e1-4d3d-9353-b7a60315ffa5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2025-02-03T05:38:57.342Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "21103",
+    "master_id": "311d8871-f231-48f1-be37-971fbcd7d52a",
+    "modified": "2025-02-03T05:46:42.263Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.cameroon-concord.com/business/cnps-cyberattack-1-5-million-cameroonians-data-exposed-in-massive-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The National Social Insurance Fund (CNPS) of Cameroon has found itself at the center of a major cyberattack, with hackers releasing 10 GB of highly confidential data on the dark web.  The breach has sent shockwaves through the nation, raising serious concerns about the security of personal and financial data managed by public institutions.  Initially reported by Cameroon Concord earlier this month, the incident is believed to have been orchestrated by the notorious hacking group SpaceBears. The attack has been confirmed by multiple cybersecurity entities, including Ransomware.live, which monitors ransomware attacks globally. Despite the government's initial denial, the severity of the breach is undeniable, especially with the exposure of sensitive data concerning over 1.5 million Cameroonian citizens. Scope of the Breach  According to the hackers, the data dump includes:      Employee and employer contribution records     Detailed personal information of social security beneficiaries     Financial documents and accounting reports     Backup data and client databases     Network schematics of Huawei infrastructure     Personal data of employees and citizens, including archived insurance information  The breadth of the leaked information has raised alarms about CNPS's vulnerable digital infrastructure. It also highlights the potential risks posed to millions of Cameroonians, who could now face identity theft, financial fraud, and other forms of exploitation.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CM"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "92",
+    "region": [
+      "002017"
+    ],
+    "victim_id": "National Social Insurance Fund (CNPS) of Cameroon"
+  }
+}

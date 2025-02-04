@@ -1,0 +1,198 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action.",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 270512,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 270512,
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "d1d700d3-6146-4a51-975e-3e9f8ee485f9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T05:38:57.342Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "20477",
+    "master_id": "630a1859-8aa2-43a5-937a-74dd36d963a2",
+    "modified": "2025-02-03T08:16:48.897Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.reuters.com/business/healthcare-pharmaceuticals/cencora-says-hit-by-cyber-attack-its-information-systems-2024-02-27/; https://www.scmagazine.com/brief/cencora-data-breach-blast-radious; https://www.bleepingcomputer.com/news/security/pharmaceutical-giant-cencora-says-data-was-stolen-in-a-cyberattack/; https://cyberinsider.com/cencora-notifies-patients-of-data-breach-affecting-personal-health-information/; https://www.jdsupra.com/legalnews/cencora-provides-notice-of-data-breach-2211310/; https://www.hipaajournal.com/cencora-cyberattack-data-breach/; https://github.com/vz-risk/VCDB/files/15473142/L01_Individual.Notice_GSK_5-24-2024.CA.pdf; https://www.jdsupra.com/legalnews/patient-data-provided-to-regeneron-6837781/; https://www.jdsupra.com/legalnews/sumitomo-pharma-america-announces-data-9873593/; https://telehealth.org/cencora/; https://www.ckom.com/2024/12/02/record-ransomware-payment-and-breach-affected-thousands-in-sask/; https://www.cbc.ca/news/canada/saskatchewan/sask-privacy-breach-1.7399543",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Pharmaceutical giant Cencora says they suffered a cyberattack where threat actors stole data from corporate IT systems.  Cencora, previously known as AmerisourceBergen, specializes in pharmaceutical services, providing drug distribution and solutions for doctor's offices, pharmacies, and animal healthcare. \"On February 21, 2024, Cencora, Inc. (the \"Company\"), learned that data from its information systems had been exfiltrated, some of which may contain personal information,\" reads the SEC filing.  Cencora says they contained the incident and are now working with law enforcement, external cybersecurity experts, and external counsel to investigate it.  Upon initial detection of the unauthorized activity, the company immediately took containment steps and commenced an investigation with the assistance of law enforcement, cybersecurity experts, and external counsel.  Cencora says they have not determined if the incident will materially impact their finances or operations.  When BleepingComputer contacted Cencora to learn more about the incident, they referred us to the statement in the SEC filing.  However, they confirmed that their cyberattack is unrelated to the Optum Change Healthcare ransomware attack that has led to significant outages in pharmaceutical billing.  \"We have no reason to believe there is a connection between the incident at Change and the unauthorized activity at Cencora,\" Cencora told BleepingComputer in a statement.  At this time, there is no further information on who breached Cencora and no ransomware gangs have taken responsibility.  A ransomware group known as Lorenz previously claimed to have breached Cencora in February 2023 while the company was operating as AmerisourceBergen, stating that they stole data related to the Animal Health division. Related Articles:  PowerSchool hacker claims they stole data of 62 million students  PowerSchool hack exposes student, teacher data from K-12 districts  Indian tech giant Tata Technologies hit by ransomware attack  US healthcare provider data breach impacts 1 million patients  Globe Life data breach may impact an additional 850,000 clients      AmerisourceBergen Cencora Cyberattack Data Breach Pharmaceutical   Lawrence Abrams Lawrence Abrams is the owner and Editor in Chief of BleepingComputer.com. Lawrence's area of expertise includes Windows, malware removal, and computer forensics. Lawrence Abrams is a co-author of the Winternals Defragmentation, Recovery, and Administration Field Guide and the technical editor for Rootkits for Dummies.      Previous Article     Next Article  Post a Comment Community Rules You need to login in order to post a comment  Not a member yet? Register Now You may also like: ThreatLocker Zero Trust World Popular Stories      Popular article      Backdoor found in two healthcare patient monitors, linked to IP in China     AI Hacker Robot Artificial Intelligence      DeepSeek exposes database with over 1 million chat records     Hospital      US healthcare provider data breach impacts 1 million patients",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 21,
+      "month": 2,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "446110",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 31,
+      "victim_id": [
+        "Bristol Myers Squibb",
+        "AbbVie Inc.",
+        "Acadia Pharmaceuticals Inc.",
+        "Bayer Corporation",
+        "Bristol Myers Squibb Patient Assistance Foundation",
+        "Dendreon Pharmaceuticals LLC",
+        "Endo Pharmaceuticals Inc.",
+        "Genentech, Inc.",
+        "GlaxoSmithKline Group of Companies",
+        "GlaxoSmithKline Patient Access Programs Foundation",
+        "Incyte Corporation",
+        "Marathon Pharmaceuticals, LLC/PTC Therapeutics, Inc.",
+        "Novartis Pharmaceuticals Corporation",
+        "Pharming Healthcare, Inc.",
+        "Regeneron Pharmaceuticals, Inc",
+        "Sumitomo Pharma America, Inc.",
+        "Sunovion Pharmaceuticals Inc",
+        "Tolmar",
+        "Abbot",
+        "Acrotech Biopharma Inc.",
+        "Amgen Inc. ",
+        "Bausch Health Companies Inc.",
+        "CareDx, Inc.",
+        "Heron Therapeutics, Inc.",
+        "Johnson & Johnson Services, Inc.",
+        "Johnson & Johnson Patient Assistance Foundation, Inc.",
+        "Otsuka America Pharmaceutical, Inc. ",
+        "Pfizer Inc.",
+        "Sandoz Inc.",
+        "Rayner Surgical Inc.",
+        "Takeda Pharmaceuticals U.S.A., Inc."
+      ]
+    },
+    "state": "PA",
+    "victim_id": "Cencora, Inc."
+  }
+}

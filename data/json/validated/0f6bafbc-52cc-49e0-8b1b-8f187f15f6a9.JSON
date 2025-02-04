@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 226000000,
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 226000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "3f28f649-68af-4991-8bfe-04c41b5bd006",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T03:29:49.983Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "System unprotected on the network"
+      }
+    ],
+    "github": "20159",
+    "master_id": "7fb7c727-7a5b-475f-9b4a-7e5810b57922",
+    "modified": "2025-02-03T05:24:15.374Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://securityaffairs.com/154271/data-breach/vietnam-post-data-leak.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Vietnam Post Corporation, a Vietnamese government-owned postal service, left its security logs and employee email addresses accessible to outside cyber snoopers, Cybernews researchers have discovered. The exposed sensitive data could spell trouble if accessed by malicious actors.  On October 3rd, the Cybernews research team discovered an open Kibana instance belonging to the Vietnam Post Corporation. Kibana is a visualization dashboard for data search and analytics, helping enterprises deal with large quantities of data.  At the time of discovery, the data store contained 226 million logged events, resulting in 1.2 Terabytes of data, which was being updated in real-time. The leaked information also had employee names and emails.  Those logs were mainly attributable to cybersecurity software such as Extended Detection and Response (XDR) and Security Information and Event Management (SIEM). Some records resembled a modified version of Wazuh, an open-source security information and event management (SIEM) platform.  \u201cEvent logs can be very valuable for potential attackers, as they can help with network, user, and service enumeration and tracking,\u201d Cybernews researchers explain.  The data store was left accessible for at least 87 days, as the internet-scanning IoT search engines indexed the data for the first time on July 8th, 2023.  Soon after the discovery on October 6th, Vietnam Post Corporation revoked public access before the Cybernews researchers could contact them. Cybernews has contacted the company but has yet to receive additional comments before publishing this article.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 1,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "VN"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "Vietnam Post Corporation"
+  }
+}

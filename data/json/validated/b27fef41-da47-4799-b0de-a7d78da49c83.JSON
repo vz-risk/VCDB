@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2023-4966",
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Other"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 395000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 395000,
+      "data_victim": [
+        "Customer"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "35c97511-7e3f-48ff-9a22-333ac816408d",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T08:54:57.214Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Hackers stole data"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion after data theft"
+      }
+    ],
+    "github": "20778",
+    "master_id": "ab18dc1daa-12d9-4431-a12a-e1c5491643a5",
+    "modified": "2025-02-03T11:40:51.834Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.techradar.com/pro/security/hundreds-of-snowflake-customers-may-have-been-hit-by-breach-that-stole-significant-data; https://securityboulevard.com/2024/06/breach-debrief-series-snowflake-mfa-meltdown-creates-data-leak-blizzard/; https://www.bleepingcomputer.com/news/security/advance-auto-parts-stolen-data-for-sale-after-snowflake-attack/; https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake-data-theft-extortion/; https://thehackernews.com/2024/06/snowflake-breach-exposes-165-customers.html; https://www.securityweek.com/snowflake-attacks-mandiant-links-data-breaches-to-infostealer-infections/; https://www.techradar.com/pro/security/pure-storage-confirms-data-breach-snowflake-attack-again-thought-to-be-involved; https://www.wired.com/story/epam-snowflake-ticketmaster-breach-shinyhunters/; https://www.insurancejournal.com/news/national/2024/06/24/780774.htm; https://www.techradar.com/pro/security/snowflake-data-breach-hits-los-angeles-school-board-data-on-thousands-of-students-stolen; https://www.informationweek.com/cyber-resilience/snowflake-linked-breach-strikes-los-angeles-school-district; https://www.channelfutures.com/security/data-breach-impacts-neiman-marcus-shoppers; https://www.dallasnews.com/business/2024/06/25/data-breach-exposes-info-for-64000-neiman-marcus-shoppers/; https://www.wfaa.com/article/news/local/dallas-luxury-retailer-neiman-marcus-says-some-customer-information-was-leaked-in-data-breach/287-c1b44861-da57-4d85-b154-bb9a20271a59; https://www.bleepingcomputer.com/news/security/neiman-marcus-data-breach-31-million-email-addresses-found-exposed/; https://www.securityweek.com/att-data-breach-nearly-all-wireless-customers-exposed-in-massive-hack/;  https://krebsonsecurity.com/2024/07/hackers-steal-phone-sms-records-for-nearly-all-att-customers/;  https://www.wired.com/story/atandt-paid-hacker-300000-to-delete-stolen-call-records/; https://www.siliconrepublic.com/enterprise/att-data-breach-shinyhunters-hack-bitcoin-payment;  https://github.com/user-attachments/files/17720592/Snowflake.pdf;  https://techcrunch.com/2024/12/31/badly-handled-data-breaches-2024/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": " As many as 165 customers of Snowflake are said to have had their information potentially exposed as part of an ongoing campaign designed to facilitate data theft and extortion, indicating the operation has broader implications than previously thought.  Google-owned Mandiant, which is assisting the cloud data warehousing platform in its incident response efforts, is tracking the as-yet-unclassified activity cluster under the name UNC5537, describing it as a financially motivated threat actor.  \"UNC5537 is systematically compromising Snowflake customer instances using stolen customer credentials, advertising victim data for sale on cybercrime forums, and attempting to extort many of the victims,\" the threat intelligence firm said on Monday.  \"UNC5537 has targeted hundreds of organizations worldwide, and frequently extorts victims for financial gain. UNC5537 operates under various aliases on Telegram channels and cybercrime forums.\"  There is evidence to suggest that the hacking group is made up of members based in North America. It's also believed to collaborate with at least one additional party based in Turkey.This is the first time that the number of affected customers has been officially disclosed. Previously, Snowflake had noted that a \"limited number\" of its customers were impacted by the incident. The company has more than 9,820 global customers.  The campaign, as previously outlined by Snowflake, stems from compromised customer credentials purchased from cybercrime forums or obtained through information-stealing malware such as Lumma, MetaStealer, Raccoon, RedLine, RisePro, and Vidar. It's believed to have commenced on April 14, 2024.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 9,
+      "victim_id": [
+        "Ticketmaster",
+        "Advanced Auto Parts",
+        "LendingTree",
+        "Pure Storage",
+        "Los Angeles school board",
+        "EPAM Systems Inc.",
+        "Neiman Marcus",
+        "AT&T",
+        "Santander Bank"
+      ]
+    },
+    "state": "MT",
+    "victim_id": "Snowflake"
+  }
+}

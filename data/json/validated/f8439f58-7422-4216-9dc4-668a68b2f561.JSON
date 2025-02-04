@@ -1,0 +1,108 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2165139,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2165139,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "26c2ea0d-c18f-4a09-b575-8a29c715ec2d",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-02-03T03:29:49.983Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "System unprotected on the network"
+      }
+    ],
+    "github": "20428",
+    "master_id": "54f3e8f86d-1ec5-433e-98b7-67a08f7724dd",
+    "modified": "2025-02-03T04:05:58.246Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://cybernews.com/security/lecturenotes-data-leak-two-million-affected/",
+  "schema_name": "vcdb",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A misconfigured database on the LectureNotes Learning App, a platform for sharing class notes, has exposed more than two million user records, the Cybernews research team has discovered.  In December 2023, the Cybernews research team discovered a misconfigured MongoDB database belonging to LectureNotes. The database was being updated in real-time and exposed the personal and access data of users and app admins.  A total of 2,165,139 user records were compromised, with the leaked data including:       Username     First and last name     Email     Encrypted password     Phone number     IP address     User-agent     Session tokens     Additionally, some administrators' authorization details were also exposed (IDs and secrets)  LectureNotes is a platform for students, teachers, and institutions to share class notes peer-to-peer, aiming to remove dictation from classrooms. According to Google Play, the app has been downloaded more than half a million times and has 12.9 thousand reviews, averaging 2.5 stars out of 5.  \u201cThe exposure of session tokens poses a severe threat, potentially allowing a potential attacker to illicitly access user sessions without requiring passwords. Furthermore, the compromised administrator authorization details, including IDs and secrets, elevate the risk by providing unauthorized access to privileged accounts, possibly leading to malicious activities and unauthorized control over the platform's functionalities,\u201d Cybernews researchers write.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "54151",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "LectureNotes Technologies"
+  }
+}
