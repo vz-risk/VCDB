@@ -1,0 +1,174 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "9ea780a0-7fae-11f0-8eb4-737051a97db9",
+    "security_incident": "Confirmed",
+    "reference": "https://www.govinfosecurity.com/scattered-spider-suspected-in-qantas-data-breach-a-28884",
+    "summary": "Quantas airline crm was compromised by scattered spider via social engineering targeting it's helpdesk",
+    "confidence": "High",
+    "plus": {
+        "master_id": "2b427bc4-77a2-46ac-9865-133dd87d0659",
+        "modified": "2025-08-23T03:38:19.839Z",
+        "created": "2025-08-23T03:20:41.130Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "social engineering the end user"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Credentials exposed or abused via social engineering"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Credentials uses to export data from the crm"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 2025,
+                "month": 7,
+                "year": 2
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2026,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "22194"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 6,
+            "day": 30
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Minutes"
+        },
+        "discovery": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "AU"
+        ],
+        "victim_id": "Quantas Airline",
+        "industry": "481111",
+        "employee_count": "10001 to 25000"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Pretexting"
+            ],
+            "vector": [
+                "Phone"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Lateral movement"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Scattered spider"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user",
+                "amount": 1
+            },
+            {
+                "variety": "S - Web application",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 2
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 6000000,
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials",
+                    "amount": 1
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 6000000
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}
