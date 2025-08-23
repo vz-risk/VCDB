@@ -35,7 +35,7 @@ vcdb %>%
     dplyr::mutate(breach = ifelse(breach, "Breach", "Incident")) %>%
   ggplot2::ggplot() + 
     ggplot2::geom_bar(ggplot2::aes(x=timeline.incident.year, y=n, group=breach, fill=breach), stat="identity") + 
-    ggplot2::labs(title="VCDB Breaches and Incidents by Incident Year", x="Count", y="Year") +
+    ggplot2::labs(title="VCDB Breaches and Incidents by Incident Year", x="Year", y="Count") +
     ggplot2::scale_x_continuous(expand=c(0,0), limits=c(2003, 2018)) +
     ggplot2::scale_y_continuous(expand=c(0,0)) +
     ggplot2::scale_fill_brewer() +
