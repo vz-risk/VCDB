@@ -1,0 +1,186 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Exfiltrate",
+        "Lateral movement"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Scattered spider"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - End-user"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6000000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "9ea780a0-7fae-11f0-8eb4-737051a97db9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2025-08-23T03:20:41.130Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "social engineering the end user"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Credentials exposed or abused via social engineering"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Credentials uses to export data from the crm"
+      }
+    ],
+    "github": "22194",
+    "master_id": "2b427bc4-77a2-46ac-9865-133dd87d0659",
+    "modified": "2025-08-23T03:38:19.839Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 2025,
+        "month": 7,
+        "year": 2
+      }
+    }
+  },
+  "reference": "https://www.govinfosecurity.com/scattered-spider-suspected-in-qantas-data-breach-a-28884",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Quantas airline crm was compromised by scattered spider via social engineering targeting it's helpdesk",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 30,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "481111",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Quantas Airline"
+  }
+}
