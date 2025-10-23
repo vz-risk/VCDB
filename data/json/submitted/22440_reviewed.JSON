@@ -1,0 +1,173 @@
+{
+    "plus": {
+        "modified": "2025-10-24T00:34:24.090Z",
+        "created": "2025-10-22T11:47:57.256Z",
+        "master_id": "f76e1e57-757b-4f3e-8799-26183d1a4776",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Unknown hacking action"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Malware instalation"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Malware exfils the data"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "Malware encrypts the data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 1,
+                "month": 9,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "jsandiford",
+        "dbir_year": 2026,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "22400"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 8
+        },
+        "compromise": {
+            "unit": "Unknown"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Unknown"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "NL"
+        ],
+        "region": [
+            "150155"
+        ],
+        "employee_count": "101 to 1000",
+        "industry": "6215",
+        "victim_id": "Clinical Diagnostics NMDL"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "notes": "Likely involved for the initial unauthorised access or gaining system access"
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "notes": "Confirmed due to the involvement of the Nova ransomware group."
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Nova group"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            },
+            {
+                "variety": "S - File"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 850000,
+                    "variety": "Medical"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ],
+            "notes": "Malware deployed"
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "source_id": "vcdb",
+    "security_incident": "Confirmed",
+    "reference": "22440",
+    "summary": "The clinical services provider suffered a significant data breach initiated by an external threat actor, highly likely an organised criminal group motivated by financial profit, who successfully compromised their systems. This malicious action, which likely involved an unknown method of hacking or the deployment of malware to gain illicit access, targeted the organisation's sensitive data assets, specifically the systems or database servers holding patient and provider records. The incident resulted in a confirmed violation of confidentiality, leading to the unauthorised disclosure and exposure of vast quantities of highly sensitive medical and personal data to outside parties. This attack pattern aligns with complex breaches often involving multiple steps, such as obtaining initial access, installing malware, copying data, and sometimes encrypting data for extortion",
+    "confidence": "High",
+    "targeted": "Targeted",
+    "incident_id": "274adc80-af99-11f0-b5a8-133ca5d3f832",
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0",
+    "discovery_notes": "The actor (Nova) released public statements or threatened to leak the copied data, which drew attention to the incident."
+}
