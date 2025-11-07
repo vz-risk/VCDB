@@ -1,0 +1,198 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Unknown initial access to the PC / Use of stolen creds against the database",
+      "result": [
+        "Infiltrate",
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Capture app data",
+        "Capture stored data",
+        "Export data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "amount": 1,
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "KR"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7275843,
+          "variety": "Personal"
+        },
+        {
+          "amount": 54475,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7275843,
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "notes": "Data Abuse - Data Ransomed / 438GB"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "discovery_notes": "Despite abnormal database access and large amounts of traffic at the time of the leak, Incruit did not investigate. The company became aware of the leak in March 2024 through an extortion email from the hackers.",
+  "impact": {
+    "iso_currency_code": "KRW",
+    "loss": [
+      {
+        "amount": 463000000,
+        "rating": "Major",
+        "variety": "Legal and regulatory"
+      },
+      {
+        "rating": "Major",
+        "variety": "Brand damage"
+      }
+    ],
+    "notes": "Oct 22, 2025 The Personal Information Protection Commission (PIPC) imposed a 463 million Korean won (@323MM USD) fine",
+    "overall_amount": 463000000,
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "de74d1c0-b077-11f0-8414-4f6a150c9ef6",
+  "notes": "Despite abnormal database access and large amounts of traffic at the time of the leak, Incruit did not investigate. The company became aware of the leak in March 2024 through an extortion email from the hackers.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford / apinto",
+    "analyst_notes": "Could have been a phish since it was a single computer that malware was installed on.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2025-10-24T08:22:12.828Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "unknown initial hack of personal computer"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware installed and steals passwords"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen using the stolen creds"
+      }
+    ],
+    "github": "22630",
+    "master_id": "05016c32-5cc7-484e-a718-6b6dc9e3e678",
+    "modified": "2025-11-07T06:50:09.169Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.chosun.com/english/national-en/2025/10/23/VD7JXIK2SNCILBXWTRFMHXC3IU/, https://www.asiae.co.kr/en/article/2025102310360936389#:~:text=by%20Hacker...-,Incruit%20Fined%20463%20Million%20Won,to%20the%20internet%20with%20malware, https://www.mk.co.kr/en/it/11449011",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Incruit, HQ: Seoul, South Korea, NAICS: 541612 (Human Resources Consulting Services), EMP: 162. Oct 22, 2025 The Personal Information Protection Commission (PIPC) imposed a 463 million Korean won (@323MM USD) fine on the online job portal site \u2018Incruit\u2019. In Jan 2025, a hacker downloaded malware on a personal information handler\u2019s computer, then used their credentials to gain access to Incruits database. PII was accessed for over 7.27 million members and 54, 475 files totaling 438 MB. Information stolen was name, address, phone number, educational background, career history, military service, and disability status. Despite abnormal database access and large amounts of traffic at the time of the leak, Incruit did not investigate. The company became aware of the leak in March 2024 through an extortion email from the hackers.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 2
+    },
+    "incident": {
+      "month": 1,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541612",
+    "locations_affected": 1,
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Incruit"
+  }
+}

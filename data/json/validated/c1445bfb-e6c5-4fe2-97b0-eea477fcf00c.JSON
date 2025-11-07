@@ -1,0 +1,163 @@
+{
+  "action": {
+    "error": {
+      "notes": "database that was exposed to the internet without encryption or credentials required for access",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "NA"
+      ],
+      "notes": "database that was exposed to the internet without encryption or credentials required for access",
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "IN"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Other"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "System"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 40000000000,
+      "data_victim": [
+        "Customer",
+        "Employee",
+        "Partner",
+        "Patient",
+        "Student",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted",
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "October 16, 2025, cybersecurity researcher Jeremiah Fowler",
+  "impact": {
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "37dadfc0-b45b-11f0-8923-2be2b684169f",
+  "notes": "unsecure database was discovered by cybersecurity researcher Jeremiah Fowler",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford / apinto",
+    "analyst_notes": "unknown whether or not anyone other than Fowler accessed the database",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown",
+        "partner_data": "Yes"
+      }
+    },
+    "created": "2025-10-29T07:07:12.060Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfiguration"
+      }
+    ],
+    "github": "22620",
+    "master_id": "c1445bfb-e6c5-4fe2-97b0-eea477fcf00c",
+    "modified": "2025-11-07T06:22:43.428Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://dailysecurityreview.com/cyber-security/data-security/netcore-cloud-data-leak-13tb-breach-exposes-40-billion-records/,  https://www.websiteplanet.com/news/netcore-cloud-breach-report/#:~:text=Cybersecurity%20Researcher%20Jeremiah%20Fowler%20discovered,range%20of%20outbound%20marketing%20services, https://www.securitymagazine.com/articles/101978-40b-records-exposed-from-marketing-and-email-data-platform#:~:text=An%20unencrypted%2C%20non%2Dpassword%2D,deeper%20than%20unwanted%20spam%20messages",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Netcore Cloud Pvt. Ltd, HQ: Mumbai, India, NAICS: 541613 (Marketing Consulting Services), EMP:1200. Netcore Cloud, is an AI-powered marketing automation firm that operates in over 40 countries and claims more than 65,00 global business clients. The platform delivers omnichannel customer engagement services across web, email, SMS, WhatsAPP, Mobile Apps, and more. They are a central data process for some of the world\u2019s most active brands in e-commerce, finance, travel, and entertainment sectors. On October 16, 2025, cybersecurity researcher Jeremiah Fowler sent a message to NetCore Cloud telling them they had a database that was exposed to the internet without encryption or credentials required for access. This caused a data leak of over 40B records (13.1 TB database. Information contained:  email logs, banking information including partial account numbers, healthcare communications, IP addresses, Server names, reference materials involving production systems and documents marked \u201cconfidential.\u201d. Netcore Cloud was grateful and asked Fowler for more details. Fowler emphasizes that it is uncertain whether the infrastructure was operated directly by Netcore Cloud or by a third-party contractor acting on their behalf. As of now, only an internal forensic audit could determine whether suspicious access occurred and identify how long the sensitive information remained publicly readable.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 16,
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541613",
+    "locations_affected": 1,
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Netcore Cloud Pvt. Ltd"
+  }
+}

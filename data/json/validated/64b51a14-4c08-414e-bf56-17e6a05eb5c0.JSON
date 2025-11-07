@@ -1,0 +1,157 @@
+{
+  "action": {
+    "error": {
+      "notes": "unsecured web-facing server",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Web application",
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "notes": "unsecured web-facing server",
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "country": [
+      "US"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1115061,
+      "data_victim": [
+        "Customer",
+        "Patient",
+        "Employee",
+        "Partner"
+      ],
+      "notes": "2.49 gigabytes of data",
+      "state": [
+        "Processed",
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "Discovered by Jeremiah Fowler",
+  "impact": {
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "9380cce0-b523-11f0-8923-2be2b684169f",
+  "notes": "Security researcher, Jeremiah Fowler discovered an unsecured, open database while scanning.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Erika T Gifford / apinto",
+    "analyst_notes": "unsecure web-facing server",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2025-10-30T07:01:25.167Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfiguration"
+      }
+    ],
+    "github": "22647",
+    "master_id": "64b51a14-4c08-414e-bf56-17e6a05eb5c0",
+    "modified": "2025-11-07T06:15:14.028Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 6,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://hackread.com/massive-data-leak-texas-adoption-agency-million-records/, https://www.websiteplanet.com/news/gladney-breach-report/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Gladney Center for Adoption, HQ: Ft Worth, TX, NAICS 624110 (nonresidential social assistance services for children and youth, including adoption, foster care, and drug prevention), EMP: 115. On June 25, 2025, cybersecurity researcher Jeremiah Fowler discovered a massive set of unprotected records linked to the Gladney Center for Adoption, left online without a password, without encryption, and accessible to anyone. The database contained2.49 gigabytes and holding more than 1,115,061 records included deeply sensitive information about children, adoptive parents, birth families, internal staff, names and contact details to case notes and private assessments, folders labeled \u201ccontacts\u201d, \u201capplications\u201d, and \u201cbirth fathers\u201d, reason for adoption denials, personal histories, family backgrounds, substance use, emails, and legal matters.",
+  "targeted": "Unknown",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "624110",
+    "locations_affected": 1,
+    "notes": "unsecured web-facing database found by cybersecurity researcher Jeremiah Fowler while scanning",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Gladney Center for Adoption"
+  }
+}
