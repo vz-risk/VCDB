@@ -1,0 +1,176 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "00d58260-b419-11f0-83f6-c95449796b4b",
+    "security_incident": "Confirmed",
+    "reference": "https://www.hipaajournal.com/horizon-behavioral-health-ransomware-attack/",
+    "summary": "Horizon Behavioral hit by ransomware resulting on the exposure of 49,822 patients data",
+    "confidence": "High",
+    "plus": {
+        "master_id": "0d64cb26-863c-44bf-9142-1485e9b3a682",
+        "modified": "2025-10-28T20:20:29.908Z",
+        "created": "2025-10-28T20:13:12.966Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "unknown initial access vector"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "data exfil"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypts data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2025,
+                "month": 5,
+                "day": 6
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2026,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes - Data ransomed"
+            }
+        },
+        "github": "21990"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 3,
+            "day": 13
+        },
+        "compromise": {
+            "unit": "Hours"
+        },
+        "exfiltration": {
+            "unit": "Hours"
+        },
+        "discovery": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Horizon Behavioral Health",
+        "employee_count": "101 to 1000",
+        "industry": "621330"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 49822,
+                    "variety": "Medical"
+                },
+                {
+                    "amount": 49822,
+                    "variety": "Sensitive Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 49822
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1"
+}
