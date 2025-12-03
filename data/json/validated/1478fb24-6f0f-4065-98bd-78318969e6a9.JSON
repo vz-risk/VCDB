@@ -1,0 +1,128 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Source code"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Customer",
+        "Employee"
+      ],
+      "data_volume": 378,
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "87c345b0-af63-11f0-a027-d955a4d2f085",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "created": "2025-10-22T20:24:06.283Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured AWS s3 bucket, leaking internal data and backups"
+      }
+    ],
+    "github": "22406",
+    "master_id": "1478fb24-6f0f-4065-98bd-78318969e6a9",
+    "modified": "2025-10-22T20:30:22.553Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 2,
+        "month": 9,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.govinfosecurity.com/navy-federal-credit-union-backup-exposed-online-a-29346",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Navy Federal Credit Union was accidently exposed backups on an s3 bucket",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 25,
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522130",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Navy Federal Credit Union"
+  }
+}

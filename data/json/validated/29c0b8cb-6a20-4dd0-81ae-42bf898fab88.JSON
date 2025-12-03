@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application",
+        "VPN"
+      ]
+    },
+    "social": {
+      "result": [
+        "Elevate"
+      ],
+      "target": [
+        "Helpdesk"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Scattered spider"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "P - Helpdesk"
+      },
+      {
+        "amount": 1,
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 2
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1200000,
+      "data_victim": [
+        "Customer"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify authentication",
+        "Register MFA device"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "31a2f810-af4a-11f0-aa63-8b849074a2c4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "created": "2025-10-22T17:22:44.369Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering attack targeting help desk"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Account is reset for the attacker"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Hacker uses new privileges and account to exfil data"
+      }
+    ],
+    "github": "22457",
+    "master_id": "29c0b8cb-6a20-4dd0-81ae-42bf898fab88",
+    "modified": "2025-10-22T18:09:47.299Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 2025,
+        "month": 9,
+        "year": 29
+      }
+    }
+  },
+  "reference": "https://techcrunch.com/2025/10/01/data-breach-at-canadian-airline-westjet-affects-1-2m-passengers/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Westjet has it's users data compromised through stolen credentials and social engineering attacks conducted by Scattered Spider",
+  "targeted": "Targeted",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 13,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "481111",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "West Jet"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner",
+        "VPN"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Lateral movement",
+        "Exfiltrate",
+        "Elevate"
+      ],
+      "variety": [
+        "Adminware",
+        "Scan network",
+        "Password dumper"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Brain Cypher"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Directory"
+      },
+      {
+        "variety": "N - Remote access"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 28
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 200000,
+      "data_victim": [
+        "Customer"
+      ],
+      "data_volume": 1024
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "5df09050-af70-11f0-a027-d955a4d2f085",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2025-10-22T21:55:59.573Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "cp",
+        "summary": "unknown compromised of partner credential"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Leverage compromised credentials to access environment"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Adminware installed as a means of persistence and lateral movement"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "malware used to dump more creds"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of additional stolen credentials used to exfil data out"
+      }
+    ],
+    "github": "21507",
+    "master_id": "cb41f877-8687-4591-b11a-d44f00830648",
+    "modified": "2025-10-22T22:10:13.329Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "month": 12,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.wpri.com/news/local-news/ri-data-breach/ri-officials-give-update-on-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Brain Cypher compromised Deloitte credentials and used those credentials to steal rhode Island citizen data from the state government",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 5
+    },
+    "incident": {
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "92",
+    "region": [
+      "019021"
+    ],
+    "state": "RI",
+    "victim_id": "Rhode Island Department of Health and Human Services"
+  }
+}
