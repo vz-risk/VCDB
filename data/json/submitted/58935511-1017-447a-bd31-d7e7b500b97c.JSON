@@ -1,0 +1,162 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "59f90940-d631-11f0-901b-c962ba1dfe3a",
+    "security_incident": "Confirmed",
+    "reference": "https://www.securityweek.com/security-firm-andy-frain-says-100000-people-impacted-by-ransomware-attack/",
+    "summary": "Illinois-based physical security company Andy Frain Services revealed on Friday that a data breach suffered last year impacts more than 100,000 people.  Andy Frain provides security services for major sports arenas, event venues, universities, commercial businesses, airports, and organizations in the transportation industry.  The data breach notification letter sent by the company to impacted individuals does not contain any technical details on the incident and it’s unclear exactly what type of information has been compromised.   However, the information is likely sensitive considering that impacted individuals are being offered 12 months of credit monitoring and identity restoration services.   Andy Frain told the Maine Attorney General’s Office that the breach was discovered in October 2024 and that more than 100,000 people were impacted.  The Black Basta ransomware group took credit for the Andy Frain hack in November 2024, claiming to have stolen 750 Gb of files, including ones related to accounting, HR, and legal departments.   The cybercrime group has not announced any new victims for several months. Experts said it went underground, but the hackers are expected to return, likely in a different form.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "58935511-1017-447a-bd31-d7e7b500b97c",
+        "modified": "2025-12-11T21:24:52.764Z",
+        "created": "2025-12-11T07:33:09.972Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "unknown action to access network"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "copy of data stolen"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "data encrypted"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 12,
+                "month": 5,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "22014"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 11,
+            "day": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Andy Frain Services ",
+        "employee_count": "1001 to 10000",
+        "state": "IL",
+        "industry": "561612"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ],
+            "name": "Black Basta"
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown first action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "Black Basta"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "System"
+                },
+                {
+                    "variety": "Credentials"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Victim organization"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

@@ -1,0 +1,113 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "5248da90-d951-11f0-82e6-074fe481ef29",
+    "security_incident": "Confirmed",
+    "confidence": "Medium",
+    "reference": "https://hackread.com/propertyrec-leak-exposes-background-check-records/ ; https://www.theregister.com/2024/11/27/600k_sensitive_files_exposed/",
+    "summary": "  More than 600,000 sensitive files containing thousands of people's criminal histories, background checks, vehicle and property records were exposed to the internet in a non-password protected database belonging to data brokerage SL Data Services, according to a security researcher.  We don't know how long the personal information was openly accessible. Infosec specialist Jeremiah Fowler says he found the Amazon S3 bucket in October and reported it to the data collection company by phone and email every few days for more than two weeks.  In addition to not being password protected, none of the information was encrypted, he told The Register. In total, the open bucket contained 644,869 PDF files in a 713.1 GB archive.  \"Even when I would make phone calls to the multiple numbers on different websites and tell them there was a data incident, they would tell me they use 128-bit encryption and use SSL certificates – there were many eye rolls,\" he claimed.  95 percent of the documents Fowler saw were labeled \"background checks,\" he said. These contained full names, home addresses, phone numbers, email addresses, employment, family members, social media accounts, and criminal record history belonging to thousands of people. In at least one of these documents, the criminal record indicated that the person had been convicted of sexual misconduct. It included case details, fines, dates, and additional charges.\"The biggest risk in my opinion would be the way they compile a full picture and profile of an individual that is far beyond just the basic semi-public information that could be out there online,\" Fowler told The Register. \"This puts both the individual and their family or associates at potential risk – or even individuals who have nothing to do with the person identified in the background check.\"Criminals could also potentially use this exposed info to obtain other sensitive personal or financial details, he added.  \"As you know when it comes to phishing, the more information you have about a person, the better,\" Fowler noted. \"Knowing things like employment, criminal records, and family members from one report raises a lot of security concerns.\"  The info service provider eventually closed up the S3 bucket, says Fowler, although he never received any response. The Register also reached out to SL Data Services for comment and did not hear back.  While there's no indication that criminals spotted the open database and snooped through the sensitive files therein, we've seen plenty of recent examples of the nefarious purposes that this type of personal information could be used for if it fell into the wrong hands.",
+    "plus": {
+        "master_id": "d9a62b50-ba01-4a95-ae78-eeb77614dd47",
+        "modified": "2025-12-15T07:10:45.544Z",
+        "created": "2025-12-15T06:59:34.457Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfigured S3 bucket "
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 27,
+                "month": 11,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "21402"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 11,
+            "day": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "SL Data Services",
+        "industry": "531390",
+        "employee_count": "1 to 10"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Sensitive Personal"
+                }
+            ],
+            "data_victim": [
+                "Other"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 600000
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1",
+    "discovery_notes": "Jeremy Fowler "
+}

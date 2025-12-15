@@ -1,0 +1,146 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "d746c780-d6da-11f0-901b-c962ba1dfe3a",
+    "security_incident": "Confirmed",
+    "confidence": "Medium",
+    "summary": "\"South Korea's largest carrier SK Telecom started on Monday to replace mobile SIM chips for its 23 million users following a data breach, prompting alarmed customers to form long queues for the replacements.  SK Telecom announced earlier this month that it had fallen victim to a hacking incident involving malicious code, through which customers' personal information was compromised.\"",
+    "reference": "https://themercury.com/news/national/south-koreas-sk-telecom-begins-sim-card-replacement-after-data-breach/article_55950093-3432-52bd-b3fc-83cde535ec50.html ;  https://www.france24.com/en/live-news/20250428-south-korea-s-sk-telecom-begins-sim-card-replacement-after-data-breach",
+    "plus": {
+        "master_id": "901b6601-8d0c-42e5-90f4-4b19198f75d0",
+        "modified": "2025-12-12T03:55:52.821Z",
+        "created": "2025-12-12T03:46:25.144Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "unk",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "unknown action to gain access to network"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed "
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfiltrated data "
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 25,
+                "month": 4,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "21968"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 4,
+            "day": 18
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "KR"
+        ],
+        "employee_count": "10001 to 25000",
+        "victim_id": "SK Telecom",
+        "industry": "517312"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload",
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown action to gain access "
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "State-affiliated"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 23000000
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Other"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 23000000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

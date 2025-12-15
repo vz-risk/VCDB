@@ -1,0 +1,111 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "4d116db0-d516-11f0-8f89-6d14fba40689",
+    "reference": "https://ca.finance.yahoo.com/news/canadian-tire-says-recent-breach-133508538.html",
+    "security_incident": "Confirmed",
+    "summary": "\"Shoppers who made online purchases through Canadian Tire Corp. Ltd. may have had their personal information compromised.  The retailer said Monday that it identified a data breach on Oct. 2 involving information stored in its e-commerce database.  The breached information belongs to shoppers who had an e-commerce account with Canadian Tire or its other banners, SportChek, Mark’s/L’Équipeur and Party City.  The data included names, addresses, emails and birth years as well as encrypted passwords and in some cases, incomplete credit card numbers. The credit card information that was available was akin to what would appear on store receipt, Canadian Tire said.  The full dates of birth for fewer than 150,000 account holders were also part of the breach. Those customers whose additional information was involved will be contacted and offered credit monitoring from TransUnion Canada, Canadian Tire said.\"",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "82f1748d-4d38-403a-ad31-cc447543790a",
+        "modified": "2025-12-09T21:57:17.350Z",
+        "created": "2025-12-09T21:47:00.747Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "accessed database and took some customer related data "
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 14,
+                "month": 10,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "22584"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 10,
+            "day": 2
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "CA"
+        ],
+        "industry": "441320",
+        "victim_id": "Canadian Tire Corp",
+        "employee_count": "25001 to 50000"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 150000
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

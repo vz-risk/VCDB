@@ -1,0 +1,150 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "c9688ed0-d52e-11f0-8f89-6d14fba40689",
+    "security_incident": "Confirmed",
+    "summary": "\"Absolute Dental, a Nevada dental practice with over 50 locations in Las Vegas, Carson City, Reno, Sparks, and Minden, has completed its investigation of a February 2025 cyberattack and has confirmed that more than 1.2 million individuals had some of their personal and protected health information exposed.  Absolute Dental reported the data breach to the HHS’ Office for Civil Rights in May 2025 using a placeholder figure of 501 affected individuals. At the time, it was unclear how many individuals had been affected. While the breach portal has not yet been updated with the new total, the Oregon Attorney General was informed that 1,223,635 individuals have been affected.  Absolute Dental explained in its substitute breach notice that an issue was identified within its information systems on February 26, 2025. Steps were taken to secure its systems and investigate the nature and scope of the activity. Third-party cybersecurity experts were engaged to assist with the investigation and confirmed that an unauthorized third party had access to its network between February 26, 2025, and March 5, 2025.  The file review was completed on July 28, 2025, when it was confirmed that sensitive personal data was exposed and potentially stolen. The affected individuals had their name exposed along with one or more of the following: contact information, date of birth, Social Security number, driver’s license or state-issued ID information, passport or other governmental ID information, and health information. Health information may have included health history, diagnosis/treatment information, explanation of benefits, health insurance information, and/or MRN number or patient identification number. A small subset of the affected individuals also had their financial account and/or payment card information exposed.  Absolute Dental said the third-party forensic investigation revealed that initial access to its network occurred via the execution of a malicious version of a legitimate software tool through an account associated with its managed services provider. Absolute Dental did not state which legitimate software tool was involved. The description suggests that a threat actor breached the network of its managed services provider, then either tricked an Absolute Dental employee into executing a malicious version of the software tool or the threat actor abused the privileged access of the managed services provider to install the tool, thus providing access to Absolute Dental’s information systems.\"",
+    "confidence": "Medium",
+    "reference": "https://www.hipaajournal.com/absolute-dental-data-breach/",
+    "plus": {
+        "master_id": "1616b66f-f084-48a8-82bf-bf9cdef15927",
+        "modified": "2025-12-10T01:12:50.393Z",
+        "created": "2025-12-10T00:42:17.277Z",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "exploit vuln"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "installed malware"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfiltrated patient data "
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 15,
+                "month": 5,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "22404"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 2,
+            "day": 26
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 7
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Absolute Dental",
+        "industry": "62",
+        "employee_count": "101 to 1000",
+        "state": "NV"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit vuln"
+            ],
+            "vector": [
+                "Partner"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Exploit vuln",
+                "Unknown"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Elevate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1223635
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Targeted",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

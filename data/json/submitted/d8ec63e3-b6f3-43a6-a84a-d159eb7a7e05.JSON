@@ -1,0 +1,124 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "a2e226a0-d52d-11f0-8f89-6d14fba40689",
+    "security_incident": "Confirmed",
+    "summary": "\"A hacking incident involving an Ohio-based hand tool manufacturer that sells its products through franchises has affected nearly 104,000 people, including their medical data. The breach serves as a cautionary tale about non-healthcare sector organizations and the risks they face in handling health information.  Cornwell Quality Tools, a 106-year old maker of ratchets, sockets, wrenches, storage equipment and other gear, reported the hacking incident to several state regulators on Monday. That included the company telling Maine's attorney general that the cybersecurity incident, discovered on Dec. 20, 2024, affected 103,782 people.  The information potentially compromised included name, Social Security Number, financial account number and medical information.  Cornwell distributes and sells its products through dealers, including truck-based franchises that deliver the tools to customers in the automotive and other heavy-duty repair industries that are not at all healthcare-sector related.  But like many non-healthcare sector businesses, Cornwell appears to handle health information potentially as part of its human resources operations, medical insurance coverage plans, or other functions that often can be vulnerable to hacking incidents or other types of compromises, some experts said.  \"Even though Cornwell doesn't appear to be a HIPAA-regulated entity at first glance, if Cornwell maintains an employer-sponsored health plan then, depending on the structure of the plan, the company's plan could be considered a covered entity 'health plan' regulated by HIPAA,\" said attorney Jordan Cohen, a partner at law firm Akerman.  Also, for a tool manufacturer and distributor such as Cornwell, the medical information maintained could involve a variety of activities, such as employee benefits administration, health benefits, health spending accounts, wellness programs, workers' compensation, Family and Medical Leave Act, Occupational Safety and Health Administration regulations, or other administrative purposes, he said.\"",
+    "reference": "https://www.govinfosecurity.com/hand-tool-maker-says-hack-compromised-medical-info-a-29398",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "d8ec63e3-b6f3-43a6-a84a-d159eb7a7e05",
+        "modified": "2025-12-10T00:41:57.686Z",
+        "created": "2025-12-10T00:34:03.146Z",
+        "event_chain": [
+            {
+                "action": "unk",
+                "actor": "ext",
+                "asset": "unk",
+                "attribute": "ia",
+                "summary": "unknown first action that lead to access to network"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "exfiltrated data "
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 9,
+                "month": 9,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 12,
+            "day": 20
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Cornwell Quality Tools",
+        "employee_count": "101 to 1000",
+        "industry": "423830"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate"
+            ]
+        },
+        "unknown": {
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "unknown initial action"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 104000
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "unknown": true
+    },
+    "schema_name": "dbir",
+    "schema_version": "1.4.0"
+}

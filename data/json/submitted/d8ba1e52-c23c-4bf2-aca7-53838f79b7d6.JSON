@@ -1,0 +1,179 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "c0309fe0-d6a7-11f0-901b-c962ba1dfe3a",
+    "security_incident": "Confirmed",
+    "summary": "The effects of the recent cyberattack against Co-op could be much more damaging than previously thought after the apparent hackers boasted of stealing huge amounts of company data, including customer information.  The \"DragonForce\" hackers contacted the BBC, sharing screenshots of their communication with the company, where they claim to have stolen \"customer database, and Co-op member card data\".  Co-op later appeared to confirm the theft, saying in a statement to BleepingComputer, \"\"As a result of ongoing forensic investigations, we now know that the hackers were able to access and extract data from one of our systems.\"The accessed data included information relating to a significant number of our current and past members,\" Co-op's statement continued.  \"This data includes Co-op Group members' personal data such as names and contact details, and did not include members' passwords, bank or credit card details, transactions or information relating to any members' or customers' products or services with the Co-op Group.\"  In an attempt to prove itself, the BBC says DragonForce shared databases including usernames and passwords of all Co-op employees, as well as a sample of 10,000 customers data including Co-op membership card numbers, names, home addresses, emails and phone numbers.  The hackers say as many as 20 million people have registered, or have registered in the past, with the Co-op's rewards program, meaning the range of affected users could be huge. said they contacted Co-op's head of cybersecurity and other executives via Microsoft Teams, sharing screenshots of the extortion messages with the BBC.  Co-op had told employees to keep their cameras on while using Microsoft Teams for meetings, as well as being told not to record or transcribe calls, and to verify that all participants were genuine Co-op staff - which suggested the hackers were indeed able to access internal systems.  Co-op has more than 2,500 supermarkets as well as 800 funeral homes and an insurance business, and employs around 70,000 staff across the UK.",
+    "reference": "https://www.techradar.com/pro/security/co-op-crisis-deepens-as-it-admits-uk-customer-data-stolen-in-cyberattack-up-to-20-million-people-possibly-affected-heres-what-we-know ;  https://www.scworld.com/brief/the-co-op-hack-far-worse-than-first-reported",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "d8ba1e52-c23c-4bf2-aca7-53838f79b7d6",
+        "modified": "2025-12-11T22:52:04.670Z",
+        "created": "2025-12-11T21:40:42.078Z",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "phished employee for creds to gain access to systems "
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "use of stolen creds"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "malware installed "
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "copy of data stolen"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "data encrypted"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 6,
+                "month": 5,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 4,
+            "day": 22
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "GB"
+        ],
+        "industry": "445110",
+        "victim_id": "Co-Op",
+        "employee_count": "25001 to 50000"
+    },
+    "action": {
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Direct install"
+            ],
+            "result": [
+                "Deploy payload",
+                "Elevate",
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Infiltrate"
+            ],
+            "notes": "reset password scam"
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "DragonForce"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "P - End-user or employee"
+            },
+            {
+                "variety": "S - Database"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Internal"
+                },
+                {
+                    "variety": "System"
+                },
+                {
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Victim organization"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior",
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0",
+    "discovery_notes": "Alerted by TA via Microsoft teams"
+}

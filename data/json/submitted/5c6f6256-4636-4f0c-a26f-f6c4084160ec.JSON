@@ -1,0 +1,114 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "7161d530-d90b-11f0-82e6-074fe481ef29",
+    "security_incident": "Confirmed",
+    "reference": "https://www.bleepingcomputer.com/news/security/customer-data-from-800-000-electric-cars-and-owners-exposed-online/",
+    "summary": "\"Volkswagen’s automotive software company, Cariad, exposed data collected from around 800,000 electric cars. The info could be linked to drivers’ names and reveal precise vehicle locations.  Terabytes of Volkswagen customer details in Amazon cloud storage remained unprotected for months, allowing anyone with little technical knowledge to track drivers’ movement or gather personal information.  The exposed databases include details for VW, Seat, Audi, and Skoda vehicles, with geo-location data for some of them being as precise as a few centimeters.\"According to German publication Spiegel, the CCC found out about the vulnerability from a whistleblower and tested the insecure access before informing Cariad and Volkswagen responsible and providing technical details.  In a statement to BleepingComputer, a Cariad representative said that the exposed data affected only vehicles connected to the internet and had been registered for online services.  From the nearly 800,000 vehicles exposed, the researchers found geo-location data for 460,000 cars, for some of them with an accuracy of ten centimeters.  A little over 30 vehicles were part of Hamburg police's fleet of patrol cars, while others belonged to suspected intelligence service employees, Spiegel says.  The company said that the CCC hackers could access the data only after bypassing several security mechanisms that required significant time and technical expertise.  Additionally, because individual vehicle data was pseudonymized for privacy purposes, the hackers had to combine different data sets to associate the details with a particular user.  However, Spiegel assembled a team of IT experts and journalists who found location details collected from the cars of two German politicians, Nadja Weippert and Bundestag member Markus Grübel, using freely available software.  The tools searched for exposed Cariad assets that contained files with sensitive information, which led to finding a copy of a memory dump from an internal Cariad application.",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "5c6f6256-4636-4f0c-a26f-f6c4084160ec",
+        "modified": "2025-12-14T22:51:36.902Z",
+        "created": "2025-12-14T22:39:21.859Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfigured data base"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 28,
+                "month": 12,
+                "year": 2024
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "21572"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2024,
+            "month": 11,
+            "day": 26
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "DE"
+        ],
+        "victim_id": "Cariad (Volkswagen)",
+        "employee_count": "1001 to 10000",
+        "industry": "71"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ],
+            "notes": "found by sec reschr"
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 800000
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Other",
+                    "amount": 800000
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored unencrypted"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 800000
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1"
+}

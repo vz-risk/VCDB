@@ -1,0 +1,107 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "2979cc70-d904-11f0-82e6-074fe481ef29",
+    "security_incident": "Confirmed",
+    "reference": "https://www.csoonline.com/article/3813224/deepseek-leaks-one-million-sensitive-records-in-a-major-data-breach.html",
+    "summary": "\"A publicly accessible database belonging to DeepSeek allowed full control over database operations, including the ability to access internal data. The exposure includes over a million lines of log streams with highly sensitive information.\"",
+    "confidence": "Medium",
+    "plus": {
+        "master_id": "be8650b2-7866-4c6e-9f81-d6f35ef87abf",
+        "modified": "2025-12-14T21:56:06.363Z",
+        "created": "2025-12-14T21:47:14.743Z",
+        "event_chain": [
+            {
+                "action": "err",
+                "actor": "int",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "misconfigured database"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 29,
+                "month": 1,
+                "year": 2025
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "Hylender",
+        "dbir_year": 2026,
+        "github": "21718"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 1,
+            "day": 25
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "CN"
+        ],
+        "victim_id": "DeepSeek AI",
+        "employee_count": "101 to 1000",
+        "industry": "541715"
+    },
+    "action": {
+        "error": {
+            "variety": [
+                "Misconfiguration"
+            ],
+            "vector": [
+                "Carelessness"
+            ]
+        }
+    },
+    "actor": {
+        "internal": {
+            "variety": [
+                "Developer"
+            ],
+            "motive": [
+                "NA"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Database",
+                "amount": 1
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 1000000
+        }
+    },
+    "targeted": "NA",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Security researcher"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1",
+    "discovery_notes": "Wiz - security researchers"
+}
