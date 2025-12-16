@@ -1,0 +1,170 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown first action ",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin "
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "data_volume": 25
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "c5acf4d0-d8fc-11f0-82e6-074fe481ef29",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-14T20:54:20.829Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "unknown action to gain access to environment"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "TA installed malware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "TA took copy of data "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data "
+      }
+    ],
+    "github": "22512",
+    "master_id": "8107db1f-805f-4a23-be6f-300bbfe384cb",
+    "modified": "2025-12-14T21:08:15.768Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 3,
+        "month": 10,
+        "year": 2025
+      }
+    }
+  },
+  "reference": " \u221a ; https://www.investing.com/news/company-news/japans-beer-giant-asahi-confirms-ransomware-attack-possible-data-theft-93CH-4270145 ; ",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Asahi Group Holdings Ltd. confirmed that cyber-attackers used ransomware to halt operations at its domestic factories and potentially stole company data.  The company stated it is still investigating the root causes of the incident and whether attackers accessed company data. Asahi has begun accepting some orders and resumed shipments, with plans to open phone lines for customer input next week.  The attack, which began Monday, has dominated Japanese headlines and sparked concerns about potential shortages of the country\u2019s popular Asahi Super Dry beer. Major retailers including Seven & i Holdings Co. have warned customers about possible beer shortages, while convenience store chains Lawson Inc. and Familymart Co. indicated that Asahi products, including food and other beverages, might become scarce starting Friday.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 29,
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "312120",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Asahi Brewery Inc"
+  }
+}

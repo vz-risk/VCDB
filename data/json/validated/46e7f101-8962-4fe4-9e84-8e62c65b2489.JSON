@@ -1,0 +1,166 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown first action",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 900000,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "610852d0-d6dc-11f0-901b-c962ba1dfe3a",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-12T03:57:25.757Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "initial access action unknown"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "copy of data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data (this is not certain from reading the articles, but it appears to have occurred)"
+      }
+    ],
+    "github": "21946",
+    "master_id": "46e7f101-8962-4fe4-9e84-8e62c65b2489",
+    "modified": "2025-12-12T05:22:39.836Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 25,
+        "month": 8,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.hipaajournal.com/davita-ransomware-attack/ ; https://therecord.media/davita-dialysis-company-ransomware-attack-data-breach-notifications",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Dialysis company DaVita says more than 900,000 people affected by April ransomware attack  Almost a million people had sensitive healthcare information stolen during a ransomware attack on dialysis company DaVita in April.  The company began filing breach notification letters in several states this week, informing regulators in Oregon, Texas, South Carolina, Washington and Massachusetts that a total of 915,952 U.S. residents were affected by the incident.  DaVita said it discovered the cyberattack on April 12, when network servers at its laboratories were breached.  The company said it was able to remove the cybercriminals from its systems on the same day, but an investigation revealed that they were able to access DaVita\u2019s dialysis labs database.  The information stolen includes demographic data, names, addresses, dates of birth, Social Security numbers, health insurance information and other clinical information like health conditions, dialysis lab test results and treatment information.  \u201cFor some individuals, the information included tax identification numbers, and in limited cases images of checks written to DaVita,\u201d the letters add.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2025
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "DaVita"
+  }
+}

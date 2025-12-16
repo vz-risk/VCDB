@@ -1,0 +1,115 @@
+{
+  "action": {
+    "error": {
+      "notes": "misconfigured database left open to the internet",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    },
+    "unknown": true
+  },
+  "discovery_notes": "Jeremiah Fowler ",
+  "incident_id": "8f97c8a0-d5ed-11f0-8f89-6d14fba40689",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-10T23:27:54.154Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "misconfigured server"
+      }
+    ],
+    "github": "22030",
+    "master_id": "6a1c038e-2284-4ac9-a819-46ed1189b07a",
+    "modified": "2025-12-11T03:04:40.014Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 2025,
+        "month": 5,
+        "year": 12
+      }
+    }
+  },
+  "reference": "https://www.scworld.com/brief/over-3m-individuals-exposed-by-unsecured-prephero-database ; https://hackread.com/prephero-database-exposed-students-coaches-data/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"A security lapse on PrepHero, a college recruiting platform, exposed millions of unencrypted records, including sensitive personal details and passport images of student-athletes.  A massive amount of personal information belonging to over three million individuals, including young athletes hoping for college scholarships and their coaches, was recently found unprotected online. vpnMentor\u2019s cybersecurity researcher Jeremiah Fowler discovered this exposed database and reported it on May 12, 2025.  Based on the information in the database, it belonged to a Chicago-based company called PrepHero, operated by EXACT Sports. For your information, PrepHero helps high school athletes create recruiting profiles for college sports programs and facilitates direct communication between athletes and coaches at renowned universities, aiming to secure sports scholarships.\"",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 12,
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "611",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "PrepHero"
+  }
+}

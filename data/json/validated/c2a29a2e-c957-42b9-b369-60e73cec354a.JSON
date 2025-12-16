@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "notes": "found by security researcher",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "notes": "millions of files but no exact number provided"
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "d2a8a910-d53f-11f0-8f89-6d14fba40689",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-10T02:44:14.241Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "large database with easily guessable password -  data viewed but not exfiltrated"
+      }
+    ],
+    "github": "22216",
+    "master_id": "c2a29a2e-c957-42b9-b369-60e73cec354a",
+    "modified": "2025-12-10T06:07:41.082Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 9,
+        "month": 7,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.wired.com/story/mcdonalds-ai-hiring-chat-bot-paradoxai/ ;https://www.malwarebytes.com/blog/news/2025/07/mcdonalds-ai-bot-spills-data-on-job-applicants",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "If you want a job at McDonald\u2019s today, there\u2019s a good chance you'll have to talk to Olivia. Olivia is not, in fact, a human being, but instead an AI chatbot that screens applicants, asks for their contact information and r\u00e9sum\u00e9, directs them to a personality test, and occasionally makes them \u201cgo insane\u201d by repeatedly misunderstanding their most basic questions.  Until last week, the platform that runs the Olivia chatbot, built by artificial intelligence software firm Paradox.ai, also suffered from absurdly basic security flaws. As a result, virtually any hacker could have accessed the records of every chat Olivia had ever had with McDonald's applicants\u2014including all the personal information they shared in those conversations\u2014with tricks as straightforward as guessing that an administrator account's username and password was \u201c123456.\" On Wednesday, security researchers Ian Carroll and Sam Curry revealed that they found simple methods to hack into the backend of the AI chatbot platform on McHire.com, McDonald's website that many of its franchisees use to handle job applications. Carroll and Curry, hackers with a long track record of independent security testing, discovered that simple web-based vulnerabilities\u2014including guessing one laughably weak password\u2014allowed them to access a Paradox.ai account and query the company's databases that held every McHire user's chats with Olivia. The data appears to include as many as 64 million records, including applicants' names, email addresses, and phone numbers.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 2,
+      "month": 7,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "722513",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "McDonald's "
+  }
+}

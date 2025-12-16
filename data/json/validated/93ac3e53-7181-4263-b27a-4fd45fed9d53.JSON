@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 170000000,
+      "data_victim": [
+        "Customer"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "ef3c9a20-d533-11f0-8f89-6d14fba40689",
+  "notes": "Link to article is broken. Coded based on summary information.",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-10T01:19:08.226Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "misconfigured server"
+      },
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "leaked customer data "
+      }
+    ],
+    "github": "22368",
+    "master_id": "93ac3e53-7181-4263-b27a-4fd45fed9d53",
+    "modified": "2025-12-10T01:26:20.845Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://www.msn.com/en-us/news/technology/170-million-strong-data-leak-traced-to-us-data-broker/ar-AA1pS9wY",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Cybernews researchers have uncovered a colossal data leak believed to be related to People Data Labs (PDL), a San Francisco-based data broker, containing over 170 million records.  Breached data includes sensitive information like full names, phone numbers, emails, location, skills, professional summaries, education history and employment history, putting those affected at risk of identity theft.  An unprotected Elasticsearch server has been identified as being responsible for the leak, discovered by the team on June 25, indicating that a third party may have been responsible for managing PDL\u2019s data.  PDL data leak includes 170 million records Although an unknown threat actor is likely responsible for leaking the data, Cybernews has highlighted the poorly protected Elasticsearch server as a key vulnerability.  The team summarized: \u201cThe existence of data brokers is already a controversial issue, as they often have insufficient checks and controls to ensure that data doesn\u2019t get sold to the wrong parties.\u201d  If the leak does indeed pertain to PDL, it won\u2019t be the first time the company has been associated with a leak. In October 2019, it was revealed that more than a billion records from the company\u2019s databases were exposed online, believed to have affected 622 million individuals. At the time, PDL said that it wasn\u2019t responsible for the leak.\"",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "51",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "People Data Labs (PDL)"
+  }
+}

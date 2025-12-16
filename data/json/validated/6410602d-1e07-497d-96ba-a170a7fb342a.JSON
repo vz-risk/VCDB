@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 520000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "discovery_notes": "The unprotected database was discovered by Jeremiah Fowler",
+  "incident_id": "7da5a3a0-d6d9-11f0-901b-c962ba1dfe3a",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-12T03:36:45.275Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "misconfigured database"
+      }
+    ],
+    "github": "21977",
+    "master_id": "6410602d-1e07-497d-96ba-a170a7fb342a",
+    "modified": "2025-12-12T03:44:23.989Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 6,
+        "month": 5,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.scworld.com/brief/data-breach-hits-online-ticket-resale-platform ; https://www.techradar.com/pro/security/top-ticket-resale-platform-hit-by-data-breach-over-500-000-customer-records-leaked-online",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A major data breach involving over half a million records linked to Ticket to Cash, a ticket resale platform, was uncovered by cybersecurity researcher Jeremiah Fowler, Infotechlead reports.   The 200GB unprotected database contained sensitive information such as names, email addresses, home addresses, and partial credit card data, along with thousands of ticket files, proof of transfers, and receipts. Fowler identified the source as Ticket to Cash based on internal folder structures but received no initial response after reporting the issue. The database was only secured four days later, during which time more records were exposed. It remains uncertain whether the breach stemmed from the company or a third-party contractor. The exposure of personally identifiable information and financial data raises major privacy risks, especially as digital ticketing becomes more prevalent. The incident highlights the need for stronger data protection, rapid breach response, and clearer accountability to prevent future compromises and long-term damage to user trust.",
+  "targeted": "NA",
+  "timeline": {
+    "incident": {
+      "day": 15,
+      "month": 1,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "522",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Ticket to Cash"
+  }
+}

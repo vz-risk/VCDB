@@ -1,0 +1,167 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown first action to gain access to environment",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 17000000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "c23a1a90-d90f-11f0-82e6-074fe481ef29",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2025-12-14T23:10:15.481Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "TA gained access to network via unknown action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "data exfiltrated in order to extort money"
+      }
+    ],
+    "github": "21500",
+    "master_id": "11e8f7f0-101b-4e3c-9652-74139c6189a3",
+    "modified": "2025-12-14T23:20:24.105Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 21,
+        "month": 13,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.whittierdailynews.com/2024/12/12/cyber-criminals-claim-they-hacked-17-million-patient-records-at-pih-health-hospitals/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Hackers claim they have retrieved 17 million patient records, including confidential personal and medical information, in a ransomware attack on PIH Health that has paralyzed operations at three hospitals, the Southern California News Group has learned.  The Dec. 1 attack downed computer and most phone systems at PIH Health Downey Hospital, PIH Health Whittier Hospital and PIH Health Good Samaritan Hospital in Los Angeles. Also compromised were urgent care centers, doctors offices and a home health and hospice agency operated by PIH.  PIH officials on Wednesday declined to comment on a threatening typewritten letter purportedly faxed by the cyber criminals late last week, saying they are working with a cyber forensic specialist and the FBI to untangle the ransomware attack. The FBI also declined to discuss the ongoing investigation.  \u201cBe informed, there was a Ghost in your network!\u201d reads the letter circulated among several PIH employees. \u201cSo the ghost has taken your data as evidence, and if you\u2019re not going to cooperate and make a deal, then all your confidential files will be published on the internet.\u201d  Whittier Informed, a grassroots news organization, first reported the letter\u2019s content.  SCNG received a copy of the letter from a PIH employee who declined to be identified because they are not authorized to speak about the cyber attack. A similar letter was faxed to PIH Whittier Hospital\u2019s Emergency Department on the evening of Nov. 30 but initially was not taken seriously by staff on duty, the worker said.  The most recent letter states the cyber thieves found PIH\u2019s network \u201chighly vulnerable,\u201d with data stored insecurely on computer servers. The hackers claimed to have stolen about 2 terabytes of materials, including:  17 million patient records that include personal and medical information. Data for more than 8.1 million \u201cmedical episodes\u201d along with patient home addresses, phone numbers, places of employment and medical expenses. Lists of confidential diagnoses, test results, patient photos and scans. Treatments for thousands of patients, including those diagnosed with cancer. PIH\u2019s oncology profitability and monthly volumes. Private emails with patients about their treatments and test results. About 100 active nondisclosure agreements between PIH and other medical organizations and parties. Confidentiality agreements with employees. To validate their claims, the hackers included in the letter a link to screenshots of PIH\u2019s monthly oncology reports and patient billing information.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 12,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "PIH Health"
+  }
+}

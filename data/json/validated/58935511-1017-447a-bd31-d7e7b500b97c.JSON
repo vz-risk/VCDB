@@ -1,0 +1,180 @@
+{
+  "action": {
+    "malware": {
+      "name": "Black Basta",
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown first action",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Black Basta"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "System"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "59f90940-d631-11f0-901b-c962ba1dfe3a",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-11T07:33:09.972Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "unknown action to access network"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "copy of data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "data encrypted"
+      }
+    ],
+    "github": "22014",
+    "master_id": "58935511-1017-447a-bd31-d7e7b500b97c",
+    "modified": "2025-12-11T21:24:52.764Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 12,
+        "month": 5,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.securityweek.com/security-firm-andy-frain-says-100000-people-impacted-by-ransomware-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Illinois-based physical security company Andy Frain Services revealed on Friday that a data breach suffered last year impacts more than 100,000 people.  Andy Frain provides security services for major sports arenas, event venues, universities, commercial businesses, airports, and organizations in the transportation industry.  The data breach notification letter sent by the company to impacted individuals does not contain any technical details on the incident and it\u2019s unclear exactly what type of information has been compromised.   However, the information is likely sensitive considering that impacted individuals are being offered 12 months of credit monitoring and identity restoration services.   Andy Frain told the Maine Attorney General\u2019s Office that the breach was discovered in October 2024 and that more than 100,000 people were impacted.  The Black Basta ransomware group took credit for the Andy Frain hack in November 2024, claiming to have stolen 750 Gb of files, including ones related to accounting, HR, and legal departments.   The cybercrime group has not announced any new victims for several months. Experts said it went underground, but the hackers are expected to return, likely in a different form.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561612",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Andy Frain Services "
+  }
+}

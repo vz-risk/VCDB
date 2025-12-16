@@ -1,0 +1,189 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Elevate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "unknown": {
+      "notes": "unknown initial first action",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Stormous ransomware group "
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 600000,
+      "data_victim": [
+        "Patient"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "01f790b0-d535-11f0-8f89-6d14fba40689",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2025-12-10T01:26:49.148Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "unknown first action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "installed ransomware"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "exfiltrated data "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "encrypted data "
+      }
+    ],
+    "github": "22246",
+    "master_id": "8f38dab9-91a3-46a1-bd82-279eba855f3e",
+    "modified": "2025-12-10T02:17:14.662Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 20,
+        "month": 7,
+        "year": 2025
+      }
+    }
+  },
+  "reference": "https://www.compliancejunction.com/600000-north-country-healthcare-patients-data-stolen-by-the-stormous-ransomware-group/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"A ransomware group known as Stormous claims to possess the stolen personal data and protected health information (PHI) of 600,000 North Country HealthCare patients. North Country HealthCare is a federally certified community health center that provides comprehensive healthcare services at 14 locations in northern Arizona.  Since early 2022, this pro-Russia ransomware group has been active in double extortion, data theft, and file encryption. Stormous demands ransom payment from the victim in exchange for the decryption keys and to avoid the exposure of the stolen information on its dark web data leak page. The group has attacked at least 150 companies, usually executing fewer than 10 attacks monthly. However, in May 2025, the group performed over 15 attacks. The group typically targets organizations in industries such as hospitality and tourism, business services, technology, government, and healthcare. The top five target nations of the group are the United States, Spain, France, the United Arab Emirates, and Brazil.  On July 13, 2025, the group\u2019s data leak site listed North Country HealthCare. As per Stormous, it possesses the health data of 600,000 patients, which includes Protected Health Information (PHI), personally identifiable information (PII), clinic information, diagnostic codes (ICD), and provider information. The following information are included in the stolen data: complete name, birth date, gender, contact number, clinic name, visit date/place, health insurance company, ICD code, and an explanation of the diagnosis. The group says that the information of 100,000 patients will be posted for sale, while the information of 500,000 patients will be posted on the leak site accessible to the public.  The group released a statement on July 15, 2025, saying that it had already published the files. North Country HealthCare has not released any statement yet to confirm the dark web listing or the cyberattack or the data breach. However, as an entity with HIPAA certification, it is expected that North Country HealthCare will release a statement on the issue.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 7,
+      "year": 2025
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "North Country HealthCare"
+  }
+}

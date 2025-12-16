@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Play ransomware group"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "00ca3950-d91c-11f0-82e6-074fe481ef29",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-15T00:37:54.405Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "unknown first action"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "malware installed "
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "copy of data exfiltrated"
+      }
+    ],
+    "github": "21481",
+    "master_id": "cc9f1d61-46bc-4199-9623-d8954dae33ee",
+    "modified": "2025-12-15T00:54:11.208Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 20,
+        "month": 12,
+        "year": 2024
+      }
+    }
+  },
+  "reference": "https://www.bbc.com/news/articles/c4gl9np1g2go ; https://www.wdtv.com/2024/12/11/krispy-kreme-struggles-fulfill-online-orders-after-cyberattack/ ",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Play ransomware group has claimed responsibility for the cyberattack that disrupted operations at donut and coffee retail chain Krispy Kreme last week.  The incident occurred on November 29, the North Carolina company said in a regulatory filing with the Securities and Exchange Commission (SEC) last week.  \u201cKrispy Kreme shops globally are open, and consumers are able to place orders in person, but the company is experiencing certain operational disruptions, including with online ordering in parts of the United States,\u201d the company said.  While the retail chain did not say if file-encrypting ransomware had been used in the attack, the operational disruptions it mentioned in an incident notice posted on its website and in the SEC filing suggested that ransomware might have been used.  The suspicion was confirmed this week, when the Play ransomware group added Krispy Kreme to its Tor-based leak site, claiming the theft of a trove of data, including IDs, business documents, personal information, and payroll, financial, and accounting information.  The threat actor is threatening to make the allegedly stolen data publicly available unless a ransom is paid by December 21.  Krispy Kreme has not provided public confirmation on the threat actor\u2019s data exfiltration claims. SecurityWeek has emailed the company for clarification and will update this article as soon as a reply arrives.  Active since at least June 2022 and also known as Playcrypt, the Play ransomware has made hundreds of victims in the Americas and Europe. By December 2023, the group had claimed responsibility for roughly 400 intrusions.  Advertisement. Scroll to continue reading.",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 29,
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "44",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Krispy Kreme"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Accessed via partner company (IntraSystems LLC)",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 294000
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "002d1420-d90a-11f0-82e6-074fe481ef29",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "Hylender",
+    "created": "2025-12-14T22:29:02.434Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "ia",
+        "summary": "TA gained access to partner network via unknown action"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "gained access to via unknown hacking action of victim network through a partner connection"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "exfiltrated data "
+      }
+    ],
+    "master_id": "60a46713-1369-4c01-beef-7d8cd993d834",
+    "modified": "2025-12-14T22:36:01.901Z",
+    "timeline": {
+      "notification": {
+        "day": 14,
+        "month": 11,
+        "year": 2024
+      }
+    }
+  },
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Allegheny Health Network (AHN), a Pittsburgh-based 14-hospital academic medical system, has announced a significant data breach involving unauthorized access to patient data at one of its business associates. The attack occurred at IntraSystems LLC, a third-party firm contracted to host, manage, and secure certain computer systems used by AHN\u2019s subsidiary Home Medical Equipment and Home Infusion companies.  IntraSystems notified ALN about the cyberattack on November 19, 2024, with its internal investigation confirming that hackers first accessed systems containing patient data on October 11, 2024. The attack only affected limited systems, not ALN\u2019s entire patient database. Approximately 293,900 home care patients who received AHN\u2019s Home Medical Equipment and Home Infusion therapy services were affected and had some of their protected health information accessed or stolen in the incident. ALN has confirmed that some patient data was exfiltrated from the systems managed by IntraSystems.  When the breach was detected, the affected systems were immediately taken offline to prevent further unauthorized access, and connections to other systems were severed to contain the incident. The review of the affected systems confirmed they contained names, addresses, dates of birth, Social Security numbers, financial account numbers (no access codes), health insurance information, and treatment information such as diagnoses, provider information, treatments/procedures, dates of service, prescription information, and medical device serial numbers.  Notification letters are being mailed to the affected individuals by IntraSystems, which has offered credit monitoring and identity theft protection services to the affected individuals. At the time of issuing notifications, no misuse of patient data has been identified. ALN has confirmed that multiple steps have been taken in response to the incident to ensure similar breaches are prevented in the future.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Allegheny Health Network"
+  }
+}
