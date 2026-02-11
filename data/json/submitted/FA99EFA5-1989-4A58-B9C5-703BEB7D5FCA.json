@@ -1,0 +1,92 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "AAB32389-22BC-C25A-6F60-6EB525FFDC56",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "FA99EFA5-1989-4A58-B9C5-703BEB7D5FCA",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 14
+  },
+  "reference": "https://www.elastic.co/blog/elastic-update-salesloft-drift-security-incident",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"On August 26, 2025, Salesloft Drift publicly disclosed a security incident impacting its platform. Shortly after, Google\u2019s Threat Intelligence Group released an in-depth report detailing the threat actor\u2019s activity. Although Elastic did not receive notification of impact, since Elastic uses Drift for certain business applications, we immediately initiated our incident response protocols to proactively assess any potential impact on Elastic systems and customer data.\nImpact on Elastic and our customers\n\nOur investigation confirmed that Elastic\u2019s Salesforce environment was not impacted. \n\nHowever, we did identify exposure of a single email account through the \u201cDrift Email\u201d integration that may have granted an unauthorized actor read-only access to emails received in that inbox.\n\nAfter scanning the contents of this inbox, we identified a small number of inbound emails that included potentially valid credentials. For each of these cases where we identified a potential credential leak, we notified customers through existing support channels. If you did not receive notice from us, we did not identify you as an affected customer.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "state": "CA",
+    "victim_id": "Elastic"
+  }
+}

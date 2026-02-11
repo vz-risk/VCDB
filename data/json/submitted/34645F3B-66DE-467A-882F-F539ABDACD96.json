@@ -1,0 +1,92 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "9BF31C7F-F062-936A-96D3-C8BD1F8F2FF3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "34645F3B-66DE-467A-882F-F539ABDACD96",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 15
+  },
+  "reference": "https://www.nutanix.com/blog/third-party-salesloft-drift-application-incident-response-our-impact-and-action",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"To date, our investigation has indicated that: (1) The impacted data was limited to customer support case records within our Salesforce environment that contained certain fields that primarily included business contacts and/or information relating to the case such as the Subject field of the support case, the Description field of the support case, and in limited instances, support case correspondence, (2) No files, attachments, or other systems were impacted, and (3) Currently there is no evidence that the impacted data has been misused. \n\nIn addition, our investigation has ruled out any impact to Nutanix\u2019s products and services. We see no ongoing risk of exploitation due to this Salesloft Drift vulnerability.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "state": "CA",
+    "victim_id": "Nutanix"
+  }
+}

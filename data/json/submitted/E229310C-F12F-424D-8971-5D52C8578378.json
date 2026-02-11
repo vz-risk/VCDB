@@ -1,0 +1,92 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "19CA14E7-EA63-28A4-2E0E-B13D585E4C22",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "E229310C-F12F-424D-8971-5D52C8578378",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 36
+  },
+  "reference": "https://www.pagerduty.com/blog/news-announcements/salesloft-drift-data-breach-update-to-our-customers/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"On August 20, 2025 we were notified by Salesloft, a third-party vendor, of a potential security issue in Salesloft\u2019s Drift application. On August 23, Salesloft informed us that its Drift OAuth integration flow with Salesforce had been compromised, exposing some PagerDuty customer support and case management data. As Salesloft shared, a threat actor used OAuth credentials to exfiltrate data from Salesloft\u2019s customers\u2019 Salesforce instances. As a result, that threat actor gained access to data in our Salesforce instance. We have no evidence of unauthorized access to the PagerDuty platform at this time.\n\nWhat Data Was Exposed\nThe accessed instance of Salesforce is what we use for customer support and internal customer case management. Most of this information is customer contact information, which may include names, phone numbers, and email addresses, as well as support case data. For some customers, the information also contained even more sensitive information like API access tokens or other sensitive data that a customer may have shared with PagerDuty.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 20,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "state": "CA",
+    "victim_id": "Pagerduty"
+  }
+}

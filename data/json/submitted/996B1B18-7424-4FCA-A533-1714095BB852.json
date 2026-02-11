@@ -1,0 +1,91 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "3295C76A-CBF4-CAAE-D33C-36B1B5FC2CB1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "996B1B18-7424-4FCA-A533-1714095BB852",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 66
+  },
+  "reference": "https://cyberinsider.com/chanel-suffers-data-breach-after-attack-on-salesforce-systems/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"Luxury fashion brand Chanel has suffered a data breach linked to a broader cyberattack campaign targeting customers of Salesforce, a popular cloud-based customer relationship management (CRM) platform.\n\nChanel says it first detected the breach on July 25th, after attackers accessed a Chanel database hosted by a third-party service provider, according to WWD. Threat actors reportedly exploited stolen login credentials to access customer data managed via Salesforce, bypassing authentication mechanisms using a malicious toolkit known as \u201cMetaDock.\u201d\n\nThe incident is part of a broader wave of attacks targeting Salesforce customers through sophisticated phishing and credential-stuffing tactics. Other victims include Adidas, Qantas, Allianz Life, as well as certain LVMH brands.\n\nSalesforce confirmed the breach in a statement to BleepingComputer, saying the attack was limited to users of its platform whose credentials were compromised. Chanel, listed among the affected organizations, has since confirmed that customer data was exposed in the breach.\n\nIn its statement, Salesforce emphasized that its systems were not breached and that the attackers gained access only through credentials obtained externally, such as via phishing or reused passwords. The company noted that it has not found evidence of any vulnerability in its platform and is actively working with affected customers to help secure their environments and accounts.\n\nWhile Chanel did not specify how many individuals were impacted or the nature of the compromised data, similar incidents have previously involved names, contact details, and purchase information.\n\nMetaDock, the tool believed to have enabled the attack, allows threat actors to manipulate browser sessions and access Salesforce environments without triggering multi-factor authentication. The campaign appears to be ongoing, with other global brands reportedly affected.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "448310",
+    "victim_id": "Chanel"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "C51CE410-C124-A10E-0DB5-E4B97FC2AF39",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "9C379ABD-A911-47D2-85C4-5FA6A54C0DEF",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 13
+  },
+  "reference": "https://security.sigmacomputing.com/; https://www.driftbreach.com/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"Sigma Computing disclosed that it was impacted by the Salesloft Drift OAuth token compromise campaign targeting Salesforce customers. Unauthorized actors accessed Salesforce credentials linked to the Drift integration, granting them limited access to Sigma\u2019s Salesforce environment. The exposed data included business contact information such as names, business email addresses, phone numbers, and business addresses. No Sigma products, services, or infrastructure were affected, and no evidence of misuse has been found. Sigma has conducted an extensive investigation and continues to monitor for any potential abuse of the exposed data.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 21,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541",
+    "state": "CA",
+    "victim_id": "Sigma Computing"
+  }
+}
