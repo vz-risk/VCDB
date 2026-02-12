@@ -1,0 +1,105 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "8E296A06-7A37-5633-70DE-D05F5A3BF3EC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "BB449FE1-401E-468B-97F0-A1B9DA25B6B7",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 25
+  },
+  "reference": "https://www.cyberark.com/resources/blog/salesloft-drift-incident-overview-and-cyberarks-response",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"It was recently reported that Salesloft\u2019s Drift application was breached, allowing unauthorized access to its customers\u2019 Salesforce data and affecting hundreds of organizations, including CyberArk.\n\nUpon learning of this incident, we quickly deployed threat containment measures, including terminating our Salesforce\u2013Drift connection; disabling the Drift application and revoking all related user credentials; and rotating all Salesforce integration credentials. In addition, we engaged leading security experts to support internal forensics efforts to ensure that no threat actors were present in our systems. No further unauthorized activity was found.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "CyberArk"
+  }
+}

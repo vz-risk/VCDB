@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Helpdesk"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone",
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Helpdesk"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1500000
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify authentication"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "E4DA3B7F-BBCE-2345-D777-2B0674A318D5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:05Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering via phone"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Social engineering via phones results in credentials being disclosed "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen credentials are used to export data from CRM platform"
+      }
+    ],
+    "master_id": "FE699781-7B5F-42FD-9771-B288C55E82F4",
+    "modified": "2026-02-11T15:55:35Z",
+    "row_number": 5
+  },
+  "reference": "https://cyberinsider.com/allianz-life-breach-exposes-personal-data-of-1-4-million-customers/; https://www.bleepingcomputer.com/news/security/allianz-life-says-july-data-breach-impacts-15-million-people/; https://insurancenewsnet.com/oarticle/allianz-life-confirms-data-breach-affecting-majority-of-1-4m-us-customers; https://economictimes.indiatimes.com/news/international/global-trends/insurance-giant-allianz-life-hit-by-data-breach-hackers-fooled-the-system-not-the-servers-and-nearly-1-4-million-affected/articleshow/122932918.cms?from=mdr; https://finance.yahoo.com/news/data-breach-allianz-life-insurance-113523666.html; https://www.msn.com/en-in/money/topstories/insurance-giant-allianz-life-hit-by-data-breach-hackers-fooled-the-system-not-the-servers-and-nearly-14-million-affected/ar-AA1JmXIE; https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/0446bff3-a013-43ed-82fa-bca6bb157de1.html; https://www.bleepingcomputer.com/news/security/shinyhunters-behind-salesforce-data-theft-attacks-at-qantas-allianz-life-and-lvmh/; https://www.bleepingcomputer.com/news/security/allianz-life-says-july-data-breach-impacts-15-million-people/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"Luxury fashion brand Chanel has suffered a data breach linked to a broader cyberattack campaign targeting customers of Salesforce, a popular cloud-based customer relationship management (CRM) platform.\n\nChanel says it first detected the breach on July 25th, after attackers accessed a Chanel database hosted by a third-party service provider, according to WWD. Threat actors reportedly exploited stolen login credentials to access customer data managed via Salesforce, bypassing authentication mechanisms using a malicious toolkit known as \u201cMetaDock.\u201d\n\nThe incident is part of a broader wave of attacks targeting Salesforce customers through sophisticated phishing and credential-stuffing tactics. Other victims include Adidas, Qantas, Allianz Life, as well as certain LVMH brands.\n\nSalesforce confirmed the breach in a statement to BleepingComputer, saying the attack was limited to users of its platform whose credentials were compromised. Chanel, listed among the affected organizations, has since confirmed that customer data was exposed in the breach.\n\nIn its statement, Salesforce emphasized that its systems were not breached and that the attackers gained access only through credentials obtained externally, such as via phishing or reused passwords. The company noted that it has not found evidence of any vulnerability in its platform and is actively working with affected customers to help secure their environments and accounts.\n\nWhile Chanel did not specify how many individuals were impacted or the nature of the compromised data, similar incidents have previously involved names, contact details, and purchase information.\n\nMetaDock, the tool believed to have enabled the attack, allows threat actors to manipulate browser sessions and access Salesforce environments without triggering multi-factor authentication. The campaign appears to be ongoing, with other global brands reportedly affected.\"",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 12,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5241",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Allianz Life"
+  }
+}

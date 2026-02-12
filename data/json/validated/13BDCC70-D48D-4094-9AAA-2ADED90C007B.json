@@ -1,0 +1,106 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "182BE0C5-CDCD-5072-BB18-64CDEE4D3D6E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "13BDCC70-D48D-4094-9AAA-2ADED90C007B",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 33
+  },
+  "reference": "https://www.tanium.com/blog/salesloft-drift-data-breach-what-we-know-and-what-were-doing/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"We want to let you know about a recent social engineering campaign targeting Salesforce customers, including attackers stealing OAuth tokens from the third-party Salesloft Drift application. Salesloft Drift is used for automating sales processes, and it integrates with Salesforce databases, pulling relevant information such as leads and contact details into the platform to help coordinate pitches. The unauthorized access of Salesloft Drift is in line with similar Salesforce-related incidents which have impacted many organizations in recent weeks.\n\nWe were recently notified that the attackers had obtained Tanium credentials from Salesloft Drift and may have been able to access Tanium\u2019s Salesforce data. Based on our investigation, the threat actors had limited access to our Salesforce data and the impact of their unauthorized access to Salesloft Drift was limited to Salesforce and no other Tanium systems.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 28,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5415",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Tanium"
+  }
+}

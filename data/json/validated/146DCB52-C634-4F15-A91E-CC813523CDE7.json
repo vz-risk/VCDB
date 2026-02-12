@@ -1,0 +1,106 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "1F0E3DAD-9990-8345-F743-9F8FFABDFFC4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "146DCB52-C634-4F15-A91E-CC813523CDE7",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 19
+  },
+  "reference": "https://www.fastlystatus.com/incident/377884",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"Fastly was impacted by the recent security incident involving Salesloft's Drift application. We have investigated and notified all Fastly customers affected. This incident was isolated to our Salesforce instance and did not impact any Fastly services, infrastructure, or products. This post includes a summary of our response and the customer outreach we\u2019ve performed.\n\nWhat Happened\n\nBetween August 13 and August 18, 2025, a threat actor (tracked as UNC6395 by Google Mandiant) exploited stolen OAuth tokens tied to the Drift integration to gain unauthorized access to Salesforce instances across many companies, including Fastly. The incident was contained on August 20, 2025 when Salesloft and Salesforce disabled the integration. We immediately began our own investigation, confirming that the malicious activity was isolated to our Salesforce instance and the data accessed was limited to case subjects, descriptions, and contact details.\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 13,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Fastly"
+  }
+}

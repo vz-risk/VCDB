@@ -1,0 +1,140 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Helpdesk"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone",
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Helpdesk"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify authentication"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "C4CA4238-A0B9-2382-0DCC-509A6F75849B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:05Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering via phone"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Social engineering via phones results in credentials being disclosed "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen credentials are used to export data from CRM platform"
+      }
+    ],
+    "master_id": "B1FB0837-EF78-4392-9FF9-40C7651CDB84",
+    "modified": "2026-02-11T15:55:35Z",
+    "row_number": 1
+  },
+  "reference": "https://techcrunch.com/2025/08/18/hr-giant-workday-says-hackers-stole-personal-data-in-recent-breach/; https://www.darkreading.com/application-security/workday-breach-shinyhunters-salesforce-attacks; https://www.livemint.com/technology/tech-news/data-breach-alert-workday-confirms-personal-data-stolen-hackers-could-access-names-emails-and-phone-numbers-11755528200642.html; https://cyberpress.org/workday-confirms-data-breach/; https://blog.workday.com/en-us/workdays-response-salesloft-drift-security-incident.html",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"On August 23, 2025, Workday became aware of a security issue in Salesloft\u2019s Drift application, a third-party app that connects to Salesforce. Upon learning of the issue, we disconnected the app, invalidated Drift\u2019s tokens, and began removing any related integrations. We simultaneously began an investigation, with support from a forensic firm, and initiated an evaluation of Workday\u2019s vendors who use Drift.\n\nOn August 26, 2025, Salesloft provided additional information about the incident on their website, confirming that a threat actor had compromised its systems, obtained OAuth credentials, and had used those credentials to run searches in its customers\u2019 Salesforce environments. Our investigation identified that we had been impacted.\"",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Workday"
+  }
+}

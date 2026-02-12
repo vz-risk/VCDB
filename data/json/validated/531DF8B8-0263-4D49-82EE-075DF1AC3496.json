@@ -1,0 +1,140 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Helpdesk"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone",
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Helpdesk"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify authentication"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "1679091C-5A88-0FAF-6FB5-E6087EB1B2DC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:05Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering via phone"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Social engineering via phones results in credentials being disclosed "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen credentials are used to export data from CRM platform"
+      }
+    ],
+    "master_id": "531DF8B8-0263-4D49-82EE-075DF1AC3496",
+    "modified": "2026-02-11T15:55:35Z",
+    "row_number": 6
+  },
+  "reference": "https://www.itnews.com.au/news/widespread-data-theft-hits-salesforce-customers-via-third-party-619871; https://databreaches.net/2025/10/03/more-salesforce-customer-attacks-revealed-in-new-leak-site-by-scattered-lapsus-hunters/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"There is clearly a lot of data to go through, and this is just a preliminary report. DataBreaches also asked ShinyHunters whether all of these victims had been contacted previously with ransom demands or if some might first be finding out today. He replied that all had been notified:\n\nAll of them have been contacted long ago, they saw the email because I saw them download the samples multiple times. Most of them chose to not disclose and ignore.\n\nIt will now literally be leaked on the deadline if they do not engage before then.\"",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 2,
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "424350",
+    "region": [
+      "019021"
+    ],
+    "state": "OR",
+    "victim_id": "Adidas"
+  }
+}

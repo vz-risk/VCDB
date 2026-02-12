@@ -1,0 +1,106 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "A5BFC9E0-7964-F8DD-DEB9-5FC584CD965D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:14Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used stolen credentials from a connected app to exfil data from CRM environment"
+      }
+    ],
+    "master_id": "D366FC5A-E368-46C8-B3CA-31B4BAEF3C0A",
+    "modified": "2026-02-11T15:56:41Z",
+    "row_number": 37
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/saas-giant-workiva-discloses-data-breach-after-salesforce-attack/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"Workiva, a leading cloud-based SaaS (Software as a Service) provider, notified its customers that attackers who gained access to a third-party customer relationship management (CRM) system stole some of their data.\n\nThe company's cloud software helps collect, connect, and share data for financial reports, compliance, and audits. It had 6,305 customers at the end of last year and reported revenues of $739 million in 2024.\n\nIts customer list includes 85% of the Fortune 500 companies and high-profile clients such as Google, T-Mobile, Delta Air Lines, Wayfair, Hershey, Slack, Cognizant, Santander, Nokia, Kraft Heinz, Wendy's, Paramount, Air France KLM, Mercedes-Benz, and more.\n\nAccording to a private email notification sent to affected Workiva customers last week and seen by BleepingComputer, the threat actors exfiltrated a limited set of business contact information, including names, email addresses, phone numbers, and support ticket content.\n\n\"This is similar to recent events that have targeted several large organizations. Importantly, the Workiva platform and any data within it were not accessed or compromised,\" the company explained. \"Our CRM vendor notified us of unauthorized access via a connected third-party application.\"\"",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "IA",
+    "victim_id": "Workiva"
+  }
+}

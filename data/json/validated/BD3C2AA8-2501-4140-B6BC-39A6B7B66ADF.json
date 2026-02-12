@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Helpdesk"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone",
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Helpdesk"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Modify authentication"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "A87FF679-A2F3-E71D-9181-A67B7542122C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2025-12-30T14:49:05Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering via phone"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Social engineering via phones results in credentials being disclosed "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen credentials are used to export data from CRM platform"
+      }
+    ],
+    "master_id": "BD3C2AA8-2501-4140-B6BC-39A6B7B66ADF",
+    "modified": "2026-02-11T15:55:35Z",
+    "row_number": 4
+  },
+  "reference": "https://jingdaily.com/posts/dior-china-data-breach-tests-brand-trust; https://www.globaltimes.cn/page/202505/1333930.shtml; https://www.bleepingcomputer.com/news/security/shinyhunters-behind-salesforce-data-theft-attacks-at-qantas-allianz-life-and-lvmh/",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "summary": "\"A wave of data breaches impacting companies like Qantas, Allianz Life, LVMH, and Adidas has been linked to the ShinyHunters extortion group, which has been using voice phishing attacks to steal data from Salesforce CRM instances.\n\nIn June, Google's Threat Intelligence Group (GTIG) warned that threat actors tracked as UNC6040 were targeting Salesforce customers in social engineering attacks.\n\nIn these attacks, the threat actors impersonated IT support staff in phone calls to targeted employees, attempting to persuade them into visiting Salesforce's connected app setup page. On this page, they were told to enter a \"connection code\", which linked a malicious version of Salesforce's Data Loader OAuth app to the target's Salesforce environment.\"",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "day": 13,
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "448150",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "LVMH"
+  }
+}
