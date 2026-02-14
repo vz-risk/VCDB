@@ -1,0 +1,136 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 146
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "179B6A6D-C3D5-4945-BD19-591272049A11",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2026-02-14T13:47:37Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action for system access."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "22086",
+    "master_id": "633B9745-BCF5-4B3D-ABA7-AC9E0B86DD57",
+    "modified": "2026-02-14T13:55:14Z",
+    "row_number": 17
+  },
+  "reference": "https://www.channelnewsasia.com/singapore/datapost-income-insurance-ransomware-attack-breach-pdpc-5158576; https://www.straitstimes.com/singapore/consumer/details-of-146-income-insurance-policyholders-compromised-after-cyberattack-on-external-vendor",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "summary": "\"A ransomware attack on a Singapore-based data handling service provider has compromised the personal information of at least 146 Income Insurance policy holders.\n\nThe company in question, DataPost, is in the early stages of investigating the attack, the firm said on Thursday (May 29). DataPost was responsible for the printing and mailing of some of Income Insurance policy holders' documents, the insurer said in a separate statement, adding that affected customers' bonus statements had been compromised.\n\nDataPost, which works with government agencies and financial institutions, among others, told CNA its investigations \"will take time to complete\". \"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 25,
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "SG"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Income Insurance; 5241"
+      ]
+    },
+    "victim_id": "DataPost"
+  }
+}
