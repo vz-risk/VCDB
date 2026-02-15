@@ -1,0 +1,161 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 15494592
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "12A05887-6463-48A9-A2CD-7C958C5D31D1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2026-02-14T13:47:37Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action for system access."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "21699",
+    "master_id": "D8979BB8-55A3-4C00-9514-38CA4F9CC389",
+    "modified": "2026-02-14T13:55:14Z",
+    "row_number": 8,
+    "sub_source": "priority"
+  },
+  "reference": "https://www.cybersecuritydive.com/news/government-payments-conduent-cyberattack/738123/; https://www.cybersecuritydive.com/news/conduent-data-breach-began-2024-intrusion/803930/; https://www.crn.com/news/security/2025/conduent-discloses-theft-of-client-data-in-hack-significant-number-of-individuals-impacted?itc=refresh; https://dailymontanan.com/2025/10/22/state-officials-blue-cross-blue-shield-breach-could-compromise-one-third-of-all-residents-data/; https://www.cybersecuritydive.com/news/conduent-breach-significant-number/745963/; https://investor.conduent.com/static-files/a989f788-c11c-485f-8630-010d15fbf06e; https://www.bankinfosecurity.com/back-office-servicer-reports-data-theft-affects-105m-a-29845; https://www.uta.edu/hr/news/general-updates/bcbstx-data-breach; https://www.bleepingcomputer.com/news/security/bpo-giant-conduent-confirms-data-breach-impacts-105-million-people/; https://techcrunch.com/2026/02/05/data-breach-at-govtech-giant-conduent-balloons-affecting-millions-more-americans/; https://techcrunch.com/2025/01/21/govtech-giant-conduent-wont-rule-out-cyberattack-as-outage-drags-on/; https://www.theregister.com/2026/02/10/conduent_volvo_breach/; https://www.hipaajournal.com/conduent-business-solutions-data-breach/",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "summary": "\"Conduent Inc. warned in an April 14 regulatory filing with the Securities and Exchange Commission that a \u201csignificant\u201d number of people had their personal data stolen in a January cyberattack that affected a limited number of the company\u2019s clients.\nThe company, a major government payments technology vendor for social services and transit systems, was targeted in a Jan. 13 attack that disrupted certain operations.\nThe company warned it has incurred and accrued a material amount of nonrecurring expenses related to the breach. A spokesperson for the company did not have specific numbers yet, but a breach notification has already been posted by the California Attorney General\u2019s office.\n\nConduent confirmed in the SEC filing that the hackers gained access to a limited number of its clients and exfiltrated files that contained personal data for a significant number of end users that access its client\u2019s databases. \"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2024
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561110",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 9,
+      "victim_id": [
+        "Montana Blue Cross-Blue Shield; 524114",
+        "University of Texas System; 524114",
+        "Blue Cross and Blue Shield of Texas; 524114",
+        "Volvo; 336111",
+        "Humana; 524114",
+        "Premera Blue Cross; 524114",
+        "Wisconsin Department of Children and Families; 923120",
+        "Oklahoma Human Services; 923120"
+      ]
+    },
+    "state": "NJ",
+    "victim_id": "Conduent Business Services"
+  }
+}

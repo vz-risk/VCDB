@@ -1,0 +1,353 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes"
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "675C7B02-772E-4828-96B9-ED5494249740",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "created": "2026-02-14T13:47:37Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown initial action for system access."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen."
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption triggered."
+      }
+    ],
+    "github": "22395, 22515",
+    "master_id": "F05B2624-20D4-4569-B1F9-05B55F3CE1AD",
+    "modified": "2026-02-14T13:55:14Z",
+    "row_number": 12
+  },
+  "reference": "https://www.theregister.com/2025/08/28/sweden_council_ransomware/; https://www.blt.se/karlskrona/cyberattack-mot-karlskronaforetag-utpressas-pa-pengar/; https://topclassactions.com/lawsuit-settlements/lawsuit-news/volvo-group-discloses-data-breach-after-hr-supplier-attack/;  https://gotland.se/arkiv/nyheter/allmant/2025-08-26-region-gotlands-leverantor-av-arbetsmiljosystem-ar-utsatta-for-cyberangrepp; https://www.oru.se/english/news/miljodata-no-evidence-of-personal-data-leaks-after-cyberattack/; https://www.staff.lu.se/article/cyberattack-targeting-lund-universitys-system-supplier-miljodata; https://www.bleepingcomputer.com/news/security/data-breach-at-major-swedish-software-supplier-impacts-15-million/",
+  "schema_version": "1.3.7",
+  "security_incident": "Confirmed",
+  "summary": "\"Sweden's municipal governments have been knocked offline after ransomware crooks hit IT supplier Milj\u00f6data, reportedly demanding the bargain-basement sum of $168,000.\n\nMilj\u00f6data runs HR, sick leave, and incident reporting systems for approximately 80 percent of Sweden's municipalities, making it a juicy single point of failure. Over the weekend, those systems went dark, leaving councils from Gotland and Halland to Karlstad and Skellefte\u00e5 unable to access key services.\n\nMilj\u00f6data CEO Erik Hall\u00e9n confirmed on August 25 that the disruption was the result of a cyberattack, stating that the intrusion had affected 200 of Sweden's 290 municipalities, while local cosp have confirmed that the attackers responsible had demanded, er, 1.5 Bitcoin to keep the data under wraps.\n\n\"Local media outlets report that sensitive data may already have been accessed, and the Gotland region warned that the attack \"may have resulted in sensitive personal data being leaked.\" Precisely what information is at risk remains unclear, though Gotland states that it uses the software for handling employee data, including medical certificates, rehabilitation plans, and work-related injuries.\n\nSweden's municipal governments have been knocked offline after ransomware crooks hit IT supplier Milj\u00f6data, reportedly demanding the bargain-basement sum of $168,000.\n\nMilj\u00f6data runs HR, sick leave, and incident reporting systems for approximately 80 percent of Sweden's municipalities, making it a juicy single point of failure. Over the weekend, those systems went dark, leaving councils from Gotland and Halland to Karlstad and Skellefte\u00e5 unable to access key services.\n\nMilj\u00f6data CEO Erik Hall\u00e9n confirmed on August 25 that the disruption was the result of a cyberattack, stating that the intrusion had affected 200 of Sweden's 290 municipalities, while local cosp have confirmed that the attackers responsible had demanded, er, 1.5 Bitcoin to keep the data under wraps.\n\nIf the price tag sounds oddly low, that's because it is. At current exchange rates, 1.5 BTC amounts to roughly $168,000, a fraction of the multimillion-dollar sums typically associated with big-ticket ransomware campaigns. Hospitals, energy firms, and even city transport systems have faced extortion notes ten times higher. Whoever is behind this one seems to be thinking small, either because they don't know what they've got or they're hoping the modest ask will increase the chances of someone quietly paying up.\n\nLocal media outlets report that sensitive data may already have been accessed, and the Gotland region warned that the attack \"may have resulted in sensitive personal data being leaked.\" Precisely what information is at risk remains unclear, though Gotland states that it uses the software for handling employee data, including medical certificates, rehabilitation plans, and work-related injuries.\n\nMilj\u00f6data, for its part, says there is \"no evidence to suggest\" that data has been stolen, according to one university that uses the company's software.\n\nWhat is clear is the widespread disruption. Councils have admitted that staff have been locked out of Milj\u00f6data's platforms, while police and Sweden's CERT-SE have been called in to deal with the issue. Although no ransomware groups had claimed the attack when Milj\u00f6data disclosed the incident, BleepingComputer found that the threat group Datacarry posted the stolen data on its dark web portal on September 13.\"",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "SE"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "150154"
+    ],
+    "secondary": {
+      "amount": 202,
+      "victim_id": [
+        "Volvo Group North America; 336120",
+        "City of Gothenburg; 921",
+        "Municipality of \u00c4lmhult; 921",
+        "Region of V\u00e4stmanland; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Swedish municipality; 921",
+        "Lund University; 611310"
+      ]
+    },
+    "victim_id": "Milj\u00f6data"
+  }
+}
