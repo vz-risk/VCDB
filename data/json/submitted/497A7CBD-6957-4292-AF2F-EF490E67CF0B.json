@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Initial access via an internet-exposed REDCap server with inadequate access controls; UNC6508 likely exploited an older, vulnerable REDCap version (exact method undetermined per Google Threat Intelligence Group).",
+      "result": [
+        "Infiltrate",
+        "Lateral movement",
+        "Persist"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "name": "INFINITERED (InfiniteRed)",
+      "notes": "Custom, previously undocumented malware deployed ~3 months after initial compromise; comprises a persistence module, a credential harvester, and a backdoor, hidden by trojanizing server system files. Actor also abused domain content-compliance rules (Google Workspace) as a novel exfiltration channel.",
+      "result": [
+        "Persist",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor",
+        "Trojan",
+        "Capture stored data",
+        "Export data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CN"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "name": [
+        "UNC6508"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)",
+      "External Cloud Asset(s)"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "497A7CBD-6957-4292-AF2F-EF490E67CF0B",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23388\nEncoded by AI — encode-veris-incident skill version 20260618T195537Z\n\nThe PHIDBR2019 label was IGNORED per skill guidance (artifact/noise tag); the embedded '2019' is NOT the incident year — this compromise began September 2023.\n\nSCOPE: This is part of a multiyear China-nexus espionage campaign (Google Threat Intelligence Group / Mandiant, actor UNC6508) that hit MULTIPLE independent US and Canadian medical/research organizations via self-hosted REDCap servers. These are independent victims of a campaign, NOT customers of a shared service provider, so the provider-breach rule does NOT apply and no secondary victims are listed. This record codes the single, unnamed 'North American medical institution' that the issue describes — the org GTIG details as compromised in September 2023 with activity persisting more than a year. A campaign_id could be assigned later if VCDB tracks the broader campaign.\n\nACTOR: UNC6508, a China-nexus state-sponsored espionage group (attributed by Google Threat Intelligence Group). variety='Nation-state', motive='Espionage' (acquiring biomedical/pharmaceutical IP and research). actor.country='CN' from the China-nexus attribution (the operators' physical location is not separately stated; coded from the documented PRC nexus).\n\nACTION: Hacking — 'Exploit vuln' via 'Web application' (internet-exposed, under-secured/legacy REDCap instance); the exact exploit is undetermined per GTIG, but vulnerable-version exploitation of an exposed web server is well-supported. Malware — INFINITERED ('InfiniteRed'): coded Backdoor + Trojan (trojanized server system files) + Capture stored data (credential harvester) + Export data (exfiltration); vector 'Direct install' (placed after the actor already had server access). The actor also abused Google Workspace domain content-compliance rules as a novel exfiltration channel (noted, not a distinct VERIS action variety). attribute.integrity 'Software installation' reflects the malware deployment / trojanized files.\n\nASSET: REDCap servers — S - Web application (the REDCap web platform) and S - Database (clinical research databases). cloud coded On-Premise + External Cloud: self-hosted REDCap servers (often on-prem/institutional) plus the abused Google Workspace cloud channel; specific hosting of the victim's instance not stated.\n\nATTRIBUTE: data_disclosure='Yes' — exfiltration of sensitive research data is confirmed by the reporting. data varieties: Medical (diagnostic data, treatment histories, clinical-trial/health data), Personal (study-participant identifiers), Secrets (biomedical/pharmaceutical research IP — the campaign's objective). state='Stored' (at rest in REDCap; encryption status not stated). data_total OMITTED — no record/participant count disclosed. data_abuse='Unknown' — espionage collection; no specific downstream misuse (fraud/identity theft/leak) reported.\n\nTIMELINE: incident begin = September 2023 (GTIG: compromise of the medical research org began Sept 2023; INFINITERED deployed ~3 months later, ~Dec 2023). Malicious activity persisted >1 year (through ~November 2025); publicly reported June 2026. discovery coded ~2 years (long undetected dwell). dbir_year=2023.\n\nVICTIM: Unnamed North American medical institution. industry coded '62' (the NAICS sector from the 'NAICS 62: Health Care and Social Assistance' label) — subsector not specified and the org is unnamed, so the 2-digit sector is used rather than guessing a subcode. country='Unknown' — the specific institution is described only as 'North American' (the campaign spans US and Canada); employee_count='Unknown' (org unnamed).\n\nSOURCES: hipaapulse.com (issue link), bleepingcomputer.com, helpnetsecurity.com, securityweek.com, csoonline.com, cybersecuritydive.com, theregister.com, and Google Cloud Threat Intelligence blog (cloud.google.com).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2026-06-18T20:41:18Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploited a legacy/exposed REDCap web server vulnerability for initial access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "INFINITERED deployed (~3 months later): backdoor + credential harvester via trojanized system files for persistence"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Sensitive clinical-research data exfiltrated (incl. via abused Workspace content-compliance rules)"
+      }
+    ],
+    "github": "23388",
+    "master_id": "497A7CBD-6957-4292-AF2F-EF490E67CF0B",
+    "modified": "2026-06-18T20:41:18Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://hipaapulse.com/chinese-hackers-breach-redcap-servers-steal-medical-research-00b0262f; https://www.bleepingcomputer.com/news/security/chinese-hackers-breach-redcap-servers-steal-medical-research/; https://www.helpnetsecurity.com/2026/06/15/chinese-hackers-redcap-medical-research-institutions-breach/; https://www.securityweek.com/chinese-hackers-target-medical-military-and-ai-research-in-north-america/; https://www.csoonline.com/article/4185582/china-linked-hackers-target-us-canada-research-using-legacy-redcap-exploits.html; https://cloud.google.com/blog/topics/threat-intelligence/prc-targets-us-medical-research",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A China-nexus state-sponsored espionage group tracked by Google Threat Intelligence Group as UNC6508 compromised an internet-exposed, under-secured REDCap clinical-research server at an unnamed North American medical institution, beginning in September 2023. About three months in, the actor deployed custom, previously undocumented malware (INFINITERED / 'InfiniteRed') — a backdoor, credential harvester, and persistence module hidden by trojanizing server system files — moved laterally, and exfiltrated sensitive research data (study-participant identifiers, diagnostic data and treatment histories, plus biomedical/pharmaceutical research IP), in part by abusing Google Workspace domain content-compliance rules. The intrusion went undetected for more than a year (through ~November 2025) and was disclosed publicly in June 2026 as part of a broader multiyear campaign against US and Canadian medical, military, and AI research organizations.",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 2
+    },
+    "incident": {
+      "month": 9,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "victim_id": "Unnamed North American medical research institution"
+  }
+}

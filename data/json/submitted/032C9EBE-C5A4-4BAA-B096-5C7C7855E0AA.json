@@ -1,0 +1,163 @@
+{
+  "action": {
+    "malware": {
+      "name": "LockBit 5.0 (LockBit5)",
+      "notes": "LockBit5/LOCKBIT 5.0 ransomware group claimed responsibility. Sources confirm an unauthorized party accessed and potentially copied (viewed or acquired) patient files; whether systems were encrypted/disrupted was NOT disclosed, so no availability impact is coded. Initial access vector was not disclosed.",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "notes": "Double-extortion / name-and-shame: LockBit 5.0 publicly claimed the breach and threatened to publish the stolen data on the dark web (posted 2026-03-08). The recipient and delivery channel of the demand are not specified, so target and vector are Unknown.",
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "LockBit5"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "032C9EBE-C5A4-4BAA-B096-5C7C7855E0AA",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23387\nEncoded by AI — encode-veris-incident skill version 20260618T195537Z\n\nThe PHIDBR2019 label was IGNORED per skill guidance (artifact/noise tag); the embedded '2019' is NOT the incident year — this breach is 2026. The linked HIPAA Journal article also covers an unrelated 'Open Arms Care' breach; only the Elmwood Home Care breach is coded here.\n\nACTOR: LockBit5 / LOCKBIT 5.0 ransomware group claimed responsibility. Coded actor.external.variety='Organized crime', motive='Financial' (ransomware/extortion crew). actor.country='Unknown' — LockBit is commonly described as Russia-nexus but its affiliates are global and no source states this affiliate's location.\n\nACTION: action.malware.variety='Ransomware' (LockBit5 attribution + the issue's 'Malware-ext-Ransomware-databreach' label); result='Exfiltrate' (files viewed/acquired). Encryption/outage was NOT disclosed, so NO availability impact is coded (avoiding speculation). malware.vector='Unknown' and the initial-access method is undisclosed — represented as an 'unk' first step in event_chain rather than inventing a hacking variety. action.social.variety='Extortion' is coded because of the documented name-and-shame: LockBit threatened to publish the stolen data on the dark web (the issue's 'Ransomeware-N&S' label; leak-site post dated 2026-03-08) — this is a genuine publish/leak demand, not merely the presence of ransomware. Per the social-action rule, attribute.integrity includes 'Alter behavior' and a 'P - Unknown' People asset is present; social target/vector are Unknown (demand recipient/channel unstated). attribute.integrity also includes 'Software installation' for the ransomware deployment.\n\nASSET: Patient files/data coded S - Database + S - File (the records/system the actor accessed); the sources say 'systems'/'files' without specifying. cloud='Unknown' (hosting not stated for this home-care provider).\n\nATTRIBUTE: data_disclosure='Yes' — forensics confirmed a threat group viewed or acquired patient files. data varieties: Personal (names, dates of birth, SSNs, driver's license numbers, demographic data) and Medical (medical information + health insurance information). state='Stored' (at rest; encryption status not stated). data_victim='Patient'. data_total OMITTED — affected-individual count was not disclosed at publication. data_abuse='Yes - Data ransomed' (leak-site threat to publish).\n\nTIMELINE: incident begin = 2026-01-24 (start of the documented unauthorized-access window, which ran 2026-01-24 to 2026-02-13). discovery ~3 weeks (the company identified suspicious activity and engaged third-party forensics around the end of that window). dbir_year=2026. LockBit's public leak-site claim came later, on 2026-03-08.\n\nDISCOVERY: internal — the company identified suspicious activity itself and then engaged third-party specialists; the specific detection mechanism is not stated, so internal variety='Unknown' (coded internal rather than 'Actor disclosure' because the victim detected it before LockBit's March leak-site post).\n\nVICTIM: Elmwood Home Care, a home healthcare provider serving Rhode Island and Massachusetts. industry=621610 (Home Health Care Services, from the NAICS 62 label). government='NA' (private). country='US'. state coded 'RI' (primary service area; it also serves MA). employee_count='Unknown'.\n\nSOURCES: hipaajournal.com (issue link), plus corroboration from dexpose.io, classaction.org, and claimdepot.com. Several specifics (encryption, initial vector, affected count) are undisclosed.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-06-18T20:45:30Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access to systems (vector undisclosed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient files viewed/acquired (data exfiltration); LockBit5 ransomware incident"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: LockBit threatened to publish stolen data on the dark web (name-and-shame)"
+      }
+    ],
+    "github": "23387",
+    "master_id": "032C9EBE-C5A4-4BAA-B096-5C7C7855E0AA",
+    "modified": "2026-06-18T20:45:30Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/data-breaches-open-arms-care-elmwood-home-care/; https://www.dexpose.io/lockbit5-targets-elmwood-healthcare-in-ransomware-attack/; https://www.classaction.org/data-breach-lawsuits/elmwood-healthcare-april-2026; https://www.claimdepot.com/investigations/elmwood-home-care-data-breach-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Elmwood Home Care, a home healthcare provider serving Rhode Island and Massachusetts, disclosed a cybersecurity incident involving unauthorized access to its systems between 2026-01-24 and 2026-02-13. Forensic investigation determined a threat group viewed or acquired patient files containing names, dates of birth, Social Security numbers, driver's license numbers, other demographic data, medical information, and health insurance information. The LockBit 5.0 (LockBit5) ransomware group claimed responsibility and threatened to publish the stolen data on the dark web (leak-site post dated 2026-03-08). Whether systems were encrypted was not disclosed, and the number of affected individuals had not been published at the time of reporting.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "incident": {
+      "day": 24,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "state": "RI",
+    "victim_id": "Elmwood Home Care"
+  }
+}
