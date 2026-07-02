@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Attacker gained unauthorized access to RXNT's cloud-based EHR/e-prescribing solution and obtained a copy of stored patient data. Entry method/variety not disclosed by RXNT.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "notes": "Names, dates of birth, contact information, patient IDs, prescription/medical information, and Social Security numbers. Attacker obtained a copy of data stored within the RXNT system.",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "94733B5A-B002-43E7-885B-5C2913582D22",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23381\nEncoded by AI — encode-veris-incident skill version 20260702T132320Z\n\nPROVIDER/SUPPLY-CHAIN BREACH — coded from the provider's perspective per the skill's third-party rule. RXNT (Networking Technology Inc), a cloud-based e-prescribing / practice-management / EHR SaaS vendor, was the breached entity; the compromise reached patient data belonging to MANY of its healthcare customers across multiple states (reported impact tens of thousands of individuals: ~49,338 TX, 11,442 SC, 4,480 WA, 3,634 NH, 1,163 MA, 5 VT residents, plus prescription data for members of Congress via the Office of the Attending Physician). Because a single shared vendor system common to its clientele was the point of compromise and multiple client orgs were hit, RXNT is coded as the PRIMARY victim and the GitHub-issue org (First Sight Family Vision, formerly Jason R Egbert OD PC — the Battle Ground, WA optometry practice, 1,225 of whose patients were affected) is listed under victim.secondary. One incident coded, not one per customer, to avoid inflating counts.\n\nActor: external, variety Unknown and entry method/variety undisclosed by RXNT (matches the issue's 'Hacking-ext-unknown' template tag). Motive inferred as Financial from the theft of a large volume of SSN/PII/medical data. action.hacking.vector coded 'Partner' per the skill's provider-breach convention to capture that impact propagated through the provider relationship; the actual technical entry vector into RXNT was not disclosed (noted here rather than guessed).\n\ndata_disclosure = Yes: RXNT's investigation confirmed the attacker accessed systems and obtained a copy of stored data. confidentiality.state = Stored (at-rest; encryption status not stated). data_total OMITTED: only a partial, per-jurisdiction/per-customer count is available (e.g. 1,225 for the issue's practice; per-state totals) and no single defensible cross-victim total is published, so logging one number would mislead.\n\nDiscovery: internal — RXNT itself identified the unauthorized access on 2026-03-03 (method unspecified → Unknown). Timeline: unauthorized access confirmed 2026-03-01 to 2026-03-03 (incident begin = 2026-03-01); discovered 2026-03-03 (Days: 2). plus.dbir_year = 2027 (incident began March 2026, within the Jan–Oct window → year+1).\n\nSOURCES: (1) issue-linked HIPAA Journal article on First Sight Family Vision / Jason R Egbert OD PC; (2) NEWER independent source found via web search — Security Boulevard (May 2026) 'RXNT Healthcare Software Breach Exposes Patient Data Across Multiple Provider Clients', which corroborated and EXPANDED the picture: it revealed the far larger multi-state, multi-customer scope (tens of thousands of individuals, Congress OAP) that the single-practice issue did not, reinforcing the provider-as-primary-victim decision; no facts from the earlier source were contradicted. (3) HIPAA Journal RXNT-focused article confirming exfiltration ('obtained a copy of the data'). No named threat actor in any source; social-media links were not cited (followed to underlying articles).\n\nUNKNOWN/INFERRED FIELDS: actor.external.variety, .name, .country (all Unknown); action.hacking.variety and true entry vector (undisclosed); discovery_method.internal.variety (Unknown); actor motive (inferred Financial); data_total (omitted).",
+    "created": "2026-07-02T14:01:44Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unauthorized access to RXNT cloud EHR system (entry method undisclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Copy of stored patient data obtained (exfiltration)"
+      }
+    ],
+    "github": "23381",
+    "master_id": "94733B5A-B002-43E7-885B-5C2913582D22",
+    "modified": "2026-07-02T14:01:44Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/clinical-registry-solutions-jason-r-egbert-od-pc-vnc-health-data-breaches/; https://securityboulevard.com/2026/05/rxnt-healthcare-software-breach-exposes-patient-data-across-multiple-provider-clients/; https://www.hipaajournal.com/rxnt-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Networking Technology Inc, doing business as RXNT — a cloud-based electronic prescribing, practice-management, and EHR SaaS vendor — suffered a hacking breach in which an external actor gained unauthorized access to its systems between March 1 and March 3, 2026 and obtained a copy of stored patient data belonging to many of its healthcare customers. Compromised data included names, dates of birth, contact information, patient IDs, prescription/medical information, and Social Security numbers, affecting tens of thousands of individuals across multiple states. Among the affected customer practices was First Sight Family Vision (formerly Jason R Egbert OD PC) of Battle Ground, Washington, 1,225 of whose patients were reported to HHS OCR.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 1,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "secondary": {
+      "victim_id": [
+        "First Sight Family Vision (Jason R Egbert OD PC); 621111"
+      ]
+    },
+    "state": "MD",
+    "victim_id": "Networking Technology Inc (RXNT)"
+  }
+}
