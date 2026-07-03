@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Initial access inferred from lawsuit allegation that the MSP's shared remote-access credentials were compromised in November 2023 and reused across clients; attackers then used 'living off the land' techniques (legitimate built-in tools) to evade detection.",
+      "result": [
+        "Infiltrate",
+        "Elevate",
+        "Lateral movement",
+        "Persist"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Directory"
+      },
+      {
+        "variety": "S - Authentication"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "System"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify privileges"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "D6994E65-5EB6-449B-BEAC-6EB48A1BB4EF",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23382\nEncoded by AI \u2014 encode-veris-incident skill version 20260618T195537Z\n\nPROVIDER-BREACH CODING: The GitHub issue is framed around the St. George Fire Protection District (NAICS 92-Local / 922160), but the sources show this is a shared-service-provider compromise and it is coded from the provider's perspective per VCDB convention. General Informatics, a Baton Rouge IT/cybersecurity managed-services firm, used the SAME remote-access tool username/password across multiple clients and continued using those credentials after learning in November 2023 that they had been breached. The same attackers used this shared access to breach at least two General Informatics clients: St. George Fire Protection District and an unnamed East Baton Rouge municipal emergency-services agency. Because a shared credential common to the provider's clientele was the point of compromise and more than one customer org was hit, this is coded as ONE incident with General Informatics as the primary victim and the affected clients listed under victim.secondary.\n\nACTOR: External, unidentified. No named threat group in any source. actor.external.variety and country coded Unknown (matches the issue's 'Hacking-ext-unknown' label). motive=Financial is INFERRED from court documents / reporting that the attackers appeared positioned for a potential ransomware attack ('lying in wait'); no ransom demand was actually made.\n\nACTION: action.hacking.variety='Use of stolen creds' is INFERRED from the lawsuit's central allegation that the compromised, reused remote-access credentials were the entry path; the articles state the initial vector was 'not specified' in detail, so this is attacker-/lawsuit-sourced and not victim-confirmed. vector='Partner' reflects that the compromise propagated through the MSP relationship. result=[Infiltrate, Elevate, Lateral movement, Persist] from: domain controllers compromised (elevate), access to other trusted networks (lateral movement), and persistence/'lying in wait' for a future attack.\n\nASSET: Domain controllers coded as S - Directory + S - Authentication (on-prem). attribute.integrity 'Modify privileges' reflects the domain-controller compromise and established persistence.\n\nATTRIBUTE: data_disclosure='Yes' \u2014 the attackers had confirmed unauthorized access to domain controllers and the compromised, reused remote-access credentials (confirmed credential compromise); per reviewer guidance (PR #23389, swidup) confirmed system/account access is itself sufficient to code confirmed disclosure, even though no source states a specific file or record was viewed/exfiltrated. No record count available, so data_total omitted. data_abuse=Unknown.\n\nTIMELINE: Coded begin = December 2023, the period universally reported for the St. George intrusion (discovered/reported to the district 2023-12-23). The reused credentials were known-breached in November 2023, which may predate the actual intrusion; exact initial-access date is uncertain. dbir_year=2023. discovery via law enforcement (external).\n\nSOURCES: govtech.com, theadvocate.com, firerescue1.com, wbrz.com, wafb.com (lawsuit filed 2026-05-23; this is a Dec 2023 breach surfaced by 2026 litigation).\n\nREVIEW UPDATE (post swidup PR #23389 feedback): changed data_disclosure from 'Potentially' to 'Yes' (confirmed system access + confirmed credential compromise is sufficient, per reviewer). Set victim.employee_count to '101 to 1000' for the coded primary victim, General Informatics LLC (LinkedIn self-reports 51-200; PitchBook reports 198; ZoomInfo reports 60 \u2014 sources disagree, but two of three point above 100, so '101 to 1000' was chosen as the closest single bucket). Note: swidup's PR comment cited '51-200 employees... on this fire district' \u2014 that figure describes the fire-district customer, not General Informatics, the coded primary victim under the provider-breach rule, so it was not applied directly here. Also added attribute.confidentiality.data ('System', 'Credentials' varieties) and state ('Stored') \u2014 required once data_disclosure='Yes' but previously omitted; the disclosed data is the domain-controller/directory system data and the compromised remote-access credentials themselves, not a separate PII dataset.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2026-06-18T20:33:43Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access via the MSP's compromised, reused remote-access credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Domain controllers compromised; privileges elevated using living-off-the-land tools"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Lateral movement to other trusted networks and persistence established ('lying in wait')"
+      }
+    ],
+    "github": "23382",
+    "master_id": "D6994E65-5EB6-449B-BEAC-6EB48A1BB4EF",
+    "modified": "2026-07-02T13:40:40Z"
+  },
+  "reference": "https://www.govtech.com/security/louisiana-fire-district-sues-cybersecurity-firm-after-hack; https://www.theadvocate.com/baton_rouge/news/courts/st-george-fire-general-informatics-hack/article_832a6a0a-749f-4842-9eec-0f00da998be6.html; https://www.firerescue1.com/cybersecurity/la-fd-sues-cybersecurity-firm-after-hackers-infiltrate-network; https://www.wbrz.com/news/st-george-fire-sues-cybersecurity-company-alleging-negligence-left-network-open-to-2023-cyberattack; https://www.wafb.com/2026/06/09/st-george-fire-district-sues-it-company-over-cyberattack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Attackers compromised the network of General Informatics, a Baton Rouge IT/cybersecurity managed-services firm, by way of remote-access credentials the firm reused across multiple clients and kept using after learning in November 2023 they were breached. Using the shared access and 'living off the land' techniques, the attackers compromised domain controllers and moved laterally into at least two General Informatics clients \u2014 the St. George Fire Protection District and an unnamed East Baton Rouge municipal emergency-services agency \u2014 establishing persistence and positioning for a potential ransomware attack. Ransomware was never deployed and no data theft was confirmed. The intrusion was reported to the fire district by law enforcement on 2023-12-23, and the district sued General Informatics for negligence on 2026-05-23.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 1
+    },
+    "incident": {
+      "month": 12,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 2,
+      "victim_id": [
+        "St. George Fire Protection District; 922160",
+        "Unnamed East Baton Rouge municipal emergency-services agency; 922190"
+      ]
+    },
+    "state": "LA",
+    "victim_id": "General Informatics LLC"
+  }
+}
