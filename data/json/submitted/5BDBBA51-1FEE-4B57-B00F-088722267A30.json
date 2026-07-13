@@ -1,0 +1,106 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "5BDBBA51-1FEE-4B57-B00F-088722267A30",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23568\nEncoded by AI — encode-veris-incident skill version 20260713T202114Z\n\nSources consulted: AFL.com.au (https://www.afl.com.au/news/1550813/melbourne-demons-apologise-to-sachi-dade-partner-of-steven-may-for-privacy-breach); NIT.com.au (https://nit.com.au/30-06-2026/25090/demons-apologise-to-mays-partner-over-privacy-breaches).\n\nThree separate disclosures occurred: two on February 4 and 5, 2026, and a third via a Microsoft Teams virtual meeting attended by 15 people. Using February 4, 2026 as the incident begin date. The club's leadership team including coach Steven King and football boss Alan Richardson were named as defendants.\n\nData: The specific personal and sensitive information disclosed is not described in detail in the sources. Personal and Sensitive Personal coded to cover the range noted by the club's acknowledgment ('serious invasion of her privacy'). Exactly one individual affected (Sachi Dade, partner of retired player Steven May). data_total set to 1.\n\nMotive: Coded as NA — these disclosures appear to stem from organizational management of a player situation rather than financial or ideological motivation.\n\nActor variety: Manager coded for coaching staff and football operations leadership. The internal actors had legitimate access to personnel/player-adjacent information through their roles and disclosed it inappropriately.\n\nDiscovery: Sachi Dade (the affected individual) filed a lawsuit in Federal Court. The formal breach discovery from the club's organizational perspective occurred when the legal action was initiated by an unrelated third party (Dade and her legal representatives). Settled June 2026.\n\nThe Teams meeting breach involved 15 attendees who were exposed to Dade's personal information. Data state coded Unknown since we do not know whether documents or verbal disclosure were involved.\n\nEmployee count: AFL clubs typically employ 100-300 staff; coded 101 to 1000.\n\nDBIR year 2027 derived from February 4, 2026 incident begin date (Feb is in Jan-Oct window → Y+1 = 2027).",
+    "created": "2026-07-13T20:55:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Melbourne Demons leadership team disclosed personal and sensitive information about Sachi Dade across three incidents (Feb 4, 5, and a Teams meeting with 15 attendees)"
+      }
+    ],
+    "github": "23568",
+    "master_id": "5BDBBA51-1FEE-4B57-B00F-088722267A30",
+    "modified": "2026-07-13T20:55:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.afl.com.au/news/1550813/melbourne-demons-apologise-to-sachi-dade-partner-of-steven-may-for-privacy-breach; https://nit.com.au/30-06-2026/25090/demons-apologise-to-mays-partner-over-privacy-breaches",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between February 4-5, 2026, Melbourne Demons leadership including coach Steven King and football boss Alan Richardson disclosed personal and sensitive information about Sachi Dade (partner of retired player Steven May) across three incidents, one of which involved a Microsoft Teams meeting attended by 15 people. The club acknowledged the disclosures constituted a serious invasion of privacy. Sachi Dade sued the club, and the matter was settled in Federal Court in June 2026 with an apology and commitment to privacy training.",
+  "timeline": {
+    "incident": {
+      "day": 4,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "7111",
+    "victim_id": "Melbourne Football Club (Melbourne Demons)"
+  }
+}
