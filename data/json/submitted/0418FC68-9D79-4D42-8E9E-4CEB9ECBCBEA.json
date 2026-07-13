@@ -67,7 +67,7 @@
   },
   "incident_id": "0418FC68-9D79-4D42-8E9E-4CEB9ECBCBEA",
   "plus": {
-    "analysis_status": "First pass",
+    "analysis_status": "Reviewed",
     "analyst": "kf0jvt",
     "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23384\nEncoded by AI — encode-veris-incident skill version 20260702T132320Z\n\nLifepoint Health, Inc. (Brentwood, TN; operates 60+ hospital campuses in 28 states plus 30+ rehab/behavioral hospitals). On 2026-02-22 an unauthorized third party used a compromised user account to gain access to the internal environment and certain internal databases; discovered next day 2026-02-23 and contained within 24 hours. Notifications began 2026-04-23. Exposed data (names, addresses, phone numbers, DOB, SSNs) belonged to employees of contracted vendors only — not patients or direct employees, so no Medical data variety coded. SSNs -> 'Sensitive Personal', remaining PII -> 'Personal'.\n\nAssumptions / Unknowns: actor.external.variety and name = Unknown (sources say only 'unauthorized third party', no group claimed/named). actor.motive = 'Financial' is an INFERENCE from the targeting of SSN/PII via stolen creds — no exfiltration, ransom, or extortion was reported. hacking.vector = Unknown (sources do not state how the account was compromised or the access path). discovery_method.internal.variety = Unknown (victim detected it internally the next day but the detecting control is unstated). confidentiality.state = 'Stored' default (encryption status not stated). asset hosting coded On-Premise from 'internal environment/internal databases' wording. Total affected count NOT disclosed anywhere, so data_total omitted rather than logging a partial figure.\n\nNAICS: issue label is 'NAICS 62: Health Care and Social Assistance'; the issue body suggested 621111 (Offices of Physicians), but Lifepoint Health is a hospital operator, so coded 622110 (General Medical and Surgical Hospitals) as more accurate.\n\nPHIDBR2019 label IGNORED per skill (artifact tag; its '2019' is not the incident year — real incident date established as Feb 2026 from sources).\n\nSources consulted: issue body (claimdepot.com/data-breach/lifepoint-health-2026); HIPAA Journal (hipaajournal.com, 2026-06-25 comment); databreachclassaction.io (2026-06-26 comment); plus independent corroboration — Behavioral Healthcare Network republication (bhnet.org, 2026-06-23) and the NEWER independent source Strauss Borrelli PLLC data-breach blog (straussborrelli.com/data-breach-blog, listing last updated 2026-07-01) confirming the law-firm investigation. The newer source did NOT change or contradict any facts.",
     "created": "2026-07-02T14:01:09Z",
@@ -90,7 +90,7 @@
     ],
     "github": "23384",
     "master_id": "0418FC68-9D79-4D42-8E9E-4CEB9ECBCBEA",
-    "modified": "2026-07-02T14:01:09Z",
+    "modified": "2026-07-13T20:21:32Z",
     "sub_source": "vcdb"
   },
   "reference": "https://www.claimdepot.com/data-breach/lifepoint-health-2026; https://www.hipaajournal.com/data-breach-lifepoint-health-southwest-behavioral-nottingham-village/; https://databreachclassaction.io/cases/lifepoint-health-data-breach-class-action-investigation; https://www.bhnet.org/64040/lifepoint-health-southwest-behavioral-nottingham-village-report-data-breaches/; https://straussborrelli.com/data-breach-blog/",

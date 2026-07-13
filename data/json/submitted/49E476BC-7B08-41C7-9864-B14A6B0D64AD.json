@@ -98,9 +98,9 @@
   },
   "incident_id": "49E476BC-7B08-41C7-9864-B14A6B0D64AD",
   "plus": {
-    "analysis_status": "First pass",
+    "analysis_status": "Reviewed",
     "analyst": "kf0jvt",
-    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23385\nEncoded by AI — encode-veris-incident skill version 20260702T132320Z\n\nMackay Sugar Limited (Australia's second-largest raw sugar producer, Queensland) hit by The Gentlemen (Microsoft: Storm-2697) ransomware; incident surfaced 2026-06-10, victim named on the group's Tor leak site 2026-06-15 with a ~10-day countdown to publish allegedly stolen data. As of 2026-07-02 no data has been published and the victim has not confirmed a data breach.\n\nCoding decisions / assumptions:\n- timeline.incident set to 2026-06-10 (date the incident surfaced / operations disrupted); actual initial-access date not disclosed. Initial access VECTOR unconfirmed (newest analysis speculates edge-device vuln or compromised credentials; not forensically verified) -> event_chain step 1 coded unk, action.malware.vector = Unknown.\n- data_disclosure = Yes based on confirmed unauthorized access to live IT systems holding data plus the double-extortion group's exfiltration claim; the exfiltration itself is ATTACKER-CLAIMED and not victim-confirmed, and no data was leaked as of 2026-07-02. confidentiality.data.variety = Internal (corporate/business data per source 'Corporate' classification); specific data types unknown.\n- action.social.variety = Extortion (leak-site threat to publish stolen data); target/vector Unknown; ransom amount not disclosed. plus.attribute.confidentiality.data_abuse = Yes - Data ransomed (leak-site/extortion component).\n- actor country Unknown (RaaS crew; reporting suggests Russian-speaking founder but location unconfirmed).\n- OT/ICS impact: latest analysis indicates IT-side (Level 3 MES/logistics/scheduling) encryption caused the mill shutdown; no direct PLC/DCS compromise confirmed, so no OT asset coded.\n- employee_count '101 to 1000' (~597 permanent staff, ~800 with seasonal workers).\n- dbir_year 2027 (incident begin June 2026, Jan-Oct window -> Y+1).\n\nSources consulted: SecurityWeek; Mackay Sugar official incident notice (mkysugar.com.au); The Record (Recorded Future); Cyber Daily (exclusive); Breachsense; and (newest, independent) Shieldworkz Deep-Dive published 2026-07-02, which corroborates that no data was leaked and the initial-access vector remains unconfirmed — no facts contradicted.",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23385\nEncoded by AI — encode-veris-incident skill version 20260702T132320Z\n\nMackay Sugar Limited (Australia's second-largest raw sugar producer, Queensland) hit by The Gentlemen (Microsoft: Storm-2697) ransomware; incident surfaced 2026-06-10, victim named on the group's Tor leak site 2026-06-15 with a ~10-day countdown to publish allegedly stolen data. As of 2026-07-02 no data has been published and the victim has not confirmed a data breach.\n\nCoding decisions / assumptions:\n- timeline.incident set to 2026-06-10 (date the incident surfaced / operations disrupted); actual initial-access date not disclosed. Initial access VECTOR unconfirmed (newest analysis speculates edge-device vuln or compromised credentials; not forensically verified) -> event_chain step 1 coded unk/unk, action.malware.vector = Unknown.\n- data_disclosure = Yes based on confirmed unauthorized access to live IT systems holding data plus the double-extortion group's exfiltration claim; the exfiltration itself is ATTACKER-CLAIMED and not victim-confirmed, and no data was leaked as of 2026-07-02. confidentiality.data.variety = Internal (corporate/business data per source 'Corporate' classification); specific data types unknown.\n- action.social.variety = Extortion (leak-site threat to publish stolen data); target/vector Unknown; ransom amount not disclosed. plus.attribute.confidentiality.data_abuse = Yes - Data ransomed (leak-site/extortion component).\n- actor country Unknown (RaaS crew; reporting suggests Russian-speaking founder but location unconfirmed).\n- OT/ICS impact: latest analysis indicates IT-side (Level 3 MES/logistics/scheduling) encryption caused the mill shutdown; no direct PLC/DCS compromise confirmed, so no OT asset coded.\n- employee_count '101 to 1000' (~597 permanent staff, ~800 with seasonal workers).\n- dbir_year 2027 (incident begin June 2026, Jan-Oct window -> Y+1).\n\nSources consulted: SecurityWeek; Mackay Sugar official incident notice (mkysugar.com.au); Rescana; The Record (Recorded Future); teiss; Cyber Daily (exclusive); Breachsense; and (newest, independent) Shieldworkz Deep-Dive published 2026-07-02, which corroborates that no data was leaked and the initial-access vector remains unconfirmed — no facts contradicted.\n\nReviewed by swidup 2026-07-10: added two issue-comment source URLs (Rescana, teiss) that had been omitted from `reference`; changed event_chain step 1 attribute from ia to unk since the entry vector — and therefore the attribute — is undisclosed.",
     "created": "2026-07-02T14:00:59Z",
     "dbir_year": 2027,
     "event_chain": [
@@ -108,7 +108,7 @@
         "action": "unk",
         "actor": "ext",
         "asset": "srv",
-        "attribute": "ia",
+        "attribute": "unk",
         "summary": "Initial access; entry vector not disclosed"
       },
       {
@@ -142,7 +142,7 @@
     ],
     "github": "23385",
     "master_id": "49E476BC-7B08-41C7-9864-B14A6B0D64AD",
-    "modified": "2026-07-02T14:00:59Z",
+    "modified": "2026-07-13T20:21:32Z",
     "attribute": {
       "confidentiality": {
         "data_abuse": "Yes - Data ransomed"
@@ -150,7 +150,7 @@
     },
     "sub_source": "vcdb"
   },
-  "reference": "https://www.securityweek.com/ransomware-attack-shuts-down-mills-of-australias-second-largest-sugar-producer/; https://www.mkysugar.com.au/news-updates-circulars/mackay-sugar-cyber-security-incident; https://therecord.media/mackay-sugar-cyberattack-claimed-gentlemen; https://www.cyberdaily.au/security/13758-exclusive-mackay-sugar-cyber-attack-claimed-by-the-gentlemen-ransomware; https://www.breachsense.com/breaches/mackay-sugar-data-breach/; https://shieldworkz.com/blogs/deep-dive-the-gentlemen-ransomware-attack-on-mackay-sugar",
+  "reference": "https://www.securityweek.com/ransomware-attack-shuts-down-mills-of-australias-second-largest-sugar-producer/; https://www.mkysugar.com.au/news-updates-circulars/mackay-sugar-cyber-security-incident; https://www.rescana.com/post/ransomware-attack-on-mackay-sugar-disrupts-australian-mills-cybersecurity-incident-analysis-and-lessons-learned; https://therecord.media/mackay-sugar-cyberattack-claimed-gentlemen; https://www.teiss.co.uk/news/ransomware-attack-halts-operations-at-australias-second-largest-sugar-producer-17670; https://www.cyberdaily.au/security/13758-exclusive-mackay-sugar-cyber-attack-claimed-by-the-gentlemen-ransomware; https://www.breachsense.com/breaches/mackay-sugar-data-breach/; https://shieldworkz.com/blogs/deep-dive-the-gentlemen-ransomware-attack-on-mackay-sugar",
   "schema_name": "vcdb",
   "schema_version": "1.4.0",
   "security_incident": "Confirmed",
