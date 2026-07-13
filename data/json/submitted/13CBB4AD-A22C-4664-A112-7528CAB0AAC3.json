@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "External actor gained unauthorized access to Clinical Registry Solutions' network and copied files containing patient and employee/company data. Specific initial-access method and hacking variety were not disclosed by the victim or the attacker.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "notes": "Akira operates a data-theft extortion / leak-site model; attacker-sourced posting threatened to publish the stolen 41GB unless negotiations were initiated. Target of the demand (specific person/role) and delivery vector were not disclosed.",
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Akira"
+      ],
+      "notes": "Akira is a financially motivated ransomware / cyber-extortion crew that operates a data-leak site. Attribution here is attacker-claimed (Akira listed the victim on its leak site); not confirmed in the victim's notification letters.",
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "notes": "Victim confirmed unauthorized network access and that files containing patient data (names, medical record numbers, procedure dates) were copied. Attacker (Akira) additionally claimed 41GB including employee passports, SSNs, driver's licenses, plus client documents, financial/payment records and contracts. Patient SSNs and diagnosis/treatment data were reported NOT involved.",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "notes": "Extortion demand is an attempt to coerce the victim into paying to prevent publication of stolen data (Alter behavior). No payment or compliance is confirmed in the sources.",
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "13CBB4AD-A22C-4664-A112-7528CAB0AAC3",
+  "reference": "https://www.hipaajournal.com/clinical-registry-solutions-jason-r-egbert-od-pc-vnc-health-data-breaches/; https://www.dexpose.io/akira-ransomware-attack-strikes-clinical-registry-solutions/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Clinical Registry Solutions (CRS), a Brooklyn, NY provider of clinical data abstraction and registry-support services to healthcare providers, suffered a cyberattack detected on April 9, 2026. An external actor gained unauthorized access to CRS's network and copied files containing protected health information belonging to patients of Dignity Health's St. Mary's Medical Center (names, medical record numbers, procedure dates) as well as CRS employee and company data. The Akira ransomware/extortion group claimed the attack, alleging exfiltration of 41GB including employee passports, SSNs and driver's licenses plus client documents, financial records and contracts, and threatened to publish the data. CRS disclosed the breach publicly on June 16, 2026 and offered complimentary credit monitoring; no misuse of the data had been identified.",
+  "timeline": {
+    "incident": {
+      "day": 9,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541",
+    "notes": "Clinical Registry Solutions (formerly Cardiac Registry Support), founded 2015, Brooklyn NY. A data-processing / registry-support service provider to healthcare organizations; coded as the primary victim per the provider-breach rule because CRS itself was breached and the impact propagated to its healthcare client's patients.",
+    "secondary": {
+      "notes": "Patients of Dignity Health's St. Mary's Medical Center (a CRS client) had PHI copied in the breach.",
+      "victim_id": [
+        "Dignity Health - St. Mary's Medical Center (patients); 622"
+      ]
+    },
+    "state": "NY",
+    "victim_id": "Clinical Registry Solutions"
+  },
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "kf0jvt",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-07-02T14:01:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial unauthorized access to CRS network (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files containing patient/employee/company data copied (exfiltrated)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: Akira threatened to publish 41GB unless negotiations initiated"
+      }
+    ],
+    "github": "23380",
+    "master_id": "13CBB4AD-A22C-4664-A112-7528CAB0AAC3",
+    "modified": "2026-07-13T20:21:32Z",
+    "sub_source": "vcdb",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23380\nEncoded by AI — encode-veris-incident skill version 20260702T132320Z\n\nProvider-breach coding: Clinical Registry Solutions is a clinical data-abstraction / registry-support service provider; it was the breached entity and is coded as the PRIMARY victim (industry = its own NAICS 541 Professional/Scientific/Technical, not the hospital's healthcare NAICS). The affected client is listed under victim.secondary (Dignity Health / St. Mary's Medical Center patients; NAICS 622). No other CRS clients were named in the sources.\n\nIGNORED the PHIDBR2019 label per skill (artifact/noise tag; the 2019 is NOT the incident year). Actual incident date established from sources: suspicious activity detected 2026-04-09; disclosed publicly 2026-06-16. timeline.incident set to the earliest documented compromise indicator (2026-04-09). dbir_year = 2027 (incident begin in Jan-Oct 2026 -> Y+1).\n\nActor: Akira ransomware/extortion crew -> Organized crime, Financial motive; attribution is attacker-claimed (leak-site listing), not confirmed by the victim's letters. Actor country left Unknown (sources do not state).\n\nAction.hacking variety and vector left Unknown: neither victim nor attacker disclosed the initial-access method or exploited weakness, so not speculated (event-chain step 1 coded unk/ext/srv/ia as an honest bridge). action.hacking.result = Infiltrate+Exfiltrate (confirmed access + files copied). Extortion coded under action.social because Akira documented a threat to publish stolen data; social target and vector Unknown (specific target/delivery not disclosed). Required social companions coded: attribute.integrity 'Alter behavior' and a People asset (P - Unknown). No payment/compliance confirmed.\n\ndata_disclosure = Yes: victim confirmed unauthorized access and that files were copied. Data varieties: Medical (patient names/MRN/procedure dates), Personal + Sensitive Personal (employee passports/SSN/driver's licenses), Bank (financial/payment records claimed by attacker). Employee-data and volume (41GB) details are ATTACKER-SOURCED (Akira leak-site claim) and not victim-confirmed. confidentiality.state = Stored (encryption status not stated; not assumed unencrypted). No availability/encryption impact coded (no evidence of file encryption; Akira increasingly runs exfil-only extortion). plus.attribute.confidentiality.data_abuse = 'Yes - Data ransomed' (extortion/leak-site component); note CRS stated no misuse identified as of disclosure.\n\ndata_total OMITTED: no defensible total across all victim groups (no patient count published; employee count not itemized).\n\nAsset hosting coded cloud = Unknown (sources do not indicate on-prem vs cloud).\n\nSources: (1) issue-linked HIPAA Journal article (hipaajournal.com, dated 2026-06-16). (2) Independent NEWER-context source found via search: dexpose.io Akira analysis, which corroborates the attack and ADDS the explicit extortion detail (threat to publish 41GB 'unless negotiations are initiated') not spelled out in the HIPAA Journal letter summary; it did not contradict any earlier facts. ransomware.live / redpacketsecurity leak-site trackers also list CRS as an Akira victim (corroborating attribution) but were not cited as primary references. Social-media posts were not used.\n\nvictim.employee_count = '11 to 100': CRS is a small firm (founded 2015; LinkedIn/company-profile sources cluster in the ~11-50 range); mapped to the nearest enum bucket."
+  }
+}

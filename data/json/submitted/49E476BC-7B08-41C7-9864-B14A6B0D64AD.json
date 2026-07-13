@@ -1,0 +1,177 @@
+{
+  "action": {
+    "malware": {
+      "notes": "The Gentlemen (Microsoft: Storm-2697) ransomware deployed against IT/enterprise systems (Level 3 MES, logistics and cane-supply scheduling), forcing mills offline. Delivery vector not disclosed.",
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "notes": "The Gentlemen listed Mackay Sugar on its Tor leak site on 2026-06-15 with a countdown, threatening to publish allegedly stolen data (double-extortion). No ransom figure disclosed; no data published as of 2026-07-02.",
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "The Gentlemen (Storm-2697)"
+      ],
+      "notes": "Ransomware-as-a-service crew active since ~Sept 2025; double-extortion MO; reporting suggests a Russian-speaking founder but actor location is not confirmed, so country left Unknown.",
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "notes": "IT/enterprise servers supporting cane supply, logistics scheduling and mill operations (Level 3 MES) were encrypted. Per latest analysis, OT/ICS (PLCs/DCS) were not directly compromised; the mill shutdown was a downstream effect of IT systems going offline."
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days"
+      },
+      "notes": "Two of three Queensland mills (Farleigh and Racecourse) shut down from ~2026-06-10; limited manual crushing resumed at one mill by 2026-06-12 and staged system restoration was ongoing.",
+      "variety": [
+        "Interruption",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "notes": "Attacker-claimed corporate data theft (double-extortion leak-site listing); the specific nature/extent of stolen data is unconfirmed by the victim and no data had been published as of 2026-07-02. Coded Yes on the basis of confirmed unauthorized access to live systems holding the data plus the attacker's exfiltration claim.",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "notes": "Ransomware software installed on victim systems; extortion demand constitutes an attempt to alter victim behavior (payment).",
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "49E476BC-7B08-41C7-9864-B14A6B0D64AD",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23385\nEncoded by AI — encode-veris-incident skill version 20260702T132320Z\n\nMackay Sugar Limited (Australia's second-largest raw sugar producer, Queensland) hit by The Gentlemen (Microsoft: Storm-2697) ransomware; incident surfaced 2026-06-10, victim named on the group's Tor leak site 2026-06-15 with a ~10-day countdown to publish allegedly stolen data. As of 2026-07-02 no data has been published and the victim has not confirmed a data breach.\n\nCoding decisions / assumptions:\n- timeline.incident set to 2026-06-10 (date the incident surfaced / operations disrupted); actual initial-access date not disclosed. Initial access VECTOR unconfirmed (newest analysis speculates edge-device vuln or compromised credentials; not forensically verified) -> event_chain step 1 coded unk/unk, action.malware.vector = Unknown.\n- data_disclosure = Yes based on confirmed unauthorized access to live IT systems holding data plus the double-extortion group's exfiltration claim; the exfiltration itself is ATTACKER-CLAIMED and not victim-confirmed, and no data was leaked as of 2026-07-02. confidentiality.data.variety = Internal (corporate/business data per source 'Corporate' classification); specific data types unknown.\n- action.social.variety = Extortion (leak-site threat to publish stolen data); target/vector Unknown; ransom amount not disclosed. plus.attribute.confidentiality.data_abuse = Yes - Data ransomed (leak-site/extortion component).\n- actor country Unknown (RaaS crew; reporting suggests Russian-speaking founder but location unconfirmed).\n- OT/ICS impact: latest analysis indicates IT-side (Level 3 MES/logistics/scheduling) encryption caused the mill shutdown; no direct PLC/DCS compromise confirmed, so no OT asset coded.\n- employee_count '101 to 1000' (~597 permanent staff, ~800 with seasonal workers).\n- dbir_year 2027 (incident begin June 2026, Jan-Oct window -> Y+1).\n\nSources consulted: SecurityWeek; Mackay Sugar official incident notice (mkysugar.com.au); Rescana; The Record (Recorded Future); teiss; Cyber Daily (exclusive); Breachsense; and (newest, independent) Shieldworkz Deep-Dive published 2026-07-02, which corroborates that no data was leaked and the initial-access vector remains unconfirmed — no facts contradicted.\n\nReviewed by swidup 2026-07-10: added two issue-comment source URLs (Rescana, teiss) that had been omitted from `reference`; changed event_chain step 1 attribute from ia to unk since the entry vector — and therefore the attribute — is undisclosed.",
+    "created": "2026-07-02T14:00:59Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access; entry vector not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed on IT/enterprise systems"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Corporate data copied (attacker-claimed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted; mills forced offline"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak-site listing and countdown"
+      }
+    ],
+    "github": "23385",
+    "master_id": "49E476BC-7B08-41C7-9864-B14A6B0D64AD",
+    "modified": "2026-07-13T20:21:32Z",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/ransomware-attack-shuts-down-mills-of-australias-second-largest-sugar-producer/; https://www.mkysugar.com.au/news-updates-circulars/mackay-sugar-cyber-security-incident; https://www.rescana.com/post/ransomware-attack-on-mackay-sugar-disrupts-australian-mills-cybersecurity-incident-analysis-and-lessons-learned; https://therecord.media/mackay-sugar-cyberattack-claimed-gentlemen; https://www.teiss.co.uk/news/ransomware-attack-halts-operations-at-australias-second-largest-sugar-producer-17670; https://www.cyberdaily.au/security/13758-exclusive-mackay-sugar-cyber-attack-claimed-by-the-gentlemen-ransomware; https://www.breachsense.com/breaches/mackay-sugar-data-breach/; https://shieldworkz.com/blogs/deep-dive-the-gentlemen-ransomware-attack-on-mackay-sugar",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Mackay Sugar Limited, Australia's second-largest raw sugar producer, suffered a ransomware attack by The Gentlemen (Microsoft: Storm-2697) that surfaced on 2026-06-10 and forced two of its three Queensland mills (Farleigh and Racecourse) offline during the crushing season. The group named the company on its Tor-based leak site on 2026-06-15 with a countdown, claiming to have stolen corporate data (double-extortion), though no data had been published and the victim had not confirmed a data breach as of 2026-07-02.",
+  "timeline": {
+    "incident": {
+      "day": 10,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "311314",
+    "victim_id": "Mackay Sugar Limited"
+  }
+}
