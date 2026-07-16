@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2206,
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "996F8B75-6F39-4898-A7E9-EDB4787E17F4",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23570\nEncoded by AI — encode-veris-incident skill version 20260713T202114Z\n\nSouthern California University of Health Sciences (SCUHS), a private nonprofit health-sciences university in Whittier, CA, detected unauthorized activity on its computer network on 24 March 2026. An external actor accessed and copied files from the network (initial access 23 March 2026). SCUHS engaged outside cybersecurity specialists, began notifying affected individuals on 18 May 2026, and disclosed to state attorneys general in late May 2026. 2,206 individuals were affected; SCUHS offered 12 months of Kroll credit monitoring.\n\nCoding decisions / assumptions:\n- Action = Hacking (per issue template tag 'Hacking-ext-unknown'). variety = Unknown and vector = Unknown: no source discloses the intrusion method. result = Infiltrate + Exfiltrate (files were both accessed and copied).\n- actor.external.variety = Unknown (no named threat group). motive = Financial (theft of names + SSNs is characteristically financially motivated). country = Unknown.\n- asset.variety = S - File: sources describe 'files ... copied from its network'; the specific system/hosting is not detailed. cloud = Unknown.\n- attribute.confidentiality.data_disclosure = Yes (files confirmed viewed and copied). data varieties: Personal (names, SSNs, and — per the ClaimDepot and Federman summaries — DOB, addresses, government IDs), Medical, and Bank (financial information). Medical/financial/DOB/address/gov-ID come from the ClaimDepot and Federman Sherwood pages; names + SSNs are corroborated across all sources. state = Stored (at rest; encryption status not stated).\n- data_total = 2206 (Federman/ClaimDepot cite 2,206; issue says '2,200+').\n- discovery_method = internal / Other: SCUHS 'became aware of unauthorized activity on its network' on 24 Mar 2026; the exact detection mechanism is not stated.\n- victim.industry = 6221: follows the issue's provided NAICS (label 'NAICS 62', metadata '6221'). Note: SCUHS is functionally a university (education), but the issue and DBIR coded it under Health Care; retained per the skill's 'use the issue's NAICS' rule.\n- PHIDBR2019 label ignored per skill guidance (artifact/noise tag; not a data or year signal).\n- timeline.incident = 2026-03-23 (initial access). timeline.discovery = 1 day (detected 24 Mar). dbir_year = 2027 (Mar 2026 falls in the Nov 1 2025 - Oct 31 2026 window).\n- confidence = Medium: all four A's are established at the category level but actor/action varieties and vector are Unknown, and sourcing is breach-litigation/aggregator pages (McShane & Brady, ClaimDepot, Federman & Sherwood) rather than security press.\n\nSources consulted (per run override, no additional web search performed):\n- https://mcshanebradylaw.com/southern-california-univ-health-sciences-data-breach/\n- https://www.claimdepot.com/data-breach/southern-california-university-of-health-sciences-2026\n- https://www.federmanlaw.com/blog/southern-california-university-of-health-sciences-data-breach-investigated-by-federman-sherwood/",
+    "created": "2026-07-14T21:15:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access to the university network (vector undisclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files containing PII viewed and copied (exfiltration)"
+      }
+    ],
+    "github": "23570",
+    "master_id": "996F8B75-6F39-4898-A7E9-EDB4787E17F4",
+    "modified": "2026-07-14T21:15:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://mcshanebradylaw.com/southern-california-univ-health-sciences-data-breach/; https://www.claimdepot.com/data-breach/southern-california-university-of-health-sciences-2026; https://www.federmanlaw.com/blog/southern-california-university-of-health-sciences-data-breach-investigated-by-federman-sherwood/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Southern California University of Health Sciences (SCUHS) detected unauthorized activity on its network on 24 March 2026 after an external actor accessed and copied files (initial access 23 March 2026). The breach exposed the names and Social Security numbers — and, per litigation sources, additional personal, medical, and financial data — of 2,206 individuals. SCUHS began notifications on 18 May 2026 and offered Kroll credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 23,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "6221",
+    "state": "CA",
+    "victim_id": "Southern California University of Health Sciences"
+  }
+}

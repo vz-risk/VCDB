@@ -1,0 +1,108 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration",
+        "Programming error"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "API key"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1082680,
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "53D3CE8F-BB77-42D6-BA86-133B5F52BB58",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23569\nEncoded by AI — encode-veris-incident skill version 20260713T202114Z\n\nCannabis Club Systems (CCS, formerly Nefos Solutions), an Irish SaaS provider whose CCS Nube platform (and the PuffPal app) handles membership/identity verification for cannabis social clubs, stored member identity documents at simple, predictable, unauthenticated public URLs (e.g. ccsnubev2.com/.../ID/{user_id}-front.jpg). Sequential member IDs and insecure APIs allowed anyone to retrieve full member profiles by manipulating a parameter; a Stripe secret API key was also hardcoded in plain text in the app. Clubs uploaded ~5,000 new photo IDs daily to these open endpoints. Security researcher Sammy Azdoufal discovered the exposure (by joining a Barcelona club and decompiling the app), reported it on 22 April 2026, and it was publicly documented by The Verge in late June 2026. Exposed: 1,082,680 member records, ~985,841 ID photos, 923,543 passport/national-ID numbers, plus addresses, phone numbers, DOB, and cannabis consumption data.\n\nCoding decisions / assumptions:\n- PROVIDER-PERSPECTIVE / SUPPLY-CHAIN breach (issue tag 'Partner_Breach'): coded ONE incident with the SaaS provider (Cannabis Club Systems / Nefos Solutions) as the primary victim. CCS Nube served 377 establishments across 40+ countries — recorded as secondary victims (victim.secondary.amount = 377).\n- Action = Error (per issue template 'Error-int-misconfig-srv'). variety = Misconfiguration (unauthenticated public URLs / missing access controls) plus Programming error (IDOR via sequential-ID parameter manipulation; hardcoded plaintext Stripe key; insecure APIs). vector = Web application (error manifested in the web/API layer).\n- actor.internal = Developer, motive = NA (error). NOTE: co-founder Andreas Nilsen publicly blamed 9Series, an outsourced firm he claims built the PuffPal app and the vulnerable APIs. That would arguably make this a PARTNER actor, but it is an unconfirmed, self-serving claim; the exposed data sat on CCS/Nefos' own infrastructure (their domain), and the issue template specifies an internal error ('int'). Coded internal accordingly; flagged here for reviewer judgement.\n- asset.variety = S - Web application (CCS Nube backend / public URL endpoints). cloud = External Cloud Asset(s) (cloud-hosted SaaS/object storage).\n- attribute.confidentiality.data_disclosure = Yes: the data was world-readable without authentication for an extended period and was confirmed extracted (1M+ records) by the researcher — directly-observed copying by a third party. No evidence a MALICIOUS party accessed it, but the exposure and access were confirmed, which the skill's rules treat as 'Yes' (analogous to lost/found documents). data varieties: Personal (name/address/phone/DOB), Sensitive Personal (passports, national IDs, driving licences, cannabis consumption data), API key (the exposed Stripe secret key). state = Stored (at rest at public URLs; encryption not described). data_total = 1,082,680 member records (breakdown: ~985,841 ID photos; 923,543 passport/ID numbers).\n- discovery_method = external / Security researcher (Sammy Azdoufal).\n- timeline.incident = 2026 (year only): the misconfiguration/exposure was ongoing with an undisclosed start date; earliest concrete anchors are the 22 Apr 2026 researcher report and late-June 2026 public disclosure. dbir_year = 2027 (a 2026 Jan-Oct anchor → Y+1; also aligns with the 'Priority 2027' label).\n- plus.sub_source = 'priority' (issue carries a 'Priority 2027' label indicating a non-randomly-selected priority incident, per the schema's sub_source guidance).\n- victim.country = IE (CCS/Nefos is an Irish company); affected members and the 377 client clubs span Spain and 40+ countries (see secondary).\n- victim.industry = 51 (Information; per issue label — a software/SaaS provider). employee_count = 11 to 100: ESTIMATE for a small SaaS startup (co-founders Andreas & Sean Nilsen) serving 377 establishments; no published headcount.\n- confidence = High: all four A's established and corroborated by detailed reputable reporting (The Verge via Boing Boing/Daring Fireball, mmjDaily) and the researcher's own technical write-up.\n\nSources consulted (per run override, no additional web search performed):\n- https://daringfireball.net/linked/2026/06/28/puffpal-passport-leak\n- https://www.mmjdaily.com/article/9848605/cannabis-club-systems-breach-exposed-985-000-member-photo-ids-at-spanish-clubs/\n- https://boingboing.net/2026/06/28/a-million-passports-leaked-online-by-marijuana-club-portal.html",
+    "created": "2026-07-14T21:27:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured public URLs and insecure APIs exposed ~1M members' identity documents"
+      }
+    ],
+    "github": "23569",
+    "master_id": "53D3CE8F-BB77-42D6-BA86-133B5F52BB58",
+    "modified": "2026-07-14T21:27:08Z",
+    "sub_source": "priority"
+  },
+  "reference": "https://daringfireball.net/linked/2026/06/28/puffpal-passport-leak; https://www.mmjdaily.com/article/9848605/cannabis-club-systems-breach-exposed-985-000-member-photo-ids-at-spanish-clubs/; https://boingboing.net/2026/06/28/a-million-passports-leaked-online-by-marijuana-club-portal.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Cannabis Club Systems (CCS, formerly Nefos Solutions), an Irish SaaS provider behind the PuffPal app and CCS Nube platform for cannabis-club membership/identity management, exposed 1,082,680 members' data — including ~986,000 passport/ID document scans, addresses, phone numbers, DOB, and cannabis consumption records — by storing them at unauthenticated public URLs with insecure, IDOR-prone APIs. Security researcher Sammy Azdoufal discovered and extracted the data; it was publicly disclosed in June 2026. The platform served 377 establishments across 40+ countries.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IE"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "51",
+    "secondary": {
+      "amount": 377,
+      "notes": "377 cannabis-club establishments across 40+ countries (primarily Spain) used the CCS Nube / PuffPal platform; their members' identity documents and profile data were exposed. Individual club names not enumerated in sources."
+    },
+    "victim_id": "Cannabis Club Systems (Nefos Solutions)"
+  }
+}
