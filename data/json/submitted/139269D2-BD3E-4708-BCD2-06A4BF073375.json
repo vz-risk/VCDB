@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Conti"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 10023,
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "139269D2-BD3E-4708-BCD2-06A4BF073375",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23572\nEncoded by AI — encode-veris-incident skill version 20260713T202114Z\n\nSpencer Gifts LLC's employer-sponsored group health plan (Egg Harbor Township, NJ) was breached in November 2021 when an external actor gained access to the company network and deployed Conti ransomware, encrypting servers that stored protected health information. Employees reported being unable to connect to the VPN, which triggered an IT investigation that identified the ransomware; the Conti gang claimed responsibility in January 2022. The breach affected 10,023 health-plan members (names, addresses, zip codes, phone numbers, email addresses, SSNs). HHS OCR investigated and, in June 2026, imposed a $450,000 HIPAA penalty plus a two-year corrective action plan, citing pre-breach failures including an inadequate security risk analysis.\n\nCoding decisions / assumptions:\n- Action = Malware / Ransomware (per issue template 'Malware-ext-Ransomware-databreach'), vector = Direct install (deployed by the actor after obtaining network access), result = Deploy payload. Also coded Action = Hacking (the actor 'gained network access' first) with variety/vector Unknown (initial-access method undisclosed), result = Infiltrate.\n- actor.external = Conti (named gang), variety = Organized crime, motive = Financial. country = Unknown (this incident's sources do not state the actor's location; Conti is widely reported as Russia-linked, but that is not incident-sourced).\n- asset.variety = S - Database (on-prem servers storing PHI). cloud = On-Premise Asset(s) (company network/VPN, on-prem servers).\n- attribute.confidentiality.data_disclosure = Yes: the actor had confirmed access to servers holding PHI and OCR treated it as a reportable breach of 10,023 individuals (per the skill, confirmed access to a data-holding system supports 'Yes'). Sources note data was 'exposed and potentially stolen' — explicit exfiltration was not confirmed; noted here.\n- data = Personal only: the enumerated compromised fields (name, address, zip, phone, email, SSN) are demographic identifiers + SSN. Although this is a health plan (PHI context, and the issue tags PHI), no clinical/diagnostic content was reported, so 'Medical' was not coded. state = Stored (PHI at rest; pre-attack encryption status unstated). data_total = 10,023.\n- attribute.integrity.variety = Software installation (ransomware installed). attribute.availability.variety = Obscuration (data encrypted) + Interruption (VPN/systems unavailable).\n- No Social/Extortion coded: this is ransomware-for-decryption with no documented separate data-leak/sale extortion demand (per skill guidance not to add Extortion merely because ransomware is present). plus data_abuse omitted (no confirmed downstream use of the confidential data).\n- discovery_method = internal / Reported by employee (staff reported VPN connectivity failure; IT investigation then identified the ransomware). The later Conti public claim (Jan 2022) post-dated internal discovery.\n- timeline.incident = 2021-11-24 (unauthorized access 24-26 Nov 2021). discovery ~2 days (encryption/VPN outage noticed during the attack). dbir_year = 2023: incident began in November 2021, which is past the Oct 31 cutoff, so Y+2 (covers the Nov 1 2021 - Oct 31 2022 DBIR window).\n- victim.industry = 524 (per issue; the health plan is coded under Finance/Insurance). employee_count = 10001 to 25000 (Spencer Gifts ~13,000 staff across ~560 locations).\n- PHIDBR2019 label ignored per skill guidance (artifact/noise tag; not a year or data signal).\n- confidence = High: all four A's are established (Conti ransomware, external organized crime, on-prem servers, confidentiality+integrity+availability), corroborated by reputable security press (BankInfoSecurity, HIPAA Journal) reporting on an official HHS OCR settlement.\n\nSources consulted (per run override, no additional web search performed):\n- https://www.bankinfosecurity.com/hipaas-no-joke-gag-gift-firms-health-plan-pays-450k-fine-a-32032\n- https://www.hipaajournal.com/spencer-gifts-hipaa-settlement/\n- https://www.hhs.gov/press-room/ocr-settles-ransomware-investigation-health-plan.html (official HHS OCR release; returned HTTP 403 to the fetcher, but its contents are corroborated by the two sources above)",
+    "created": "2026-07-14T21:22:54Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access to the company network (initial-access vector undisclosed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Conti ransomware installed on servers"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "PHI on the servers accessed (potentially exfiltrated)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted; VPN/systems disrupted"
+      }
+    ],
+    "github": "23572",
+    "master_id": "139269D2-BD3E-4708-BCD2-06A4BF073375",
+    "modified": "2026-07-14T21:22:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bankinfosecurity.com/hipaas-no-joke-gag-gift-firms-health-plan-pays-450k-fine-a-32032; https://www.hipaajournal.com/spencer-gifts-hipaa-settlement/; https://www.hhs.gov/press-room/ocr-settles-ransomware-investigation-health-plan.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Spencer Gifts LLC's employer-sponsored health plan was breached in November 2021 when an external actor accessed the company network and deployed Conti ransomware, encrypting servers holding PHI. The incident, discovered after employees could not connect to the VPN, affected 10,023 health-plan members (names, addresses, phone/email, SSNs). HHS OCR imposed a $450,000 HIPAA penalty and corrective action plan in June 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 24,
+      "month": 11,
+      "year": 2021
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524",
+    "state": "NJ",
+    "victim_id": "Spencer Gifts LLC"
+  }
+}
