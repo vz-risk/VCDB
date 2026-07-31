@@ -1,0 +1,3005 @@
+VERIS Coding Style Guide
+Version 3.0
+
+1
+
+The VERIS Team
+
+Verizon
+Table of Contents
+VERIS in a Nutshell
+VERIS Overview
+About the VERIS Coding Style
+Guide
+Actors
+Determining the Actor(s)
+Actions
+Determining the Action(s)
+Attributes
+Determining the Attribute(s)
+
+2
+
+The VERIS WebApp
+Overview
+Creating a New Incident
+The Incident Info Tab
+The Timeline Tab
+The Victim Tab
+A Note about NAICS
+The Action Tab
+The Actor Tab
+The Asset Tab
+The Attribute Tab
+The Targeted Tab
+The Discovery Method Tab
+The Value Chain Tab
+The Impact Tab
+The Plus Tab
+The Event Chain Tab
+The Summary Screen
+Using Templates to Code Cases Faster
+What are Templates?
+Error Templates
+Hacking Templates
+Malware Templates
+Misuse Templates
+Physical Templates
+Social Templates
+Templates in Action
+Importing Existing Incidents
+Things Change, Incidents Evolve
+Additional Coding Style Examples
+Overview
+Victim Demographics
+Error Examples
+Environmental Examples
+Hacking Examples
+3
+
+VERIS In a Nutshell
+Welcome to the VERIS Coding Style Guide. This document is designed to allow
+you to familiarize yourself with the VERIS Framework, and get started in using it
+to record the details of security incidents and breaches you encounter. But first,
+what is VERIS?
+The Vocabulary for Event Recording and Incident Sharing (VERIS) was created to
+allow security practitioners to record the details of security incidents and be able
+to share that data with others in a standardized, repeatable, anonymous fashion.
+This framework underpins the Verizon Data Breach Investigations Report, and is
+also used to code cases for the VERIS Community Database Project (VCDB),
+where we release publicly disclosed data breach cases coded in VERIS format for
+public use.
+If you’re just getting started with VERIS, you’ve come to the right place. Here
+you will find the information on the schema, with the detailed enumerated lists
+and the structure of the 4A’s that are the center of VERIS: Actors, Actions, Assets
+and Attributes. Ideally, we would know enough about the incident that we can
+identify the values for each of the 4A’s in every case. However, we have found
+that with incident response, there are always unknowns. VERIS can handle them
+without causing a fuss. We can code as much or as little detail as we have for the
+case before us.
+Getting started with VERIS can seem rather daunting—it is a complex
+framework that has evolved over time as we encounter edge cases that challenge
+the schema. However, it doesn’t have to be a complicated ordeal to code up your
+first case in VERIS format. For the purposes of all of our training materials, we
+are using publicly disclosed cases taken from VCDB data (what we call the
+public dataset). For information on where you can see that data and the cases
+waiting to be coded, they are stored in our GitHub repo: https://github.com/vzrisk/VCDB. As we encounter new breach reports, we create an issue for them.
+As the issues are coded, they are closed and the resulting JSON is placed into the
+repo for anyone to use as a dataset.
+
+4
+
+We also have a web application to facilitate coding cases. The WebApp is
+available at https://verisframework.org/veris_webapp/#/home. It stores all
+data locally, and the output of the case, once coded, is in JSON format. If you
+open the WebApp, the first tabs you are presented with deal with basic
+information about the incident, the timeline of events and the victim
+demographics. Then we dive into the 4A’s. If you are looking for how to use the
+VERIS WebApp, you can go directly to that section of this document, but it is
+useful to get some background on the 4A’s first.
+What are these 4A’s, and how do we use them? They are the Actors, Actions,
+Assets and Attributes involved in an incident or breach.
+
+About the VERIS Coding Style Guide
+This guide is designed to both document the standard ways that cases are to be
+coded for VCDB, as well as other uses when coding cases in VERIS format. It is a
+reference for those just getting started with VERIS, and also for those who have
+been coding these cases for a long time, but may have questions how a specific
+kind of case should be handled. It includes the most relevant fields for each case
+type, but not all of the fields in
+VERIS are discussed.
+This document is updated annually after the VERIS wars have concluded, and
+the update to VERIS has been completed. (The VERIS wars are the DBIR team’s
+annual version of Thunderdome—but our props aren’t as good. Actually, it is
+when we meet as a team to talk about the proposed changes to VERIS we’ve
+gathered over the past season, and decide what stays and what does not. VERIS
+is an evolving framework, and as the threat landscape changes, so must the way
+we are able to record it.) The guide versioning will be changed as it is updated.
+The main documentation site for VERIS is the verisframework.org website. There
+is also a GitHub repository for VERIS, as well as one for VCDB. Here are the
+relevant links:
+
+5
+
+• VERIS Framework - https://verisframework.org/
+• VERIS GitHub Repo - https://github.com/vz-risk/veris
+• VERIS WebApp - https://verisframework.org/veris_webapp/#/home
+• VCDB GitHub Repo - https://github.com/vz-risk/VCDB
+Much of what is found in this guide will be duplicated on the VERIS Framework
+site. We encourage you to dig into the repos and get to know both VERIS as a
+framework, and VCDB as a dataset that can complement the data you collect.
+
+An Interactive tool for VCDB
+John Sturgis has released a tool he developed that lets you interact with the
+VCDB dataset. The tool can be found at: https://jpsturgis.shinyapps.io/
+vcdb_explorer/
+This tool was a complete surprise to us, and we are happy that John has shown
+such interest in the VCDB project. The tool is called VCDB Explorer.
+Take it out for a spin!
+
+Actors
+Actors are the people who are causing the breach by the actions they take. VERIS
+is an actor-centric framework, so identifying who the actor is (external to the
+victim organization, internal to the victim org, or a partner of the org) is the
+starting point. Some people find identifying the actor a bit confusing. We see
+cases where both internal and external actors are recorded, because the logic is
+that “the attack would not have succeeded if the employee hadn’t clicked on the
+link in a phishing lure.”
+That is not how VERIS is intended to work. It is only intended to record direct
+actions taken to cause the breach—so the external actor is sending the phishing
+
+6
+
+email, but the internal actor is the victim, not an active, willing participant in the
+breach. For there to be multiple actors (and we do see this) they have to both be
+working together with the intent to cause the breach. There has to be malice
+involved for collusion. If every failure to implement a control that would stop a
+breach were counted as an error, it would obscure the actionable causes of
+breaches and render the statistics unusable. While it can be argued that there is
+always an underlying error in breach causes, it doesn’t drive decisions on where
+to put controls if the answer is always “put in every possible control to cover
+every possible place an error can be made.” The organization would be funneling
+all their resources to security and fail at their core purpose.
+
+A Graphic Approach to Who did What to Whom
+VERIS, at first glance, is a complex framework. It can be intimidating for people
+trying to deduce what the right answer is for “Who is the Actor?” or “What
+Action(s) were involved in the incident?.” To (hopefully) help with that, we have
+developed a series of decision trees for people to use to help decide the right
+choice for each case. Do you have to use them every time you code a case? Of
+course not. But when you are just getting started with VERIS and case coding, it
+can help to follow the directed decisions path. And who knows—if you run into
+an edge case down the line, it may yet prove useful to even the more experienced
+coders.
+In VERIS, the Actors, Actions, Assets and Attributes are not exclusive—that is
+cases can have multiple selections from each of those categories, rather than just
+one. In real life, there is nothing that stops Actors from colluding with each other,
+for example, and we want the cases being coded to reflect reality. There is also
+nothing stopping the determined attacker from using multiple actions to achieve
+their goals. They may start with phishing, and once they have successfully
+obtained credentials from their chosen victim, pivot to hacking into a web
+application using those stolen credentials. They may then drop malware to
+maintain persistence in the environment and shield their actions from detection.
+The point here is that since there is nothing stopping the adversaries from using
+multiple actions, attacking multiple assets, and violating the confidentiality,
+
+7
+
+integrity and availability all in one attack, the coding framework should not have
+those constraints either.
+When using our coding decision diagrams (called decision trees), you may need
+to go through the paths multiple times to account for all of the details of the case.
+In the above scenario, you would traverse the action decision tree several times
+to account for the social attack, the hacking action and the malware action. You’d
+also need to go through the asset tree several times to account for the Person who
+was socially engineered (yes, we count people as assets in VERIS), the User
+Device they were using (think laptop) when they were compromised, the web
+application the actor hacked into and installed malware on, and then move onto
+the Attribute tree to account for those.
+
+Determining the Actor(s)
+Determining who the actor was in an incident is not always as straightforward as
+it might appear. This is particularly true if you have someone causing a breach
+who works for a company that has a business relationship with the victim
+organization.
+To help with that, we have created a decision tree to guide you in determining
+the correct actor. Our first decision is whether the actor who caused the breach
+works for the victim organization that experienced the breach. If they do, then
+you’re done—it is an internal actor.
+If the answer is they do not, then you need to determine if there is a business
+relationship involved between the perpetrator of the breach and the victim
+organization (at this point, we know they are not the same entity). These are
+sometimes referred to as third-party, partner or supply chain breaches, because
+these organizations tend to be engaged as part of the normal processes of doing
+business. Companies tend to outsource functions that are not their core
+competencies, and thus the business to business commerce flourishes.
+
+8
+
+So the question of “Is there a business partner involved” needs to be answered. If
+there is such a relationship, then you must determine if the person who caused
+the breach works for the company that is providing some kind of product or
+service to the victim organization. If the actor works for the partner, then you
+have a partner actor breach. If the perpetrator does not work for that partner,
+then they are an external actor to the company that they attacked. You then have
+an external actor breach, not a partner breach, although the vector may be
+partner—more on that in later examples.
+VERIS is an actor-centric framework, rather than a data location framework. By
+this, we mean that it is the person performing the actions and what their relation
+is to the victim org(s) that drives what actor type (and breach type to a certain
+extent) you are looking at.
+
+9
+
+In other taxonomies, you may see that there are lots of partner breaches because
+they are determining that based on who had custody of the data that was
+compromised. We account for that information in our asset list, rather than in the
+actor determination.
+One question that comes up in determining the actor at the time is if the person
+who caused the breach is listed as a “contractor”. How this is handled depends
+on the relationship between the victim organization and the person causing the
+breach. If they are an individual contractor, like someone hired to do a job
+directly, typically someone who is on premises at the company and is treated as
+one of the team, we would code them as an internal actor. If the term
+“contractor” is used to describe a business where there is an agreement between
+the two companies to provide a service, and it is negotiated at the business to
+business level, we would consider it to be a partner.
+
+Actions
+Once the Actor has been determined, turn your attention to the Actions that were
+taken during the incident. Was it a malicious action, like hacking or social
+engineering? Was it an accidental action like the loss of a laptop? Intent and
+motive play a key role in how these are categorized. For errors, the intent is not
+malicious. People do not leave their laptop behind on an airplane with malicious
+intent, typically. People do hack into database servers with malicious intent,
+however.
+
+Determining the Action(s)
+There are many actions in VERIS, so making sure you understand and assign the
+correct action(s) to a case is important. Yes, these are non-exclusive and one
+incident may have multiple actions (and actors, etc.). It then becomes a matter of
+which action came first, and placing subsequent actions in proper order. This
+helps later when you are creating the event chain as well.
+
+10
+
+So first we will show an overall decision tree for determining the action. You may
+have to go through these decision trees multiple times if there are multiple
+actions, but you should be able to figure out which action you should be
+recording based on some key decisions about what happened in the case.
+
+11
+
+Each of these decisions end in one of the top-level Actions in VERIS. Once you
+have determined which top-level action you are dealing with (and there may be
+multiples), then you need to go on to determine the variety within that action as
+well. This is where the enumerated lists come in. You can consult the VERIS
+framework website for those under each of the 4As to get the values you can
+choose from.
+
+Assets
+What Assets were involved in the incident? (And notice we say incident not
+breach—because you can record those valuable near misses using VERIS as well.)
+Was it paper documents? A web server? If it was a social attack, it involved what
+we call a “person asset,” so you can record who was the target in these attacks if
+you have that information. While we use VERIS for our reporting and research,
+there are many organizations out there who use it as part of their security metrics
+infrastructure. Knowing who is being targeted in your organization can give you
+direction in how to tailor your awareness training.
+
+Determining the Asset(s)
+Determining the Asset(s) affected in an incident seems pretty straightforward,
+but it can be trickier than it looks. Again, with the others of the 4As, we can have
+multiple selections. Certainly, it is not uncommon to find more than one asset
+involved in a case—particularly when you realize how common certain attacks
+are. Social attacks account for a high percentage of successful data breaches, and
+as such, you are at the very least looking at a Person asset.
+You also have to account for the device the person was using when they were
+persuaded by the threat actor to give up their credentials (or whatever else the
+attacker was trying to get them to do). This is most commonly a User Device (like
+their laptop or desktop) or perhaps even their cell phone. Then, once you have
+identified the initial compromised assets, you need to account for whatever the
+attacker did with the results of a successful social attack. Did they gain access to
+
+12
+
+the person’s credentials? How did they use those?
+
+You may need to traverse this decision tree multiple times to account for all the
+assets compromised in a case (and remember, it may be a confidentiality
+compromise, but there might also be an integrity or availability violation you
+need to account for later in the Attributes section).
+
+13
+
+Attributes
+Finally, what was the effect on the security Attributes as a result of the actions
+taken? We’re talking here about the CIA Triad of Confidentiality, Integrity and
+Availability. Many cases involve multiple pillars of the CIA triad. In VERIS,
+compromised security attributes are based on the expanded CIA Triad, which
+includes Confidentiality/Possession, Integrity/Authenticity and Availability/
+Utility. Multiple attributes can be affected for any one asset, and each attribute
+contains different varieties.
+Think, for example, of an attack that started out as a phishing lure sent to one of
+your employees. They fall for it and provide their credentials into a web form.
+The attacker uses those credentials against the organization’s web application
+infrastructure, and gains access. They then download malware, take a copy of
+any interesting data, and trigger the ransomware to encrypt all the files. So you
+have a breach of the confidentiality attribute with the data theft, but even before
+that, with the credential theft from the phishing attack. You also have integrity
+violations with the software installation of the malware, but also because the
+social attack caused the employee to alter their behavior and provide their
+credentials to the attacker’s web form. Finally, you have an availability violation
+when the data becomes obscured by the malware. This was where we would
+have stopped, but with the changes in VERIS 1.4.1, we now also record that the
+data was abused (in the Confidentiality section), and the interruption of
+availability to that data. You can see how one case can have multiple impacts to
+the CIA triad. We will get more in depth with a case that is similar to
+this down the road, including how the 4A’s would come into play here. When
+learning a complex framework like VERIS, we find that the best approach is to
+use case examples to show how each kind of commonly encountered case would
+be handled.
+
+Determining the Attribute(s)
+The Attribute section is where the CIA triad comes into play in VERIS.
+Confidentiality, Integrity and Availability are the cornerstones of information
+
+14
+
+security, and when any of the three are violated, you’ll need to account for it.
+
+This decision tree is mercifully short—just the three pillars of the CIA triad.
+Confidentiality compromises are the true definition (at least to the DBIR and
+VERIS) of what a data breach is. Someone who was not authorized was able to
+view (which includes taking a copy of) data at some point in the course of the
+case. We also have an option to mark Confidentiality as “At-risk” for cases where
+it is suspected, but cannot be confirmed. The stolen laptop is an example where
+making that confirmation is quite a challenge. But it is definitely at-risk, since the
+owner has lost custody of the device.
+For Integrity, things get more complex. The Integrity of an asset indicates that it
+reflects reality—that no changes are made to the system that are unauthorized. So
+even when the asset is a person and they are influenced to do something they
+should not be doing, it is an Integrity violation (alter behavior). The same goes
+
+15
+
+for a computer where someone installs malicious software (whether it is on disk
+or just exists in memory), Software installation is the violation in this case. There
+are a large number of ways to violate the integrity of a system—even changing
+the data or configuration files would be a violation.
+Initiating fraudulent transactions (think money transfers) is also an Integrity
+violation, as is impersonation. If an attacker compromises an executive’s email
+account and sends an email to the finance worker to have them pay a fraudulent
+invoice, you have multiple integrity violations. In contrast, some integrity
+violations are physical in nature—putting a skimming device on an ATM is a
+good example. That would be considered tampering.
+Finally, we have availability violations. If an asset is stolen, we lose access to that
+asset. Likewise, if the data on a server is encrypted by ransomware, we lost
+access as well. Denial of Service attacks that bring down infrastructure ensuring
+the legitimate traffic cannot reach it is another example of an Availability
+violation. When you look at the enumerations for each of these attributes, you
+can see why the list is so comprehensive. Most of them have come about from
+actual cases that were coded by the DBIR team.
+
+16
+
+The VERIS WebApp
+Having introduced you to the building blocks of VERIS, it is now time to dive
+into coding real cases. VERIS is widely adopted, and many organizations use it
+in their own environments. While the implementation may differ, the
+commonality is using VERIS to describe each of the data points captured. Some
+use spreadsheets, or their own case management platforms to do this, depending
+on their infrastructure. But if you are just getting started with recording the
+specifics of the cases you work, and don’t already have a process built, we can
+help.
+Allow us to present the VERIS WebApp. It is a standalone application that you
+can use to fill in the details of each incident, and when you finish, export the
+JSON to your local hard drive. To be clear: this application does not send your
+data anywhere unless you tell it to. You are in control of the data that is exported
+from the application, and if you delete the data out of the application without
+first exporting each incident, it cannot be recovered.
+We understand that this is sensitive data, and we just want to be certain the users
+of the application understand they are in control of the data they enter. That said,
+this is a great little application that lets you use form fields to get as detailed as
+you need to when coding an incident. It exports each case as a standalone JSON
+file, which can then be used as you choose.
+
+17
+
+Creating a New Incident
+As mentioned earlier, you can access the VERIS WebApp via https://
+verisframework.org/veris_webapp/#/home. When you first launch the page,
+you will be presented with a basic interface with two options: Creating a New
+Incident or Importing Existing Incidents.
+
+Of course you can create new incidents, and this is likely to be what you use
+most often, but there is also an option to import JSON incident files that have
+been formatted according to the appropriate schema. We will get into that more
+in the Things Change, Incidents Evolve section. For now, let’s assume you’re
+going to start from scratch and code your first case in the WebApp.
+When you click on Create Incident, you are shown two dropdown menus: the
+Schema and the Version. You need to choose the schema type. Your choices are
+listed below.
+
+18
+
+For the purposes of this Guide, we are using the VCDB schema. This schema is
+used when coding incidents in the public dataset—the VERIS Community
+Database, where we code up publicly disclosed data breach reports (from various
+sources) and release the dataset to the public. More info on that project can be
+found here: https://verisframework.org/vcdb.html.
+The other schemas listed are as follows:
+• Partner: this is used by organizations who are planning on submitting data for
+inclusion in the Verizon Data Breach Investigations Report (DBIR). It does not
+contain fields that would identify the victim organization, as we do not collect
+that information for the report.
+• VERISC: This is used by organizations who are implementing VERIS in their
+own organizations. It allows them to capture relevant information that will not
+be shared with Verizon for the DBIR.
+• DBIR: This is the schema the DBIR team uses to code cases from our forensic
+practice. It is not a schema that is available outside of the team.
+• VCDB: This is the schema the DBIR team uses to code publicly disclosed data
+breach incidents from the VERIS Community Database repository on GitHub. It
+has fields specific to that use, including the GitHub issue number, URLs we used
+when coding the incident, and more importantly, victim organization identifying
+information. This dataset is the only one where the victim organization is
+recorded. If this is something you want to record in your use of this WebApp,
+then this schema may be a fit for your needs.
+
+19
+
+For our examples, we are using the VCDB schema and coding publicly disclosed
+data breach incidents. Once the schema is chosen, you will need to select the
+version of that schema. Here are your choices at the time of this publication:
+
+We always recommend you use the most current version, which at the time this
+was published is 1.4.1. We update the VERIS schema from time to time, and this
+will ensure you are using the version that has support for the current schema
+version. Once we update the schema, the WebApp will also be updated. NOTE:
+It may require you to clear your browser cache to get the new version.
+Once both of those choices have been made, the Create button will be enabled
+and you can click on it to drop you into your first incident.
+
+The Incident Info Tab
+When you have created a new incident, this is the first tab you will encounter. It
+is for entering the basic information about the incident that is needed for each
+case.
+
+20
+
+The Security Incident drop down allows you to record if this is a confirmed
+security incident (defined as violating one of the pillars of the CIA Triad), a near
+miss or a false positive. You can choose “Suspected” if you are unsure, but want
+to record the details in case something develops in this case later. Once an
+incident is created and exported as a JSON file, you can always import it into the
+WebApp for later updates.
+
+21
+
+The Reference field is where we list the URLs we used in coding this incident. We
+separate them with semi colons.
+The Summary field is where you record (in general terms) what happened. It
+should be long enough to stand on its own and let someone who is reading it
+know why you made the choices for Action, Actor, Asset and Attribute in the
+JSON. If all the referenced URLs become stale, this summary should be enough
+to justify why a case was coded the way it was.
+The Source ID field is used to let us know where this incident came from. For our
+purposes, this is a VCDB case, so we use that as the value. If you were
+implementing this in your own organization, you might want to use the
+department or division of the organization where the incident was discovered, or
+most affected. It is a free text field, so use it as you need.
+We include a Campaign Id for those cases where we want to be able to tie
+multiple victims of the same attacker(s) together as a campaign. Confidence lets
+your analyst indicate how confident they are in the data they are entering. When
+working with the public dataset, we sometimes have less confidence in the data
+than say a case coming from a forensic firm. This is how we weight that in our
+dataset.
+
+22
+
+Analyst Status is showing the phases an incident goes through to be included as
+a validated incident in our corpus. You may or may not want to utilize this if you
+have some kind of review process for your incidents. The Analyst field is the
+person who coded the case. We use GitHub Ids for this field, but you can use
+whatever works for your organization’s needs. There are notes fields for case
+notes and for anything the analyst wants to communicate to someone reading
+this incident in the future. And finally, the DBIR Year is used by the DBIR team to
+show which report’s year this case should be included in. This is because cases
+may not be discovered for several years, and there will be a different year for the
+timeline of the incident versus when the case came to light and was investigated.
+The incident we shall code to show you how to use the VERIS WebApp is the
+Park’N Fly data breach from 2024. The GitHub issue can be found at https://
+github.com/vz-risk/VCDB/issues/21021. Here is the diagram for this data
+breach:
+
+23
+
+We will walk through each of the tabs of the WebApp as we enter the details of
+this case. First, the Incident Info tab.
+
+24
+
+Once we have this filled out, we click the Save & Continue button at the top
+right. If you get validation errors, the WebApp will highlight what is missing or
+invalid so you can fix it. However, it will also let you skip and continue, so you
+can come back to that later if you need to. Note: the WebApp will not allow you
+to export the case’s JSON file until the validation errors have been addressed.
+
+The Timeline Tab
+The Timeline tab allows you to put in as much or as little as you know about the
+timeline of events for this incident. The Park ’N Fly case doesn’t give us much in
+
+25
+
+the way of details of the timeline, but the articles did mention the date of first
+activity was July 11, 2024, and the discovery date was approximately 2 weeks
+later.
+
+You can, of course, add more data if you have it, but for the cases in the public
+dataset, we usually don’t get this level of detail.
+
+The Victim Tab
+Next is the Victim tab, where you can record any data you have about the victim
+organization. If you are using this to record your own incidents, this may not be
+very useful to you, but you don’t have to fill it out when you don’t need it.
+
+26
+
+For our purposes, we have the organization’s name, their NAICS code, number
+of employees, etc. We indicate whether the victim organization is a government
+body, and if so what level of government. We also indicate the country and
+region. If the country is the United States, you can also include info on the state.
+The Government field is to capture what level of government was breached—
+whether it was local such as a city government or regional, like an entire county
+or state, or if the victim was at the federal level. Incidentally, while the examples
+just listed are US centric, the local/regional or federal is not meant to apply to
+just the US—most countries have different names for their organization of
+government, but the scope tends to remain similar.
+
+27
+
+Finally, we also allow for secondary victims to be listed, and their NAICs codes
+recorded. The Add Item button will give you more fields to add victims, so you
+are not constrained. This is used when we have incidents with multiple victim
+organizations. We also include the NAICS code for each victim organization
+here. That is optional. For more information about how this type of case is
+handled, look at Coding Multiple Actors/Actions.
+
+A Note about NAICS
+We on the VERIS team use the North American Industry Classification System or
+NAICS codes to designate an organization’s industry membership. Some of the
+NAICS codes are quite straightforward, like Healthcare (62). It is easy for most
+companies to know if that is where they would belong, and to make sure they’re
+looking at the right industry when they read the DBIR statistics.
+However, there are a number of the NAICS codes where the grouping is very
+widely distributed, and it may be difficult for people to know for certain where
+they should be looking. To that end, this is one of the most straightforward
+references for what kinds of organizations are in each of the NAICS industries.
+http://www.farsmarterbids.com/reference/naics-list.php
+One example we ran across was the Arts, Entertainment, and Recreation (71)
+NAICS code. It is made up largely of live performances, rather than those that
+
+28
+
+are recorded (like film and TV). However, when presenting to a film industry
+group, we discovered that they had been looking at this industry as their own.
+Here is an excerpt from that NAICS code:
+Sector 71: Arts, Entertainment, and Recreation
+• 711: Performing Arts, Spectator Sports, and Related Industries
+• 7111: Performing Arts Companies
+• 71111: Theater Companies and Dinner Theaters
+• 711110: Theater Companies and Dinner Theaters
+• 71112: Dance Companies
+• 711120: Dance Companies
+• 71113: Musical Groups and Artists
+• 711130: Musical Groups and Artists
+• 71119: Other Performing Arts Companies
+• 711190: Other Performing Arts Companies
+• 7112: Spectator Sports
+• 71121: Spectator Sports
+• 711211: Sports Teams and Clubs
+• 711212: Racetracks
+• 711219: Other Spectator Sports
+While it goes on to a much longer list of organization types, it does not include
+television or film companies. In fact, that kind of organization belongs in the
+Information (51) NAICS code.
+Sector 51: Information
+• 512: Motion Picture and Sound Recording Industries
+• 5121: Motion Picture and Video Industries
+• 51211: Motion Picture and Video Production
+• 512110: Motion Picture and Video Production
+• 51212: Motion Picture and Video Distribution
+• 512120: Motion Picture and Video Distribution
+• 51213: Motion Picture and Video Exhibition
+• 512131: Motion Picture Theaters (except Drive-Ins)
+• 512132: Drive-In Motion Picture Theaters
+29
+
+• 51219: Postproduction Services and Other Motion Picture and Video Industries
+• 512191: Teleproduction and Other Postproduction Services
+• 512199: Other Motion Picture and Video Industries
+• 5122: Sound Recording Industries
+• 51221: Record Production
+• 512210: Record Production
+• 51222: Integrated Record Production/Distribution
+• 512220: Integrated Record Production/Distribution
+• 51223: Music Publishers
+• 512230: Music Publishers
+• 51224: Sound Recording Studios
+• 512240: Sound Recording Studios
+• 51229: Other Sound Recording Industries
+• 512290: Other Sound Recording Industries
+• 515: Broadcasting (except Internet)
+• 5151: Radio and Television Broadcasting
+• 51511: Radio Broadcasting
+• 515111: Radio Networks
+• 515112: Radio Stations
+• 51512: Television Broadcasting
+• 515120: Television Broadcasting
+• 5152: Cable and Other Subscription Programming
+• 51521: Cable and Other Subscription Programming
+• 515210: Cable and Other Subscription Programming
+This is an incomplete listing of this NAICS code, but you get the idea. When we
+break out our data in the DBIR, one of the most popular graphics is the one that
+shows the attack patterns by industry. This is the example from the 2025 DBIR:
+
+30
+
+So you can see here why it is so important to know which is the correct NAICS
+code for your organization. Hopefully the link above will help you determine
+that in short order, if it was ever in question.
+
+The Action Tab
+Now the tabs start to mirror the 4A’s of VERIS. In the Action Tab, we can
+document all the actions that were taken during the course of the incident.
+Understand, as in life, there is no limit in VERIS to say that only one action can
+happen (or one Actor, etc). Since incidents can be quite complex, the framework
+allows for the same flexibility in recording exactly what happened.
+
+31
+
+We are starting with a simple case having only the one action, so we only record
+that. As you move through the tabs, we encourage you to take a look at the
+options in the other drop downs to familiarize yourself with how VERIS works.
+For our case, we know the action was Hacking, Use of stolen credentials. We
+know this was against a VPN based on the reference articles, and we know that it
+allowed the attackers to both infiltrate the system and exfiltrate the data. There
+may have been other actions, but the articles do not talk about them, so we
+would be guessing, and we try not to do that.
+Do we know how those credentials were compromised? Not with this reference
+material. It could have been the result of a social action such as Phishing. It could
+have been another hacking action such as Brute force. It could even have been
+acquired from an unrelated breach and be an example of credential reuse. We just
+don’t know, so we leave this record with the data we do know and don’t
+speculate.
+
+32
+
+The Actor Tab
+The Actor tab is all about the “who dunnit” part of the case. For publicly
+disclosed data breaches, we rarely get a high level of detail here. Attribution is
+difficult in investigations, and while there are many threat actors who make it
+easy by announcing to the world that they are responsible, we cannot rely on that
+kind of convenience.
+“While crucial details regarding the cybersecurity incident were unavailable, including the
+threat actor’s identity and how the VPN credentials leaked, a Park ‘N Fly spokesperson said the
+data breach affected “1 million customer files.””
+
+For our purposes, we don’t know the variety, but we can infer it was done for
+financial gain. Attackers going after this volume of customer data are not
+typically doing this for funsies.
+You can add data if you have it on the region the Actor is from, and the name.
+
+33
+
+The Add item buttons will give you more fields if you have multiples to add.
+Whether the actor(s) are External to the victim organization (no business or trust
+relationship), Partners (some business or trust relationship) or Internal
+(employees, contractors, etc. Trust is in place for them to do their jobs), or some
+combination thereof, you can include as much detail as you have. In cases where
+there are multiple actors, take care that you are not including actors “because
+they didn’t do something best practice indicates they should have”. This is for
+overt actions that contributed to the breach. We do not include “they didn’t patch
+a vulnerability” as an Error action, for example. That is a rabbit hole that tends to
+muddy the statistics when looking at data breaches.
+
+The Asset Tab
+The Asset tab lets you record the information asset (including people for Social
+attacks) that were affected by what the perpetrators did to cause the breach.
+
+The Total Amount box is recording the total number of assets affected in the
+
+34
+
+breach. You can also fill out the detail in terms of which assets had specific
+numbers affected, but you will have to do the math to include it in the Total
+Amount—this is not a calculated field. This is largely because while there may be
+detail about some of the affected assets, it is common not to have specific
+numbers about all of them.
+The asset of S - Remote access server is how we categorize the VPN system that
+was compromised in this breach. Given the high number of customer records,
+we also choose S - Database, which tends to be where large datasets are stored.
+Certainly, we don’t think there was a set of a million customer records sitting on
+the VPN server (at least we hope not!).
+As with the prior tabs, the Add Item button allows you to add more fields so that
+you are not constrained when recording the number and type of Assets involved
+in each case.
+
+Some time ago, the DBIR team started recording whether Cloud infrastructure
+was involved in breaches, and starred fields are required. We do not know the
+status of the systems compromised in this breach, so that is left Unknown. We
+also collect data on whether the asset roles were IT, OT or something in between,
+but this is also not a required field.
+If you have the information (and are interested in tracking it) you can record that
+operating system the affected asset runs. You can also record the country where
+the asset resides. These may be data points that are important to your
+organization in tracking trends.
+
+35
+
+The Attribute Tab
+As mentioned previously, we track how each of the pillars of the CIA Triad are
+affected
+in security incidents. This is tracked in the Attributes tab.
+
+Confidentiality
+We know that Confidentiality was confirmed as compromised, given the
+attackers exfiltrated 1 million customer records. So Data Disclosure is marked as
+Yes. This is a required field—but the value can change. The Data Total box is
+where you indicate how many records are involved. The Data Victim allows you
+to track what kind of records were taken, and what the relationship between the
+victim organization and the subject of those records is.
+Under the Data Varieties, you can add as many as needed to record the quantity
+and type of records affected. This has allowed us to run statistics looking at only
+one kind of record—such as medical data from patients. VERIS allows you to get
+
+36
+
+as granular as your data is, so you can gain robust insights into your own
+organization’s security status.
+
+The Data state box is tracking if the stolen data was all in the clear, or if some (or
+all) was encrypted. It is good for scoping the breach and recording in this manner
+what percentage of the affected data is actually at risk.
+The Data Abuse field is to document if there are known cases of the data being
+abused by the adversary. If there is evidence of fraud, for example, or if the data
+was subsequently put up for sale on the dark web.
+You can also record if the victim organization offered credit monitoring to the
+data victims, and if so, for how many years.
+
+Integrity
+Although we do not have an Integrity violation in this case, you can always take
+a look at the Variety dropdown to see what the options are. Some common cases
+are software installation, for malware cases, and alter behavior for social
+engineering actions.
+
+37
+
+Availability
+The same is true for the Availability section—commonly seen in Denial of Service
+attacks, as well as ransomware cases, where the data was encrypted. You will see
+examples of both of these types of cases in the Templates in Action section.
+
+The Targeted Tab
+This tab is pretty straightforward. You can record (assuming you have this data,
+it can be quite difficult to come by) if the attack was specifically targeted at the
+victim, which implies the victim was chosen before the attack was laid out.
+Alternatively, if the attacker had an exploit they knew worked and were just
+looking for victims they could use it against, it is not a targeted attack, but an
+opportunistic one. Accidents of course are not applicable, since there is no malice
+involved. Targeting is by nature a malicious action.
+
+In many cases, we simply do not have this information, but it is an included field
+in case we do.
+
+38
+
+The Discovery Method Tab
+The Discovery Method tab is a great way for organizations to record which of
+their controls are catching intrusions. It speaks to effectiveness of controls, and
+visibility into what is going on in their environment.
+
+Your choices here are External, Internal and Partner, with the associated varieties
+to choose from. These work just like the Actors do—with levels of trust implied
+by their role. It stands to reason if you have to wait for someone who is outside
+of your organization to tell you that you have had a breach, it is likely to have
+been going on for longer than you’d like.
+While this case example doesn’t tell us how the breach was discovered, we do
+have some good options to choose from when we do have that data. All of these
+are non-exclusive, so if a breach was discovered in multiple ways, you can record
+that.
+
+39
+
+External
+
+The drop down shows the variety of choices for External discovery methods.
+Law enforcement is a common vector, as is Actor disclosure (i.e. ransomware
+cases).
+
+40
+
+Internal
+
+The Internal discovery methods is a long list as well, but don’t discount Reported
+by an employee who saw something odd. It is a good thing when your
+employees speak up when they see something concerning.
+Partner
+
+The Partner discovery method seems to be most common when the partner is the
+
+41
+
+vector for the breach, but it also comes into play when you have outsourced a
+security function, and they catch something interesting in their monitoring.
+Unknown and Other
+If nothing is known about how the breach was discovered, you use the Unknown
+checkbox at the bottom. You also have an option of choosing the Other checkbox,
+and we have a notes field so that you can capture how the breach was discovered
+if it did not fit in any of the options provided in the WebApp.
+
+The Value Chain Tab
+The Value Chain tab is used to track the pre-event activities required for the
+breach to be successful. Much of this is not known in the public dataset, but some
+can be deduced.
+
+We don’t have this information for the case we are using, but there are a wealth
+of options if you want to delve into recording this kind of data.
+
+42
+
+The Impact Tab
+The Impact tab attempts to capture some of the information that is useful when
+trying to assign a value to the impact a breach has had on an organization.
+
+You can set your own criteria, and assign impact ratings to the various data
+points. While a lot of this kind of data isn’t available when the incident first
+comes to light, after time has passed and cases make their way through the court
+system, some of this data can show up.
+This is particularly true of regulatory fines, or class action (or single action)
+litigation settlements. These are some of the easier impact data points to capture.
+This, along with the cost of responding to an incident can be recorded for internal
+incidents in particular.
+
+The Plus Tab
+The Plus tab is sort of a catch-all for the data points we have been interested in
+tracking that didn’t make it into the original framework.
+
+43
+
+You can track metrics on how difficult you think the attack was to implement.
+You can also record Indicators of Impact here.
+
+It may also be useful for you to record the control failure(s) that led to the success
+of the breach. And whether the corrective action taken was heinous to
+implement, or no big deal.
+
+44
+
+The Event Chain Tab
+Finally, we come to the Event Chain tab. This is where we in the DBIR team
+record each step in the breach, along with details about the 4A’s and how they
+were affected.
+
+You can add items to make the event chain as complex as you like, and reorder
+them using the up and down arrows.
+For our case, we have two events. The first is when they used stolen credentials
+to access the VPN server. The second is for the data exfiltration from the
+database.
+This is the last tab before the case is ready to export. There will be a validation
+check, and you can go back and fix any validation errors. Until they are
+addressed, you will not be able to export the JSON.
+
+45
+
+The Summary Screen
+Once successful, you are dropped into the Summary View for this incident.
+
+It is a long screen showing all the data entered for this case. You can make
+changes using the Update button at the top right, or you can export the case to a
+JSON file using the Export Json button next to it.
+Once you have exported your file, you will be brought back to the Home screen,
+and now you can see your case in the list.
+
+46
+
+This screen will continue to list cases as you enter them into the WebApp. If you
+haven’t exported to JSON, you will not show an Exported date. That is filled in
+with the export. You can select the checkbox next to the incident and click the
+pencil icon to edit. The Copy button next to the pencil will let you duplicate the
+incident. It will appear in your list after duplication. You can also delete the
+incident (which takes it out of the WebApp but does not touch any JSON files
+you have exported already). The final icon on the right (the right arrow in a box)
+will allow you to export the case to JSON.
+
+47
+
+Using Templates to Code Cases
+Faster
+What are Templates?
+Over the years, the DBIR team has coded hundreds of thousands of cases. In that
+time, the team has tried to find shortcuts to what can be a tedious and time
+consuming process. As we have found common themes in our data, we have
+created the following templates or blueprints of cases we encounter again and
+again. The goal with these templates is to help automate some of the more
+common case coding, and we are hoping to achieve about 90% of cases falling
+into one of these templates. Some of the details will change on a case by case
+basis—these are the variables that you need to fill out. These templates have been
+organized by the Action/ Actor combination with additional details on varieties
+as needed.
+Template files can be found on https://github.com/vz-risk/veris.
+We recommend you work from a copy of the template files on your local
+machine. You can import the template you need just as you would any other
+JSON case file. You can then edit the details to match your case, but the main
+action, actor and other key fields are pre-populated for you. This can be quite a
+time saver when coding cases that fit the template you have chosen.
+NOTE: Our WebApp is currently experiencing a known bug where the master_id
+does not change when you import a case and save it or copy/ duplicate it inside
+the app. So if you are using the master_id in your processes as a differentiator or
+unique id, you will need to change that value manually in the JSON before you
+ingest the files for each file you generate this way. It is a simple
+matter to have a new uuid generated (an example site that does this for you is
+https://www.uuidgenerator.net/.)
+
+48
+
+We established many templates for you to use for each of the common case types
+we have identified. As we encounter new common case types, we will add the
+template into the same repository. If you have a case type you encounter quite
+frequently in your own experience, you can simply save your own templates as
+well for future use (A template is just one of the common case type JSON files
+with some of the fields that usually change not filled in, nothing magical here).
+We have started using these template names as tags on VCDB issues, which is
+where we keep our publicly disclosed data breaches awaiting their turn at
+coding. If you would like examples of cases that apply to each template, you can
+always go to the issues list on GitHub (https://github.com/vz-risk/vcdb/
+issues).
+
+49
+
+Then click on the tag name for the template you are interested in:
+
+And you will see the subset of issues corresponding to that tag. You can then drill
+into the articles identified for that issue. This is a good way to get familiar with
+the kinds of issues that would apply to a particular template.
+While writing this version of the Coding Style Guide, the big Salesloft Drift
+campaign was going on, so you can see there are a lot of incidents that
+correspond to that template tag.
+
+50
+
+The template naming convention is as follows: Action-Actor-Action.variety and
+then another detail that differentiates it from the other similar cases. So if you
+were working a case where a hacker got in by exploiting a software vulnerability,
+you would use Hacking-ext-exploit-vuln. For a ransomware case where there
+was no data disclosure component, you would use Malware-extRansomware-nobreach.
+The differentiator is sometimes what asset was involved, or whether there was a
+breach of confidentiality, or some other special characteristic that has made it a
+case type that we see enough to warrant it’s own template.
+With all of these templates, the goal is to get you most of the way towards a
+coded case, with just the variables that change from case to case needing to be
+filled out (such as victim demographics, the asset(s) involved, discovery method,
+and any other field that doesn’t match your reality for the case you are coding. It
+is faster to change a few things than to have to code each case by hand from
+scratch.
+
+Error Templates
+Our Error action templates are grouped together by who the actor is that causes
+the breach, the kind of asset involved, and the attribute that was compromised as
+a result.
+Error actions can either be caused by internal actors—those who have either an
+employment or some other trusted relationship that grants them access to the
+organization’s premises and systems to do their jobs; or partner actors—those
+who, because of a business arrangement with the victim organization have access
+to data or assets, but are not typically behind the victim organization’s internal
+controls.
+
+51
+
+Internal Actor Templates
+Error-int-disposal-paper: Paper documents are disposed of improperly.
+Example: something that should have been shredded was just tossed in the trash.
+The person who threw away the documents was internal to the victim
+organization.
+
+We see this case less frequently than we used to. There was a time when paper
+documents were being disposed of in the trash despite the data they contained
+being protected by breach disclosure laws. Most of the organizations these days
+have received the memo that shredding paper is a good practice.
+Error-int-disposal-usrdev: A user device is disposed of improperly. Example: an
+unencrypted laptop was thrown in the trash. The person who threw away the
+laptop was internal to the victim organization.
+
+52
+
+When user devices are disposed of with all their data still on them, hilarity
+ensues. Well maybe not really, but we have seen many cases where the assets end
+up for sale on eBay instead. Then someone buys them and finds a treasure trove
+of confidential information.
+Error-int-loss-paper: Paper documents are lost. Example: Sensitive printed
+material are left in the seat back pocket of an airplane by mistake. The person
+who lost the documents was internal to the victim organization.
+
+53
+
+Error-int-loss-usrdev: A user device is lost. Example: A laptop computer is left
+behind on the bus. The person who lost the device was internal to the victim
+organization.
+Note that when the disposal was botched, we don’t show an availability loss.
+But when a device or media is lost, we do have to account for it. This is because
+we believe that if the asset is being disposed of, the data should already have
+been copied elsewhere if it was important.
+
+54
+
+We have the template for the loss of a user device (typically a laptop, but change
+the variable value as needed in the app). You can see a lot of the values will
+remain constant across the cases of this type. A difference here for the user device
+of a laptop is that since data disclosure is at risk, we don’t record a confidentiality
+loss in the event chain. We do still record the availability loss of the device,
+however.
+The Discovery method will typically being the employee realizing that they no
+longer have the asset they were supposed to be keeping track of. If the laptop
+was encrypted, for example, you would want to change the Confidentiality to
+No, unless of course the passphrase was written on a sticky note and kept with
+the asset. Don’t laugh, we’ve seen it multiple times.
+
+55
+
+Error-int-misconfig-srv: A server is misconfigured, and most frequently, the data
+is discovered by a security researcher.
+
+This is the template for all of those security researchers using their specialized
+search criteria to find the data stores that someone stood up on the internet
+without any controls to protect it. While we find this less often over time than we
+used to, since many of the vendors whose infrastructure this uses have instituted
+defaults that require controls before deployment, there remain many of these
+nuggets of data just waiting for someone to find. On the internet, there is no such
+thing as “flying under the radar.”
+Example: Misconfiguration of a Server
+Tax Credit Consultancy Exposes Nearly 250,000 Records in Major Data Breach Rockerbox #22221
+https://github.com/vz-risk/VCDB/issues/22221
+
+56
+
+The Rockerbox data breach is quite recent—we started tracking it on July 10,
+2025, so more details could conceivably come to light in the future, but these
+kinds of misconfigured servers are typically pretty straightforward. In this case, a
+tax credit consulting firm exposed an unencrypted, non-password-protected
+database containing 245,949 records to the internet, and it was found by security
+researchers.
+This issue was tagged with error-int-misconfig-srv as the template. Using this
+template, you would open the template file by importing the JSON template into
+the VERIS WebApp. Then make a copy, and then go ahead and make any
+changes.
+Error-int-misdelivery-media: This is when electronic media is misdelivered to
+the wrong recipient.
+
+57
+
+This is the classic case of regret. When an employee sends something via email to
+that group distribution list and attaches the wrong file, containing data that
+should never see such a wide audience. Or the email list is not the one they
+wanted…or many other scenarios that boil down to human error compounded
+by computers to reach a wide audience. How many of us have felt that sinking
+feeling when we realize we just did something like this?
+Error-int-misdelivery-paper: This is when paper documents are delivered to the
+wrong recipient.
+
+Error-int-publishing: This is when someone accidentally publishes confidential
+data to a public facing location. This is most commonly on a website, but can also
+be other assets.
+
+58
+
+This template is usually used when someone publishes the wrong data to a
+public facing website. It is differentiated from the misconfig in that the website is
+designed to be public and the wrong data was put there—or put there and the
+controls were suspended “temporarily.” We used to see this more often, but
+thankfully it is less common now with DLP solutions scanning for just this kind
+of mistake.
+The data type may change, but the asset tends to remain a website. The vector is
+also frequently carelessness, but we don’t always get that detail.
+Example: Publishing Error
+Moreno Valley, Calif., Schools Report Data Breach #22155
+https://github.com/vz-risk/VCDB/issues/22155
+This school district reported a data breach after someone shared a folder
+
+59
+
+accidentally with people not authorized to view it. Is tagged as error-intpublishing.
+
+Partner Actor Templates
+Now we move on to the partner actor breaches, these are going to be the same
+action/asset combinations, just the actor is changing.
+Error-prt-disposal-paper: Paper documents are disposed of improperly by
+someone who worked for a partner. Think something that should have been
+shredded was just tossed in the trash.
+
+Error-prt-disposal-usrdev: A user device is disposed of improperly by someone
+who worked for a partner. An example is a laptop was thrown in the trash, and it
+
+60
+
+had no controls on it to protect the data.
+
+Error-prt-loss-paper: Paper documents are lost by someone who worked for a
+partner.
+
+61
+
+Error-prt-loss-usrdev: A user device is lost by someone who worked for a
+partner.
+
+62
+
+Error-prt-misconfig-srv: A server is misconfigured by someone who worked for a
+partner, and most frequently, the data is discovered by a security researcher,
+which is reflected in the template.
+
+63
+
+Example: When the Partner makes the mistake
+Unsecured Serviceaide Database Exposed Data of 483,000 Catholic Health
+Patients - Serviceaide, Catholic Health #22040
+https://github.com/vz-risk/VCDB/issues/22040
+VERIS is an actor-centric framework, rather than a data-location-centric
+framework. This means that for a breach to be a partner breach, the person
+causing the breach must be internal to a business partner of the victim
+organization. As you may know, is is fairly rare, as the majority of breaches are
+caused by someone external to the organization who was attacked.
+But today we have not only an example of a partner actor breach, but one that
+has just one organizational victim. When we see third party breaches, where the
+attacked organization held data of other organization’s customers, for example,
+there are frequently a lot of other organizations involved. These are the kinds of
+
+64
+
+businesses that companies have outsourced non-core functions to, usually to
+either save money, or gain expertise without having to train their own staff. So
+usually when these kinds of business are breached, the number of organizational
+victims can be quite large, depending on how popular their service is across
+industries.
+So this incident was somewhat refreshing for us to use as a template, because of
+it’s simplicity of having only one organizational victim—Catholic Health. The
+partner was Serviceaide, Inc. The action was again error, but since the actor was
+internal to the partner, it is tagged as error-prt-misconfig-srv.
+
+Error-prt-misdelivery-media: This is when electronic media is misdelivered to
+the wrong recipient, and the person responsible for the misdelivery worked for a
+partner.
+
+65
+
+Error-prt-misdelivery-paper: This is when paper documents are delivered to the
+wrong recipient, and the person responsible for the misdelivery worked for a
+partner.
+
+66
+
+Error-prt-publishing: This is when someone who works for a partner of the
+business accidentally publishes confidential data to a public facing location. This
+is most commonly on a website, but can also be other assets.
+
+67
+
+Hacking Templates
+The Hacking action is most commonly an external actor—and all of our Hacking
+templates reflect that.
+Hacking-ext-bruteforce: A threat actor who has no affiliation with the victim
+organization brute forces credentials and hacks into their systems.
+
+68
+
+Hacking-ext-defacement: A threat actor who has no affiliation with the victim
+organization hacks into a web application and defaces it.
+
+69
+
+Defacements seem to ebb and flow with the volatility of the times. They are
+frequently perpetrated by activists with an axe to grind, whether against the
+owner of the website, or just a target of opportunity, where they knew an exploit
+that worked on that site.
+These are frequently breaches of the system data if nothing else (they likely
+looked around at their victim’s systems to see the layout of the land), but
+sometimes they also take data from the victims. They like to remake the website’s
+home page in their image, so to speak, and may cause the site to crash as well.
+Hacking-ext-DOS-breach: A threat actor who has no affiliation with the victim
+organization launches a Denial of Service (distributed or traditional) against the
+victim. There is an associated data breach with this action, but it is not recorded
+how.
+Most of the Denial of Service attacks (Distributed or not) are not causing data
+breaches—no data is compromised. These are primarily Availability attacks
+
+70
+
+designed to degrade the performance of the victim’s systems, or ideally—from
+the attacker’s standpoint—knock them off the internet entirely. Thus we most
+commonly see these cases being valid security incidents, but not data breaches in
+VERIS terms. There are a very few cases annually where we see the attacker take
+the data, and if you are using this template file, you would just change the value
+of the Confidentiality attribute in the WebApp.
+
+Hacking-ext-DOS-nobreach: A threat actor who has no affiliation with the
+victim organization launches a Denial of Service (distributed or traditional)
+against the victim. There is no data breach.
+
+71
+
+Hacking-ext-exploit-misconfig: A threat actor who has no affiliation with the
+victim organization exploits a misconfiguration to hack into their systems.
+
+72
+
+Hacking-ext-exploit-vuln: A threat actor who has no affiliation with the victim
+organization exploits a vulnerability to hack into their systems.
+
+73
+
+Example: A zero day is exploited
+Nippon Steel Solutions suffered a data breach following a zero-day attack #22219
+https://github.com/vz-risk/VCDB/issues/22219
+
+Hacking-ext-SQLi: A threat actor who has no affiliation with the victim
+organization uses a SQL injection attack against a database.
+
+74
+
+Hacking-ext-stolencreds: A threat actor who has no affiliation with the victim
+organization uses stolen credentials to hack into their systems.
+
+75
+
+Example: Use of stolen credentials
+Drivers' data compromised in TxDOT data breach of nearly 300,000 crash reports
+#22121
+https://github.com/vz-risk/VCDB/issues/22121
+Hacking-ext-unknown: A threat actor who has no affiliation with the victim
+organization hacks into their systems.
+
+76
+
+Hacking-Malware-ext-srv: A threat actor who has no affiliation with the victim
+organization hacks into a system and installs malware.
+
+77
+
+Malware Templates
+The Malware action is most commonly an external actor causing the breach.
+While employees and partners have been known to maliciously download and
+install malware, it is much more common to be a threat actor with no affiliation
+with the victim organization.
+Malware-ext-Adminware: A threat actor who has no affiliation with the victim
+organization installs malware with the adminware functionality onto a system.
+
+78
+
+Malware-ext-BackdoorC2: A threat actor who has no affiliation with the victim
+organization installs malware with Backdoor or C2 functionality onto a system.
+
+79
+
+Malware-ext-CaptureAppData: A threat actor who has no affiliation with the
+victim organization installs malware with the ability to capture application data
+onto a system.
+
+80
+
+Malware-ext-InfoStealer: InfoStealer malware is installed and data is stolen by
+an external actor. Initial method of system access is unknown.
+
+81
+
+Example: Infostealers
+DOGE software engineer’s computer infected by info-stealing malware #22003
+https://github.com/vz-risk/VCDB/issues/22003
+
+Malware-ext-PasswordDumper: A threat actor who has no affiliation with the
+victim organization installs malware with Password dumper functionality onto a
+system.
+
+82
+
+Malware-ext-Ransomware-databreach: Ransomware is installed on a system.
+The threat actor (external to the victim organization) takes a copy of the data
+first, before triggering encryption.
+
+83
+
+This template reflects the change in tactics we saw from the attackers when they
+pivoted from just encrypting the data to stealing a copy first. They would then
+use that as extra leverage against their victim to get them to pay. Sometimes these
+actors would also sell the data on the dark web for additional profit—whether
+the deal with the victim organization was done or not.
+Example: Ransomware with a side of data breach
+Episource Ransomware Attack Affects Multiple Healthcare Customers #22156
+https://github.com/vz-risk/VCDB/issues/22156
+Malware-ext-Ransomware-nobreach: Ransomware is installed on a system. The
+threat actor (external to the victim organization) does not take a copy of the data
+first, before triggering encryption.
+
+84
+
+This template represents the classic ransomware attack—no fancy taking of data
+first before triggering the encryption for these actors, just straight get in, drop
+malware everywhere you can, and trigger the encryption as you leave. Ah the
+good old days.
+
+Example: Ransomware, hold the breach
+Ongoing cyberattack at US grocery distributor giant UNFI affecting customer
+orders - United Natural Foods (UNFI) #22131
+https://github.com/vz-risk/VCDB/issues/22131
+Now, just because a case is straightforward, we are not saying the impact is
+insignificant. Certainly, organizations who experience these types of attack can
+attest to that. It remains up to the organization’s affected, and their regulatory
+environment to determine how to respond to the ransom demands.
+
+85
+
+Misuse Templates
+The Misuse action is exclusive to either Internal or Partner actors, as it assumes
+the perpetrator is granted some access to perform their function for the victim
+organization. The two most common varieties of Misuse are Email abuse and
+Privilege abuse. Thus we have one of each for each of the actor types.
+Misuse-int-emailabuse: Internal misuse; this is a person who is granted access to
+do their job. Think employee or contractor. They are misusing their access to
+cause a data breach. To achieve their ends, an email server was instrumental to
+the breach.
+
+It seems we see cases of people emailing corporate data to their personal email
+
+86
+
+accounts on a regular basis. It is a common method of data exfiltration by both
+well meaning employees who want to work on the data at home; as well as those
+who are planning on their exit strategy, and want to leverage the data of their
+soon-to-be-former company at their new job. When the email server is how they
+got the data out, this is the template to use. That said, if they also saved it to
+external drives or used other methods, you can always add them on as assets.
+Example: Email abuse
+Minnesota’s Hormel sues Wisconsin’s Johnsonville alleging stolen sausage
+secrets #22231
+https://github.com/vz-risk/VCDB/issues/22231
+Misuse-int-privabuse: Internal misuse; this is a person who is granted access to
+do their job. Think employee or contractor. They are misusing their access to
+cause a data breach. This is your basic misuse case--if they used email to get the
+data out, then choose Misuse-int-emailabuse.
+
+87
+
+This template is used when the employee (or other internal actor) uses the access
+granted to them to do their job, instead to steal data. We see a number of these
+cases where people are taking data to assist them in their new job—with their
+new employer’s knowledge or not. But we also see these as cases of a disgruntled
+employee who feels ownership of the data for whatever reason and takes a copy
+with them on their way out the door.
+Misuse-prt-emailabuse: This is misuse, with email involvement, and the actor
+was someone working for a partner. Ignore the issue number in the diagram.
+
+88
+
+Example: Privilege abuse
+Sun Valley Investments A.G. Files Lawsuit Against Former Consultant, Onil
+Gunawardana and his Company, Akalytic Advisors, LLC for Misappropriation of
+Trade Secrets #22230
+https://github.com/vz-risk/VCDB/issues/22230
+Misuse-prt-privabuse: This is misuse, but the actor was someone working for a
+partner of the victim organization. Ignore the issue number in the diagram.
+
+89
+
+Physical Templates
+Physical action cases most commonly come in two flavors—tampering and theft.
+We are focused on external actors in these cases, as that is what we see the most.
+Physical-ext-tampering-atm: A threat actor who has no affiliation with the victim
+organization installs a skimming device on an ATM.
+
+90
+
+Skimmers are not going away anytime soon. They are frequently placed by
+criminal gangs from other countries who come in and install the devices on as
+many of a vulnerable victim’s infrastructure as they can before fleeing with their
+stolen data loot. These cases differ mostly by the assets favored by the attackers.
+For this template, they favor the ATM skimmer, and we frequently will see a
+cluster of them on banks with the same brand of ATM terminal.
+Physical-ext-tampering-gas: A threat actor who has no affiliation with the victim
+organization installs a skimming device on a Gas terminal.
+
+91
+
+Physical-ext-tampering-POS: A threat actor who has no affiliation with the
+victim organization installs a skimming device on a Point of Sale terminal.
+
+92
+
+The other common Physical attack is Theft. Our template here is for a user
+device, such as a laptop. These cases are typically discovered by the employee
+who finds evidence of a break-in. The vector information, if you have it, is most
+frequently either a place of business, or a vehicle.
+Physical-ext-theft-paper: A threat actor who has no affiliation with the victim
+organization steals paper documents.
+
+93
+
+Physical-ext-theft-userdev: A threat actor who has no affiliation with the victim
+organization steals a user device.
+
+94
+
+Social Templates
+We most commonly see Extortion, Phishing, and Pretexting. We also have two
+other Social templates that are more complex—the social action of Phishing
+combined with Hacking, Use of stolen credentials, which is quite common; and
+the attacks that take this combo one step further and install malware (not
+ransomware). The compound social templates take this about as far as we can go
+with the more complex cases using a template.
+Social-ext-Extortion: A threat actor who has no affiliation with the victim
+95
+
+organization sends an extortion email to the victim organization, and an
+employee falls for it.
+
+Social-ext-Phish: A threat actor who has no affiliation with the victim
+organization sends a phishing email to the victim organization, and an employee
+falls for it.
+
+96
+
+Remember when it was easy to spot a phishing email? There were typos and
+other telltales that made it pretty obvious that this was not a legitimate
+correspondence. Now, the attackers have become much more skilled and
+sophisticated at their game. They may even be engaging AI to help them craft
+their lures and make them more convincing. Still, it is a phish, and there is
+usually some simple call to action that doesn’t require them to craft a backstory.
+Maybe a link to click to enter your credentials, maybe malware to download.
+Nothing too complex.
+Example: Phishing
+Southwest Urology Data Breach Affects 7,214 Patients - Integrated Oncology
+Network
+(ION) #22218
+https://github.com/vz-risk/VCDB/issues/22218
+
+97
+
+Social-ext-Pretex: A threat actor who has no affiliation with the victim
+organization sends a pretex email (inventing a plausible scenario) to the victim
+organization, and an employee falls for it.
+
+This is the type of case where aspiring creative writers go to spin their tales. They
+pretend to be someone in authority, and include a sense of urgency to manipulate
+their victims into compliance. Sometimes they are asking for data, or payment of
+an invoice. Sometimes there is even deepfake video according to some reports. In
+any event, this attack is characterized by a bit more work on the part of the
+attacker—one might even say ingenuity. These attackers are trotting out their
+social engineering skills and putting them on display.
+
+98
+
+Example: Pretexting
+Patient data at potential risk from lab privacy incident at Sentara Health #22233
+https://github.com/vz-risk/VCDB/issues/22233
+Social-Hacking-ext: A threat actor who has no affiliation with the victim
+organization sends a phishing email to the victim organization, and an employee
+falls for it. The attacker then uses the credentials harvested from the phish to
+hack into the victim organization's systems.
+
+Social-Hack-Malware-ext: A threat actor who has no affiliation with the victim
+organization sends a phishing email an employee, who falls for it. The attacker
+then uses the credentials harvested from the phish to hack into the victim
+organization's systems. Malware is then deployed on the compromised systems.
+
+99
+
+100
+
+Templates in Action
+Sometimes the best way to learn how to use something is just to dive in. You’ve
+seen the templates we provide, and now it is time to actually use a template to
+code a case in our WebApp. We recommend you work from a copy of the
+templates to preserve the actual template files from being overwritten.
+Whether you choose to do this by making a copy of the whole template directory,
+or just a copy of each template before you use it is entirely up to you.
+
+For this example, we begin at the Home screen with no cases listed. Obviously,
+you can do this regardless of what state your Home screen shows (a list of cases
+in various states, or blank like ours). We need to import a template before we can
+use it, so click on the Import Incidents button.
+
+It is up to you how you want to use this, some like to import all the templates at
+
+101
+
+once (or all the templates of a specific kind of incident, such as all the Error
+templates), and others like to import just the template for the case in front of
+them at the time. Either way, start with the Import Incidents button.
+Alternatively (because we’re all about flexibility here), you can just drag and
+drop files onto the appropriate blue section of the Home Screen.
+NOTE: As indicated in the Things Change, Incidents Evolve, there is a limit for
+importing of ten files per import. So if you are trying to import too many
+templates at a time, you will run into this. We have more explanation of the
+behavior in that section.
+Clicking the Browse files will bring up a dialog so you can navigate to where you
+have stored your template files.
+
+For our example, I will choose the Hacking-ext-stolencreds Template.JSON file.
+The template is just a JSON file of a sample case coded where the action was
+Hacking - Use of stolen creds, the actor was external. This will load that sample
+case into your list of cases once you click the Add button.
+
+102
+
+Now that the template is in your case list, you can edit it with the pencil icon
+under the Action column. Note that you are working from that file, but when
+you export, it will be dropped into your Downloads folder, so you won’t have to
+worry about changing the actual template file. You will, however, want to
+change the filename after export to avoid confusion.
+
+As mentioned above, this is a case that we used as a template, so there are values
+in the fields. Your job now is to change the values to match your case specifics.
+Using templates is a time saver, because a lot of the values will remain the same
+from case to case when you are working with the same template. Values for
+other fields will vary from case to case, such as the Reference field and the
+
+103
+
+Summary field.
+As you go through the various tabs, make your changes, paying particular
+attention to the 4A fields to make sure they align with your expectations. For
+example, a case using this template will by default have the Action of Hacking
+with the variety of Use of stolen creds selected.
+
+If other Actions were performed in the case you are recording, you will need to
+add them as well. So while it may be a challenge to determine which is the best
+template to use for your specific case, do keep in mind that you are not stuck
+with the choices of a particular template. These are just meant to be sort of a
+short cut to having to code every little detail by hand when there are common
+kinds of cases. You always have the control to change the selections to suit your
+case’s particulars.
+Once you have filled out all the details of the case, and exported the JSON, you
+will now have your JSON file ready to be renamed.
+
+104
+
+Importing Existing Incidents
+When new information comes to light about cases we have already coded, we
+can import the JSON file back into the WebApp and make our changes easily.
+This is usually better than editing the JSON file manually, as it preserves the
+JSON syntax upon export and ensures there are no validation errors as a result of
+the edits. To import incidents, click the large Import Incidents button, or you can
+just drag and drop your files. The Browse files link will function the same as the
+Import Incidents button.
+
+You are presented with a dialog box where you can choose one or more incidents
+to import. NOTE: The WebApp will only import up to ten files at a time.
+
+105
+
+If you try to import more than that limit, the Open button will work, but you will
+be faced with the list highlighted in red, and the Add button at the bottom will
+be greyed out.
+
+In contrast, when you pull in one or under ten, you see the list of files
+
+106
+
+highlighted in blue. You can now click the Add button to import them into your
+list on the Home screen.
+
+The new case(s) will be added to the top of your list in the Home screen.
+Just remember to preserve off the files you have imported if you want to keep a
+change history of the JSON over time. The file will have the same name upon
+export, although it will go into your Downloads folder. So version control may
+not be such an issue, depending on where you normally store the JSON files.
+NOTE: Our WebApp is currently experiencing a known bug where the master_id
+does not change when you import a case and save it or copy/ duplicate it inside
+the app. So if you are using the master_id in your processes as a differentiator or
+unique id, you will need to change that value manually in the JSON before you
+ingest the files for each file you generate this way. It is a simple matter to have a
+new uuid generated (an example site that does this for you is
+https://www.uuidgenerator.net/.)
+
+107
+
+Additional Coding Style Examples
+If you’ve made it this far, you are likely somewhat proficient in using the
+WebApp, or whatever method you use to code your cases. Again, all of our
+examples are from VCDB, and we provide the JSON file name if you want to take
+a look at how we coded these.
+While the prior sections gave examples of some of the more common kinds of
+incidents we see, we wanted to include guidance in the other cases that you may
+encounter. We also touch a bit more in depth on other topics where the extra info
+would have cluttered up the training in using the WebApp.
+The examples in this guide are organized by the Action type. As you are likely
+aware by now, VERIS has seven action types:
+Error
+Environmental
+Hacking
+Malware
+Misuse
+Physical
+Social
+The forthcoming section will give you some examples of common cases, along
+with the JSON file for reference. There may be a little overlap with prior
+examples, but in the interest of completeness, we are including the examples
+here. That way, hopefully you won’t have to bounce around in the document to
+find what you are looking for.
+
+Victim Demographics
+As mentioned in the VERIS Overview section, we record victim demographics
+(when we can get them) for each incident. They include fields such as the name
+
+108
+
+of the victim (for VCDB cases), the organization’s size (in terms of how many
+employees) and their industry. We really like to have the last two whenever
+possible, since these are two of the ways we commonly split out the data in the
+DBIR.
+We also record what country the victim organization resides in (and if it is
+multinational, then either choose the location where the breach occurred if
+known, or the headquarters of the organization), and the region code so we can
+look at geographic differences.
+If there are multiple organizations affected by a breach, they can be listed (along
+with their NAICS code) in the Secondary Victims field of the WebApp. If the case
+was a supply chain breach where a partner was breached and many of their
+customers were affected (and were thus having to report individual breaches),
+we code this from the perspective of the partner who was breached rather than
+create a record for each of their customers (see Third party or Supply Chain
+Breaches).
+
+Error Overview
+The Error action, by definition, is non malicious in nature. We only record actions
+that directly resulted in the event—not indirect or passive actions. Otherwise any
+time there was a breach, the choice not to implement every control on the planet
+could be pointed to as an error. The Error variety enumerations are as follows:
+Classification error
+Data entry error
+Disposal error
+Gaffe
+Loss
+Maintenance error
+Misconfiguration
+Misdelivery
+Misinformation
+Omission
+Physical accidents
+Capacity shortage
+
+109
+
+Programming error
+Publishing error
+Malfunction
+Unknown
+Other
+
+Are all of these encountered regularly? Not so much. Most common are the Loss,
+Misconfiguration, Misdelivery, Publishing and Disposal errors. The others come
+up now and again, but some are quite rare.
+We have case examples from the common Error types where we go into detail for
+each case. Let’s move into those.
+
+Disposal
+Disposal errors occur when either electronic or paper assets are disposed of
+without taking into consideration the need to protect the data on them. For paper
+documents, the typical solution is to shred the documents prior to disposal, or in
+some cases, this is performed by a partner vendor for an organization under
+contract. Paper documents are the special case in that we consider any time they
+are lost (or stolen) it is considered a confirmed compromise of the confidentiality
+of the data printed there. The person who finds them typically has to read them
+to even realize they contain sensitive information, and there is simply no control
+that will combat the vulnerability.
+Our first case example is the disposal of paper documents. You can see the Victim
+Demographic information we most want to have filled out. We tend to split our
+data along organizational size, industry and regional lines, so we like to have
+that information. If you are working on implementing VERIS in your own
+organization, and there are multiple locations, it is nice to see where the hot spots
+are as well.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/8c8798f2999fd19330a30ca685fc31994351956b/
+data/JSON/validated/f3d6ef1b-8a16-4c96-8f8d-a28ca303af50.JSON
+
+110
+
+This is a case where a psychiatrist stored patient files in the basement of a home,
+and allowed a tenant to have a key and access to the basement (particularly
+when workmen were present to do maintenance). When the tenant was told they
+had to move, they alerted law enforcement about the improperly stored medical
+files. The doctor eventually reported the incident to the Health
+and Human Services as a breach.
+As the tenant had a key for an unspecified amount of time, they essentially could
+have read through any of the files. They had to have at least looked at them to
+determine what they were and there is mention of the data types they contained
+in the article. Under the Attributes section of the diagram, you can see that we
+have data_disclosure: Yes, and the data_variety is medical. There is also space to
+indicate number of records total and in the case of multiple types of records, you
+can designation that information as well. As mentioned, the goal of these
+111
+
+diagrams is to give you a visual aid of the most important aspects of this type of
+case. The WebApp will allow you to record much more detail.
+The Other Fields section is to highlight some of the fields that are unique to this
+kind of case, that people sometimes may forget to record, even when they know
+it. Found documents as the discovery method is an enumeration we created
+when this was the way so many of these cases were discovered. It is an external
+method—meaning it is most frequently someone discovering the documents
+who do not work for the victim organization.
+The Actor in this case is an internal employee with a variety of Doctor or nurse.
+The motive is convenience, since it was just easy for them to leave those old files
+in their basement rather than properly get rid of them.
+The Action is Error, with a variety of Disposal. The vector is carelessness, as it
+frequently is in these cases. It isn’t that there wasn’t a process to handle the
+disposal of these documents in place—it was that the person didn’t follow it, and
+took the easy way out. We see this quite a lot—I’m sure it is no surprise to
+incident responders that people take unapproved shortcuts.
+Finally, the Asset is Media - Documents. Now while you can certainly make
+disposal errors with electronic equipment as well as paper documents, it is far
+more frequently to see the asset being paper with this type of error. However, we
+do show the difference in how to handle the two types of assets when we get to
+the Misdelivery error action—the other error type that is frequently either
+documents or electronic data.
+The final section is the event chain. We record each action that occurred in an
+incident and do research on those attack paths based on this information. You
+can see this is a one-event chain. Most error actions tend to be one-event chains,
+as a matter of fact, which is good. You certainly don’t want the employee to
+continue making error upon error to cause even more mayhem.
+
+112
+
+Lost Laptop
+People lose things all the time. It is when the lost item contains unprotected
+sensitive data that the breach reporting comes into play. While paper documents
+are lost, those cases are very similar to the disposal error in how the asset is
+handled. So this time we are looking at an electronic asset rather than a dead tree.
+“While at a conference in Buenos Aires, a Boston Children’s Hospital employee lost a laptop
+containing a file with information about 2,159 patients, including names, birth dates, diagnoses,
+and treatment information. The laptop was password protected but not encrypted, according to a
+hospital press release. “
+
+The important thing here is that the laptop was not encrypted. If it was
+encrypted, the data would not be at risk (unless the passphrase was also taken in
+human readable form). If the laptop is only password protected (which is a very
+weak control) and thus it is not a confirmed compromise in the Confidentiality
+section of the attributes. In this case, we mark data_disclosure as Potentially, and
+it is not counted in the breach total of our report. It will show up in the incident
+total, and how you handle your data is entirely up to you.
+Here is the link to find the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/8c8798f2999fd19330a30ca685fc31994351956b/
+data/JSON/validated/AB6E8720-B246-498B-9CDC-E706C5758409.JSON
+
+113
+
+There is no integrity violation, but there is an availability violation, given that the
+access to the asset has been lost. Discovery method in this kind of case is Internal,
+reported by the employee having to tell their boss they lost the laptop—never a
+fun conversation. When we get to the physical examples, take a look at the
+discovery method for stolen laptop, and how it changes.
+The actor involved is the employee. End User is a catchall for someone we don’t
+really have details about their role, but we know they are an employee. The
+motive is NA, since it is an unintentional action.
+The action is Error with a variety of loss, and the asset is the User Device of
+Laptop. Again, the event chain is a chain of one step.
+
+114
+
+Misdelivery
+Misdelivery is when data (whether on paper or in electronic format) goes to the
+wrong recipient. Common cases are documents in a mass mailing when the
+envelopes and their contents become out of sync, and suddenly your customers
+(patients, constituents) and receiving someone else’s information. Another
+common case is when someone either selects the wrong distribution list in email,
+or attaches the wrong file to the email. We will cover both paper and electronic
+misdelivery in this section so you can see the differences.
+First we look at the document case. Since there are no controls on printed human
+readable material (paper), we mark the data_disclosure as confirmed. To be
+found, and identified as sensitive data, at least some of it must be read.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+
+github.com/vz-risk/VCDB/blob/8c8798f2999fd19330a30ca685fc31994351956b/data/
+JSON/validated/134B7719-E885-4A38-8ADE-9E01BAED3893.JSON
+
+115
+
+This was a mailing gone awry, and the patient is the one who realized they got
+the wrong person’s data, and contacted the victim organization. The actor was an
+internal person, variety was unknown, and motive does not apply to an error
+action.
+“Veteran A's means test was returned to Veteran B with a request to complete the
+form in pen. The form contained Veteran A's name, address, social security
+number, date of birth, employment information, and financial information.”
+The error variety was misdelivery, and we marked carelessness on the vector.
+This is frequently the case with error actions—because someone just wasn’t
+paying enough attention. The asset was printed documents as mentioned above.
+The event chain is just one step to cause a breach in most errors.
+116
+
+While paper misdelivery is quite common, it doesn’t mean the same error can’t
+happen with electronic data. In fact, it is quite common. In our case below,
+someone sent email with data they should not have to a business partner. Here is
+an excerpt from the notification.
+“The Jonathan M. Wainwright Memorial VA Medical Center in Walla Walla is
+offering free credit monitoring for up to 1,519 veterans whose personal
+information, including social security numbers, was inadvertently emailed to an
+external education partner on Nov. 1.“
+Here is the link to the JSON file in the VCDB GitHub repository:
+https://github.com/vz-risk/VCDB/blob/
+8c8798f2999fd19330a30ca685fc31994351956b/data/JSON/validated/0B265D69D744-4C2F-8F74-302B7F99FEC7.JSON
+
+117
+
+The diagram doesn’t change all that much from paper misdelivery. The main
+differences are in the discovery method. Usually this is a case where the person
+who sent the email realizes what they did fairly quickly. Other times, it will be
+the recipient who alerts the sender that they got data they didn’t expect. In this
+case, it was the former.
+The other difference here is the asset involved. The variety of User device Desktop or laptop is the parent of the User device - laptop, so both are selected
+when the child is selected.
+So the main difference we see in these electronic cases are in the assets and
+discovery methods. The rest are very similar—it is an error committed by an
+internal actor, with no malice.
+
+118
+
+Misconfiguration
+Historically, this case was when someone would misconfigure their site when
+they installed it, and eventually somehow the private data would come to light.
+These were fairly rare, and mainly happened when a developer did an oops.
+Nowadays, it is primarily the place where we put all those instances where
+someone stood up a database in cloud infrastructure, but failed to put any
+controls on it. Then a security researcher finds it, and makes a notification.
+Since you are more likely to encounter the latter case, we are modeling it as an
+example. The main difference between the two would be the discovery method.
+External/customer versus External/security researcher are the two options for
+these two scenarios.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98f0f09240f4a92948a3c2198e00e3bf47e2edc/
+data/JSON/validated/d00f7e36-1546-469b-a67a-e184dbc020fe.JSON
+
+119
+
+Data_disclosure tends to be confirmed in these cases, given that they are
+frequently found by people who then contact the organization. The act of finding
+the data and looking through it to try and identify who it belongs to is a breach
+in itself, since the security researcher is not authorized to see that data. However,
+consider that this is someone who is trying to make the notification—
+how many others viewed the data (and potentially took a copy) without saying a
+word?
+“On July 26th (I) discovered a non password protected elastic data set that
+contained 5.2 million documents in total. Immediately, I knew this information
+should not be publicly accessible and began trying to identify the ownership.
+Upon further investigation the data appeared to belong to an organization called
+Leadership for Educational Equity (LEE).”
+
+120
+
+The Actor is internal, system admin—someone who has the ability to access large
+amounts of data and either change the configuration or stand up a new cloud
+datastore with it. The motive is NA, as it is an Error action. The variety in either
+case is Misconfiguration, and the vector is carelessness. The asset is a database,
+and these instances tend to be cloud based when the security researcher is the
+one to find it—they use specialized search engines such as Shodan to find these
+unprotected datasets, and they are usually on some cloud infrastructure.
+The event chain is just one step, as it only takes one step for most errors to cause
+breaches.
+
+Publishing
+A publishing error occurs when private data is put on a public facing website
+and is somehow accessible to the world. The website is then indexed by the
+helpful search engines and frequently comes to light when a customer googles
+themselves and finds their data flapping in the wind. We typically find this as a
+result of some change control process failure, where the site’s controls were
+suspended to make some kind of change, and then after it was completed, the
+controls were not put back in place.
+It also occurs when unsanitized private data that should not have been uploaded
+gets put on a site that is open to all.
+“A police activity log for the period of January 7 through January 13 was
+published on the Littleton department's website. Someone forgot to remove
+personal details from the log and the sensitive information was available online
+for 10 days. Names, Social Security numbers, dates of birth, and addresses, were
+available between January 14 and January 24.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/8c8798f2999fd19330a30ca685fc31994351956b/
+data/JSON/validated/E2D16B0A-B78F-4B2E-BB90-41DF35433775.JSON
+
+121
+
+For this case, we have data_disclosure as confirmed. The data variety exposed
+was Personal. There was no integrity or availability violation. The discovery
+method here is not known but this is a case type where the customer frequently
+alerts the organization.
+The actor responsible is Internal with a variety of End User. That likely means we
+didn’t have detail into who did it, and End User is a safe bet. Motive of NA
+because it is not an intentional action.
+The asset is the web application server, no surprises there. And finally, the event
+chain of just the error action is nice and short.
+
+122
+
+Environmental Overview
+Actions where the environment is the cause are quite rare, but they do happen. In
+this section, we will explore some actual cases where data breaches were caused
+by Mother Nature, sometimes with some help from humans, sometimes not.
+The enumerations for Environmental actions are as follows:
+Deterioration
+Earthquake
+Electromagnetic interference (EMI)
+Electrostatic discharge (ESD)
+Temperature
+Fire
+Flood
+Hazmat (Hazardous material)
+Humidity
+Hurricane
+Ice (and snow)
+Landslide
+Lightning
+Meteorite
+Particulates (e.g., dust, smoke)
+Pathogen
+Power failure
+Tornado
+Tsunami
+Vermin
+Volcano
+Water Leak
+Wind
+Unknown
+Other
+
+123
+
+Have we seen examples of all of these? Well, no. When the framework was
+conceived, there was a brainstorming session for what this might look like, and
+this was the result. We have seen a few of them, but they are so rare that when
+we actually run across a valid environmental breach case, we on the DBIR team
+get all excited. Yes, we’re geeks.
+
+Hurricane
+Mother Nature is occasionally the cause of data breaches. In this case, we have a
+hurricane sweeping away the paper records of this company.
+“We’ve lost a number of the records as a result of the flooding and while we’ve
+made all efforts to try to salvage some of them, some of it was just not possible,”
+Weech told reporters, during a press conference announcing restoration efforts
+for the storm-ravaged facility….Weech noted that the PHA is currently unable to
+quantify how many medical records were lost as a result of the Category 5 storm.
+So, given we don’t have an indication whether people found the records among
+the storm debris, we have marked this as data_disclosure: Potentially. Usually we
+mark breaches involving documents as confirmed, but there is a good chance
+here that the papers were simply destroyed by the storm and the likelihood is
+low that people will find them in readable format.
+Here is the link to the JSON file in the VCDB GitHub repository: https://github.com/
+vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/data/JSON/
+validated/1756b702-6634-4e8a-8ab1-f8a4dc3ea748.JSON
+
+124
+
+The availability loss is also recorded. The duration would be Never (for the
+likelihood that they will ever get the records back, or could read them if they
+did). That is the usual value for a loss event (as well as physical theft) although
+we do sometimes see articles where the device or records were recovered after a
+time.
+The actor here is considered External, and Force majeure is another term for
+Mother Nature here. The motive is not applicable, as we don’t attribute malicious
+intent to hurricanes. The Action is Environmental, and we have hurricane as our
+variety. The asset is documents, as the excerpt from the article above mentions.
+One thing to note here is the event chain has two events. When you have a case
+like this where there is a confidentiality and an availability impact, it is coded
+this way. The events look like two things, but it is really to account for both of the
+
+125
+
+attributes. It is a weakness in the schema and how we handle event chains, but it
+is the best way we could come up with to account for this.
+
+Fire
+You probably don’t think of fire as a lead to a data breach, but it does happen,
+however rarely. Our case was a large fire at a records storage building, and the
+paper records were strewn by the fire and the efforts to douse it.
+“No lives were lost in the huge fire that gutted a storage building on the
+Brooklyn waterfront over the weekend. But the flames put plenty of lives on
+display as the crumpling warehouse belched up its contents: decades’ worth of
+charred medical records, court transcripts, lawyers’ letters, sonograms, bank
+checks and more.
+They’re like treasure maps, but with people’s personal information all over
+them,” Spencer Bergen, 24, said of the half-charred scraps that he said he had
+seen strewn around the Williamsburg neighborhood as far inland as Berry Street,
+several blocks from the warehouse.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/data/
+JSON/validated/7005b870-53d7-4250-a4d8-4e05dcc2f5a6.JSON
+
+126
+
+There are many similarities in this case when compared with the Hurricane case.
+The data disclosure is confirmed—the article goes on to talk about people on the
+beach sifting through the papers. The loss of the documents violates the
+availability attribute.
+The discovery method is one we created just for these kinds of cases—where
+documents are lost and someone stumbles upon them.
+The actor again is Force majeure, with a variety of fire. The action is
+environmental with a variety of fire. The asset is the M - documents, where the
+“M” stands for Media.
+Again, we have a two-step event chain for a single environmental action. This is
+to account for both the confidentiality loss and the physical availability loss.
+
+127
+
+Hacking Overview
+The hacking action is a broad action category with a wide variety of options to
+choose from. Generally, we classify “Hacking” as a “hands on keyboard” action,
+while Malware is it’s automated cousin. As new techniques are encountered, we
+update VERIS when we find something is popping up in enough cases to be
+worth tracking. In our current version, here are the hacking varieties:
+Abuse of functionality
+Brute force
+Buffer overflow
+Cache poisoning
+Session prediction
+CSRF: Cross-site request forgery
+XSS: Cross-site scripting
+Cryptanalysis
+DoS: Denial of service
+Footprinting
+Forced browsing
+Format string attack
+Fuzz testing
+HTTP request smuggling
+HTTP request splitting
+Integer overflows
+LDAP injection
+Mail command injection
+MitM: Man-in-the-middle attack
+Null byte injection
+Offline cracking
+OS commanding
+Path traversal
+RFI: Remote file inclusion
+
+128
+
+Reverse engineering
+Routing detour
+Session fixation
+Session replay
+Soap array abuse
+Special element injection
+SQLi
+SSI injection
+URL redirector abuse
+Use of backdoor or C2
+Use of stolen creds
+XML attribute blowup
+XML entity expansion
+XML external entities
+XML injection
+XPath injection
+XQuery injection
+Virtual machine escape
+Unknown
+Other
+Quite a list, isn’t it? We primarily get this level of detail from cases worked by
+our forensic analysts and our partners who work cases. We don’t usually get this
+information from the VCDB dataset, but sometimes we do strike gold. As with
+other aspects of VERIS, you can multi-select from this list when the detail is rich
+and you know exactly what the attacker did. It should be noted that if you select
+varieties where the actor exploited a vulnerability, you should also choose
+“Exploit vuln” in addition to more specific choices.
+
+General Hacking
+We have a lot of cases where we know the action was hacking, but we don’t
+know all that much in the way of detail. This is particularly true of cases in
+VCDB, because we are at the mercy of what the organization was willing to
+
+129
+
+disclose, and how interesting the reporter found the details. That combination
+frequently means we don’t know much.
+“An Arkansas unemployment system centered around the COVID-19 pandemic
+has shut down after a data breach of secure information. The system data breach
+was caused by applicant who illegally accessed the system, according to
+Hutchinson. A probe will determine whether any personal data from applicants
+was obtained. If any individuals had their data compromised, they will be
+notified and steps will be taken to address the situation, including possible credit
+monitoring. Nearly 30,000 people have applied to the program.”
+For this case, we know they were able to hack into the web application, and that
+based on the data they took, they were financially motivated. We don’t know
+how they got in, but we know that the vector was the web app.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/6324a1ac-80b7-4f48-9389-999b45e64cf4.JSON
+
+130
+
+We also didn’t know how the break in was discovered, so that is marked as
+Unknown. We believe it is better to indicate that we don’t know than it is to
+speculate and go down that slippery slope of introducing possible scenarios
+rather than sticking to the facts that we do know.
+
+Defacement
+This case type used to be more popular than it has been recently. There was a
+time when people with the motive of ideology would hack into websites and use
+them for electronic graffiti. They would post their own views and generally
+wreak havoc on the website of the victim organization. It still happens, but it
+doesn’t get the attention it used to in the news media, which is a large source of
+our data breach reports.
+
+131
+
+Defacement cases typically do not involve an actual data compromise. The actors
+have been more concerned with writing on the walls about their favorite subjects
+than seeing if there is any data to steal. So when this case was coded up, you can
+see there is not even a Potentially violation of the data_disclosure field under
+Confidentiality. Integrity, however, is trampled. The variety of modify
+data is how we represent the actions of the attacker in changing the website. In
+this case, there is also disruption of the availability of the website for its intended
+purpose.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/8c8798f2999fd19330a30ca685fc31994351956b/
+data/JSON/validated/113894CF-3622-4EB1-B73E-FC9D1CBB958B.JSON
+
+132
+
+This case shows us the Other Fields discovery method of External; Actor
+disclosure. We see this whenever the action of the attacker draw attention to the
+incident. We also see this in ransomware cases, where there is typically a popup
+of some kind letting the victim know how to pay the person who is causing their
+systems to be encrypted.
+The actor in these is typically external of type Activist. Their motive is ideology—
+they’re doing this for their cause. The asset is typically a Server - web application.
+Their victims may have been targeted because of the ideology of the actor—it
+may be that their business is in some way viewed as related to the causes the
+actor is championing or vilifying. It may also be that they simply
+were vulnerable to something the actor knew how to exploit. However, we also
+have seen a lot of cases where they just do it for the lulz, in which case, it would
+be coded as “fun.” The event chain is two steps. First they hack into the web
+server, violating the integrity by changing the data on the site. Then they caused
+the availability interruption.
+
+DDoS
+A case where we don’t have a breach, but we have a security incident is the
+Denial of Service (DoS), or it’s big brother, the Distributed Denial of Service
+(DDoS) attack. This is where the asset is flooded with so much bogus traffic that
+it cannot perform the duties assigned to it for legitimate traffic. This is frequently
+employed by activists, but is also common in Asia between gambling website
+vendors. In our cases, it is the former we look to for an example of coding this
+kind of case.
+“Anonymous DDoS Attack Against Israel Leverages Botnet Network.”
+
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/data/
+JSON/validated/FFB73B02-30B8-475E-BD42-706476387A03.JSON
+
+133
+
+These cases are rarely breaches (although they can happen as smoke screens for
+someone trying to get in amongst the noise), and are largely just availability
+violations for the duration of the attack.
+The variety is interruption, for the duration of the attack, or until the
+organization can mitigate it with various service offerings from vendors that
+handle these kinds of network attacks.
+The discovery method in this case is listed as unknown, but it is common that
+they are noticed by employees being alerted by monitoring their network
+infrastructure.
+The actor in this case is a member of the Anonymous hacking group, and was
+134
+
+carried out for ideology motivations. The action is hacking with a variety of DoS
+—which covers both the DoS and DDoS varieties. The vector is the web
+application, and they are typically attacked because they are a visible presence of
+the target on the internet.
+The event chain is just the one availability event.
+
+Malware Overview
+Our first example is a standard ransomware case. Until recently, these cases were
+treated as incidents, not confirmed data breaches, unless there was a compelling
+reason to treat them otherwise. However, since November 2019, certain groups of
+ransomware attackers have changed their tactics to take a copy of the data prior
+to triggering their encryption routine and then using the threat of data exposure
+as leverage to encourage victims to meet their ransom demands. So we will show
+an example of a standard ransomware case, as well as a case where data
+confidentiality has been confirmed to be compromised.
+
+Ransomware
+For Ransomware cases, we have a decision to make: was there a data breach or
+just the malware infection? We have split the two case types out to show how
+both should be handled. In general, if there is no indication of a confirmed
+compromise of the confidentiality aspect of the data, then the case should be
+coded as not being a data breach, but just a security incident.
+
+Ransomware with no confirmed breach
+Ransomware has been a popular money maker for bad guys on the internet.
+There is frequently a social action that starts it off, but frequently, we can’t
+
+135
+
+confirm that. The malware has to make it onto the system somehow though. So
+to account for that in our event chain and in the actions, we code an unknown
+event to represent the malware getting onto the systems.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/96159000ba2caf932ef1ca85d87888ce16bab979/
+data/JSON/validated/abb2f122-4c3f-4249-a839-02e1f9a1c7d9.JSON
+
+The actor got the malware on the system, but what else did they do while they
+were there? Did they view any of the data on the system? Maybe. So we list
+data_disclosure as Potentially to account for this possibility. In the United States,
+the department of Health and Human Services (HHS) has given guidance that
+organizations experiencing a ransomware event should treat the case as though
+
+136
+
+confidentiality has been compromised, and report it as such. So in Healthcare
+organizations, you see a high instance of ransomware cases being reported as
+breaches.
+Ransomware cases are coded as financially motivated, since they’re asking for
+money to decrypt the data. The external actors are coded as organized crime, as
+they have a process and are organized in the way they follow it.
+As mentioned above, we have an unknown action, and a malware action to
+account for how the malware got on the system. The variety in this case is a file
+server.
+So looking at the event chain, you can see our unknown action of gaining system
+access, followed by the software installation (integrity violation) and then the
+malware is triggered, and the data is encrypted (availability violation). In this
+way, we attribute an event to each attribute that is compromised.
+
+Ransomware with data breach
+As we mentioned, the threat actors changed their tactics some time ago, and now the
+preferred attack seems to be to take a copy prior to encryption and use it for leverage
+against their victims. Some call this “double extortion” as they may be invited to
+provide a ransom for decryption and another for not releasing or selling the data.
+Either way, it has become very popular.
+
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/12ef8409-22b2-44e0-8c6f-6d71c557ced0.JSON
+
+137
+
+For the Actor, these are external actors, with financial motivation. The action shows the
+unknown action that led to the malware installation. The variety in this case was also a
+file server.
+Note the event chain is more complex in this case. First we have our unknown action
+that led to system access. Could it be phishing? Could it be hacking? Yes, it could be lots
+of things, but since we don’t know for certain what it was, this unknown action is our
+placeholder. This is followed by the installation of the ransomware. There is a step
+where the data is copied off, and then the actor triggers the encryption process.
+
+Mining Cryptocurrency
+While ransomware is getting all the headlines these days, there are other kinds of
+malware encountered by those investigating security incidents and breaches.
+One such example is the cryptocurrency miner. In this case, a healthcare
+138
+
+company’s Electronic Health Records (EHR) system was hacked and this type of
+malware was deposited by the actor in the hopes of going unnoticed.
+“On November 27, 2017, we received a security incident report from our EMR
+system vendor indicating that unauthorized software had been installed on the
+server the vendor supports on our behalf. The unauthorized software was
+installed to generate digital currency, more commonly known as
+“cryptocurrency.”
+Although the hospital’s investigation is ongoing, they believe that an
+unauthorized individual accessed the server housing the EMR system to inject
+the software. The goal of the attack did not appear to be the acquisition or
+exfiltration of patients’ personally identifiable information or protected health
+information, and the hospital has no evidence that PII or PHI was acquired or
+viewed. But as is the case so often, they could not definitively prove that there
+was no access or viewing, and so, they must notify patients.
+Information contained on the affected server included demographic information
+such as patient names, addresses, dates of birth, and Social Security numbers,
+clinical information such as diagnosis and treatment information, and other
+information such as insurance billing information.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/3164b8b6316587fa911be8e4ca32f23237208109/data/
+JSON/validated/6335666d-8c9d-42d3-9b6c-d3b5cbc9bdde.JSON
+
+139
+
+We coded this one as potentially at-risk for confidentiality breach, based on the
+article indicating they couldn’t be sure the data wasn’t taken. The variety is of
+course medical records, given the nature of an EHR. While personal information
+such as Social Security numbers were also mentioned, we consider the main data
+type here as Medical.
+The Integrity section is interesting, first we have the expected software
+installation of the malware. But then we have another selection of repurpose—we
+use this when the intended use of the system is subverted for the cause of the
+bad actor. In this case, they repurposed the database to mine their
+cryptocurrency. We have also seen spammers start using email servers as their
+personal spamming systems. The repurpose selection allows us to account for
+this re-use.
+There was no availability loss, although some may argue that there is system
+
+140
+
+performance degradation when the miner is running. Since the article didn’t
+mention anything about that, we will not make that assumption.
+The articles indicate that the EHR vendor, who manages the system for the
+hospital, discovered the attack. Unfortunately, they didn’t indicate how they
+found out past that, so we mark it as Partner, Unknown.
+The Actor is external, with an obvious financial motivation. There was no
+indication they were in any way affiliated with the hospital. The Actions are first
+an unknown hacking action that got them access to the EHR system, and then the
+installation and activation of the malware. The Asset targeted, as we mentioned
+before, was their records database.
+The event chain is the three events—one unknown hacking, one malware
+installation and then the malware activation to account for the repurposing of the
+asset to the actor’s benefit.
+This kind of case doesn’t vary all that much from a ransomware case, but we
+wanted to show you a different kind of malware attack to give you that example.
+
+Misuse
+A trusted internal actor can wreak serious havoc on an organization’s network
+and systems by misusing the access that has been granted to them just to get
+their job done. For most of these cases, it is just one person who, for whatever
+reason, has gone rogue and starts pulling down data for nefarious purposes. Our
+example here is a bit unusual, in that is wasn’t so much a case of an
+employee who stole data to take to another company, or someone who wanted to
+otherwise monetize their access. In this case, it was used for political gain.
+“A former VA employee just pled guilty for computer fraud in an illegal scheme
+to access the medical records of a veteran running for Congress in an alleged
+smear campaign.”
+
+141
+
+The employee was motivated to take pictures of medical records and share them
+with the someone who could use them against a political opponent.
+“One of the victims in question, Richard Ojeda (pictured above), is a retired
+Army Major who served three tours to Iraq and Afghanistan. At the time of the
+computer fraud, Ojeda was running for Congress while serving as a state
+lawmaker in West Virginia. A former VA employee illegally accessed the
+veteran’s medical records, took photos of them, and shared those with a third
+party during the campaign.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/
+a98bbdb01820eacaeef24e76f41e30c322b252bfdata/JSON/validated/68e374d7d6cf-44c7-8137-a480ee99f5e6.JSON
+
+142
+
+So while most of this case is fairly straightforward in terms of coding,
+confidentiality was violated, the actor was internal, the action was privilege
+abuse, we have one thing here that we don’t often talk about—whether the attack
+was targeted or opportunistic. This is something that we have debates on our
+team on a regular basis, because the line between them can be hard to determine.
+The attack here was clearly targeting one specific patient. The actor used their
+access not against hundreds of records, but against just this one. So we mark this
+as a targeted attack.
+Much more frequently, these insider attacks are a matter of opportunity. They
+have all this access to data, and they use it to then steal the data. They didn’t get
+the job with the goal of gaining access to the data, although we have seen that on
+rare occasions. But because they used their access against that one specific target,
+the deliberate intent is sufficient to call this a targeted attack.
+Multiple actors can also be involved in Misuse breaches, and for that, we have a
+case in the Coding Multiple Actors/Actions section.
+
+Physical
+Physical attacks are what they sound like—someone had hands on the hardware.
+Whether it is affixing a skimmer to a gas pump or ATM, or outright stealing an
+asset, nothing trumps having physical access to a device.
+We will cover these two physical actions, as they are our most common Physical
+action types. The full list is as follows:
+Assault
+Sabotage
+Snooping
+Surveillance
+Tampering
+Theft
+Wiretapping
+
+143
+
+Other
+Unknown
+We rarely see the other varieties in this Action category, but if you encounter
+them, you’re ready to record them in VERIS.
+Tampering
+This is the case diagram we looked at earlier in this document, so it should look
+familiar.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/13d9469f-5040-4fe9-a047-e7fb48cc67c8.JSON
+
+144
+
+One common mistake when coding this kind of case (whether it is an ATM, a gas
+pump or a point of sale device) is to forget to include the integrity violation.
+When actors affix hardware onto these systems, you are seeing hardware
+tampering. So in addition to the confidentiality compromise of the data, you
+need to account for the fact that the hardware has been changed by the actor.
+The actor is most commonly external in these cases, usually organized crime.
+A word on that—we do not mean the mafia when we say organized crime. We
+mean this is a criminal with a method they reuse time and again on multiple
+victims. They have a process and they work it. They are always financially
+motivated. The action is a physical action with a variety of skimmer. The asset is
+
+145
+
+a gas terminal.
+The event chain is two-step to account for both the attributes mentioned. First is
+the integrity violation of attaching the skimmer to the ATM. The second event is
+when the data is siphoned off.
+
+Theft
+People steal stuff, including stuff with data on it. Laptops are a favorite target,
+and there are still a number of organizations that haven’t gotten the “encrypt all
+the portable things” memo. This case is one of them.
+“Dr. Olartino Dyoco sent data breach notification letters to patients after certain
+information was potentially exposed following an office break-in. Dyoco noticed
+on June 2, 2015, that his office had been burglarized, according to a copy of the
+breach notification letter. Several computers were stolen, Dyoco reported,
+containing information such as patient names, dates of birth, telephone numbers,
+insurance numbers, treatment codes, and billing information.”
+Sadly, this entity got the encryption memo only after the risk was brought home
+by their office break-in.
+“The circumstances that resulted in this breach were unforeseeable, and Dr.
+Dyoco assures you that he has heightened procedures and safeguards to prevent
+a recurrence of this situation,” stated the letter, which was dated July 13, 2015.
+“He added levels of encryption to his computer systems, and advised his staff
+with regard to security training anything to avoid this situation in the future.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/C3F76200-3A77-4A27-8E9B-B7AD8FC35811.JSON
+
+146
+
+You may notice that we marked this case as data_disclosure “Potentially” rather
+than the definitive “Yes”. The stolen laptop is the classic case we use to illustrate
+the difference between a security incident and a confirmed data breach in the
+DBIR. To be a confirmed breach (and have data_disclosure marked “Yes”), there
+must be a confirmed compromise of the confidentiality aspect of the data. Since
+the victim organization no longer has custody of the laptop, that confirmation is
+very difficult to make for certain. The asset is protected with just a password,
+which leaves it in the “at-risk” category. Thus, this would not be a confirmed
+breach in our report.
+The Availability violation is Loss, because the organization no longer has access
+to the asset. Sometimes the notices indicate the asset is recovered after a period of
+time, and there is a duration field where you can record this value. Most of the
+147
+
+time, stolen devices are not reported as recovered, though.
+The Discovery method for this kind of event is the employee returning to the car
+(or office, etc.) and discovering the break-in. In the WebApp, we actually have a
+drop down value of “break-in discovered” to make it easy. This tends to be a
+rather quickly discovered type of incident, as evidence of broken windows and
+forced doors tend to be noticed rapidly.
+The Actor is an external, unaffiliated person with a financial motive (these cases
+usually see the device resold, and the data is rarely the target, but the motive
+doesn’t matter when you are required to report a breach). The Action is Physical
+with a variety of Theft. The Asset is the laptop or desktop(s) that were stolen.
+Since the sources do not specify whether these are desktops or laptops, we
+choose the parent “U - Desktop or laptop” as it is a parent of both “U - desktop”
+and “U - laptop”. We have such hierarchical fields in VERIS for just this reason.
+The event chain is a one-step diagram. It didn’t take many steps for the person
+who stole it to get the asset(s) and make off with them.
+
+Social
+Social actions, where the human is the target, have become so prevalent that
+there seems to be no escaping them. While phishing is the most prevalent, there
+are a more options for the enterprising social engineering actor to choose from.
+Here they are:
+Baiting
+Bribery
+Elicitation
+Extortion
+Forgery
+Influence
+Scam
+
+148
+
+Phishing
+Pretexting
+Propaganda
+Spam
+Unknown
+Other
+Social actions include bribery and phishing, but also less pleasant methods of
+gaining the assistance of reluctant participants—extortion and blackmail are also
+methods at the disposal of the unscrupulous person trying to get their way. They
+are frequently significant others or relatives of the employee, so that kind of
+relationship pressure can also be brought to bear.
+We will of course show a phishing example, but first we will visit Bribery, and
+what happens when someone outside your organization motivates someone
+inside it to do bad things.
+
+Bribery
+Far and away the most common social action in our dataset is phishing.
+However, there are other social actions we do see from time to time. Bribery is
+one of them, and here we have a case with internal and external actors, and a
+social action.
+“Two people have been charged with bribery offenses following an investigation
+into the suspected leak of confidential data by a former employee of LV to a
+claims management company. Aisha Elliot, aged 23 from Yeovil was charged
+with offering a bribe and Stephen Karl Oates, aged 26 of Bournemouth was
+charged with receiving a bribe. Oates was an employee working with LV at the
+time of the alleged offense and Elliott worked for a claims management
+company.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+
+149
+
+data/JSON/validated/774AD2E5-362A-4E7D-AD55-CBC1A35F13DA.JSON
+
+150
+
+This was an interesting case of collusion between two kinds of actors who
+worked together to steal data. Bribery is a social action that we don’t see in data
+breaches very often, but it does happen.
+The data disclosure was confirmed, and the data variety was personal
+information. The social action comes with an integrity violation of alter behavior.
+We usually see this with phishing attacks, but really any kind of social
+engineering action that causes a person to do something different is a candidate
+for this variety.
+We don’t know how the breach was discovered, unfortunately, and that would
+have been quite helpful, given how few of these collusion cases we see come to
+light.
+We have two Actors as mentioned above. The external actor and internal both
+have a financial motive. We don’t know much about either of them, so the
+internal actor is just marked as an end-user. There are two Actions as well—the
+social action of the external actor offering a bribe to the employee of LV, and the
+subsequent misuse of their access (privilege abuse) by the employee to steal data
+and hand it over to the external actor.
+The Assets were both the Person in terms of the internal actor who accepted the
+bribe, and the database they stole the customer information from.
+The event chain is just those two actions of the social - bribery and the privilege
+abuse to get the data.
+
+Phishing
+The most common social action by far is phishing in our dataset. The attack is
+against a Person asset, which may sound strange, but we wanted to include the
+people whose behavior is successfully altered by the attacker in making them do
+something they aren’t supposed to do—whether it is giving up their credentials
+or paying an invoice to a thoughtfully provided new bank account.
+
+151
+
+“The University of North Carolina at Chapel Hill School of Medicine today
+announced it is mailing notification letters to an estimated 3,716 persons whose
+information may have been affected in a cyber phishing incident involving some
+School of Medicine email accounts.
+A leading independent forensic firm conducted a lengthy and extensive review
+that concluded on Sept. 13, 2019, and confirmed that an unauthorized third party
+gained access to several email accounts during the approximate timeframe of
+May 17, 2018, to June 18, 2018. This review confirmed that some patients’
+personal information was contained in the affected email accounts, possibly
+related to treatments received when they were seen by a UNC physician.”
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/26d0dde5-15a0-44c9-bec4-e9106c8dbb30.JSON
+
+152
+
+The confidentiality was of course compromised, and the data type was medical.
+The integrity violation of the person falling for the phish is accounted for as Alter
+behavior. The actor is external, with a variety of Organized crime, meaning the
+person attacking is organized and has a process they follow, not that we’re
+talking about the mafia. Their motive was financial.
+The assets listed are the mail server and the person who fell for the phish. Our
+event chain has the social action of influencing the person to alter their behavior,
+and then absconding with the data that was in the email accounts.
+In some cases, we see attackers also using this kind of access to change the rules
+on the email boxes to keep their activities from showing the victim what they are
+
+153
+
+doing. They may also turn around and send out further phishing or pretext
+emails from the compromised accounts. We show how to handle those in the
+other examples in this guide.
+
+Pretexting
+The Business Email Compromise is a lucrative social engineering attack that has
+increased in frequency in recent years. It is usually based on a pretext social
+action—when someone invents a plausible story to get the target to take the bait.
+“In October 2017, someone infiltrated the email of the president of Buresh
+Building Systems and used the account to direct an employee to wire money to
+an account of K Henao Elite Inc. at SunTrust Bank in Florida, according to court
+records.
+Company officials later determined the president’s email account had been
+accessed, and the perpetrators had set up systems within the account to hide the
+fraud-related messages when the president was using the account.”
+This turns out to be a fairly complex case. First we have the standard
+demographic info that we try to collect from all cases. We have a confidentiality
+violation with the stolen credentials from the executive from the first phishing.
+“The organization allegedly gained access to email accounts of business leaders
+through a “DocuSign” rouse — emails told users to sign into their accounts and
+reset their passwords. Then members of the group imitated the business officials,
+asking workers to wire money to bank accounts they controlled and then sending
+the proceeds overseas.”
+So they got the executive’s credentials via their DocuSign phish, and used them
+to get into the email server—that is our confidentiality violation. They then made
+changes to the email account’s rules to keep the executive from knowing their
+email account was being used to send further social attacks. They misrepresented
+themselves as the legitimate owner of the account, and they used a pretext to get
+
+154
+
+the employee in Finance to make a fraudulent transaction, sending them money
+to the account they controlled. So we have three integrity violations once they got
+the credentials.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/cc93a9b9-4350-4f90-bc46-6464c7c1fead.JSON .
+
+155
+
+We have a fair amount of information about the threat actor in this case, which is
+
+156
+
+somewhat rare. Usually we hear more about what happened in the course of the
+breach, but information about the perpetrator falls into the attribution problem.
+Here, since the case was being prosecuted, we have better data.
+“Henao is a native of Colombia who has been living in Port Saint Lucie, Florida, as a
+permanent resident. Authorities allege she was working for a criminal organization that
+operated in the fall of 2017 to defraud people throughout the United States.”
+
+While we aren’t showing all the details in the diagram in the interest of space for
+an already complex case, we can record all of it in the WebApp, so the JSON will
+reflect it. Here is an excerpt from the JSON:
+"actor": {
+"external": {
+"country": [
+"CO"
+],
+"motive": [
+"Financial"
+],
+"notes": "Karina Henao",
+"region": [
+"019005"
+],
+"variety": [
+"Organized crime"
+]
+}
+
+For the actions, there are basically three. First we have the original DocuSign
+phish, which is a social phishing attack targeting their CEO. Then we have the
+Hacking, Use of Stolen Credentials against their email infrastructure. Finally, the
+attacker pivots and sends out pretext emails masquerading as the CEO to have
+the money wire transferred.
+Our assets follow suit, with the email server as the technical target, and the two
+people who were social engineering victims.
+Finally, we go to our event chain—yes, three actions turned into six events. That
+takes into consideration the separate confidentiality and integrity violations, and
+splits them out individually. First we have the initial phish of the CEO. Then we
+
+157
+
+see the stolen credentials being used. Then they alter the email account’s rules
+and misrepresent themselves as the CEO. Finally, they get that pretext attack that
+leads to the fraudulent money transaction.
+
+Coding Multiple Actors/Actions
+When different types of actors get together, it never means good news for the
+victim organization. As with multiple actions, VERIS allows for multiple actors
+to be active in a breach. VERIS has three actor types: Internal, External and
+Partner. When we see multiple actor types, there is sometimes a social
+component where the external actor recruited an existing employee, or even sent
+someone into an organization with the goal of getting hired and having access to
+data. Partner actors may also be either the recruiter or recruited.
+
+Multiple Actor Misuse - When Collusion Comes Calling
+This case has an external actor recruiting internal actors at two
+telecommunications companies (yes, ours was one) to use their access to gain
+customer data, which they then put to use for fraud. Please note that this is
+coded based entirely on the public record sources in the GitHub Issue below.
+“Internal actors at Verizon & AT&T collaborated with external actors to misuse
+privileges and cause loss of confidentiality of 860 customer PII records along
+with the external parties being added to the customer accounts and purchase
+mobile phones.”
+Given that this is an attack against two different companies, and involving
+internal actors at two different companies, it would be coded as separate
+incidents in the data. If you think about it, they had to compromise the internal
+actors at both organizations, and then separately call their respective Customer
+Service departments and do their impersonation of the customer multiple times,
+
+158
+
+so it makes sense that it would be separate breach events.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/AD2CC5B5-D6B4-4B62-A5E4-8B6ED36677C2.JSON
+
+159
+
+160
+
+For this case, the Attributes of Confidentiality and Integrity are both violated.
+Confidentiality of customer’s personal information is stolen. The integrity
+violations begin with Alter behavior (to get them to collude with the outside
+actor), followed by misrepresentation when the external actors pretended to be
+the customer calling into Customer Service. Then we have modify data, as they
+added people to the customer’s accounts, and finally we have the fraudulent
+transactions as they order phones.
+The Discovery method is the customer, who later got a bill with the phone
+purchases against their account and reported the problem.
+As indicated, we have an external and an internal actor, both with a financial
+motive. We have three Actions, beginning with the social action that happened
+when the external actor recruited the internal actor to start the whole scheme in
+motion. The next action is the insider misusing their access to steal data. Then we
+have the external actor taking that information and contacting the Call Center
+and impersonating the customer.
+The Assets include both the employee who was recruited to participate in the
+incident, and the Call Center employee who was duped. The final asset is the
+customer records database where the information was originally kept.
+We have quite a complex event chain—six steps in all. The first event is the social
+action recruiting the employee of the company. Next we have that employee
+stealing data. Then we have the external actors social engineering Customer
+Service, pretending to be the customer. The perpetrators add extra people to the
+customer’s account, and then finally, they order new phones.
+So two actors, three actions and six steps in the event chain. Despite a pretty
+complex case, we were able to break down the elements and record them using
+VERIS without too much difficulty.
+
+161
+
+Hacking & Malware
+This example is a case where a financially motivated actor (Fin7) hacked into the
+point of sale server and installed malware to steal customer payment data. Here
+is the synopsis from one of the articles we cite in the record.
+“Burgerville has revealed a data breach impacting the chain which may have led
+to the theft of detailed credit card information belonging to customers. Malware
+was installed on Burgerville systems in order to scrape and steal customer data.
+Burgerville says that customer credit and debit card information, including
+names, card numbers, expiration dates, and CVV security numbers were
+stolen.The data breach has been attributed to Fin7, also known as Carbanak
+Group, an international hacking ring which has successfully launched
+cyberattacks against at least
+100 US companies.”
+Confidentiality was confirmed compromised—they did in fact get an
+undisclosed number of customer credit/debit cards from this breach. Integrity
+was clearly violated, given the software installation of the malware.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/81cc3cb9-6dad-49b3-a801-48e70679d9db.JSON
+
+162
+
+The breach was not discovered until Law Enforcement notified the victim
+organization. As is the case with externally discovered breaches, this one went on
+a long time—the attackers were in their systems a year before they were notified
+of the breach.
+An external, financially motivated organized crime actor means they will have a
+process to get in and then monetize the data. We have an unknown variety of
+hacking. This was followed by installing the malware that was able to steal the
+data and send it along to the adversary. The asset is the Point of Sale controller
+server.
+The event chain is a bit more complex, with three events. The unknown hacking
+action is the first event. This is followed by the integrity violation of installing the
+163
+
+malware, and then the confidentiality violation of stealing the payment card
+information.
+
+Social - Hacking - Malware
+Sometimes the attackers pull out all the stops and use multiple actions in cases.
+This case shows how to code up a case that includes three different actions:
+social, hacking and malware for the trifecta of complex breaches. “The
+ransomware malware attack came in as an attachment and cleaned our music
+libraries and ad spots that we had stored on hard-drives,” Durham Radio sales
+VP Steve Macaulay said in a phone interview on the weekend.
+At no point were the station’s computers hacked, just a harmless looking
+attachment from a known email address that turned out to be a trojan intruder
+that wiped drive sectors on the company’s hard-drive. To prevent this occurring
+again, Durham now doubles up all of its information and secures it on a thirdparty cloud service. “
+While it is nice to see a company able to recover quickly from this kind of attack,
+many organizations are not so well prepared.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/dc189ccd-8d88-4c86-a0f0-974dbbf80b6d.JSON
+
+164
+
+While the case looks pretty complex, coding it up is just a matter of going down
+the line and recording the values for all our boxes. Confidentiality was a
+confirmed breach, because they got the credentials. Integrity was both Alter
+behavior for the phish, and software installation for the ransomware. Availability
+took a hit as well, with obscuration once the encryption was triggered, and our
+new addition of interruption to account for the time when the data was
+unavailable..
+As with most ransomware cases, the discovery method is Actor disclosure, when
+the ransom note pops up on the screen.
+The Actor was External, Organized crime with a Financial motive. The Actions
+include Social: Phishing, Hacking: Use of stolen credentials, and Malware:
+Ransomware with a vector of email attachment. The Assets involved were the
+
+165
+
+Desktop or Laptop the initial phish came to and the associated person, then the
+fileserver, which the ransomware started encrypting almost immediately.
+The event chain has four steps, accounting for the initial phish and subsequent
+use of the stolen credentials, and then the malware is dropped and encryption
+triggered.
+So while this is a fairly complex case, involving multiple actions and assets, once
+you break it down, it isn’t so hard to code.
+
+Third Party or Supply Chain Breaches
+Once you have been coding publicly disclosed data breaches for a while, you will
+start to see cases where it is a widely used third party service that was
+compromised, resulting in all of their customers having to report data breaches.
+Rather than coding each of those customers as a separate breach, we handle them
+a bit differently. We code them up from the partner’s perspective rather than the
+customer’s perspective, and we do that for one very important reason: we don’t
+want to artificially inflate the data breach count for that time period. If you think
+about it, this is really just one actual breach—this isn’t attackers having to go
+from company to company and breaking into each of their systems/bypassing
+each of their infrastructure controls one-by-one. No, this is one actor breaching
+one infrastructure, and scoring data on lots of different organizations in a
+business-to-business relationship. So to avoid making the problem bigger and
+more complex than it really is (and it is already complicated enough, thank you
+very much), we code it from the perspective of the partner, and list all of the
+organizations that were affected in the Secondary Victim_ID field, along with
+their industries.
+
+Third party breach vs. Supply Chain
+In December 2020, Reuters reported on the SolarWinds data breach, and people
+
+166
+
+began talking about Software Supply Chain and the risks illustrated in the
+compromise of infrastructure that is widely used across industries. For the
+purposes of the VERIS Coding Style Guide, we define these two terms as follows:
+Third party data breach: data is compromised of others, but not their
+infrastructure.
+Supply chain data breach: downstream infrastructure is compromised in
+addition to the data of the customers of the victim organization. Subsequent
+action against the initial victim’s customers is taken by the adversary. Supply
+chain: partner is the vector; third party: partner is the data type compromised.
+
+Example 1: Click2Gov/Superion Third Party breach
+This case has become something of a legend in the VCDB dataset. The vendor
+serves a large number of government entities—particularly at the city level. They
+are used by a variety of city agencies to handle payment card processing and
+records keeping for the city constituents to access the services offered by the
+municipality. When this company was hacked, we first saw a wave of their
+customers announcing the breach.
+Usually for these partner breaches, we hold off on coding the case until there has
+been sufficient time for the affected customer organizations to all report the
+breach and notify their own customers that their data was compromised. This
+case is a bit of a puzzle to us, because while there was that first expected wave of
+notifications, after they had died down and we thought it was about time to code
+the case up, suddenly a second wave of notices hit. Was this the same breach
+only they found more victims? Did they take a phased approach to their
+notifications? We don’t really know.
+But wait, there’s more. After that second wave died down finally, and we dared
+to hope we could code this up (we did actually code the first wave which is why
+you have a JSON record in our diagram title), suddenly there started up a new
+round of notices. Now we’re waiting some more to code the second wave and
+
+167
+
+some day we will get the third wave coded too. Given the separation of
+time, we are inclined to call this a separate set of incidents, but we as a team will
+have to argue that one out before we code it.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/e6a96f98-8fd7-43c2-9f03-216f3f60a6f2.JSON
+
+You can see in the diagram that this is under the Victim Demographics section,
+and if you use the VERIS WebApp, you will see under the Victim section, once
+you expand it out, and scroll down a bit, there is a secondary subsection. Under
+that, we have VICTIM_ID, and an add button. The form defaults to just one box,
+but you can add as many as you need to.
+
+168
+
+We list the victim organizations, and then their NAICS code, separated by a
+semi colon. This at least allows us to have those two pieces of information per
+victim organization. When viewed in the JSON file (after it has been generated
+by the WebApp), you can see how it organizes the secondary victims list separate
+from the partner who was compromised.
+"victim": {
+"country": [
+"US"
+],
+"region": [
+"019021"
+],
+"secondary": {
+"victim_id": [
+"City of Oxnard;921110",
+"City of Wellington;921110",
+"Midwest City;921110",
+"City of Medford;921110",
+"City of San Angelo;921110",
+"City of Goodyear;921110",
+"City of Thousand Oaks;921110",
+"City of Fond du Lac;921110",
+"City of Beaumont;921110",
+"City of Tyler;921110",
+"City of St. Petersburg;921110",
+"City of Lake Worth;921110",
+"City of Indio;921110",
+"City of Bakersfield;921110",
+"City of Waco;921110",
+"City of Midland;921110",
+"City of Bozeman;921110",
+"Bossier City;921110",
+"City of Ames;921110",
+"City of Topeka;921110",
+"City of ;921110",
+"City of Saint John;921110",
+"Hanover county;921110",
+"City of Pompano;921110"
+]
+},
+"victim_id": "Superion (Click2Gov) Now DBA Central Square
+Technologies",
+"employee_count": "1001 to 10000",
+"industry": "54151",
+"state": "FL"
+
+169
+
+},
+
+One benefit to handling the data this way is that when you are looking for the
+large partner (some call this large supply chain breaches) breaches, you look for
+those cases where there are values in the secondary victim_id field. Otherwise, it
+would be very difficult to isolate these kinds of cases in a VERIS dataset. This is
+largely because VERIS is an actor centric framework—so it focuses on who is
+performing the actions that led to the compromise. Even though it was data held
+by a partner, it was not a partner actor causing this breach directly.
+
+Example 2: Bizmatics Third Party breach
+Many of the cases where a large partner is compromised, affecting many
+secondary organizational victims, involve hacking of one form or another. In our
+next example, we have the Bizmatics, Inc. case. They provide electronic health
+records software to medical customers of various types.
+"On March 30, 2016, Integrated Health Solutions, P.C. was informed by
+Bizmatics, Inc. ("Bizmatics"), our electronic medical records service provider, that
+it experienced unauthorized access to its records which may have included our
+patient records. This information may include name, address, social security
+number and health visit information.”
+Again, this involved a number of organizations, and the records were entered
+into VCDB separately. After it became apparent they were really all victims of the
+same partner breach, they were consolidated into one JSON record, coded from
+the partner organization’s perspective.
+Here is the link to the JSON file in the VCDB GitHub repository: https://
+github.com/vz-risk/VCDB/blob/a98bbdb01820eacaeef24e76f41e30c322b252bf/
+data/JSON/validated/DE2012E6-2338-4D05-84F8-3CD0952108BA.JSON .
+
+170
+
+I have listed a sampling of the organizational victims under the Secondary victim
+ID field. There were many more. The data disclosure was of medical information,
+given that this is a medical records system that is unsurprising. There was
+software installation, which is an integrity violation as well.
+There was no indication in the references as to how this was discovered,
+unfortunately, so that is listed as Unknown.
+The actor is external to the organization that was hacked—remember we do not
+consider this a partner actor breach—the person performing the actions was
+external to the victim organization. We don’t know anything about their variety
+or motivation, so both are listed as unknowns.
+
+171
+
+The actions were hacking and malware. Not much detail is available—a common
+problem when we must rely on what interests the reporters covering the story,
+and the tidbits of information that the impacted organization provide in their
+notifications. So it is unknown hacking and unknown malware. We classify the
+electronic medical records system as a type of database for the Asset.
+The event chain is three events—the unknown hacking action that got the
+adversary access to the server, and then the installation of the malware and
+subsequent theft of the data.
+
+Conclusion
+You’ve made it to the end, and now hopefully (if we’ve done our job), you feel
+much more confident in your ability to code cases using VERIS and potentially
+the VERIS WebApp.
+Thank you for reading our Coding Style Guide
+While this is a living document and will continue to evolve with the VERIS
+Framework, we hope it has been useful for people who are coding cases right
+now. If you have comments or questions, please feel free to email the DBIR team
+at DBIR@verizon.com and we will do our best to help out.
+We would also love to hear how you are using VERIS in your own environments.
+Real world use cases are always of interest to us, and help us to understand how
+VERIS needs to evolve over time to remain relevant to people who do incident
+response and need to record these kinds of metrics.
+Finally, if you would like to share data with us (pre-anonymized, of course),
+please reach out to us and let us know. The research we do is dependent on
+people like you sharing data for the greater good of the Information Security
+community.
+
+172
+
+
