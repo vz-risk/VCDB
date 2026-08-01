@@ -152,12 +152,12 @@ def lint(inst):
     if 'malware' in action and 'Software installation' not in integ:
         errs.append("action.malware present but attribute.integrity.variety lacks 'Software installation'")
 
-    # (13) ransomware => integrity "Interruption" AND availability "Obscuration"
+    # (13) ransomware => availability "Obscuration" AND "Interruption"
     if 'Ransomware' in mal_variety:
-        if 'Interruption' not in integ:
-            errs.append("action.malware.variety includes 'Ransomware' but attribute.integrity.variety lacks 'Interruption'")
         if 'Obscuration' not in avail:
             errs.append("action.malware.variety includes 'Ransomware' but attribute.availability.variety lacks 'Obscuration'")
+        if 'Interruption' not in avail:
+            errs.append("action.malware.variety includes 'Ransomware' but attribute.availability.variety lacks 'Interruption'")
 
     # (14) SQLi => integrity "Repurpose"
     if 'SQLi' in action.get('hacking', {}).get('variety', []) and 'Repurpose' not in integ:

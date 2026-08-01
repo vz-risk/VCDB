@@ -1,6 +1,6 @@
 ---
 name: encode-veris-incident
-version: "20260731T234508Z"
+version: "20260801T010623Z"
 description: Encode a GitHub issue describing a data breach into a VERIS-schema JSON incident for VCDB. Invoke with a vz-risk/VCDB issue URL (e.g. https://github.com/vz-risk/VCDB/issues/23372) and an optional analyst GitHub handle. Reads the issue and its linked sources, finds an additional independent source via web search, maps everything to the VERIS schema (vcdb-merged.json), and writes a validated JSON file to data/json/submitted/.
 ---
 
@@ -9,7 +9,7 @@ description: Encode a GitHub issue describing a data breach into a VERIS-schema 
 You turn a GitHub issue that describes a data breach into one VERIS-schema JSON
 object and write it to `data/json/submitted/<UUID>.json`.
 
-**Skill version: `20260731T234508Z`.** This is the skill's revision timestamp
+**Skill version: `20260801T010623Z`.** This is the skill's revision timestamp
 (UTC date + Zulu time, `YYYYMMDDThhmmssZ`). Claude skills have no automatic
 version number, so this string is the version of record. Bump it whenever you
 edit this skill to the current UTC date+time —
@@ -84,6 +84,18 @@ which skill version — and that AI — produced each record.
    - Every **URL / reference** mentioned in the issue body and comments.
 2. **Visit the linked URLs** with WebFetch and read them for incident detail
    (who, what, how, what data, how many records, when, victim org & size).
+   **Some sources are PDFs, not HTML** — state AG breach-notification filings
+   (e.g. `oag.ca.gov/...`) are especially common. `WebFetch` frequently cannot
+   parse these (it may report the PDF as corrupted/malformed even when it
+   renders fine in a normal reader). When a source URL is or links to a PDF,
+   download it and extract text locally instead (e.g. `curl` the URL, then
+   `pdftotext -layout <file> -`) rather than giving up on that source. Also
+   note: many state AG notice PDFs are **template letters** with unfilled
+   placeholder tokens (e.g. `<<b2b_text_2 (Data Elements)>>`) — a placeholder
+   token is not a source statement that the field is empty/unknown; it just
+   means this particular filing didn't fill in the data-elements list in the
+   copy you're reading. Don't treat it as contradicting a more specific
+   narrative-article source.
 3. **Find an additional independent source — but only when the issue needs it.**
    If the issue body/comments already contain multiple corroborating source
    URLs, that's sufficient sourcing; searching for one more is optional (still
@@ -169,10 +181,15 @@ in `plus.analyst_notes`). Cover at minimum the schema's required top-level keys:
   (e.g. "they didn't patch"). Only code overt actions that directly caused the
   breach. Multiple actors require actual collusion with intent.
 - **Motive may be inferred** from the nature of the attack even when the actor is
-  unknown — mass data theft / ransom demands ⇒ `motive: ["Financial"]`. A
-  process-driven, repeat-MO crew (ransomware/extortion gangs) ⇒
-  `variety: ["Organized crime"]` (this does NOT mean the mafia). Errors and
-  force-majeure ⇒ `motive: ["NA"]`.
+  unknown, but only when a concrete monetization signal is present — a
+  ransom/extortion demand, data listed for sale or auction, confirmed fraud
+  following the breach, or a named financially-motivated actor/group. Do **not**
+  infer `Financial` from the mere fact that valuable data (PII, SSNs, financial
+  records) was taken — theft of sensitive data alone is not evidence of *why* it
+  was taken. When the actor is unknown and no monetization signal exists, code
+  `motive: ["Unknown"]`. A process-driven, repeat-MO crew (ransomware/extortion
+  gangs) ⇒ `variety: ["Organized crime"]` (this does NOT mean the mafia). Errors
+  and force-majeure ⇒ `motive: ["NA"]`.
 - **`data_disclosure` is graded:** `"Yes"` when confidentiality is *confirmed*
   compromised — this includes not just directly-observed viewing/copying but
   also **confirmed unauthorized access to a live system/account that holds the
@@ -297,13 +314,13 @@ The `value_chain`-based rules in `rules.py` (Phishing/C2/Ransomware/Email →
 `value_chain.*`) are intentionally **not** ported, since `value_chain` is
 deprecated for VCDB coding (see Step 5, check 5).
 
-- **Ransomware → both an integrity and an availability impact.** Whenever
-  `action.malware.variety` includes `"Ransomware"`, also code
-  `attribute.integrity.variety` to include `"Interruption"` (the ransomware
-  altered/interrupted normal system operation) **and**
-  `attribute.availability.variety` to include `"Obscuration"` (the data was
-  rendered inaccessible/encrypted, not merely lost) — in addition to whatever
-  else the malware achieved.
+- **Ransomware → an availability impact covering both encryption and outage.**
+  Whenever `action.malware.variety` includes `"Ransomware"`, code
+  `attribute.availability.variety` to include **both** `"Obscuration"` (the data
+  was rendered inaccessible/encrypted) **and** `"Interruption"` (normal
+  system/service operation was disrupted). Separately, per the generic malware
+  rule below, `attribute.integrity.variety` should still include `"Software
+  installation"` for the ransomware payload itself.
 - **Malware → integrity "Software installation".** Any `action.malware` block
   implies `attribute.integrity.variety` includes `"Software installation"`.
 - **SQLi → integrity "Repurpose".** `action.hacking.variety` including
@@ -478,7 +495,7 @@ about data gaps — only ask for the analyst handle if it is missing.
   1. `Closes <issue URL>` — the full GitHub issue URL this record encodes
      (e.g. `Closes https://github.com/vz-risk/VCDB/issues/23372`), so a reviewer
      can copy/paste it to check the work against the source issue.
-  2. `Encoded by AI — encode-veris-incident skill version 20260731T234508Z`
+  2. `Encoded by AI — encode-veris-incident skill version 20260801T010623Z`
      (use the **Skill version** string from the top of this file verbatim), so
      reviewers know the record was AI-generated and by which skill revision.
 
