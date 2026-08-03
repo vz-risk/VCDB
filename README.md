@@ -8,6 +8,35 @@ While there are a handful of efforts to capture security incidents that are publ
 If you want to get involved in this project, we have directions in the wiki for this repo.  If you are new to GitHub, it is the book icon to the top of this page section.
 
 
+# Claude Code
+
+This repo includes support for [Claude Code](https://claude.com/claude-code), Anthropic's CLI coding agent, to help with both general repo work and encoding new incidents:
+
+- **`CLAUDE.md`** (repo root) — background Claude Code reads automatically at the start of every session: the repo's layout, the `submitted` / `validated` / `overridden` incident pipeline, common commands, and key conventions/gotchas.
+- **`.claude/skills/encode-veris-incident/`** — a Claude Code *skill*: a packaged, repeatable procedure for turning a GitHub issue that describes a data breach into a VERIS-schema incident JSON file.
+
+## The `encode-veris-incident` skill
+
+Given a `vz-risk/VCDB` issue number or URL, the skill will:
+
+1. Read the issue and any linked sources, and search for an additional independent source to corroborate the breach.
+2. Map the facts to the VERIS schema (`vcdb-merged.json`), following the VERIS Coding Style Guide and this repo's coding conventions (included as reference material for the skill).
+3. Run a semantic lint plus JSON-schema validation to catch missing or inconsistent fields before the file is written.
+4. Write the result to `data/json/submitted/<UUID>.json`, ready for the normal validation pipeline described in `CLAUDE.md`.
+
+Every incident it produces is tagged in `plus.analyst_notes` with the skill's version and an "Encoded by AI" attribution, so reviewers always know which skill revision (and which AI) produced a given record.
+
+### Example prompt
+
+Open this repo in Claude Code and run something like:
+
+```
+Use the encode-veris-incident skill to encode issue #23572 into a VCDB incident. My GitHub handle is <your-github-handle>.
+```
+
+Claude Code will gather the sources, draft the VERIS JSON, validate it, and report back the file it wrote along with anything it left as `Unknown` so you can review and refine before it moves through the normal pipeline.
+
+
 # WARNING ON SAMPLING  
 
 Most VCDB issues are chosen randomly (with a preferences for those in the last year), however we specifically select healthcare issues and some priority incidents.  Incidents not chosen randomly can be identified by the value of 'plus.sub_source'.  It will be 'phidbr' for healthcare issues and 'priority' for priority issues.  For those wishing to normalize out non-random selection, here is the issue composition as of Jan 13, 2018 to normalize the actuall incidents to:
