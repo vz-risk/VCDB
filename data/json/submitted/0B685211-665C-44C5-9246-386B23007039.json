@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "CMD Organization"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "0B685211-665C-44C5-9246-386B23007039",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23571\nEncoded by AI — encode-veris-incident skill version 20260713T202114Z\n\nSouthern Design RV, a caravan/RV dealership in Ballarat (Wendouree), Victoria, Australia, was listed on the leak site of the extortion crew 'CMD Organization' (aka Cmdorganization) around 20 June 2026. The group claimed to have stolen customer data — names, addresses, emails, phone numbers, and caravan purchase details — and launched a Bitcoin auction for it with a 5 BTC starting price. cyberdaily.au reported a data sample was posted; Southern Design RV declined to comment.\n\nCoding decisions / assumptions:\n- ATTACKER-SOURCED / NOT VICTIM-CONFIRMED: the breach and data theft are claimed by CMD Organization (leak-site listing + auction + data sample); the victim declined comment. Per the skill's 'trust specific attacker-claimed details' rule, coded the claimed specifics rather than Unknown, and noted provenance here.\n- Action = Hacking (per issue template 'Hacking-ext-extortion'; 'server hacked, data stolen'). variety = Unknown, vector = Unknown (method not disclosed; Beazley Security speculated 'possibly leveraging initial access brokers' but that is not confirmed, so not coded as stolen creds). result = Infiltrate + Exfiltrate.\n- Action = Social / Extortion: CMD ran a public Bitcoin auction (threat to sell/publish the data). Per skill, this also requires attribute.integrity 'Alter behavior' and a People asset (added 'P - Unknown'); target and vector coded Unknown (no source states who was pressured or how the demand was delivered beyond the leak-site post).\n- actor.external.variety = Organized crime (process-driven extortion crew), motive = Financial, name = CMD Organization, country = Unknown.\n- asset.variety = S - Database (customer records: names/addresses/emails/phones/purchase details); hosting Unknown (ransomware.live detected only Microsoft 365 for email, not the breached data store). Added 'P - Unknown' per the social-action rule.\n- attribute.confidentiality.data_disclosure = Yes: a data sample was posted, corroborating actual exfiltration (attacker-claimed). data = Personal. state = Stored. data_total omitted (no record count disclosed).\n- plus.attribute.confidentiality.data_abuse = 'Yes - Data ransomed': the stolen data is being auctioned/sold (ransom/leak-site component).\n- discovery_method = external / Actor disclosure (the incident is known only because CMD publicized it).\n- timeline.incident = 2026-06 (month-level; the leak-site post/estimated attack date was ~20 June 2026, the earliest known reference — actual initial-access date is undisclosed). Note: 'CMD Organization first observed March 2026' refers to the group's emergence, not this attack. dbir_year = 2027 (June 2026 in the Nov 1 2025 - Oct 31 2026 window).\n- victim.industry = 4411 (per issue metadata; label 'NAICS 44-45' Retail Trade). employee_count = 11 to 100: ESTIMATE for a single-location regional dealership with a service department; no published headcount found.\n- confidence = Medium: actor named and reported by reputable security press (cyberdaily.au) plus a leak-site tracker (ransomware.live), but the breach is attacker-claimed/unconfirmed by the victim and the record count is unknown.\n\nSources consulted (per run override, no additional web search performed):\n- https://www.cyberdaily.au/security/13784-exclusive-victorian-rv-dealer-suffers-alleged-cyber-attack\n- https://ransomware.live/id/U291dGhlcm4gZGVzaWduIFJWQGNtZG9yZ2FuaXphdGlvbg==",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-07-14T21:20:13Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access to Southern Design RV systems (vector undisclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer data (names, contact details, purchase info) copied/exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Stolen data auctioned for extortion (5 BTC starting bid)"
+      }
+    ],
+    "github": "23571",
+    "master_id": "0B685211-665C-44C5-9246-386B23007039",
+    "modified": "2026-07-14T21:20:13Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cyberdaily.au/security/13784-exclusive-victorian-rv-dealer-suffers-alleged-cyber-attack; https://ransomware.live/id/U291dGhlcm4gZGVzaWduIFJWQGNtZG9yZ2FuaXphdGlvbg==",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Southern Design RV, a Ballarat, Victoria caravan/RV dealer, was listed on the CMD Organization extortion leak site around 20 June 2026. The group claimed to have stolen customer data (names, addresses, emails, phone numbers, purchase details) and launched a 5 BTC Bitcoin auction for it. The theft is attacker-claimed (a data sample was posted); the company declined to comment.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "4411",
+    "state": "VIC",
+    "victim_id": "Southern Design RV"
+  }
+}

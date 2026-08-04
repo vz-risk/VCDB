@@ -1,0 +1,102 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Executive"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "0090C11A-1761-42CC-B093-DE291F9F1F19",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23568\nEncoded by AI — encode-veris-incident skill version 20260713T202114Z\n\nMelbourne Football Club (AFL, 'Melbourne Demons') leadership disclosed personal and sensitive information about Sachi Dade, partner of retired player Steven May, across two incidents on 4-5 February 2026 and again during a Microsoft Teams meeting attended by ~15 people. The club acknowledged the disclosures were inappropriate and a serious invasion of privacy; the matter settled in Federal Court in June 2026 with a formal apology and commitment to privacy training/policy changes.\n\nCoding decisions / assumptions:\n- Coded as Misuse / Privilege abuse (per issue template tag 'Misuse-int-privabuse') by internal leadership who had legitimate access to the information and disclosed it inappropriately.\n- actor.internal.variety = Executive (the 'leadership team', incl. coach and football boss). motive = Unknown (sources do not state why the information was divulged).\n- action.misuse.vector = Physical access (in-person leadership meetings on 4-5 Feb); note a later disclosure occurred over a Microsoft Teams meeting, which is a remote channel — vector is somewhat mixed but the documented Feb 4-5 disclosures were in-person.\n- asset.variety = S - Unknown: the storage medium of the disclosed information is not specified in sources (verbally divulged in meetings; underlying record system unstated). cloud = Unknown.\n- attribute.confidentiality.data = Personal + Sensitive Personal ('personal and sensitive information' per club statement). state = Stored (default; encryption/medium status not stated). data_disclosure = Yes (confirmed divulged to ~15 people).\n- data_total = 1: one individual's information (Sachi Dade) was disclosed; the ~15 Teams attendees were recipients, not additional data subjects.\n- discovery_method = external / Other: the breach came to light through the affected individual (Ms Dade), who raised concerns and pursued Federal Court action; no closer enum fits the data subject.\n- timeline.incident = 2026-02-04 (begin date of the first disclosure). dbir_year = 2027 (Feb 2026 falls in the Nov 1 2025 - Oct 31 2026 window).\n- confidence = Medium: actor/action/attribute are well established from two reputable sources (official AFL.com.au notice and National Indigenous Times), but the asset and exact data specifics are vague.\n\nSources consulted (per run override, no additional web search performed):\n- https://www.afl.com.au/news/1550813/melbourne-demons-apologise-to-sachi-dade-partner-of-steven-may-for-privacy-breach\n- https://nit.com.au/30-06-2026/25090/demons-apologise-to-mays-partner-over-privacy-breaches",
+    "created": "2026-07-14T21:13:34Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal leadership disclosed an individual's personal/sensitive information (privilege abuse)"
+      }
+    ],
+    "github": "23568",
+    "master_id": "0090C11A-1761-42CC-B093-DE291F9F1F19",
+    "modified": "2026-07-14T21:13:34Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.afl.com.au/news/1550813/melbourne-demons-apologise-to-sachi-dade-partner-of-steven-may-for-privacy-breach; https://nit.com.au/30-06-2026/25090/demons-apologise-to-mays-partner-over-privacy-breaches",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Melbourne Football Club (AFL) leadership disclosed personal and sensitive information about Sachi Dade, partner of retired player Steven May, across two incidents on 4-5 February 2026 and during a Microsoft Teams meeting of ~15 people. The club acknowledged the disclosures as a serious invasion of privacy and settled in Federal Court in June 2026 with a formal apology and privacy-training commitments.",
+  "timeline": {
+    "incident": {
+      "day": 4,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "71",
+    "victim_id": "Melbourne Football Club"
+  }
+}
