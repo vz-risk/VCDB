@@ -1,0 +1,132 @@
+{
+  "action": {
+    "social": {
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "It review"
+      ]
+    }
+  },
+  "incident_id": "48ADB744-3FB8-4C3B-A65C-29D92D9761D4",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23772\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\n\nVictim: Child Care Resource Center, Inc. (CCRC), a California nonprofit that connects families with child care services and administers subsidized child-care programs, headquartered in Chatsworth, CA (serves the Los Angeles area).\n\nWhat happened: CCRC notified the California Attorney General (filed ~2026-07-02, letter to consumers dated after an investigation completed 2026-06-03) that an employee was tricked into forwarding internal files to an unauthorized external email account (per the GitHub issue's own summary text). The issue's auto-generated label (Social-ext-Phish) and two secondary sources (The Lyon Firm law-firm blog; Paubox breach-tracking blog) also characterize this as a phishing incident. The actual CA AG notification letter (retrieved and OCR'd from https://oag.ca.gov/system/files/Child_Care_Resource_Center_-_Notice_Letter_39453094v1.pdf) is worded more vaguely on its own ('in an effort to fulfill tasks associated with their role,' forwarded internal files to an external email account), but read alongside the issue's explicit 'tricked into forwarding' framing, this confirms attacker-driven deception rather than plain internal misdirection. Coded action.social/Phishing with an external actor -- reviewed and confirmed by analyst (Kevin Thompson, 2026-08-05).\n\ndata_disclosure coded 'Potentially' rather than 'Yes' because the notification letter states there is no evidence an unauthorized individual viewed or acquired the information from the destination account — access itself is unconfirmed.\n\nData categories: coded 'Personal' (children's/family names, birth dates) per the Lyon Firm article, and 'Medical' per the vcdb-pipeline comment citing the CA AG filing, which lists PHI/health-insurance data among the data types. The letter itself redacts the specific list of information categories in the copy retrieved, so exact scope is not independently confirmed by us; also note 'financial details related to subsidized care program' mentioned by the Lyon Firm article does not map cleanly to the Bank/Payment enum members (no bank account or payment-card numbers indicated), so it is folded into 'Personal' rather than coded separately. data_total omitted: no source discloses the number of individuals affected.\n\nTimeline: the notification letter and multiple secondary sources cite an unusual date range 'October 4, 2016 to October 15, 2025' for the forwarded files, without clarifying whether this is the age range of records contained in the forwarded files, the duration of a persistent unauthorized-access window, or something else. Given the issue's own auto-coded 'Approximate date: 2025-10' and that no source describes a 9-year ongoing compromise, timeline.incident is coded as 2025-10 (the end of the cited range, treated as the approximate forwarding/incident date) rather than a multi-year compromise window — flagging this interpretation for reviewer scrutiny. Investigation/discovery completed per the letter on 2026-06-03; that gap (~8 months) is recorded in plus.timeline.discovery.\n\nEmployee count: CCRC's own LinkedIn page lists 501-1,000 employees, while Cause IQ (citing FY2025 nonprofit filings) lists 1,394 employees; the higher, filing-sourced figure was used, mapping to the '1001 to 10000' bucket, but the true count may fall in the '101 to 1000' bucket per LinkedIn — noting this discrepancy for reviewer awareness.\n\nOther Unknowns left as Unknown/guessed: actor identity/variety/motive/country (no attacker named or attributed in any source, no ransom/extortion/monetization signal so motive coded Unknown per the no-speculation rule), asset.cloud (hosting of CCRC's email infrastructure not stated), discovery_method (coded 'It review' based on the letter's description of 'a thorough investigation and extensive file review'; not explicitly labeled a discovery method), and number of records/individuals affected (data_total omitted, not disclosed in any source).",
+    "created": "2026-08-05T16:15:08Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee deceived via phishing"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal files forwarded to external email account"
+      }
+    ],
+    "github": "23772",
+    "master_id": "48ADB744-3FB8-4C3B-A65C-29D92D9761D4",
+    "modified": "2026-08-05T16:15:08Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thelyonfirm.com/blog/child-care-resource-center-data-breach-california; https://oag.ca.gov/ecrime/databreach/reports/sb24-625925; https://www.paubox.com/blog/child-care-resource-center-reports-9-year-data-leak",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Child Care Resource Center, Inc. (CCRC), a California nonprofit that connects families with child care services and administers subsidized child-care programs, notified the California Attorney General that an employee forwarded internal files to an external email account, reportedly as the result of a phishing scheme. The files potentially contained children's/family personal information (names, birth dates) and health-insurance/medical data tied to subsidized care programs. CCRC found no evidence the destination account was accessed by an unauthorized party but is offering complimentary credit monitoring and identity restoration out of caution. The number of individuals affected and precise scope of data were not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 8
+    },
+    "incident": {
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "624410",
+    "state": "CA",
+    "victim_id": "Child Care Resource Center, Inc."
+  }
+}

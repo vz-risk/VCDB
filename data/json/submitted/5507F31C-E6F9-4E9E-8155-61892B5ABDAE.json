@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ],
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Authentication"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Fraud detection"
+      ]
+    }
+  },
+  "impact": {
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "5507F31C-E6F9-4E9E-8155-61892B5ABDAE",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23771\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\n\nSummary of coding decisions and gaps:\n- Attack window (June 17-19, 2026) and discovery/disclosure dates are drawn from press coverage (BleepingComputer, Malwarebytes, TechTimes, Yahoo/AP) since the GitHub issue itself gave no dates. Chick-fil-A confirmed on July 13, 2026 that unauthorized parties accessed some Chick-fil-A One accounts; breach notification letters to customers were dated July 20, 2026.\n- This was a credential-stuffing (account takeover) attack: attackers used username/password pairs leaked from unrelated third-party breaches against the Chick-fil-A website and mobile app. Chick-fil-A's own credential store was NOT breached, consistent with the issue's Hacking-ext-stolencreds label; action.hacking.vector coded Web application (implies asset S - Web application per cross-field rule) and an S - Authentication asset added for the login/account-takeover surface.\n- actor.external.variety and country left Unknown — no attribution or actor location was reported in any source.\n- motive coded Financial: the attack specifically targeted accounts holding monetizable value (Chick-fil-A One mobile-pay identifiers, stored gift-card/reward balances, partial payment-card data), which is a concrete monetization signal beyond mere presence of PII. No confirmed post-breach fraud was reported by any source, so this is inference from attack targeting, not confirmed fraud - noted here per the never-speculate rule.\n- attribute.confidentiality.data_disclosure coded Yes: Chick-fil-A confirmed unauthorized parties accessed information stored within affected accounts (confirmed access to live accounts holding data satisfies the Yes threshold even without an explicit statement that specific files were viewed/copied).\n- attribute.confidentiality.data coded Personal (names, emails, membership numbers, birthdates/phone/address for accounts that stored them) and Payment (last four digits of payment cards, mobile pay identifiers). state left at the Stored parent only (no source states encryption status of the underlying account data).\n- data_total intentionally omitted: only a partial count is known - Chick-fil-A reported a minimum of 2,182 affected customers to the Texas Attorney General; the overall multi-state total (11 states + DC) was never disclosed. Logging the Texas-only figure as data_total would misleadingly understate the true scope.\n- victim.employee_count coded 'Over 100000' based on a web search: Chick-fil-A, Inc. is reported at roughly 120,000-140,000 employees across corporate staff and franchise-operated restaurant teams (LeadIQ/Reveliolabs estimates), well above the 100,000 threshold.\n- victim.industry coded 722513 (Limited-Service Restaurants), refining the issue's broader NAICS 72/7225 (Restaurants and Other Eating Places) label to the correct 6-digit code for a quick-service restaurant chain.\n- discovery_method coded internal/Fraud detection: Malwarebytes reports Chick-fil-A 'identified the incident after observing suspicious login activity against some Chick-fil-A One accounts' and launched an investigation - this is the victim's own monitoring, not an actor disclosure or partner/law-enforcement discovery.\n- plus.event_chain: two-step chain (credential-stuffing login access, then access to account data) - no malware or extortion component was reported, so the chain stays short and does not speculate additional stages.\n- No named threat-actor group was reported by any source, so actor.external.name is omitted.\n- Sources consulted: the GitHub issue and its linked Yahoo/AP article; BleepingComputer ('Chick-fil-A discloses data breach after credential stuffing attacks'); Malwarebytes Labs blog; TechTimes; a second Yahoo/AP article on the Texas AG filing (2,182 Texans); WebSearch results summarizing Chain Store Age, Fox News, AJC, and TechRadar coverage for corroboration of scope/states/data types; WebSearch for Chick-fil-A employee-count company profiles (LeadIQ, Reveliolabs, Glassdoor) for the employee_count bucket.",
+    "created": "2026-08-05T16:12:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Credential stuffing (use of stolen creds) against Chick-fil-A One website/app login"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to customer account data (personal info, mobile pay ID, partial card data)"
+      }
+    ],
+    "github": "23771",
+    "master_id": "5507F31C-E6F9-4E9E-8155-61892B5ABDAE",
+    "modified": "2026-08-05T16:12:30Z",
+    "sub_source": "vcdb",
+    "timeline": {
+      "notification": {
+        "day": 20,
+        "month": 7,
+        "year": 2026
+      }
+    }
+  },
+  "reference": "https://www.yahoo.com/news/us/articles/chick-fil-cyberattack-even-dont-163359096.html; https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/; https://www.malwarebytes.com/blog/data-breaches/2026/07/chick-fil-a-loyalty-accounts-hijacked-using-stolen-passwords",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Chick-fil-A disclosed that an automated credential-stuffing attack between June 17-19, 2026 accessed Chick-fil-A One loyalty accounts for customers in at least 11 states plus Washington, D.C. Attackers used usernames and passwords leaked from unrelated third-party breaches to log into accounts; Chick-fil-A's own systems were not directly breached. Exposed data included names, email addresses, membership numbers, mobile pay identifiers, QR codes, stored Chick-fil-A credit/gift-card balances, and the last four digits of payment cards, plus birth dates, phone numbers, and addresses for accounts that stored them. Chick-fil-A reported a minimum of 2,182 affected customers to the Texas Attorney General; the full multi-state total was not disclosed. The company force-logged-out affected accounts, removed stored payment methods, restored balances, and issued reward compensation.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 24
+    },
+    "incident": {
+      "day": 17,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "722513",
+    "state": "GA",
+    "victim_id": "Chick-fil-A"
+  }
+}

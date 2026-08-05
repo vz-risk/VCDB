@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "EB07D37E-5DF0-42DF-B265-BCD7296E4741",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23775\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\n\nSummary of sourcing and assumptions:\n- Sources: GitHub issue #23775 (labels: Autocode, Breach, Hacking-ext-unknown, NAICS 51: Information, PHIDBR2019, Partner_Breach); https://www.hipaajournal.com/craneware-cyberattack-data-breach/ (linked in issue); https://www.cybersecuritydive.com/news/craneware-health-care-data-breach/825643/ (independent corroborating source found via WebSearch); https://techcrunch.com/2026/07/20/hackers-stole-significant-amount-of-data-from-tech-firm-relied-on-by-thousands-of-us-hospitals-and-pharmacies/ (independent corroborating source found via WebSearch). Additional consistent coverage seen but not cited: cybersecuritynews.com, thecyberexpress.com, computing.co.uk.\n- PHIDBR2019 label ignored per standing guidance (artifact tag, not a data signal; the embedded 2019 is not the incident year).\n- Actor: no threat actor has publicly claimed the attack and no attribution had been disclosed as of the sources reviewed (per issue and hipaajournal); coded actor.external.variety/motive/country as Unknown. No ransom/extortion demand was reported, so no action.social/Extortion coded and motive is not inferred as Financial.\n- Action: coded as Hacking per the issue's 'Hacking-ext-unknown' template tag. Specific technique (vector) was not disclosed in any source, so action.hacking.variety and vector are coded Unknown. Sources confirm unauthorized access to Craneware's data environment and that file names plus employee/customer/partner records were viewed and exfiltrated, so result includes both Infiltrate and Exfiltrate.\n- Asset: sources describe 'a subset of its data environment' and exfiltration of file names, but do not specify the underlying system (file server vs. database vs. other), so asset.assets is coded S - Unknown rather than guessing a more specific type.\n- Attribute: confidentiality.data_disclosure coded Yes because employee and customer/partner records were confirmedly viewed and exfiltrated (not merely at risk). data.variety coded Personal (employee/customer PII) and Internal (filenames/regulatory data the company describes as largely non-sensitive/public). Craneware stated that potential patient/medical data impact was 'still under review' at time of reporting — this is NOT confirmed, so Medical was deliberately omitted from data.variety. data_total omitted: no source gives a defensible total record count across all victim groups (only 'a significant volume of file names' / a 960GB leak-size figure with no record count, and a stated 'minority' of ~150M total patient records held — none of these support a reliable data_total). confidentiality.state defaulted to Stored per the no-encryption-info default rule.\n- Discovery: Craneware's own regulatory filing and statements indicate the company (with internal IT and external forensic firms) identified and investigated the unauthorized access; no source states the specific detection mechanism (e.g., alerting tool, audit), so discovery_method.internal.variety is coded Unknown rather than guessing a specific internal method. This is not an actor-disclosed incident (no leak-site post or ransom note), consistent with actor.motive/variety Unknown.\n- Victim: Craneware (Craneware Group / Craneware plc), a UK-headquartered healthcare RCM/billing software vendor serving ~2,000 hospitals/health systems and ~10,000 pharmacies/clinics in the US. Coded as the primary victim under the actor-centric / provider-breach convention since Craneware itself is the entity whose systems and data were breached (no single named customer org was singled out as the breached party). industry coded 511210 (Software Publishers) matching the issue's NAICS 51/5112 labels. employee_count derived from a WebSearch lookup (PitchBook/Owler/Revelio/company careers page figures ranging ~734-839 employees, most recent official ~765 as of June 2025) mapped to the '101 to 1000' enum bucket. country coded GB (UK headquarters, per hipaajournal/cybersecuritydive).\n- Timeline: sources (TechCrunch, Cybersecurity Dive) place the company's public disclosure/announcement on July 20, 2026; no source discloses the actual initial-compromise (begin) date, so timeline.incident is coded with year 2026 only (no month/day) rather than guessing an earlier begin date. plus.dbir_year derived from this July 2026 anchor date per the Nov 1/Oct 31 DBIR-year window: dbir_year = 2027.\n- No value_chain block included per current VCDB convention.",
+    "created": "2026-08-05T16:12:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown-vector unauthorized access into Craneware's data environment"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "File names and employee/customer/partner records viewed and exfiltrated"
+      }
+    ],
+    "github": "23775",
+    "master_id": "EB07D37E-5DF0-42DF-B265-BCD7296E4741",
+    "modified": "2026-08-05T16:12:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/craneware-cyberattack-data-breach/; https://www.cybersecuritydive.com/news/craneware-health-care-data-breach/825643/; https://techcrunch.com/2026/07/20/hackers-stole-significant-amount-of-data-from-tech-firm-relied-on-by-thousands-of-us-hospitals-and-pharmacies/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Craneware, a UK-headquartered healthcare revenue-cycle/billing software vendor serving roughly 2,000 hospitals and health systems and about 10,000 pharmacies and clinics in the US, disclosed a cyberattack in which hackers gained unauthorized access to a subset of its data environment. A significant volume of file names, along with employee data and a selection of customer and partner records, was viewed and exfiltrated before the attacker was ejected; customer-facing services were not disrupted. Craneware assessed much of the exposed data as non-sensitive or already-public regulatory information, with potential patient-data impact still under review at the time of reporting. The company notified the UK Information Commissioner's Office and the US FBI. No threat actor had claimed responsibility and no ransom demand had been reported as of the sources reviewed.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "victim_id": "Craneware"
+  }
+}
