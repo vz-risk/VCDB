@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ],
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "variety": [
+        "Unaffiliated"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "country": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "name": [
+        "hackformetome"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 23272765,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "40C7A306-6F1E-408A-AC68-E7602EC95DD6",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-08-05T16:12:47Z",
+    "modified": "2026-08-05T16:12:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access to Paidwork production database (entry vector not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "~11GB database dump copied/exfiltrated by actor"
+      }
+    ],
+    "github": "23779",
+    "master_id": "40C7A306-6F1E-408A-AC68-E7602EC95DD6",
+    "sub_source": "vcdb",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23779\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\n\nSources consulted: Help Net Security (issue-linked; https://www.helpnetsecurity.com/2026/07/20/paidwork-data-breach-23-million-users/), Malwarebytes Labs (https://www.malwarebytes.com/blog/data-breaches/2026/07/paidwork-breach-exposes-data-of-23-million-users-check-if-youre-affected), and Class Action U (https://classactionu.org/current-data-breaches/paidwork/) for corroboration; a WebSearch on the threat-actor alias 'hackformetome' also surfaced Dark Web Informer social posts (not cited directly, per social-media sourcing rule) describing the actor as an individual seller of stolen databases/access on cybercrime forums (also separately advertising unrelated NASA web-shell access), which supports coding actor.external.variety as 'Unaffiliated' (a lone seller, not an attributed organized crew) rather than 'Unknown'. Company HQ/state (Sacramento, CA, US) taken from Paidwork LLC's Terms of Service registered address (https://policies.paidwork.com/terms) — this is a registered-agent/incorporation address and may not reflect actual operations; coded with that caveat. employee_count ('11 to 100') is mapped from a WebSearch-derived LinkedIn company-size range of 11-50 employees (LinkedIn page itself not fetchable/authenticated) — approximate.\n\nLeft Unknown / assumptions:\n- action.hacking.variety and vector: Unknown — no source describes the specific exploitation method or entry vector used to reach Paidwork's production database.\n- actor.external.country/region: Unknown — no source geolocates the actor; only the forum alias 'hackformetome' is known.\n- timeline.compromise / timeline.discovery / timeline.exfiltration / timeline.containment: left Unknown. Sources give only month-level dates (intrusion ~March 2026, forum advertisement ~April 2026, public posting/HIBP indexing July 19 2026) and Paidwork has never acknowledged the breach, so there is no victim-side discovery/containment timeline to code; the gap between intrusion and the forum ad is not stated precisely enough to assign a defensible duration bucket.\n- timeline.incident: coded as year=2026, month=3 (March 2026), the intrusion date per multiple sources; plus.dbir_year=2027 follows from that date under the Nov1/Oct31 window, consistent with the issue's 'Priority 2027' label.\n- motive coded Financial: the actor advertised/sold the dump on a cybercrime forum — a monetization signal per the coding rules, not inferred merely from the sensitivity of the data.\n- attribute.confidentiality.state coded 'Stored' (default for an at-rest breach with unstated encryption status) rather than 'Stored unencrypted' — sources only specify that passwords specifically were bcrypt-hashed; the rest of the data's storage encryption status is unstated.\n- data_abuse coded 'Yes - Posted on personal forum' because the dump was advertised on a cybercrime forum and later indexed publicly on Have I Been Pwned (July 19, 2026).\n- confidence set to Medium rather than High: although multiple reputable outlets (Help Net Security, Malwarebytes) corroborate the breach and the Action/Asset/Attribute are well established, the Actor (identity, country, exact vector) remains largely unknown/unconfirmed by the victim, who has not acknowledged the incident.\n- asset.assets coded 'S - Database' based on the attacker's own characterization of the dump as pulled from Paidwork's 'production systems' — an attacker-claimed detail not independently confirmed by the victim, per the trust-attacker-claimed-details coding rule; asset.cloud left Unknown since hosting environment (on-prem vs cloud) is not stated."
+  },
+  "reference": "https://www.helpnetsecurity.com/2026/07/20/paidwork-data-breach-23-million-users/; https://www.malwarebytes.com/blog/data-breaches/2026/07/paidwork-breach-exposes-data-of-23-million-users-check-if-youre-affected; https://classactionu.org/current-data-breaches/paidwork/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Paidwork, a US-based online microtask platform, suffered a data breach in which an attacker gained unauthorized access to its production database. In April 2026 a threat actor using the alias 'hackformetome' advertised an approximately 11GB database dump on a cybercrime forum, claiming it was pulled from Paidwork's production systems and affected over 23 million users. The dataset was later posted publicly and added to Have I Been Pwned on July 19, 2026, confirming 23,272,765 unique accounts. Exposed data included full names, email addresses, phone numbers, home addresses, dates of birth, gender, education levels, bank account numbers, transaction records, device and IP information, profile photos, personal interests, and bcrypt-hashed passwords. As of the reporting date, Paidwork had not publicly acknowledged the breach or notified users.",
+  "timeline": {
+    "incident": {
+      "year": 2026,
+      "month": 3
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "5419",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Paidwork"
+  }
+}

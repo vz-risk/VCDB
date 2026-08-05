@@ -1,0 +1,114 @@
+{
+  "action": {
+    "social": {
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ],
+      "target": [
+        "Other employee",
+        "End-user or employee"
+      ],
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "variety": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "country": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Other employee"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "6E234985-CF80-4EE6-AF6B-11FAFC607678",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23773\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\n\nSources: (1) GitHub issue body / simplywall.st article (linked in issue); (2) SecurityWeek, 'Clover Health Investments Discloses Data Breach' (https://www.securityweek.com/clover-health-investments-discloses-data-breach/); (3) Healthcare Dive, 'Clover Health hit with data breach' (https://www.healthcaredive.com/news/clover-health-data-breach/825628/); (4) FierceHealthcare, 'Clover Health reveals data breach in SEC filing' (https://www.fiercehealthcare.com/payers/clover-health-reveals-data-breach-sec-filing); (5) HIPAA Journal, 'Clover Health Assessing Impact of Social Engineering Incident' (https://www.hipaajournal.com/clover-health-data-breach/); (6) Clover Health Investments 8-K SEC filing dated 2026-07-17/21 (referenced by the above, not independently fetchable due to a 403 on the SEC.gov URL).\n\nDate correction: the GitHub issue text states 'July 4, 2024', but every independent news/security source (SecurityWeek, Healthcare Dive, FierceHealthcare, HIPAA Journal, Becker's Payer via search snippet) places the breach discovery on July 4, 2026, with SEC 8-K disclosure filed July 17-22, 2026. The issue's stated year appears to be an automated-pipeline error (it also carries an unrelated PHIDBR2019 artifact label per the skill's standing guidance to ignore that tag). timeline.incident is coded to the 2026-07-04 date, which sources describe as when Clover Health 'discovered anomalous login activity' — this may be the discovery date rather than a distinct earlier initial-access date; no source gives an earlier compromise date, so timeline.discovery duration is left Unknown rather than guessed. dbir_year (2027) is derived from this date per the Nov1/Oct31 window.\n\nMethod: HIPAA Journal states employees were 'tricked by social engineering into disclosing their credentials' via employee (email) accounts -- coded as action.social/Phishing with an Email vector. Some secondary commentary speculated the TTPs resemble Scattered Spider/ShinyHunters vishing campaigns, but no source confirms attribution or a phone-based (vishing) vector specifically, so actor identity is left Unknown and vector is coded to the confirmed Email/credential-disclosure detail rather than the speculative phone angle.\n\nUnknown/assumed fields: actor.external.variety/motive/country (no attribution or monetization signal -- no ransom, extortion, or data-sale claim reported; sensitive-data type alone is not treated as a financial-motive signal per coding rules); attribute.confidentiality.data_total and any per-incident record count (Clover has ~156,000 members total but has not disclosed how many were affected by this incident specifically); attribute.confidentiality.state (defaulted to 'Stored' per the no-encryption-info-stated rule); discovery_method internal variety (inferred 'Infrastructure monitoring' from Clover's own description of detecting 'anomalous login activity'; not verbatim from a source); asset.cloud (hosting of the compromised employee/email accounts not stated). victim.employee_count set to '101 to 1000' based on third-party company-profile lookups (~724-750 employees) since sources did not state a figure directly. victim.industry set to 524114 (Direct Health and Medical Insurance Carriers) reflecting Clover Health's actual business (Medicare Advantage insurer) rather than the broader NAICS-62 sector label on the GitHub issue, which is a coarser 2-digit code.",
+    "created": "2026-08-05T16:13:06Z",
+    "dbir_year": 2027,
+    "github": "23773",
+    "master_id": "6E234985-CF80-4EE6-AF6B-11FAFC607678",
+    "modified": "2026-08-05T16:13:06Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://simplywall.st/stocks/us/healthcare/nasdaq-clov/clover-health-investments/news/clover-healths-member-data-breach-might-change-the-case-for/amp; https://www.securityweek.com/clover-health-investments-discloses-data-breach/; https://www.healthcaredive.com/news/clover-health-data-breach/825628/; https://www.fiercehealthcare.com/payers/clover-health-reveals-data-breach-sec-filing; https://www.hipaajournal.com/clover-health-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Clover Health Investments, a Medicare Advantage insurer, disclosed that an external attacker used social engineering to trick three non-managerial employees (visit-scheduling and broker-facing sales staff) into disclosing their account credentials. The compromised accounts had access to members' personal and protected health information but no access to corporate financial or claims systems. Clover discovered the anomalous activity on July 4, 2026, contained it, and disclosed the incident to the SEC in an 8-K filing; the full scope of data accessed remained undetermined at time of reporting.",
+  "timeline": {
+    "incident": {
+      "year": 2026,
+      "month": 7,
+      "day": 4
+    },
+    "discovery": {
+      "unit": "Unknown"
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524114",
+    "state": "TN",
+    "victim_id": "Clover Health Investments, Corp."
+  }
+}

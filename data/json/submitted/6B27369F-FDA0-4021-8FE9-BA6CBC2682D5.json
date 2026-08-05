@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "The Gentlemen"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Patient",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "6B27369F-FDA0-4021-8FE9-BA6CBC2682D5",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23777\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\n\nDevereux Foundation (Devereux Advanced Behavioral Health), a multistate nonprofit behavioral healthcare organization headquartered in Villanova, PA, detected suspicious network activity on 2025-11-09 and determined that an unauthorized external actor had accessed certain systems 2025-11-06 through 2025-11-09. On 2025-11-28 a ransomware/extortion group calling itself \"The Gentlemen\" posted a dark-web leak-site claim threatening to publish stolen data within 9-10 days unless the victim made contact (per threat-intel trackers hookphish.com and dexpose.io). No source found confirms actual ransomware encryption or operational disruption at Devereux -- the victim's own breach notice and law-firm summaries (classaction.org, claimdepot.com) describe only unauthorized network access and data exposure, not encryption/outage. Per the 'never speculate' rule this is coded as action.hacking (Unknown variety/vector, since the entry technique is undisclosed) plus action.social/Extortion for the leak-site ransom demand, rather than action.malware/Ransomware -- consistent with the issue's own 'Hacking-ext-unknown' template tag rather than a Malware-ext-Ransomware template. Investigation concluded 2026-06-23 that exposed data included names, dates of birth, SSNs, driver's license/state ID numbers, US alien registration numbers, taxpayer ID numbers, digital/electronic signatures, financial account information, payment card data, and medical/health-insurance information, for current/former employees, clients (patients), donors, payors, and business partners. Reported to HHS 2026-01-08; to the Vermont AG 2026-07-23. victim.employee_count ('1001 to 10000') is approximated from a public web search on Devereux's total headcount (~6,500 employees across programs; sourced from company-profile aggregators, not the breach notices themselves). Actor attribution to 'The Gentlemen' (coded actor.external.variety Organized crime / motive Financial) comes from third-party ransomware-tracking sites, not from Devereux's own notice (which names no attacker) -- flagged as attacker/threat-intel-sourced rather than victim-confirmed, per the trust-attacker-claimed-details convention. discovery_method.internal.variety 'Infrastructure monitoring' is an inference from the notice's 'detected suspicious network activity' language; the specific monitoring tool/control is not stated. attribute.confidentiality.state left at the default 'Stored' since no source states the encryption status of the data at rest. data_total intentionally omitted: sources report inconsistent/partial per-state individual counts (e.g. a claimed 501 total alongside separate state breakdowns such as 5,341 in TX and 3,316 in MA that do not sum consistently) with no reliable aggregate. asset.assets and asset.cloud coded Unknown -- no source specifies which system types or hosting environment were affected. Ignored the 'PHIDBR2019' issue label per standing guidance (it is a noise/artifact tag, not a data signal, and its embedded year is not the incident year). credit_monitoring/years reflect Devereux's offer of 24 months of Experian IdentityWorks coverage per claimdepot.com.",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 2,
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-08-05T16:13:19Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion for payment via leak-site threat"
+      }
+    ],
+    "github": "23777",
+    "master_id": "6B27369F-FDA0-4021-8FE9-BA6CBC2682D5",
+    "modified": "2026-08-05T16:13:19Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/devereux-foundation-july-2026; https://www.claimdepot.com/data-breach/the-devereux-foundation-2026; https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-devereux-advanced-behavioral-health/; https://www.dexpose.io/the-gentlemen-target-devereux-advanced-behavioral-health-in-ransomware-attack/; https://www.globenewswire.com/news-release/2025/12/01/3197546/0/en/DATA-BREACH-ALERT-Edelson-Lechtzin-LLP-is-Investigating-Claims-on-Behalf-of-Devereux-Advanced-Behavioral-Health-Customers-Whose-Data-May-Have-Been-Compromised.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Devereux Foundation, a multistate behavioral healthcare nonprofit, detected an unauthorized external actor accessing its network Nov 6-9, 2025. The ransomware/extortion group 'The Gentlemen' later claimed the breach on a dark-web leak site, threatening to publish stolen data. Investigation confirmed exposure of names, SSNs, driver's license/ID numbers, financial account and payment card data, and medical/health-insurance information for employees, clients, donors, payors, and business partners.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 6,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "6241",
+    "state": "PA",
+    "victim_id": "Devereux Foundation"
+  }
+}
