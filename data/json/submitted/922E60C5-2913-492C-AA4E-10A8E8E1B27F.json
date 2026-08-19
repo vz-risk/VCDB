@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "922E60C5-2913-492C-AA4E-10A8E8E1B27F",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "kf0jvt",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23776\nEncoded by AI - encode-veris-incident skill version 20260801T010623Z\n\nSummary: Dermatology Partners (a PA/DE/MD-based dermatology group practice) disclosed that an unauthorized individual accessed its data system at its Catonsville, MD office between Feb 27 and Mar 10, 2026. The company found no evidence data was copied/removed but could not rule out that records were viewed, so it notified all patients seen at that location.\n\nAssumptions / fields left Unknown (never speculated beyond source support):\n- action.hacking.variety and vector: Unknown - no source describes the technical method of access (matches the issue's Hacking-ext-unknown template).\n- actor.external.country and motive: Unknown - no attribution or monetization signal (ransom/extortion/data-for-sale) is documented; per the motive-inference rule, sensitive data type alone does not imply Financial motive.\n- asset.assets: coded generically as 'S - Unknown' since sources only say 'data system' without naming a database/EHR/server type; asset.cloud left Unknown since hosting (on-prem EHR vs cloud) is not stated.\n- discovery_method: coded unknown=true - no source states how the unauthorized access was detected (forensic review is mentioned but not what triggered it).\n- attribute.confidentiality.data_disclosure coded 'Yes' per the confirmed-access rule (unauthorized access to a live data system holding PHI/PII is sufficient), even though the victim states no evidence data was copied/removed - access itself is sufficient per VERIS coding guidance. state defaulted to 'Stored' (encryption status not stated).\n- attribute.confidentiality.data_total omitted - no patient count was disclosed in any source.\n- victim.employee_count set to '101 to 1000' based on a LinkedIn company-size lookup (201-500 employees) for Dermatology Partners (Birdsboro, PA HQ, 31 locations across PA/DE/MD), since no source in the issue/breach notice states headcount directly.\n- victim.industry set to 621111 (Offices of Physicians) as the closest NAICS match for a dermatology group practice; the issue label only specified the 2-digit NAICS 62 (Health Care and Social Assistance) sector.\n- Note: this 2026 Catonsville, MD incident is a distinct company/event from the unrelated 2024/2025 'U.S. Dermatology Partners' (Texas-based, different entity) breach and lawsuit coverage that also appears in search results under similar names - do not conflate.\n- PHIDBR2019 issue label ignored per standing guidance (artifact/noise tag, not a data signal; the embedded '2019' is not the incident year).\n- Sources consulted: the GitHub issue (vz-risk/VCDB#23776); the victim's own breach notice at dermpartners.com/privacy-breach-catonsville (posted 2026-06-23); a secondary breach-tracking article at claimdepot.com/data-breach/dermatology-partners-2026 (published 2026-07-23); WebSearch results for victim employee-count/company-profile lookup.",
+    "created": "2026-08-05T16:12:01Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to data system"
+      }
+    ],
+    "github": "23776",
+    "master_id": "922E60C5-2913-492C-AA4E-10A8E8E1B27F",
+    "modified": "2026-08-05T16:12:01Z",
+    "sub_source": "vcdb",
+    "timeline": {
+      "notification": {
+        "day": 23,
+        "month": 6,
+        "year": 2026
+      }
+    }
+  },
+  "reference": "https://www.dermpartners.com/privacy-breach-catonsville; https://www.claimdepot.com/data-breach/dermatology-partners-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Dermatology Partners, a dermatology group practice with 30+ offices in Pennsylvania, Delaware, and Maryland, disclosed that an unauthorized individual gained access to its data system at its Catonsville, Maryland office between February 27 and March 10, 2026. The company found no evidence data was copied or removed but could not rule out that patient records were viewed, and notified all patients seen at that location. Potentially viewable data included names, dates of birth, addresses, contact information, medical record numbers, dates of service, diagnosis and treatment information, and possibly health insurance information.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 2,
+      "year": 2026
+    },
+    "compromise": {
+      "unit": "Days",
+      "value": 12
+    },
+    "discovery": {
+      "unit": "Unknown"
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "locations_affected": 1,
+    "state": "MD",
+    "victim_id": "Dermatology Partners"
+  }
+}
