@@ -1,0 +1,162 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "a9fae250-b11f-11f1-aa28-0b2e3ed5d951",
+    "security_incident": "Confirmed",
+    "reference": "https://www.govtech.com/security/in-ohio-county-phishing-attack-may-have-led-to-a-data-breach",
+    "summary": "Employee s of Scioto County fall victim of phishing schema leading actors to get access to the environment",
+    "confidence": "High",
+    "plus": {
+        "master_id": "914e5234-02b1-4891-9096-aaac7ccf2a56",
+        "modified": "2026-09-15T20:14:19.120Z",
+        "created": "2026-09-15T20:08:17.909Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "phishing email convinces users"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "credentials disclosed"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "used stolen creds to send additional phishing emails"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "additoinal phishing email sent"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2026,
+                "day": 23,
+                "month": 3
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois925",
+        "dbir_year": 2027,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Unknown"
+            }
+        },
+        "github": "23155"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2026
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Scioto County, Ohio",
+        "employee_count": "1001 to 10000",
+        "industry": "92",
+        "state": "OH"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "End-user or employee"
+            ],
+            "result": [
+                "Infiltrate",
+                "Lateral movement"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Mail"
+            },
+            {
+                "variety": "P - End-user or employee"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Unrelated 3rd party"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1"
+}

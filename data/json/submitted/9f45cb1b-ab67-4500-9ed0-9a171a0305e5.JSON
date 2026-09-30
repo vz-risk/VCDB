@@ -1,0 +1,162 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "c5711940-b111-11f1-aa28-0b2e3ed5d951",
+    "security_incident": "Confirmed",
+    "reference": "https://www.govinfosecurity.com/miasma-worm-hits-microsofts-ai-coding-ecosystem-a-31912",
+    "summary": "Security researchers said a fast-moving supply-chain attack linked to the \"Miasma\" worm hit Microsoft's developer ecosystem Friday, spreading through code repositories tied to Azure cloud tools. Security researchers said the attack spread to more than 70 repositories Friday in under two minutes, forcing the temporary disabling of Azure Functions-related repositories and development workflows. The incident affected repositories across the Azure, Azure-Samples and Microsoft repositories, including projects tied to Azure Functions and Microsoft's Durable Task framework",
+    "confidence": "High",
+    "plus": {
+        "master_id": "9f45cb1b-ab67-4500-9ed0-9a171a0305e5",
+        "modified": "2026-09-15T18:40:08.316Z",
+        "created": "2026-09-15T18:28:51.029Z",
+        "sub_source": "random",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "use of stolen credentials to modify code base"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "codebase has stealer installed"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "day": 2026,
+                "month": 6,
+                "year": 5
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2027,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes - Data ransomed"
+            }
+        },
+        "github": "23310"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2026,
+            "month": 6,
+            "day": 5
+        },
+        "compromise": {
+            "unit": "Minutes"
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "discovery": {
+            "unit": "Days"
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "victim_id": "Microsoft",
+        "employee_count": "Over 100000",
+        "industry": "513210"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds",
+                "Backdoor"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Deploy payload"
+            ],
+            "notes": "Stolen developer credentials"
+        },
+        "malware": {
+            "variety": [
+                "Password dumper"
+            ],
+            "vector": [
+                "Software update"
+            ],
+            "result": [
+                "Exfiltrate"
+            ],
+            "notes": "Miasma worm downloads config file that exfils credentials "
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "teampcp"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Code repository",
+                "amount": 1
+            },
+            {
+                "variety": "S - LLM application"
+            }
+        ],
+        "cloud": [
+            "External Cloud Asset(s)"
+        ],
+        "role": [
+            "IT"
+        ],
+        "total_amount": 1,
+        "notes": "compromised credentials against code repo and also included code updates to targegt LLMs to run payloads"
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "API key"
+                }
+            ],
+            "data_victim": [
+                "Partner"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Modify configuration",
+                "Software installation"
+            ]
+        }
+    },
+    "targeted": "Opportunistic",
+    "discovery_method": {
+        "partner": {
+            "variety": [
+                "Antivirus"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1"
+}

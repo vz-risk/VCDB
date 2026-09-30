@@ -1,0 +1,180 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "f52149e0-b2aa-11f1-ad3f-872c5037f111",
+    "security_incident": "Confirmed",
+    "reference": "https://www.mlex.com/mlex/articles/2519981/greek-ministry-eetaa-fined-350-000-after-ransomware-attack",
+    "summary": "Greece's Social Cohesion and Family Affairs Ministry suffered a ransomware attack that put the personal data of approximately 2.5 million people at risk. The Hellenic Data Protection Authority attributed the breach to outdated, inadequately secured systems and the absence of an active GDPR-compliant processing contract between the ministry and its data processor EETAA. The ministry was fined €200,000 and EETAA was fined €150,000 for these violations of EU privacy law.",
+    "confidence": "High",
+    "plus": {
+        "master_id": "e11a2e48-15a8-4549-991a-e33d120ea6a0",
+        "modified": "2026-09-17T19:32:53.208Z",
+        "created": "2026-09-17T19:17:55.198Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "unknown initial hacking vector"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "data exfiltrated"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "ia",
+                "summary": "Ransomware installed"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "au",
+                "summary": "ransomware encrypts"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2025,
+                "month": 3
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2027,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes - Data ransomed"
+            }
+        },
+        "github": "24367"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 3,
+            "day": 1
+        },
+        "compromise": {
+            "unit": "Days",
+            "value": 3
+        },
+        "exfiltration": {
+            "unit": "Unknown"
+        },
+        "containment": {
+            "unit": "Days",
+            "value": 7
+        }
+    },
+    "victim": {
+        "government": [
+            "Federal"
+        ],
+        "country": [
+            "GR"
+        ],
+        "victim_id": "Hellenic Agency for Local Development and Local Government",
+        "employee_count": "101 to 1000",
+        "industry": "92"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Exfiltrate",
+                "Infiltrate",
+                "Deploy payload"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "Ransomware"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Deploy payload"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 2500000,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Partner"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 2500000
+        },
+        "integrity": {
+            "variety": [
+                "Software installation"
+            ]
+        },
+        "availability": {
+            "variety": [
+                "Obscuration"
+            ],
+            "duration": {
+                "unit": "Days",
+                "value": 7
+            }
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1"
+}

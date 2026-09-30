@@ -1,0 +1,164 @@
+{
+    "source_id": "vcdb",
+    "incident_id": "86d4be30-b2b5-11f1-ad3f-872c5037f111",
+    "security_incident": "Confirmed",
+    "reference": "https://narutoblog.odoo.com/blog/tech-cyber-news-2/shinyhunters-ransomware-group-unleashes-august-2026-data-breach-wave-millions-of-records-stolen-across-healthcare-it-and-pharma-111",
+    "summary": "ShinyHunters ransomware group targeted Lumenis, an Israel-based medical technology manufacturer specializing in laser and energy-based solutions for skin, body, and eye care treatment, and claimed to have stolen over 1.1 million records including customer and employee personally identifiable information along with 176 GB of internal corporate data. The exposure of patient and customer data from a medical device company carries significant regulatory and legal consequences under HIPAA, GDPR, and other data protection frameworks",
+    "confidence": "High",
+    "plus": {
+        "master_id": "f528a2d0-8aa2-44e7-bf36-47d33295d4af",
+        "modified": "2026-09-17T20:41:16.607Z",
+        "created": "2026-09-17T20:33:34.611Z",
+        "sub_source": "priority",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "some time of phishing to compromise a user's credentials"
+            },
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "cp",
+                "summary": "alter behavior to disclose credentials "
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "use user's credentials to access and steal data"
+            }
+        ],
+        "timeline": {
+            "notification": {
+                "year": 2026,
+                "month": 8
+            }
+        },
+        "analysis_status": "Reviewed",
+        "analyst": "planglois",
+        "dbir_year": 2027,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes - Data ransomed"
+            }
+        },
+        "github": "24135"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2026,
+            "month": 8
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "IL"
+        ],
+        "victim_id": "Lumenis",
+        "employee_count": "101 to 1000",
+        "industry": "3342"
+    },
+    "action": {
+        "hacking": {
+            "variety": [
+                "Use of stolen creds"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "target": [
+                "End-user"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Organized crime"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "name": [
+                "ShinyHunter"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            },
+            {
+                "variety": "P - End-user"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Sensitive Personal"
+                },
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee",
+                "Victim organization"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_volume": 176,
+            "data_total": 1100000
+        },
+        "integrity": {
+            "variety": [
+                "Alter behavior"
+            ]
+        }
+    },
+    "targeted": "Unknown",
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "schema_name": "vcdb",
+    "schema_version": "1.4.1"
+}
