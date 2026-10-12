@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
-  "description": "VERIS VCDB Schema 1.4.1.",
+  "description": "VERIS VCDB Schema 1.4.2.",
   "properties": {
     "incident_id": {
       "type": "string",
@@ -1138,6 +1138,7 @@
                   "Data entry error",
                   "Disposal error",
                   "Gaffe",
+                  "Inadequate containment",
                   "Loss",
                   "Maintenance error",
                   "Malfunction",
@@ -1444,6 +1445,7 @@
                   "Acquaintance",
                   "Activist",
                   "Auditor",
+                  "Agentic system",
                   "Competitor",
                   "Customer",
                   "Force majeure",
@@ -1472,6 +1474,7 @@
                   "Fun",
                   "Grudge",
                   "Ideology",
+                  "Misalignment",
                   "NA",
                   "Secondary",
                   "Other",
@@ -1785,6 +1788,7 @@
                 "type": "string",
                 "enum": [
                   "Auditor",
+                  "Agentic system",
                   "Call center",
                   "Cashier",
                   "Developer",
@@ -1817,6 +1821,7 @@
                   "Fun",
                   "Grudge",
                   "Ideology",
+                  "Misalignment",
                   "Secondary",
                   "NA",
                   "Other",
@@ -3556,48 +3561,6 @@
           "minLength": 1,
           "type": "string"
         },
-        "attribute": {
-          "additionalProperties": false,
-          "properties": {
-            "confidentiality": {
-              "additionalProperties": false,
-              "properties": {
-                "data_abuse": {
-                  "description": "The data was used for fraud, used mischievously, used maliciously, or otherwise abused.",
-                  "minLength": 1,
-                  "type": "string",
-                  "enum": [
-                    "Yes",
-                    "Yes - Data ransomed",
-                    "Yes - Identity theft",
-                    "Yes - Financial fraud",
-                    "Yes - Posted on personal forum",
-                    "No",
-                    "Other",
-                    "Unknown"
-                  ]
-                },
-                "credit_monitoring": {
-                  "minLength": 1,
-                  "type": "string",
-                  "enum": [
-                    "Yes",
-                    "No",
-                    "Other",
-                    "Unknown"
-                  ]
-                },
-                "credit_monitoring_years": {
-                  "minLength": 1,
-                  "type": "number",
-                  "minimum": 0.01
-                }
-              },
-              "type": "object"
-            }
-          },
-          "type": "object"
-        },
         "row_number": {
           "type": "number"
         },
@@ -3700,6 +3663,48 @@
             "Unknown",
             "Other"
           ]
+        },
+        "attribute": {
+          "additionalProperties": false,
+          "properties": {
+            "confidentiality": {
+              "additionalProperties": false,
+              "properties": {
+                "credit_monitoring": {
+                  "minLength": 1,
+                  "type": "string",
+                  "enum": [
+                    "Yes",
+                    "No",
+                    "Other",
+                    "Unknown"
+                  ]
+                },
+                "credit_monitoring_years": {
+                  "minLength": 1,
+                  "type": "number",
+                  "minimum": 0.01
+                },
+                "data_abuse": {
+                  "description": "The data was used for fraud, used mischievously, used maliciously, or otherwise abused.",
+                  "minLength": 1,
+                  "type": "string",
+                  "enum": [
+                    "Yes",
+                    "Yes - Data ransomed",
+                    "Yes - Identity theft",
+                    "Yes - Financial fraud",
+                    "Yes - Posted on personal forum",
+                    "No",
+                    "Other",
+                    "Unknown"
+                  ]
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
         },
         "control_inadequacies_legacy": {
           "items": {
