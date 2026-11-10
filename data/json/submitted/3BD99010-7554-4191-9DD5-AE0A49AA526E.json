@@ -1,0 +1,112 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse",
+        "Data mishandling"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Espionage"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "3BD99010-7554-4191-9DD5-AE0A49AA526E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22529\nTemplate Misuse-int-privabuse used (internal actor, Misuse Privilege abuse, data_disclosure Yes, discovery internal, mis/int/srv/cp chain).\nDeviations from the template: actor variety Other (he was a research scientist, not an end-user role in the enum), motive Espionage instead of Financial because he is charged with economic espionage for the benefit of China; Data mishandling added because the core allegation is sharing proprietary research with outside institutions; misuse vector Unknown because no source says how he accessed or moved the data (template LAN access not supported); asset S - Unknown instead of U - Desktop or laptop, since the systems holding the research are not described.\nThese are allegations. Wang has pleaded not guilty and the verdict was postponed in June 2026 (Global News). Security incident coded Confirmed on the basis of the charges and Hydro-Quebec's own complaint; a reviewer may prefer Suspected until a verdict.\nTimeline: CBC says the offences were allegedly committed between February 2018 and October 2022; Hydro-Quebec's corporate security complained to the RCMP in August 2022, so discovery is about 4 years after the begin date. He had worked there since October 2016 and was fired after the complaint. dbir_year 2019 follows the February 2018 begin date; this is an old incident surfaced by the 2025 trial coverage.\nDiscovery: internal (corporate security branch complaint); the detection method is not given, so Unknown.\nData: proprietary battery and energy-storage research, coded Secrets; no record count.\nVictim: Hydro-Quebec, Quebec's provincially owned electric utility, NAICS 221111 (hydroelectric generation, from issue body 22111). Government Regional (provincial crown corporation). About 21,000 employees (company annual report figure, approximate) -> 10001 to 25000.\nAsset hosting unknown.",
+    "created": "2026-11-09T19:23:42Z",
+    "dbir_year": 2019,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse: proprietary research shared with Chinese institutions"
+      }
+    ],
+    "github": "22529",
+    "master_id": "3BD99010-7554-4191-9DD5-AE0A49AA526E",
+    "modified": "2026-11-09T19:23:42Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.nsnews.com/the-mix/hydro-quebec-seeks-to-shield-info-as-ex-employees-economic-spying-trial-begins-11308724; https://ca.finance.yahoo.com/news/hydro-spying-trial-delayed-court-210130492.html; https://amp.cbc.ca/news/canada/montreal/hydro-quebec-china-spy-1.6650832; https://globalnews.ca/news/11891747/yuesheng-wang-hydro-quebec-verdict/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Yuesheng Wang, a battery researcher at Hydro-Quebec's transportation electrification and energy storage centre (CETEES), is accused of using his position between February 2018 and October 2022 to pass proprietary Hydro-Quebec research to Chinese universities and research centres, publishing scientific papers and filing patents with them instead of with his employer. Hydro-Quebec's corporate security branch complained to the RCMP in August 2022, Wang was fired and was charged in November 2022 with economic espionage, fraudulent use of a computer, fraudulently obtaining a trade secret and breach of trust. His trial began in October 2025; the verdict had been postponed as of June 2026. He has pleaded not guilty.",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 4
+    },
+    "incident": {
+      "month": 2,
+      "year": 2018
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "221111",
+    "region": [
+      "019021"
+    ],
+    "state": "QC",
+    "victim_id": "Hydro-Quebec"
+  }
+}

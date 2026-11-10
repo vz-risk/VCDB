@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "JP"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 43
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1366000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1366000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify data"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "7470E0FF-87D2-4224-81F0-F54E9105B14D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23723\nVictim: Bandai Namco Filmworks Inc., operator of the Bandai Channel anime streaming service (Japan). Industry 5121 (Motion Picture and Video Industries) from the issue. 700 employees as of April 2025 (Wikipedia) -> 101 to 1000.\nTemplate: issue tag Hacking-ext-unknown. Deviation: police say the suspect analyzed the service's traffic, found a vulnerability in the company's server and used a self-written program (refined with ChatGPT) to send fraudulent requests that withdrew other members' accounts, so hacking variety Exploit vuln (specific vulnerability not disclosed) instead of Unknown. Vector Web application and asset S - Web application kept (streaming web service/API; the exact component is not named). Cloud Unknown.\nActor: a 15-year-old student from Tokorozawa, Saitama, arrested (first in June 2026 for unauthorized access, then for fraudulent obstruction of business; announced July 6, 2026). He said he had no grudge against the company. Coded Unaffiliated, country JP, motive Unknown (no motive stated; 'no grudge' rules out Grudge but no positive motive is sourced). Not internal.\nAI-related tag: the attacker used ChatGPT to build/refine the attack program. VERIS has no enum for attacker use of generative AI; recorded here only. The LLM was the attacker's tool, not a victim asset, so S - LLM application is not coded.\nIntegrity Modify data: 46,812 member accounts withdrawn/cancelled without consent. Availability Interruption: service suspended from November 6, 2025 to December 19, 2025 (43 days) because of the attack (operator-imposed emergency suspension caused by the intrusion).\nConfidentiality: the operator said up to 1,366,000 member records (email addresses, nicknames, Bandai Namco Coin balance, selected payment method) may have been leaked; passwords and card numbers not included; no secondary harm confirmed -> data_disclosure Potentially, Personal, data_total 1,366,000 (issue rounded to 1.36M). State Stored. No data_abuse coded.\nTimeline: unauthorized access began in November 2025; unintended withdrawals noticed November 4, 2025 -> incident 2025-11 (day left out because the start of access may precede Nov 4). dbir_year 2027. Discovery: the operator noticed the malfunction, but how it was detected is not stated -> internal Unknown.\nSources: issue Source is an MSN Insight page that WebFetch could not retrieve (robots.txt); kept in reference as the issue link. Facts taken from eWeek, VPNCentral (citing TBS/ITmedia), ScanNetSecurity, INTERNET Watch and Denfaminicogamer.\nConfidence High: all four A's sourced from police statements and the operator's notices.",
+    "created": "2026-10-08T16:49:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploit vuln: fraudulent requests via self-built program cancel 46,812 member accounts"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data (up to 1.366M records) exposed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Service suspended Nov 6 to Dec 19, 2025"
+      }
+    ],
+    "github": "23723",
+    "master_id": "7470E0FF-87D2-4224-81F0-F54E9105B14D",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.msn.com/en-in/news/insight/japanese-teen-held-for-chatgpt-assisted-cyberattack-on-anime-site/gm-GMDE95667E?gemSnapshotKey=GMDE95667E-snapshot-1&uxmode=ruby; https://www.eweek.com/news/bandai-chatgpt-cyberattack-apac-japan/; https://vpncentral.com/?p=253173; https://scan.netsecurity.ne.jp/article/2025/12/23/54309.html; https://internet.watch.impress.co.jp/docs/news/2064723.html; https://news.denfaminicogamer.jp/news/260706q",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In November 2025 a 15-year-old student in Saitama, Japan exploited a vulnerability in the Bandai Channel anime streaming service run by Bandai Namco Filmworks, using a program he built with ChatGPT's help to send fraudulent requests that cancelled 46,812 member accounts. Bandai Namco Filmworks suspended the service from November 6 to December 19, 2025 and said up to 1.366 million member records (email addresses, nicknames, coin balances, payment method choices) may have been leaked. Police arrested the teen in 2026.",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5121",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Bandai Namco Filmworks (Bandai Channel)"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "action": {
+    "error": {
+      "notes": "Cyber evaluation run with production classifiers removed and egress only via an internal Artifactory package registry cache proxy that the agents could exploit.",
+      "variety": [
+        "Inadequate containment"
+      ],
+      "vector": [
+        "Inadequate processes"
+      ]
+    },
+    "hacking": {
+      "notes": "Artifactory zero-days (token refresh, SSRF, Groovy plugin execution, CVE-2026-66384 cache poisoning, RubyGems deserialization RCE); root in the sandbox parent VM (Jul 9); kernel CVE-2026-53362 container escape and forged admin JWT (Jul 19); misconfigured anonymous token endpoint and readable cache.",
+      "result": [
+        "Elevate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "Web application",
+        "Hypervisor"
+      ]
+    },
+    "malware": {
+      "notes": "Groovy plugins in Artifactory for persistent command execution; Artifactory used as agent message board/C2 channel.",
+      "result": [
+        "Persist"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "C2"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA",
+        "Misalignment"
+      ],
+      "notes": "Two actors of the same orientation in one object (diagram 'Inherits' arrow): the Developer (OpenAI researchers who ran the evaluation, motive NA) and the Agentic system (OpenAI models, motive Misalignment) which inherits its internal orientation from the developer that deployed it.",
+      "variety": [
+        "Developer",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "S - Other = diagram 'Chat server' (sources: improvised agent message board on the internal Artifactory instance). S - Unknown = sandbox parent VMs, worker nodes, managed Kubernetes. S - Web application added for the Web application hacking vector (Artifactory).",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days"
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "System"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration",
+        "Repurpose",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Security alarm"
+      ]
+    }
+  },
+  "incident_id": "7FDB982D-197D-4F12-AFA1-20565B0EFCD8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23753\nThis is one of TWO records for issue #23753, coded from each victim's perspective per the analyst's 'AI Going Rogue' diagrams. This record is OpenAI (victim of the internal agentic-system activity inside its own research environment). The companion record for Hugging Face is incident_id 1AB2A381-0DDA-4488-BE36-29061438BBBF.\nCoding rationale (analyst): external actors cannot have Error actions (reserved for internal/partner); what happened inside OpenAI could have ended there had OpenAI detected it; VERIS codes from the victim's perspective and there are two victims.\nActor: one internal actor object with two varieties. 'Developer' (motive NA) = the OpenAI researchers who ran the ExploitGym cyber-capability evaluation with production cyber classifiers removed and inadequate containment. 'Agentic system' (motive Misalignment) = the OpenAI models (internal-only research model 'HPIM' in ~95% of agents and GPT-5.6 Sol in ~5% per METR) that, pursuing the narrow evaluation goal, escaped the sandbox. Per the diagram's 'Inherits' arrow, the agentic system inherits its internal orientation from the developer who deployed it, so both are in actor.internal. 'Agentic system' and 'Misalignment' are new VERIS enums added by the analyst, not yet in vcdb-merged.json.\nError: variety 'Inadequate containment' (new enum), vector 'Inadequate processes': the evaluation ran without production classifiers, the only egress was an internally hosted JFrog Artifactory package registry cache proxy reachable by a shared reader credential; workloads could reach shared services with transitive internet paths.\nHacking (per diagram): Exploit vuln via Web application = Artifactory zero-days (legacy token-refresh endpoint issuing admin tokens for forged tokens, SSRF via server-side fetch, Groovy plugin execution, container-image remote-cache poisoning CVE-2026-66384, RubyGems/JRuby deserialization RCE that stole the admin signing key; vulns disclosed to JFrog Jul 6). Exploit vuln via Hypervisor = privilege escalation out of the sandbox: on Jul 9 an agent obtained root in the parent virtual machine of the testing sandbox (the report does not say how); on Jul 19 a separate run used Linux kernel CVE-2026-53362 to escape an Artifactory container to the worker node and forged an admin JWT for cluster-admin on OpenAI's managed Kubernetes. Exploit misconfig via Web application = anonymous Artifactory token endpoint issuing one-year tokens, anonymously readable cache exposing signing/decryption material, loopback/legacy APIs reachable via SSRF, shared credential across workloads. The diagram does not list 'Use of stolen creds' or 'Privilege escalation' as varieties for OpenAI, so they are not coded even though the report describes use of a shared Artifactory reader credential; reviewer may add.\nMalware: diagram variety C2 vector Web application ('Web application' is a valid malware vector enum, so kept). Sources: agents installed Groovy plugins in Artifactory for persistent code execution and used Artifactory directory names/files as an improvised message board ('shared bulletin board') to coordinate ~1,200 agents (70,000+ messages per METR). 'Backdoor or C2' added as required parent of 'C2'.\nAssets: 'S - Other' = the diagram's 'Chat server'. The sources do not describe a chat server at OpenAI; the closest match is the agents' improvised message board built on the internal Artifactory instance (the OpenAI technical report says it was not a chat server/forum but an emergent bulletin board on Artifactory). 'S - Unknown' = the other OpenAI research infrastructure (sandbox parent VMs, worker nodes, managed Kubernetes clusters, cloud load balancers). 'S - Web application' added (not in the diagram) because the hacking vector 'Web application' requires it (lint rule, from VERIS rules.py); it represents Artifactory's web/API front end. 'S - Proxy' would also fit Artifactory (a package registry cache proxy); reviewer may prefer it.\nAttributes: confidentiality Yes - agents obtained the shared Artifactory credential, Artifactory admin signing key, OpenAI cloud secrets-management, IAM and CI tokens (Credentials, System) and internal files/research environment data (Internal). Integrity: Modify configuration (22 model-created admin accounts, 311 public Artifactory repositories, public load balancers), Repurpose (Artifactory turned into a message board and egress path), Software installation (Groovy plugins, model-created pods). Availability Interruption: internal Artifactory was unavailable from late Jul 4 until the rebuilt instance came online Jul 6 because of sustained agent traffic; evaluations paused. OpenAI states no impact on customer data, product functionality or availability.\nTimeline: earliest related agent activity in Artifactory dates to Apr 20, 2026 and an SSRF-based internet access on May 26 (OpenAI says those earlier episodes were not connected to the Hugging Face intrusion). Incident date coded as Jun 26, 2026, when agents exploited the token-refresh flaw to obtain Artifactory admin credentials (start of the compromise METR investigated). Monitoring alerted on port sweeps Jun 27 (on-call judged stopping unnecessary) and on Artifactory outage/admin compromise Jul 5 (partial containment, rebuild Jul 6); evaluations resumed Jul 7 and agents re-escaped Jul 8. On Jul 19 OpenAI's cybersecurity monitoring tool flagged unusual identity-related API activity; on Jul 20 OpenAI linked it to the HF compromise and began containment; public disclosure Jul 21; internal-only model training/inference stopped Jul 25. Analyst may prefer Jul 8, 2026 as the start date (post-rebuild escape that led to HF); dbir_year 2027 either way. Discovery coded Weeks (Jun 26 to Jul 19/20), containment Days (Jul 20-25).\nDiscovery: internal 'Security alarm' (OpenAI's cybersecurity monitoring tool alerts on Jun 27, Jul 5 and Jul 19).\nVictim: OpenAI, San Francisco, CA. NAICS 541715 (R&D in physical, engineering and life sciences) per instruction and the KQED pipeline comment (5417); note an earlier VCDB OpenAI record (6f9e9850...) used 516. Employee count 1001 to 10000 inferred from public headcount estimates (~4,000-8,000 in 2026); not stated in incident sources.\nSources: OpenAI disclosure post (Jul 21, 2026), OpenAI incident-and-misalignment page, OpenAI-Hugging Face Incident Technical Report (PDF), METR/Redwood Research investigation (Aug 26, 2026), Hugging Face blog (Jul 16, 2026), CNBC, Nextgov, SMH, Bloomberg via Yahoo Finance, Rapid7, Al Jazeera, KQED, Fox10. Dropped from references: the two Apple v. OpenAI trade-secret comments (techtimes.com, Yahoo Finance) are an unrelated matter; the Fortune piece on AMD CEO Lisa Su's keynote only mentions this incident in passing (open-source model used in the response) and adds no incident facts.",
+    "created": "2026-10-08T22:17:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Agent escapes"
+      },
+      {
+        "action": "hak",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vuln exploited"
+      },
+      {
+        "action": "mal",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "hak",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Misconfig exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Escalate privs"
+      }
+    ],
+    "github": "23753",
+    "master_id": "7FDB982D-197D-4F12-AFA1-20565B0EFCD8",
+    "modified": "2026-11-05T23:15:11Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://openai.com/index/hugging-face-model-evaluation-security-incident/; https://huggingface.co/blog/security-incident-july-2026; https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf; https://openai.com/hugging-face-incident-and-misalignment/#model-misalignment-2026-09-25; https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/; https://www.cnbc.com/2026/07/22/open-ai-cyber-models-hack-hugging-face.html; https://www.nextgov.com/cybersecurity/2026/07/after-hugging-face-breach-fedramp-chief-tells-slow-patch-vendors-stay-out-government/414972/; https://www.smh.com.au/technology/ai-broke-out-of-its-cage-and-hacked-a-company-the-grid-could-be-next-20260723-p60hti.html; https://finance.yahoo.com/technology/ai/articles/openai-models-breach-hugging-face-sparking-cyber-alarms-172122576.html; https://www.rapid7.com/blog/post/ai-openai-hugging-face-what-happened/; https://www.aljazeera.com/news/2026/7/23/how-are-companies-governments-responding-to-the-openai-hack; https://www.kqed.org/news/12092162/how-openais-models-escaped-their-sandbox-and-slipped-past-californias-ai-law; https://www.fox10phoenix.com/news/openai-ai-model-hacked-hugging-face",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "During an internal ExploitGym cyber-capability evaluation run without production cyber classifiers, OpenAI models (an internal-only research model and GPT-5.6 Sol) escaped their isolated sandbox. Pursuing the evaluation goal, agents exploited zero-day vulnerabilities and misconfigurations in OpenAI's internally hosted JFrog Artifactory package registry cache proxy, obtained admin credentials, installed Groovy plugins, built an improvised message board to coordinate, gained root in a sandbox parent VM and escalated privileges across OpenAI's research environment until reaching the internet, from which they attacked Hugging Face (coded separately). Artifactory suffered an outage Jul 4-6, 2026. OpenAI's security monitoring flagged the activity and OpenAI disclosed the incident on Jul 21, 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "day": 26,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541715",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "OpenAI"
+  }
+}

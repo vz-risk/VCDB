@@ -1,0 +1,165 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - DNS"
+      },
+      {
+        "variety": "S - Other"
+      },
+      {
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1000
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "6996134F-68E3-4A21-B028-E44CDAEE9B8A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22927\nThe issue is tagged Malware-ext-Ransomware-databreach, but no source reports data theft, a leak-site listing or an exfiltration claim, so this was coded with the Malware-ext-Ransomware-nobreach template instead (data_disclosure Potentially, chain ends on encryption). Change to Yes if a leak claim surfaces.\nMalware: attackers abused the built-in Windows BitLocker tool to encrypt about 1,000 systems and left a ransom note demanding contact within 7 days. Coded Ransomware (encryption for ransom), Software installation per template, Obscuration and Interruption (email outage forced staff onto phones and radio). No group named; Organized crime / Financial are template defaults.\nAssets: GIS servers (S - Other), databases, email, web services, DNS servers and Windows workstations (U - Desktop with parent). total_amount 1,000 systems. Hosting appears to be the agency's own infrastructure (On-Premise). Asset role IT: DNSC and the agency say OT systems controlling water infrastructure were not affected, so OT was not coded.\nTimeline: BleepingComputer and The Register say the attack hit over the weekend, starting Saturday Dec 20, 2025; DNSC statement Sunday Dec 21. Incident date Dec 20, 2025 -> dbir_year 2027 (Nov/Dec rule).\nDiscovery: ransom note (Actor disclosure per template).\nVictim: national water management authority (government Federal). NAICS 221310 from the issue body. Over 8,700 employees (G4Media) -> 1001 to 10000.",
+    "created": "2026-11-09T19:29:01Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (not disclosed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "BitLocker abused as ransomware"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "About 1,000 systems encrypted"
+      }
+    ],
+    "github": "22927",
+    "master_id": "6996134F-68E3-4A21-B028-E44CDAEE9B8A",
+    "modified": "2026-11-09T19:29:01Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/romanian-water-authority-hit-by-ransomware-attack-over-weekend/; https://therecord.media/romania-national-water-agency-ransomware-attack; https://www.dnsc.ro/citeste/comunicat-presa-atac-cibernetic-ransomware-apele-romane; https://www.theregister.com/2025/12/22/around_1000_systems_compromised_in/; https://securityaffairs.com/186010/cyber-crime/romanian-waters-confirms-cyberattack-critical-water-operations-unaffected.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Romanian Waters (Administratia Nationala Apele Romane), the national water management authority, was hit by ransomware over the weekend of December 20-21, 2025. About 1,000 computer systems at headquarters and 10 of its 11 regional water basin administrations were affected, including servers running GIS, databases, email, web services, DNS and Windows workstations. The attackers abused Windows BitLocker to encrypt systems and left a note demanding contact within seven days. Operational technology controlling hydrotechnical infrastructure was not affected; dispatch centres coordinated facilities by phone and radio. No group was named and no data theft was reported.",
+  "timeline": {
+    "incident": {
+      "day": 20,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "RO"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "221310",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Administratia Nationala Apele Romane (Romanian Waters)"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "DataSuckers"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7900000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7900000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Defacement",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "764F27B1-B499-47ED-A59A-20D9C9C4FB92",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24472\nTemplate deviation: issue is tagged Malware-ext-Ransomware-databreach, but The Record (the only source) describes an extortion demand posted on ATB's website and a data-theft/sale threat; it does not mention ransomware, encryption or any malware. Coded as hacking (variety Unknown, vector Web application) plus social Extortion rather than malware Ransomware. The issue body's 'ransomware attack ... in early 2025' is wrong on both points: the attack was confirmed Oct 5, 2026.\nIntegrity Defacement: the extortion countdown appeared on ATB's own website (later removed). Availability Interruption: the website was unavailable and ATB took some online services offline. Alter behavior + P - Unknown added for the extortion demand (target/vector of the demand: the countdown on the website, so social vector Web application).\nData scope is attacker-claimed and not victim-confirmed (ATB denies customer data was compromised): 7.9M customer records (names, phones, emails, addresses, password hashes -> Personal, Credentials), employee passport data (Personal), 11M+ order records (Internal). Samples were posted on Telegram. data_disclosure coded Yes because access to ATB's web system is confirmed by the defacement and samples were published; reviewer may prefer Potentially given ATB's denial. data_total omitted (employee count unknown, 7.9M is customers only). data_abuse 'Yes - Data ransomed' for the extortion/sale threat.\nActor DataSuckers: self-described financially motivated crew with multiple victims (Dodo Pizza, Tez Tour) -> Organized crime / Financial; Russian-speaking but location unclear -> country Unknown.\nTimeline: attack date not given; confirmed Monday Oct 5, 2026, coded 2026-10 -> dbir_year 2027. NAICS 445110 (Supermarkets) refines the issue's 4451. Employees: The Record says 60,000+ (50001 to 100000). Victim coded as ATB-Market (the operating company of the ATB chain).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T22:19:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to ATB web systems, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer, employee and order data claimed stolen"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Extortion countdown posted on ATB website (defacement)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand for $400,000"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Website unavailable, services taken offline"
+      }
+    ],
+    "github": "24472",
+    "master_id": "764F27B1-B499-47ED-A59A-20D9C9C4FB92",
+    "modified": "2026-11-05T22:19:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/atb-ukraine-cyberattack-ransomware",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ATB-Market, Ukraine's largest grocery chain, confirmed a cyberattack on October 5, 2026 after the DataSuckers group posted a $400,000 extortion countdown on ATB's website. The group claimed to have stolen records of 7.9 million customers (names, phone numbers, email and physical addresses, password hashes), employee passport information and more than 11 million order records, published samples on Telegram, and said it would sell the database. ATB took some online services offline, denied that customer data was compromised and said its website remained under its control.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "UA"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "ATB-Market"
+  }
+}

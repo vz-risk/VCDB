@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ExfilSquad"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2600000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "E67D64AA-C28B-4B91-8D51-45AA155407CC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24521\nPartner_Breach label not applied: sources show the compromised asset was Wesco's own cloud CRM tenant. Wesco says it 'worked with our cloud CRM vendor' (unnamed, possibly Microsoft Dynamics 365) on the response, but nothing says the vendor was breached or that any other vendor customer was affected. Coded with Wesco as the normal primary victim; no Partner vector.\nNAICS changed from 4244 to 423610 because 4244 is Grocery Merchant Wholesalers; Wesco is an electrical/communications products distributor (Electrical Apparatus and Equipment Merchant Wholesalers).\nTemplate Hacking-ext-unknown followed. Method not disclosed by Wesco; researchers (Resecurity, VenariX) note ExfilSquad has abused misconfigured Microsoft Power Pages data tables, which would point to Exploit misconfig, but that is about the group's past MO, not confirmed for Wesco -> variety Unknown. cloud External Cloud Asset(s) (cloud CRM).\nExtortion: ExfilSquad ran a ransom negotiation and published data after the deadline -> social Extortion with target/vector Unknown, Alter behavior, P - Unknown, data_abuse 'Yes - Data ransomed'. Wesco said nothing about refusing; publication implies no payment.\nData (attacker claim, Wesco says no sensitive data at risk): customer and employee PII, account/contact data, CRM user profiles, credit and business identifiers, authentication metadata (Personal, Internal). Credentials not coded because 'authentication metadata and access information' is not clearly credentials. data_total 2,600,000 = claimed total CRM records, unverified.\nDiscovery: Wesco says the incident 'was detected quickly' -> internal, variety Unknown; it is also possible it learned from the actor's claim. Date: claim and confirmation August 2026 (BleepingComputer Aug 11, 2026); intrusion month unknown -> year 2026 only, dbir_year 2027. Employees ~21,000 per BleepingComputer.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T22:19:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to cloud CRM, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "2.6M CRM records claimed exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Ransom demand, data published after deadline"
+      }
+    ],
+    "github": "24521",
+    "master_id": "E67D64AA-C28B-4B91-8D51-45AA155407CC",
+    "modified": "2026-11-05T22:19:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/wesco-investigates-cybersecurity-incident-after-data-extortion-group-claims-breach; https://bleepingcomputer.com/news/security/wesco-confirms-security-incident-after-exfilsquad-claims-data-theft",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Wesco International, a Pittsburgh-based Fortune 500 distributor of electrical, communications and utility products, investigated a security incident in its cloud CRM environment after the data extortion group ExfilSquad claimed in August 2026 to have stolen about 2.6 million records containing customer and employee personal information, account and contact data, CRM user profiles and authentication metadata. ExfilSquad published the data after its ransom negotiation deadline expired. Wesco said it worked with its cloud CRM vendor, found no ransomware or malware, had no business disruption and does not believe payment card, financial account or other sensitive data is at risk.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "423610",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Wesco International"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    },
+    "social": {
+      "target": [
+        "Executive",
+        "Other employee",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Email",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "PH"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Edison Walthour"
+      ],
+      "region": [
+        "142035"
+      ],
+      "variety": [
+        "Former employee"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - Other employee"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 900000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 60,
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 900000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "89EEAC45-2EA9-43A1-B6AD-61FD0E14881F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22634\nThis is the July 2026 incident added to issue 22634 in later comments. The issue's original article (October 2025, 732 card details emailed by an Origin employee) is a different incident and is coded as a separate record.\nPartner_Breach tag: coded from the partner's perspective per the project rule. Primary victim is Accenture, which runs Origin's offshore call centres and billing/customer support from Manila; Origin Energy is the secondary victim. A reviewer may prefer Origin as primary, since the data sat in Origin's Kraken customer platform and Accenture's own systems were not breached; the partner relationship (credentials of a dismissed Accenture worker left active) is the reason it was coded this way.\nActor: external, variety Former employee. The AFR and ABC (citing Nine) say investigators traced it to a former Accenture employee in Manila who intended to extort Origin; Insurance Business says the credentials of a dismissed employee were reportedly still active on the vendor-operated Kraken platform. Country PH from the Manila link (investigative reporting, not a charge). Name: the alias Edison Walthour used in contact with The Australian. Motive Financial (extortion intent).\nAction: Hacking Use of stolen creds (a former worker's still-active login; no source describes it as the actor's own current authorised access) with vector Partner, because the access path ran through the outsourced provider's accounts. Template tags Misuse-prt-privabuse and Hacking-ext-unknown were both on the issue; Misuse was not coded because the individual was no longer employed when the access occurred.\nSocial Extortion: the AFR says the individual wanted money in exchange for returning the information, and the actor told The Australian 'we already settled everything with Origin Energy privately'. Origin has not confirmed any payment. Targets were board members, security staff and customer care staff (Insurance Business), so Executive, Other employee and End-user or employee; vector Email plus Unknown. data_abuse Yes - Data ransomed.\nData: Origin says about 900,000 current and former customers' information was accessed: names, addresses, emails, DOB, phone numbers, billing histories, last four card digits or BSB plus last three bank digits (Rescana), about 60 full bank account numbers and about 100 ID document numbers (Information Age). Coded Personal 900,000 and Bank 60; data_total 900,000.\nAsset: S - Database for the Kraken customer management platform (vendor-operated SaaS, so External Cloud Asset(s)). People assets for the extortion targets.\nTimeline: Origin learned of a potential threat in early July (first actor contact July 2, 2026), confirmed it July 22 and announced July 23. Insurance Business says the attacker had about three weeks undetected; the start date is not given, so only year 2026 is coded. Discovery about 3 weeks. dbir_year 2027.\nDiscovery: Actor disclosure (the actor contacted Origin and the media with samples).\nVictim: Accenture plc, headquartered in Dublin (IE), about 779,000 employees -> Over 100000; NAICS 541512. Origin Energy NAICS 2211 from the issue.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-09T19:26:12Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds: former worker login on Kraken platform; customer data taken"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand to Origin board and staff"
+      }
+    ],
+    "github": "22634",
+    "master_id": "89EEAC45-2EA9-43A1-B6AD-61FD0E14881F",
+    "modified": "2026-11-09T19:26:12Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.insurancebusinessmag.com/au/news/cyber/origin-silent-on-settlement-as-alleged-fired-employee-breach-detail-emerges-583626.aspx; https://www.smh.com.au/business/companies/origin-energy-says-900-000-customers-had-their-data-hacked-20260728-p60j6y.html; https://www.sbs.com.au/news/article/origin-data-breach-customers/8immypep2; https://www.theaustralian.com.au/business/technology/origin-energy-says-its-initial-review-has-found-900000-customers-hit-by-major-data-breach/news-story/183ba1a29c36f018e279a4e0b3ddecb7; https://www.reuters.com/business/energy/australias-origin-energy-flags-possible-data-exposure-about-900000-customers-2026-07-28/; https://www.rescana.com/post/origin-energy-data-breach-2026-analysis-of-cybersecurity-incident-affecting-900-000-customer-accounts; https://insuranceasianews.com/origin-energy-data-breach-signals-tightening-cyber-insurance-market/; https://www.abc.net.au/news/2026-08-18/origin-energy-hack-traced-to-accenture-manila-office/107049188; https://www.afr.com/technology/origin-hack-investigation-points-to-offshore-accenture-employee-20260817-p60oxo; https://ia.acs.org.au/article/2026/origin-energy-reveals-full-bank-account-numbers-exposed.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A former Accenture employee in Manila, where Accenture runs call centres and billing and customer support for Origin Energy, used login credentials that were reportedly still active on the vendor-operated Kraken customer management platform after the individual was dismissed. The intruder accessed data on about 900,000 current and former Origin customers (names, addresses, emails, dates of birth, phone numbers, billing histories, partial card and bank numbers, about 60 full bank account numbers and about 100 ID document numbers). From July 2, 2026 the individual contacted Origin board members, security and customer care staff and the media with sample records, seeking money in exchange for the data; Origin disclosed the breach to the ASX on July 23, 2026. The individual later claimed the matter had been 'settled privately'.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IE"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "150154"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Origin Energy; 2211"
+      ]
+    },
+    "victim_id": "Accenture"
+  }
+}

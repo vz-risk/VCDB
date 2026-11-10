@@ -1,0 +1,116 @@
+{
+  "action": {
+    "unknown": {
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "unknown": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "402A46BE-0B90-4747-97F5-078E70E55E26",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20309\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Issue tagged Misuse, but the sources only say the investigation 'may involve an employee'; no misuse is confirmed, so actor and action are Unknown (action.unknown). Reviewer may change to internal Misuse if a later regulator filing confirms it. Customer funds lost (amount undisclosed) -> Virtual currency, data_victim Customer. Availability Interruption (trading/withdrawals frozen). Victim CA (Alberta), NAICS 523150, headcount Unknown. Timeline: Dec 2023 -> dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Customer funds lost, method and actor unknown"
+      },
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Trading and withdrawals frozen"
+      }
+    ],
+    "github": "20309",
+    "master_id": "402A46BE-0B90-4747-97F5-078E70E55E26",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.coindesk.com/policy/2023/12/28/crypto-exchange-catalyx-suspends-trading-withdrawals-following-security-breach/; https://cointelegraph.com/news/canadian-crypto-exchange-catalyx-suspends-withdrawals-halts-trading-security-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In December 2023 Canadian crypto exchange Catalyx, operated by CatalX CTX Ltd., froze trading, deposits and withdrawals after a security breach in which some customer funds were lost. The Alberta Securities Commission ordered a trading halt on December 21 and the CEO consented to a 15-day freeze order. The investigation may involve an employee; the amount lost was not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "CatalX CTX Ltd. (Catalyx)"
+  }
+}

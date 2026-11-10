@@ -1,0 +1,194 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Long-lived plaintext admin credentials (shared-cluster admin tokens, AWS keys, old GCP service account key) used from the public internet; root SSH sign-ins to 101 GCP dedicated servers using plaintext root passwords from GCP init settings; SSH keys added to 50 servers for persistence.",
+      "result": [
+        "Infiltrate",
+        "Persist",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other network service",
+        "Command shell"
+      ]
+    },
+    "malware": {
+      "notes": "Program planted in at least 2 customer PostgreSQL databases (Tokyo region) that connected to an external host.",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Secrets vault"
+      },
+      {
+        "variety": "S - Backup"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 321810,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 321810,
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored",
+        "Stored unencrypted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Modify authentication"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "22ED937E-7B10-4A57-BFA2-65E3CA559716",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24577\nScope: the issue describes Zeabur's October 14-15, 2026 breach (its record count 3.2M and 321,810 accounts are October figures) and mentions an earlier August 2026 breach. The two are distinct incidents (different dates, entry vectors and credentials; Zeabur itself only hypothesizes the October credentials came from August), so they are coded as two records, both closing #24577. This record is the October incident; the August one is a separate file.\nTemplate Hacking-ext-unknown, deviated: Zeabur's preliminary report gives the method, so hacking variety Use of stolen creds (not Unknown). Origin of the credentials is not confirmed (hypothesis: GitHub App private key read in August used to download a config repo with plaintext tokens). Vector: Other network service (shared-cluster admin interface and cloud provider APIs reachable from the public internet) and Command shell (root SSH sign-ins to 101 GCP dedicated servers using plaintext root passwords from init settings) instead of the template's Web application; asset S - Web application dropped for the same reason. Added a malware action (variety Unknown, Direct install): Zeabur found a program planted in at least 2 customer PostgreSQL databases that connected to an external host; its function is not described, so not coded as C2. Integrity: Software installation (planted program) and Modify authentication (attacker SSH keys added to 50 servers). Also reported but not separately coded: attacker created 5 VMs in Zeabur's GCP project and attached 16 copies of customer disks, added a rogue Tailscale node, impersonated two accounts via the API (no changes made), downloaded a customer DB backup.\nAssets: platform DB and 865 customer database services (S - Database), AWS secrets management (~53 production secrets; S - Secrets vault), customer DB backups (S - Backup), shared Kubernetes clusters in 9 regions and GCP dedicated servers (S - Other). All cloud-hosted (AWS, GCP, Hetzner, DigitalOcean) -> External Cloud Asset(s).\nData: 321,810 accounts (email, username, phone, project/service data) -> Personal 321,810; 3,218,965 environment-variable records (names and values incl. customer passwords, API keys, DB credentials), 566 plaintext zSend API keys, 11,536 hashed platform tokens -> Credentials, API key; Zeabur's own internal secrets/config -> Internal. data_total 321,810 (accounts; set by rules.py from the max data amount): the 3.2M figure in the issue counts environment-variable records, not people, so it is not used as data_total. State Stored + Stored unencrypted (admin credentials, root passwords and zSend keys stored in plaintext per Zeabur). data_victim Customer and Victim organization.\nActor: unidentified external. Motive Financial: Zeabur states the attacker was mainly looking for directly usable API keys, especially for AI services, attempted (failed) Amazon Bedrock calls with Zeabur's AWS keys, and a user's OpenAI key was possibly misused for ~1,107 image requests (Zeabur calls this a hypothesis); a credential rotated during the incident was later used without authorization -> data_abuse Yes. Reviewer may prefer motive Unknown. No ransom demand reported.\nTimeline: earliest known attacker activity Oct 14 01:36 UTC (attacker-linked IP in API logs from Oct 10, failed SSH Oct 13; unknown root sign-ins Sept 1-5 not confirmed as linked). Discovery Oct 15 13:56 from a user report (~36 hours; no alerts fired) -> external Customer. Containment: SSH blocked 20:36 and last activity 21:05 on Oct 15 (~8 hours after discovery). dbir_year 2027.\nVictim: Zeabur (Taiwan; team across Taiwan and Silicon Valley). NAICS changed from 5112 to 518210 because Zeabur is a cloud hosting/deployment platform (PaaS), not a software publisher. Employees: Cybernews says Zeabur lists seven employees -> 1 to 10. Customers (individual developers and organizations, unnamed) are affected downstream; not listed in victim.secondary as none are named. Zeabur announced shutdown of all services by December 31, 2026.\nNote for reviewer: attacker targeted AI-service API keys (LLM-jacking style) on a platform marketed for AI/vibe-coding apps, but the core story is a hosting-provider credential breach, not AI misuse.\nConfidence High: Zeabur's detailed preliminary report plus BleepingComputer and Cybernews.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2026-11-05T22:18:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen plaintext admin creds (cluster, AWS, GCP root)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "SSH keys added to 50 servers for persistence"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Program planted in customer PostgreSQL databases"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Platform DB, secrets, env vars and backups read"
+      }
+    ],
+    "github": "24577",
+    "master_id": "22ED937E-7B10-4A57-BFA2-65E3CA559716",
+    "modified": "2026-11-05T22:18:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/; https://zeabur.com/en-US/blogs/october-2026-security-incident; https://cybernews.com/news/zeabur-cloud-provider-shutdown-two-breaches-3-million-records/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On October 14-15, 2026 an unidentified attacker used long-lived admin credentials that Zeabur, a Taiwanese developer hosting/deployment platform, stored in plaintext (shared-cluster admin tokens, AWS and GCP keys, and plaintext root passwords for GCP dedicated servers) to access shared clusters in nine regions, 101 customer dedicated servers, internal secrets management, customer database containers and backups, and the platform database. Data for 321,810 accounts and about 3.2 million environment-variable records (including customer passwords, API keys and database credentials) were read. The attacker added SSH keys to 50 servers and planted a program in customer databases. A user report led to discovery about 36 hours after the first activity. It was Zeabur's second breach in two months, and the company announced it would shut down by December 31, 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Hours",
+      "value": 8
+    },
+    "discovery": {
+      "unit": "Hours",
+      "value": 36
+    },
+    "exfiltration": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 14,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Zeabur"
+  }
+}

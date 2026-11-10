@@ -1,0 +1,119 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Call center"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 30,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 30,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "DE217FCC-57F8-437E-A262-FA0BCE816AEF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23025\nTemplate Misuse-int-privabuse followed (internal actor, Privilege abuse). Actor kept internal per the tag and the style guide (an individual contractor working as staff), variety Call center because the access was through the support interface (closest fit; reviewer may prefer Other). Motive Unknown: Telegram screenshots suggest the data reached threat actors, but whether the contractor sold it is not stated. Template vector LAN access and asset U - Desktop or laptop changed to Unknown/S - Unknown since the contractor's location and the support-tool asset are not described.\nData: names, emails, phones, KYC info -> Personal, 30 = data_total. Credit monitoring/identity theft protection offered. Discovery internal (Coinbase's security team detected it), variety Unknown.\nVictim NAICS 523150 (crypto exchange; issue gives 522320). Headcount 1001 to 10000 (Coinbase has roughly 3,700-4,000 staff). dbir_year 2027 (December 2025 is past the Nov 1 cutoff).",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes"
+      }
+    },
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Contractor accesses ~30 customer records without need"
+      }
+    ],
+    "github": "23025",
+    "master_id": "DE217FCC-57F8-437E-A262-FA0BCE816AEF",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/coinbase-confirms-insider-breach-affecting-30-customers",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Coinbase confirmed that in December 2025 a single contractor improperly accessed data of about 30 customers, including names, emails, phone numbers and KYC information. Coinbase's security team detected the access, the contractor no longer works for the company, and affected users were notified and offered identity theft protection. The disclosure followed Telegram posts by threat actors showing screenshots of an internal Coinbase support interface. The incident is separate from the earlier TaskUs-related breach.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Coinbase"
+  }
+}

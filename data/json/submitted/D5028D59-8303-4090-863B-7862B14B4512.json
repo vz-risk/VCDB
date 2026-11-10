@@ -1,0 +1,173 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Shakeeb Ahmed"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 3600000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 3600000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "D5028D59-8303-4090-863B-7862B14B4512",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20263\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Only Nirvana Finance (named in the issue title) is coded. The second victim, the unnamed Solana exchange (widely matched to Crema Finance, ~$9M), is a separate incident and needs its own issue/record.\nHacking Exploit vuln (smart-contract loophole with flash loan), vector Other, asset S - Other. Social Extortion: Ahmed demanded $1.4M against Nirvana's $300K bounty offer (no agreement); integrity Alter behavior, P - Unknown; data_abuse Yes - Data ransomed. Availability Interruption (Nirvana shut down).\nActor external Unaffiliated (lone individual, US). Impact $3.6M. Victim country/headcount Unknown. dbir_year 2023.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Flash-loan exploit of Nirvana contract"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "$3.6M taken"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "$1.4M demand to return funds"
+      }
+    ],
+    "github": "20263",
+    "master_id": "D5028D59-8303-4090-863B-7862B14B4512",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/ex-amazon-engineer-pleads-guilty-to-hacking-crypto-exchanges/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July 2022 Shakeeb Ahmed, then a senior security engineer at an international technology company, exploited a smart contract loophole in Solana-based Nirvana Finance, using a flash loan to buy ANA tokens at a low price and sell them higher, netting about $3.6 million. Nirvana offered a $300,000 bounty; Ahmed demanded $1.4 million and kept everything, and Nirvana shut down. The same month he hacked a second, unnamed Solana exchange for about $9 million. Ahmed pleaded guilty in December 2023 and agreed to forfeit over $12.3 million.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Nirvana Finance"
+  }
+}

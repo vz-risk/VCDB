@@ -1,0 +1,144 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Customer"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - Customer"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3759,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3759,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Misrepresentation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B6B6597F-BFCB-451C-930D-0122CA0E4A9E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20869\nNo template tag (issue tagged Social). Hacking Unknown: the actor gained access to the blog's mailing system and exported the list; how is not stated. Social Phishing via Email to subscribers (target Customer, P - Customer); integrity Alter behavior and Misrepresentation (emails sent as the Ethereum blog). No funds lost -> no Virtual currency coded.\nData: 3,759 subscriber email addresses -> Personal = data_total. Asset S - Mail (mailing service; provider not named), cloud Unknown. Actor external Unknown, motive Financial (crypto-drainer lure). Victim: Ethereum Foundation (Swiss non-profit, Zug), NAICS 813211 assumed; headcount Unknown. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Blog mailing list exported"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing emails sent to 35,794 addresses"
+      }
+    ],
+    "github": "20869",
+    "master_id": "B6B6597F-BFCB-451C-930D-0122CA0E4A9E",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.csoonline.com/article/2514063/over-35000-ether-subscribers-targeted-in-a-campaign-from-crypto-draining.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 23, 2024 a threat actor exported the Ethereum blog's mailing list (3,759 addresses), merged it with their own list and sent 35,794 phishing emails falsely claiming the Ethereum Foundation and Lido offered a 6.8% staking yield, linking to a crypto-drainer site. Ethereum disclosed the incident on July 2, said on-chain analysis showed no investor losses, blocked further sends and moved mail services to other providers.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 23,
+      "month": 6,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "CH"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "813211",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Ethereum Foundation"
+  }
+}

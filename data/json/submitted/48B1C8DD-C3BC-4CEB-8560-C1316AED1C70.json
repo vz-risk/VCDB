@@ -1,0 +1,176 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Krybit"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "48B1C8DD-C3BC-4CEB-8560-C1316AED1C70",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24136\nCoded from the Malware-ext-Ransomware-databreach template (issue tag). Victim is ProHealth Medical Group Pte Ltd (prohealth.sg), a private primary-care clinic group in Singapore founded in 1990 (11-13 clinics depending on source).\nSourcing: this is a leak-site claim only. Krybit listed ProHealth on its leak site on 2026-08-02 (ransomware.live, DeXpose) and claimed 114 GB of medical and administrative data. As of the latest coverage (ayinedjimi-consultants.fr, 14 Aug 2026, updated 7 Oct 2026) ProHealth had issued no statement and no Singapore authority (PDPC, CSA, MOH) had commented. security_incident is therefore 'Suspected', not Confirmed, and confidence is Low. Data varieties (Medical, plus parent Personal) and the 114 GB size are attacker-claimed and not victim-confirmed.\nIssue-data problems: the issue's Source link (narutoblog.odoo.com) is a generic roundup titled about a 'ShinyHunters ... August 2026 data breach wave' and could not be fetched (robots disallowed); it is kept in reference because it is issue-linked, but it is not a primary source. The issue's 'Record count: 21,000,000' is not supported by any source about ProHealth (it appears to be the roundup's aggregate figure) and was NOT coded; no record count is known, so data amount and data_total are omitted.\nActor: Krybit, a Babuk-derived RaaS operation first seen March/April 2026 that uses double extortion (Cyble profile) -> Organized crime, Financial. Actor country Unknown.\nTemplate deviations / judgment calls: (1) Encryption is NOT confirmed; ayinedjimi notes the claim does not say whether systems were encrypted. Ransomware variety with availability Obscuration + Interruption is coded per the template and Krybit's known MO; a reviewer may prefer hacking Unknown + extortion only. (2) Added action.social Extortion (P - Unknown, Alter behavior) because DeXpose reports threats to release data unless demands are met. (3) Initial access vector Unknown (event 1 unk/ext/srv/unk); Krybit affiliates commonly use valid accounts/RDP but nothing specific to this victim. (4) data_abuse 'Yes - Data ransomed' for the leak-site extortion.\nDates: leak-site posting 2026-08-02 is the only date; real intrusion likely earlier. Incident coded 2026-08 (month only); dbir_year 2027.\nEmployee count: JobStreet company profile lists 51-100 employees -> '11 to 100'. NAICS 6214 from the issue (Outpatient care centers) kept; 621111 (offices of physicians) would also fit a GP clinic chain.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:26Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed (claimed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "114 GB data copied (claimed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted (not confirmed)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak site"
+      }
+    ],
+    "github": "24136",
+    "master_id": "48B1C8DD-C3BC-4CEB-8560-C1316AED1C70",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://narutoblog.odoo.com/blog/tech-cyber-news-2/shinyhunters-ransomware-group-unleashes-august-2026-data-breach-wave-millions-of-records-stolen-across-healthcare-it-and-pharma-111; https://www.dexpose.io/krybit-ransomware-targets-singapores-prohealth-medical-group/; https://www.ransomware.live/id/d3d3LnByb2hlYWx0aC5zZ0BrcnliaXQ; https://ayinedjimi-consultants.fr/news/krybit-ransomware-prohealth-singapore-114go-donnees-medicales-2026; https://www.breachsense.com/breaches/prohealth-medical-group-data-breach/; https://cyble.com/threat-actor-profiles/krybit-ransomware-threat-actor/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Krybit ransomware group listed ProHealth Medical Group, a Singapore private primary-care clinic group, on its leak site on August 2, 2026, claiming to have stolen 114 GB of medical and administrative data and threatening to publish it unless demands were met. ProHealth had not publicly confirmed the attack as of mid-August 2026.",
+  "targeted": "Targeted",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "SG"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "6214",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "ProHealth Medical Group Pte Ltd"
+  }
+}

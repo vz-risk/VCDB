@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 450000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 450000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9A382187-E154-4A6A-B541-F23B9AE1F518",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21440\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Exploit vuln in the withdrawal function; Clipper explicitly denied a private-key leak. Vector Other, asset S - Other (DEX contracts), cloud Other. Pool funds -> data_victim Customer. Discovery external Security researcher (Fuzzland co-founder Chaofan Shou flagged it first). Impact $450K. Operator Shipyard Software Inc.; country/headcount Unknown; NAICS 523999. dbir_year 2026.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Single-token withdrawal flaw exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "$450K drained from two pools"
+      }
+    ],
+    "github": "21440",
+    "master_id": "9A382187-E154-4A6A-B541-F23B9AE1F518",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cryptopotato.com/dex-clipper-refutes-private-key-leak-claims-after-breach/; https://cointelegraph.com/news/clipper-dex-clarifies-hack-not-private-key-leak",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On December 1, 2024 an attacker exploited a vulnerability in the single-token withdrawal function of decentralized exchange Clipper, draining about $450,000 from two liquidity pools (about 6% of total value locked). Clipper denied claims that a private key had leaked, paused swaps and deposits, disabled single-token withdrawals and asked the exploiter to make contact.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 1,
+      "month": 12,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Clipper (Shipyard Software)"
+  }
+}

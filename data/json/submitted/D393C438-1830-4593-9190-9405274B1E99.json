@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Access-control vulnerability in HISA portal abused from a legitimate owner account with an automated tool mimicking authorized requests. Per the issue's summary of the Courier-Journal article (unverified), the data was organized with Claude AI into a searchable database.",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Evade Defenses"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4500000,
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4500000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "D393C438-1830-4593-9190-9405274B1E99",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24284\nVictim: Horseracing Integrity and Safety Authority (HISA), Lexington KY, the private self-regulatory organization created by the federal Horseracing Integrity and Safety Act of 2020 under FTC oversight. Industry coded 92 per the issue NAICS line; government coded Other (not Federal as the issue label says) because HISA is a private nonprofit, not a government agency. Reviewer may prefer Federal or a non-92 NAICS (e.g. 813910). Employee count not found -> Unknown.\nActor: Marshall Gramm, Rhodes College economics professor and co-founder of the Ten Strike Racing ownership syndicate, alleged by HISA (charges Aug 17, 2026). He held a legitimate HISA portal account as the primary owner of several horses, so he is not an employee or partner -> external. Variety Customer (registered portal user of the victim's service); reviewer may prefer Unaffiliated. Motive Financial: HISA alleges he used the data for handicapping contests, pari-mutuel wagering and claiming horses (fraud charge; HISA is seeking restitution of purses). Actor name not put in actor.external.name since he is an individual whose charges are not adjudicated; he accepted a provisional suspension Aug 23-24, 2026 without admitting a violation.\nAction: deviation from the Hacking-ext-unknown template. HISA's letter to the FTC says it 'updated our systems to address the exploited vulnerability' and Gramm himself cites 'access-control weaknesses' that let his authorized account view other horses' records -> hacking variety Exploit vuln (broken access control; exact flaw not described, an earlier 'simple URL change' account was not confirmed by HISA). Evade Defenses added because HISA/Arete say the automated pull was designed to mimic authorized (veterinarian) requests and concealed user and browser information. Vector Web application (HISA online portal). Gramm disputes: says he used his own credentials, did not hide his identity and bypassed no safeguards.\nAI: the issue summary (from the Courier-Journal article) says Gramm used Claude AI to organize the data into a searchable database. I could not access the Courier-Journal page (blocked to the fetch tool) and no other source checked (HISA release, Casino.org, Gambling Insider, GamblingNews, TrueNicks, SCCG, Past The Wire) mentions AI. The AI use is recorded in action.hacking.notes as issue-sourced and unverified; it concerns post-exfiltration analysis, not the access method.\nData: confidential horse health / veterinary records (visible only to a horse's connections and regulatory veterinarians) -> data variety Other, data_victim Other. Count 4.5 million records for a 'vast portion' of ~100,000 horses comes ONLY from the issue's summary of the Courier-Journal article (quoting HISA CEO Lisa Lazarus); other sources say 'thousands of racehorses'. Coded amount/data_total 4,500,000 on that basis; reviewer should confirm against the Courier-Journal article or drop data_total. Encryption not stated -> Stored.\ndata_abuse: 'Yes - Financial fraud' because HISA charged fraud for using the data to wager and claim horses; past-performance reports with confidential data for two horses (Deterministic, Griffin's Wharf) were also posted on social media.\nTimeline: six-week window from early May to mid-June 2026 -> incident 2026-05, dbir_year 2027. Discovery: in June 2026 someone unconnected to the horses posted the PPs on social media, which triggered HISA's internal investigation and Arete forensic analysis -> external Other (public social media posts); discovery coded in Weeks with no value. Data disclosure Yes: HISA forensics plus Gramm's admission.\nHosting of the portal not stated -> cloud Unknown. Confidence Medium: actor, action and attribute are sourced but the exact vulnerability is undescribed, the actor disputes HISA's account, and the record count rests on a source I could not read.\nSources: Courier-Journal (issue link, not accessible), HISA press release Aug 17 2026, Casino.org, TrueNicks, Gambling Insider, Past The Wire, TrueNicks (HISA letter to FTC).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Financial fraud"
+      }
+    },
+    "created": "2026-10-08T16:49:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Exploit vuln: access-control flaw in HISA portal used to pull other horses' vet records at scale"
+      }
+    ],
+    "github": "24284",
+    "master_id": "D393C438-1830-4593-9190-9405274B1E99",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.courier-journal.com/story/sports/horses/horse-racing/2026/08/24/marshall-gramm-takes-voluntary-suspension-from-horse-racing/91442735007/; https://hisaus.org/news/hisa-charges-marshall-gramm-with-multiple-rule-violations-including-fraud-over-unauthorized-access-to-confidential-horse-health-information; https://www.casino.org/news/rhodes-college-professor-who-teaches-horse-betting-accused-of-accessing-secret-racing-data/; https://truenicks.com/articles/293876/hisa-says-gramm-hacked-into-private-horse-health-data; https://www.gamblinginsider.com/?p=192996; https://pastthewire.com/hisa-faced-the-questions-on-marshall-gramm-they-answered-them/; https://truenicks.com/articles/294380/hisa-defends-handling-of-gramm-case-in-letter-to-ftc",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Horseracing Integrity and Safety Authority (HISA) alleges that Marshall Gramm, a racehorse owner and co-founder of Ten Strike Racing with a legitimate HISA portal account, exploited an access-control weakness in HISA's online portal over about six weeks from early May to mid-June 2026 to download confidential horse health and veterinary records at scale for horses he had no connection to, using an automated method designed to mimic authorized veterinarian activity. HISA says he used the data for handicapping contests, wagering and claiming horses, and past-performance reports built from it were posted on social media. HISA charged him with fraud and unauthorized access on August 17, 2026; he accepted a provisional suspension without admitting a violation. Reporting cited in the issue puts the volume at 4.5 million records and says he used an AI tool to organize the data.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Other"
+    ],
+    "industry": "92",
+    "region": [
+      "019021"
+    ],
+    "state": "KY",
+    "victim_id": "Horseracing Integrity and Safety Authority"
+  }
+}

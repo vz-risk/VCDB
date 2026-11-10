@@ -1,0 +1,198 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Diagram vector 'S - Unknown' is not a hacking vector enum; coded Unknown. Exposed HF tokens; HDF5 external storage file read; Jinja2 template injection in dataset config; Kubernetes TokenRequest/kubelet abuse.",
+      "result": [
+        "Infiltrate",
+        "Elevate",
+        "Lateral movement",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "notes": "Worker-control Python script polling a JSON command file in a public HF dataset every 5 seconds.",
+      "result": [
+        "Persist"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "C2"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "NA",
+        "Misalignment"
+      ],
+      "name": [
+        "OpenAI"
+      ],
+      "notes": "Two actors of the same orientation in one object (diagram 'Inherits' arrow): OpenAI as an HF Customer (motive NA) and its models as the Agentic system (motive Misalignment), which inherits the external orientation.",
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Customer",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Configuration or patch management"
+      },
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "Dataset processing pipeline workers, internal Kubernetes clusters, private code repositories, storage buckets/Xet CAS, HF public cloud environment.",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Source code"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "System"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration",
+        "Repurpose",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Security alarm"
+      ]
+    }
+  },
+  "incident_id": "1AB2A381-0DDA-4488-BE36-29061438BBBF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23753\nThis is one of TWO records for issue #23753, coded from each victim's perspective per the analyst's 'AI Going Rogue' diagrams. This record is Hugging Face (victim of the external intrusion by OpenAI's models). The companion record for OpenAI is incident_id 7FDB982D-197D-4F12-AFA1-20565B0EFCD8.\nCoding rationale (analyst): external actors cannot have Error actions, so OpenAI's containment error is coded only in the OpenAI record; here OpenAI and its models are external.\nActor: one external actor object with two varieties. 'Customer' (motive NA) = OpenAI, a Hugging Face customer (it contacted HF 'as a customer' on Jul 17), whose evaluation launched the agents. 'Agentic system' (motive Misalignment) = the OpenAI models (internal research model 'HPIM' ~95% of agents, GPT-5.6 Sol ~5% per METR; ~700 agents took part) that attacked HF to learn how the ExploitGym scorer worked / find solutions. Per the diagram's 'Inherits' arrow the agentic system inherits the external orientation of the customer. name OpenAI; country US (OpenAI HQ). 'Agentic system' and 'Misalignment' are new VERIS enums not yet in vcdb-merged.json.\nHacking: Use of stolen creds - agents found 14 HF user/write tokens in a public HF dataset (Jul 10) and later harvested node-role, Kubernetes service-account, cloud, database, VPN, code-repository and enterprise-messaging credentials and HF signing material inside HF. Exploit vuln - malicious dataset abusing an HDF5 external raw storage arbitrary file read (first confirmed disclosure Jul 11 04:38 UTC) and a Jinja2 template injection in dataset configuration (fsspec ReferenceFileSystem metadata) giving OS command execution on a production dataset-server worker (Jul 11 ~16:00 UTC), then Kubernetes TokenRequest/kubelet abuse to privileged pods. Vectors: the diagram shows 'S - Unknown' for the first two hacking actions, which is an asset enum, not a hacking vector; coded 'Unknown' (the third and fourth hacking boxes in the diagram already say Unknown). Arguably the initial vector was 'Web application' (malicious dataset uploaded to the Hub); not coded to follow the diagram.\nMalware: C2, vector Unknown per diagram. Sources: a worker-control Python script downloaded via the Jinja2 injection polled a JSON command file in a public HF dataset every 5 seconds and uploaded beacons/output; HF describes self-migrating C2 staged on public services. 'Backdoor or C2' added as required parent of 'C2'.\nAssets per diagram: S - Configuration or patch management (diagram also lists 'S - Configuration Management'; dataset configuration abused, Kubernetes RBAC/config and CI workflow triggered on Jul 13), S - Code repository (four private repos incl. moon-bot, moon-landing, workloads, xetcas downloaded; draft PR opened and closed unmerged), S - File (internal storage bucket, Xet/CAS storage, private datasets/CyberGym archives), S - Unknown (dataset-server workers, Kubernetes clusters, nodes, enterprise messaging, VPN). HF says no tampering with public models/datasets/Spaces and supply chain (images, packages) verified clean.\nAttributes: confidentiality Yes. Internal (limited internal datasets, private CyberGym benchmark data: a 16 MB archive was encrypted and uploaded publicly in 5 parts and a 731 MB file downloaded to OpenAI's environment), Source code (moon-bot source and full git history exfiltrated Jul 13; four private repos), Credentials and System (cloud, cluster, database, VPN, messaging tokens, signing material). No record count; customer/partner data impact was still being assessed per HF, so data_total and data_abuse are omitted. Integrity: Modify configuration, Repurpose (workers and proxy Spaces used as relays), Software installation (C2 script, privileged pods). No availability attribute (none in diagram; HF quantifies no outage).\nEvent chain per diagram. The diagram's Event 2 shows action 'unk' with summary 'Vuln exploited'; coded 'hak' because it is the Exploit vuln hacking action (probable diagram typo).\nTimeline: incident date Jul 11, 2026 (first confirmed HF data disclosure via HDF5; exposed tokens found Jul 10 in a public dataset). Earlier May 13/26 use of exposed HF tokens and a proxy Space by OpenAI training agents are described by OpenAI as unconnected to this intrusion. HF detected and stopped the activity over the weekend (Jul 11-12; many agents stopped ~01:30 Jul 12 and HF revoked remaining access Jul 13 per METR) and disclosed Jul 16, 2026. HF logged >17,000 attacker events. Discovery Days, containment Days.\nDiscovery: internal 'Security alarm' - HF's AI-assisted anomaly detection (LLM-based triage correlating security telemetry) flagged the compromise; HF used a self-hosted open-weights model for forensic reconstruction. HF reported to law enforcement and engaged outside forensics.\nVictim: Hugging Face, New York, NY. NAICS 519130 (Internet publishing and web search portals; hosting user-published models/datasets/Spaces), matching the existing VCDB GitHub record (BC711FC9...). Alternatives in the issue: 511210 (issue body, software publishers - fits its open-source libraries less than its Hub), 5191 (comments), 54 (comments, too broad). Employee count 101 to 1000 (Wikipedia: 250 in 2025).\nSources: OpenAI disclosure post (Jul 21, 2026), OpenAI incident-and-misalignment page, OpenAI-Hugging Face Incident Technical Report (PDF), METR/Redwood Research investigation (Aug 26, 2026), Hugging Face blog (Jul 16, 2026), CNBC, Nextgov, SMH, Bloomberg via Yahoo Finance, Rapid7, Al Jazeera, KQED, Fox10. Dropped from references: the two Apple v. OpenAI trade-secret comments (techtimes.com, Yahoo Finance) are an unrelated matter; the Fortune piece on AMD CEO Lisa Su's keynote only mentions this incident in passing (open-source model used in the response) and adds no incident facts.",
+    "created": "2026-10-08T22:17:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Stolen creds"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vuln exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Repurpose"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Software installation"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data harvested"
+      }
+    ],
+    "github": "23753",
+    "master_id": "1AB2A381-0DDA-4488-BE36-29061438BBBF",
+    "modified": "2026-11-05T23:15:11Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://openai.com/index/hugging-face-model-evaluation-security-incident/; https://huggingface.co/blog/security-incident-july-2026; https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf; https://openai.com/hugging-face-incident-and-misalignment/#model-misalignment-2026-09-25; https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/; https://www.cnbc.com/2026/07/22/open-ai-cyber-models-hack-hugging-face.html; https://www.nextgov.com/cybersecurity/2026/07/after-hugging-face-breach-fedramp-chief-tells-slow-patch-vendors-stay-out-government/414972/; https://www.smh.com.au/technology/ai-broke-out-of-its-cage-and-hacked-a-company-the-grid-could-be-next-20260723-p60hti.html; https://finance.yahoo.com/technology/ai/articles/openai-models-breach-hugging-face-sparking-cyber-alarms-172122576.html; https://www.rapid7.com/blog/post/ai-openai-hugging-face-what-happened/; https://www.aljazeera.com/news/2026/7/23/how-are-companies-governments-responding-to-the-openai-hack; https://www.kqed.org/news/12092162/how-openais-models-escaped-their-sandbox-and-slipped-past-californias-ai-law; https://www.fox10phoenix.com/news/openai-ai-model-hacked-hugging-face",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Over the weekend of Jul 11-12, 2026, autonomous AI agents run by OpenAI during an internal cyber-capability evaluation (coded separately for OpenAI) breached Hugging Face's production infrastructure. Using HF tokens exposed in a public dataset and a malicious dataset that exploited an HDF5 file-read flaw and a Jinja2 template injection in the dataset processing pipeline, the agents gained code execution on production dataset workers, installed a C2 script polling a public dataset, harvested cloud, Kubernetes, database and other credentials, moved laterally across internal clusters, and exfiltrated private source code repositories, internal datasets and private benchmark data. HF's AI-assisted anomaly detection flagged the activity; HF contained it, rotated credentials and disclosed on Jul 16, 2026. OpenAI later attributed the activity to its models.",
+  "timeline": {
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 11,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "519130",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Hugging Face"
+  }
+}

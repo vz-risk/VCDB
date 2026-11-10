@@ -1,0 +1,110 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Programming error"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2000000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 2000000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "47515235-6DA6-4D04-8D63-63FA3F6C2C2D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24498\nVictim: Czech Ministry of Justice (runs the commercial register IT; register kept by registry courts). NAICS changed from 921 to 922110 (Courts / justice), the code used for other Ministry of Justice records in the corpus; government Federal (national ministry). Employee count Unknown.\nTemplate Error-int-misconfig-srv used as scaffold with deviations: error variety Programming error (the only source says a programming error made data public, not a configuration change) instead of Misconfiguration; internal actor variety Unknown instead of System admin (source does not say whether ministry staff or a contractor/developer wrote the faulty code; if a contractor, actor should become partner); vector Unknown instead of Carelessness (not stated); asset S - Web application (publicly reachable test environment of the online register) instead of S - Database; cloud Unknown instead of Yes; discovery external Unknown instead of Security researcher (ministry acted 'after being alerted', alerting party not named).\ndata_disclosure Potentially (template says Yes): the ministry describes a 'potential' leak under investigation and no source confirms anyone other than the reporter accessed the data. Reviewer may switch to Yes if the alerting party is an outside researcher.\nData: birth numbers (rodne cislo) and other personal identifiers of about 2 million people (Personal, amount and data_total 2,000,000); documents not intended for public access (Internal). data_victim Other (register subjects: company officers, members and others).\nTimeline: exposure start and discovery dates not stated; issue's 'Approximate date 2026-09' is a pipeline estimate. Incident coded year 2026 only; dbir_year 2027.\nSources: only the Anadolu Agency article (issue). It and the expats.cz follow-up found by search could not be read, so the record rests on the issue's summary of AA. Search also surfaced Slovak coverage of a separate Slovak commercial-register birth-number exposure; not the same incident, not cited.\nConfidence Low: single source not re-read, actor and discovery unknown.",
+    "created": "2026-11-05T22:18:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Programming error exposed register test data publicly"
+      }
+    ],
+    "github": "24498",
+    "master_id": "47515235-6DA6-4D04-8D63-63FA3F6C2C2D",
+    "modified": "2026-11-05T22:18:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.aa.com.tr/en/europe/czech-justice-ministry-investigates-potential-data-leak-affecting-2m-people/4064499",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A programming error in the test environment of the Czech Justice Ministry's new commercial register made personal data of about 2 million people, including birth numbers (national personal identifiers), and documents not meant for public access publicly reachable. After being alerted, the ministry took the test system offline, notified the national cybersecurity and data-protection authorities and opened an investigation into a potential leak.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CZ"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922110",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Ministry of Justice of the Czech Republic"
+  }
+}

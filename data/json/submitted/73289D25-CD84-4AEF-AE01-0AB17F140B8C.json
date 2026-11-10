@@ -1,0 +1,180 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "FulcrumSec"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 444538,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "amount": 8075,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "73289D25-CD84-4AEF-AE01-0AB17F140B8C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23077\nTemplate Hacking-ext-extortion (= Hacking-ext-unknown scaffold + extortion). Deviations: per the attacker-claim rule, hacking variety coded Exploit misconfig (FulcrumSec claims it took the data from an unsecured MongoDB Atlas cluster that was still exposed about 10 months after researcher Jeremiah Fowler reported an insecure youX MongoDB database in March 2025) instead of Unknown; asset S - Database instead of S - Web application; vector Unknown (no source names it); cloud External Cloud Asset(s) (MongoDB Atlas). These are attacker-sourced and not confirmed by youX, which only said 'unauthorised access to its systems, by a third party'. Information Age notes the link to Fowler's finding is not confirmed. No Error action was coded for the misconfiguration (failure-to-control rule); a reviewer may decide otherwise.\nExtortion: FulcrumSec offered to delete the data for about $1 per affected person and the hacker told Broker Daily it asked for roughly half a million dollars; youX answered with an NSW Supreme Court injunction and negotiations collapsed. A preview was published on a hacking forum (removed within hours) and later on the group's website. The group first claimed youX agreed to pay, then corrected that no ransom was agreed (Information Age). Coded action.social Extortion (target/vector Unknown), P - Unknown asset, integrity Alter behavior; data_abuse Yes - Data ransomed. Broker Daily (Mar 5) reports the hacker says it will not release further data.\nActor: FulcrumSec (named in Information Age via Daily Dark Web); a data-theft extortion group also behind claimed attacks on Manchester Airports Group and Novo Nordisk. Organized crime / Financial. Country Unknown.\nData: youX confirmed personal information was 'accessed and downloaded'. Attacker claims 141 GB from 22 production databases: 444,538 unique borrowers (incomes, debts, government IDs, home addresses), 629,597 loan applications, 229,236 driver's licences, 607,822 addresses, broker-customer SMS, notes on financial/legal hardship, data on 797 broker organisations (ABNs, banking details, staff directories) and 8,075 broker-employee password hashes. Coded Personal 444,538 (borrowers), Sensitive Personal (government IDs/hardship notes), Bank (incomes, debts, broker banking details), Credentials 8,075, Internal. data_total omitted: 444,538 covers borrowers only, not broker staff. data_victim Customer and Partner (brokers/lenders and their staff).\nTimeline: Broker Daily says the data was obtained at the start of February 2026; youX disclosure Feb 17, 2026. Incident coded 2026-02. dbir_year 2027. Discovery Actor disclosure: the group sent youX a file tree and extortion terms; youX's own detection is not described.\nVictim: youX (Drive IQ), loan-origination platform used by more than 11,500 dealer/broker users and 80+ lenders, Rhodes NSW. NAICS changed from the issue's 522110 (Commercial Banking; youX is not a bank) to 522310 (Mortgage and Nonmortgage Loan Brokers). Employees about 21-50 (Prospeo) -> 11 to 100 (inferred from a company-data aggregator). Secondary victims: more than 90 lenders and 797 broker organisations whose customer data sat in the platform; named ones: Motorcycle Holdings Limited (ASX announcement) and Viking Asset Aggregation. youX itself was breached, so it is the primary victim.\nSources: issue-linked Cyber Daily and 9News (9News could not be fetched; kept as issue-linked). Added IDM, Information Age (x2), Broker Daily, TechRepublic.\nConfidence Medium: actor, extortion and data are well sourced, but the access method is attacker-claimed only.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploit misconfig: unsecured MongoDB Atlas cluster (attacker claim)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "141 GB of borrower and broker data exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand; preview leaked after refusal"
+      }
+    ],
+    "github": "23077",
+    "master_id": "73289D25-CD84-4AEF-AE01-0AB17F140B8C",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cyberdaily.au/security/13226-aussie-fintech-platform-youx-confirms-data-breach-as-hacker-shares-massive-dataset-online; https://www.youxpowered.com.au/cyber-incident/; https://www.9news.com.au/national/youx-data-breach-threat-actor-releases-information/30c77623-6d64-4422-94d9-3f4c4569ac55; https://idm.net.au/node/15504; https://ia.acs.org.au/article/2026/hacker-uploads-alleged-youx-stolen-data-.html; https://ia.acs.org.au/article/2026/hacker-claims-youx-paid-ransom-after-data-breach.html; https://www.brokerdaily.au/technology/21322-threat-actors-pull-back-on-publishing-stolen-youx-borrower-data; https://www.techrepublic.com/article/news-youx-data-breach-australia-drivers-licence-exposure/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In February 2026 the FulcrumSec extortion group stole about 141 GB from Australian fintech loan platform youX, claiming it came from an unsecured MongoDB Atlas cluster: financial and identity data for 444,538 borrowers (incomes, debts, government IDs, 229,236 driver's licences), 629,597 loan applications, data on 797 broker firms and 8,075 broker password hashes, tied to more than 90 lenders. youX confirmed unauthorised access and data download. After youX refused the ransom and obtained an injunction, the group published a preview of the data.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "522310",
+    "region": [
+      "009053"
+    ],
+    "secondary": {
+      "amount": 890,
+      "notes": "More than 90 downstream lenders and 797 broker organisations had customer data in the youX platform (attacker claim).",
+      "victim_id": [
+        "Motorcycle Holdings Limited",
+        "Viking Asset Aggregation"
+      ]
+    },
+    "victim_id": "youX"
+  }
+}

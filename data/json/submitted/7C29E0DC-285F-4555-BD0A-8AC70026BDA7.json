@@ -1,0 +1,115 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 74000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 74000,
+      "data_victim": [
+        "Employee",
+        "Partner",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "7C29E0DC-285F-4555-BD0A-8AC70026BDA7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24214\nTemplate Hacking-ext-unknown used, with vector Unknown and asset S - Unknown because the system and access path are not described (template Web application not supported).\ndata_disclosure Yes per the skill rule that confirmed unauthorized access to a system holding the data is sufficient; Chubu itself describes a 'possible' leak, so a reviewer may prefer Potentially.\nData: names and email addresses of employees, contractors and business contacts (issue body summary of MLex; the article is paywalled), about 74,000 people -> Personal 74,000, data_victim Employee, Partner and Other (business contacts). No customer data confirmed.\nTimeline: announced Tuesday, August 4, 2026 (MLex dateline Aug 5). Start of access not stated; month coded as August 2026. dbir_year 2027.\nDiscovery: not described, so Unknown. Reported to the PPC and police (issue summary).\nVictim: Chubu Electric Power Co., Inc. (Nagoya). NAICS 2211 from the issue. About 28,000 consolidated employees (approximate) -> 25001 to 50000.\nSingle paywalled source; confidence Low.",
+    "created": "2026-11-09T19:41:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized system access; contact data of 74,000 people exposed"
+      }
+    ],
+    "github": "24214",
+    "master_id": "7C29E0DC-285F-4555-BD0A-8AC70026BDA7",
+    "modified": "2026-11-09T19:41:17Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.mlex.com/articles/2509775/japan-s-chubu-electric-power-reports-possible-data-leak-affecting-74-000",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Chubu Electric Power, a regional power utility in central Japan, announced on August 4, 2026 that unauthorized access to one of its systems may have exposed the personal details of about 74,000 people, including names and email addresses of employees, contractors and business contacts. No customer information was confirmed leaked. The company reported the incident to the Personal Information Protection Commission and police.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "2211",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Chubu Electric Power Co., Inc."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Unauthenticated vulnerabilities in digital government services exploited to query ~1 million IDNPs and pull linked personal records.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 750000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 750000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3E7024A7-230B-4D0C-AD09-33DEA32792E7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24666\nTemplate Hacking-ext-unknown, deviated: Biometric Update (issue comment) reports attackers 'exploited unauthenticated vulnerabilities' in the digital government services, so hacking variety Exploit vuln (not Unknown); vector Web application and asset S - Web application kept from the template (online public e-services). No CVE or specific flaw published; the method (unauthenticated lookups by IDNP) could also be read as Abuse of functionality/Forced browsing - reviewer may adjust.\nActor: external, unidentified. Authorities are investigating possible involvement of foreign state actors, but no perpetrator has been named, so variety/motive Unknown (not Nation-state/Espionage). No ransom or sale reported.\nData: ~750,000 people with data extracted (attackers queried ~1 million IDNPs; the issue's '1 million' is the number queried, 750,000 is the number with data obtained) -> data_total 750,000. Names, DOB/place of birth, family relationships, photographs, driving licence, vehicle ownership, social benefits, health-insurance status, tax info -> Personal; bank account numbers -> Bank. Health-insurance status (insured or not) not coded as Medical. data_victim Other (citizens/residents using government services).\nTimeline: exploitation Oct 19-23, 2026 -> incident 2026-10-19; AGE technical update confirming it Oct 27; discovery Days. How it was detected is not stated -> discovery_method unknown. Authorities examined 82 digital public services and temporarily disconnected vulnerable ones - a containment action, not coded as an attacker availability impact. dbir_year 2027 (Oct 19 is before the Oct 31 cutoff).\nVictim: Agen\u021bia de Guvernare Electronic\u0103 (AGE), Moldova's national e-government agency (public institution). Industry 921190 (Other General Government Support) for the issue's NAICS 92. Government Federal (national government) rather than the label's 'Regional', since AGE is a national agency. Employee count: no headcount found for AGE -> Unknown.\nConfidence Medium: actor unknown and method described only generally.",
+    "created": "2026-11-05T22:18:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthenticated e-gov vulns exploited; records for ~750k IDNPs extracted"
+      }
+    ],
+    "github": "24666",
+    "master_id": "3E7024A7-230B-4D0C-AD09-33DEA32792E7",
+    "modified": "2026-11-05T22:18:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://informat.ro/en/republic-of-moldova/cyberattack-on-public-services-750000-idnps-targeted-145454; https://www.biometricupdate.com/202610/moldova-data-breach-exposes-records-linked-to-750000-national-id-numbers",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between October 19 and 23, 2026, attackers exploited unauthenticated vulnerabilities in Moldova's digital government services, run by the Electronic Governance Agency (AGE), to query about one million national identification numbers (IDNPs) and extract records linked to roughly 750,000 people, about a third of the resident population: names, dates and places of birth, family relationships, health insurance and social benefit status, driving licence details, photographs, vehicle ownership, bank account numbers and tax information. AGE confirmed the incident on October 27; the government disconnected vulnerable services and is investigating possible foreign state involvement.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 19,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "MD"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Electronic Governance Agency of the Republic of Moldova (AGE)"
+  }
+}

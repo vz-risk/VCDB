@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6810,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6810,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C0494B75-19DF-4378-9F48-70CB45C25BA6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Source: HHS OCR breach portal row (Secure Healthcare Information Management, LLC; PA; Healthcare Provider; 6,810; submitted 2026-10-06; Hacking/IT Incident; Network Server; BA present: No). No VCDB GitHub issue covers this incident.\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nHHS lists it as a Healthcare Provider, but it is a billing/management service; clients not named.\nEmployee count: not looked up -> Unknown.\nIndustry 541219 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "master_id": "C0494B75-19DF-4378-9F48-70CB45C25BA6",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/secure-healthcare-information-management-desert-orthopaedic-center-data-breaches/; https://www.claimdepot.com/data-breach/secure-healthcare-information-management-2026; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Secure Healthcare Information Management, an Allentown, Pennsylvania medical management and billing provider, had a network disruption on July 17, 2026; the investigation found an unauthorized third party accessed its network from July 6, 2026. Names, dates of birth, Social Security and driver's license numbers, medical and health insurance information of 6,810 people were involved.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 11
+    },
+    "incident": {
+      "day": 6,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541219",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Secure Healthcare Information Management, LLC"
+  }
+}

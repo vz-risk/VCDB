@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 15000000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 10000,
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "32FEAB84-50FB-4F60-BBF7-C3DB8AB5262D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23095\nCoded from the Hacking-ext-unknown template (issue tag): external actor variety/motive Unknown, hacking variety Unknown, vector Web application, asset S - Web application. HHS OCR says only that an unauthorized actor 'infiltrated MMG's information system'; the asset and vector are not stated, so the template's web-application values are kept as a scaffold, not as a sourced fact. Reviewer may prefer S - Unknown / vector Unknown.\nProvider rule: MMG Fusion is a HIPAA business associate whose patient-communication software serves dental practices (covered entities), so MMG is the primary victim. The affected covered entities are not named or counted (OCR found MMG never notified them), so victim.secondary lists only the NAICS of dental offices (621210) and omits amount.\nTimeline: intrusion in December 2020 (OCR). HIBP added the data in August 2021, so it was circulating by then. OCR opened its investigation in March 2023 after a complaint about an unreported incident and PHI posted on the dark web; settlement announced March 5, 2026 ($10,000 plus a 3-year corrective action plan). Incident December 2020 -> dbir_year 2022 per the Nov/Dec rule. The issue's Priority 2027 label reflects the 2026 settlement news, not the incident date. PHIDBR2019 label ignored per skill.\nDiscovery: how and when MMG learned of the breach is not stated; OCR learned via a complaint. The dark-web posting is not tied to a named actor -> discovery_method unknown.\nData: names, phone numbers, mailing and email addresses, DOBs, dates and times of medical (dental) appointments -> Personal + Medical; HIBP also lists genders, marital status and a small number of bcrypt-hashed passwords -> Credentials. data_total 15,000,000 per OCR (approximate). HIBP counts 2.7M unique emails, which is a subset. Encryption not stated -> Stored. data_abuse not coded: the dark-web posting is reported only as a complaint allegation.\nActor unknown; no claim, sale price or extortion reported -> motive Unknown.\nVictim: MMG Fusion, LLC, Severna Park, Maryland; dental practice marketing and patient-engagement software. Dealroom lists 2-10 employees and OCR set the penalty considering MMG's financial condition -> Small (inferred). NAICS 54161 from the issue (5-digit; kept).\nSources: HHS press release (issue link); added Hunton, Paubox, HIBP, DataBreaches.net. An Infosecurity Magazine dental-breach article in search results is about North American Dental Management, not MMG, and was not used.\nConfidence Medium: actor and method unknown.",
+    "created": "2026-10-08T16:48:31Z",
+    "dbir_year": 2022,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown intrusion into MMG information system"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient PHI accessed, later posted on dark web"
+      }
+    ],
+    "github": "23095",
+    "master_id": "32FEAB84-50FB-4F60-BBF7-C3DB8AB5262D",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hhs.gov/press-room/ocr-mmg-fusion-hipaa-agreement.html; https://www.hunton.com/privacy-and-cybersecurity-law-blog/hhs-office-for-civil-rights-settles-hipaa-investigation-of-health-care-software-company; https://www.paubox.com/blog/hhs-settles-hipaa-investigation-into-mmg-fusion-breach-affecting-15m; https://haveibeenpwned.com/breach/MMGFusion; https://databreaches.net/?p=126409",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In December 2020 an unauthorized actor infiltrated the information system of MMG Fusion, a Maryland dental practice software company and HIPAA business associate, and accessed PHI of about 15 million patients of its client practices: names, phone numbers, mailing and email addresses, dates of birth and appointment dates and times. MMG did not report the breach or notify its clients. The data later appeared on the dark web and in Have I Been Pwned (August 2021). HHS OCR opened an investigation after a 2023 complaint and settled with MMG in March 2026 for $10,000 and a corrective action plan.",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2020
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "54161",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "notes": "Unnamed dental practices (covered entities) whose patient data MMG held; OCR did not name or count them.",
+      "victim_id": [
+        ";621210"
+      ]
+    },
+    "state": "MD",
+    "victim_id": "MMG Fusion"
+  }
+}

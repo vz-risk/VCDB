@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "Unknown"
+      ],
+      "variety": [
+        "Pretexting",
+        "Extortion"
+      ],
+      "vector": [
+        "Phone",
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2100000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "7682A9B2-A8E5-4C79-A7D5-09A224DA7F60",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23236\nTemplate: the issue is tagged Malware-ext-Ransomware-databreach, but no source reports encryption, ransomware deployment or service disruption at Amtrak. ShinyHunters is a data-theft extortion crew, and every source describes a Salesforce data theft with a 'pay or leak' demand. So the ransomware template was NOT applied: no malware block, no availability Obscuration/Interruption, no Software installation. Coded as hack-and-extort instead (same shape as the ShinyHunters/ADT record from the same April 2026 wave). A reviewer may want to retag the issue (e.g. Hacking-ext-stolencreds + extortion).\nAccess method (attacker/press-sourced, not confirmed by Amtrak): Cybernews (corrected Apr 16) says ShinyHunters socially engineered Amtrak employees earlier in 2026 to obtain credentials to Amtrak's Salesforce environment; Techlicious reports a phone call tricked an employee into giving up login credentials. Coded action.social Pretexting (vector Phone, target End-user or employee) + hacking Use of stolen creds via Web application, assets S - Web application (Salesforce) and P - End-user or employee, cloud External Cloud Asset(s). Event chain starts with vishing.\nExtortion: ShinyHunters listed Amtrak on its leak site around April 12, 2026 claiming 9.4M records of 'PII and other internal corporate data', with an April 14 'pay or leak' deadline; the data was published after the deadline. Coded Extortion (vector Web application = leak site, target Unknown), P - Unknown, integrity Alter behavior, data_abuse Yes - Data ransomed.\nActor: ShinyHunters, Organized crime / Financial. Country Unknown.\nData: HIBP (added Apr 17, 2026, independently verified per Techlicious) lists 2.1M unique email addresses with names, physical addresses and customer support tickets; no passwords or payment data reported. Coded Personal 2,100,000 (approximate HIBP figure) and Internal (claimed corporate data). The 9.4M claim is unverified. data_total omitted because the employee/corporate portion is unknown. data_victim Customer.\nAmtrak has not confirmed the breach publicly. security_incident Confirmed because HIBP verified the leaked data.\nTimeline: access 'earlier in 2026' (date unknown); leak-site listing ~Apr 12, 2026. Incident coded 2026-04 (begin may be earlier). dbir_year 2027. Discovery Actor disclosure.\nVictim: National Railroad Passenger Corporation (Amtrak), Washington, DC; NAICS 482111 from the issue. Over 22,000 employees (Cybernews) -> 10001 to 25000. Government NA: Amtrak is a federally chartered corporation, not NAICS 92.\nIssue data: all issue/comment sources are about this Amtrak incident. The second Fox News comment link (booking-summer-trip) is a consumer scam article whose only Amtrak content is one paragraph restating the 2.1M figure; cited because it is issue-linked but adds nothing. The pipeline comments' 2.1M count is the HIBP count, not the 9.4M claim.\nConfidence Medium: the access method is attacker/press-sourced and the victim has not confirmed.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting (vishing) of employees for Salesforce credentials (reported)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds to access Salesforce; data exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak site (pay or leak), data published"
+      }
+    ],
+    "github": "23236",
+    "master_id": "7682A9B2-A8E5-4C79-A7D5-09A224DA7F60",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/amtrak-allegedly-breached-by-shinyhunters-massive-data-leak-threatened; https://cybernews.com/security/hackers-threaten-amtrak-data-leak/; https://www.foxnews.com/tech/amtrak-data-breach-exposes-millions-customer-records; https://www.techlicious.com/blog/amtrak-data-breach-shinyhunters/; https://haveibeenpwned.com/Breach/Amtrak; https://www.foxnews.com/tech/booking-summer-trip-what-youre-giving-scammers",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ShinyHunters listed Amtrak (National Railroad Passenger Corporation) on its leak site around April 12, 2026, claiming 9.4 million records of PII and corporate data taken from Amtrak's Salesforce environment after employees were socially engineered by phone into giving up credentials. After an April 14 'pay or leak' deadline passed, the data was published; Have I Been Pwned verified 2.1 million unique customer email addresses with names, physical addresses and customer support records. No encryption or ransomware deployment was reported.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "482111",
+    "region": [
+      "019021"
+    ],
+    "state": "DC",
+    "victim_id": "National Railroad Passenger Corporation (Amtrak)"
+  }
+}

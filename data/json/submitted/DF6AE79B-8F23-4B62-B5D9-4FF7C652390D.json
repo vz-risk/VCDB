@@ -1,0 +1,143 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 30200000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 30200000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "DF6AE79B-8F23-4B62-B5D9-4FF7C652390D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22844\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown used; asset S - Other (exchange Solana wallets) and vector Unknown. The sources read give no method and no attribution (The Register only notes Upbit was previously targeted by North Korea); actor external Unknown, Financial. Data_victim includes Customer since the exchange held customer assets (Upbit pledged to cover losses per wider reporting; not in the sources read).\nImpact 44.5B won ~ $30.2M. Discovery internal Unknown (emergency meeting 18 minutes after detecting the activity). Victim: Dunamu Inc. (Upbit), KR, NAICS 523150 (issue 522), headcount 101 to 1000 (roughly 600 staff; estimate). dbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "~104B Solana tokens withdrawn in 54 minutes"
+      }
+    ],
+    "github": "22844",
+    "master_id": "DF6AE79B-8F23-4B62-B5D9-4FF7C652390D",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://koreajoongangdaily.joins.com/news/2025-12-07/business/industry/Upbit-lost-more-than-100-billion-crypto-coins-in-less-than-an-hour-in-November-data-breach/2471616; https://www.theregister.com/2025/11/28/naver_upbit_crypto_heist/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between 4:42 and 5:36 a.m. on November 27, 2025 about 104 billion Solana-based tokens (mostly BONK) worth about 44.5 billion won ($30 million) were withdrawn from Korean crypto exchange Upbit, operated by Dunamu, to unknown external wallets. Upbit suspended Solana deposits and withdrawals and later halted all digital asset transactions; it reported to the FSS about six hours after the breach. The theft came one day after Naver announced it would acquire Dunamu.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 27,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Dunamu (Upbit)"
+  }
+}

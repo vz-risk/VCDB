@@ -1,0 +1,123 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2000,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1839993F-FE7C-4AF6-920C-3F17CA4C37BA",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22721\nCoded from the Hacking-ext-unknown template (issue tag) with deviations: sources only say a cyber incident impacted HAEA's IT environment; no web application is named, so asset is S - Unknown and hacking vector Unknown (not Web application). Hacking variety Unknown per template.\nVictim: Hyundai AutoEver America, LLC (Orange County, CA), IT services affiliate of Hyundai Motor Group. Industry kept as 541 from the issue NAICS line (541512 Computer Systems Design Services would be more specific; reviewer may refine). Employee count: Built In lists 489 employees for HAEA -> 101 to 1000; BleepingComputer cites 5,000 on HAEA's website and SecurityWeek 6,000+ for Hyundai AutoEver worldwide, which appear to be group-level figures.\nTimeline: unauthorized activity began Feb 22, 2025; HAEA became aware Mar 1, 2025 (7 days); last activity Mar 2, 2025 (contained 1 day after discovery). dbir_year 2026. Discovery by HAEA -> internal, variety Unknown.\nData: names, SSNs and driver's license numbers (Massachusetts filing via BleepingComputer/SecurityWeek); HAEA's update says about 2,000 individuals, mainly current and former HAEA and Hyundai Motor America employees, with employment-related data -> Personal, data_victim Employee, data_total 2000 (approximate). HAEA could not confirm exfiltration, but unauthorized access to the environment holding the data is confirmed and individuals were notified -> data_disclosure Yes, result Infiltrate only. Actor unidentified, no ransomware group claim -> motive Unknown. Hosting not stated -> cloud Unknown.\nIssue data problem: the Forbes comment headline ('2.7 Million Social Security Numbers') is wrong; 2.7 million is the number of vehicles connected to HAEA systems, not affected people (Forbes and The Drive say so themselves, and HAEA later said ~2,000). Forbes and The Drive are kept in references since they are about this breach, but their count was not used.",
+    "created": "2026-10-08T16:48:40Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to IT environment holding employee PII"
+      }
+    ],
+    "github": "22721",
+    "master_id": "1839993F-FE7C-4AF6-920C-3F17CA4C37BA",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/system/files/HAEA%20Sample%20Notice.pdf; https://www.bleepingcomputer.com/news/security/hyundai-autoever-america-data-breach-exposes-ssns-drivers-licenses/; https://www.securityweek.com/automotive-it-firm-hyundai-autoever-discloses-data-breach/; https://www.forbes.com/sites/larsdaniel/2025/11/10/hyundai-data-breach-exposes-27-million-social-security-numbers/; https://www.thedrive.com/news/hyundai-data-breach-puts-2-7-million-owners-ssns-at-risk",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized third party accessed the IT environment of Hyundai AutoEver America (HAEA), the North American IT services affiliate of Hyundai Motor Group, from February 22 to March 2, 2025. HAEA detected the incident on March 1, 2025, contained it with outside experts and law enforcement, and in late 2025 notified about 2,000 people, mostly current and former HAEA and Hyundai Motor America employees, whose names, Social Security numbers and driver's license numbers may have been exposed.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 7
+    },
+    "incident": {
+      "day": 22,
+      "month": 2,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Hyundai AutoEver America"
+  }
+}

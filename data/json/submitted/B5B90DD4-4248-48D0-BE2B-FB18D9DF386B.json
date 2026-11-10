@@ -1,0 +1,120 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - ICS"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "B5B90DD4-4248-48D0-BE2B-FB18D9DF386B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24199\nPart of the coordinated July 26-28, 2026 attacks on internet-exposed operational technology at US water and wastewater systems (30+ systems in Minnesota plus Georgia, Michigan, New Jersey and other states; the FBI says at least seven states). CISA's July 30 alert and its July 2026 update describe Iranian-affiliated actors targeting internet-facing PLCs (Rockwell, Schneider, Siemens), changing passwords and IP addresses to lock operators out and, for the first time, stealing PLC project files. No federal or state attribution has been made; experts suspect Iran's IRGC (pattern consistent with CyberAv3ngers per Tenable), so the actor is coded external Unknown with motive Unknown, and the suspicion is only noted. Method at this specific utility is not public, so hacking variety and vector are Unknown (the campaign generally used internet-exposed devices with default or weak credentials). Template Hacking-ext-unknown used for actor/action only; no data theft was reported, so no confidentiality block, and the asset is the control system with role OT rather than a web application. Consider linking all the July 2026 water records with one campaign_id.\nImpact: water pumps shut down (pump station failure) and a brief boil-water advisory -> availability Interruption. Integrity Unknown (what was changed is not stated). CCWA says customer payment and billing data were not compromised.\nDiscovery: pump station failure detected in the middle of the night -> internal, method Unknown (likely operations monitoring).\nVictim: Clayton County Water Authority, a public water authority in Clayton County, Georgia (government Local). NAICS 221310 from the issue. Employee count estimated (a few hundred).",
+    "created": "2026-11-09T19:39:56Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to pump controls (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Pumps shut down; boil-water advisory"
+      }
+    ],
+    "github": "24199",
+    "master_id": "B5B90DD4-4248-48D0-BE2B-FB18D9DF386B",
+    "modified": "2026-11-09T19:39:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.npr.org/2026/08/12/nx-s1-5927437/cyberattack-water-iran-war; https://www.opb.org/article/2026/08/12/cyberattacks-on-the-u-s-water-sector-are-exposing-vulnerabilities-during-iran-war/; https://www.atlantanewsfirst.com/2026/08/04/clayton-county-among-coordinated-cyberattacks-water-systems-6-states/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 27, 2026 unauthorized cyber activity shut down water pumps at the Clayton County Water Authority (CCWA) in metro Atlanta, Georgia. A pump station failure was detected in the middle of the night and the county issued a brief boil-water advisory. CCWA said water was not contaminated and customer payment and billing information was not compromised. The FBI, CISA and EPA investigated it as part of the coordinated attacks on water systems in Minnesota and at least six other states, which experts suspect are linked to Iran.",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "221310",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Clayton County Water Authority"
+  }
+}

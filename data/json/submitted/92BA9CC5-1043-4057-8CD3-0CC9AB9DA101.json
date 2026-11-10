@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6300000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "92BA9CC5-1043-4057-8CD3-0CC9AB9DA101",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23208\nCoded from the Hacking-ext-unknown template (issue tag). Deviations: the stolen data was described as a 61 GB, 209-table database dump, so asset is S - Database rather than S - Web application, and hacking vector is Unknown because no source names the entry point. Hacking variety Unknown per template.\nVictim not confirmed: Russell Cellular has not confirmed the breach; Verizon said it is aware of a potential threat and investigating with the retailer. Cybernews reviewed samples and said they look structured and legitimate, but that is not verification. Coded security_incident Suspected and data_disclosure Potentially. It is also unclear (teiss) whether the data came from Russell Cellular itself or a third-party provider.\nActor: unnamed seller on an unnamed hacker forum (SC Media calls it a leak site). Data offered for sale for $1,200 is a monetization signal -> motive Financial; variety Unknown because the actor is not named. SC Media mentions Scattered Lapsus$ Hunters only as context for other Verizon-related claims, not as the actor here; not coded.\nTimeline: listing reported March 17, 2026 (Security Magazine; PR Newswire release says posted March 17). Intrusion date unknown; coded incident as March 2026 from the listing date, so the actual begin date is likely earlier. dbir_year 2027.\nDiscovery: the actor publicized it by listing the data for sale -> external Actor disclosure.\nData (attacker-claimed, not victim-confirmed): customer names, phone numbers, emails, account numbers, invoice and tracking numbers, device identifiers (ESN, IMEI), contract details and tariff plans -> Personal; employee usernames, passwords (some plaintext, some hashed) and access roles -> Credentials. data_total 6,300,000 is the seller's claim covering customers (and employees per the law-firm release); kept as the only available figure. Encryption state mixed/unstated -> Stored. data_abuse omitted (sale offer only; no confirmed downstream misuse).\nVictim: Russell Cellular, Battlefield (Springfield area), Missouri; Verizon authorized retailer with 750+ stores and 2,000+ employees (teiss) -> 1001 to 10000. NAICS: the issue gives 517112 (Wireless Telecommunications Carriers), but Russell Cellular is a retailer of phones and Verizon service plans, not a carrier; corrected to 449210 (Electronics and Appliance Retailers, which includes cellular telephone stores). Reviewer may prefer to keep 517112.\nSources: the issue's PR Newswire release is a plaintiff law-firm (Schubert Jonckheer & Kolbe) solicitation, not a victim notice. Added Security Magazine, PhoneArena, teiss and SC Media, which all trace back to Cybernews.\nConfidence Low: unconfirmed claim, unknown actor and method.",
+    "created": "2026-10-08T16:48:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unknown intrusion into retailer database"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer and employee database allegedly copied and offered for sale"
+      }
+    ],
+    "github": "23208",
+    "master_id": "92BA9CC5-1043-4057-8CD3-0CC9AB9DA101",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.prnewswire.com/news-releases/privacy-alert-russell-cellular-under-investigation-for-data-breach-of-over-6-million-customer-and-employee-records-302737645.html; https://securitymagazine.com/articles/102183-verizon-retail-customer-database-allegedly-for-sale-by-hackers-63m-customers-at-risk; https://www.phonearena.com/news/verizon-authorized-retailer-russell-cellular-hacked_id179085; https://www.teiss.co.uk/news/hackers-claim-63-million-customer-records-stolen-from-verizon-retail-partner-russell-cellular-17247; https://www.scworld.com/brief/major-verizon-retailers-customer-records-stolen-offered-for-sale",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In March 2026 an unnamed threat actor offered for sale on a hacker forum, for $1,200, a 61 GB database allegedly taken from Russell Cellular, one of the largest Verizon authorized retailers in the US. The seller claimed it held records on about 6.3 million customers (names, phone numbers, emails, account numbers, device identifiers, contract and plan details) plus employee usernames, passwords and access roles. Cybernews said samples looked legitimate; Verizon said it was investigating with the retailer, and Russell Cellular had not confirmed the breach.",
+  "timeline": {
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "449210",
+    "region": [
+      "019021"
+    ],
+    "state": "MO",
+    "victim_id": "Russell Cellular"
+  }
+}

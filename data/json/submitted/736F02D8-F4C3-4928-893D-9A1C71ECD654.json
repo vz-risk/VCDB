@@ -1,0 +1,148 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3049,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3049,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "736F02D8-F4C3-4928-893D-9A1C71ECD654",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23304\nTemplate Hacking-ext-unknown (issue tag) used as the base, refined from the sources: Eversource says phishing and social engineering attacks compromised the credentials of two employees and 'these malicious efforts enabled limited Company data to be accessed through the compromised accounts' (CT Insider). Coded Social Phishing (target employees, People asset, Alter behavior per the social rule) followed by Hacking Use of stolen creds. Vector for both Unknown (phishing channel and access path for the accounts not stated). Asset S - File for the 'limited number of files'; template S - Web application not supported.\nData: names, mailing/service addresses, account info, phones, emails, SSNs, driver's license numbers, federal ID numbers (Personal) and financial account numbers (Bank). 3,049 individuals (Claim Depot / state AG filings; 284 in Massachusetts). data_total 3,049. Claim Depot's icon list also shows DOB and medical information, but its own summary and the company statement do not, so Medical was not coded.\nDiscovery: Eversource says the activity was 'promptly identified and blocked' -> internal, method Unknown.\nTimeline: phishing campaign in April 2026; breach/discovery date listed as April 27, 2026. Month only coded because the first phishing date is unclear. dbir_year 2027.\nActor: unknown external; motive Unknown (no ransom or sale reported).\nVictim: Eversource Energy (Boston and Hartford), electric and gas transmission and distribution. NAICS 221122 used instead of the issue body's 221118 (other electric power generation), which does not fit a distribution utility. About 10,000+ employees (approximate) -> 10001 to 25000.",
+    "created": "2026-11-09T19:35:41Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing of two employees"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds; customer files accessed"
+      }
+    ],
+    "github": "23304",
+    "master_id": "736F02D8-F4C3-4928-893D-9A1C71ECD654",
+    "modified": "2026-11-09T19:35:41Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.ctinsider.com/business/article/eversource-customers-cyberattack-ct-ma-nh-22289772.php; https://www.ctinsider.com/news/article/Connecticut-utilities-tight-lipped-about-16879156.php; https://www.claimdepot.com/data-breach/eversource-energy-2026; https://upguard.com/news/eversource-energy-data-breach-2026-05-25",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In April 2026 phishing and social engineering attacks compromised the credentials of two Eversource Energy employees, and the attackers used the compromised accounts to access a limited number of company files. Eversource identified and blocked the activity (breach date listed as April 27, 2026). Personal information of 3,049 customers in Connecticut, Massachusetts and New Hampshire was exposed, including names, addresses, account information, phone numbers, emails, Social Security numbers, driver's license numbers and financial account numbers. Letters went out from May 27, 2026.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221122",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Eversource Energy"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2585481,
+          "variety": "Personal"
+        },
+        {
+          "amount": 54401,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 16,
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2585481,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "5B8A2B74-C12E-4A58-A1D9-C3D0A009C305",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24667\nVictim: Sony Network Communications Inc. (SNC, Sony Group ISP; So-net). NAICS refined from 517 to 517311 (2017 Wired Telecommunications Carriers, which includes fixed broadband ISPs; matches the corpus's 2017 coding). Employee count 1001 to 10000 is approximate and not confirmed against a fetched source in this pass (web lookups were rate-limited); please verify.\nSecondary victim: NTT Docomo (comment on the issue). plala (S course) is a plan NTT Docomo offers to Docomo Hikari customers; SNC is Docomo's contractor and the plala (S course) data (443,495 records) sat in SNC's So-net member database. Listed as 'NTT Docomo, Inc.; 517312'. Not a Partner_Breach-labelled issue and SNC is itself the main data owner (2.14M So-net members), so SNC is primary as the issue states; hacking vector left Unknown rather than Partner because the attack vector into SNC is undisclosed - reviewer may add Partner to reflect the Docomo relationship.\nTemplate Hacking-ext-unknown: hacking variety Unknown (cause under investigation). Deviation: asset S - Database instead of S - Web application, because sources describe unauthorized access to the So-net member database/server, not a web app; vector Unknown instead of Web application for the same reason.\nData: 2,585,481 member records (So-net 2,141,986 incl. members who left since March 2026; plala S course 443,495): names, phone, email, user ID, birth date, gender, internet-connection ID -> Personal (amount/data_total 2,585,481). 54,401 email addresses with passwords for four So-net mail services (Mail Service G, A-Box, So-net VAIO Mail, PostPet) -> Credentials 54,401 (the issue body's 'Gmail' is a mistranslation of Mail Service (G)). 16 So-net records with bank details (institution, branch, account type/number, holder) -> Bank 16. General member passwords, card data and PINs not leaked. data_disclosure Yes (SNC says leakage confirmed). data_victim Customer. No secondary harm confirmed as of Oct 27, so data_abuse not coded.\nTimeline: unauthorized access Oct 19, 2026; SNC confirmed it and shut down the server Oct 23; items/counts identified Oct 24; Docomo informed Oct 26; disclosure and forced mail-password reset Oct 27. Discovery internal Unknown (4 days). Containment Days. dbir_year 2027. Actor external Unknown; motive Unknown.\nSources: Yahoo (issue), BleepingComputer (comment; fetch failed but kept), innovaTopia (fetched, primary detail source).\nConfidence Medium: action variety unknown.",
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data copied from So-net member database"
+      }
+    ],
+    "github": "24667",
+    "master_id": "5B8A2B74-C12E-4A58-A1D9-C3D0A009C305",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.yahoo.com/news/world/articles/sony-data-breach-hits-2-182246768.html; https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/; https://innovatopia.jp/cyber-security/cyber-security-news/119506/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A third party gained unauthorized access to Sony Network Communications' So-net member database on October 19, 2026. SNC confirmed the intrusion and shut down the server on October 23 and disclosed on October 27 that 2,585,481 member records were leaked - 2,141,986 So-net members and 443,495 members of NTT Docomo's plala (S course) service whose data SNC held as Docomo's contractor - including names, phone numbers, email addresses, user IDs, dates of birth, gender and internet-connection IDs, plus 54,401 email-service passwords (force-reset) and bank account details for 16 members. The attack method is under investigation.",
+  "timeline": {
+    "containment": {
+      "unit": "Days"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 4
+    },
+    "incident": {
+      "day": 19,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "517311",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "NTT Docomo, Inc.; 517312"
+      ]
+    },
+    "victim_id": "Sony Network Communications Inc."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2760000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2760000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1F72D36C-2599-480B-BCE3-ED6E32296A9C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24556\nVictim: Hollys (South Korean coffee chain, about 530 outlets, owned by KG Group). NAICS changed from 7224 (Drinking Places, Alcoholic Beverages) to 722515 (Snack and Nonalcoholic Beverage Bars) because Hollys is a coffee-shop chain.\nTemplate Hacking-ext-unknown used: external actor, hacking variety Unknown. Deviations: vector Unknown (not Web application) and asset S - Unknown (not S - Web application), because sources say only 'unauthorized access to a cloud service used for membership information' / 'membership program system' with no entry point; cloud coded External Cloud Asset(s) since the data sat in a cloud service.\nPossible cryptomining: Chosun Biz (issue comment) says the actor is 'presumed' to have accessed the system to mine cryptocurrency; shattered.io says this is being examined but unconfirmed. Not coded (no malware action) because it is not established; reviewer may add malware Cryptocurrency mining if confirmed.\nData: user IDs and passwords (Credentials; storage/hashing of passwords not disclosed, so state Stored), names, dates of birth, phone numbers, addresses, emails, DI identity-verification value (Personal). 2.76 million is a count of records/'pieces of personal information' from cumulative 2009-Feb 2020 signups, likely with duplicates, not unique people; used as amount and data_total with that caveat. Hollys says these were temporary files from a past membership-service overhaul that should have been deleted (regulators examining retention); no Error action coded because retention failure is not an overt action that caused the breach.\ndata_disclosure Yes: unauthorized access to the system holding the data is confirmed; Yonhap says hackers 'stole' the data, but exfiltration volume is not confirmed, so result is Infiltrate only.\nTimeline: access window Sept 3 - Oct 7, 2026; incident coded 2026-09-03; detected by Hollys Oct 7 (about 5 weeks); disclosed Oct 19. discovery_method internal Unknown (Hollys detected it; method not stated). dbir_year 2027.\nActor variety/motive Unknown (no group named, no ransom/sale). Employee count Unknown: no headcount found (many outlets are franchised).\nSources: shattered.io (issue) and Korea Times (issue comment) read; Yonhap and Chosun Biz (issue comments) were blocked, their content taken from the comment text.\nConfidence Medium: reputable sources, but action variety, vector and actor unknown.",
+    "created": "2026-11-05T22:18:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to cloud membership data"
+      }
+    ],
+    "github": "24556",
+    "master_id": "1F72D36C-2599-480B-BCE3-ED6E32296A9C",
+    "modified": "2026-11-05T22:18:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://shattered.io/hollys-data-breach-2-76-million-records-2026/; https://biz.chosun.com/en/en-retail/2026/10/19/YV4ALO4DZRDILMPXKEHV3FGLTE/; https://www.koreatimes.co.kr/business/companies/20261019/276-mil-pieces-of-customers-info-at-hollys-leaked-in-cyberattack; https://en.yna.co.kr/view/AEN20261019008600320",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "South Korean coffee chain Hollys disclosed on Oct 19, 2026 that an unauthorized party accessed a cloud service holding membership data between Sept 3 and Oct 7, 2026, exposing about 2.76 million customer records (user IDs, passwords, names, dates of birth, phone numbers, addresses, emails and identity-verification DI values) from signups between 2009 and February 2020. The data sat in temporary files left from a past membership-system overhaul. Hollys detected the access on Oct 7, blocked it, reported to KISA and ordered password resets.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 5
+    },
+    "incident": {
+      "day": 3,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "722515",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "KG Hollys F&B"
+  }
+}

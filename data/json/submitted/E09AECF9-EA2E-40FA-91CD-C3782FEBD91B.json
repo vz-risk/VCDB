@@ -1,0 +1,167 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 216601,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "E09AECF9-EA2E-40FA-91CD-C3782FEBD91B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23597\nTemplate Hacking-ext-extortion (= Hacking-ext-unknown scaffold + extortion): hacking variety Unknown, vector Web application, asset S - Web application kept from the template because no source states how ShinyHunters got in. ShinyHunters' 2026 campaign typically vishes employees for Salesforce/SSO access (PrivacyOn), but no source ties that method to American Tower, so it was not coded. Added action.social Extortion (target/vector Unknown), P - Unknown asset, integrity Alter behavior.\nRansomware: the issue/abhs.in call it a 'ransomware attack', but the leak-site post (ransomware.live) is a 'FINAL WARNING PAY OR LEAK' data-extortion listing and HIBP calls it a 'pay or leak' extortion campaign. No source reports encryption or outage, so no malware block or availability attribute was coded.\nActor: ShinyHunters (named on the leak-site listing, HIBP, abhs.in, PrivacyOn). Organized crime / Financial (extortion + data leak). Country Unknown.\nData: HIBP (added June 26, 2026) lists 216,601 email addresses of employees, contractors, customers and leads with names, job titles, phone numbers and physical addresses -> Personal amount 216,601; data_victim Employee, Customer, Other (contractors/leads). PrivacyOn says the published set holds about 574,000 unique emails; this conflicts with HIBP and is not used. ShinyHunters claims 5.2M records incl. landowner PII, tower GPS coordinates, plaintext gate/physical access codes for tower compounds and records tied to T-Mobile, Verizon and DHS. Coded Internal and Credentials (physical access codes) from the attacker claim per the attacker-claim rule; not victim-confirmed. data_total omitted (5.2M is an unverified attacker claim covering mixed record types; 216,601 covers only email-bearing people).\nConfirmation: American Tower has not publicly described the incident. security_incident Confirmed because HIBP loaded and published the leaked data; board-cybersecurity.com also lists the breach as confirmed. The issue's claim that American Tower filed an SEC 8-K about the breach could NOT be verified: the only 8-K found (April 28, 2026) predates the June incident and no source quotes a breach 8-K. Treat that claim as unverified.\nTimeline: leak-site listing discovered June 12, 2026 (ransomware.live), deadline June 15, data published afterward, HIBP June 26. Initial access date unknown and may be earlier; incident coded 2026-06. dbir_year 2027. Discovery Actor disclosure.\nVictim: American Tower Corporation, Boston, MA. Employees 4,691 (board-cybersecurity.com) -> 1001 to 10000. NAICS 5173 kept from the issue body; American Tower is a communications-site REIT that leases tower space to carriers, so a reviewer may prefer a real-estate lessor code (e.g. 531190).\nSources: abhs.in (issue source; a blog with no primary citations, used only alongside others), HIBP, ransomware.live leak-site mirror, PrivacyOn, board-cybersecurity. TechNadu (search result) could not be fetched and is not cited.\nConfidence Medium: actor, extortion and leaked personal data are sourced, but the access method is unknown and most of the data scope is attacker-claimed.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen (5.2M records claimed)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak site (pay or leak), data published"
+      }
+    ],
+    "github": "23597",
+    "master_id": "E09AECF9-EA2E-40FA-91CD-C3782FEBD91B",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://abhs.in/blog/american-tower-shinyhunters-ransomware-5-million-records-gps-access-codes-2026; https://haveibeenpwned.com/Breach/AmericanTower; https://m.ransomware.live/id/QW1lcmljYW4gVG93ZXIgQ29ycG9yYXRpb25Ac2hpbnlodW50ZXJz; https://www.privacyon.com/blog/what-to-do-after-the-american-tower-data-breach-2026; https://www.board-cybersecurity.com/incidents/tracker/american-tower-cybersecurity-incident-5b5d12d9",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The ShinyHunters extortion group listed American Tower Corporation on its leak site on June 12, 2026, claiming over 5.2 million records including customer and landowner PII, tower GPS coordinates and plaintext gate access codes for US cell tower compounds, and set a June 15 'pay or leak' deadline. Data was later published; Have I Been Pwned loaded 216,601 email addresses of employees, contractors, customers and leads with names, job titles, phone numbers and addresses. The access method was not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5173",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "American Tower Corporation"
+  }
+}

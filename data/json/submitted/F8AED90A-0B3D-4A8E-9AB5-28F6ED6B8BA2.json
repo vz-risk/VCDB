@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 11826,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 11826,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "F8AED90A-0B3D-4A8E-9AB5-28F6ED6B8BA2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23103\nTemplate Hacking-ext-unknown used; asset S - Unknown and vector Unknown (Resecurity says 'likely' a compromised customer support system, not confirmed, so not coded as a specific asset). Data: identities, emails, IPs -> Personal (11,826 records = data_total); transaction histories -> Bank (closest enum for financial account activity; reviewer may prefer Other). Discovery external Security researcher (Resecurity). Motive Unknown (data circulating on dark web; no sale or ransom stated).\nTimeline: data runs 2022-2025, so the leak happened in 2025 at the earliest; exact date unknown -> incident year 2025; dbir_year 2027 derived from the March 2026 public report. Victim NAICS 523999 (issue gives 523110, which no longer exists in NAICS 2022). Only one source (SC Media brief of Security Affairs/Resecurity).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not confirmed (possibly support system)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "User and transaction database leaked"
+      }
+    ],
+    "github": "23103",
+    "master_id": "F8AED90A-0B3D-4A8E-9AB5-28F6ED6B8BA2",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/irans-ariomex-crypto-exchange-suffers-major-data-leak-exposing-user-and-transaction-data",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In March 2026 Resecurity reported a leak from Iranian crypto exchange Ariomex: a database of 11,826 records (about 7,710 from Iran) covering 2022 to 2025, including user identities, emails, IP addresses and transaction details, was circulating on the dark web. Resecurity said the breach likely stemmed from a compromised customer support system.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IR"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Ariomex"
+  }
+}

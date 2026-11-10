@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Forced browsing",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "4d722e4d656f77"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1062060,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1062060,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "6B6D5E17-F870-4D43-A625-AE8E26AE16E5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24486\nTemplate Hacking-ext-unknown used as scaffold (external actor, hacking, vector Web application, asset S - Web application, data_disclosure Yes, event hak/ext/srv/cp).\nDeviations: hacking.variety Forced browsing (with its required parent Exploit vuln) instead of Unknown, and discovery Actor disclosure instead of Unknown. CenterPoint's 8-K says only that data came from 'one of the Company's external facing systems' and does not describe the method. The actor (alias '4d722e4d656f77', per BleepingComputer and Security Affairs) claims it iterated through millions of IDs on a public API that lacked rate limiting, WAF, and auth tokens. Forced browsing (enumerating predictable record identifiers) is coded from that attacker claim; it is not victim-confirmed, and a reviewer may prefer Abuse of functionality or Unknown. The lack of rate limiting and access control is the weakness the actor exploited, which fits the Exploit vuln parent. The 8-K and SecurityWeek say CenterPoint learned of the incident from the actor's public forum post, so discovery is Actor disclosure.\nActor: external, unnamed individual alias, variety Unknown. The actor says it messaged the company before leaking and was ignored, but no source documents a ransom demand or sale price. Extortion was therefore NOT coded and motive is Unknown. Country Unknown.\nData: Texas AG filing lists names, addresses, SSNs, and driver's license numbers for 1,062,060 Texas residents, coded as Personal with amount 1,062,060 and data_victim Customer. The actor claims 7.49M records (names, phones, service/billing addresses, account numbers, billing amounts, payment status, partial SSNs). Customers in Indiana, Minnesota, and Ohio may also be affected, but the company has not given a total. data_total 1,062,060 (added by the VERIS rules from the data amount) is therefore the confirmed Texas-only minimum, not the full total. The 'Financial' data type in the issue refers to utility billing amounts and account numbers, not bank or payment card data, so Bank/Payment were not coded. data_abuse 'Yes - Posted on personal forum' because the actor published a 2.5 GB download archive on a cybercrime forum (SecurityWeek, Security Affairs).\nTimeline: BleepingComputer cites class-action complaints alleging a breach window of Aug 17 - Sep 1, 2026, so the incident is coded 2026-08 (month only, lawsuit-sourced). Forum post and data dump Sept 12, 2026; 8-K about Sept 14, 2026; Texas AG report about Oct 13-14, 2026. Discovery about 4 weeks after the alleged start, coded as unit Weeks. dbir_year 2027.\nVictim: CenterPoint Energy, Inc. (Houston, TX). NAICS 2211 kept from the issue, because the company is a combined electric and gas utility holding company and the 4-digit code is the most specific one covering it. 14,931 employees at 12/31/2025 (stockanalysis.com / 10-K) -> 10001 to 25000. Asset hosting (cloud vs on-prem) unknown.\nPrior VCDB record 7B9D36E6 (2011 insider identity theft) is a different incident. CenterPoint's 2023 MOVEit exposure, mentioned by The Record, is also a separate incident.\nSources: issue body plus all 8 comment URLs (all about this incident); added BleepingComputer and Security Affairs for the actor alias and method claim.\nConfidence Medium: the method and record total are attacker-sourced; only the Texas count and data types are victim-confirmed.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Forced browsing of public API; customer data scraped (attacker claim)"
+      }
+    ],
+    "github": "24486",
+    "master_id": "6B6D5E17-F870-4D43-A625-AE8E26AE16E5",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/centerpoint-energy-data-breach; https://www.houstonchronicle.com/news/houston-texas/article/centerpoint-data-breach-22476332.php; https://abc13.com/post/more-1-million-customers-impacted-centerpoint-energy-data-breach-ag-report-filing-shows/19938921/; https://www.federmanlaw.com/blog/centerpoint-energy-inc-data-breach-investigated-by-federman-sherwood/; https://www.click2houston.com/news/local/2026/10/14/more-than-1-million-texans-affected-by-centerpoint-data-breach-ag-report-shows/; https://www.khou.com/article/news/local/centerpoint-data-breach-texas/285-422c4436-8295-4601-a152-1a8ba503ebb9; https://www.securitymagazine.com/articles/102658-1m-impacted-by-centerpoint-energy-data-breach; https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/; https://cw39.com/news/local/centerpoint-energy-data-breach/; https://ktrh.iheart.com/featured/houston-texas-news/content/2026-10-15-data-breach-impacts-a-million-centerpoint-energy-customers/; https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/; https://securityaffairs.com/199170/data-breach/texas-utility-centerpoint-energy-confirms-data-breach-after-hacker-claims-7-49m-records-stolen.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A threat actor using the alias 4d722e4d656f77 claimed on a cybercrime forum to have scraped about 7.49 million customer records from CenterPoint Energy and on September 12, 2026 posted a 2.5 GB archive for download. CenterPoint confirmed in an SEC 8-K (around September 14, 2026) that personal information was taken from one of its external-facing systems, and later told the Texas Attorney General that 1,062,060 Texas residents were affected (names, addresses, Social Security numbers, driver's license numbers). The actor claims it enumerated account IDs through a public API with no rate limiting or WAF. Electric and gas service was not affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "2211",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "CenterPoint Energy, Inc."
+  }
+}

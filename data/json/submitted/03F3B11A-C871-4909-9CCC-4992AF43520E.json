@@ -1,0 +1,143 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 3700000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 3700000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "03F3B11A-C871-4909-9CCC-4992AF43520E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23198\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown used, but variety refined to Use of stolen creds because the SEC filing says the attacker 'took control of credentials linked to' the corporate BTC wallets after accessing internal systems (how the initial access happened is not stated). Asset S - Unknown, vector Unknown (no web app named).\nData: 50.9 BTC -> Virtual currency; wallet credentials -> Credentials. Impact $3.7M (Cointelegraph; BleepingComputer says $3.6M). Motive Financial.\nVictim: Bitcoin Depot Inc., Atlanta GA; NAICS 522320 (issue tag 52; crypto ATM/payment operator). Employee count Unknown (not looked up).\ndbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to internal systems, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Wallet credentials used to transfer 50.9 BTC"
+      }
+    ],
+    "github": "23198",
+    "master_id": "03F3B11A-C871-4909-9CCC-4992AF43520E",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.tradingview.com/news/cointelegraph:07fa1df87094b:0-bitcoin-depot-discloses-3-7m-btc-theft-in-cybersecurity-breach/; https://www.bleepingcomputer.com/news/security/crypto-atm-giant-bitcoin-depot-says-hackers-stole-36-million-from-its-wallets/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 23, 2026 a hacker gained access to some internal systems of US crypto ATM operator Bitcoin Depot and took control of credentials linked to its corporate Bitcoin wallets, stealing 50.9 BTC (about $3.6-3.7 million). Bitcoin Depot disclosed the theft in an SEC filing, saying customer accounts, platforms and personal data were not affected and that insurance may cover part of the loss.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 23,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Bitcoin Depot"
+  }
+}

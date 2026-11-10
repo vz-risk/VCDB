@@ -1,0 +1,128 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Theft"
+      ],
+      "vector": [
+        "Public facility"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Printed"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "62D2CD1E-1456-4ACD-95FB-C25DF9FEE6C8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22631\nTemplate Physical-ext-theft-paper (issue tag) used: external actor, Physical Theft, asset M - Documents, availability Loss. There is no paper-theft diagram in the template folder, so the userdev theft diagram was followed with the paper asset swapped in.\nActor: external, variety Activist (she founded Georgians for Affordable Energy and is a public critic of Georgia Power and the PSC). Motive Unknown: the DA's filing says the warrant did not claim she intended to steal anything, so no motive is coded.\nData: booklet labelled 'Georgia Power Trade Secrets', coded Secrets, state Printed. data_disclosure Yes per the style guide rule that stolen paper documents are treated as confirmed; note she returned it the same day and no source says she read or shared it, so a reviewer may prefer Potentially. The DA also said the warrant did not establish the contents were protected secrets. Georgia Power confirmed no actual financial harm.\nVector Public facility (PSC hearing room in a state office building adjoining the Capitol). Whose desk it was is not stated; two people supervising the protected information were not paying attention.\nDiscovery: she was captured on video and returned the booklet the same day; who noticed it missing is unclear (AP), so discovery Unknown, coded within hours. Containment same day.\nTimeline: PSC hearing in October 2025 (arrest on Tuesday Oct 21, 2025); exact hearing day not confirmed, so month only. dbir_year 2026.\nVictim: Georgia Power, NAICS 221122 (from issue). 7,760 employees (georgiapower.com 2025) -> 1001 to 10000.\nCharges were dropped in January 2026 (DA declined to prosecute; The Current GA). Security incident still coded Confirmed because the booklet was taken and returned.\nAsset role IT (default; no OT asset involved).",
+    "created": "2026-11-09T19:24:28Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Theft of trade secret booklet from hearing room"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "au",
+        "summary": "Booklet taken (returned same day)"
+      }
+    ],
+    "github": "22631",
+    "master_id": "62D2CD1E-1456-4ACD-95FB-C25DF9FEE6C8",
+    "modified": "2026-11-09T19:24:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://apnews.com/article/georgia-power-patty-durand-trade-secrets-theft-83b0eb84a2d329a52df779d25d6818f1; https://georgiarecorder.com/2025/10/22/prominent-clean-energy-advocate-accused-of-stealing-georgia-power-trade-secrets-at-public-meeting/; https://www.fox5atlanta.com/news/georgia-power-critic-arrested-allegedly-stealing-trade-secrets; https://thecurrentga.org/2026/01/23/activist-wont-be-prosecuted-for-alleged-theft-of-georgia-power-trade-secrets",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "During a lunch break at a Georgia Public Service Commission regulatory hearing in October 2025, Patty Durand, a former PSC candidate and outspoken critic of Georgia Power, allegedly picked up a booklet labelled 'Georgia Power Trade Secrets' from a desk, put it in her purse and left the room. She was captured on video, returned the booklet the same day, and was arrested by Georgia Capitol Police on a felony theft-of-trade-secrets charge. In January 2026 the Fulton County DA declined to prosecute, noting Georgia Power confirmed no actual financial harm.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 0
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221122",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Georgia Power"
+  }
+}

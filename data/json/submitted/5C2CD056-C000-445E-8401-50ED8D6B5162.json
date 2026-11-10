@@ -1,0 +1,211 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Backdoor"
+      ],
+      "vector": [
+        "Backdoor",
+        "Other"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Persist",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "Backdoor",
+        "Trojan",
+        "RAT",
+        "Capture stored data",
+        "Downloader"
+      ],
+      "vector": [
+        "Email",
+        "Email link"
+      ]
+    },
+    "social": {
+      "target": [
+        "Executive"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "DPRK (per Quantstamp)"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation",
+        "Modify configuration",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 36000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 36000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "5C2CD056-C000-445E-8401-50ED8D6B5162",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23332\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Social-ext-Phish followed (phishing via Email, external actor), then extended with the documented chain: malware (signed loader giving full remote control -> Backdoor/Trojan/RAT; Stas'm RDP Wrapper installed for persistence; wallet and private keys copied -> Capture stored data) and hacking (stolen Safe owner keys used to take over the ProxyAdmin -> Use of stolen creds). Target Executive (director Chong Yee Wai). Asset S - Other = bridge smart contract/Safe multisig on public blockchains.\nActor: Quantstamp (commissioned by Humanity) attributed to North Korean actors -> Nation-state, KP, motive Financial (theft of funds). Medium-confidence vendor attribution, not law enforcement.\nIntegrity: Alter behavior (phish), Software installation (malware), Modify configuration (malicious contract upgrade / ProxyAdmin ownership change), Fraudulent transaction (drain and unauthorized mint). Losses about $36M (company update) -> impact.\nVictim: Humanity Protocol / Humanity Foundation, identity-blockchain project; country and headcount not stated -> Unknown. NAICS 523999 per issue tag 52 (digital-asset project); reviewer may prefer 513210.\nTimeline: phishing click June 5 2026, theft June 8 -> incident 2026-06-05, compromise 3 days. dbir_year 2027. Discovery Unknown (not stated how Humanity spotted the drain).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Director falls for phishing email impersonating Bithumb"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Signed loader/RAT installed on laptop"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Wallet and private keys copied"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Stolen Safe owner keys used to upgrade bridge contract"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "H tokens drained and minted"
+      }
+    ],
+    "github": "23332",
+    "master_id": "5C2CD056-C000-445E-8401-50ED8D6B5162",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.coindesk.com/tech/2026/06/09/humanity-protocol-token-crashes-more-than-80-after-a-usd32-million-private-key-hack; https://finance.yahoo.com/markets/crypto/articles/humanity-protocol-loses-36m-private-105437742.html; https://bingx.com/en/flash-news/post/humanity-says-m-in-tokens-stolen-after-employee-laptop-breach-exposed-bridge-admin-keys; https://www.nknews.org/pro/north-korean-hackers-steal-36m-from-blockchain-service-using-phishing-email/; https://phemex.com/news/article/humanity-security-breach-linked-to-north-korean-hacker-tactics-89330; https://www.tradingview.com/news/cointelegraph:a9405334d094b:0-humanity-protocol-s-36m-hack-tied-to-suspected-north-korean-hackers-quantstamp/; https://crypto.news/humanity-protocol-blames-north-korea-linked-hackers-for-36m-theft/; https://cryptonews.com.au/news/humanity-protocol-hack-drains-36m-after-compromised-laptop-exposes-bridge-controls-134017/; https://cryptoslate.com/humanity-protocols-h-crash-exposes-the-private-keys-behind-its-zk-identity-pitch/; https://crypto.news/humanity-founder-reveals-employee-laptop-breach-behind-36m-exploit/; https://www.coindesk.com/tech/2026/06/09/humanity-s-usd36-million-exploit-happened-because-a-multisig-wallet-lived-on-one-laptop; https://www.tradingview.com/news/cointelegraph:39967da16094b:0-humanity-says-compromised-laptop-led-to-36m-bridge-attack/; https://www.ccn.com/education/crypto/humanity-protocol-private-key-hack-36m-h-token-crash/; https://www.panewslab.com/en/articles/019eabcf-d7df-71d1-a43e-86bac522b955",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 5, 2026 a Humanity Protocol director opened a phishing email impersonating Bithumb and downloaded a malicious archive whose signed loader gave North Korean attackers remote control of his laptop. The attackers copied his MetaMask wallet and private keys, which held three of six owner keys of the Gnosis Safe controlling the Hyperlane bridge ProxyAdmin. On June 8 they took over the ProxyAdmin, pushed a malicious contract upgrade and drained about 141.2 million H tokens on Ethereum, and on BNB Chain minted additional H, stealing about 193.6 million H in total worth roughly $36 million. Quantstamp attributed the attack to DPRK actors.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 5,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Humanity Protocol"
+  }
+}

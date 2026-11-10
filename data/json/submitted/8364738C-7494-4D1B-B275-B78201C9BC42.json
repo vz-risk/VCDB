@@ -1,0 +1,185 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Modify data",
+        "Other"
+      ],
+      "vector": [
+        "Partner",
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Lazarus Group",
+        "TraderTraitor"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)",
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Misrepresentation",
+        "Modify configuration",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 1500000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 1500000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "8364738C-7494-4D1B-B275-B78201C9BC42",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22876\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown superseded by the well-documented chain (Safe and Bybit forensic reports, FBI): a Safe{Wallet} developer machine was compromised (Feb 4 2025), malicious JS was planted in the Safe{Wallet} front end on AWS (around Feb 19) targeting Bybit, and Bybit's signers approved a manipulated transaction on Feb 21. Coded hacking Unknown vector Partner (initial compromise of Safe), malware (malicious JS that altered transaction data; Modify data/Other) vector Partner and Web application, integrity Misrepresentation (signing interface showed false details), Modify configuration (wallet contract logic changed), Fraudulent transaction.\nProvider perspective considered: Safe{Wallet} (multisig wallet provider) was the breached party, but the malicious code targeted only Bybit, the issue is not tagged Partner_Breach, and the loss was Bybit's, so Bybit is kept as primary victim; reviewer may recode with Safe as primary and Bybit secondary.\nActor: FBI attributes to North Korea's TraderTraitor / Lazarus -> Nation-state KP, Financial. Data/impact: about $1.46-1.5B ETH -> Virtual currency; impact $1.5B.\nVictim: Bybit, Dubai (AE), NAICS 523150 (issue body 523), headcount 1001 to 10000 (about 2,000 staff). Discovery internal Unknown. Timeline: Safe dev compromise Feb 4 2025, theft Feb 21 -> incident 2025-02-04, dbir_year 2026 (issue tagged Priority 2026).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "unk",
+        "summary": "Safe{Wallet} developer machine compromised"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malicious JS injected into Safe{Wallet} front end"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Bybit signers approve manipulated cold-wallet transaction"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "~$1.5B ETH transferred to attacker"
+      }
+    ],
+    "github": "22876",
+    "master_id": "8364738C-7494-4D1B-B275-B78201C9BC42",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.infosecurity-magazine.com/news/bybit-140m-bounty-recover-mega/; https://www.infosecurity-magazine.com/news/fbi-confirms-north-koreas-lazarus/; https://www.eqs-news.com/news/corporate/bybit-sues-north-korea-and-lazarus-group-secures-preliminary-injunction-freezing-stolen-assets-in-landmark-crypto-asset-recovery-effort/afb9f07b-2700-4aec-88a4-4f252b40823a_en; https://news.bitcoin.com/crypto-news/bybit-unleashes-rico-lawsuit-on-north-korea-over-1-5b-hack/; https://247wallst.com/investing/cryptocurrency/2026/10/06/a-chinese-network-laundered-more-than-1-billion-for-north-koreas-lazarus-group-says-zachxbt/; https://www.bleepingcomputer.com/news/security/lazarus-hacked-bybit-via-a-breached-safe-wallet-developer-machine/; https://blocksec.com/blog/bybit-incident-a-web2-breach-enables-the-largest-crypto-hack-in-history",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On February 21, 2025 North Korea's Lazarus Group (TraderTraitor) stole about $1.5 billion in ETH from Dubai-based exchange Bybit. Attackers had compromised a Safe{Wallet} developer's machine and injected malicious JavaScript into the Safe{Wallet} web interface served to Bybit, so that when Bybit's signers approved a routine transfer from an ETH multisig cold wallet to a warm wallet, the interface displayed the correct address while the signed transaction changed the wallet's smart contract logic and gave the attacker control. The FBI attributed the theft to North Korea; Bybit offered a 10% bounty and later sued North Korea and Lazarus.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 17
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 4,
+      "month": 2,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "AE"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Bybit"
+  }
+}

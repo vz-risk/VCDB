@@ -1,0 +1,161 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "CertiK researchers"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "9E4EF5EA-3090-4E4A-9978-5AF2B9A34F59",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20847\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Issue tagged Hacking N&S. Exploit vuln (balance-inflation bug in deposit handling), vector Web application. Social Extortion: Kraken says the researchers withheld ~$3M until paid/valued; integrity Alter behavior and P - Unknown per rule. data_abuse 'Yes - Data ransomed' for the funds-held-hostage component.\nActor: CertiK researchers (per CertiK's own statement; The Block). Variety Other (security firm staff acting outside bounty rules); motive Financial per Kraken's extortion framing, though CertiK framed it as testing (reviewer may change to Other). Funds returned -> impact not set.\nDiscovery external Security researcher (bug bounty report). Victim Kraken (Payward Inc., US), NAICS 523150, headcount 1001 to 10000. dbir_year 2025.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Balance-inflation bug exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "~$3M withdrawn from treasury"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Return of funds conditioned on payment"
+      }
+    ],
+    "github": "20847",
+    "master_id": "9E4EF5EA-3090-4E4A-9978-5AF2B9A34F59",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://markets.businessinsider.com/news/currencies/kraken-says-hackers-turned-to-extortion-after-exploiting-bug-for-3m-1033490769?op=1; https://coindesk.com/business/2024/06/19/kraken-says-hackers-turned-to-extortion-after-exploiting-bug-for-3m; https://www.theblock.co/post/300904/certik-kraken-bug",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 9, 2024 Kraken received a bug bounty report of a flaw that let users artificially inflate their account balances. Kraken fixed it quickly but found the researcher had disclosed it to two other individuals who withdrew nearly $3 million from Kraken's treasuries. The researchers refused to return the funds until Kraken gave a figure for the potential damage, which Kraken called extortion. CertiK later identified itself as the white hat and returned the funds.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 9,
+      "month": 6,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Kraken"
+  }
+}

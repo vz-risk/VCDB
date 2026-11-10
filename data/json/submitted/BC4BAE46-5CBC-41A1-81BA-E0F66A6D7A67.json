@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Kazu"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 99416,
+          "variety": "Medical"
+        },
+        {
+          "amount": 99416,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 99416,
+      "data_victim": [
+        "Customer",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "BC4BAE46-5CBC-41A1-81BA-E0F66A6D7A67",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22904\nCloses https://github.com/vz-risk/VCDB/issues/23286\nIssues #22904 and #23286 describe the same incident (ManageMyHealth patient-portal breach, Dec 2025, Kazu extortion); coded as ONE record citing both.\nCoded with the Malware-ext-Ransomware-databreach tag as a guide but with major deviations, because no source describes encryption or ransomware deployment: the NZ Privacy Commissioner phase-one report (27 May 2026) says the attacker used valid patient credentials (probably stolen from a patient's own computer by malware) on or around 21 Dec 2025, then exploited an undisclosed security weakness in the portal (1News: API security flaws previously reported by a researcher in Dec 2022 and Nov 2025) to reach other patients' documents in the My Health Documents module, copying data over several days. So: action.hacking Use of stolen creds + Exploit vuln, vector Web application, asset S - Web application; no malware block (the infostealer ran on a third party's device, not on the victim's assets; noted only). The Spinoff calls it a 'ransomware attack', which we treat as loose wording. Ransomware template elements (malware, availability Obscuration, Software installation) were therefore dropped. The site was taken offline on 31 Dec during response, but that was the victim's containment, not an actor availability impact, so no availability attribute is coded.\nExtortion: Kazu demanded US$60,000 on Telegram/a forum (4 Jan 2026), threatening to leak 400,000+ files; samples were posted. -> action.social Extortion, P - Unknown, Alter behavior; data_abuse 'Yes - Data ransomed'. Whether MMH paid is not stated; the threatened mass release did not occur per 1News.\nActor: 'Kazu' says it is 'not a hacktivist group', 'doing this as a business'; also claimed other healthcare extortions in Asia/Africa (cf. CarePay/M-TIBA, VCDB issue 22671). -> Organized crime, Financial. Country Unknown.\nVictim: ManageMyHealth (Manage My Health Ltd, Cereus Health Group), a privately owned patient-portal SaaS provider with ~1.85M NZ accounts, serving 680+ health centres and receiving Northland hospital documents from Health NZ. Per the provider rule MMH is the primary victim; Health NZ / Te Whatu Ora (Northland hospital records, ~90,645 of the affected) is listed in victim.secondary. NAICS: the issues give 622110 (#23286) and 621999 (#22904); neither fits a software platform vendor, so coded 511210 (Software Publishers, corpus-standard for SaaS). Reviewer may prefer 621999. Employee count: OPC report calls MMH a 'small, closely held company' -> 'Small' (inferred, no headcount found).\nData: 99,416 individuals confirmed (down from initial 126,000-127,000 estimate); 403,730 Health NZ documents + 22,609 patient-uploaded documents. Types: discharge summaries, clinical notes, test results, photos incl. intimate images, mental/sexual health info (Medical); names, DOB, NHI numbers, addresses, email, phone, passport scans (Personal). data_total 99416.\nDiscovery: Health NZ's own monitoring found MMH data offered for sale and contacted MMH on the evening of 30 Dec 2025; MMH's systems had not detected it. Coded external 'Customer' (Health NZ is an MMH client) - reviewer could prefer 'Other'. timeline.discovery 9 days.\nHosting not stated -> cloud Unknown. Incident 2025-12-21 -> dbir_year 2027.\nSources: all issue-linked URLs verified to be about ManageMyHealth (1News, RNZ x2, The Spinoff, Healthcare IT News), plus OPC report and Healthcare IT News follow-up.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:26Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds on patient portal"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Exploit vuln to copy other patients' documents"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand by Kazu"
+      }
+    ],
+    "github": "22904",
+    "master_id": "BC4BAE46-5CBC-41A1-81BA-E0F66A6D7A67",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.rnz.co.nz/news/top/583170/managemyhealth-breach-patients-at-risk-of-identity-theft-extortion-experts; https://www.healthcareitnews.com/news/anz/126000-affected-it-hack-patient-portal-manage-my-health; https://thespinoff.co.nz/the-bulletin/27-05-2026/damning-health-data-breach-reports-released; https://www.rnz.co.nz/national/programmes/morningreport/audio/2019036918/manage-my-health-breach-prompts-security-warning; https://www.1news.co.nz/2026/05/27/managemyhealth-warned-before-massive-data-breach-inquiry/; https://www.privacy.org.nz/assets/DOCUMENTS/Manage-My-Health/20260527-Manage-My-Health-Final-Phase-one-full-report-A1191346.pdf; https://www.healthcareitnews.com/news/anz/privacy-watchdog-faults-operator-health-nz-over-manage-my-health-hack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Starting around December 21, 2025, an attacker used a patient's stolen ManageMyHealth credentials and exploited a known, unremediated security weakness in the New Zealand patient portal to access and copy documents from other patients' accounts in the My Health Documents module. Health NZ found the data offered for sale and alerted the company on December 30. A group calling itself Kazu demanded a US$60,000 ransom and threatened to leak over 400,000 files. 99,416 people were affected, mostly Northland hospital patients, and the Privacy Commissioner found that both ManageMyHealth and Health NZ breached the Privacy Act.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 9
+    },
+    "incident": {
+      "day": 21,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "NZ"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "009053"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Health New Zealand (Te Whatu Ora); 622110"
+      ]
+    },
+    "victim_id": "ManageMyHealth"
+  }
+}

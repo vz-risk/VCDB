@@ -1,0 +1,183 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Nova"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 850000,
+          "variety": "Medical"
+        },
+        {
+          "amount": 850000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 850000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "1FDE0700-D4FC-4549-85B1-B814108D7CDC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22343\nCoded from the Malware-ext-Ransomware-databreach template (issue tag). All issue-linked sources (Techzine, NL Times x2, DataBreaches.net, NL Times lawsuit article) verified to be about Clinical Diagnostics NMDL; the RTL Nieuws link embedded in the issue quote is kept as a reference too.\nVictim: Clinical Diagnostics NMDL (Rijswijk, NL), a Eurofins subsidiary lab that processed the national cervical cancer screening (Bevolkingsonderzoek Nederland) and tests for LUMC, Amphia, Alrijne, Bergman Clinics and GPs. Issue has no NAICS line (label NAICS 62 only); coded 621511 (Medical laboratories). Employee count: Rankiteo lists 127 employees for Clinical Diagnostics Nederland -> '101 to 1000'. The screening organisation and hospitals are customers whose patients' data was held by the lab; listed in notes only, since the lab itself is the breached org and already the primary victim.\nActor: Nova ransomware group (RaaS; GovInfoSecurity keywords link it to RALord), named by NL Times, SC Media, DataBreaches.net, Assured -> Organized crime, Financial.\nTimeline: Nova accessed the lab between 3 and 6 July 2025 (Techzine, Assured). Incident 2025-07-03; dbir_year 2026. The lab informed Bevolkingsonderzoek Nederland only on 6 Aug 2025; the lab's own discovery date is not stated, so timeline.discovery is omitted.\nAction: Sources call it a ransomware attack and describe data theft (~300 GB, samples/~100 MB then more leaked) but none confirm encryption of systems. Ransomware + availability Obscuration/Interruption kept per template and issue tag; reviewer may prefer hacking Unknown + extortion if encryption is never confirmed. Extortion added beyond the template: Nova demanded millions of euros / a ~EUR 1.1M (11 BTC) deadline to prevent leaks; the lab reportedly paid an undisclosed first amount (RTL via SC Media, DataBreaches.net) and data was leaked anyway (NL Times). data_abuse 'Yes - Data ransomed'. Initial access not known -> malware vector Unknown, event 1 unk/ext/srv/unk.\nDiscovery: not stated; coded Actor disclosure per template (ransom demand) - assumption.\nData: names, addresses, dates of birth, BSN (citizen service numbers), gender, test types and results, GP names, some emails/phones; skin, urine and penis exam data for other patients (2022-2025). Counts reported differently: 485,000 initially, then 715,000 confirmed + up to 941,000 notified, + ~53,000 other patients; NL Times (Feb 2026, OM criminal investigation story) and DataBreaches.net cite 850,000. data_total coded 850,000 as the most recent consolidated figure; the true number may be up to ~994,000 if all 941,000 screening participants were affected.\nThe Dutch Health and Youth Care Inspectorate (May 2026) found the lab failed to meet mandatory data security standards; a mass claim is being prepared; 118 people filed criminal complaints.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:26Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "About 300 GB patient data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Encryption (not confirmed by sources)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion; ransom reportedly paid, data leaked"
+      }
+    ],
+    "github": "22343",
+    "master_id": "1FDE0700-D4FC-4549-85B1-B814108D7CDC",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.techzine.eu/news/security/133713/data-breach-affects-dutch-485000-cervical-cancer-screening-participants/; https://www.rtl.nl/nieuws/binnenland/artikel/5522760/datalek-baarmoederhalskanker-veel-groter-ook-onderzoek-huid-urine; https://nltimes.nl/2026/02/19/118-people-press-charges-data-leak-lab-behind-cervical-cancer-screening; https://nltimes.nl/2025/08/29/lab-data-leak-larger-thought-715000-women-cervical-cancer-screening-affected; https://databreaches.net/2026/06/11/womens-health-advocacy-organization-prepares-mass-suit-against-clinical-diagnostics/; https://nltimes.nl/2026/06/11/dutch-women-launch-mass-lawsuit-cervical-cancer-screening-data-breach; https://www.scworld.com/brief/clinical-diagnostics-reportedly-paid-ransom-after-cyberattack; https://assured.co.uk/2025/ai-autopsy-ransomware-attack-on-clinical-diagnostics-nmdl-exposes-cancer-screen-patients-data/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between July 3 and 6, 2025, the Nova ransomware group breached Clinical Diagnostics NMDL, a Eurofins laboratory in Rijswijk that processes the Dutch national cervical cancer screening, and stole about 300 GB of patient data. The data included names, addresses, dates of birth, citizen service numbers (BSN), and test results for screening participants and for other patients referred by hospitals and GPs. Nova demanded millions of euros. The lab reportedly paid, but data was leaked anyway. About 850,000 people were affected, and the lab did not inform the screening organisation until August 6.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 7,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621511",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Clinical Diagnostics NMDL"
+  }
+}

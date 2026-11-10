@@ -1,0 +1,122 @@
+{
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 310000000,
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Credentials"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2026-10-08T21:56:22Z",
+        "modified": "2026-10-10T00:16:00.641Z",
+        "sub_source": "vcdb",
+        "master_id": "FBE8922B-E603-4ED6-A274-65930EE33570",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Alleged theft of user records (method unknown); listed for sale"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23578\nTemplate Hacking-ext-extortion (= Hacking-ext-unknown scaffold + extortion). Deviation: NO action.social Extortion was coded. Sources describe only a forum sale listing ($700); no ransom or extortion demand against Temu is reported. Hacking variety Unknown, vector Web application and asset S - Web application kept from the template; no source says how the data was obtained. Cybernews researchers suggest an internal account-management/CMS tool or a third-party service that manages accounts; that is speculation and was not coded (no secondary victim either).\nsecurity_incident Suspected: an unnamed seller on an unnamed cybercrime forum claims about 310M Temu user records. Cybernews checked 99 sample records (2026 creation/login timestamps, bcrypt hashes, device data) but could not verify the scope or origin, and Temu's security team called the claim 'categorically false' and said the data is not from its systems. data_disclosure Potentially accordingly (template says Yes).\nActor: unnamed forum seller -> External, variety Unknown. Motive Financial from the monetization signal (data listed for sale at $700). Country Unknown.\nData (claimed): names, emails, phone numbers, user IDs, bcrypt password hashes, device/app info, IPs, locale/geo data, account timestamps -> Personal (amount 310,000,000 claimed) and Credentials (hashed passwords). data_total omitted because the 310M figure is unverified. data_victim Customer. No data_abuse coded (sale listing only).\nTimeline: Cybernews reported the listing June 30, 2026; listing date and access date unknown. Incident coded 2026-06 (discovery date; actual compromise, if any, may be earlier). dbir_year 2027. Discovery Actor disclosure (seller's forum post, reported by researchers).\nVictim: Temu (operated by Whaleco Inc. in the US; parent PDD Holdings is headquartered in Dublin, Ireland). Country coded US with region 019021; a reviewer may prefer IE or the parent. Employee count for Temu itself not published; PDD Holdings has well over 10,000 staff, so coded 'Large' (inferred). NAICS 454110 (Electronic Shopping) from the issue's 4541.\nEscudoDigital (issue comment) is about Temu and is cited; it adds that the records are said to be from users in the 'Chinese market', which is odd because Temu does not operate in mainland China (sister app Pinduoduo does). Prior 2024 Temu sale claim (87M lines) was also denied; not merged here.\nConfidence Low: unverified claim, victim denial, unknown actor and method.",
+        "dbir_year": 2027,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "23578"
+    },
+    "timeline": {
+        "incident": {
+            "month": 6,
+            "year": 2026
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "IE"
+        ],
+        "region": [
+            "150154"
+        ],
+        "employee_count": "Large",
+        "industry": "454110",
+        "victim_id": "Temu"
+    },
+    "source_id": "vcdb",
+    "confidence": "Low",
+    "reference": "https://cybernews.com/security/temu-310-million-user-data-leak-claim/; https://www.escudodigital.com/en/cybersecurity/data-of-300m-temu-users-for-sale-on-dark-web.html",
+    "security_incident": "Confirmed",
+    "summary": "In June 2026 an unnamed threat actor offered about 310 million alleged Temu user records for $700 on a cybercrime forum. Cybernews reviewed 99 sample records containing names, emails, phone numbers, bcrypt password hashes, device data, IP addresses and 2026 account timestamps, but could not verify the scope or origin. Temu said the claims are 'categorically false' and the data did not come from its systems.",
+    "incident_id": "FBE8922B-E603-4ED6-A274-65930EE33570",
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

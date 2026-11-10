@@ -1,0 +1,167 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Customer",
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "LPG Group"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Customer"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1000000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1010000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "A343E9E4-80BE-4B8E-A464-600D92B662B0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24551\nTemplate Hacking-ext-unknown with deviations: hacking variety Use of stolen creds because Flink says the data was taken via a compromised former employee's account; vector Unknown and asset S - Unknown because Flink only says 'one of our internal systems' (not necessarily a web application). Actor coded external (the account was compromised by outsiders, not misused by the former employee).\nExtortion: LPG Group emailed individual customers demanding 0.005 ETH (~EUR 12) each and asked Flink for 100 ETH (~EUR 237,000) to delete the data; deadline Oct 2; no one reportedly paid and the data was put up for auction. Social Extortion, target Customer (customers were directly extorted) plus Unknown (the company demand), vector Email; Alter behavior and P - Customer added; data_abuse 'Yes - Data ransomed'. Actor Organized crime / Financial per the extortion-crew rule; little else is known about LPG Group (a Conti-era lpg.dll link is speculative and not coded).\nData: names, postal codes/home addresses, emails, phone numbers, delivery instructions (Personal); order information and last order price (Internal). Flink says passwords, billing, bank and card data were not affected. RTL verified the data. data_total 1,010,000 = ~1M customers + 'over 10,000' employees (lower bound; the Sept 25 claim said 13,000 workers).\nTimeline: stolen data covers March-September 2026 and the claim/ransom emails came Sept 25, 2026 -> incident coded 2026-09 (intrusion date not given) -> dbir_year 2027. Discovery Actor disclosure (claim and ransom emails). Victim country DE (Berlin HQ; customers in DE and NL). NAICS 454110 (Electronic Shopping) refines the issue's 4541. Employee count 10001 to 25000 from the reported 10,000-13,000 worker records (riders and staff).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T22:19:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds: former employee's account"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer and worker data exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion emails to customers and ransom demand to Flink"
+      }
+    ],
+    "github": "24551",
+    "master_id": "A343E9E4-80BE-4B8E-A464-600D92B662B0",
+    "modified": "2026-11-05T22:19:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://nltimes.nl/2026/10/05/hackers-offer-1-million-stolen-flink-records-highest-bidder-extortion-fails; https://nltimes.nl/2026/09/25/individuals-sent-ransom-notes-cybercriminals-steal-flink-customer-worker-data",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Flink, a Berlin-based rapid grocery delivery company operating in Germany and the Netherlands, had customer and worker data stolen in September 2026 after attackers compromised a former employee's account to access an internal system. The LPG Group claimed data on about one million customers and over 10,000 workers, covering March to September 2026, including names, postal codes, addresses, email addresses, phone numbers, delivery instructions and order information. The group emailed customers demanding 0.005 ETH each and asked Flink for 100 ETH, then offered the data to the highest bidder when the extortion failed. Flink confirmed the breach, notified data protection authorities and filed police reports in Germany and the Netherlands.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "DE"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "454110",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Flink"
+  }
+}

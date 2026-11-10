@@ -1,0 +1,128 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2000000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "4F2073DB-F68B-4139-9C8F-F04B232791E1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24665\nTemplate Hacking-ext-unknown: hacking variety Unknown, actor external Unknown/Unknown kept (OPC says 'a hacking group'; no group named or claim found - BleepingComputer saw no claim or forum listing). Deviations: vector Unknown and asset S - Unknown instead of Web application, because Loblaw describes only 'a contained, non-critical part of its IT network' and no source mentions a web application; hosting unknown. Result Infiltrate only (exfiltration not stated, although data was 'accessed').\nData: 'basic customer information such as names, phone numbers, and email addresses' (customer account information) -> Personal. Count: OPC and Loblaw's updated notice say approximately two million Canadians -> Personal 2,000,000 / data_total 2,000,000 (approximate). Loblaw found no evidence of compromised payment, health data or passwords. data_victim Customer. data_abuse omitted.\nTimeline: OPC says the attack was in February 2026 -> incident 2026-02; Loblaw detected suspicious activity and told customers in early March (BleepingComputer, March 12) -> discovery internal (method not stated), Weeks; contained in March with a third-party firm; direct notifications in October; OPC compliance letter Oct 21, 2026 (investigation remains open). dbir_year 2027.\nVictim: Loblaw Companies Ltd., Brampton, Ontario; Canada's largest food and pharmacy retailer, >200,000 employees -> Over 100000. NAICS refined from 4451 to 445110 (Supermarkets and Other Grocery Retailers).\nConfidence Medium: action vector, asset and actor are unknown; sources are the OPC release and BleepingComputer.",
+    "created": "2026-11-05T22:18:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer account information accessed"
+      }
+    ],
+    "github": "24665",
+    "master_id": "4F2073DB-F68B-4139-9C8F-F04B232791E1",
+    "modified": "2026-11-05T22:18:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.priv.gc.ca/en/opc-news/news-and-announcements/2026/nr-c_261026/; https://bleepingcomputer.com/news/security/canadian-retail-giant-loblaw-notifies-customers-of-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In February 2026 a hacking group gained access to a non-critical portion of Loblaw Companies Ltd.'s IT network and to customer account information. Loblaw detected suspicious activity and disclosed the breach in March 2026, contained it with a third-party cybersecurity firm, logged out all customers from its digital services, and notified the Office of the Privacy Commissioner of Canada. Basic customer information (names, phone numbers, email addresses) of about two million Canadians was accessed; Loblaw found no evidence that payment, health information or passwords were compromised. On October 21, 2026 Loblaw signed a compliance letter with the OPC committing to additional security measures.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "region": [
+      "019021"
+    ],
+    "state": "ON",
+    "victim_id": "Loblaw Companies Ltd."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6620000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6620000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "JPY",
+    "notes": "Park24 extraordinary loss of 5.5 billion yen incl. 3,000 yen consolation payment per affected user",
+    "overall_amount": 5500000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "E4CDE4CE-825C-4EF4-B174-DB351C0BDC7C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24570\nCloses https://github.com/vz-risk/VCDB/issues/24560\nMERGE: issues 24570 (Times Car, 6.6M accounts) and 24560 (Mainichi: 'hacked car-share service' with 7-year licence-image retention; Park24 Co.) describe the same incident - the September 2026 unauthorized access to the Times Car car-sharing web system run by Times Mobility (Park24 Group). One record; plus.github = 24570 (the issue that frames the breach itself); 24560 is about the retention-policy fallout of the same breach.\nVictim: Times Mobility Co., Ltd., operator of Times Car (subsidiary of Park24 Co., Ltd., which booked the loss). Neither issue had a NAICS label; the body code 7359 is a SIC-style code (not a valid NAICS for this) and was changed to 532111 Passenger Car Rental (car sharing). Employee count Unknown: not established for Times Mobility from a source in this pass (web lookups were rate-limited).\nTemplate Hacking-ext-unknown: hacking variety Unknown (method not disclosed), vector Web application and asset S - Web application - here supported by Mainichi, which says the Times Car 'web system' was hacked. No ransomware or extortion reported; no actor named. Motive Unknown.\nData: about 6.62 million current/former Times Car and Times Business Service member accounts: names, department (corporate members), addresses, dates of birth, phone, email, driver's licence information, identity-document images, account passwords (stored 'in a form that cannot be restored') and linked service IDs. Credit cards unaffected. About 1.46 million ID-document images (driver's licences, utility bills, student IDs) were externally transferred; Japan Times reports the images were encrypted. Earlier reports said 1.6 million documents (Mainichi in 24560 / Japan Times Sep 30) - the later 1.46M figure is used in the summary. Coded Personal 6,620,000 (data_total) + Credentials; data_victim Customer; state Stored (images encrypted and passwords non-restorable, other fields not stated). data_disclosure Yes (company confirmed on Sep 28 personal data was stolen).\nTimeline: access began 'at the beginning of September 2026' (BleepingComputer); Mainichi says 'late September'. Incident coded 2026-09 (month only). Discovered Friday morning Sep 25, announced same day, access route blocked Sep 26, theft confirmed Sep 28. Discovery Weeks; containment Days. Discovery method not stated -> Unknown. dbir_year 2027.\nImpact: Park24 will book a \u00a55.5 billion extraordinary loss (FY ending Oct 2026), including \u00a53,000 consolation payments per affected user; coded overall_amount 5,500,000,000 JPY, rating Unknown. A class action is being organised (40,000 -> 90,000 -> 100,000+ registrants reported).\nIssue data problems: the siliconrepublic comment says 'late September 2024' and 'credit card details' - both wrong per the company (2026; cards unaffected); the URL is kept as an issue-linked source on this incident. 24560's record count 1,600,000 is the ID-image count, not the account count.\nJapan Times and Mainichi pages could not be fetched (blocked); their content was taken from the issue comments' summaries and is kept in reference.\nConfidence Medium: action variety unknown.",
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data and ID images stolen from web system"
+      }
+    ],
+    "github": "24570",
+    "master_id": "E4CDE4CE-825C-4EF4-B174-DB351C0BDC7C",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/; https://www.siliconrepublic.com/enterprise/japan-cybersecurity-cybersecurity-ai-millions-emergency; https://www.japantimes.co.jp/news/2026/09/30/japan/crime-legal/times-car-rental-hack/; https://www.japantimes.co.jp/business/2026/10/28/companies/data-breach-business-risk/; https://mainichi.jp/english/articles/20261006/p2g/00m/0bu/004000c; https://www.japantimes.co.jp/business/2026/10/24/park24-3000-yen-compensation/; https://mainichi.jp/english/articles/20261027/p2g/00m/0na/008000c",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized third party accessed the web system of Times Car, the car-sharing service run by Times Mobility (Park24 Group), beginning in early September 2026. Times Car discovered the intrusion on September 25, blocked the access route on September 26 and confirmed on September 28 that personal data had been stolen: about 6.62 million current and former member accounts (names, addresses, dates of birth, phone numbers, emails, driver's licence information, non-restorable passwords and linked service IDs), including about 1.46 million images of driver's licences and other ID documents retained for up to seven years after membership ended. Park24 is booking a 5.5 billion yen extraordinary loss.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "532111",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Times Mobility Co., Ltd."
+  }
+}

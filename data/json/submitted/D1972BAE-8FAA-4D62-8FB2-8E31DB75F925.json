@@ -1,0 +1,161 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Everest"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 72727245,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 72727245,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "D1972BAE-8FAA-4D62-8FB2-8E31DB75F925",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22983\nTemplate Hacking-ext-extortion (= Hacking-ext-unknown scaffold + extortion). Everest is a ransomware brand, but no source reports encryption or any outage at Under Armour; Everest's listing and the later leak are data-theft extortion only, so no malware block or availability attribute was coded. Deviation: asset S - Unknown and hacking vector Unknown instead of S - Web application / Web application, because Under Armour said there is no evidence UA.com or payment/password systems were affected and Cybernews says the data appears to come from multiple (marketing) dashboards; no source names the system or entry vector. Added action.social Extortion (target/vector Unknown), P - Unknown asset, integrity Alter behavior.\nActor: Everest (ransomware/extortion group active since 2020; also runs access brokerage per Halcyon via The Register). Organized crime / Financial. Country Unknown. The January 2026 forum leak was posted by 'thelastwhitehat', described by The Register as a member of Everest.\nExtortion: Everest listed Under Armour on its leak site around Nov 16-18, 2025, claiming 343 GB of internal company, customer and employee data, and gave a seven-day deadline to make contact. After the deadline was missed the data was released; on Jan 18, 2026 customer data was posted on a hacking forum. data_abuse Yes - Data ransomed.\nData: HIBP (added Jan 21, 2026) counts 72.7M unique email addresses with names, DOBs, genders, geographic locations and purchase history; the seller claims 191.6M total records (19.5 GB). TechCrunch saw many employee email addresses. Everest also claimed phone numbers, physical addresses, loyalty details and internal company data (unverified; Cybernews found no last names or physical addresses). Coded Personal 72,727,245 (data_total the same) and Internal (attacker claim). data_victim Customer, Employee.\nUnder Armour said it is 'aware of claims that an unauthorized third party obtained certain data', with an ongoing investigation, and called claims of sensitive data for tens of millions 'unfounded'. security_incident Confirmed because HIBP and TechCrunch verified the leaked data. A class action was filed after the November claim.\nTimeline: the seller says the data was taken in November 2025; incident coded 2025-11 (access may be earlier). Nov 2025 -> dbir_year 2027 (past the Oct 31 cutoff). Discovery Actor disclosure (leak-site listing).\nVictim: Under Armour, Inc., Baltimore, MD; NAICS 315250 from the issue. Employees about 14,000 -> 10001 to 25000. Not a duplicate: the only existing Under Armour record (validated/2148BB32-...) is a 2012 lost thumb drive.\nSources: issue-linked The Register, Cybernews, HIBP, TechCrunch; added eSecurity Planet (Nov 18, 2025 listing).\nConfidence Medium: actor, extortion and data are sourced, but the entry method and affected system are unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer and internal data stolen (343 GB claimed)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak site; data leaked when unpaid"
+      }
+    ],
+    "github": "22983",
+    "master_id": "D1972BAE-8FAA-4D62-8FB2-8E31DB75F925",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.theregister.com/2026/01/21/under_armour_everest/; https://cybernews.com/security/under-armour-hackers-leak-millions-user-emails/; https://haveibeenpwned.com/Breach/UnderArmour; https://techcrunch.com/2026/01/22/under-armour-says-its-aware-of-data-breach-claims-after-72m-customer-records-were-posted-online/; https://www.esecurityplanet.com/threats/everest-ransomware-alleges-major-data-breach-targeting-under-armour/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Everest ransomware/extortion group listed Under Armour on its leak site in November 2025, claiming 343 GB of internal, customer and employee data and setting a seven-day deadline. When it was not paid, the data was leaked; on January 18, 2026 a member posted customer data on a hacking forum. Have I Been Pwned counted 72.7 million email addresses with names, dates of birth, genders, locations and purchase history. Under Armour said it was investigating claims that an unauthorized party obtained certain data. No encryption was reported.",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "315250",
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "Under Armour, Inc."
+  }
+}

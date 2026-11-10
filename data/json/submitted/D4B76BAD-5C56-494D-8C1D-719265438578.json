@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 54700000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 54700000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "D4B76BAD-5C56-494D-8C1D-719265438578",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20194\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Exploit vuln (exploitative swaps against KyberSwap Elastic), vector Other, asset S - Other, cloud Other. User funds -> data_victim Customer. Extortion not coded: the attacker's 'negotiations' note is not a documented demand in this source (the attacker later demanded control of Kyber, per wider reporting; reviewer may add Social Extortion). Impact $54.7M. Country/headcount Unknown. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Elastic pool vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$54.7M user funds withdrawn"
+      }
+    ],
+    "github": "20194",
+    "master_id": "D4B76BAD-5C56-494D-8C1D-719265438578",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/kyberswap-crypto-platform-54-million-hack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 22, 2023 an attacker executed a precise sequence of exploitative swaps against KyberSwap Elastic, a vulnerability in its concentrated liquidity pools, withdrawing about $54.7 million of user funds. The attacker left an on-chain note saying negotiations would start later; KyberSwap offered a 10% bounty, paused deposits and advised users to withdraw.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 22,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "KyberSwap (Kyber Network)"
+  }
+}

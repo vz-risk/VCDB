@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5273884,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 5273884,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "B382A8EB-AAA5-4902-AC95-579C58505EF0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24575\nUNCONFIRMED: security_incident Suspected and data_disclosure Potentially. The only source is the actor's forum post and its published extract (reported by Escudo Digital and Futura-Sciences, first spotted by French Breaches); Xplor/Resamania had not confirmed or denied the breach at publication and no notification was found.\nProvider rule applied (not labeled Partner_Breach, but the breached party is a shared SaaS provider and ~20 customer gym chains are affected): primary victim Xplor Technologies (Xplor Resamania), NAICS 511210 (issue's 5112, software publisher). Secondary victims: the 19 chains Futura-Sciences names as potentially affected, each with NAICS 713940 (fitness centers); amount 19. Victim country FR: Resamania is the French gym-management product/business (Xplor Technologies itself is US-headquartered); reviewer may prefer US. Employee count: Revelio Labs 'Xplor' 1,880 (June 2026) -> 1001 to 10000 (Revelio page does not confirm it is the same Xplor entity).\nTemplate Hacking-ext-unknown, deviated: vector Unknown instead of Web application and asset S - Database instead of S - Web application, since the only fact is that a database was taken; no access method is reported.\nActor: unnamed forum poster who said the leak was a protest against the EU Chat Control regulation (attacker-stated) -> Activist / Ideology. No sale price mentioned. Discovery Actor disclosure.\nData (attacker-claimed): names, emails, phones, postal addresses, DOB, membership/club and subscription details -> Personal, amount 5,273,884 unique records (Futura-Sciences; issue rounds to 5.2M); pricing, staff indicators, customer and supplier identifiers -> Internal.\nTimeline: claim reported Aug 4, 2026 (Futura) / Aug 7 (Escudo Digital); intrusion date unknown -> incident year 2026, dbir_year 2027.",
+    "created": "2026-11-05T22:41:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member database allegedly stolen, extract posted"
+      }
+    ],
+    "github": "24575",
+    "master_id": "B382A8EB-AAA5-4902-AC95-579C58505EF0",
+    "modified": "2026-11-05T22:41:58Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.escudodigital.com/en/cybersecurity/alleged-security-breach-exposes-over-52-million-gym-customer-records.html; https://www.futura-sciences.com/tech/actualites/cyberattaque-salles-sport-5-millions-abonnes-exposes-menace-pourrait-ne-faire-commencer-136740/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "vcdb",
+  "summary": "In early August 2026 an unnamed actor claimed on a cybercrime forum to have stolen a database of 5,273,884 unique gym-member records from Xplor Resamania, the gym management software of Xplor Technologies, and published an extract. The claimed data includes names, email and postal addresses, phone numbers, dates of birth, membership/club and subscription details and pricing for members of about twenty fitness chains (e.g. Fitness Park, Gigafit, Magic Form) in France, Switzerland, Belgium, Luxembourg, the UK, Germany and Spain. The poster said the leak protested the EU Chat Control regulation. Xplor/Resamania had neither confirmed nor denied the breach.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "150155"
+    ],
+    "secondary": {
+      "amount": 19,
+      "notes": "Chains named by Futura-Sciences as potentially affected users of Resamania; about twenty chains in seven countries.",
+      "victim_id": [
+        "Fitness Park; 713940",
+        "Gigafit; 713940",
+        "Magic Form; 713940",
+        "Aqualigne; 713940",
+        "Aqualoft; 713940",
+        "Captonic; 713940",
+        "Cercles de la Forme; 713940",
+        "Club Next Step; 713940",
+        "Fitness Corporate; 713940",
+        "Front de Seine; 713940",
+        "Genae; 713940",
+        "Lemon One Fitness; 713940",
+        "Liberty Gym; 713940",
+        "Planete Fitness; 713940",
+        "Sporting Form; 713940",
+        "The Corporate Gym; 713940",
+        "Wake Up Form; 713940",
+        "Wefit Club; 713940",
+        "Wellness Training; 713940"
+      ]
+    },
+    "victim_id": "Xplor Technologies (Xplor Resamania)"
+  }
+}

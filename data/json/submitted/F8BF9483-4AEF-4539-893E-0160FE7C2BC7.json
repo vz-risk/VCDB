@@ -1,0 +1,119 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "F8BF9483-4AEF-4539-893E-0160FE7C2BC7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23683\nVictim: Trenitalia S.p.A., Italy's national passenger rail operator (Ferrovie dello Stato group, state-owned company; coded government NA as it is a company, not a government body - reviewer may prefer otherwise). Industry 485112 (Commuter Rail Systems) from the issue; 482111 (Line-Haul Railroads) would also fit its intercity/high-speed service. Employee count: about 12,900 per Revelio Labs estimate (inferred, third-party estimate) -> 10001 to 25000.\nIssue data problems: the issue Source (rodtrent.substack.com quick-hits post) could not be retrieved (robots/rate limit); kept in reference. The record count 4,380,000 is not supported by any source found: Trenitalia has not quantified the affected population and press says only 'millions'. data_total omitted.\nTemplate: Hacking-ext-unknown. Deviations: hacking vector Unknown and asset S - Unknown, because Trenitalia names neither the system (only 'data related to travel tickets' in its IT systems) nor the entry method. Hacking variety Unknown. Cloud Unknown.\nPossible provider link: ICT Security Magazine notes Almaviva, an IT/CRM provider to the FS group, was breached in late Nov/Dec 2025 and 2.3TB including FS group (incl. Trenitalia) passenger and employee data was posted on a Tor forum (Punto Informatico). Neither company has linked Trenitalia's notice to Almaviva, and Trenitalia places the origin in October 2025, before the Almaviva attack window. Provider rule not applied; reviewer should check whether this should be merged into an Almaviva incident.\nActor: 'unidentified external parties' per Trenitalia; no claim -> variety Unknown, motive Unknown.\nData: names, dates/places of birth, addresses, email, phone, ticket/route details, loyalty card code, employer, ID document details (Personal). No payment data or credentials per Trenitalia. data_victim Customer. State Stored. Teiss/BTN say 'reports indicate' the data may have been on the dark web for months; not confirmed, so data_abuse not coded.\nTimeline: incident origin/detection October 2025 per Trenitalia (via ICT Security Magazine, Unione Sarda, Teiss); customer notification June 26, 2026. Incident coded 2025-10; begin date may be earlier. dbir_year 2026. Discovery internal Unknown (detected after internal checks).\nExfiltration not explicitly stated -> hacking result Infiltrate only; data_disclosure Yes because unauthorized access to the personal data is confirmed by the victim. Confidence Medium (actor, method and asset unknown).",
+    "created": "2026-10-08T16:49:06Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access by unidentified external parties; method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Ticket-related customer personal data accessed"
+      }
+    ],
+    "github": "23683",
+    "master_id": "F8BF9483-4AEF-4539-893E-0160FE7C2BC7",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://rodtrent.substack.com/p/security-check-in-quick-hits-oracle-193; https://www.ansa.it/english/news/2026/06/26/trenitalia-hacker-attack-on-some-customer-data_d1bdcfc3-e5e1-48e3-9899-6b6d92acc856.html; https://www.teiss.co.uk/news/trenitalia-notifies-customers-of-cybersecurity-breach-exposing-personal-information-17735; https://www.ictsecuritymagazine.com/notizie/data-breach-trenitalia-passeggeri-phishing/; https://www.unionesarda.it/en/italy/trenitalia-hacked-millions-of-customers39-data-breached-cell-phones-emails-loyalty-cards-and-documents-cxa13rlu; https://www.businesstravelnewseurope.com/Ground-Transport/Trenitalia-cyber-attack-exposes-sensitive-customer-data",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Italian rail operator Trenitalia detected unauthorized access by unidentified external parties to personal data linked to travel tickets, with the incident dating to October 2025. Exposed data included passenger and purchaser names, dates and places of birth, contact details, trip and ticket details, loyalty card codes, employer and ID document details; payment data and credentials were not affected. Trenitalia notified affected customers by email on June 26, 2026 and reported the incident to the Garante, CSIRT Italia and the Rome prosecutor.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IT"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "485112",
+    "region": [
+      "150039"
+    ],
+    "victim_id": "Trenitalia"
+  }
+}

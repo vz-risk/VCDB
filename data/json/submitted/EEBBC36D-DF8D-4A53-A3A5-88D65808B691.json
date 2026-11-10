@@ -1,0 +1,112 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Oasis Security reported signs that AI tools were used in the attack campaign that also hit Yoido Full Gospel Church.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "EEBBC36D-DF8D-4A53-A3A5-88D65808B691",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24458\nVictim: Sarang Church (Seoul megachurch). Coded separately from Yoido Full Gospel Church (issue #24459, record 6A9DEB08-6A1C-4516-908B-0094FCA85F87): different victim org, separate disclosure, different certainty. Same attack infrastructure (overseas server found by Oasis Security); reviewer may link both with a campaign_id.\nIssue data wrong: the issue's record count of 850,000 belongs to Yoido Full Gospel Church, not Sarang; Sarang disclosed no count, so no amount is coded. The issue body's 'AI-assisted attack methods' comes from Oasis Security's finding about the shared attack records.\nSecurity_incident Suspected: the church itself calls it a 'suspected cyber incident' and is still determining what happened. data_disclosure Potentially and data variety Personal (member records); Fox Business gives no confirmed data types for Sarang.\nTemplate Hacking-ext-unknown used. Deviations: vector Unknown and asset S - Unknown (no source on entry point or system), no hacking result coded.\nDiscovery: external Security researcher (Oasis Security). Incident year 2026 only (disclosed early October 2026); dbir_year 2027.\nAI misuse: Oasis reported signs of AI tool use in the attack records (actor.external.notes); unconfirmed.\nEmployee count Unknown (no staff figure found). NAICS 813110 Religious Organizations (issue body).\nSources: Fox Business (issue); Korean Herald headline (two big churches hacked, about 1 million member records) found by search, body not readable.\nConfidence Low: suspected incident, single source, nearly all fields Unknown.",
+    "created": "2026-11-05T22:18:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Suspected unauthorized access to member data"
+      }
+    ],
+    "github": "24458",
+    "master_id": "EEBBC36D-DF8D-4A53-A3A5-88D65808B691",
+    "modified": "2026-11-05T22:18:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.foxbusiness.com/technology/south-korean-megachurches-investigate-suspected-cyberattacks-affecting-hundreds-thousands; https://www.heraldk.com/article/2026100615510457182",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "vcdb",
+  "summary": "Sarang Church, a South Korean megachurch, reported a suspected cyber incident in October 2026 after Oasis Security found attack records and data linked to the church (and to Yoido Full Gospel Church) on an overseas server, with signs that AI tools were used. The church formed an emergency task force and reported to authorities; it did not disclose what data or how many members were affected.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "813110",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Sarang Church"
+  }
+}

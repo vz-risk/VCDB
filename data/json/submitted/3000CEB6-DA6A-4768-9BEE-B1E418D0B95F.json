@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "RansomHub"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7128,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7128,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3000CEB6-DA6A-4768-9BEE-B1E418D0B95F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23565\nTemplate: the issue has only the generic Hacking label (no template tag), so the Hacking-ext-unknown template was used, with vector Unknown instead of Web application (nothing says a web app was involved) and asset S - Unknown.\nActor: Halcyon lists the attack as 'RansomHub Ransomware Hits Lighthouse Electric Company' -> RansomHub, Organized crime, Financial. This is a threat-intel listing, not victim-confirmed. No source confirms encryption, so no Ransomware/availability coding; add it if you treat the RansomHub listing as enough. data_abuse Yes - Data ransomed based on the RansomHub claim.\nData: names, SSNs, financial account details (Bank) and health insurance information (Medical) per the settlement page; Maine AG filing gives 7,128 affected (Claim Depot says about 7,138). data_total 7,128. Mostly current and former employees -> data_victim Employee.\nTimeline: Maine AG filing: breach occurred October 21, 2024, discovered December 23, 2024 (about 2 months), notices February 4, 2025. dbir_year 2025. Settlement 2026 is what surfaced it in this issue.\nDiscovery: how it was found is not stated, so Unknown.\nINDUSTRY NEEDS REVIEW: the issue carries the NAICS 22 label (autocoded 2211), but Lighthouse Electric Company (2200 Energy Drive, Canonsburg, PA) is an electrical contractor, not a utility. Coded NAICS 238210 (electrical contractors). Change back to 2211 if you want it in the utilities set. Employee count approximate -> 101 to 1000.\nPHIDBR2019 label ignored per skill rules.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-09T19:38:03Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Network intrusion; employee data taken (method not disclosed)"
+      }
+    ],
+    "github": "23565",
+    "master_id": "3000CEB6-DA6A-4768-9BEE-B1E418D0B95F",
+    "modified": "2026-11-09T19:38:03Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/settlements/lighthouse-electric-data-incident; https://maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/78e3035e-ebae-4152-a71b-b25372622be5.html; https://www.mass.gov/doc/2025-203-lighthouse-electric-company/download; https://halcyon.ai/attacks/ransomhub-ransomware-hits-lighthouse-electric-company",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Lighthouse Electric Company, Inc. of Canonsburg, Pennsylvania suffered a targeted data security incident on its computer network on October 21, 2024, discovered December 23, 2024. The personal information of about 7,128 current and former employees and others (names, Social Security numbers, financial account details and health insurance information) was compromised. The RansomHub ransomware gang claimed the attack. Notices went out February 4, 2025, and a class action (Brown and Gerken v. Lighthouse Electric Co.) was settled in 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 2
+    },
+    "incident": {
+      "day": 21,
+      "month": 10,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "238210",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Lighthouse Electric Company, Inc."
+  }
+}

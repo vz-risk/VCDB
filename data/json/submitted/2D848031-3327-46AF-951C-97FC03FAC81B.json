@@ -1,0 +1,119 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2D848031-3327-46AF-951C-97FC03FAC81B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24645\nPartner_Breach tag: coded from the partner's perspective per the project rule. Primary victim InvoiceCloud (the billing/payment platform whose access key was compromised); the City of Oshkosh utility and AquaHawk Alerting (the other billing platform involved) are secondary victims. The incident_id reuses 2D848031-3327-46AF-951C-97FC03FAC81B from the row already in Partner_Breaches_2027_dbir.csv so the two stay linked.\nTemplate Hacking-ext-unknown used, refined to Use of stolen creds because InvoiceCloud 'disabled the compromised access key' (an API/access key). Vector Partner: the access ran through the vendor integration; which party's key was compromised, and how, is not stated. The CSV row coded variety Unknown; this record is more specific.\nData: names, emails, utility account numbers, invoice numbers (Personal). Number of customers not given.\nTimeline: city notice dated October 9, 2026; when access began is not stated, so year 2026 only. dbir_year 2027.\nDiscovery: not stated, so Unknown.\nVictim: InvoiceCloud (Braintree, Massachusetts), NAICS 522320 to match the CSV; employee count approximate. City of Oshkosh utility NAICS 221310 (the issue body said 2211, but the city utility bills water/sewer/storm water; change if needed).\nSingle source; confidence Medium.",
+    "created": "2026-11-09T19:41:18Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Compromised access key used to read utility customer account data"
+      }
+    ],
+    "github": "24645",
+    "master_id": "2D848031-3327-46AF-951C-97FC03FAC81B",
+    "modified": "2026-11-09T19:41:18Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.wbay.com/2026/10/26/oshkosh-utility-customers-warned-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The City of Oshkosh, Wisconsin notified select utility customers by email on October 9, 2026 that unauthorized users had accessed their account details through the city's third-party billing vendors, InvoiceCloud and AquaHawk. Exposed data included customer names, email addresses, utility account numbers and invoice numbers; Social Security, driver's license and state ID numbers, banking and card data and passwords were not exposed. InvoiceCloud immediately disabled the compromised access key.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 2,
+      "victim_id": [
+        "City of Oshkosh; 221310",
+        "AquaHawk Alerting; 511210"
+      ]
+    },
+    "state": "MA",
+    "victim_id": "InvoiceCloud"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 894082,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 894082,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "JPY",
+    "loss": [
+      {
+        "amount": 2869500,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 2869500,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "7B594D34-254B-4184-B7C4-D385F7F9DF0C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24553\nScope: the issue (title, body, NHK source and the Anadolu comment) concerns GMO Research & AI Inc.'s infoQ survey site breach (access Oct 2, 2026; 948,498 member records; reward-point fraud). Seven later comments (Japan Times Oct 27, Yahoo Finance, Mainichi Oct 26, Asahi 16994734 and 16997978, The Independent, TechCrunch, BleepingComputer, cryptorank) are about a DIFFERENT incident: the extortion attack on GMO Internet Inc.'s Onamae Desktop Cloud service (unauthorized access found Oct 21, 2026; up to 26,739 customer servers; \u00a58B then $1M demand; unauthorized forex trades; data leaked from Oct 27). Those URLs were dropped and that incident is NOT coded here; it needs its own record/issue. Two of those comments also mis-date it to 2024. The TechCrunch comment's extra links (CrowdStrike Artex blog, Chosun Biz) concern attacks on South Korean finance and were also dropped.\nTemplate choice: the issue carries both Hacking-ext-unknown and Malware-ext-Ransomware-databreach. The ransomware tag belongs to the GMO Internet/Onamae incident; no source on the infoQ breach mentions malware, ransomware or extortion, so Hacking-ext-unknown was applied: hacking variety Unknown, vector Web application, asset S - Web application (infoQ survey website servers). Meyka (secondary blog) says a software vulnerability was exploited, but the company statements as reported by Impress/ScanNetSecurity give no method, so Exploit vuln was not coded.\nVictim: GMO Research & AI, Inc. (GMO Internet Group subsidiary, online survey/market research panel). NAICS changed from 5182 to 541910 (Marketing Research and Public Opinion Polling) because the victim is a market research company, not a hosting/data-processing provider. Employee count 101 to 1000 is approximate and not confirmed against a fetched source in this pass (web lookups were rate-limited); please verify.\nData: up to 948,498 member records (all members) potentially affected; the Oct 14 second report confirmed 894,082 members' personal information was taken outside the company (ScanNetSecurity) -> amount/data_total 894,082. Fields: name and furigana, gender, date of birth, email, postal address, phone, member ID and usage data (Personal), and passwords stored encrypted (Credentials). No card or My Number data. State Stored (only passwords are stated as encrypted).\nIntegrity Fraudulent transaction and data_abuse 'Yes - Financial fraud': 611 confirmed cases where members' reward points were exchanged for Amazon gift codes without consent, about \u00a52,869,500, which the company will reimburse (impact loss Asset and fraud, JPY). Motive Financial from that confirmed fraud. Actor external, Unknown variety/country.\nTimeline: unauthorized access Oct 2, 2026; detected morning of Oct 3 after a member inquiry (NHK/issue body says Oct 5 - that is the disclosure date); site suspended Oct 3; disclosed Oct 5; second report Oct 14. Discovery external Customer, 1 day. dbir_year 2027.\nConfidence Medium: action variety unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Financial fraud"
+      }
+    },
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data stolen from infoQ servers"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Reward points fraudulently redeemed"
+      }
+    ],
+    "github": "24553",
+    "master_id": "7B594D34-254B-4184-B7C4-D385F7F9DF0C",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www3.nhk.or.jp/nhkworld/news/20261006de55399/; https://aa.com.tr/en/asia-pacific/japanese-internet-firm-says-data-of-nearly-950-000-members-stolen-in-cyberattack/4079218; https://internet.watch.impress.co.jp/docs/news/2145989.html; https://scan.netsecurity.ne.jp/article/2026/10/19/56497.html; https://meyka.com/blog/gmo-research-ai-loses-950000-records-in-cyberattack-points-stolen-0610/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A third party gained unauthorized access to the servers of infoQ, the online survey site run by GMO Research & AI, on October 2, 2026. A member inquiry led to discovery on October 3 and the site was suspended. Personal data on up to 948,498 members (names, gender, dates of birth, addresses, phone numbers, email addresses and encrypted passwords) was at risk, and the company later confirmed data on 894,082 members was taken. Attackers also redeemed members' reward points for Amazon gift codes in 611 cases worth about 2.87 million yen.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 2,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541910",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "GMO Research & AI, Inc."
+  }
+}

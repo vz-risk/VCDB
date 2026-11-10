@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2026-35273",
+      "notes": "Oracle PeopleSoft PeopleTools PSEMHUB zero-day CVE-2026-35273 (campaign-level attribution).",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 454600,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 454600,
+      "data_victim": [
+        "Student"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "599F5F85-A07F-4E0A-B3EA-36D23B02F78B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23336\nScope: the issue is titled after the whole ShinyHunters Oracle PeopleSoft campaign (300 instances / 100+ orgs claimed) but its body names one victim, the University of Nottingham, so this record codes Nottingham only. Oracle (NAICS 511210 in the issue body) was not itself breached: customers' own PeopleSoft instances were exploited via a product vulnerability, so the provider rule does not apply and the victim is Nottingham (NAICS 611310 from the Educational Services label, corrected from the body's 511210). Other campaign victims raised in comments (Nissan North America, NAIC, Moody Bible Institute, Council of Europe, FBI job portal) are separate incidents in the same campaign and need their own records; they were not merged here.\nTemplate Hacking-ext-exploit-vuln: hacking variety Exploit vuln, vector Web application, asset S - Web application. Vulnerability: Oracle PeopleSoft PeopleTools CVE-2026-35273 (Environment Management Hub / PSEMHUB, unauthenticated RCE, CVSS 9.8), exploited as a zero-day May 27 - June 9, 2026 per Mandiant/GTIG; ShinyHunters described a 'gadget chain' of old and zero-day bugs. No source states the specific CVE used against Nottingham (BushidoToken notes this), so the CVE attribution is campaign-level. Deviation from template: added Extortion (social) with P - Unknown asset and integrity Alter behavior, since victims received extortion demands signed by ShinyHunters and TechTimes reports Nottingham did not meet the ransom demand before data was published.\nActor: ShinyHunters (UNC6240) claimed the attack and listed Nottingham on its leak site; the university confirmed a 'well-known cybercriminal group' but has not named it. Organized crime / Financial (extortion + leak site). Country Unknown.\nData: university said 'a significant amount of data in our student record system' was accessed and assumed names, emails, university IDs, course info and some financial/insurance details. HIBP: 454,600 current and former students; email, names, addresses, phones, ethnicity, disability, passport numbers, enrolment and fee payment data -> Personal, Sensitive Personal (ethnicity/disability). Payment: ShinyHunters claims credit card/payment details (attacker-sourced, not verified by BleepingComputer or the university) - coded per attacker-claim rule; reviewer may drop. Over 40GB from UK, Malaysia and China campuses (attacker claim). data_total 454,600 = HIBP student count (students only).\nTimeline: exact Nottingham access date not published; campaign exploitation window began May 27, 2026, Nottingham was on the leak site June 9 and the university confirmed June 10. Incident coded year 2026, month unknown (May 27 - June 9). Discovery Actor disclosure (extortion demand/leak site), within days. dbir_year 2027.\nAsset hosting (cloud vs on-prem) unknown: campaign hit both; university mentions working with the platform's third-party provider. Employee count ~6,250 (Revelio Labs) -> 1001 to 10000. Region 150154 (Northern Europe) as in the 2014 Nottingham record.\nIssue data problems: comments for The Washington Post, Estee Lauder, Madison Square Garden Entertainment, Maritz (x2), Tulane University, Anywhere Real Estate and Informa concern the 2025 Cl0p Oracle E-Business Suite campaign (CVE-2025-61882), an unrelated incident; they were dropped and not cited. NAIC (jdsupra), Nissan (classaction.org, bankinfosecurity, govinfosecurity, oag.ca.gov), FBI (npr/tpr/wesanews/wwno/whro/thehackernews) URLs are about other PeopleSoft-campaign victims and are not cited here. BBC links could not be fetched (blocked) but are issue-linked Nottingham sources and are kept. Added BleepingComputer (Nottingham 450k), teiss and BushidoToken.\nConfidence Medium: actor, action, asset and attribute are sourced, but the exploited CVE and access dates are campaign-level, and the actor is attacker-claimed rather than victim-confirmed.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T18:36:34Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vuln exploited (PeopleSoft CVE-2026-35273)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen from student record system"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand; data leaked when unpaid"
+      }
+    ],
+    "github": "23336",
+    "master_id": "599F5F85-A07F-4E0A-B3EA-36D23B02F78B",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/; https://www.bbc.com/news/articles/ckg0lkp042zo; https://www.bbc.com/news/articles/c8x2q8dqw9do; https://techcrunch.com/2026/06/11/oracle-warns-of-security-bug-that-hackers-abused-to-breach-100-companies/; https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/; https://www.highereddive.com/news/colleges-hit-in-cyberattack-by-group-behind-canvas-breach-google-says/822831/; https://www.techtimes.com/articles/318522/20260616/oracle-peoplesoft-zero-day-exploited-100-breaches-council-europe-deadline-falls-today.htm; https://www.securityweek.com/oracle-addresses-peoplesoft-vulnerability-amid-reports-of-zero-day-attacks/; https://startupfortune.com/a-single-oracle-peoplesoft-bug-gave-shinyhunters-two-weeks-to-ransack-100-universities-before-anyone-noticed/; https://www.bleepingcomputer.com/news/security/nottingham-university-data-breach-affects-over-450-000-students/; https://www.teiss.co.uk/news/university-of-nottingham-confirms-data-breach-exposing-records-of-454600-students-17651; https://blog.bushidotoken.net/2026/07/uk-cybercrime-journal-university-of.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The ShinyHunters extortion group breached the University of Nottingham's Oracle PeopleSoft student record system as part of a May-June 2026 campaign exploiting PeopleSoft PeopleTools zero-day CVE-2026-35273 against 100+ organisations. After a ransom demand went unmet, the group published over 40GB of data on about 454,600 current and former students (names, contact details, passport numbers, ethnicity, disability, enrolment and fee payment data) on its leak site.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611310",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "University of Nottingham"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Lazarus Group (suspected)"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Misrepresentation",
+        "Modify configuration",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 230000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 230000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "3558F3DB-2B89-46C7-AB35-8D89CA8E0CBA",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20926\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Hacking Unknown: WazirX blames a display/sign mismatch in Liminal's interface (vector Partner), while Liminal says the wallet was a self-custody multisig created outside its platform; the underlying compromise is disputed, so variety Unknown. Integrity Misrepresentation (signers shown false transaction), Modify configuration (wallet control transferred), Fraudulent transaction. Availability Interruption (trading paused).\nActor: suspected Lazarus (Elliptic, ZachXBT) -> Nation-state KP. Impact $230M. Victim WazirX (Zanmai Labs), Mumbai, IN; NAICS 523150; headcount Unknown. Not coded from Liminal's perspective (disputed; issue not tagged Partner_Breach). dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Signing flow compromised, method disputed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Multisig wallet control transferred via manipulated payload"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$230M drained"
+      }
+    ],
+    "github": "20926",
+    "master_id": "3558F3DB-2B89-46C7-AB35-8D89CA8E0CBA",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehackernews.com/2024/07/wazirx-cryptocurrency-exchange-loses.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 18, 2024 attackers stole more than $230 million from one of Indian crypto exchange WazirX's multi-signature wallets. WazirX said a mismatch between what its custody provider Liminal's interface displayed and what signers actually approved let the payload be replaced to transfer wallet control to the attacker. Elliptic and ZachXBT said the attack bore hallmarks of North Korea's Lazarus Group. WazirX paused trading and launched a bounty program.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 18,
+      "month": 7,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "WazirX"
+  }
+}

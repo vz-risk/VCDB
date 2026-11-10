@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 2000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 2000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "5CAAF6B7-57DE-4BB8-BEC1-BC91D65A71B1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21107\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Coded Exploit vuln on the uniBTC contract: the source only says 'the exploit was directed to uniBTC' and that the root cause was resolved; wider reporting describes a minting bug letting ETH be minted into uniBTC 1:1 (not in the source read). Vector/asset Other, cloud Other. Losses mostly from DEX pools -> data_victim Customer. Impact $2M. Country SG (parent RockX). Single source. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "uniBTC contract exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$2M drained from pools"
+      }
+    ],
+    "github": "21107",
+    "master_id": "5CAAF6B7-57DE-4BB8-BEC1-BC91D65A71B1",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cryptotimes.io/2024/09/27/bedrock-faces-2-million-loss-in-unibtc-security-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late September 2024 an attacker exploited Bedrock's uniBTC synthetic Bitcoin token, a liquid staking product built by Singapore-based RockX, causing about $2 million in losses, mostly from DEX liquidity pools. Bedrock said the root cause was fixed, remaining funds were secure and it would publish a reimbursement plan and post-mortem.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "SG"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "Bedrock (RockX)"
+  }
+}

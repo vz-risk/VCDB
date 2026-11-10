@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "B1EB1F58-0C76-474E-8026-A7F2FF792B14",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24440\nSeparate incident from Adventure/skyticket (#24438/#24463) and H.I.S. (#24439); Temairazu was mentioned in the same Japan Times round-up. Issue data problem: record count 14,640,000 in #24440 is the skyticket figure, not Temairazu's; no count has been published for Temairazu, so no amount/data_total coded.\nProvider rule applied (no Partner_Breach label on the issue, but Temairazu is a SaaS booking-management/site-controller vendor and the impact reached guests of multiple client accommodation facilities): Temairazu is the primary victim; affected facilities are secondary. Only Hotel Grand Hill Ichigaya is named (ScanNetSecurity headline, Oct 19, 2026; article body not read), so secondary.amount = 1 with a note that multiple facilities were affected. hacking vector Partner per house convention for provider-primary records.\nFacts (TravelVoice Sept 29; ScanNetSecurity Oct 16): from late night Sept 21, 2026, facilities reported guests receiving suspicious WhatsApp/SMS/email messages reflecting booking details and leading to phishing sites asking to confirm reservations or enter card data. Investigation found unauthorized access; announced Sept 28. Company says some guest information may have been viewed or obtained; it does not hold card data. It identified the cause and strengthened access controls/monitoring, asked facilities to change admin passwords and check login/operation history; reported to PPC and police.\nTemplate Hacking-ext-unknown: hacking variety Unknown kept (cause not described; the admin-password reset request hints at credentials but is not stated as the cause). Asset S - Web application kept (web-based booking management system). Discovery changed from Unknown to external Customer (client facilities reported the suspicious messages).\nData: Personal (guest booking/contact information; categories not itemized). data_disclosure Yes: access confirmed and the phishing messages contained booking details. data_abuse Yes: the guest data was used to send phishing messages; no confirmed financial fraud found, so not 'Yes - Financial fraud'. The downstream phishing of guests is not coded as a social action against Temairazu.\nTimeline: begin date not published; coded Sept 2026 (abuse seen from Sept 21). Discovery within days (Sept 21 -> Sept 28). dbir_year 2027.\nActor External, variety/motive Unknown: phishing for card data suggests financial motive but no fraud or demand was confirmed, so motive left Unknown.\nNAICS: issue gave 5415; coded 541511 (software developer/provider of the TEMAIRAZU SaaS). Employee count 11 to 100 is approximate (Temairazu, Inc., TSE 2477, a small listed company) (unverified) - reviewer please confirm.\nJapan Times link was not accessible (not read directly).\nConfidence Medium: action, cause and record count unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2026-11-05T22:19:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Guest booking data accessed in TEMAIRAZU system"
+      }
+    ],
+    "github": "24440",
+    "master_id": "B1EB1F58-0C76-474E-8026-A7F2FF792B14",
+    "modified": "2026-11-05T22:19:07Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.japantimes.co.jp/business/2026/10/09/tech/travel-companies-data-breach/; https://www.travelvoice.jp/20260929-160597; https://scan.netsecurity.ne.jp/article/2026/10/16/56475.html; https://scan.netsecurity.ne.jp/article/2026/10/19/56494.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Temairazu, Inc., provider of the TEMAIRAZU booking-site management system used by Japanese accommodation facilities, confirmed unauthorized access to its system on September 28, 2026. From around late night on September 21, guests of multiple facilities using the system received WhatsApp, SMS and email messages that reflected their booking details and directed them to phishing sites asking for credit card information. Some guest information may have been viewed or obtained by a third party; Temairazu does not hold card data.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 1,
+      "notes": "Multiple accommodation facilities using the TEMAIRAZU series were affected; only Hotel Grand Hill Ichigaya was named in sources found. Total count not disclosed.",
+      "victim_id": [
+        "Hotel Grand Hill Ichigaya; 721110"
+      ]
+    },
+    "victim_id": "Temairazu, Inc."
+  }
+}

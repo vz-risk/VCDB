@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Backup"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1300000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 180000,
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1300000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0B3E50DC-A87F-4CB2-95A2-BC4431405D46",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24527\nTemplate Hacking-ext-unknown used as scaffold with deviations. Tech Insider reports the entry was a court employee clicking a malicious link in a phishing email, so a social block was added: Phishing, vector Email, target End-user or employee, asset P - End-user or employee, integrity Alter behavior. The hacking block is kept with variety Unknown, but vector Unknown instead of Web application, because no source says how the attackers moved from the click to the backup files (credential harvest vs malware is not stated). No malware is coded because none is reported. The asset is S - Backup (backup files copied) instead of S - Web application.\nActor external Unknown/Unknown: no group claimed it and no ransom is reported.\nData: case numbers, names, and SSNs coded as Personal, 1.3M (Modesto Bee, azcentral). Orders of protection (about 30,000) and Foster Care Review Board reports (150,000+, including children's names and case findings; addresses/phones not included per the court) coded as Other, with amount 180,000 = about 30,000 + about 150,000 records (approximate). data_total 1,300,000 (people). data_victim Other (court-case parties, protective-order petitioners, foster children).\nTimeline: phishing click Sept 24, 2026; detected and stopped within about 2 hours by IT staff (Tech Insider; The Record says the attack ran until IT shut the system off), coded as discovery internal / Unknown variety, 2 Hours. The IT shutdown was the victim's own containment step, so no availability impact was coded. dbir_year 2027.\nVictim: the issue names 'Arizona Supreme Courts'. The Arizona Supreme Court administers the state court system through the Administrative Office of the Courts, coded as victim_id 'Arizona Supreme Court (Arizona Judicial Branch)'. NAICS 922110 Courts (issue) kept. government Regional (state). Employee count not found for the Supreme Court/AOC itself (the statewide judicial branch, including county courts, is much larger and is not the victim), so Unknown.\nThe Record confirms the key facts: the Arizona Supreme Court announced the breach Sept 25; investigators believe it began with a court employee clicking a malicious link in a phishing email Sept 24; federal and state investigators confirmed the attackers 'accessed and copied backup court files'; a court spokesperson said no ransomware was involved and no ransom demand or claim had been made. The 1.3M people are from the FARE (Fines/Fees and Restitution Enforcement) debt-collection program, going back 30 years.\nSources: issue body (NDTV) plus 3 comment URLs (azcentral, Modesto Bee, Tech Insider); added The Record and Malwarebytes. azcentral could not be fetched (site blocked) but is kept as an issue-linked source.\nConfidence Medium: the post-click hacking method and the actor are unknown. The phishing entry is supported by The Record and Tech Insider.",
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee clicks phishing email link"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Backup files copied (method unknown)"
+      }
+    ],
+    "github": "24527",
+    "master_id": "0B3E50DC-A87F-4CB2-95A2-BC4431405D46",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.ndtv.com/world-news/30-years-of-data-of-1-3-million-people-gone-in-cyberattack-on-arizona-court-12148878; https://www.azcentral.com/story/news/arizona/2026/09/30/1-million-impacted-by-arizona-court-data-breach/92029740007/; https://www.modbee.com/news/nation-world/national/article317449606.html; https://tech-insider.org/arizona-court-data-breach-foster-care-records-2026/; https://therecord.media/arizona-courts-say-hackers-stole-info-on-over-1-million; https://www.malwarebytes.com/blog/data-breaches/2026/09/hackers-steal-protective-order-and-foster-care-records-from-arizona-courts",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 24, 2026 an Arizona state court employee clicked a malicious link in a phishing email, giving attackers access to the Arizona Judicial Branch's court computer systems. IT staff detected and stopped the intrusion within about two hours, but the attackers had already copied backup files. These held records on about 1.3 million people spanning 30 years (case numbers, names, Social Security numbers), nearly 30,000 active and inactive orders of protection, and more than 150,000 Foster Care Review Board reports dating back to 2010. The courts disclosed the incident on September 25 and the foster-care data on September 28-29, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours",
+      "value": 2
+    },
+    "incident": {
+      "day": 24,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Regional"
+    ],
+    "industry": "922110",
+    "region": [
+      "019021"
+    ],
+    "state": "AZ",
+    "victim_id": "Arizona Supreme Court (Arizona Judicial Branch)"
+  }
+}

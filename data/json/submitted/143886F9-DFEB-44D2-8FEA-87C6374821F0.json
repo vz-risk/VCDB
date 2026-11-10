@@ -1,0 +1,117 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Brute force"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KR"
+      ],
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4620000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4620000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "143886F9-DFEB-44D2-8FEA-87C6374821F0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23086\nSources: Chosun Ilbo English (issue; quoted in issue body, site blocked to fetch), The Register (issue comment), plus Newsis (23 Feb 2026, police briefing details) and Asia Economy (21 Jul 2026, member notification) found by search. All are about this incident.\nTemplate Hacking-ext-bruteforce used as a guide but NOT followed for the action: no source describes brute force. Police (Newsis, Asia Economy) say the server did not verify an authentication token before returning member data, so specific requests returned records without protection. Coded Hacking variety Exploit vuln (missing authentication / broken access control in the web API), vector Web application, asset S - Web application per template. The template's ia brute-force event and Credentials data variety were dropped (no credentials stolen or guessed); chain is a single hak/ext/srv/cp event. Reviewer may prefer Abuse of functionality or Forced browsing.\nActor: two juveniles (A and B) who met on Telegram, no link to hacking groups -> Unaffiliated, country KR. Motive Fun (B said curiosity and to show off). Police said they suspect A may have intended to sell the data but found no evidence of sale, so Financial not coded.\nDiscovery: police found the data in early October 2024 on B's seized devices during an unrelated DDoS investigation -> external Law enforcement.\nData: Personal, 4.62 million records (IDs, phone, email, address, birthdate, gender, weight, guardian phone; no names or resident registration numbers). data_abuse not coded (police found no evidence of sale or leak, which is not a statement that it was not misused).\nTimeline: intrusion 28-29 June 2024 (Newsis); dbir_year 2025.\nVictim: Seoul Facilities Corporation, a Seoul city-owned public corporation operating Ttareungyi -> government Local. Industry 532284 (Recreational Goods Rental) from the issue. Employees inferred as 1001 to 10000 from its size (operates roads, facilities, parking and mobility services for Seoul); no headcount found. Region 142030 (Eastern Asia).\nConfidence High: actor, action, asset and attribute all sourced from police statements.",
+    "created": "2026-10-08T21:55:00Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Exploit vuln: missing auth check let crafted requests download member data"
+      }
+    ],
+    "github": "23086",
+    "master_id": "143886F9-DFEB-44D2-8FEA-87C6374821F0",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.chosun.com/english/national-en/2026/02/23/X4AOVZXXORHNLI5P5BOHMRZQRY/; https://www.theregister.com/2026/02/24/korean_bike_breach_charges/; https://www.newsis.com/view/NISX20260223_0003522553; https://view.asiae.co.kr/article/2026072109301527122",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On 28-29 June 2024 two teenagers, then middle-school students, exploited a missing authentication check in the server of Seoul's public bicycle service Ttareungyi, operated by Seoul Facilities Corporation, which returned member information to crafted requests without verifying an authentication token. They downloaded about 4.62 million member records containing login IDs, mobile numbers, email and home addresses, birthdates, genders, weights and guardian phone numbers. Police found the data in October 2024 on devices seized from one of the teens during an unrelated DDoS investigation; both were referred to prosecutors in February 2026. Police found no evidence the data was sold or leaked. Members were notified starting 21 July 2026.",
+  "timeline": {
+    "incident": {
+      "day": 28,
+      "month": 6,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "532284",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Seoul Facilities Corporation (Ttareungyi)"
+  }
+}

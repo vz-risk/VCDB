@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "64B9BA72-4924-4C57-99D8-75DD43E270B1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20438\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Hacking Use of stolen creds based on PeckShield's assessment of a compromised/leaked private key (not confirmed by PlayDapp; reviewer may set Unknown). Asset S - Other (PLA token contract). Lazarus resemblance noted in the article but not attributed -> actor Unknown. Impact: $290M is the nominal value of minted tokens; Elliptic says it could not be realized, so impact is not set. Victim PlayDapp, KR; NAICS 513210 (game publisher); headcount Unknown. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Leaked key used to mint 1.79B PLA"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Minted tokens moved/laundered"
+      }
+    ],
+    "github": "20438",
+    "master_id": "64B9BA72-4924-4C57-99D8-75DD43E270B1",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/hackers-steal-290-million-in-crypto-from-playdapp-gaming-platform/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On February 9 and 12, 2024 an attacker, suspected of using a leaked private key, minted about 1.79 billion PLA tokens (200 million then 1.59 billion) on blockchain gaming platform PlayDapp's token contract, nominally worth about $290 million, and moved them for laundering. PlayDapp moved its tokens to a new wallet, offered a $1 million white-hat reward that was rejected, asked exchanges to suspend PLA trading and froze attacker wallets.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 9,
+      "month": 2,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "PlayDapp"
+  }
+}

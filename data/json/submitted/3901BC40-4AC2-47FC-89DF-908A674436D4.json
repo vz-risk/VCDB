@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 292000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 292000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "3901BC40-4AC2-47FC-89DF-908A674436D4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23244\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown used; vector Other and asset S - Other (the rsETH bridge smart contract / cross-chain messaging path), not Web application. The Block's URL and later headlines (Defiant, BleepingComputer) tie the attack to Lazarus and to a LayerZero DVN/RPC weakness, but the article read for this record names no actor and no root cause, so actor variety Unknown and hacking variety Unknown. Motive Financial (theft of funds). If the Lazarus attribution is confirmed, change to Nation-state / KP / Lazarus. Kelp and LayerZero dispute who was at fault; if LayerZero's infrastructure proves to be the compromised component, reviewer may consider a provider perspective.\nData: 116,500 rsETH, about $292M -> Virtual currency; impact $292M. Cloud Other (public blockchain).\nDiscovery: Kelp's own emergency pauser acted 46 minutes later; how it was first detected is not stated -> internal Unknown.\nVictim: Kelp DAO restaking protocol (Kernel DAO), country and headcount Unknown. dbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Bridge message path abused, root cause not confirmed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "rsETH released from bridge to attacker"
+      }
+    ],
+    "github": "23244",
+    "master_id": "3901BC40-4AC2-47FC-89DF-908A674436D4",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.pymnts.com/cryptocurrency/2026/kelp-dao-293-million-hack-largest-defi-theft-of-2026/; https://www.bloomberg.com/news/articles/2026-04-19/crypto-hack-worth-290-million-triggers-defi-contagion-shock; https://www.theblock.co/post/397988/kelp-dao-293-million-defi-hack-lazarus-layerzero",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 18, 2026 an attacker drained 116,500 rsETH (about $292 million) from Kelp DAO's LayerZero-based rsETH bridge by calling lzReceive on LayerZero's EndpointV2 so that Kelp's bridge contract released the tokens. Kelp's emergency multisig paused contracts about 46 minutes later, blocking two further attempts worth about $100 million. The theft spread losses across DeFi lending platforms that accepted rsETH. The attacker wallet was funded through Tornado Cash; later reports tied the attack to Lazarus.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 18,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Kelp DAO"
+  }
+}

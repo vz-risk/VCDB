@@ -1,0 +1,222 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Path traversal",
+        "Brute force"
+      ],
+      "vector": [
+        "Web application",
+        "Partner"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Persist"
+      ],
+      "variety": [
+        "Backdoor",
+        "Backdoor or C2",
+        "Spam"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3136000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "System"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3136000,
+      "data_victim": [
+        "Customer",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Repurpose"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "EBBC3EFF-D3F8-41B5-9B88-28C3B2FE81D9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24547\nPartner rule applied: Arcadia Inc. (SaaS provider of the SpeeCAN RAIDEN alert service and a police safety-confirmation service) is the primary victim; the prefectural police forces in the issue comments plus municipalities/prefectures named in Kyodo/other reports are in victim.secondary. Okayama Prefectural Police added from Kyodo (Hyogo/Okayama headline); Okayama City, Shizuoka City, Fukuoka City, Izumi City, Nara City, Aomori City, Mutsu City, Fukuoka, Aomori and Kagawa prefectures from secondary reporting. Kyodo says 22 police forces; only 10 are named. secondary.amount 393 is the MBS-reported count of affected organizations (definition unconfirmed); ~800 municipalities use the service. Hacking vector includes Partner because the customers' data was exposed through the provider.\nNAICS changed from 54 to 513210 because Arcadia is a cloud software/SaaS provider of alert-distribution services, not a professional-services firm (518210 is an alternative).\nTemplate deviation (Hacking-ext-unknown): method is documented in Arcadia's own timeline (via st-hakky summary): path traversal in the attachment media server (Exploit vuln + Path traversal) exposed config.ini and the inter-service secret key; account IDs were brute-forced (Brute force); a backdoor then sent 1,423,428 emails Oct 13, many phishing as credit-card balance notices (malware Backdoor + Spam, integrity Software installation + Repurpose). A second wave of suspected phishing Oct 22-23 used a URL parse-confusion flaw, fixed Oct 23. The phishing recipients were the public, not Arcadia staff, so no social action coded against the victim. Motive Financial inferred from the card-fraud phishing run; actor otherwise unknown.\nData: up to 3,136,000 email addresses (an estimated maximum, not a confirmed leak count; amount coded at that figure); ~125,000 police officers/staff names and emails across 20 forces; ~16,000 residents' emails (Kyodo) or 18,000+ (Japan Times per issue body); NET119 users' personal data; fire personnel contacts (Personal). Secret key/config.ini (Credentials, System). data_disclosure Yes: confirmed logged-in access to internal data. data_total omitted because counts overlap and are maxima. data_victim Customer (subscribers) and Other (customer-agency staff). No misuse of the leaked data confirmed (phishing used the platform, not necessarily the leaked list) -> data_abuse omitted.\nTimeline: probing from 06:00 Oct 11, 2026, detected 23:00 Oct 11 from abnormal database load (internal Infrastructure monitoring), access path blocked Oct 12, backdoor disabled Oct 13 -> discovery 17 hours, containment ~2 days. dbir_year 2027. cloud Unknown (hosting not stated). Employee count Unknown: no headcount found; Arcadia appears to be a small/mid-size firm.\nThe issue-linked Japan Times and Japan Today URLs could not be fetched; facts come from Kyodo (Kumamoto Nichinichi), ScanNetSecurity and the st-hakky summary of Arcadia's report.",
+    "created": "2026-11-05T22:19:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Path traversal exploited on media server"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "config.ini and secret key read; account IDs brute-forced; internal data accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Backdoor installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Platform repurposed to send 1.42M phishing/spam emails"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Service suspended by dozens of municipalities"
+      }
+    ],
+    "github": "24547",
+    "master_id": "EBBC3EFF-D3F8-41B5-9B88-28C3B2FE81D9",
+    "modified": "2026-11-05T22:19:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.japantimes.co.jp/news/2026/10/21/japan/crime-legal/arcadia-police-data-leak/; https://japantoday.com/category/national/update2-more-data-breaches-reported-by-japan-prefectural-police-forces-companies; https://kumanichi.com/articles/2048904; https://kumanichi.com/articles/2046336; https://scan.netsecurity.ne.jp/article/2026/10/16/56481.html; https://book.st-hakky.com/en/news/intrusion-blocked-backdoor-105-ho-a1446c",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Attackers breached SpeeCAN RAIDEN, the disaster-information and emergency-contact distribution service run by Arcadia Inc. of Minoh, Osaka, which is used by hundreds of Japanese municipalities, fire departments and police forces. Starting October 11, 2026 they exploited a path traversal flaw in a media server to read config.ini and a secret key, brute-forced account IDs, accessed internal data, and left a backdoor that sent 1.42 million emails, many of them phishing messages, on October 13. Up to 3.136 million registered email addresses may have been exposed, including names and email addresses of about 125,000 officers and staff of 20 prefectural police forces and about 16,000 residents' addresses from police crime-alert services. Dozens of municipalities suspended the service.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Hours",
+      "value": 17
+    },
+    "incident": {
+      "day": 11,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 393,
+      "notes": "Customers of the SpeeCAN RAIDEN / safety-confirmation services. ~800 municipalities use the service; 22 prefectural police forces may be affected (Kyodo); MBS reported 393 affected organizations. Only organizations named in sources/issue comments are listed.",
+      "victim_id": [
+        "Aichi Prefectural Police; 922120",
+        "Hyogo Prefectural Police; 922120",
+        "Hiroshima Prefectural Police; 922120",
+        "Tochigi Prefectural Police; 922120",
+        "Saitama Prefectural Police; 922120",
+        "Shimane Prefectural Police; 922120",
+        "Yamaguchi Prefectural Police; 922120",
+        "Kyoto Prefectural Police; 922120",
+        "Fukuoka Prefectural Police; 922120",
+        "Okayama Prefectural Police; 922120",
+        "Shizuoka City; 921",
+        "Okayama City; 921",
+        "Fukuoka City; 921",
+        "Izumi City; 921",
+        "Nara City; 921",
+        "Aomori City; 921",
+        "Mutsu City; 921",
+        "Fukuoka Prefecture; 921",
+        "Aomori Prefecture; 921",
+        "Kagawa Prefecture; 921"
+      ]
+    },
+    "victim_id": "Arcadia Inc."
+  }
+}

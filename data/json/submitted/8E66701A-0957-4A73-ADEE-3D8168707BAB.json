@@ -1,0 +1,126 @@
+{
+  "action": {
+    "physical": {
+      "notes": "The company filed a criminal report on June 4, 2026; theft not confirmed and the device has not been found.",
+      "variety": [
+        "Theft"
+      ],
+      "vector": [
+        "Victim secure area"
+      ]
+    }
+  },
+  "actor": {
+    "unknown": {
+      "notes": "Whoever removed the SSD is not identified. The device was in an unlocked cabinet in a server room that requires ID card plus biometric entry; 57 employees from 10 contractor companies entered the room between April 27 and May 26 (Asahi). Could be an insider, a contractor (partner) or an outsider; no source says."
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Disk drive"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "notes": "Palm-size external SSD used as a temporary backup device.",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 10030000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 3510000,
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13540000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored",
+        "Stored unencrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "partner": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "8E66701A-0957-4A73-ADEE-3D8168707BAB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23333\nTemplate Physical-ext-theft-udev used as scaffold (Physical Theft, availability Loss, data_disclosure Potentially, one-step chain). Deviations: (1) Actor coded actor.unknown instead of External/Unaffiliated/Financial: nobody has been identified, and the only people known to have entered the access-controlled server room in the window were 57 workers from 10 contractor companies, so the actor may be internal, partner or external. No motive source. (2) Asset M - Disk drive (portable SSD backup device), not U - Desktop or laptop; physical vector Victim secure area. (3) Discovery coded partner/Other: Asahi says the contractor worker who made the backup found it missing when he returned on May 26 (BleepingComputer just says IT staff); template default is internal/Reported by employee. (4) Added a cp event to the chain because confidentiality is coded.\nTheft vs. loss: the company filed a criminal report (June 4) for suspected theft but has not concluded the SSD was stolen; its final report only says whereabouts unknown. A reviewer may prefer Error Loss (internal/partner, Carelessness). The final report blames four management failures (no approval process for external media, no instruction to lock the cabinet, no encryption/password, no written contractor instructions), but under VERIS those are control failures, not a separate Error action, so none was coded.\nData: final report (July 8, 2026, via rocket-boys.co.jp) raised the count from 10.9M to up to 13.54M records: 10.03M individuals (Personal) and 3.51M corporate/other entities (coded Other, customer business records incl. ~1.46M streetlight/traffic-signal contracts). Fields: names, supply-site addresses, electricity usage, retailer names, supply point IDs; phone numbers only for switching-system records. No bank, card or email data. SSD was not encrypted or password-protected (final report; Asahi) -> Stored unencrypted. data_disclosure Potentially: no evidence of leakage found (the company monitored flea-market sites and the web).\nTimeline: last seen April 27, 2026 after the backup; found missing May 26. The removal happened sometime in that window; incident date set to April 27 (start of window). Discovery up to about 4 weeks -> Weeks. dbir_year 2027.\nVictim: the T&D subsidiary (Kyushu Electric Power Transmission and Distribution Co.) owns the data and made the announcement; some press names the parent Kyushu Electric Power. NAICS refined from the issue's 221 to 2211 (power generation, transmission and distribution); the subsidiary does both transmission and distribution, so no single 6-digit code fits. Employee count 1001 to 10000 is inferred: Mynavi lists 11,888 employees combined for the parent and the T&D subsidiary (FY2024); the subsidiary alone is a part of that. Region Eastern Asia (142030).\nSources: Asahi (issue link; site blocked to fetch, quoted text in issue used), BleepingComputer, CyberInsider, teiss, rocket-boys.co.jp (final report summary).",
+    "created": "2026-10-08T21:56:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "unk",
+        "asset": "med",
+        "attribute": "au",
+        "summary": "SSD taken from unlocked cabinet in server room (suspected theft)"
+      },
+      {
+        "action": "phy",
+        "actor": "unk",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Unencrypted customer data out of victim possession"
+      }
+    ],
+    "github": "23333",
+    "master_id": "8E66701A-0957-4A73-ADEE-3D8168707BAB",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.asahi.com/ajw/articles/16629979; https://www.bleepingcomputer.com/news/security/japanese-energy-firm-loses-drive-with-data-of-109-million-clients/; https://cyberinsider.com/kyushu-electric-lost-backup-drive-containing-data-of-10-9-million-clients/; https://www.teiss.co.uk/news/japanese-electric-company-loses-ssd-device-containing-over-109m-customer-data-records-17682; https://rocket-boys.co.jp/?p=36548",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Kyushu Electric Power Transmission and Distribution Co. (a Kyushu Electric Power subsidiary) lost an unencrypted, non-password-protected portable SSD holding customer data. On April 27, 2026 a contractor backed up customer data to the SSD and left it in an unlocked cabinet inside the company's access-controlled server room; on May 26 it was found missing. The company filed a criminal report for suspected theft on June 4 and disclosed the incident on June 8. The device has not been found. Its July 8 final report put the scope at up to 13.54 million records (10.03 million individuals and 3.51 million corporate and other entities): names, supply addresses, electricity usage, retailer names, supply point IDs and, for some, phone numbers.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "day": 27,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "2211",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Kyushu Electric Power Transmission and Distribution Co., Inc."
+  }
+}

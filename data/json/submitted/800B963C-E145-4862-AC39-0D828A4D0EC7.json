@@ -1,0 +1,143 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Attacker claims (to Politiken) a leaked password of a former Pays ApS employee, '123456', shared by three accounts; not confirmed by authorities. About 14 million automated searches Sept 10-20, 2026.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Anonymous individual claimed responsibility to Politiken and said there were no plans to sell or publish the data.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 8800000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8800000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Log review"
+      ]
+    }
+  },
+  "incident_id": "800B963C-E145-4862-AC39-0D828A4D0EC7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24487\nCloses https://github.com/vz-risk/VCDB/issues/24499\nIssues #24487 and #24499 describe the same incident (Danish CPR register, 8.8 million people, Sept 2026) and are coded as ONE record citing both.\nCause - hacking, not error: #24499 carries an 'Error' label and its body says the breach 'appears to have resulted from an error in the system rather than malicious activity'. No source supports that. The ministry press release (slug 'uautoriseret adgang'), qz.com (English version of the de.qz.com issue link), TechCrunch, Euronews, gbhackers and Copenhagen Post all describe unauthorized persons abusing a Danish company's lawful search access. No Error action coded; the Error label appears to be a pipeline mistake.\nVictim: the CPR (Det Centrale Personregister), Denmark's national population register, administered under the Ministry of Research, Education and Digitalisation; government Federal (national). NAICS 921190 (Other General Government Support) chosen as the 6-digit code for a national civil-registration authority; issue gave 92. Employee count Unknown (CPR office headcount not found).\nPartner angle: the attacker came in through the lawful CPR access of Pays ApS, a small Odense IT company (confirmed by its managing director Sophie Laursen). Pays is a customer/licensee of the register, not a service provider to it, and no Partner_Breach label is on either issue, so the CPR is the primary victim and Pays ApS (NAICS 5415, approximate) is listed in victim.secondary. Actor is external (not a Pays employee); hacking vector Partner records that access came through the company's account.\nAction: Use of stolen creds (template Hacking-ext-unknown deviates: variety Use of stolen creds instead of Unknown, vector Partner instead of Web application, asset S - Database instead of S - Web application). Credential details are attacker-claimed (Politiken via Cybernews/TechRadar): a leaked password of a former Pays employee, '123456', reused on three accounts; not confirmed by authorities. TechRadar/TV 2: about 14 million automated searches over ten days, using two scripts to pull data into a third-party system. Asset coded S - Database for the register; the exact search interface (web service/API) is not described.\nData: names, addresses, CPR numbers and other register data (Copenhagen Post lists possible marital status, birth registration, family relations, church affiliation, legal incapacitation; TechRadar adds birth dates and citizenship; the ministry did not say which fields were taken per person). Coded Personal; Sensitive Personal not coded because religion/incapacitation fields are not confirmed taken. 8.8 million people (register holds about 11 million; includes deceased and emigrated; persons with name/address protection excluded). data_victim Other (citizens and residents of the government register).\nExfiltration confirmed: the attacker gave Politiken a file of CPR numbers that media authenticated (TechRadar), hence result Exfiltrate. No data_abuse coded: attacker says no plan to sell or publish and no misuse is reported.\nActor: anonymous individual who claimed responsibility to Politiken; variety and motive Unknown. Country Unknown.\nTimeline: access began Sept 10, 2026 (TV 2 Kosmopol from the CPR office's report to Datatilsynet; startwithidentity), searches Sept 10-20 (exfiltration about 10 days), total access window 21 days 17 hours; CPR administration became aware Friday Oct 2 (about 3 weeks after start); Datatilsynet notified Oct 4; disclosed Oct 5. DW's comment summary says 'discovered in September 2024' - a typo in the pipeline summary. dbir_year 2027.\nDiscovery: internal Log review (TechRadar: a government employee spotted unusually high activity from Pays in the logs).\nde.qz.com issue link could not be fetched; the English qz.com version was read and says deliberate unauthorized access.\nConfidence High: all four A's sourced from official statements and reputable press; credential details are attacker-claimed.",
+    "created": "2026-11-05T22:18:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds (Pays ApS CPR-search account)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "About 14 million automated register searches; data copied"
+      }
+    ],
+    "github": "24487",
+    "master_id": "800B963C-E145-4862-AC39-0D828A4D0EC7",
+    "modified": "2026-11-05T22:18:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cphpost.dk/2026-10-05/life-in-denmark/cpr-data-breach-exposes-personal-details-of-8-8-million-people-in-denmark/; https://cybernews.com/security/denmark-cpr-data-breach-weak-password/; https://www.techradar.com/pro/security/123456-password-was-the-only-thing-standing-between-hacker-and-data-of-8-8-million-people; https://de.qz.com/dnemark-nationalregister-datenpanne-8-millionen-100526; https://gbhackers.com/denmark-confirms-major-security-incident/; https://www.foerde.news/news/8-8-millionen-menschen-von-datenpanne-in-daenemark-betroffen.html; https://qz.com/denmark-national-registry-data-breach-8-million-100526; https://www.euronews.com/2026/10/05/hackers-access-data-of-88-million-people-in-denmark-in-extremely-serious-breach; https://www.piqsuite.com/story/danish-government-database-breached-8-million-citizens-records-stolen; https://techcrunch.com/2026/10/05/hackers-steal-8-million-citizens-records-from-danish-government-database/; https://www.yahoo.com/news/world/articles/denmark-national-registry-data-breach-123942386.html; https://www.straitstimes.com/world/europe/hackers-get-personal-information-on-8-8-million-people-in-denmark-government-data-leak; https://www.dw.com/en/denmark-data-of-millions-compromised-in-hack/a-79555907; https://www.tv2kosmopol.dk/metropolen/hacker-havde-adgang-til-spr-registret-i-21-dage-4025e; https://startwithidentity.com/breaches/incidents/2026-denmark-cpr-register-access-abuse/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "From Sept 10, 2026 an attacker abused the lawful CPR-search access of Danish IT company Pays ApS (by its own claim, logging in with a leaked former employee's password '123456') to run about 14 million automated searches against Denmark's Central Person Register, obtaining names, addresses, CPR numbers and other register data on about 8.8 million people, including deceased and emigrated persons. A government employee noticed abnormal activity from the company's account in the logs; the CPR administration discovered the breach on Oct 2, blocked the access, reported to Datatilsynet and police, and the ministry disclosed it on Oct 5.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "exfiltration": {
+      "unit": "Days",
+      "value": 10
+    },
+    "incident": {
+      "day": 10,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "DK"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "150154"
+    ],
+    "secondary": {
+      "amount": 1,
+      "notes": "Odense IT company whose lawful CPR-search accounts were taken over and abused.",
+      "victim_id": [
+        "Pays ApS; 5415"
+      ]
+    },
+    "victim_id": "Danish Central Person Register (CPR)"
+  }
+}

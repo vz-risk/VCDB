@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "WallStreet"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 150000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 150000,
+      "data_victim": [
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "B014854C-70ED-4172-8DD5-A5077AEEC35A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24489\nClaim only, not victim-confirmed: the single source (The National) reports Hackmanac's relay of the WallStreet leak-site claim; CRCC and the Saudi National Cybersecurity Council gave no comment. security_incident kept Confirmed per house style for leak-site claims; reviewer may prefer Suspected. Confidence Low.\nTemplate Malware-ext-Ransomware-databreach followed: initial access unknown (hacking Unknown), ransomware with exfiltration. The source does not itself mention encryption; Ransomware and the Obscuration/Interruption availability impact rest on the issue tag and on WallStreet being described (SOCRadar via The National) as a double-extortion ransomware group with 32+ claimed victims. Actor Organized crime / Financial for the same reason. No ransom amount reported, so no social Extortion coded.\nVictim: article names both China Railway Construction Corporation and the 'Sama Construction consortium' (main contractor for Jeddah Central Stadium); coded as CRCC with the consortium in parentheses. Country SA (the breached operation/project is in Saudi Arabia); CRCC itself is Chinese (CN). Employee count Over 100000 is for parent CRCC (several hundred thousand staff, unverified estimate) and fits the claimed 150,000 employee records; the consortium's own headcount is unknown.\nNAICS changed from 2371 to 236220 because 2371 is Utility System Construction and the breached contract is stadium (commercial/institutional building) construction.\nData (attacker claim): personal data of ~150,000 employees (Personal, amount 150,000); stadium designs, contracts and 'payment information' (Internal; the payment information appears to be contract/payment records, not card data, so Payment not coded). 1.5M files / 17 TB are files, not records, so data_total omitted. Date Oct 3, 2026 per the claim -> dbir_year 2027.",
+    "created": "2026-11-05T22:19:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware deployed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "17 TB / 1.5M files claimed exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted (double-extortion group, not confirmed by source)"
+      }
+    ],
+    "github": "24489",
+    "master_id": "B014854C-70ED-4172-8DD5-A5077AEEC35A",
+    "modified": "2026-11-05T22:19:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.thenationalnews.com/future/technology/2026/10/06/hackers-saudi-arabia-cyberattack-world-cup/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The WallStreet ransomware/double-extortion group claimed an attack on October 3, 2026 against China Railway Construction Corporation / the Sama Construction consortium, main contractor for Jeddah Central Stadium, a planned 2034 FIFA World Cup venue in Saudi Arabia. The group claimed theft of about 17 TB (over 1.5 million files) including stadium designs, contracts, payment information and personal data of about 150,000 employees. Hackmanac reported the claim; the victim had not responded publicly.",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "SA"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "236220",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "China Railway Construction Corporation (Sama Construction consortium)"
+  }
+}

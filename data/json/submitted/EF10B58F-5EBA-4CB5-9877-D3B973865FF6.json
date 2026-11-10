@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 16,
+          "variety": "Personal"
+        },
+        {
+          "amount": 16,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 16,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "EF10B58F-5EBA-4CB5-9877-D3B973865FF6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24184\nCloses https://github.com/vz-risk/VCDB/issues/23217\nMerged duplicate: issues 23217 (April 2026 report of the March 6 portal shutdown) and 24184 (August 2026 report of the 16-customer finding) describe the same Halifax Water Customer Connect breach, so one record closes both.\nPartner_Breach tag (24184): coded from the partner's perspective per the project rule. Primary victim Avertra, the vendor that operates the Customer Connect platform; Halifax Water is the secondary victim. The incident_id reuses EF10B58F-5EBA-4CB5-9877-D3B973865FF6 from the row already in Partner_Breaches_2027_dbir.csv so the two stay linked, but the coding here differs from that row (see below).\nAction: Halifax Water says 'an unauthorized external party accessed information linked to 16 customer accounts' through a vulnerability in the third-party platform. Coded Hacking Exploit vuln, vector Web application, external actor (variety and motive Unknown). The issue's Error-int-misconfig-srv tag and the CSV row coded this as a Misconfiguration error; the vendor update that re-exposed a patched flaw is a contributing control failure, but per the style guide only the overt action (the external access) is coded. A reviewer may add Error (partner, Programming error) if preferred. The party who emailed about the flaw may have been a researcher; nothing says the data was misused.\nData: names, emails, addresses, account/customer/user IDs (Personal) and security questions and answers (Credentials), 16 accounts. No financial data. data_total 16.\nDiscovery: an outside party emailed about the flaw (February, dismissed as spam; March, escalated) -> external Unrelated 3rd party.\nTimeline: the flaw was found by Halifax Water in November 2025 and patched, then re-exposed by a January 2026 vendor update; the access window is not stated, so year 2026 is coded (dbir_year 2027). Portal offline from March 6, 2026 for at least five months (containment coded Months).\nVictim: Avertra (utility customer-experience software vendor, Reston, Virginia; NAICS 511210 to match the CSV; employee count approximate). Halifax Water NAICS 221310 from the issue.\nAsset: the vendor-hosted portal and its database (External Cloud Asset(s)); role IT. Halifax Water says water/wastewater control systems were not involved.",
+    "created": "2026-11-09T19:35:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Exploit vuln in vendor portal; 16 customer records accessed"
+      }
+    ],
+    "github": "24184",
+    "master_id": "EF10B58F-5EBA-4CB5-9877-D3B973865FF6",
+    "modified": "2026-11-09T19:35:05Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.saltwire.com/nova-scotia/halifax/halifax-water-admits-warning-dismissed-as-spam-after-16-customers-personal-information-compromised; https://www.ctvnews.ca/atlantic/nova-scotia/article/cybersecurity-firm-assessing-halifax-water-privacy-breach/; https://www.cbc.ca/lite/story/9.7149870; https://www.halifaxwater.ca/alert/halifax-water-provides-update-customer-connect-portal-privacy-incident; https://www.ctvnews.ca/atlantic/nova-scotia/article/16-customer-accounts-accessed-in-halifax-water-privacy-breach-report/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized external party exploited a vulnerability in Avertra's platform behind Halifax Water's Customer Connect portal and accessed information tied to 16 customer accounts: full names, email addresses, service addresses, account, customer and user IDs, and security questions and answers. Halifax Water had found and reported the flaw to Avertra in November 2025 and a patch was applied, but a January 2026 vendor software update re-exposed it. An unknown party's email about the flaw in February 2026 was dismissed as spam; a follow-up in March 2026 was escalated, and on March 6 the portal (about 55,000 account holders) was taken offline. A forensic investigation confirmed 16 affected accounts in May 2026 and they were notified in June; further vulnerabilities kept the portal offline into August 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Months",
+      "value": 5
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Halifax Water; 221310"
+      ]
+    },
+    "victim_id": "Avertra"
+  }
+}

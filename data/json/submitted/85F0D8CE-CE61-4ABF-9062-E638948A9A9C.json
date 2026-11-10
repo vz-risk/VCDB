@@ -1,0 +1,115 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4900000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4900000,
+      "data_victim": [
+        "Student"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "85F0D8CE-CE61-4ABF-9062-E638948A9A9C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24690\nTemplate Hacking-ext-unknown applied as drawn: external actor Unknown/Unknown; hacking variety Unknown; vector Web application (sources say the student financial aid website was accessed); asset S - Web application; data_disclosure Yes; event hak/ext/srv/cp. No actor claimed it and no ransom/sale is reported, so motive is Unknown.\nData: SSN, name, DOB, address, phone, email, and gender coded as Personal. Count about 4.9M (Intelligent CISO; Fox13 'nearly 5 million'), coded as amount/data_total 4,900,000. data_victim Student (financial aid applicants). The issue tags 'Financial' because financial aid applicants are affected, but no bank/payment data is listed, so Bank/Payment were not coded. data_disclosure Yes: FLDOE confirmed unauthorized access to the system holding the data, although its wording is 'potentially exposed'.\nTimeline: Intelligent CISO says FLDOE 'confirmed a data breach involving unauthorised access to its student financial aid website on 19 October 2026'. The wording does not make clear whether Oct 19 was the access date or the confirmation date. Coded incident 2026-10-19; reviewer should confirm against FLDOE's notice. Either reading gives dbir_year 2027. Discovery method and timing unknown.\nNAICS changed from 921110 to 923110 (Administration of Education Programs) because FLDOE is the state education agency, not an executive office. government Regional (state agency, per label). Employee count ~1,759 (Revelio Labs, 2025) -> 1001 to 10000.\nPrior VCDB record 75AC9981 (2013 FLDOE teacher data exposure) is a different incident.\nSources: issue body (Fox13, published Oct 29, 2026; FLDOE says the site may see disruptions, but no outage is reported, so no availability impact was coded) and comment (Intelligent CISO). Fox13 calls the 5M count unconfirmed.\nConfidence Medium: the action variety and the actor are unknown.",
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to financial aid website; applicant data exposed"
+      }
+    ],
+    "github": "24690",
+    "master_id": "85F0D8CE-CE61-4ABF-9062-E638948A9A9C",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.fox13news.com/news/florida-department-education-warns-data-breach-affecting-nearly-5-million-people; https://www.intelligentciso.com/2026/11/02/florida-department-of-education-confirms-data-breach-potentially-affecting-4-9-million-people/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Florida Department of Education (FLDOE) disclosed unauthorized access to its student financial aid website (reported as occurring on October 19, 2026). The intrusion potentially exposed the personal information of about 4.9 million people who had applied for state financial aid: Social Security numbers, names, dates of birth, home addresses, phone numbers, email addresses and gender codes. FLDOE stopped the access, notified the Florida Attorney General, and worked with the Florida Digital Service and FDLE. How the attackers got in was still under investigation.",
+  "timeline": {
+    "incident": {
+      "day": 19,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Florida Department of Education"
+  }
+}

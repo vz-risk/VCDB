@@ -1,0 +1,117 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "NL"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "150155"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "D02BB1D9-255D-4F08-90B2-488AD7E15AA6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23145\nVictim AFC Ajax NV (Amsterdam football club). Ajax confirmed (25-26 Mar 2026 press release) that a hacker in the Netherlands exploited vulnerabilities in parts of its systems (the Ajax app / supporter ticketing backend; RTL reported exposed APIs and a shared digital key given to every user that let a user act as any other user by manipulating requests, i.e. broken access control). No CVE or product named; hacking.cve not set. The flaws were patched after discovery.\nData: Ajax confirmed email addresses of a few hundred people were viewed, plus names, email addresses and birth dates of fewer than 20 people with stadium bans (police/NH Nieuws say about ten). RTL Nieuws reported that personal data of more than 300,000 registered fans and 538 stadium-ban records (with reasons) were viewable and 42,000 season tickets could be transferred; these are POTENTIAL exposure figures, not confirmed exfiltration, so the issue title's 300,000 count is not coded as an amount. data_total omitted because the confirmed count is only 'a few hundred'.\nActor: Dutch police arrested a 35-year-old man from Buren on 26 May 2026 on suspicion of repeatedly and unlawfully entering Ajax's systems 'early this year'; data carriers seized. Coded External, variety Unaffiliated (lone individual, no group named), country NL, motive Unknown (none stated; no sale/extortion). Sources do not say whether this suspect is the same hacker who tipped off RTL Nieuws.\nTimeline: police say the intrusions happened early 2026; month unknown so incident coded 2026 year-only; dbir_year 2027.\nDiscovery: Ajax says it 'recently discovered' the access; the story surfaced via a hacker's tip to RTL Nieuws, which then demonstrated the flaw to Ajax. Order of discovery is unclear, so discovery_method left Unknown (reviewer could consider external Actor disclosure or Unrelated 3rd party).\nIntegrity: RTL journalists, while verifying the tip, transferred director Menno Geelen's VIP season ticket to themselves (Ajax moved it back). Sources do not say the suspected attacker altered tickets or bans, so no attribute.integrity is coded; event chain access step coded hak/ext/srv/unk instead of the template's .../ia.\nTemplate deviations (Hacking-ext-exploit-vuln): actor variety Unaffiliated and country NL instead of Unknown (arrest); access step attribute unk instead of ia. Asset S - Web application (app API backend); cloud hosting Unknown.\nEmployee count: 467 FTE per 2024 financial statements (liza.nl) -> 101 to 1000.\nNAICS 711211 (sports teams and clubs) from the issue.\nIssue-linked sources checked and all are about this incident: TechRadar, The Register, The Record, Cybersecurity Insiders. Added NOS and NH Nieuws (Dutch) for Ajax's statement and the arrest details.",
+    "created": "2026-10-08T18:35:25Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vuln exploited (broken access control in app API)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Fan data viewed"
+      }
+    ],
+    "github": "23145",
+    "master_id": "D02BB1D9-255D-4F08-90B2-488AD7E15AA6",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.techradar.com/pro/security/ajax-suffers-major-own-goal-as-data-breach-hits-personal-info-of-300-000-fans; https://www.theregister.com/2026/03/27/afc_ajax_drops_ball_as/; https://therecord.media/dutch-police-arrest-man-over-cyber-breach-ajax-football; https://www.cybersecurity-insiders.com/ajax-cyber-breach-fan-records-stadium-ban-controls/; https://nos.nl/l/2607792; https://www.nhnieuws.nl/nieuws/360127/politie-denkt-de-hacker-van-ajax-te-hebben-35-jarige-man-aangehouden",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A hacker exploited vulnerabilities in AFC Ajax's supporter app/ticketing systems (shared access key, exposed APIs) and viewed fan data. Ajax confirmed email addresses of a few hundred people and names, emails and birth dates of fewer than 20 stadium-banned supporters were viewed; RTL Nieuws reported data on 300,000+ fans was potentially exposed and tickets and stadium bans could be altered. Dutch police arrested a 35-year-old suspect in May 2026.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "711211",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "AFC Ajax NV"
+  }
+}

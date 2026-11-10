@@ -1,0 +1,155 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "6CFCCEE0-B82C-4576-8894-FAAAFAB354D3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24225\nTemplate Hacking-ext-unknown (issue tag) used as the base. Added Qilin as the actor (Organized crime, Financial) and Social Extortion because Qilin posted an extortion notice threatening to leak data unless the company negotiated (DeXpose, Botcrawl). No source confirms encryption, so Ransomware was not coded (Qilin normally steals data then encrypts). data_abuse Yes - Data ransomed. Vector Unknown and asset S - Unknown (template web application not supported).\nData: Botcrawl and the issue summary say the data is believed to include internal documents and customer information (attacker listing; not company-confirmed) -> Internal and Personal. The company's April 2026 regulator filings disclosed neither data types nor counts (UpGuard).\nTimeline: the law firm notice gives November 19, 2025 as the breach date (and discovery the same day); Botcrawl's leak-site article is also dated Nov 19, 2025; DeXpose dates Qilin's public claim to Dec 3, 2025. Incident 2025-11-19 -> dbir_year 2027 (Nov/Dec rule).\nDiscovery: Actor disclosure (leak-site listing).\nINDUSTRY NEEDS REVIEW: the issue carries the NAICS 22 label (autocoded 2211), but Clayco Electric is described as an electrical services and solar installation company, i.e. a contractor, not a utility. Coded NAICS 238210 (electrical contractors). Change to 2211 if you want it in the utilities set. Location (state) and size not found.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-09T19:41:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Network intrusion; data stolen (Qilin claim)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: leak-site threat"
+      }
+    ],
+    "github": "24225",
+    "master_id": "6CFCCEE0-B82C-4576-8894-FAAAFAB354D3",
+    "modified": "2026-11-09T19:41:17Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://consumer.zlk.com/data-breach/clayco-electric-testing/; https://botcrawl.com/?p=152627; https://www.dexpose.io/qilin-ransomware-breaches-clayco-electric/; https://www.upguard.com/news/clayco-electric-data-breach-2026-04-20; https://www.mass.gov/doc/2026-573-clayco-electric-co-inc/download",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Qilin ransomware group listed Clayco Electric, a US electrical services and solar installation company, on its leak site around November 19, 2025 and posted an extortion notice threatening to leak sensitive data unless the company negotiated; the stolen data is believed to include internal documents and customer information. A law firm investigation notice gives November 19, 2025 as the breach date, and the company reported the incident to state regulators (including Massachusetts) in April 2026 without disclosing data types or counts.",
+  "timeline": {
+    "incident": {
+      "day": 19,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "238210",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Clayco Electric Co., Inc."
+  }
+}

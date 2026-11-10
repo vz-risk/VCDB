@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Helix"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "C7521FAA-A06A-42D4-BD27-497743397B55",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24573\nNAICS changed from 4861 (pipeline transportation of crude oil, wrong) to 488510 (freight transportation arrangement): Uber Freight is a freight brokerage/logistics platform. Victim HQ Chicago, IL (state IL from the company's known HQ; sources do not state it). Employees ~1,639 (Revelio Labs, June 2026) -> 1001 to 10000.\nTemplate Hacking-ext-unknown, deviated: vector set to Unknown (not the template's Web application) and assets S - Mail + S - File (mailboxes, OneDrive) instead of S - Web application, because Helix's claim names mailboxes, OneDrive and accounts-receivable repositories; cloud External (OneDrive/M365). These assets are attacker-sourced; Uber Freight confirmed only that 'part of its systems and repositories' was accessed.\nAccess method: not disclosed. SC World and FreightWaves note that Google links Helix to UNC6671, which uses vishing/help-desk impersonation and device-code/AiTM phishing, but Google does not name Uber Freight as a victim, so Social-Phishing/Pretexting is NOT coded; hacking variety stays Unknown.\nAdded Extortion (social, target/vector Unknown, P - Unknown, integrity Alter behavior) because Helix is a data-extortion group that listed Uber Freight on its leak site; no ransom amount or publication of data is reported. data_abuse 'Yes - Data ransomed' on the same basis. Actor Helix -> Organized crime / Financial.\ndata_disclosure Yes: Uber Freight confirmed unauthorized access to systems/repositories. Data: accounts-receivable and mailbox content -> Internal (attacker claim). The issue's 'Credentials' and 'record count 950,000' are not supported: ~1M is a file count claimed by Helix, so no amount/data_total; whether customer, carrier or employee personal data is involved is unconfirmed.\nDiscovery: Actor disclosure (leak-site listing Aug 6 preceded the company's Aug 12 confirmation); Uber Freight's own detection timing is not stated. Timeline: intrusion date unknown, before Aug 6, 2026 -> incident year 2026, dbir_year 2027.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T22:41:04Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files stolen from mailboxes/OneDrive (claimed)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: listed on Helix leak site"
+      }
+    ],
+    "github": "24573",
+    "master_id": "C7521FAA-A06A-42D4-BD27-497743397B55",
+    "modified": "2026-11-05T22:41:04Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/uber-freight-investigating-data-security-incident-after-helix-claims-breach; https://www.freightwaves.com/?p=578261",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 6, 2026 the Helix data-extortion group listed Uber Freight on its leak site, claiming it stole nearly 1 million files including mailboxes, OneDrive accounts and accounts-receivable material. On August 12 Uber Freight confirmed an unauthorized party had accessed part of its systems and repositories, said the incident was identified, contained and remediated with no impact on operations, and engaged federal law enforcement. The access method and the data involved have not been disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "488510",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Uber Freight"
+  }
+}

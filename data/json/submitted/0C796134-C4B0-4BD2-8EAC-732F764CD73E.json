@@ -1,0 +1,157 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 200000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 200000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "0C796134-C4B0-4BD2-8EAC-732F764CD73E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24552\nTemplate Hacking-ext-unknown used as scaffold. hacking.variety changed from Unknown to Use of stolen creds, because FLHSMV states the attacker used a Plant City Police Department user's credentials. ShinyHunters' alternative claim (a password-reset flaw used to take over DMV employee and FBI agent DAVID accounts; BleepingComputer, JD Supra) is attacker-sourced and contradicts the victim. It was NOT coded and is recorded here for the reviewer. Vector Web application kept from the template: BleepingComputer reports the actor downloaded DAVID record HTML pages, so DAVID is web-based. Assets S - Web application and S - Database (DAVID).\nPartner question: the credentials belonged to a user at a separate agency (Plant City PD) that has DAVID access. That user did not act and was not complicit, so there is no partner actor. The actor is external.\nExtortion added (social, P - Unknown, integrity Alter behavior): shattered.io reports ShinyHunters posted a sales listing of the data with a deadline for contact before release, and ShinyHunters is a known data-extortion crew. BleepingComputer does not mention a demand, so this rests on the shattered.io report. data_abuse 'Yes - Data ransomed'.\nActor: ShinyHunters, Organized crime / Financial. FLHSMV calls it an 'international cybercriminal organization'. Country Unknown.\nData: Personal. Amount 200,000 is ShinyHunters' claim; FLHSMV has not confirmed a count or the data elements. CyberGuy and JD Supra list driver license data, SSNs, addresses, DOB, and vehicle registration as potentially exposed. data_total 200,000 (added by the VERIS rules from the amount) is likewise attacker-claimed. data_victim Customer (Florida drivers).\nTimeline: ShinyHunters says scraping began Sept 3, 2026, so the incident is coded 2026-09-03 (attacker-sourced). FLHSMV learned of it Sept 4, coded as discovery 1 day. How FLHSMV learned is not stated, so discovery method is unknown. CyberGuy's 'September 4, 2024' is a typo. dbir_year 2027.\nNAICS changed from 921 to 926120 (Regulation and Administration of Transportation Programs) because FLHSMV is the state motor-vehicle and highway-safety agency. government Regional (state agency, per label). Employee count 4,414 FTE incl. 1,974 sworn officers (Florida Senate committee document) -> 1001 to 10000.\nPrior VCDB record E64C49A7 (2013 Broward County court clerk misuse of DAVID) is a different incident.\nSources: issue body plus all 4 comment URLs.\nConfidence Medium: the access method is victim-confirmed, but the record count, data elements, and extortion element are attacker-sourced.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds (police user) on DAVID; records scraped"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: data offered for sale with deadline"
+      }
+    ],
+    "github": "24552",
+    "master_id": "0C796134-C4B0-4BD2-8EAC-732F764CD73E",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/; https://shattered.io/florida-dmv-breach-disclosure-timeline-2026/; https://cyberguy.com/security/dmv-breach-confirmed-hackers-claim-200000-records-stolen/; https://cbs12.com/news/local/florida-driver-database-breached-hack-through-compromised-police-credentials-plant-city-police-200000-florida-driver-records-shinyhunters-flhsmv-driver-license-cyberattack-data-breach-compromised-; https://www.jdsupra.com/legalnews/shinyhunters-hits-florida-dmv-database-1760940/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The ShinyHunters extortion group breached the Driver and Vehicle Information Database (DAVID) run by the Florida Department of Highway Safety and Motor Vehicles (FLHSMV). FLHSMV says the attackers logged in with credentials belonging to a Plant City Police Department user, which had been improperly stored on that employee's personal device. ShinyHunters instead claims it abused a password-reset flaw to take over several DAVID accounts. The group says it began iterating through record IDs on September 3, 2026 and stole more than 200,000 driver records, posting a screenshot of one record as proof and a sales listing with a contact deadline. FLHSMV learned of the breach on September 4, contained it, and notified the Florida Attorney General.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 3,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "926120",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Florida Department of Highway Safety and Motor Vehicles"
+  }
+}

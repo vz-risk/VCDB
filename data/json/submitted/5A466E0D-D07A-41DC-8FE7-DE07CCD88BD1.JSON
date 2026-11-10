@@ -1,0 +1,130 @@
+{
+    "action": {
+        "hacking": {
+            "variety": [
+                "Exploit vuln"
+            ],
+            "vector": [
+                "Web application"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Financial"
+            ],
+            "country": [
+                "Unknown"
+            ],
+            "name": [
+                "Lovely"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "amount": 2366576,
+                    "variety": "Personal"
+                }
+            ],
+            "data_victim": [
+                "Customer"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2026-10-08T16:49:21Z",
+        "modified": "2026-10-10T00:22:12.164Z",
+        "sub_source": "vcdb",
+        "master_id": "5A466E0D-D07A-41DC-8FE7-DE07CCD88BD1",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "unk",
+                "summary": "Exploit vuln (likely IDOR/broken access control) in account platform"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Subscriber records scraped and leaked on hacking forum"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22903\nVictim: Condé Nast (New York, NY), publisher of WIRED, Vogue, The New Yorker, etc. Coded as the victim because the data was taken from Condé Nast's shared account/subscriber platform, not just WIRED. Industry 511120 (Periodical Publishers) per the issue. Employee count 1001 to 10000: Wikipedia says a 2023 5% cut was ~270 staff, implying ~5,400 employees (inferred).\nActor: an actor using the name 'Lovely' approached DataBreaches.net in November 2025 posing as a researcher whose vulnerability reports Condé Nast ignored, then leaked the WIRED database on a hacking forum on Dec 20, 2025 (offered for ~$2.30 in forum credits) and threatened to release 40+ million more Condé Nast records. SecurityWeek says Lovely was shown to be a cybercriminal trying to profit -> motive Financial. Lovely is a single alias with no documented group, so variety Unknown. No ransom demand was reported, so no social/Extortion action coded. A separate seller listed 32.8M Condé Nast records for $15,000 in Sept 2026 (Security Affairs); the link to Lovely is unproven.\nAction: per the attacker, the data was taken via vulnerabilities in Condé Nast's systems (attacker-sourced, not victim-confirmed); Hudson Rock/SecurityWeek infer IDOR and broken access control flaws that let users view/modify account data. Coded hacking variety Exploit vuln, vector Web application, asset S - Web application (deviation from the Hacking-ext-unknown template's Unknown variety). Hosting not stated -> cloud Unknown.\nConfirmation: Condé Nast has never publicly confirmed the breach. Coded security_incident Confirmed because BleepingComputer validated sample records as real WIRED subscribers, Hudson Rock matched them to infostealer data, and HIBP loaded the dataset; reviewer may prefer Suspected given no victim confirmation.\nTimeline: WIRED records have timestamps up to Sept 9, 2025; the broader Condé Nast sample has records to Oct 23, 2025; Lovely contacted DataBreaches.net in November 2025. Access began some time in 2025 (on or before Sept-Oct 2025); exact begin date unknown, so incident year 2025 only. dbir_year 2027 derived from the later, more precise November-December 2025 disclosure (Lovely's November contact and the Dec 20, 2025 leak).\nDiscovery: the actor publicized the theft (DataBreaches.net contact, forum leak) -> external Actor disclosure.\nData: WIRED dump of 2,366,576 records (2,366,574 unique emails) with internal subscriber ID, email, display name, and for subsets first/last name (284,196), physical address (194,361), birthday (67,223), phone (32,438) and gender. Coded Personal with amount 2,366,576. No passwords or payment data. data_total omitted because the attacker claims 40M+ (seller later claimed 32.8M) total Condé Nast records that are not verified, so the true total is unknown. Encryption state not stated -> Stored.\ndata_abuse 'Yes': the WIRED dataset was dumped publicly on a hacking forum for nominal credits. Reviewer may prefer omitting it.\nIssue body: PCWorld's '2.4 million' figure is rounded from 2,366,576; the brand list in the issue is PCWorld's list of possibly affected brands, not confirmed scope (Ars Technica says its stack is separate). All issue-linked URLs are about this incident. Added SecurityWeek and Security Affairs as further sources. Confidence Medium: attack method is attacker-sourced/inferred and the victim has not commented.",
+        "dbir_year": 2027,
+        "attribute": {
+            "confidentiality": {
+                "data_abuse": "Yes"
+            }
+        },
+        "github": "22903"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2025,
+            "month": 12
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "1001 to 10000",
+        "industry": "511120",
+        "state": "NY",
+        "victim_id": "Condé Nast"
+    },
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "reference": "https://www.pcworld.com/article/3023058/welp-wired-got-hacked-and-2-4-million-accounts-are-affected.html; https://www.bleepingcomputer.com/news/security/hacker-claims-to-leak-wired-database-with-23-million-records/; https://www.securityweek.com/hacker-claims-theft-of-40-million-conde-nast-records-after-wired-data-leak/; https://securityaffairs.com/198628/data-breach/conde-nast-data-of-32-8-million-users-offered-for-sale-after-wired-leak.html",
+    "security_incident": "Confirmed",
+    "summary": "A hacker using the name Lovely stole subscriber data from Condé Nast's account systems and in December 2025 leaked a WIRED database of 2,366,576 records on a hacking forum, claiming to hold 40+ million more records for other Condé Nast publications. The actor first posed as a researcher who said Condé Nast ignored vulnerability reports; analysts believe IDOR and broken access control flaws were abused. The WIRED records include email addresses and display names for all users and names, addresses, birthdays, phone numbers and gender for subsets. The data was verified by BleepingComputer and Hudson Rock and added to Have I Been Pwned; Condé Nast did not comment.",
+    "incident_id": "5A466E0D-D07A-41DC-8FE7-DE07CCD88BD1",
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

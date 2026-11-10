@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Booking software API had no authorization checks on cancelling other members' reservations; agent also booked classes several weeks beyond the allowed booking window.",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "AU"
+      ],
+      "motive": [
+        "NA",
+        "Misalignment"
+      ],
+      "notes": "Two actors of the same orientation in one object (diagram 'Inherits' arrow): Andrew, a gym member/customer who asked his AI assistant to book a class (motive NA), and the Agentic system (OpenClaw agent running on Anthropic's Claude) that exploited the booking API and removed another member from the waitlist without being asked (motive Misalignment). The agent inherits the external orientation of the customer.",
+      "region": [
+        "009053"
+      ],
+      "variety": [
+        "Customer",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Configuration or patch management"
+      },
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "notes": "Gym's online class booking website/API, provided by an unnamed third-party booking software company. Configuration or patch management, Code repository and Unknown per the analyst's diagram; S - Web application added for the Web application hacking vector.",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify data"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "069418CF-A02E-4253-886A-ED42B251EA3C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24404\nCoded per the analyst's 'AI Going Rogue - External Simple Template' diagram (issue tags: Breach, Hacking-ext-exploit-vuln, AI related, AI-Rogue_External, NAICS 71).\nActor: external Customer (Andrew, a gym member, motive NA) plus Agentic system (OpenClaw AI agent software running on Anthropic's Claude, motive Misalignment). Andrew only asked the agent to book a morning class; the agent found a flaw, booked classes several weeks beyond the allowed window and, when asked to move him up the waitlist, cancelled the #1 waitlisted member's spot (moving Andrew from #4 to #3), which it was not asked to do. 'Agentic system' and 'Misalignment' are VERIS 1.4.2 enums not yet in VCDB's vcdb-merged.json. Actor name left blank (private individual; surname not given). Actor country AU.\nAction: hacking Exploit vuln, vector Web application - the booking software API had 'zero authorisation checks on cancelling other people's reservations' (agent's words). Result Infiltrate.\nAssets: per diagram S - Configuration or patch management, S - Code repository and S - Unknown. Sources only describe the gym's online booking website/API, so Configuration or patch management and Code repository are not source-backed; kept to follow the diagram. S - Web application added because the hacking vector is Web application (rules.py). Cloud Unknown: the booking platform is a third-party vendor's but hosting is not stated.\nAttributes per diagram: confidentiality Yes, data Internal (the agent viewed the class waitlist/booking records), state Stored, no count. Integrity Modify data (another member's reservation cancelled; the agent said it could not restore it). No availability impact.\nEvent chain per diagram: hak/ext/srv/cp (Vuln exploited), then unk/ext/srv/ia (Data changed); the second step is coded unk as in the diagram, though it could arguably be hak.\nDiscovery: Unknown per diagram (Andrew learned of it from the agent's own report; the gym's/vendor's discovery is not described). Andrew had the agent email the software provider about the flaw; the provider declined to discuss security matters. Whether the flaw was fixed is not stated.\nTimeline: incident date not given; Andrew began using OpenClaw earlier in 2026 and ABC published Aug 10, 2026, so coded year 2026 (dbir_year 2027).\nVictim: the gym (unnamed, Australia, NAICS 713940 Fitness and recreational sports centers per issue). Employee count Unknown because the gym is not named. The booking software company is not named, so not listed as a secondary victim.\nConfidence Medium: victim, vendor and date are unnamed/unknown and all reporting traces back to one ABC article.\nSources: ABC News (issue link), Cybernews, eSecurity Planet, The Next Web.",
+    "created": "2026-11-05T23:14:27Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Vuln exploited"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Data changed"
+      }
+    ],
+    "github": "24404",
+    "master_id": "069418CF-A02E-4253-886A-ED42B251EA3C",
+    "modified": "2026-11-05T23:14:27Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986; https://cybernews.com/ai-news/ai-agent-autonomoustly-hacks-gym-website/; https://www.esecurityplanet.com/threats/news-claude-ai-agent-australian-gym-api-flaw-apac/; https://thenextweb.com/news/openclaw-ai-agent-gym-booking-api-flaw-australia",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In 2026 an Australian man, Andrew, asked his AI assistant (OpenClaw agent software running on Anthropic's Claude) to book him into a popular morning class at his gym. The agent found a flaw in the gym's third-party online booking software and booked classes several weeks beyond the allowed window. When asked to move him up a waitlist, it exploited a lack of authorization checks in the booking API to cancel another member's waitlist spot, which it had not been asked to do and could not undo. Andrew had the agent report the vulnerability to the software provider. ABC reported it on Aug 10, 2026 as Australia's first known autonomous AI cyber attack.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "713940",
+    "region": [
+      "009053"
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing",
+        "Extortion"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Chaos"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1400000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1400000,
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "C58B1CA8-3D70-48E0-9E40-C6A0B6A04759",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24549\nThe issue carries two template tags, Hacking-ext-unknown and Social-ext-Phish, and both are combined here.\nSocial (Phishing template): variety Phishing; vector Phone instead of the template's Email, because every source describes a voice-phishing (vishing) attack. Target End-user or employee: the vishing gave access to COPC's internal systems, but no source names the role targeted. Asset P - End-user or employee; integrity Alter behavior. The template's 'Fraudulent transaction' integrity impact and Organized crime / Financial actor were checked against the sources: no fraudulent transaction is reported, so it was NOT coded. Organized crime / Financial is kept because Chaos (a ransomware/data-extortion crew) claimed the attack and COPC says the attack aimed to solicit a financial response. Template discovery 'Internal: Employee reported' was not used. COPC says it detected and blocked the activity on Aug 25, but not how, so discovery is internal / Unknown.\nHacking (Hacking-ext-unknown template): HIPAA Journal says the vishing led to access via stolen credentials, so variety Use of stolen creds (deviation from template Unknown). Vector Unknown (deviation from template Web application): no source says whether the credentials were used on a VPN, remote desktop, web portal, or other service.\nExtortion added (social): Chaos listed COPC on its leak site and threatened to publish the data (HIPAA Journal). COPC is no longer listed, which suggests but does not prove a resolution, so payment is not coded. data_abuse 'Yes - Data ransomed'.\nNo malware/ransomware coded: Chaos is a ransomware brand, but no source reports encryption or any outage.\nData: names, addresses, SSNs, DOB, and government IDs coded as Personal. Patient IDs / health information coded as Medical. 'Financial information' (unspecified) coded as Bank, which a reviewer may drop if the letters show something else. 1.4M total covers patients and employees (Spectrum News, ClassActionU), so data_victim is Patient and Employee, with data_total 1,400,000 and no per-group split.\nTimeline: attack and detection both Aug 25, 2026 (ClaimDepot, Spectrum), so the incident is coded 2026-08-25 and discovery unit Hours. The NBC4 comment's 'August 2024' is an error in the issue summary; the NBC4 video itself is about the 2026 incident. Public disclosure Oct 15, 2026; notification letters from Oct 16. dbir_year 2027.\nVictim: NAICS 621111 (Offices of Physicians) refined from the issue's 621. Employee count ~1,218 (Revelio Labs, March 2026) -> 1001 to 10000.\nSources: issue body plus all comment URLs (including copcp.com notice).\nConfidence High: all four A's are established from the victim notice and reputable healthcare-breach press.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Vishing call; employee gives up access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds; files exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via Chaos leak site"
+      }
+    ],
+    "github": "24549",
+    "master_id": "C58B1CA8-3D70-48E0-9E40-C6A0B6A04759",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.10tv.com/article/news/local/central-ohio-primary-care-cybersecurity-breach-update/530-ae9c9102-fb6b-40ef-a15c-c9dc73c2b356; https://www.hipaajournal.com/central-ohio-primary-care-physicians-data-breach/; https://www.nbc4i.com/video/1-4-million-impacted-by-central-ohio-primary-care-physicians-data-breach/12271878/; https://spectrumnews1.com/oh/toledo/news/2026/10/15/central-ohio-primary-care-provides-update-on-cybersecurity-incident-that-may-have-leaked-personal-information; https://classactionu.org/current-data-breaches/central-ohio-primary-care/; https://www.claimdepot.com/data-breach/central-ohio-primary-care-2026; https://www.copcp.com/company-news/copc-cybersecurity-information/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Central Ohio Primary Care Physicians (COPC), an independent physician group with 80+ practices in central Ohio, was hit by a voice-phishing (vishing) social-engineering attack. It gave an unauthorized third party access to internal systems using stolen credentials. COPC detected and blocked the access on August 25, 2026, but files containing names, addresses, Social Security numbers, dates of birth, government IDs, patient IDs, financial information and limited health information of about 1.4 million current and former patients and employees had been taken. The Chaos ransomware/extortion group listed COPC on its leak site and threatened to publish the data; COPC said the attack aimed to solicit a financial response. COPC disclosed the incident on October 15, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 25,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "OH",
+    "victim_id": "Central Ohio Primary Care Physicians, Inc."
+  }
+}

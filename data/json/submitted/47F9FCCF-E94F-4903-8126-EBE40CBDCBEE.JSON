@@ -1,0 +1,125 @@
+{
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - File"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Bank"
+                },
+                {
+                    "variety": "Payment"
+                }
+            ],
+            "data_victim": [
+                "Patient",
+                "Employee"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 311760
+        }
+    },
+    "discovery_method": {
+        "unknown": true
+    },
+    "plus": {
+        "created": "2026-10-08T16:08:30Z",
+        "modified": "2026-10-10T00:31:37.124Z",
+        "sub_source": "vcdb",
+        "master_id": "47F9FCCF-E94F-4903-8126-EBE40CBDCBEE",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Unauthorized access to historic file server; files with personal data accessed"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24068\nCoded with the Hacking-ext-unknown template (issue tag). Deviation from template: sources name the asset as a \"historic file server\", not a web application, so asset is S - File and hacking vector is Unknown (template default is Web application / S - Web application). Access method not disclosed, so hacking variety Unknown.\nVictim: Hawthorn Medical Associates, Dartmouth, MA, operated as Lifespan Physician Group of Massachusetts d/b/a Brown Health Medical Group-MA (Brown University Health affiliate). Industry coded 621111 (Offices of Physicians) because Hawthorn is a multi-specialty physician practice; the issue body lists 6221 (hospitals) and the label is NAICS 62. Employee count: source says 140+ medical professionals across 20 specialties; total headcount not found, coded 101 to 1000.\nTimeline: unauthorized access Dec 15-16, 2025; discovered Dec 16, 2025 (discovery 1 day). Files containing personal information confirmed accessed June 22, 2026; notices dated July 16, 2026. dbir_year 2027 (Dec 2025 incident is past the Oct 31 cutoff).\nDiscovery method not reported -> unknown.\nData: SSNs, names/contact, DOB, driver's license and government IDs (Personal); medical, health insurance and disability records (Medical); financial account numbers (Bank); credit/debit card numbers (Payment); HR/payroll records (employee data). Not all categories applied to every individual. data_total 311,760 per the HHS breach report (Becker's Hospital Review, issue #24204); the Massachusetts OCABR filing says over 311,000 and New Bedford Light reported 290,000+ Massachusetts residents. Encryption state not stated -> Stored.\nActor unidentified, no ransomware or extortion reported, no monetization signal -> motive Unknown. Exfiltration not confirmed (sources say files were accessed), so result is Infiltrate only. Brown says no evidence of misuse; data_abuse omitted.\nHosting of the historic file server not stated -> cloud Unknown.\nSources: newbedfordlight.org (issue link), oodaloop.com, paubox.com.\nIssue #24204 (Brown University Health practice, 311,760 patients, legacy file server, reported to HHS July 16) describes this same breach and should be closed as a duplicate of #24068.",
+        "dbir_year": 2027,
+        "github": "24068"
+    },
+    "timeline": {
+        "incident": {
+            "day": 15,
+            "month": 12,
+            "year": 2025
+        },
+        "discovery": {
+            "unit": "Days",
+            "value": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "101 to 1000",
+        "industry": "621111",
+        "state": "MA",
+        "victim_id": "Hawthorn Medical Associates"
+    },
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "reference": "https://newbedfordlight.org/hawthorn-medical-breach-exposes-personal-data-for-290000-mass-residents/; https://oodaloop.com/briefs/cyber/311000-impacted-by-brown-health-medical-group-ma-data-breach/; https://www.paubox.com/blog/hawthorn-medical-breach-exposes-290k-draws-ma-senator-criticism; https://www.beckershospitalreview.com/healthcare-information-technology/cybersecurity/311760-patients-affected-by-data-breach-at-brown-university-health-practice/",
+    "security_incident": "Confirmed",
+    "summary": "An unauthorized party accessed a historic file server at Hawthorn Medical Associates (Brown Health Medical Group-MA) in Dartmouth, Massachusetts on December 15-16, 2025. The server held patient and employee data including Social Security numbers, medical and insurance information, bank account and payment card numbers, and payroll records for 311,760 people. The breach was discovered December 16, 2025 but notices were not sent until July 2026.",
+    "incident_id": "47F9FCCF-E94F-4903-8126-EBE40CBDCBEE",
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

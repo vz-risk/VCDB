@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Everest"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "CD5FFD93-459D-4054-BB4B-144DB3AEFF7C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22672\nTemplate Malware-ext-Ransomware-databreach (issue tag) was the scaffold for actor (external Organized crime, Financial, discovery) but the malware/encryption parts were NOT coded: no source reports encryption or ransomware deployment, only data theft from a file transfer system and a leak threat. Coded instead as Hacking (variety and vector Unknown, method not disclosed) plus Social Extortion (Everest threatened to publish about 280 GB unless demands were met). A reviewer may prefer the ransomware template if later reporting shows encryption.\nActor: Everest, a ransomware and data-extortion gang (prior claims include Collins Aerospace and Dublin Airport); Organized crime, Financial. The agency itself did not attribute the attack; attribution is from Everest's leak-site claim.\nData: types not disclosed ('certain information'); 280 GB claimed by the actor. Coded data variety Unknown, data_victim Victim organization. data_abuse Yes - Data ransomed because of the leak-site extortion.\nAsset: S - File for the 'limited external file transfer solution'; hosting not stated, cloud Unknown. People asset P - Unknown for the extortion target.\nTimeline: the breach was identified Saturday evening (Oct 25, 2025) and announced Monday Oct 27 (Security Affairs). Start of the intrusion unknown, so month only. dbir_year 2026.\nDiscovery: not stated whether the agency found it before or because of the Everest post, so Unknown.\nVictim: Svenska kraftnat, Swedish national government agency (government Federal). NAICS 221121 (electric bulk power transmission and control), a more specific child of the issue's 221. About 1,000+ employees (approximate) -> 1001 to 10000.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-09T19:27:16Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Intrusion into file transfer system; data taken (method not disclosed)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: leak-site threat to publish 280 GB"
+      }
+    ],
+    "github": "22672",
+    "master_id": "CD5FFD93-459D-4054-BB4B-144DB3AEFF7C",
+    "modified": "2026-11-09T19:27:16Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/sweden-power-grid-operator-data; https://industrialcyber.co/utilities-energy-power-water-waste/svenska-kraftnat-investigates-data-breach-linked-to-everest-ransomware-group/; https://www.svk.se/press-och-nyheter/nyheter/allmanna-nyheter/2025/svenska-kraftnat-har-blivit-utsatta-for-ett-dataintrang/; https://securityaffairs.com/183963/cyber-crime/everest-group-claimed-the-hack-of-swedens-power-grid-operator-svenska-kraftnat.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Svenska kraftnat, the state-owned operator of Sweden's electricity transmission grid, confirmed on October 27, 2025 that a 'limited external file transfer solution' had been breached; the intrusion was identified on the evening of Saturday, October 25. The Everest ransomware group listed the agency on its leak site, claimed to have exfiltrated about 280 GB of data and threatened to publish it unless its demands were met. Svenska kraftnat said mission-critical systems and the power supply were not affected and reported the incident to police.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "SE"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "221121",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Svenska kraftnat"
+  }
+}

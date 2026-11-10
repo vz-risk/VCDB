@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Oasis Security reported signs that AI tools were used in the attack (references to sub-agents and automatically generated attack reports). Same attack infrastructure also held data linked to Sarang Church.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 850000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 850000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "6A9DEB08-6A1C-4516-908B-0094FCA85F87",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24459\nVictim: Yoido Full Gospel Church (Seoul). Issue #24459 is titled after the Fox Business story covering two megachurches; its body describes Yoido only. Sarang Church (issue #24458) is a separate victim organization and is coded as its own record (EEBBC36D-DF8D-4A53-A3A5-88D65808B691) rather than merged: VERIS codes one incident per victim org, and the two churches disclosed separately with different scope and certainty. They share attack infrastructure (the same overseas server found by Oasis Security), so a reviewer may want to link them with a campaign_id.\nNAICS changed from 8131 (issue body) to 813110 (Religious Organizations), the 6-digit code for a church.\nTemplate Hacking-ext-unknown used: external actor, hacking variety Unknown. Deviations: vector Unknown and asset S - Unknown instead of Web application / S - Web application, because no source says how the attacker got in or which system was hit (the church only says it blocked external access and changed server passwords).\nAI misuse: Oasis Security said the attack records showed signs AI tools were used (references to 'sub-agents', automatically generated attack reports). Recorded in actor.external.notes; no VERIS enum captures it. Not confirmed by the church or authorities.\nData: names and dates of birth for about 850,000 members; for a smaller subset, national ID (resident registration) numbers, addresses and phone numbers. Coded Personal, amount and data_total 850,000 (church's initial-analysis figure, described as 'may have been compromised'). data_victim Customer (church members are the org's constituents, no closer enum). data_disclosure Yes because data linked to the church was found on the attacker's overseas server; reviewer may prefer Potentially since the church describes the count as possible.\nDiscovery: external Security researcher (Oasis Security found the attack records on an overseas server). Timeline: attack date not published; disclosure about Oct 6-7, 2026. Incident coded year 2026 only; dbir_year 2027 (also 2027 from the October 2026 disclosure).\nActor variety/motive Unknown: no group named, no ransom or sale reported.\nEmployee count Unknown: no staff headcount found (membership is several hundred thousand, but that is not employees).\nSources: Fox Business (issue). Korean coverage (inews24: '850,000 personal information leak suspected'; Herald: two big churches hacked, about 1 million member records in total) found by search; only headlines could be read because the pages could not be opened, so details rest on Fox Business.\nConfidence Medium: single detailed English source; vector, asset and actor unknown.",
+    "created": "2026-11-05T22:18:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data copied to overseas server"
+      }
+    ],
+    "github": "24459",
+    "master_id": "6A9DEB08-6A1C-4516-908B-0094FCA85F87",
+    "modified": "2026-11-05T22:18:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.foxbusiness.com/technology/south-korean-megachurches-investigate-suspected-cyberattacks-affecting-hundreds-thousands; https://inews24.com/view/2012738; https://www.heraldk.com/article/2026100615510457182",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Yoido Full Gospel Church in Seoul disclosed in October 2026 that an external attacker compromised its systems; cybersecurity firm Oasis Security found attack records, account information and church-linked data on an overseas attacker server, with signs that AI tools were used to run the attack. Data on about 850,000 members (names and dates of birth, and for some members national ID numbers, addresses and phone numbers) may have been taken. The church blocked external access, changed server passwords and notified members.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "813110",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Yoido Full Gospel Church"
+  }
+}

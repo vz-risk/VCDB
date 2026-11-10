@@ -1,0 +1,176 @@
+{
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Partner"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "malware": {
+            "variety": [
+                "RAT",
+                "Backdoor",
+                "Trojan",
+                "Backdoor or C2"
+            ],
+            "vector": [
+                "Email",
+                "Email unknown"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        },
+        "social": {
+            "variety": [
+                "Phishing"
+            ],
+            "vector": [
+                "Email"
+            ],
+            "target": [
+                "Partner"
+            ],
+            "result": [
+                "Infiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ],
+            "name": [
+                "Mr. Raccoon"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Web application"
+            },
+            {
+                "variety": "U - Desktop or laptop"
+            },
+            {
+                "variety": "P - Partner"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Internal"
+                }
+            ],
+            "data_victim": [
+                "Customer",
+                "Employee",
+                "Victim organization"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes"
+        },
+        "integrity": {
+            "variety": [
+                "Software installation",
+                "Alter behavior"
+            ]
+        }
+    },
+    "discovery_method": {
+        "external": {
+            "variety": [
+                "Actor disclosure"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2026-10-08T16:48:22Z",
+        "modified": "2026-10-10T00:08:49.123Z",
+        "sub_source": "vcdb",
+        "master_id": "FE799E5B-F20E-4ACD-8678-6E9B1594F233",
+        "event_chain": [
+            {
+                "action": "soc",
+                "actor": "ext",
+                "asset": "ppl",
+                "attribute": "ia",
+                "summary": "Phishing email to BPO support employee (attacker claim)"
+            },
+            {
+                "action": "mal",
+                "actor": "ext",
+                "asset": "usr",
+                "attribute": "ia",
+                "summary": "RAT installed on BPO employee machine"
+            },
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Helpdesk tickets exported from agent account (claimed)"
+            }
+        ],
+        "analysis_status": "Reviewed",
+        "analyst": "swidup",
+        "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23216\nIssue data problem: the issue's Source link (syracuse.com, Syracuse police data breach letters) is about an unrelated breach and is not cited. The quoted text is actually the SC Media brief 'Alleged Adobe helpdesk system breach reported' (scworld.com), which is cited instead along with Cybernews (linked in the quote). The scworld.com Magento/PolyShell link in the quote is unrelated and not cited.\nsecurity_incident Suspected: Adobe has not confirmed or denied the claims. The only evidence is the actor's screenshots shared with International Cyber Digest, which says it reviewed files, plus vx-underground saying it 'appears legitimate'. data_disclosure therefore Potentially, and no Exfiltrate result is coded. A reviewer may upgrade to Confirmed/Yes if Adobe or a later source verifies.\nTemplate: Hacking-ext-unknown. Deviations, all attacker-sourced via ICD and not victim-confirmed: phishing email delivered a RAT to an employee of an unnamed India-based BPO that handles Adobe support (social Phishing, vector Email, target Partner, asset P - Partner; malware RAT with parents Backdoor, Trojan, Backdoor or C2, vector Email unknown, asset U - Desktop or laptop owned by the BPO), then the manager was phished. All tickets were exported from an agent account on Adobe's support ticketing platform (S - Web application). Hacking variety Unknown (how the agent session was used is not specific), vector Partner. Cybernews cites infostealer malware rather than a RAT. Integrity Software installation + Alter behavior.\nVictim choice: the BPO (provider) is unnamed and is the only reported customer link, so per the brief this is coded from Adobe's perspective (Adobe's helpdesk data is what was taken) with vector Partner. A reviewer could instead make the BPO the primary victim if it is ever named.\nData (claimed): about 13 million support tickets with customer personal information, 15,000 employee records (Personal), and HackerOne submissions plus internal documents (Internal). Counts not coded as amounts: tickets are not unique people, and the data is unverified. Encryption not stated -> Stored.\nActor 'Mr. Raccoon': new or low-profile, no known track record (Cybernews); probably unrelated to Raccoon Stealer. No sale, extortion or other monetization reported -> variety and motive Unknown. Discovery: the actor publicized it via ICD -> Actor disclosure.\nTimeline: the intrusion is described only as 'early 2026'; claims surfaced April 2-3, 2026. Incident year 2026 only; dbir_year 2027.\nVictim: Adobe Inc., San Jose CA. NAICS 511210 from the issue (Software Publishers; NAICS 2022 code is 513210). Employee count about 30,000 (FY2024/25 10-K) -> 25001 to 50000.\nConfidence Low: unconfirmed, single-origin attacker claims.",
+        "dbir_year": 2027,
+        "github": "23216"
+    },
+    "timeline": {
+        "incident": {
+            "year": 2026,
+            "month": 1
+        }
+    },
+    "victim": {
+        "government": [
+            "NA"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "25001 to 50000",
+        "industry": "511210",
+        "state": "CA",
+        "victim_id": "Adobe"
+    },
+    "source_id": "vcdb",
+    "confidence": "Low",
+    "reference": "https://cybernews.com/security/threat-actor-claims-adobe-data-theft/; https://www.scworld.com/brief/alleged-adobe-helpdesk-system-breach-reported; https://cybersecuritynews.com/adobe-breach/amp/; https://thecybersecguru.com/news/adobe-data-breach-2026/",
+    "security_incident": "Suspected",
+    "summary": "A threat actor calling itself 'Mr. Raccoon' claimed in early April 2026 to have stolen about 13 million Adobe support tickets with personal information, 15,000 employee records, HackerOne bug bounty submissions and internal documents from Adobe's helpdesk system. The actor says it got in through an India-based business process outsourcing firm that handles Adobe support. A remote access trojan was reportedly delivered by malicious email to a BPO agent, whose manager was then phished, and all tickets were exported from an agent account. Adobe has not confirmed the claims. vx-underground said the breach appeared legitimate but was limited to the helpdesk environment.",
+    "incident_id": "FE799E5B-F20E-4ACD-8678-6E9B1594F233",
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

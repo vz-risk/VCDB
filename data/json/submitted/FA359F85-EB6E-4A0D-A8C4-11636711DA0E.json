@@ -1,0 +1,157 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Stolen employee credentials used to access an unnamed cloud-hosted application; data exported within a few hours.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "notes": "Attacker posed as a Marathon Health IT worker and tricked an employee into disclosing credentials; channel not disclosed.",
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5684735,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5684735,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "FA359F85-EB6E-4A0D-A8C4-11636711DA0E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24703\nTemplate Hacking-ext-unknown, deviated: sources state the method, so coded Social Pretexting (attacker impersonated an IT worker to obtain an employee's credentials; target End-user or employee, vector Unknown as the channel - phone, chat, etc. - is not disclosed; asset P - End-user or employee; integrity Alter behavior) followed by Hacking Use of stolen creds (not Unknown) against a cloud-hosted application. Vector Web application / asset S - Web application kept from the template for the unnamed cloud-hosted application (reviewer may change if the app is identified). Cloud: External Cloud Asset(s) (cloud-hosted per notice).\nActor: no group has claimed it; HIPAA Journal notes the TTPs resemble ShinyHunters/Scattered Spider/initial access brokers, but that is not attribution, so actor variety/motive Unknown (no ransom demand or sale reported). data_abuse omitted (no source on misuse).\nData: names, contact info, DOB, SSN (Personal), medical and health insurance information (Medical, per Texas/Vermont AG listings). data_total 5,684,735 = Texas AG filing figure cited by HIPAA Journal. data_victim Patient. State Stored (encryption not stated).\nTimeline: suspicious activity identified on an employee account Aug 24, 2026 and data exported over a few hours that day -> incident 2026-08-24, discovery Hours, exfiltration Hours; review completed Sept 9; letters mailed from Oct 20. Discovery internal, method not stated -> Unknown. dbir_year 2027.\nVictim: Marathon Health, Indianapolis IN; operates 720+ employer-sponsored health centers in 41 states for 600+ employers/unions/public-sector clients. NAICS refined from 6214 to 621498 (All Other Outpatient Care Centers) within the issue's 6214 group. Employer clients are not secondary victims here (Marathon is the covered entity/provider whose own system was breached). Employees: Revelio Labs ~2,510 (June 2026) -> 1001 to 10000.\nIssue data: issue comment linking smh.com.au (NSW Health dental-voucher server, 'bytetobreach', 2024) is about an unrelated incident - dropped, not cited. Comment's 230,000 figure is the Texas resident count (234,534 per HIPAA Journal), and an Insurance Business headline gives 270,000 (article not read); both are partial counts superseded by the 5,684,735 total. classaction.org letter PDF is issue-linked but could not be retrieved.\nConfidence High: method, actor (external), asset and data sourced from the notice letter/AG filings and HIPAA Journal.",
+    "created": "2026-11-05T22:18:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting as IT worker to obtain employee credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds on cloud app; data exported"
+      }
+    ],
+    "github": "24703",
+    "master_id": "FA359F85-EB6E-4A0D-A8C4-11636711DA0E",
+    "modified": "2026-11-05T22:18:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/marathon-health-data-breach/; https://www.classaction.org/data-breach-lawsuits/marathon-health-october-2026; https://www.classaction.org/media/marathon-health-data-breach-letter-2026.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 24, 2026 an unauthorized individual posing as a Marathon Health IT worker tricked an employee into disclosing their credentials, used them to access a cloud-hosted application, and exported personal and health information within a few hours. Marathon Health, an Indianapolis-based provider of employer-sponsored on-site and near-site primary care centers, identified the suspicious account activity the same day and disabled the account. About 5.7 million individuals (5,684,735 per the Texas AG filing) were affected; data included names, contact information, dates of birth, Social Security numbers, medical and health insurance information.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "exfiltration": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 24,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Marathon Health"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "action": {
+    "unknown": {
+      "notes": "HHS breach type Unauthorized Access/Disclosure (Laptop); no details published."
+    }
+  },
+  "actor": {
+    "unknown": {
+      "notes": "No details published."
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Laptop"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2266,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2266,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E04AC543-903B-4563-8B21-AE4F52BEE3D2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Source: HHS OCR breach portal row (Prime Therapeutics LLC; MN; Business Associate; 2,266; submitted 2025-08-25; Unauthorized Access/Disclosure; Laptop; BA present: Yes). No VCDB GitHub issue covers this incident.\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIncident date: no source gives the access or discovery date; coded the year of the HHS submission (2025-08-25).\nNo public source beyond the HHS portal (and breach-tracker pages that restate it) was found; action, actor and data details are Unknown except what HHS states.\nOnly the year is known for the incident; dbir_year 2026.\nEmployee count: not looked up -> Unknown.\nIndustry 524292 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded.",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Unauthorized access or disclosure"
+      }
+    ],
+    "master_id": "E04AC543-903B-4563-8B21-AE4F52BEE3D2",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Prime Therapeutics LLC (MN), a business associate, reported a unauthorized access/disclosure involving its laptop to the HHS Office for Civil Rights on 2025-08-25, affecting 2,266 individuals. No further details were published.",
+  "timeline": {
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "524292",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Prime Therapeutics LLC"
+  }
+}

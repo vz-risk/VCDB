@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "IR"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "name": [
+        "Handala"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "5553841E-4218-45CE-83C8-07E6625E7E62",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23451\nTemplate Hacking-ext-unknown used (external, Hacking, vector Web application, asset S - Web application, data_disclosure Yes, hak/ext/srv/cp). Variety refined to Use of stolen creds because Cal Water says the one customer online account was accessed with stolen credentials (SecurityWeek, citing the Mandiant findings).\nScope: Mandiant found access limited to a small number of user accounts on two third-party service provider platforms (a customer account and a GPS location-correction tool website) and no activity in Cal Water's internal IT or OT. Handala's claims of deep ICS access and the ability to disrupt water service were not substantiated, so asset role is IT only and no availability or integrity impact is coded. Handala did leak about 5 GB, and analysts found personal information in it suggesting a billing system and an internal application may have been compromised; Cal Water says no payment information was compromised. Coded Personal with amount 1 (the confirmed customer account); the leak may contain more. data_abuse Yes - Posted on personal forum because Handala published data.\nNot coded as a partner breach: the issue has no Partner_Breach tag, and only individual user accounts on the providers' platforms were used.\nActor: Handala, which presents as a hacktivist group but is widely believed to be a front for Iranian government hackers (SecurityWeek) -> State-affiliated, IR, motive Ideology (claimed retaliation for US strikes on Iranian water sources).\nDiscovery: Actor disclosure (public Handala claim, around June 11-12, 2026).\nTimeline: June 2026 (claim date); start of access not stated. dbir_year 2027.\nVictim: California Water Service (San Jose), investor-owned water utility. NAICS 221310 (issue said 22). About 1,200 employees (approximate) -> 1001 to 10000.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-09T19:36:13Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds on third-party customer platform; data leaked by Handala"
+      }
+    ],
+    "github": "23451",
+    "master_id": "5553841E-4218-45CE-83C8-07E6625E7E62",
+    "modified": "2026-11-09T19:36:13Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://nypost.com/2026/06/13/us-news/iranian-hackers-claim-breach-of-california-water-systems-after-us-strikes-on-iran/; https://securityboulevard.com/2026/06/iranian-cyber-group-handala-claims-cal-water-hack/; https://www.chicoer.com/2026/06/18/iranian-linked-hacker-group-claims-breach-of-cal-water-systems-including-chico/; https://www.securityweek.com/cal-water-finds-no-evidence-of-ot-activity-after-hackers-claimed-they-could-disrupt-water-supply/; https://www.mercurynews.com/2026/07/01/cal-water-confirms-limited-breach-in-cybersecurity-attack/; https://www.govtech.com/security/cyber-breach-was-limited-california-water-agency-says",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 11-12, 2026 the Iran-linked group Handala claimed it had infiltrated California Water Service (Cal Water) systems serving Bakersfield, Visalia and Chico, posted screenshots of residents' water bills and leaked about 5 GB of data, saying it could have disrupted water supply but chose not to, in retaliation for US strikes on Iran. Cal Water's investigation with Mandiant found the activity was limited to unauthorized access to a small number of user accounts on two third-party service provider platforms: one active customer's online account (accessed with stolen credentials; no billing or payment access) and a third-party website for a GPS location correction tool. No threat actor activity was found in Cal Water's internal IT or OT environments.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221310",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "California Water Service (Cal Water)"
+  }
+}

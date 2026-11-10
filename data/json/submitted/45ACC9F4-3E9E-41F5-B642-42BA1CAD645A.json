@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 128600000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 128600000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "45ACC9F4-3E9E-41F5-B642-42BA1CAD645A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22692\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Issue tag Hacking-ext-unknown, but The Record cites security experts tracing the theft to faulty access control in the contracts, so variety refined to Exploit vuln (wider reporting describes a rounding/precision bug; either way a contract vulnerability). Vector Other, asset S - Other (V2 vault smart contracts), cloud Other. Pool assets belonged to liquidity providers -> data_victim Customer. Impact $128.6M (PeckShield). Victim country/headcount Unknown; NAICS 523999 (issue gives 523210, a securities-exchange code). dbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "V2 vault contract flaw exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$128M drained across chains"
+      }
+    ],
+    "github": "22692",
+    "master_id": "45ACC9F4-3E9E-41F5-B642-42BA1CAD645A",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://finance.yahoo.com/news/balancer-hit-70-6-million-082816313.html; https://www.tradingview.com/news/coinpedia:8b17ad16a094b:0-defi-protocol-balancer-hacked-116-6-million-drained-in-attack/; https://therecord.media/crypto-heist-balancer-exploit; https://crypto.news/balancer-hack-update-stakewise-recovers-oseth-2025/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 3, 2025 attackers exploited Balancer's V2 vaults, draining more than $128 million in digital assets including WETH, osETH and wstETH across Ethereum, Sonic, Polygon, Base and other chains. Security firms attributed the exploit to flawed access control in the protocol's contracts. Balancer paused affected pools; Berachain, Gnosis and others froze some funds and StakeWise recovered part of the stolen osETH.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 3,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Balancer"
+  }
+}

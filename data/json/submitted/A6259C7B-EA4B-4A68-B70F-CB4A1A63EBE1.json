@@ -1,0 +1,178 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate",
+        "Elevate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "VPN"
+      ]
+    },
+    "malware": {
+      "name": "DynoWiper",
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Destroy data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "name": [
+        "Static Tundra",
+        "Sandworm"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - Remote access"
+      },
+      {
+        "variety": "S - Directory"
+      },
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)",
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Modify privileges"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Hids"
+      ]
+    }
+  },
+  "incident_id": "A6259C7B-EA4B-4A68-B70F-CB4A1A63EBE1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23006\nIssue 23006 covers the coordinated December 29, 2025 attacks on Polish energy infrastructure, which hit several separate organizations. Each victim is a separate VERIS incident, so the issue was split: this record is the large CHP plant (the main DynoWiper target); a second record covers the 30+ wind and solar farms. The smaller CHP plant (about 50,000 residents) is issue 24328 and coded there. The manufacturing company hit with LazyWiper is not a utility and was not coded here; it may deserve its own issue.\nTemplate Hacking-ext-unknown used as the base, refined from the CERT Polska report as summarised by The Hacker News and Help Net Security: hacking Use of stolen creds via VPN (FortiGate SSL-VPN, static accounts without MFA); results Infiltrate, Exfiltrate (theft of operational information), Elevate (privileged AD credentials) and Lateral movement. Malware DynoWiper (Destroy data) deployed by GPO / PowerShell from a domain controller (vector Direct install); EDR blocked execution, so no availability impact was coded and heat supply was not disrupted. Integrity Software installation (wiper placed) and Modify privileges.\nData: 'sensitive operational information' coded Internal.\nActor: CERT Polska -> Static Tundra (linked to FSB Center 16, also tracked as Berserk Bear); ESET and Dragos -> Sandworm (GRU) with moderate confidence; The Record says Poland formally attributed the January-disclosed attacks to the FSB in July 2026. Both names listed; Nation-state, RU, motive Espionage (long-term data theft before a sabotage attempt; a reviewer may add Other for sabotage).\nAssets: FortiGate VPN (N - Remote access), domain controller (S - Directory), Microsoft 365 Exchange/Teams/SharePoint accessed with on-prem credentials (S - Mail, S - File; cloud and on-prem). Role IT: the wiper targeted the IT/AD environment; no OT impact at this plant is described.\nTimeline: The Hacker News says data theft at the CHP plant dates back to March 2025 -> incident 2025-03, dbir_year 2026. Destructive attempt Dec 29, 2025; discovery about 9 months after initial access.\nDiscovery: internal, EDR detection of the wiper (coded Hids).\nVictim: unnamed; heat for almost half a million customers. NAICS 22111 from the issue. Employee count unknown.",
+    "created": "2026-11-09T19:33:12Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds on FortiGate SSL-VPN"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Operational data stolen over months"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Privileged AD credentials obtained, lateral movement"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "DynoWiper pushed via GPO (blocked by EDR)"
+      }
+    ],
+    "github": "23006",
+    "master_id": "A6259C7B-EA4B-4A68-B70F-CB4A1A63EBE1",
+    "modified": "2026-11-09T19:33:12Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/sandworm-hackers-linked-to-failed-wiper-attack-on-polands-energy-systems/; http://www.gov.pl/web/primeminister/poland-stops-cyberattacks-on-energy-infrastructure/; https://therecord.media/poland-uncovers-critical-infrastructure-attack-hidden; https://thehackernews.com/2026/01/poland-attributes-december-cyber.html; https://www.helpnetsecurity.com/2026/02/06/poland-cyberattacks-energy-sector-industrial-organizations/; https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A Russian state-linked group spent months inside a large Polish combined heat and power (CHP) plant that supplies heat to almost half a million customers, entering through a FortiGate SSL-VPN portal using statically defined accounts without MFA. The intruders stole sensitive operational information (with intrusion indicators back to March 2025), obtained privileged Active Directory credentials, moved laterally, accessed Microsoft 365 services with on-premises credentials and, on December 29, 2025, pushed the DynoWiper wiper to hosts via Group Policy from a domain controller. EDR detected and blocked the wiper, and heat supply was not disrupted. CERT Polska attributes the activity to Static Tundra (FSB Center 16); ESET and Dragos attribute it to Sandworm with moderate confidence; Poland formally attributed the campaign to the FSB in July 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 9
+    },
+    "incident": {
+      "month": 3,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "PL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "22111",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Unnamed Polish combined heat and power plant (about 500,000 customers)"
+  }
+}

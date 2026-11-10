@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 13689,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13689,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B6A32086-8253-455C-907C-011054F83701",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24268\nPartner_Breach rule applied: ShipMonk (e-commerce fulfilment/warehousing, NAICS 493110) is the primary victim; Trezor (SatoshiLabs, Czech hardware-wallet maker, NAICS 334118) is the secondary victim. Victim country US (ShipMonk is Florida-based).\nTags: both Hacking-ext-unknown and Hacking-ext-exploit-misconfig are on the issue, but no source describes a misconfiguration, so Hacking-ext-unknown was followed with asset S - Unknown and vector Unknown (no source names the system or entry point) plus Partner. Reviewer may switch to Exploit misconfig if a source supports it.\nData: names, emails, phones, shipping addresses -> Personal, 13,689 (11,742 full + 1,947 partial) = data_total.\nTimeline: begin date not disclosed (May 10-Aug 8 is the order window, not the access window); coded 2026-08 from ShipMonk's Aug 10 notice to Trezor. dbir_year 2027.\nNot merged: the Sept 11 2026 TechCrunch and shattered.io links in the comments describe a separate later Trezor breach at an email provider (347,000 phishing targets). That is a different incident and needs its own record; those URLs were left out of reference. The SafePal breach in the issue's source link is also a separate incident (different shipper).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to ShipMonk systems, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Trezor customer order data accessed"
+      }
+    ],
+    "github": "24268",
+    "master_id": "B6A32086-8253-455C-907C-011054F83701",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cryptobriefing.com/safepal-data-breach-40000-customers/; https://techcrunch.com/2026/08/17/crypto-hardware-wallet-owners-face-fresh-security-risks-after-recent-spate-of-personal-data-thefts/; https://finance.yahoo.com/video/crypto-wallet-exposed-nearly-14-120000499.html; https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/; https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/; https://www.bloomberg.com/news/articles/2026-08-13/crypto-firm-trezor-says-data-breach-exposed-thousands-of-clients",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 10, 2026 ShipMonk, the shipping and fulfilment provider for hardware wallet maker Trezor, told Trezor that an unauthorized actor had accessed its systems containing customer order data. Order information for 13,689 Trezor customers in the US, UK, Sweden, Colombia, Brazil, Italy and Portugal who received orders between May 10 and August 8, 2026 was exposed: 11,742 with full name, email, phone and shipping address, and 1,947 with name, city and email. Trezor's own systems and wallets were not affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "493110",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Trezor; 334118"
+      ]
+    },
+    "victim_id": "ShipMonk"
+  }
+}

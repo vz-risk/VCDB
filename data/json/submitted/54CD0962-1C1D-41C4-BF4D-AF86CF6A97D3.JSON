@@ -1,0 +1,125 @@
+{
+    "action": {
+        "hacking": {
+            "variety": [
+                "Unknown"
+            ],
+            "vector": [
+                "Unknown"
+            ],
+            "result": [
+                "Infiltrate",
+                "Exfiltrate"
+            ]
+        }
+    },
+    "actor": {
+        "external": {
+            "variety": [
+                "Unknown"
+            ],
+            "motive": [
+                "Unknown"
+            ],
+            "country": [
+                "Unknown"
+            ]
+        }
+    },
+    "asset": {
+        "assets": [
+            {
+                "variety": "S - Unknown"
+            }
+        ],
+        "cloud": [
+            "Unknown"
+        ],
+        "role": [
+            "IT"
+        ]
+    },
+    "attribute": {
+        "confidentiality": {
+            "data": [
+                {
+                    "variety": "Medical"
+                },
+                {
+                    "variety": "Personal"
+                },
+                {
+                    "variety": "Bank"
+                }
+            ],
+            "data_victim": [
+                "Patient"
+            ],
+            "state": [
+                "Stored"
+            ],
+            "data_disclosure": "Yes",
+            "data_total": 108967
+        }
+    },
+    "discovery_method": {
+        "internal": {
+            "variety": [
+                "Unknown"
+            ]
+        }
+    },
+    "plus": {
+        "created": "2026-10-08T16:48:00Z",
+        "modified": "2026-10-10T00:29:27.722Z",
+        "sub_source": "vcdb",
+        "master_id": "54CD0962-1C1D-41C4-BF4D-AF86CF6A97D3",
+        "event_chain": [
+            {
+                "action": "hak",
+                "actor": "ext",
+                "asset": "srv",
+                "attribute": "cp",
+                "summary": "Unauthorized access to internal network holding patient PHI"
+            }
+        ],
+        "analysis_status": "Finalized",
+        "analyst": "swidup",
+        "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22933\nSources: HIPAA Journal (issue), Community Impact (issue comment), Teiss and Paubox (found by search). All are about this incident.\nTemplate Hacking-ext-unknown used as scaffold. Deviations: the compromised asset is the center's internal computer network, so asset is S - Unknown rather than S - Web application, and hacking vector Unknown (no source states how access was gained). Hacking variety Unknown per template.\nActor unidentified; Teiss says no ransomware or hacker group has claimed it; no ransom or monetization signal -> motive Unknown, variety Unknown. No encryption reported, so no malware/availability coded.\nData: Medical and Personal per HIPAA Journal (incl. biometric identifiers). Paubox additionally lists Social Security numbers and bank account information; coded Bank on that basis (single source, reviewer may drop). data_total 108,967 (HHS OCR). Encryption state not stated -> Stored. Center reports no known misuse -> data_abuse omitted. Notices say data was 'potentially compromised'; data_disclosure Yes because unauthorized network access holding the data was confirmed.\nTimeline: access Dec 24-25, 2024; unusual activity detected on or around Dec 24, 2024 -> discovery internal Unknown, Hours. Substitute notice Feb 21, 2025; data review completed Oct 10, 2025; HHS report Nov 5, 2025. Incident in Dec 2024 -> dbir_year 2026.\nVictim: Denton County MHMR Center, Denton TX, NAICS 621420 (Outpatient Mental Health and Substance Abuse Centers) from issue. It is a Texas local mental health authority (community center); Teiss calls it a nonprofit. Texas community MHMR centers are statutory units of local government (Tex. Health & Safety Code ch. 534), so government coded Local; reviewer may prefer NA. Employee count not published reliably (Seamless.ai is self-inconsistent: 11-50 vs ~276 listed staff); coded 101 to 1000 as inferred, not sourced.\nExfiltration not stated -> hacking result Infiltrate only. Hosting not stated -> cloud Unknown. Confidence Medium: method and actor unknown.",
+        "dbir_year": 2026,
+        "github": "22933"
+    },
+    "timeline": {
+        "incident": {
+            "day": 24,
+            "month": 12,
+            "year": 2024
+        },
+        "discovery": {
+            "unit": "Hours"
+        }
+    },
+    "victim": {
+        "government": [
+            "Local"
+        ],
+        "country": [
+            "US"
+        ],
+        "region": [
+            "019021"
+        ],
+        "employee_count": "101 to 1000",
+        "industry": "621420",
+        "state": "TX",
+        "victim_id": "Denton County MHMR Center"
+    },
+    "source_id": "vcdb",
+    "confidence": "Medium",
+    "reference": "https://www.hipaajournal.com/denton-county-mhmr-center-data-breach/; https://communityimpact.com/dallas-fort-worth/denton/health-care/2026/01/12/denton-county-mhmr-center-data-breach-impacts-nearly-109k-patients/; https://www.teiss.co.uk/news/data-breach-at-denton-county-mhmr-center-exposes-personal-information-of-over-105000-people-16931; https://www.paubox.com/blog/denton-county-mhmr-center-reports-breach-affecting-more-than-108000",
+    "security_incident": "Confirmed",
+    "summary": "An unauthorized third party accessed the network of Denton County MHMR Center, a Texas community behavioral health and IDD services center, on December 24-25, 2024. The center detected unusual activity on or around December 24, 2024. Information of 108,967 current and former patients was potentially compromised, including names, addresses, patient/medical record identifiers, dates of birth, diagnosis, medical history, treatment, lab, medication and vaccination information, treating doctor names, medical insurance information and biometric identifiers. The breach was reported to HHS OCR on November 5, 2025.",
+    "incident_id": "54CD0962-1C1D-41C4-BF4D-AF86CF6A97D3",
+    "schema_name": "vcdb",
+    "schema_version": "1.4.0"
+}

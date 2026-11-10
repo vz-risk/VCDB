@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 250000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 250000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "E8F577D2-4BB9-4B98-9C27-CE2120B9ABE2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22190\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag on the issue (swidup asked Phil whether Hacking-ext-exploitvuln fits). Coded as hacking Use of stolen creds: the minter role's private key was 'compromised' and used to mint, which is credential use rather than a code vulnerability. Hacken blames 'human error' for the key leak but not how; an Error action is not coded since the key exposure mechanism is undisclosed (reviewer may add error if a post-mortem shows e.g. a published key).\nData: minting key -> Credentials; minted/sold HAI (~$250K realized) -> Virtual currency; impact $250K. Asset S - Other (bridge/minter contract). Victim: Hacken OU (Web3 security auditor), NAICS 541512; country/headcount Unknown (Hacken operates from Estonia/Ukraine). dbir_year 2026.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Compromised minter key used to mint 900M HAI"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Minted HAI sold (~$250K)"
+      }
+    ],
+    "github": "22190",
+    "master_id": "E8F577D2-4BB9-4B98-9C27-CE2120B9ABE2",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cryptotimes.io/2025/06/21/hacken-bridge-hacked-900m-hai-minted-via-stolen-private-key/; https://www.theblock.co/post/359097/hacken-cites-human-error-after-private-key-leak-triggers-5-million-crash-in-hai-value",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 20, 2025 an attacker used a compromised private key of an account holding the minter role for Hacken's HAI token bridge deployment to mint about 900 million HAI on Ethereum and BNB Chain, nearly doubling supply. Thin liquidity limited the attacker to about $250,000 in sales, but HAI fell about 97%. Hacken, a Web3 security auditor, blamed human error, revoked the compromised minter accounts and paused its bridges.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 20,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Hacken"
+  }
+}

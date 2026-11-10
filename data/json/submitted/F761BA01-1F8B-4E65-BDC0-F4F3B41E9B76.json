@@ -1,0 +1,175 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "Unknown"
+      ],
+      "variety": [
+        "Pretexting",
+        "Extortion"
+      ],
+      "vector": [
+        "Phone",
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Authentication"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5500000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5500000,
+      "data_victim": [
+        "Customer",
+        "Victim organization",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "F761BA01-1F8B-4E65-BDC0-F4F3B41E9B76",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23265\nTemplates: Hacking-ext-unknown + Hacking-ext-extortion (issue tags). Coded the more specific facts: ShinyHunters claimed (per BleepingComputer) it vished an employee to compromise their Okta SSO account and then stole data from ADT's Salesforce instance. That access path is attacker-sourced and not confirmed by ADT, which only said 'unauthorized access to certain cloud-based environments'. So action.social Pretexting (vector Phone, target End-user or employee) plus hacking Use of stolen creds via Web application, assets S - Authentication (Okta) and S - Web application (Salesforce), cloud External Cloud Asset(s). Deviation from template: hacking variety is Use of stolen creds, not Unknown. Credentials data variety (employee) added for the claimed SSO account takeover.\nExtortion: ShinyHunters listed ADT on its leak site on April 23-24, 2026 ('Pay or Leak', deadline April 27) and later released the data (about 11 GB per Claim Depot citing BleepingComputer). Coded action.social Extortion (vector Web application, target Unknown), P - Unknown asset, integrity Alter behavior, data_abuse 'Yes - Data ransomed'. Actor: ShinyHunters, Organized crime, Financial. ShinyHunters is a known extortion crew that runs SSO vishing campaigns against SaaS tenants.\nCounts: ShinyHunters claimed over 10M records (unverified). Have I Been Pwned counted 5.5M unique email addresses in the leaked data, used for Personal amount and data_total. Claim Depot cites 331,536 US individuals in state AG filings, which may be only the subset with DOB/SSN data. Reviewer may prefer a different total.\nData: names, phone numbers, physical and email addresses for customers and prospective customers. A small share also had dates of birth and the last four digits of SSNs or tax IDs. ShinyHunters also claimed 'internal corporate data' (Internal, attacker-sourced). ADT says no payment data was accessed. Encryption state not stated -> Stored.\nTimeline: ADT says it detected the access on April 20, 2026 (8-K filed April 24). The access begin date is not published, so incident date = discovery date April 20, 2026; the real begin date may be earlier. dbir_year 2027.\nDiscovery: ADT says it detected the unauthorized access and ended it before the leak-site listing -> internal, variety Unknown.\nVictim: ADT Inc., Boca Raton, FL. NAICS 561621 (Security Systems Services) from the issue. Employee count: Macrotrends lists 14,300 for 2023 -> 10001 to 25000.\nSources: all issue-linked URLs kept. PCMag and the DataBreachToday full text could not be fetched (blocked or truncated); facts come from BleepingComputer, HIBP, Claim Depot, Top Class Actions, AOL and the issue body excerpt. The X/HIBP social post in the issue body is not cited. All additional-source comments are about this ADT breach.\nConfidence Medium: the attack method is attacker-sourced only.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T16:48:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting (vishing) of an employee for Okta SSO access (attacker claim)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds to access Salesforce; customer data exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak site (pay or leak), data later leaked"
+      }
+    ],
+    "github": "23265",
+    "master_id": "F761BA01-1F8B-4E65-BDC0-F4F3B41E9B76",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.databreachtoday.com/home-security-firm-adt-breach-55m-customers-data-exposed-a-31511; https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=319978926&type=HTML&symbol=ADT&cdn=8af496ee611a3b300bced647ad440a56&companyName=ADT+Inc.&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-04-24; https://haveibeenpwned.com/Breach/ADT; https://www.aol.com/articles/adt-data-breach-exposes-customer-163043000.html; https://topclassactions.com/lawsuit-settlements/lawsuit-news/adt-class-action-lawsuit-filed-over-data-breach-exposing-customer-pii/; https://www.claimdepot.com/data-breach/adt-2026; https://www.pcmag.com/news/adt-data-breach-shinyhunters-hackers-say-they-stole-10-million-records; https://www.bleepingcomputer.com/news/security/adt-confirms-data-breach-after-shinyhunters-leak-threat/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ShinyHunters breached home security company ADT in April 2026. The group says it vished an employee to take over their Okta single sign-on account and used it to steal data from ADT's Salesforce instance. ADT detected unauthorized access to certain cloud-based environments on April 20, 2026 and ended it. Customer and prospective customer names, phone numbers and addresses were taken, with dates of birth and the last four digits of SSNs or tax IDs for a small share. ShinyHunters listed ADT on its leak site with a pay-or-leak demand and later leaked the data. Have I Been Pwned counted 5.5 million unique email addresses in it.",
+  "timeline": {
+    "incident": {
+      "day": 20,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561621",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "ADT Inc."
+  }
+}

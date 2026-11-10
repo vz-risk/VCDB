@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Spain"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 20000000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 20000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "FF192C30-6C58-482B-A64D-8BAC672BAFD8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22943\nTemplate Hacking-ext-unknown used (external, Hacking, vector Web application, asset S - Web application, data_disclosure Yes, hak/ext/srv/cp).\nDeviation: hacking variety Use of stolen creds instead of Unknown, because Endesa said it blocked access to 'compromised internal accounts' (BleepingComputer). How the accounts were compromised is not disclosed. Vector Web application kept from the template for the commercial (customer management) platform; the access path is not described.\nActor: external, handle 'Spain' (The Register). Offered the data to 'a single exclusive buyer' (BleepingComputer) -> motive Financial. Variety Unknown.\nData: Personal (ID, contact, DNI, contract data) and Bank (IBANs for some customers). Amount 20,000,000 is the attacker's claim (about 1 TB of SQL data); Endesa has not confirmed a count, so no data_total. data_abuse Yes - Posted on personal forum because a sample was leaked; Endesa says there is no evidence of fraudulent use.\nSecondary victim: Energia XXI, Endesa's regulated-tariff supplier, which notified its own customers; it is part of the Endesa group, so it is listed as secondary rather than coded as a separate incident.\nDiscovery: Endesa says it detected the unauthorized access and blocked the accounts -> internal, method Unknown. Whether detection came before the sample leak is not stated.\nTimeline: begin date not disclosed. The sample leak was in the first week of January 2026 and disclosure on Jan 12, 2026, so year 2026 is coded (if the intrusion actually began in Nov/Dec 2025 the dbir_year is still 2027).\nVictim: Endesa S.A., Spain's largest electric utility. NAICS 221122 from the issue. About 9,000 employees (approximate) -> 1001 to 10000.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-09T19:30:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds on commercial platform; customer data exfiltrated"
+      }
+    ],
+    "github": "22943",
+    "master_id": "FF192C30-6C58-482B-A64D-8BAC672BAFD8",
+    "modified": "2026-11-09T19:30:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/spanish-energy-giant-endesa-discloses-data-breach-affecting-customers/; https://www.theregister.com/2026/01/14/endesa_breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Spanish electric utility Endesa (Enel Group) and its regulated supplier Energia XXI disclosed in January 2026 that attackers gained unauthorized access to its commercial platform through compromised internal accounts and accessed and potentially exfiltrated customer contract data: identification and contact details, national ID (DNI) numbers, contract details and, for some customers, IBANs. Passwords were not exposed. A threat actor using the handle 'Spain' claimed to hold about 1 TB of SQL databases with records on about 20 million people, leaked a sample in early January 2026 and offered the data to a single buyer. Endesa notified customers and the AEPD.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ES"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221122",
+    "region": [
+      "150039"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Energia XXI Comercializadora de Referencia; 221122"
+      ]
+    },
+    "victim_id": "Endesa S.A."
+  }
+}

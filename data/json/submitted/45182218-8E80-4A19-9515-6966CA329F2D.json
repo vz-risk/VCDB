@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "HawkSec"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "45182218-8E80-4A19-9515-6966CA329F2D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22972\nCoded as a Suspected incident: the only evidence is HawkSec's claim and sample records posted on X; TotalEnergies said it was assessing the claims and had not confirmed a breach (TEISS). No later confirmation was found in a search. HawkSec's other large claims (Discord, Orange Rwanda) are also unconfirmed, and a forum's administrators warned it for breaking forum rules.\nTemplate Hacking-ext-unknown used (external, Hacking Unknown, vector Web application, asset S - Web application). data_disclosure set to Potentially rather than the template's Yes because the claim is unverified. No record count coded: 184 million is the actor's figure and is implausibly high for French retail customers.\nData claimed: emails, client IDs, bank account numbers, addresses, phone numbers -> Personal and Bank.\nMotive Unknown: the claim was posted publicly, with no sale price or ransom reported.\nDo not confuse with the confirmed 2024 TotalEnergies Clientes (Spain) breach (210,715 accounts, August 2024) or the 2025 '22.25 million Power & Gas records' sale listing; those are separate events.\nTimeline: claims surfaced in January 2026 ('in recent days' per TEISS, issue opened Jan 20, 2026). dbir_year 2027.\nVictim: TotalEnergies (Paris). NAICS 221122 used for the French electricity and gas retail business the portal serves; the issue only gave 22. Employee count is the group's (over 100,000).\nDiscovery: public actor claim (Actor disclosure).\nSingle source; confidence Low.",
+    "created": "2026-11-09T19:31:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Alleged theft of customer database (unconfirmed claim)"
+      }
+    ],
+    "github": "22972",
+    "master_id": "45182218-8E80-4A19-9515-6966CA329F2D",
+    "modified": "2026-11-09T19:31:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.teiss.co.uk/news/totalenergies-investigates-alleged-data-breach-after-hackers-post-customer-records-online-16968",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In January 2026 a hacking group calling itself HawkSec claimed on a cybercrime forum and on X to hold a database of nearly 184 million records, which it said may come from TotalEnergies' French customer portal for energy registrations, and posted screenshots and sample records appearing to show customer emails, client ID numbers, bank account numbers, home addresses and phone numbers. TotalEnergies said it was assessing the claims and has not confirmed a breach.",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221122",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "TotalEnergies"
+  }
+}

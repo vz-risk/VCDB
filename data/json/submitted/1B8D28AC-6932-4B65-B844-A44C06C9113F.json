@@ -1,0 +1,108 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1B8D28AC-6932-4B65-B844-A44C06C9113F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23125\nTemplate Misuse-int-privabuse used (internal actor, Privilege abuse, vector LAN access, data_disclosure Yes, discovery internal, mis/int/srv/cp).\nDeviations: actor variety Unknown instead of End-user (job title not stated); motive Unknown instead of Financial (no sale or fraud reported). Asset S - Database for the customer records system (template U - Desktop or laptop not supported by the source). Vector LAN access kept from the template; not stated in the source.\nData: names, gender, DOB, addresses, phones, emails, correspondence history (Personal) and IBANs (Bank). Count not disclosed. No data_abuse coded: the company only says it cannot rule out misuse.\nPossible link: in September 2025 Innova lost a preliminary injunction over misleading customer outreach in which it claimed a third party had illegally obtained its customer database; Cybernews says it is unclear whether that is related. Not coded as the same incident.\nTimeline: the customer email was sent around March 2026 (issue opened March 24, 2026); when the employee took the data is not stated, so year 2026 only. dbir_year 2027.\nDiscovery: internal (the company 'determined' the employee took the data); method not stated.\nVictim: Innova Energie, Dutch electricity and gas supplier (since 2010), and its subsidiary Gewoon Energie (2021). NAICS 221122 from the issue. Employee count not found.\nSingle source; confidence Medium.",
+    "created": "2026-11-09T19:34:19Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee abused access to take customer data"
+      }
+    ],
+    "github": "23125",
+    "master_id": "1B8D28AC-6932-4B65-B844-A44C06C9113F",
+    "modified": "2026-11-09T19:34:19Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cybernews.com/security/innova-energie-ex-employee-steals-ibans-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Dutch energy supplier Innova Energie emailed customers of its subsidiary Gewoon Energie in March 2026 to say that an employee had unlawfully obtained customer data, including full names, gender, dates of birth, home addresses, phone numbers, email addresses, correspondence history and IBANs. The employee was fired on the spot, and the company reported the breach to the Dutch data protection authority and the Public Prosecution Service. The number of customers affected was not disclosed, and the company said it could not rule out misuse.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "221122",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Innova Energie (Gewoon Energie)"
+  }
+}

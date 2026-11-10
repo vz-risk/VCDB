@@ -1,0 +1,191 @@
+{
+  "action": {
+    "malware": {
+      "name": "The Gentlemen",
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "The Gentlemen"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "7BB9090C-D49F-4D10-B78A-28190E11F92B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22925\nTemplate Malware-ext-Ransomware-databreach used (external Organized crime / Financial, Ransomware, Software installation, Obscuration, discovery Actor disclosure, 4-step chain). Interruption added per the ransomware rule (ERP, document management, email and website were unavailable).\nData theft: the company said it was still analysing whether data was stolen (BleepingComputer). On January 6, 2026 Gentlemen claimed the attack and threatened to release 'the full data set' unless contacted (DeXpose). data_disclosure Yes and Exfiltrate are coded from that attacker claim; not victim-confirmed. Data type not described beyond 'sensitive company data', coded Internal. Social Extortion added for the leak threat; data_abuse Yes - Data ransomed.\nActor: The Gentlemen ransomware operation (emerged August 2025; known for using compromised credentials and internet-exposed services). Initial access not disclosed, so the first chain step is unknown.\nAsset role IT: ERP, document management, email and web systems. The company said operations were partially affected but did not say any OT or plant control system was hit, so OT was not coded.\nTimeline: attack on the second day of Christmas, December 26, 2025 -> dbir_year 2027 (Nov/Dec rule).\nVictim: Complexul Energetic Oltenia, majority state-owned joint-stock company (government left NA as it is a company rather than an agency; change to Federal if you code state-owned enterprises that way). NAICS 221112 (fossil fuel electric power generation), a child of the issue's 22111. Over 19,000 employees (BleepingComputer) -> 10001 to 25000.\nDiscovery: ransom note / encryption (Actor disclosure per template).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-09T19:28:27Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (not disclosed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied (attacker claim)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Files encrypted, ERP/email/web offline"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion: threat to release data"
+      }
+    ],
+    "github": "22925",
+    "master_id": "7BB9090C-D49F-4D10-B78A-28190E11F92B",
+    "modified": "2026-11-09T19:28:27Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/romanian-energy-provider-hit-by-gentlemen-ransomware-attack/; https://www.cybersecurity-insiders.com/gentlemen-ransomware-edr-killer-suite/; https://www.dexpose.io/?p=21103; https://securityaffairs.com/?p=186290",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Gentlemen ransomware gang attacked Oltenia Energy Complex (Complexul Energetic Oltenia), Romania's largest coal-based power producer, on December 26, 2025. Documents and files were encrypted and the ERP, document management, email and website were taken offline; the company rebuilt systems from backups and said its activity was partially affected without endangering the national power system. On January 6, 2026 Gentlemen claimed the attack and threatened to release 'the full data set' of sensitive company data unless the company contacted it.",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "RO"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221112",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Complexul Energetic Oltenia"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    },
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 500000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 500000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "49BA4D0E-565B-4A82-8D1A-6E5C75F844CB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20994\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Issue tagged Error. Coded error Misconfiguration (developer's bridge upgrade left vote weight at zero; internal Developer, motive NA) plus the white hat's withdrawal as hacking Exploit misconfig by external Unaffiliated, motive Other (protective; returned funds). Multiple-actor coding here reflects two distinct actions, not collusion. Reviewer may drop the hacking action and treat it as error-only.\nData: ~$10-12M withdrawn and returned -> Virtual currency; impact = $500K bounty paid. Discovery external Security researcher (white hat). Victim: Sky Mavis (Ronin), VN (Ho Chi Minh City); NAICS 513210 (gaming blockchain); headcount Unknown. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Bridge upgrade sets operator vote weight to zero"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "White hat MEV bot withdraws ~$10M, later returned"
+      }
+    ],
+    "github": "20994",
+    "master_id": "49BA4D0E-565B-4A82-8D1A-6E5C75F844CB",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.livebitcoinnews.com/recent-ronin-hack-caused-by-an-error-allowing-anyone-to-withdraw-funds-without-signature/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 6, 2024 a Ronin bridge contract upgrade mistakenly left the operators' totalWeight (and so minimumVoteWeight) at zero, letting anyone withdraw funds without valid signatures. An MEV bot run by a white hat withdrew about $10-12 million before malicious actors could, and returned the funds; Ronin let the white hat keep a $500,000 bounty.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 6,
+      "month": 8,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "VN"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "Sky Mavis (Ronin Network)"
+  }
+}

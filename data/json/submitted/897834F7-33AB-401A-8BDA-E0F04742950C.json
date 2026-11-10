@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Guest account taken over (method not disclosed); vulnerabilities in DTUBasen exploited, including capture of a guest student's password during a password change; MFA registered on that account; VPN login; admin rights gained in DTUBasen.",
+      "result": [
+        "Infiltrate",
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "VPN",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Directory"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 200000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 200000,
+      "data_victim": [
+        "Student",
+        "Employee",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Register MFA device",
+        "Modify authentication",
+        "Created account",
+        "Modify privileges"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "897834F7-33AB-401A-8BDA-E0F04742950C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24566\nVictim: Technical University of Denmark (DTU), Kongens Lyngby. NAICS 611310 (Colleges and Universities) refined from issue's 611. Government NA (public university coded like other universities in the corpus).\nMain source: DTU's own Danish incident timeline page (dtu.dk 'Tidslinje for hackerangrebet mod DTU'), found by search, plus Cybernews (issue), tech-insider and Rescana (issue comments) and ing.dk.\nTemplate Hacking-ext-unknown deviates substantially because DTU published the chain: 15 Sept (afternoon) an unknown actor took over an external guest account (how is not disclosed) and used it to probe DTUBasen, finding and exploiting vulnerabilities; the attacker captured a newly enrolled guest student's username and password during a password change; 17 Sept registered MFA on that account and logged into DTU's network via VPN, exploiting further vulnerabilities in the identity system; 18 Sept gained full access and admin rights to DTUBasen, added users and changed permissions, and ran a large data extraction that bypassed alarms because of the admin rights. Coded hacking Use of stolen creds + Exploit vuln (no CVE), vector VPN + Unknown (the guest-account takeover and the first DTUBasen probing path are not described, so Web application is not asserted), result Infiltrate/Elevate/Exfiltrate. Integrity: Register MFA device (+ parent Modify authentication), Created account, Modify privileges. Asset S - Directory for DTUBasen (identity and access management system); no S - Web application asserted.\nData: active users (about 40,000): CPR numbers, full names, home addresses, phone numbers, profile photos, work emails, job titles, office locations, next-of-kin in some cases; former users (about 160,000): CPR numbers and names. Coded Personal, 200,000 ('up to'; DTU concluded data on all ~200,000 active and inactive users may have leaked, exact count undetermined). data_victim Student, Employee, Other (guests, external partners, alumni). guest.dtu.dk (same environment) may also have been affected per DTU's 26 Oct update; no CPR numbers there.\nDiscovery: internal Reported by employee (20 Sept an IT employee noticed incorrect and unexpected data in an IT system; the extraction itself was then found by log review on 22 Sept). Timeline: incident 2026-09-15; exfiltration 18 Sept (3 days); discovery 20 Sept (5 days); containment 20-24 Sept (last suspicious activity 24 Sept, about 4 days). Datatilsynet and NIS2 authorities notified 21 Sept; police report 25 Sept; public disclosure 2 Oct. tech-insider's 'identified on Sept 20' matches. dbir_year 2027.\nActor unknown ('unauthorised persons'); NSK (National Special Crime Unit) involved; motive Unknown (no ransom or sale reported).\nEmployee count 1001 to 10000: DTU reports roughly 6,000 staff (dtu.dk facts and figures / Revelio Labs listing found by search; page bodies not re-read because the pages could not be opened).\nConfidence High: victim-published timeline covers all four A's.",
+    "created": "2026-11-05T22:18:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Guest account taken over (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vulns exploited; student creds captured; MFA device registered"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Admin rights gained; accounts created and permissions changed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Bulk data extraction from DTUBasen"
+      }
+    ],
+    "github": "24566",
+    "master_id": "897834F7-33AB-401A-8BDA-E0F04742950C",
+    "modified": "2026-11-05T22:18:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cybernews.com/news/dtu-university-hacked-200000-people-potentially-exposed/; https://tech-insider.org/dtu-data-breach-200000-users-2026/; https://www.rescana.com/post/dtubasen-data-breach-at-technical-university-of-denmark-dtu-exposes-sensitive-information-of-200-000-users; https://www.dtu.dk/om-dtu/kontakt-og-besoeg/it-information/hackerangreb-tidslinje; https://ing.dk/artikel/et-relativt-kompliceret-angreb-saadan-broed-hackere-ind-i-dtus-systemer",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Sept 15, 2026 an unknown attacker took over an external guest account at the Technical University of Denmark (DTU) and used it to probe DTUBasen, DTU's identity and access management system, exploiting vulnerabilities in it. The attacker captured a newly enrolled guest student's credentials during a password change, registered MFA on that account on Sept 17, logged in through the VPN, and by Sept 18 had administrator rights to DTUBasen, adding users and changing permissions before extracting a large volume of data while evading alarms. An IT employee noticed unexpected data on Sept 20; DTU contained the attack, and later concluded that CPR numbers, names and, for active users, addresses, phone numbers, photos, job details and next-of-kin data for up to 200,000 current and former users dating back to 2003 may have leaked.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 5
+    },
+    "exfiltration": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 15,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "DK"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611310",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Technical University of Denmark (DTU)"
+  }
+}

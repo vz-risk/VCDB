@@ -1,0 +1,178 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Capture app data",
+        "Export data"
+      ],
+      "vector": [
+        "Software update"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 8500000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 8500000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "0D708C88-4B63-4100-AB23-4B9FD0C21A2C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22924\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-stolencreds followed (Use of stolen creds: the leaked Chrome Web Store API key was used to publish the malicious version). Vector Other (Chrome Web Store publishing API), asset S - Code repository (GitHub secrets exposed) and U - Desktop or laptop (users' browsers running the extension). S - Web application was not required (vector is not Web application) but kept off; reviewer may add. Malware added: malicious extension JS that captured wallet data (Capture app data, Export data), vector Software update (pushed as an extension update).\nShai-Hulud 2.0 was a broad npm supply-chain worm, not targeted at Trust Wallet; the actor who abused the leaked key is unnamed -> external Unknown, Financial.\nData: users' wallet secrets -> Credentials; drained funds -> Virtual currency, data_victim Customer. Impact $8.5M (post-mortem figure; earlier $7M). No unique victim count used as amount (2,520 addresses per post-mortem, 2,596 per earlier report).\nDiscovery: users reported drained wallets -> external Customer (not explicit in the articles read; reviewer may change to Unknown).\nVictim: Trust Wallet (Binance-owned, separately operated); NAICS 513210 (issue gives 513); country/headcount Unknown. Timeline: secrets leak late Nov 2025 -> incident 2025-11, extension published Dec 24 -> dbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "GitHub secrets incl. Chrome Web Store API key leaked by Shai-Hulud worm"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malicious extension v2.68 published with stolen API key"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Malicious extension installed via update"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Wallet data captured and funds drained"
+      }
+    ],
+    "github": "22924",
+    "master_id": "0D708C88-4B63-4100-AB23-4B9FD0C21A2C",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/trust-wallet-says-7-million-crypto-theft-attack-drained-2-596-wallets/; https://www.bleepingcomputer.com/news/security/trust-wallet-confirms-extension-hack-led-to-7-million-crypto-theft/; https://www.securityweek.com/shai-hulud-supply-chain-attack-led-to-8-5-million-trust-wallet-heist/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On December 24, 2025 a malicious version 2.68 of Trust Wallet's Chrome extension was published to the Chrome Web Store outside Trust Wallet's release process, using a Chrome Web Store API key leaked when the Shai-Hulud 2.0 npm worm exposed Trust Wallet developers' GitHub secrets in late November. The malicious extension pulled code from an attacker domain that collected wallet data and made fraudulent transactions, draining about $7-8.5 million from roughly 2,520-2,596 wallet addresses of users who logged in between December 24 and 26. Trust Wallet said it would reimburse users.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Trust Wallet"
+  }
+}

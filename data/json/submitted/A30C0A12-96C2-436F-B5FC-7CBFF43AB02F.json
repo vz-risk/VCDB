@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "A30C0A12-96C2-436F-B5FC-7CBFF43AB02F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22881\nVictim: Pornhub (operated by Aylo, Montreal, Quebec, Canada). Industry: the issue's NAICS line says 517110 (Wired Telecommunications Carriers), which is clearly wrong for an adult video website; coded 519130 (Internet Publishing and Broadcasting and Web Search Portals). Employee count 1001 to 10000: Wikipedia says ~1,400 employees (2016) with over 1,000 Montreal staff.\nProvider question: Pornhub attributes the exposure to the November 8, 2025 smishing breach of analytics vendor Mixpanel (separate VCDB issue, per the issue note). Mixpanel denies it: it says the Pornhub data was exported from Mixpanel in 2023 using login credentials of an employee at Pornhub's parent company that were compromised separately, and that it found no indication the data was stolen from Mixpanel. Following the brief, this is coded as a Pornhub incident (not a Mixpanel provider-breach record) using Mixpanel's account of the method: hacking variety Use of stolen creds, vector Web application, against Pornhub's own Mixpanel analytics account (S - Web application, External Cloud). ShinyHunters claims instead that it got the data in the Mixpanel breach. The source of the data is disputed; reviewer should decide whether to keep this as a separate record or fold it into the Mixpanel record. Deviation from Hacking-ext-unknown template: variety Use of stolen creds, cloud External.\nActor: ShinyHunters (Scattered Lapsus$ Hunters coalition) confirmed it sent the extortion email to Pornhub and threatened to publish the data unless paid (Bitcoin ransom per CyberGuy). Coded Organized crime, motive Financial. TechCrunch describes the group as mainly English-speaking hackers believed to be in Western countries; country left Unknown. Note that who performed the 2023 export is not established: Mixpanel's account and ShinyHunters' claim differ.\nSocial: action.social Extortion (target Unknown, vector Email - the 'We are ShinyHunters' extortion emails), integrity Alter behavior, asset P - Unknown. The amount demanded is not reported, and no source says whether Pornhub paid. data_abuse 'Yes - Data ransomed'. Pornhub warned Premium members they may receive emails from the actors; Malwarebytes says no sextortion emails were reported as received yet, so no further abuse is coded.\nTimeline: per Mixpanel the data was exported in 2023; Pornhub says it stopped using Mixpanel in 2021, so the records are historical analytics data from 2021 or earlier. Incident year coded 2023 (Mixpanel's account; begin date only known to the year). dbir_year 2027 derived from the later, precise disclosure: Pornhub's notice (Friday Dec 12, 2025) and the extortion reported Dec 15-16, 2025. If the reviewer instead accepts ShinyHunters' Mixpanel claim, the incident date would be Nov 8, 2025 (also dbir 2027).\nDiscovery: the actor's extortion email -> external Actor disclosure. (Pornhub's notice was posted around when the extortion began; it does not say how it learned.)\nData: Premium members' email addresses, location, activity type (watched/downloaded/channel viewed), video names and URLs, video keywords, timestamps and search history (BleepingComputer sample review). Coded Personal. ShinyHunters claims 94GB and 201,211,943 records; these are activity events, not people, and Pornhub gives no count of affected users, so amount/data_total omitted. Passwords, payment and financial data not exposed (Pornhub). Reuters reported customers confirmed the data was accurate but outdated (via CyberGuy; Reuters itself blocked to fetch), which supports security_incident Confirmed. Encryption state not stated -> Stored.\nSources: thetimes.com and reuters.com could not be fetched (blocked) but are kept as issue-linked references; all issue-linked URLs are about this incident. Confidence Medium because the method and data source are disputed between Pornhub, Mixpanel and ShinyHunters.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T16:49:21Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds of parent-company employee on Mixpanel analytics account (per Mixpanel)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Premium member analytics data exported"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion email threatening to publish data"
+      }
+    ],
+    "github": "22881",
+    "master_id": "A30C0A12-96C2-436F-B5FC-7CBFF43AB02F",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.thetimes.com/uk/technology-uk/article/pornhub-hack-stolen-data-mixpanel-h22l32m89; https://techcrunch.com/2025/12/16/hacking-group-says-its-extorting-pornhub-after-stealing-users-viewing-data/; https://www.reuters.com/world/americas/hacking-group-shinyhunters-claims-theft-data-users-leading-sex-site-pornhub-2025-12-16/; https://www.bleepingcomputer.com/news/security/pornhub-extorted-after-hackers-steal-premium-member-activity-data/; https://help.pornhub.com/hc/en-us/articles/47334442459283-Important-Message-From-Pornhub; https://cyberguy.com/security/pornhub-massive-user-data-leak-200-million-records/; https://www.malwarebytes.com/blog/news/2025/12/pornhub-tells-users-to-expect-sextortion-emails-after-data-exposure",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The ShinyHunters extortion group tried to extort Pornhub in December 2025 after obtaining historical analytics data on Pornhub Premium members, including email addresses, location, videos watched or downloaded, search keywords and timestamps (claimed 94GB, about 201 million records). Pornhub said the data came from the November 2025 breach of its former analytics vendor Mixpanel; Mixpanel denied this and said the data was exported from Mixpanel in 2023 using compromised credentials of an employee at Pornhub's parent company Aylo. Pornhub said passwords and payment data were not exposed and warned members to expect contact from the actors.",
+  "timeline": {
+    "incident": {
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "519130",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Pornhub (Aylo)"
+  }
+}

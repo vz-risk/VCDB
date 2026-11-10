@@ -1,0 +1,135 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "partner": {
+      "country": [
+        "US"
+      ],
+      "industry": "541512",
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Command Services & Support (CMDSS)"
+      ],
+      "region": [
+        "019021"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 40000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 40000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "F6465E28-64ED-4198-B870-56EAB856D0E6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23000\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Misuse-prt-privabuse followed: actor partner (CMDSS, the USMS custody contractor, NAICS 541512), misuse Privilege abuse of custody access. Caveat: the alleged thief is the son of CMDSS's executive, and whether he formally worked for CMDSS is not stated; partner orientation follows the tag and ZachXBT's view that the theft was only possible through CMDSS's custodial access.\nVictim: U.S. Marshals Service (NAICS 922120, issue tag 92 Federal), government Federal, headcount 1001 to 10000 (about 5,000+ staff). Asset S - Other (government custody wallets). Cloud Other (blockchain).\nData/impact: more than $40M alleged in total; on-chain, ~$20M drained Oct 2024 with ~$700K not returned. Impact uses $40M as alleged; reviewer may lower it. Allegations are ZachXBT's and not charged at the time of the articles -> security_incident Confirmed (funds demonstrably moved) but confidence Medium.\nDiscovery external Security researcher (ZachXBT). Timeline: Oct 2024 drain -> incident 2024-10, dbir_year 2025 by the Nov 1 rule even though it was disclosed in Jan 2026.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "prt",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Custody access abused to drain seized-crypto wallets"
+      }
+    ],
+    "github": "23000",
+    "master_id": "F6465E28-64ED-4198-B870-56EAB856D0E6",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.ccn.com/news/crypto/us-bitcoin-insider-theft-zachxbt/; https://www.kucoin.com/news/flash/hacker-exposed-for-stealing-over-40m-from-u-s-government-chain-assets; https://www.theblock.co/post/386945/individual-behind-40-million-government-wallet-theft-is-son-of-seized-crypto-contractor-executive-zachxbt",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Blockchain investigator ZachXBT alleged in January 2026 that John Daghita, son of the head of Command Services & Support (CMDSS), a Virginia IT contractor hired by the U.S. Marshals Service in October 2024 to manage and dispose of complex seized cryptocurrency, stole more than $40 million from wallets holding government-seized crypto. On-chain data shows about $20 million drained from USMS-controlled wallets in October 2024; most was returned within 24 hours but about $700,000 disappeared. The theft surfaced after a leaked Telegram recording showed Daghita moving funds from wallets linked to the seizures.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "U.S. Marshals Service"
+  }
+}

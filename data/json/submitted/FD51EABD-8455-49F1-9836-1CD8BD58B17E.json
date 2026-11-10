@@ -1,0 +1,145 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Attacker-claimed: employee directory data downloaded from customers' Azure/Entra tenants using compromised customer credentials. Hudson Rock tied infostealer-sourced credentials to TCS, Gap, HCL and Kyndryl. Vector Partner: access came through customer (tenant) credentials into the provider's platform; Web application: Azure/Entra portals.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner",
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "TheHatman"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Directory"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3639000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 3639000,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "FD51EABD-8455-49F1-9836-1CD8BD58B17E",
+  "plus": {
+    "analysis_status": "First pass",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24264\nRecoded per analyst direction as a partner (provider) breach coded from the provider's perspective: Microsoft (Azure/Entra) is the primary victim and the nine customer organizations named in the sale listings are secondary victims (victim.secondary). Industry 518210 (Computing Infrastructure Providers, Data Processing, Web Hosting) for Azure; earlier VCDB Microsoft records use 511210. Employee count Over 100000. Secondary NAICS: McDonald's 722513, TCS 541512, Vodafone 517112, HCL 541512, IHG 721110, Kyndryl 541513, Gap 458110, Hexaware 541512, Wyndham 721110.\nsecurity_incident Suspected and data_disclosure Potentially: listings are attacker claims; no victim or Microsoft statement confirms theft; Cybernews could not download the McDonald's sample. TCS found no credible evidence of a breach and says the data is over four years old; Vodafone's assessment is old employee business-card data; Gap described its data as dated. data_abuse omitted (sale advertised, no confirmed misuse).\nActor: 'TheHatman' (forum alias), external. Motive Financial (data listed for sale). Variety Unknown (individual alias, no documented group). Country Unknown.\nAction: deviation from the Hacking-ext-unknown template. The listings say the data was downloaded directly from Azure tenants using compromised credentials; TCS cited claimed password spray and MFA fatigue methods; Hudson Rock linked infostealer logs to TCS, Gap, HCL and Kyndryl -> Use of stolen creds, vectors Partner (customer tenant credentials into the provider platform) and Web application (Azure/Entra portals). No malware block: no infostealer infection is attributed to the provider.\nAsset: S - Directory (Entra ID directory exports) and S - Web application (portal); cloud External Cloud Asset(s).\nData: Personal (employees of the secondary victims) + Internal (group memberships, service account and Global Administrator listings). Credentials not coded: sources describe account listings, not passwords. Amount 3,639,000 is the sum of the actor's per-company claims (Cybernews, eSecurity Planet).\nTimeline: theft dates unknown; listings appeared July 31 to mid-August 2026 -> incident year 2026 only (begin date may be earlier, and TCS says its data is 4+ years old); dbir_year 2027. Discovery: external Actor disclosure (sale listings), surfaced by Hudson Rock.\nConfidence Low: attacker claims only, unconfirmed by any victim.\nSources: SecurityWeek (issue link), Cybernews, eSecurity Planet, ITPro.",
+    "created": "2026-10-08T16:49:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Stolen customer creds used on Azure/Entra tenants (claimed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee directories exported and listed for sale (claimed)"
+      }
+    ],
+    "github": "24264",
+    "master_id": "FD51EABD-8455-49F1-9836-1CD8BD58B17E",
+    "modified": "2026-10-09T16:01:43Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/; https://cybernews.com/security/mcdonalds-vodafone-azure-microdoft-credential-theft/; https://www.esecurityplanet.com/threats/news-hacker-claims-3-6-million-azure-records-mcdonalds-vodafone/; https://itpro.com/security/data-breaches/hacker-claims-to-have-stolen-millions-of-azure-customer-records-from-mcdonalds-vodafone-kyndryl-and-others-heres-what-we-know-so-far",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "vcdb",
+  "summary": "A threat actor using the alias 'TheHatman' advertised for sale on underground forums (DarkForum, PwnForums, BreachForums) between July 31 and mid-August 2026 internal employee directory data allegedly downloaded from Microsoft Azure/Entra tenants of nine large companies using compromised credentials: McDonald's (1.7M records), TCS (800K), Vodafone (425K), HCL Technologies (250K), IHG (185K), Kyndryl (170K), Gap (80K), Hexaware (20K) and Wyndham (9K), about 3.64 million records in all. The data includes employee names, corporate emails, phone numbers, employee IDs, job titles, manager details, group memberships and lists of service accounts and Global Administrators. Hudson Rock judged samples likely authentic and tied infostealer-compromised credentials to several of the companies; TCS and Vodafone said the data is old and found no breach of their own systems.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 9,
+      "notes": "Azure/Entra tenants of nine customer organizations named in TheHatman's sale listings, with claimed record counts: McDonald's 1,700,000; TCS 800,000; Vodafone 425,000; HCL Technologies 250,000; IHG 185,000; Kyndryl 170,000; Gap 80,000; Hexaware 20,000; Wyndham 9,000.",
+      "victim_id": [
+        "McDonald's Corporation; 722513",
+        "Tata Consultancy Services (TCS); 541512",
+        "Vodafone; 517112",
+        "HCL Technologies; 541512",
+        "InterContinental Hotels Group (IHG); 721110",
+        "Kyndryl; 541513",
+        "Gap Inc.; 458110",
+        "Hexaware Technologies; 541512",
+        "Wyndham Hotels; 721110"
+      ]
+    },
+    "state": "WA",
+    "victim_id": "Microsoft (Azure)"
+  }
+}

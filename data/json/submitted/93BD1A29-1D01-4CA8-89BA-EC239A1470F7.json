@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Lazarus Group"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 37200000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 37200000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "93BD1A29-1D01-4CA8-89BA-EC239A1470F7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20198\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. The article read discloses no method (CoinsPaid's later report described a fake job-interview social-engineering lure, not in this source), so hacking Unknown/vector Unknown; reviewer may add social Pretexting + malware from CoinsPaid's own post-mortem. Actor: CoinsPaid attributes to Lazarus -> Nation-state KP. Availability Interruption. Impact $37.2M. Victim EE, NAICS 522320, headcount Unknown. dbir_year 2024.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "$37.2M stolen"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Platform availability disrupted"
+      }
+    ],
+    "github": "20198",
+    "master_id": "93BD1A29-1D01-4CA8-89BA-EC239A1470F7",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/coinspaid-blames-lazarus-hackers-for-theft-of-37-300-000-in-crypto/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 22, 2023 attackers stole $37.2 million in cryptocurrency from Estonian crypto payments provider CoinsPaid, which blamed North Korea's Lazarus Group. CoinsPaid said client funds were safe; platform availability was affected while services moved to a new environment, and Estonian law enforcement was notified.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 22,
+      "month": 7,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "EE"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "CoinsPaid"
+  }
+}

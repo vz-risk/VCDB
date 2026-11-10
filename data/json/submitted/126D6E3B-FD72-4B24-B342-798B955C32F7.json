@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1200000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 1200000,
+          "variety": "Bank"
+        },
+        {
+          "amount": 1,
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1200000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "126D6E3B-FD72-4B24-B342-798B955C32F7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23076\nSources: Anadolu Agency (issue), Intelligent CISO and Security Affairs (issue comments), plus the official economie.gouv.fr FICOBA FAQ (3 March 2026) and Solutions Numeriques found by search. All are about this incident.\nTemplate Hacking-ext-stolencreds used. Deviations: hacking vector Unknown instead of Web application (no source says how FICOBA was reached); asset S - Database (FICOBA is a national database/register) instead of S - Web application; discovery internal (DGFiP says it detected the intrusion; method not stated) instead of Unknown.\nCredentials coded as data (the civil servant's login, amount 1, data_victim Employee) per the template. How the credentials were stolen (phishing, infostealer, etc.) is not reported. Actor coded External: sources call the user a 'malicious actor' who usurped an official's credentials; no source suggests the official was complicit. Solutions Numeriques says the account belonged to a DGFiP agent with access for inter-ministerial exchanges; other sources only say 'an official'.\nActor and motive Unknown; no claim, sale or extortion reported, so no data_abuse coded.\nData: Personal and Bank (RIB/IBAN, identity, address, some tax ID numbers), 1.2 million accounts consulted and extracted per DGFiP's first estimates; balances and transactions not accessed. data_total 1,200,000 (accounts, not unique people).\nTimeline: access began end of January 2026 (month only); announced 18 Feb 2026. dbir_year 2027.\nIndustry: issue NAICS 928120 (International Affairs) is wrong for DGFiP, the French tax and public finance administration; corrected to 921130 (Public Finance Activities). government Federal (national government). Employees: DGFiP has roughly 90,000-100,000 agents (widely reported; not confirmed in a fetched source, so inferred) -> 50001 to 100000. Region 150155 (Western Europe).\nConfidence Medium: actor and credential-theft method unknown.",
+    "created": "2026-10-08T21:55:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Use of stolen creds of a civil servant to log into FICOBA"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Bank account records consulted and extracted"
+      }
+    ],
+    "github": "23076",
+    "master_id": "126D6E3B-FD72-4B24-B342-798B955C32F7",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.aa.com.tr/en/europe/france-reports-data-breach-affecting-12-million-bank-accounts/3834116; https://www.intelligentciso.com/2026/02/20/stolen-official-login-used-to-access-french-bank-account-database/; https://securityaffairs.com/188200/hacking/french-ministry-confirms-data-access-to-1-2-million-bank-accounts.html; https://www.economie.gouv.fr/node/3239508; https://www.solutions-numeriques.com/ficoba-12-million-de-comptes-bancaires-exposes-apres-une-usurpation-didentifiants/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "From the end of January 2026 a malicious actor used the stolen credentials of a civil servant with access to FICOBA, France's national register of bank accounts maintained by the Directorate General of Public Finances (DGFiP), to consult and extract data on about 1.2 million bank accounts, including RIB/IBAN, account holder identity and address and in some cases tax identification numbers. DGFiP detected the intrusion, restricted access, notified the CNIL, filed a criminal complaint and announced the breach on 18 February 2026. The actor has not been identified.",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921130",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Direction generale des Finances publiques (DGFiP)"
+  }
+}

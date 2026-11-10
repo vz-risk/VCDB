@@ -1,0 +1,153 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E9D697FE-9B94-4B1C-A0B3-520BB8A54C3A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22673\nTemplate Malware-ext-Ransomware-databreach used (external Organized crime / Financial, Ransomware, Software installation, Obscuration, data_disclosure Yes, 4-step chain). Interruption added per the ransomware rule.\nDeviations: discovery coded Unknown instead of Actor disclosure, because the notice says the company 'detected' the attack and no leak-site claim or ransom note detail was found. Asset S - File (a server holding historical personnel files) instead of S - Unknown. The ransomware group was not named; Organized crime / Financial are template defaults for ransomware.\nData: names, addresses, DOB, SSNs, bank account numbers, I-9 documents (driver's licence, passport, permanent resident card), beneficiary information. Coded Personal and Bank, data_victim Employee. Count: 622 Massachusetts and 23 New Hampshire residents per state filings; the overall total was not disclosed, so no data_total.\nTimeline: detected September 16, 2025; intrusion start not given, so the detection date is the incident date. dbir_year 2026.\nINDUSTRY NEEDS REVIEW: the issue carries the NAICS 22 label and 'naics 221', but Form Energy develops and manufactures batteries (energy storage systems) and is not a utility. Coded NAICS 335910 (battery manufacturing). Change back to 221 if you want it counted with utilities.\nVictim: Form Energy, Somerville, Massachusetts. Employee count roughly 800-900 (LinkedIn/company profile, approximate) -> 101 to 1000.\nConfidence Medium: law-firm and claims-site sources only, no ransomware group or method.",
+    "created": "2026-11-09T19:27:44Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "System access (method not disclosed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Personnel files accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted"
+      }
+    ],
+    "github": "22673",
+    "master_id": "E9D697FE-9B94-4B1C-A0B3-520BB8A54C3A",
+    "modified": "2026-11-09T19:27:44Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://jointhecase.com/data-breach/form-energy-inc-data-breach-lawsuit-investigation/; https://www.claimdepot.com/data-breach/form-energy-2025",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Form Energy, Inc., a developer and manufacturer of long-duration iron-air battery energy storage systems, detected a ransomware attack on September 16, 2025. Forensic analysis found that a server containing historical personnel files was accessed, exposing current and former employees' and beneficiaries' names, addresses, dates of birth, Social Security numbers, bank account numbers and I-9 identity documents. Notification letters went out October 22, 2025; filings list 622 Massachusetts and 23 New Hampshire residents. No ransomware group was named.",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "335910",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Form Energy, Inc."
+  }
+}

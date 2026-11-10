@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "nilojeda"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 15000000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "CF812109-F42D-4B4B-BAB2-5D0A25FFF582",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23330\nStatus: SUSPECTED, not confirmed. The only evidence is a seller's post on an underground forum (not named in sources). Grindr told Escudo Digital and Cyber Daily it found no credible evidence of unauthorized access to or a breach of its systems and that it is not clear the allegation is legitimate. No third party has verified the sample. security_incident Suspected, data_disclosure Potentially, confidence Low. A reviewer may decide this does not meet the bar for VCDB until the data is verified; the data could also be scraped or from a third party, which no source discusses.\nCoded from the Hacking-ext-unknown template (issue tag). Deviations: asset coded S - Database (the seller claims a complete user database) rather than S - Web application, and hacking vector Unknown since no source names an entry point. Hacking variety Unknown per template. No hacking result coded because access is unconfirmed.\nActor: seller handle 'nilojeda' in actor.external.name (first forum post May 29, 2026; also claims Hinge data and a Spanish contacts collection per Cyber Daily). No group affiliation found -> variety Unknown. Motive Financial because the data is listed for sale ($400 in crypto). Country Unknown.\nTimeline: incident date is the forum post date, June 2, 2026 (Cyber Daily); when access (if any) began is unknown and may be earlier. dbir_year 2027.\nData (all attacker-claimed, not victim-confirmed): IDs, names, emails, verification status, password hashes and OAuth data (Credentials), IP/device/user agent, sexual orientation, gender, DOB, physical attributes, precise geolocation (Sensitive Personal), HIV status and last test date (Medical). Amount 15,000,000 on Personal from the seller's 'more than 15 million records' claim; data_total omitted. State Stored (encryption not stated). data_abuse omitted (no confirmed disclosure).\nVictim: Grindr Inc., West Hollywood CA; 178 employees per Morningstar profile -> 101 to 1000. Industry kept as '51' from the issue body (naics 51); a more specific code would be 516210 or 519290 (social networking app) if the reviewer prefers.\nIssue data: the issue's one source is about this victim. The only issue comment ('You got any ??') is from an outside account and is not a source. Sources added: Cyber Daily (cyberdaily.au) and Global Dating Insights. Prior Grindr records in validated/ (2012 account spoofing, 2018 location exposure) are different incidents.",
+    "created": "2026-10-08T16:48:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Alleged access to Grindr user database, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Claimed copy of user database offered for sale (unverified)"
+      }
+    ],
+    "github": "23330",
+    "master_id": "CF812109-F42D-4B4B-BAB2-5D0A25FFF582",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.escudodigital.com/en/cybersecurity/15-million-grindr-users-data-put-up-for-sale-on-dark-web.html; https://www.cyberdaily.au/security/13707-no-backdoor-shenanigans-grindr-denies-data-breach-claims; https://www.globaldatinginsights.com/featured/grindr-hit-by-claimed-but-unproved-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 2, 2026 a threat actor using the handle 'nilojeda' posted on an underground forum offering what they claimed was Grindr's complete user database of more than 15 million records for US$400 in cryptocurrency. The claimed data includes names, email addresses, password hashes, OAuth data, IP and device data, sexual orientation, gender, date of birth, precise location and HIV status and test dates. Grindr said it found no credible evidence of unauthorized access to or a breach of its systems, and the claim has not been independently verified.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 2,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "51",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Grindr Inc."
+  }
+}

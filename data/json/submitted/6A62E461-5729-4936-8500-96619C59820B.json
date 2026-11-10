@@ -1,0 +1,147 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Stolen merchant Stripe secret/restricted API keys used to pull customer and transaction data through Stripe's legitimate API. How the keys were obtained is unknown.",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "Satanic"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 688363,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 688363,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "6A62E461-5729-4936-8500-96619C59820B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24571\nREVIEWER: victim choice. The issue body says this is 'a direct compromise of Stripe's systems or those of merchants'. All three sources (Hackread, Cyber Press, CyberSecAsia) say there is no evidence Stripe was breached: the dump is built from individual merchants' own live API keys, used to pull each merchant's data through Stripe's legitimate API. No common integrator, platform or service provider is named (Hudson Rock found no infostealer infections on the vendor domains it checked), and no merchant is named. So the real victims are several hundred separate, unnamed Stripe merchants, not Stripe and not a single integrator. Strictly each merchant is its own incident; they cannot be split because none is identified, so this one record codes the aggregate leak with victim_id 'Multiple unnamed Stripe merchants', industry 000 (NAICS changed from 5223 to 000: Stripe was not the victim and the merchants' industries are unknown), country Unknown (42 countries; most accounts US 212, UK 81, France 57), employee_count Unknown. The reviewer may prefer to mark this Ineligible or not code it.\nCounts differ by source: Cyber Press 659 merchant accounts / 659 keys (650 sk_live + 9 restricted), 35 GB, 17,654 files; Hackread 669 merchant folders, 1,033 keys, just over 33 GB, 323 unique business domains; actor claims ~20,000 keys (unverified). The issue title's 1,033 is Hackread's key count. Customer count 688,363 is consistent across sources -> Personal amount and data_total.\nTemplate Hacking-ext-unknown, deviated: sources say the stolen keys were used through the API, so hacking variety Use of stolen creds (vector Web application = Stripe API, asset S - Web application, External Cloud). How the keys were stolen (infostealers, public repos, .env files, CI logs, backups) is speculation in the sources, so the first chain step is unk.\nData: customer names, emails, phones, addresses, IPs -> Personal; tokenized card data (last four, brand, expiry, fingerprint; no full PANs) -> Payment; the merchants' API keys themselves are in the dump -> API key + Credentials; charges, invoices, payouts, subscriptions, discount codes -> Internal. Records span Jan 2022 - June 2026.\nActor 'Satanic' (previously leaked ClickFunnels, WooCommerce, Magento data); data posted free, not for sale, no extortion -> motive Unknown, variety Unknown. Discovery Actor disclosure (forum post). data_abuse 'Yes - Posted on personal forum' (posted free on a cybercrime forum).\nTimeline: when the keys were stolen and used is unknown; latest records June 2026, posted Aug 18, 2026. Incident year 2026 -> dbir_year 2027.\nConfidence Low: no named victim, unknown access method, counts conflict.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-05T22:19:56Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "unk",
+        "summary": "Merchant Stripe API keys obtained, method unknown"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds: data pulled via Stripe API"
+      }
+    ],
+    "github": "24571",
+    "master_id": "6A62E461-5729-4936-8500-96619C59820B",
+    "modified": "2026-11-05T22:19:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://hackread.com/hacker-leak-stripe-merchant-api-keys-customer-records/; https://cyberpress.org/stripe-keys-expose-688k/; https://cybersecasia.net/news/live-api-keys-expose-688363-stripe-customer-records-across-42-countries/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 18, 2026 a threat actor using the handle 'Satanic' posted for free on a cybercrime forum (PwnForums per Hackread) a ~33-35 GB archive built with live Stripe secret and restricted API keys belonging to several hundred unrelated Stripe merchants (659 per Cyber Press, 669 merchant folders and 1,033 keys per Hackread) in 42 countries. The keys had been used to pull data through Stripe's legitimate API: 688,363 customer records with names, emails, phones, addresses, IPs, tokenized card details (last four, brand, expiry, fingerprint), charges, invoices, payouts, subscriptions and discount codes dated January 2022 to June 2026. Stripe's own infrastructure was not reported breached; how the merchant keys were obtained is unknown.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "000",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Multiple unnamed Stripe merchants"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4454097,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "amount": 5,
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4454097,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "4C95EF12-7581-4504-910F-B7446B48D63B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24643\nVictim: TRUSTBANK, Inc. (CHANGE Holdings subsidiary), operator of the Furusato Choice hometown-tax (furusato nozei) donation portal. NAICS changed from 522 (issue) to 519130 (Internet Publishing and Web Search Portals; donation portal/marketplace, 2017 code) because TRUSTBANK is not a credit intermediary - it runs a web portal through which donors give to municipalities. Employee count 101 to 1000 is approximate and not confirmed against a fetched source in this pass (web lookups were rate-limited); please verify.\nSecondary victims: municipalities that use Furusato Choice posted notices about the leak of their donors' data (search results: Kyoto, Okinawa, Miyagi and Aomori prefectures and Edogawa City; NAICS 921130/921140). The list is non-exhaustive (Furusato Choice serves most Japanese municipalities) and was taken from search-result titles only; amount = number listed. The issue had no Partner_Breach label; TRUSTBANK is coded as primary per the provider rule since its own system was breached.\nTemplate Hacking-ext-unknown: hacking variety Unknown (method not disclosed), vector Web application and asset S - Web application per the template (Furusato Choice is a web portal; sources say only 'member information' was accessed).\nData: 4,454,097 member records - names, contact details, hashed passwords and tax-deduction information (issue body / Globe and Mail-TipRanks); in five cases also point/donation history and partial credit card details. Coded Personal 4,454,097 (data_total), Credentials (hashed passwords), Payment (5, partial card data). State Stored. data_disclosure Yes: ScanNetSecurity reports confirmed external leakage. data_victim Customer.\nTimeline: unauthorized access Oct 17, 2026; detected Oct 19 when the company noticed abnormal access patterns; disclosed Oct 20. Discovery internal (variety Unknown - the exact detection control is not named), 2 days. The donation management system later resumed in partial form after external experts' security measures; CHANGE Holdings is assessing financial impact for FY ending March 2027. dbir_year 2027. Actor external Unknown; no extortion or misuse reported.\nThe Globe and Mail (TipRanks) issue source could not be fetched (rate limit); its content is from the issue body. Added ScanNetSecurity.\nConfidence Medium: action variety unknown.",
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data stolen from Furusato Choice"
+      }
+    ],
+    "github": "24643",
+    "master_id": "4C95EF12-7581-4504-910F-B7446B48D63B",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/8467268/change-holdings-details-large-scale-data-leak-at-trustbank-and-partial-system-restart/; https://scan.netsecurity.ne.jp/article/2026/10/22/56543.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A third party gained unauthorized access to member information on Furusato Choice, the hometown-tax donation portal run by TRUSTBANK (CHANGE Holdings), on October 17, 2026. TRUSTBANK detected abnormal access on October 19 and disclosed on October 20 that data on 4,454,097 members had leaked, including names, contact details, hashed passwords and tax-deduction information, and in five cases donation/point history and partial card details. Municipalities using the portal warned their donors. The system was later partially restarted after security measures.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 17,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "519130",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 5,
+      "victim_id": [
+        "Kyoto Prefecture; 921130",
+        "Okinawa Prefecture; 921130",
+        "Miyagi Prefecture; 921130",
+        "Aomori Prefecture; 921130",
+        "Edogawa City (Tokyo); 921140"
+      ]
+    },
+    "victim_id": "TRUSTBANK, Inc."
+  }
+}

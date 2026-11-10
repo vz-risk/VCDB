@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "VPN",
+        "Other network service"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - Firewall"
+      },
+      {
+        "variety": "N - Router or switch"
+      },
+      {
+        "variety": "N - PLC"
+      },
+      {
+        "variety": "S - ICS"
+      },
+      {
+        "variety": "N - Other"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Hours",
+        "value": 5
+      },
+      "variety": [
+        "Interruption",
+        "Destruction"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration",
+        "Modify authentication",
+        "Log tampering"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Emergency response team"
+      ]
+    }
+  },
+  "incident_id": "50105575-BC8C-402D-BF35-7B8068A5F4AC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24328\nTemplate Hacking-ext-unknown used for external actor and Hacking, but refined from CERT Polska's findings (via The Hacker News and The Record). This is a disruptive OT attack with no data theft, so no confidentiality block and no web application asset.\nAccess path: admin access to a wind farm FortiGate (VPN without MFA; attacker likely harvested VPN credentials) -> Teltonika RUTX50 router (password obtained by unknown means) -> DSO-managed private APN with client-to-client traffic allowed -> WAGO PFC200 at the plant with default admin credentials -> Siemens PLCs over S7. Coded hacking Use of stolen creds (VPN/router credentials) and Exploit misconfig (default credentials and the open APN configuration), vectors VPN and Other network service (private cellular APN). No malware was used.\nImpact: PLCs set to STOP and password-protected (Modify configuration, Modify authentication), turbine and process-water treatment shut down (Interruption, about 5 hours from 5:30 to recovery), Moxa servers and switches factory-reset and given unreachable addresses, WAGO partition table corrupted and FortiGate/router reset to destroy evidence (Destruction, Log tampering). Customers lost neither heat nor electricity. Asset role OT (PLCs, controllers, serial servers in the plant's control network).\nActor: CERT Polska did not attribute this intrusion. It happened the same day as the coordinated attacks on 30+ renewable sites and a larger CHP plant (issue 23006, attributed to Static Tundra/FSB or Sandworm), which is why CERT Polska investigated, but no source ties this one to that actor. Coded external Unknown. Consider linking the 23006 records and this one with a campaign_id.\nPartner angle: the pivot ran through another company's wind farm firewall and the DSO's private APN, but the plant's own WAGO controller was the point of entry into its network; not coded as a partner breach (the issue has no Partner_Breach tag).\nDiscovery: the plant reported the interruption to CERT Polska as probable contractor error, for information only; CERT Polska opened the incident because it knew of similar events -> external Emergency response team.\nTimeline: reconnaissance from December 18, 2025; destructive actions December 29 (5:30-10:10 a.m.); disclosed August 8, 2026. Incident date Dec 18, 2025 -> dbir_year 2027.\nVictim: unnamed CHP plant serving about 50,000 residents. NAICS 22111 (issue body said 2211). Employee count unknown.",
+    "created": "2026-11-09T19:33:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "Use of stolen creds: wind farm FortiGate and cellular router"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "Default creds on WAGO controller via open private APN"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "PLCs set to STOP and password-locked"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "au",
+        "summary": "Turbine and water treatment shut down; devices reset"
+      }
+    ],
+    "github": "24328",
+    "master_id": "50105575-BC8C-402D-BF35-7B8068A5F4AC",
+    "modified": "2026-11-09T19:33:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html; https://therecord.media/poland-uncovers-critical-infrastructure-attack-hidden",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An attacker broke into the control systems of a Polish combined heat and power plant that supplies heat to about 50,000 residents. Starting December 18, 2025, the attacker used administrative access to a wind farm's FortiGate VPN (no MFA) and a Teltonika cellular router to reach the local distribution system operator's private cellular APN, which allowed client-to-client traffic, then logged into a WAGO PFC200 controller at the plant that still had default admin credentials and tunnelled into the OT network. After reconnaissance (including connections to Siemens PLCs on Christmas Day), on December 29 the attacker switched the Siemens S7 PLCs to STOP mode and password-protected them, shutting down the steam turbine and process-water treatment, and factory-reset and readdressed Moxa serial servers and switches, then wiped logs and corrupted the WAGO device. Staff restored operations the same day and customers lost neither heat nor electricity. The plant first blamed contractor error; CERT Polska disclosed its investigation on August 8, 2026.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 11
+    },
+    "containment": {
+      "unit": "Hours",
+      "value": 5
+    },
+    "incident": {
+      "day": 18,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "PL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "22111",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Unnamed Polish combined heat and power plant (about 50,000 residents)"
+  }
+}

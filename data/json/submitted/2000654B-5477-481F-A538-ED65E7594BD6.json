@@ -1,0 +1,157 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application",
+        "Partner"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Stormous"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 92554,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 92554,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2000654B-5477-481F-A538-ED65E7594BD6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21229\nIssue template tag Malware-ext-Ransomware-databreach not followed: Transak describes phishing of an employee and use of their credentials on a third-party KYC vendor's dashboard, with no encryption or ransomware deployment; Stormous (a ransomware group) only claimed the theft. Coded social Phishing (vector Unknown; channel not stated) + hacking Use of stolen creds on the vendor dashboard (S - Web application, vector Partner because the system belongs to the KYC vendor). Laptop takeover is noted as U - Desktop or laptop; no malware action coded since none is described.\nProvider rule not applied: the KYC vendor was not breached; Transak's own employee credentials were abused, so Transak is primary victim.\nActor: Stormous claim -> Organized crime, Financial (attacker-claimed). Extortion not coded: no demand to Transak is documented in the sources read; data_abuse omitted.\nData: names, DOB, selfies, passports/ID docs -> Personal, 92,554 = data_total. Timeline: disclosed Oct 21 2024; begin date not stated -> 2024-10, dbir_year 2025. Country Unknown (Transak notified the UK ICO, EU and US regulators). NAICS 522320 (payment gateway); headcount Unknown.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee phished"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Employee credentials used on KYC vendor dashboard"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "KYC data of 92,554 users accessed"
+      }
+    ],
+    "github": "21229",
+    "master_id": "2000654B-5477-481F-A538-ED65E7594BD6",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://coinmarketcap.com/community/articles/6728a0f6be2dfb7a8a58acb1/; https://www.infosecurity-magazine.com/news/phishing-attack-impacts-over-92000/; https://www.theblock.co/news/regulation/2024-10-21-transak-discloses-data-breach-affecting-over-57000-users-stormous-ransomware-gang-claims-responsibility-322263",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In October 2024 attackers phished a Transak employee, took over the employee's laptop and used the compromised credentials to log in to a third-party KYC vendor's dashboard, accessing names, dates of birth, selfies and passport and other ID documents of 92,554 users (about 1.4% of Transak's user base). The Stormous ransomware gang claimed responsibility. Transak, a fiat-to-crypto payment gateway, said no funds, passwords, card details or SSNs were affected and notified regulators.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Transak"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 357265,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "D10B4719-2D32-42C0-93E4-4EFDBFF4235A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23287\nTemplate deviation: issue is tagged Hacking-ext-unknown, but Onsite told SecurityWeek and Bitdefender the email account was compromised 'as a result of a phishing email', and HIPAA Journal says the employee responded to a phishing email. Coded Social Phishing (vector Email, target End-user or employee, People asset, integrity Alter behavior) plus Hacking Use of stolen creds against S - Mail. 'Use of stolen creds' is inferred from 'phishing email led to account access'; no source spells out credential capture, so a reviewer may prefer hacking variety Unknown. Hacking vector Unknown (webmail/cloud hosting not stated) instead of the template's Web application, so no S - Web application asset. Cloud Unknown.\nTimeline: unusual mailbox activity identified October 2024 (SecurityWeek, Bitdefender, HIPAA Journal); access lasted 'a brief window'; begin date not published, so incident coded October 2024 (may be slightly earlier). Data review concluded February 21, 2025; regulators (Maine, Texas, Mass., SC, NH, Vermont AGs and HHS) notified around April 21-22, 2025. Claim Depot's 'discovered April 15, 2025' appears to be the notice/identification date, not the intrusion discovery, and was not used. dbir_year 2025 (Oct 2024).\nDiscovery: Onsite noticed unusual activity in the account -> internal, variety Unknown.\nData: names, DOB, SSN, driver's license numbers (Personal), credit card numbers (Payment), mental/physical condition and care information (Medical). data_total 357,265 from the Maine AG figure. HIPAA Journal says data was exfiltrated -> result Exfiltrate. State Stored (encryption not stated). Claim Depot says no misuse reported; data_abuse omitted.\nActor unidentified, no monetization signal -> variety and motive Unknown.\nVictim: Onsite Mammography LLC d/b/a Onsite Women's Health, Westfield MA. Industry corrected from the issue's 621111 (Offices of Physicians) to 621512 (Diagnostic Imaging Centers) because the company provides mammography/breast imaging services, not physician offices; reviewer may revert. Employee count: company directory (clodura.ai) lists 51-200 employees, which spans two buckets -> coded Small (inferred).\nSettlement: Clarkson et al. v. Onsite Mammography, D. Mass. No. 3:25-cv-11123, $2,525,000 fund (not coded as impact; no loss figure for the victim beyond the settlement).\nIssue data: all issue-linked sources are about this victim; the pipeline 'Additional source' comment just repeats the settlement URL already in the body. The PHIDBR2019 label was ignored per the skill. Added SecurityWeek and Bitdefender as sources.",
+    "created": "2026-10-08T16:48:48Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing email to employee"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds to access employee mailbox; data exfiltrated"
+      }
+    ],
+    "github": "23287",
+    "master_id": "D10B4719-2D32-42C0-93E4-4EFDBFF4235A",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/settlements/onsite-data-settlement; https://www.claimdepot.com/data-breach/onsite-mammography; https://www.hipaajournal.com/onsite-womens-health-data-breach-settlement/; https://www.securityweek.com/data-breach-at-onsite-mammography-impacts-350000/; https://www.bitdefender.com/en-us/blog/hotforsecurity/phished-email-mammography-350-000-records",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In October 2024 Onsite Mammography LLC (d/b/a Onsite Women's Health), a Westfield, Massachusetts provider of mobile and in-office breast imaging services, detected unusual activity in one employee's email account. The account had been compromised after the employee responded to a phishing email, and an unauthorized party accessed it for a brief period and exfiltrated data. The mailbox held names, dates of birth, Social Security numbers, driver's license numbers, credit card numbers and health condition and care information for 357,265 patients. Onsite notified state regulators and HHS in April 2025 and later agreed to a $2.525 million class action settlement.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Onsite Mammography LLC (Onsite Women's Health)"
+  }
+}

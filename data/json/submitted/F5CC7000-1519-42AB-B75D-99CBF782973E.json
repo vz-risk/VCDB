@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Call center"
+      ],
+      "variety": [
+        "Phishing",
+        "Extortion"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "NL"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Call center"
+      },
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6200000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6200000,
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "F5CC7000-1519-42AB-B75D-99CBF782973E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23059\n\nTemplate Social-ext-Phish used as a scaffold. Deviations:\n- Social vector is Phone, not Email. Police (BleepingComputer/SC World), Odido's CEO (NL Times) and Borncity describe a voice-phishing call: the caller posed as Odido IT and got a customer-service employee to log in to a fake copy of the work environment. Cybernews cites anonymous sources (via NOS) who say phishing emails were also sent and other staff were phoned to approve MFA prompts. Email was not added because those sources are anonymous; a reviewer could add Email.\n- Target and People asset are Call center (a customer-service employee), not P - Unknown.\n- Added action.hacking Use of stolen creds (result Infiltrate, Exfiltrate) on the customer contact system. Hacking vector is Unknown because the interface is not stated. The asset is S - Other because the 'customer contact system' is a CRM-type system. Cybernews alleges it was Salesforce ('allegedly'); other sources do not say so, so cloud is Unknown. Reviewer: if Salesforce is confirmed, code External Cloud Asset(s) and possibly hacking vector Web application with S - Web application.\n- Added Extortion: ShinyHunters demanded more than EUR 1 million (NL Times 2026-02-26, Holland Times). Odido refused on advice from experts and police, and the data was then published on the leak site (88GB archive). Extortion vector and the second People asset (P - Unknown) cover the demand because its delivery channel is not stated. Alter behavior is kept even though the demand was refused. data_abuse is Yes - Data ransomed.\n- Integrity Fraudulent transaction dropped: there was none.\n- data_disclosure Yes: the data was downloaded and published.\n- Discovery is external / Actor disclosure, not internal / employee reported. Odido's CEO said no alarm went off when the data was downloaded on Feb 5 and that Odido learned of the theft when ShinyHunters contacted it on Feb 7 (NL Times node/88788). Discovery is 2 days.\n\nActor: ShinyHunters claimed the attack on its leak site (BleepingComputer). Coded as Organized crime / Financial (an extortion crew with a ransom demand). Early reports (The Record, SecurityWeek, Feb 12-13) said no group had claimed it; the later claim stands. actor country NL is based on the Dutch National Police statement of 'strong indications' that Dutch hackers were involved and a Dutch-speaking caller. This is a police suspicion, not a conviction; a reviewer may prefer Unknown.\n\nTimeline: the incident begins 2026-02-05 (data downloaded Feb 5; NL Times says two intrusions on Feb 5 and 6). Several press reports say Feb 7, which is the date Odido began investigating or was contacted. Exfiltration took minutes (the account was blocked within about an hour, but the data was already downloaded). dbir_year 2027.\n\nData: 6.2 million customers per Odido (Personal, data_total 6.2M). Sensitive Personal covers passport and driver's license numbers. Bank covers IBANs (about 275,000 IBANs were in the first leak tranche; the total number of IBANs is not stated). ShinyHunters claimed 10M+ or 15M+ records and up to 8M customers; this is not victim-confirmed, so 6.2M is used. Ben (an Odido subsidiary) customers are included.\n\nVictim: Odido Netherlands. NAICS 517112 (wireless carrier) per the issue. Employee count 1001 to 10000 because TechRadar says 'more than 2,000 employees'. Region 150155 (Western Europe).\n\nIssue-comment check: the Borncity link's title is about Aflac, but it is a roundup with an Odido section (vishing, ShinyHunters, ransom refused), so it is kept. The SecurityWeek 'In Other News' link could not be fetched; it is kept as issue-linked. Added NL Times (ransom demand; 'only noticed theft when hackers informed them') and Holland Times as further sources.\nConfidence High: all 4 A's are sourced from reputable press and police statements.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:54:13Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Vishing call impersonating IT; employee logs in to fake portal (Phishing)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds on customer contact system; data downloaded"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand over EUR 1M; data leaked after refusal"
+      }
+    ],
+    "github": "23059",
+    "master_id": "F5CC7000-1519-42AB-B75D-99CBF782973E",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.reuters.com/business/media-telecom/dutch-telecom-odido-hacked-6-million-accounts-affected-2026-02-12/; https://www.techradar.com/pro/security/major-telco-breach-sees-6-2-million-users-have-personal-info-leaked-heres-what-we-know-so-far; https://www.securityweek.com/dutch-carrier-odido-discloses-data-breach-impacting-6-million/; https://therecord.media/dutch-telecom-giant-announces-data-breach; https://www.infosecurity-magazine.com/news/odido-breach-millions-dutch-telco/; https://cybernews.com/security/odido-hackers-phishing-attack/; https://www.bleepingcomputer.com/news/security/police-suspects-dutch-hackers-were-involved-in-odido-breach/; https://www.scworld.com/brief/dutch-police-suspect-dutch-hackers-in-odido-data-breach; https://borncity.com/news/cyberangriffe-438-millionen-aflac-kunden-von-datenpanne-betroffen/; https://www.securityweek.com/in-other-news-iran-tracks-us-military-phones-crashstealer-macos-malware-cvd-blueprint/; https://nltimes.nl/2026/07/26/odido-customers-switched-vodafoneziggo-data-6-million-stolen; https://nltimes.nl/node/88788; https://nltimes.nl/node/88744; https://nltimes.nl/2026/02/26/hackers-publish-odido-customer-data-dark-web-ransom-demand; https://www.hollandtimes.nl/2026-edition-2-march/the-odido-cyberattack-what-happened-and-what-you-need-to-know/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In early February 2026 (data downloaded Feb 5; intrusions on Feb 5-6), a ShinyHunters member phoned an Odido customer-service employee while posing as Odido IT staff and tricked the employee into logging in to a fake copy of the work environment, capturing the login credentials. Using the stolen account, the attackers accessed Odido's customer contact system and downloaded data on about 6.2 million customers (names, addresses, phone numbers, email addresses, customer numbers, IBANs, dates of birth, and passport/driver's license numbers and validity dates) before the account was blocked within about an hour. Odido did not detect the theft; ShinyHunters contacted it on Feb 7 claiming the data. Odido disclosed the breach on Feb 12. ShinyHunters demanded more than EUR 1 million. Odido refused to pay, and the group published the data on its leak site from late February 2026. Dutch police later said there were strong indications that Dutch hackers were involved.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 5,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "517112",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Odido"
+  }
+}

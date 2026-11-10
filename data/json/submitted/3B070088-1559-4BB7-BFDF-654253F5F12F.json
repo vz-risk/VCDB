@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5310000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 4100,
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5314100,
+      "data_victim": [
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3B070088-1559-4BB7-BFDF-654253F5F12F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24541\nCloses https://github.com/vz-risk/VCDB/issues/24576\nMerge: #24541 (Asahi round-up) and #24576 (CyberInsider) are the same Yamato Transport Kuroneko deferred payment service breach; one record.\nFacts (CyberInsider Oct 19; Qatar Tribune agency report): unauthorized access detected Sept 28, 2026; external access restricted, service suspended, reported to PPC; service resumed Oct 9 (payment deadlines extended 17 days). Stolen: ~5.26M customer records (Oct 1, 2018 - Sept 28, 2026) with names, addresses, phones, purchase details, application numbers, order dates, credit authorization numbers, ~490,000 emails; ~50,000 delivery-destination records (recipient names, addresses, phones, tracking numbers); ~4,100 merchant records (business names, internal merchant codes). No card numbers, passwords, billing amounts or employee names. Record counts are not unique individuals. Suspicious emails/texts/calls reported but no confirmed harm, so data_abuse not coded. Kuroneko Members and Yamato Business Members not affected.\nTemplate Hacking-ext-unknown deviations: vector Unknown (instead of Web application) and asset S - Unknown (instead of S - Web application) because no source describes how access was gained or which component was hit. Result Exfiltrate because the company says the data was stolen. The deferred payment service was suspended Sept 28 - Oct 9 by Yamato as a containment step; not coded as an availability impact because the outage was the victim's response, not an attacker action (reviewer may add Interruption if preferred).\nData: Personal 5,310,000 (5.26M customers + ~50k delivery destinations, per issue total); Internal 4,100 (merchant business names/codes). data_victim Customer and Partner (merchants). data_total 5,314,100. Credit authorization numbers are not card numbers, so Payment not coded.\nNot a partner breach: the Kuroneko deferred payment service is Yamato's own service; merchants are its customers.\nTimeline: begin not published; coded Sept 2026 (detected Sept 28). Discovery method not stated. dbir_year 2027.\nNAICS: #24541 gave 4921, #24576 gave 492; coded 492110 (Couriers and Express Delivery). Employee count Over 100000 (Yamato Transport, ~170,000+ staff; Yamato Holdings ~180,000) - approximate, unverified.\nAsahi article link was not accessible (not read directly).\nConfidence Medium: action variety, vector and asset unknown.",
+    "created": "2026-11-05T22:19:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Payment service data stolen"
+      }
+    ],
+    "github": "24541",
+    "master_id": "3B070088-1559-4BB7-BFDF-654253F5F12F",
+    "modified": "2026-11-05T22:19:07Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.asahi.com/ajw/articles/16976490; https://cyberinsider.com/yamato-says-5-3-million-records-stolen-in-payment-service-breach/; https://www.qatar-tribune.com/article/259748/business/yamato-estore-and-nikkei-report-major-data-leaks-in-japan",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Yamato Transport Co., Japan's largest parcel carrier, detected unauthorized access to its Kuroneko deferred payment service on September 28, 2026 and later confirmed that about 5.31 million records were stolen: about 5.26 million customer records (names, addresses, phone numbers, purchase details, application numbers, order dates, credit authorization numbers and about 490,000 email addresses), about 50,000 delivery-destination records and about 4,100 merchant records. No card numbers or passwords were taken. The service was suspended and resumed on October 9.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "492110",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Yamato Transport Co., Ltd."
+  }
+}

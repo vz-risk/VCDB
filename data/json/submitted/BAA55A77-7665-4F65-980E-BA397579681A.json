@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Kazu"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4800000,
+      "data_victim": [
+        "Customer",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "BAA55A77-7665-4F65-980E-BA397579681A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22671\nCoded from the Hacking-ext-unknown template (issue tag) with deviations: TechCabal (Nov 12, 2025), citing CarePay's internal status report to insurers, says attackers compromised a third-party healthcare provider's device, stole its user credentials and used them to access the M-TIBA Version 2 platform. So hacking variety is Use of stolen creds and vector Partner (credentials of a provider using the platform), not Unknown/Web application. The provider's own device is not coded as a victim asset (it belongs to the partner); malware on it is not stated. Platform asset coded S - Unknown because sources do not say which server/app component was accessed.\nActor: 'Kazu' claimed the breach, posting a ~2GB sample on its Telegram channel and advertising the 2.15 TB database on darkforums (HapaKenya, TechEconomy). Kazu is a recently emerged data-theft/extortion gang (GovInfoSecurity) -> Organized crime, motive Financial (database advertised). No ransom demand to CarePay is documented, so no action.social Extortion was coded. Actor country unknown.\nVictim: CarePay Ltd, Nairobi, operator of the Safaricom-backed M-TIBA health wallet/claims platform. Industry 524 from the issue NAICS line (524292 third-party administration of insurance funds may fit better). Employees: Growjo estimates ~443 -> 101 to 1000 (estimate).\nTimeline: intrusion Oct 17-25, 2025; CarePay discovered it Oct 27, 2025 (10 days), the same day the actor's post was publicized -> discovery external Actor disclosure (reviewer may prefer unknown; TechCabal does not say how CarePay learned of it). dbir_year 2026. security_incident Confirmed based on CarePay's internal report per TechCabal; CarePay initially neither confirmed nor denied.\nData: names, national ID numbers, photos, phone contacts, DOB, diagnoses, lab results, prescriptions, discharge summaries, insurance claims and benefit data (Personal, Medical). data_total 4,800,000 = CarePay report figure for beneficiary and claims records (also the actor's claim); the leaked sample covered ~114,000 users. data_abuse 'Yes - Posted on personal forum' because a sample was publicly posted on the actor's Telegram channel/forum. Hosting not stated -> cloud Unknown. ODPC opened an investigation.\nIssue data problem: the issue's Source link (dawan.africa) now returns 'Article Not Found'; kept in references as the issue-linked source, facts corroborated by TechCabal and HapaKenya.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-10-08T16:48:40Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds: partner provider credentials used to access M-TIBA platform"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied; sample posted and database advertised by Kazu"
+      }
+    ],
+    "github": "22671",
+    "master_id": "BAA55A77-7665-4F65-980E-BA397579681A",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.dawan.africa/news/massive-data-breach-hits-safaricom-backed-m-tiba-exposing-millions-of-kenyan-patients-records; https://techcabal.com/2025/11/12/m-tiba-took-10-days-detect-breach-exposed-kenyan-health-data/; https://techcabal.com/2025/10/28/safaricom-backed-m-tiba-hacked-exposing-4-8-patient-records/; https://hapakenya.com/2025/10/28/m-tiba-has-been-hacked-medical-data-of-4-8m-people-has-been-leaked; https://techeconomy.ng/m-tiba-data-breach-kenya",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Attackers stole the credentials of a third-party healthcare provider using the M-TIBA platform, operated by Kenya's CarePay and backed by Safaricom, and used them to access the M-TIBA Version 2 platform between October 17 and 25, 2025. A group calling itself Kazu claimed the theft of 2.15 TB of data, advertised the database on a cybercrime forum and posted a 2GB sample with names, national ID numbers, contacts, diagnoses and billing records. CarePay discovered the breach on October 27, 2025; about 4.8 million beneficiary and claims records were affected and Kenya's data protection regulator opened an investigation.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 10
+    },
+    "incident": {
+      "day": 17,
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "KE"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524",
+    "region": [
+      "002014"
+    ],
+    "victim_id": "CarePay (M-TIBA)"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Other"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Evan Frederick Light"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 37000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 37000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "2BA19DEE-CF12-4B3C-B7A8-63BBAF58CD51",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21762\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Hacking Use of stolen creds (a client's stolen identity used to access the servers; whether this was credentials or account takeover via the company is not detailed). Social Pretexting via Phone, target Other: the false kidnapping report (swatting-style hoax to emergency services) caused employees to evacuate; the people deceived were police/emergency services, so target Other and asset P - Other. Reviewer may drop the social action if it is judged not to be part of the breaching chain.\nActor: Light plus co-conspirators who coordinated the intrusion and laundering -> Organized crime, US, Financial.\nData: PII of hundreds of clients -> Personal (no exact count); crypto stolen from 571 clients -> Virtual currency (no amount/data_total set, since 571 is a client count and the PII count is only 'hundreds'). Impact $37M.\nVictim unnamed (wider reporting suggests a retirement/trust custodian); NAICS 523940 assumed (portfolio management/investment advice); reviewer may adjust. Headcount Unknown. dbir_year 2023.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2023,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Client's stolen identity used to access servers"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "False kidnapping report gets employees evacuated"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Client PII exfiltrated"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$37M crypto stolen from 571 clients"
+      }
+    ],
+    "github": "21762",
+    "master_id": "2BA19DEE-CF12-4B3C-B7A8-63BBAF58CD51",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/indiana-man-sentenced-to-20-years-in-prison-for-hacking-37-million-crypto-theft/; https://www.stwnewspress.com/high-school-dropout-gets-20-years-for-hacking-38m-in-retirement-funds/article_d50fb3b4-fbc9-5211-be3a-ee5e20dbd788.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In February 2022 Evan Frederick Light of Indiana and co-conspirators used the stolen identity of a client of an investment holdings company in Sioux Falls, South Dakota to access the company's servers, exfiltrated personal information of hundreds of clients, and used it to steal more than $37 million in cryptocurrency from 571 clients. Court testimony says the conspirators used a false kidnapping report to get employees evacuated during the intrusion. Light was sentenced in February 2025 to 20 years in prison.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 2,
+      "year": 2022
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523940",
+    "region": [
+      "019021"
+    ],
+    "state": "SD",
+    "victim_id": "Unnamed investment holdings company (Sioux Falls, SD)"
+  }
+}

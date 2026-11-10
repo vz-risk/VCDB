@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Integer overflows"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 9000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 9000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9BB17A5A-889C-41AE-A2CF-A433D814C998",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22807\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-exploit-vuln followed; variety Exploit vuln plus Integer overflows (unchecked arithmetic). Vector Other and asset S - Other (smart contract on Ethereum) rather than Web application. Funds were liquidity-provider assets in the pools -> data_victim Customer. Impact $9M (gross; $2.4M recovered). Victim country/headcount Unknown. Discovery Unknown. dbir_year 2027. Issue also tagged Impact.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Arithmetic bug exploited to mint yETH"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Pool liquidity drained"
+      }
+    ],
+    "github": "22807",
+    "master_id": "9BB17A5A-889C-41AE-A2CF-A433D814C998",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.theblock.co/post/380993/yearn-recovers-2-4-million-stolen-assets-unchecked-arithmetic-bug; https://github.com/banteg/yeth-exploit/blob/main/report.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 30, 2025 an attacker exploited an unchecked arithmetic bug and related design flaws in Yearn Finance's legacy yETH stableswap pool to mint a near-infinite amount of yETH (2.35x10^56 tokens) and use it to drain liquidity from the yETH pool and a smaller yETH-WETH Curve pool. Total losses approached $9 million; Yearn recovered about $2.4 million. It was the third attack on Yearn since 2021.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 30,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Yearn Finance"
+  }
+}

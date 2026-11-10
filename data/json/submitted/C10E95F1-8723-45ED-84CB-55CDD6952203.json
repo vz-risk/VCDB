@@ -1,0 +1,124 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "C10E95F1-8723-45ED-84CB-55CDD6952203",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23594\n\nThe only source is Cybernews (which discovered the leak). A web search found no independent second source, victim statement, or state AG filing.\n\nTemplate Error-int-misconfig-srv used as a scaffold. Deviations:\n- Asset is S - File, not S - Database: the source describes an AWS cloud storage bucket of documents. Cloud is External Cloud Asset(s), as in the template.\n- Internal actor variety is Unknown, not System admin: no source says who misconfigured the bucket. Change it to System admin if the team's convention for misconfigured buckets is to follow the template.\nError variety Misconfiguration, vector Carelessness, motive NA and discovery external Security researcher (Cybernews) all follow the template.\n\nData: Personal (names, DOB, addresses, contacts, employer info, retirement/financial records, wills). Sensitive Personal (SSNs). Payment ('in some cases, full credit card information'). Internal (commission logs, service docs, templates, fax logs). Credentials (a private PGP key associated with SPARK Institute; it could arguably be Secrets or Digital certificate instead). data_disclosure Yes: the files were publicly readable and the researchers accessed them. No data_total: the issue's 'record count 219,000' is Cybernews' estimate of documents, not people, so it is not coded as a record count.\n\nTimeline: the exposure start date is unknown (documents date from 2014 to 2026, but Cybernews says the exposure duration is unknown). timeline.incident uses the discovery date, 2026-05-08, so the true begin date may be earlier. The bucket was secured on 2026-05-18 (10 days after discovery). dbir_year 2027.\n\nVictim: Alta Montclair, a California retirement plan / financial services firm. NAICS 525 per the issue; 524292 (third-party administration of pension funds) may fit better if the firm is confirmed to be a plan administrator. Employee count is Unknown (not found). Related organizations named in the documents (Dragon Financial Services, PDL Financial Services, Retirement Education Partners, SPARK Institute) are not coded as secondary victims because their role is unclear.\nConfidence Medium: single source, actor role unknown, and the victim has not confirmed.",
+    "created": "2026-10-08T21:54:13Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfiguration: AWS storage bucket left publicly accessible"
+      }
+    ],
+    "github": "23594",
+    "master_id": "C10E95F1-8723-45ED-84CB-55CDD6952203",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cybernews.com/security/alta-montclair-retirement-data-leak/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Cybernews researchers found a misconfigured, publicly accessible Amazon Web Services cloud storage bucket belonging to Alta Montclair, a California-based firm that manages retirement plans and financial services. It held up to about 219,000 documents dating from 2014 to 2026, including full names, dates of birth, Social Security numbers, home addresses and contact details, employer information, retirement plan documents and financial records, wills and testaments, in some cases full credit card information, commission logs, internal service documentation, fax records, and a public/private PGP key pair associated with the SPARK Institute. The leak was found on May 8, 2026 and disclosed to the company on May 15, and the bucket was secured on May 18, 2026. The company did not comment, and the exposure duration is unknown.",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 10
+    },
+    "incident": {
+      "day": 8,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "525",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Alta Montclair"
+  }
+}

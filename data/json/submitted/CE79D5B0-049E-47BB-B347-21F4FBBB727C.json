@@ -1,0 +1,155 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Misconfigured Salesforce-hosted webpage (McGraw Hill statement); campaign technique is guest-user access to the Experience Cloud Aura endpoint using a modified AuraInspector (Varonis).",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "notes": "Leak-site listing with April 14 pay-or-leak deadline; data later leaked.",
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 13500000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13500000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "CE79D5B0-049E-47BB-B347-21F4FBBB727C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23231\nTemplate Hacking-ext-exploit-misconfig used (Exploit misconfig, vector Web application, S - Web application, data_disclosure Yes, chain hak/ia -> hak/cp). Deviations: actor named (ShinyHunters claimed it on its leak site; Organized crime / Financial instead of Unknown/Unknown) and extortion added: action.social Extortion (target/vector Unknown), P - Unknown asset, integrity Alter behavior, data_abuse Yes - Data ransomed (data leaked after the April 14 deadline). Cloud External Cloud Asset(s) (Salesforce-hosted).\nSalesforce campaign / provider rule: coded McGraw Hill as primary victim, not Salesforce. Salesforce says its platform was not compromised and the activity is not a vulnerability in its technology; the campaign abuses customer-side misconfiguration of Salesforce Experience Cloud guest-user access (Varonis describes ShinyHunters using a modified AuraInspector against /s/sfsites/aura). McGraw Hill calls it 'a misconfiguration within Salesforce's environment that has impacted multiple organizations'. Because the provider itself was not breached, each affected customer is its own incident. The issue asked which Salesforce issue this belongs in: it is the 2026 Aura/Experience Cloud guest-user wave, distinct from the 2025 vishing / Salesloft-Drift Salesforce campaigns. That McGraw Hill's page was an Experience Cloud site is inferred from the campaign; McGraw Hill only says 'a webpage hosted by Salesforce'.\nData: ShinyHunters claimed 45M Salesforce records with PII (attacker claim, unverified). HIBP counted 13.5M unique email addresses in 100+ GB of leaked files, with names, physical addresses and phone numbers present inconsistently; used 13.5M for Personal amount and data_total. McGraw Hill says the data was limited and non-sensitive, with no SSNs, financial account data or student platform data; it has not given a count. data_victim Customer assumed from the Salesforce CRM context (HIBP/BleepingComputer describe customer accounts). State Stored (encryption not stated).\nDiscovery: Unknown. McGraw Hill says it 'identified' the access but not how or when relative to the leak-site listing; a reviewer may prefer external Actor disclosure. Timeline: BleepingComputer says the breach happened earlier in April 2026; no day given -> 2026-04, dbir_year 2027.\nVictim: McGraw Hill (NYSE: MH), NAICS 513130 Book Publishers from the issue body. Employee count ~4,200 (2025, Wikipedia/company filings) -> 1001 to 10000. HQ Columbus, OH per its filings (it also has a large New York office).\nSources: two BleepingComputer articles and The Record (issue links), plus HIBP breach page and Varonis campaign analysis.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploit misconfig of Salesforce-hosted webpage"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak-site listing"
+      }
+    ],
+    "github": "23231",
+    "master_id": "CE79D5B0-049E-47BB-B347-21F4FBBB727C",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/mcgraw-hill-confirms-data-breach-following-extortion-threat/; https://therecord.media/mcgraw-hill-data-leak-tied-to-salesforce-misconfiguration; https://www.bleepingcomputer.com/news/security/data-breach-at-edtech-giant-mcgraw-hill-affects-135-million-accounts/; https://haveibeenpwned.com/Breach/McGrawHill; https://www.varonis.com/blog/shinyhunters-salesforce-aurainspector-attack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In early April 2026 the ShinyHunters extortion group stole data from education publisher McGraw Hill by abusing a misconfigured Salesforce-hosted webpage (part of ShinyHunters' campaign against misconfigured Salesforce Experience Cloud sites that expose data to unauthenticated guest users). ShinyHunters listed McGraw Hill on its leak site claiming 45 million Salesforce records and threatened to leak them by April 14 unless paid. McGraw Hill confirmed unauthorized access to a limited set of non-sensitive data and said its Salesforce accounts, customer databases and internal systems were not accessed. More than 100 GB was later leaked; Have I Been Pwned counted 13.5 million unique email addresses with names, addresses and phone numbers.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513130",
+    "region": [
+      "019021"
+    ],
+    "state": "OH",
+    "victim_id": "McGraw Hill"
+  }
+}

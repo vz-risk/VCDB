@@ -1,0 +1,143 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 3900000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 3900000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "4FDE2BC6-AC6B-49B6-889F-B730DB402400",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22923\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown used; asset S - Other (multisig governance / smart contracts) and vector Unknown instead of Web application. How the attacker obtained the multisig signing power is not disclosed, so variety Unknown (not Use of stolen creds). Integrity Modify configuration for the unauthorized contract upgrade. Discovery internal Unknown (Unleash announced it).\nIssue has no NAICS tag; issue body says 511210 (now 513210). Coded 523999 since the platform is a DeFi/IP-finance protocol; reviewer may prefer 513210. Country/headcount Unknown. Timeline: Unleash's X post was about Dec 30 2025 -> 2025-12, dbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Multisig admin control gained, unauthorized contract upgrade"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$3.9M withdrawn"
+      }
+    ],
+    "github": "22923",
+    "master_id": "4FDE2BC6-AC6B-49B6-889F-B730DB402400",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/hackers-drain-39m-from-unleash-protocol-after-multisig-hijack/; https://www.radom.com/insights/unleash-protocol-suffers-3-9-million-security-breach-funds-traced-to-controversial-mixer-tornado-cash",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late December 2025 an externally owned address gained enough signing power to act as an administrator of Unleash Protocol's multisig governance and performed an unauthorized smart contract upgrade that enabled withdrawals. The attacker withdrew WIP, USDC, WETH, stIP and vIP worth about $3.9 million, and the funds were later traced to Tornado Cash. Unleash is a platform that tokenizes intellectual property for use in DeFi.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Unleash Protocol"
+  }
+}

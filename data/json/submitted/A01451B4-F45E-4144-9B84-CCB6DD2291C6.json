@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 181160,
+          "variety": "Personal"
+        },
+        {
+          "amount": 181160,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 181160,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A01451B4-F45E-4144-9B84-CCB6DD2291C6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22874\nVictim: National Accident Health General Agency (NAHGA Claims Services), Bridgton, Maine, a third-party administrator of secondary accident and health insurance claims for schools, youth sports, day cares, camps and NCAA athletes. Industry: the issue's NAICS line says 524210 (Insurance Agencies and Brokerages); coded 524292 (Third Party Administration of Insurance and Pension Funds) because NAHGA describes itself as a claims TPA. Reviewer may keep 524210. Employee count 11 to 100: a Lake Region Rotary profile says NAHGA has 'more than forty employees'.\nCoded from the Hacking-ext-unknown template. Deviations: the notice only says an unauthorized party accessed NAHGA's network and may have accessed or acquired files; no web application is mentioned, so asset is S - Unknown and hacking vector Unknown. Variety Unknown per template. Exfiltration not confirmed ('may have accessed or acquired') -> result Infiltrate only. No ransomware or extortion is reported and no group has claimed the attack (teiss, HIPAA Journal). Actor unknown, no monetization signal -> motive Unknown. Hosting not stated -> cloud Unknown.\nTimeline: NAHGA's notice says unusual network activity was learned of on April 10, 2025 and unauthorized activity occurred April 8-11, 2025 (HIPAA Journal says detected April 13, access April 8-10; NAHGA's own notice used). Incident April 8, 2025 -> dbir_year 2026. Discovery 2 days after start. Data review completed October 2025; notices mailed November 14, 2025 (HIPAA Journal says December 5). The PHIDBR2019 label was ignored per the skill.\nDiscovery: NAHGA 'learned of unusual activity within its network' and HIPAA Journal says it identified suspicious network activity -> internal, variety Unknown (deviation from template discovery Unknown).\nData: names, Social Security numbers, dates of birth, driver's license numbers, health insurance information and medical/treatment information of claimants. Coded Personal and Medical. Count 181,160 per the Maine AG filing (issue body and HIPAA Journal agree; teiss notes an initial filing of 5,072 that was later raised). data_disclosure Yes: unauthorized network access is confirmed. Encryption state not stated -> Stored. No misuse reported; data_abuse omitted.\nSources: the bankinfosecurity.com article body could not be fetched (only metadata); its facts come from the issue quote. NAHGA's notice, HIPAA Journal and teiss were used. The BankInfoSecurity keywords mention Episource/UnitedHealth, which relate to other breaches in that article and were not used. Confidence Medium: attack method and actor unknown.",
+    "created": "2026-10-08T16:49:21Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized network access to files with claimant PII/PHI (method not disclosed)"
+      }
+    ],
+    "github": "22874",
+    "master_id": "A01451B4-F45E-4144-9B84-CCB6DD2291C6",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bankinfosecurity.com/youth-sports-ncaa-insurance-claims-potentially-hacked-a-30292; https://www.nahgaclaimservices.com/noticeofincident; https://www.hipaajournal.com/tri-century-eye-care-pittsburgh-gastroenterology-associates-data-breaches/; https://www.teiss.co.uk/news/nahga-claims-services-reports-data-breach-affecting-over-180000-people-16870",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized party accessed the network of National Accident Health General Agency (NAHGA Claims Services), a Bridgton, Maine third-party administrator of accident and health insurance claims for schools, youth sports, day cares and NCAA athletes, between April 8 and April 11, 2025, and may have accessed or taken files. NAHGA detected unusual activity on April 10, 2025. The files held names, Social Security numbers, dates of birth, driver's license numbers, health insurance information and medical or treatment information for 181,160 people, who were notified in November 2025.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 8,
+      "month": 4,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "524292",
+    "region": [
+      "019021"
+    ],
+    "state": "ME",
+    "victim_id": "National Accident Health General Agency (NAHGA Claims Services)"
+  }
+}

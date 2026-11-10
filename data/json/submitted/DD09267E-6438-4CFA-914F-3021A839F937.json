@@ -1,0 +1,133 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - ICS"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "management": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "EUR",
+    "notes": "Two Alsace stores reported combined losses of EUR 270,000; total losses in the millions.",
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "DD09267E-6438-4CFA-914F-3021A839F937",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24437\nVictim: Monoprix (Groupe Casino); named as affected, store count not reported. Industry from issue NAICS 445110.\nSame campaign hit Intermarché/Netto (Les Mousquetaires), Coopérative U, Carrefour, E.Leclerc and Monoprix, which are separate companies and coded as separate incidents (one per victim) from issue 24437. Finance Minister put the total at ~700 of France's ~10,000 supermarkets; Sekoia reportedly said stores in Spain, Portugal, Poland, Germany and Belgium were also hit (no chains named). The Ahold Delhaize (Netherlands/Belgium) outage was stated by the Dutch NCSC to be unrelated.\nPartner angle: Les Mousquetaires said Danfoss manages the refrigeration systems at its stores and Intermarché said a service provider managing in-store refrigeration was affected; management for other chains is not stated. Sources do not say the provider's own systems were breached; the compromises were of internet-exposed Danfoss AK-SM/AK-SC and Copeland/Dixell XWEB controllers across many operators, so the provider-as-victim style was not applied. Reviewer may wish to recode from Danfoss's perspective if that is preferred.\nTemplate Hacking-ext-unknown followed: hacking variety Unknown; vector Web application and asset S - Web application are the template default, supported by the controllers' internet-exposed web management interfaces (Censys/Predicta Lab counted ~2,700-3,000 exposed StoreView panels) but the access method is not confirmed. CVE-2025-41450 (auth bypass) and CVE-2025-41451 (command injection) in Danfoss AK-SM 800A were discussed, but CERT-FR and Danfoss did not tie the attack to them, so Exploit vuln was not coded.\nAssets: refrigeration controllers coded S - ICS with role OT (issue tagged OT Related; the controllers run in-store refrigeration). \nAttributes: integrity Modify configuration (attackers abused the defrost function, lengthening defrost cycles from 1 to up to 8 hours, which delayed alarms); availability Interruption (refrigeration failed; spoiled food, the Paris prosecutor also cited fires). No data was reported accessed or stolen, so no confidentiality attribute was coded even though the issue is labeled Breach; the template's data_disclosure Yes / Data stolen step does not fit this case.\nTimeline: attack began overnight Sunday Oct 11 into Monday Oct 12, 2026 (discovered by staff Monday morning). Discovery coded internal Reported by employee (staff found hot freezers on opening). dbir_year 2027.\nImpact: two Alsace stores reported combined losses of EUR 270,000; nationwide losses estimated in the millions to tens of millions, not totaled. Actor unknown, no claim or ransom demand, so motive Unknown. Paris prosecutor's cybercrime unit is investigating.\nAdditional source: SecurityWeek (CERT-FR alert Oct 12/13, Copeland/Dixell XWEB, ~700 stores). Dark Reading could not be retrieved; it is listed from the issue.",
+    "created": "2026-11-09T23:32:36Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Refrigeration controllers accessed, defrost settings modified"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Refrigeration interrupted, food spoiled"
+      }
+    ],
+    "github": "24437",
+    "master_id": "DD09267E-6438-4CFA-914F-3021A839F937",
+    "modified": "2026-11-09T23:32:36Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bbc.com/news/articles/crq5nzxv9q4yo; https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/; https://hackread.com/hackers-heat-supermarket-fridges-50c-france-cyberattack/; https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/; https://www.darkreading.com/ics-ot-security/eu-grocers-unpatched-fridge-firmware",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Overnight on October 11-12, 2026, unknown attackers took control of internet-exposed refrigeration controllers (older Danfoss AK-SM/AK-SC units and Copeland/Dixell XWEB systems) at French supermarkets and abused the defrost function so fridges and freezers heated up to 50C, spoiling food. Monoprix stores were among about 700 affected nationwide. No data theft or ransom demand was reported.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 11,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Monoprix"
+  }
+}

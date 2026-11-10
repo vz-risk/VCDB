@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "cve": "CVE-2026-7644",
+      "notes": "RCE in a customer-deployed NextChat v2.16.1 instance on Zeabur's shared cluster (CVE-2026-7644, MCP authorization flaw); attacker pivoted over the shared-cluster internal network to a routing cache holding Legacy API keys, used a team admin key to read AWS keys (incl. a long-lived root key), granted cluster-admin to a service account and used an over-privileged maintenance DB credential to read the production database.",
+      "result": [
+        "Infiltrate",
+        "Elevate",
+        "Lateral movement",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln",
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application",
+        "Inter-tenant"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "API key"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify privileges"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "815867CD-6EE7-4B41-9D0D-7600E9BEE869",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24577\nScope: #24577 is about Zeabur's October 2026 breach but explicitly cites the prior August 2026 breach as a separate event; this record codes the August incident (distinct entry vector, date and credentials). The October incident is a separate record also closing #24577. Reviewer may drop this record if only the headline incident is wanted.\nTemplate Hacking-ext-unknown, deviated because Zeabur's incident report (Sept 7, 2026) gives the method: hacking variety Exploit vuln (CVE-2026-7644, NextChat v2.16.1 MCP authorization flaw giving RCE) plus Use of stolen creds (Zeabur legacy API keys, AWS root key, over-privileged maintenance DB credential). Vector Web application (the exposed NextChat app) and Inter-tenant: the vulnerable app belonged to a customer tenant on Zeabur's shared cluster and the attacker pivoted from that tenant's container into platform internals; reviewer may reduce to Web application only. Integrity Modify privileges (attacker granted cluster-admin to a service account). Attacker also created AI Hub access keys (revoked, no use found) - not separately coded.\nAssets: S - Web application (NextChat instance), S - Database (production DB), S - Other (routing cache, internal management service, Tokyo shared Kubernetes cluster). Hosted on AWS -> External Cloud Asset(s).\nData: account and AI Hub account information (Personal); project environment variable names/values incl. AI service API keys, cloud credentials, DB passwords, app signing keys (Credentials, API key). No counts published for August. data_victim Customer. State Stored (encryption not stated).\nDiscovery: Zeabur confirmed the incident only after an external report of abusive API key use (Aug 28 02:34 UTC, ~24h after first API requests Aug 27 02:34) -> external, reporter not identified -> Unknown. Abusive API key use -> data_abuse Yes and motive Financial (use of stolen API keys); reviewer may prefer Unknown motive. Actor unidentified, single origin.\nTimeline: Aug 27, 2026 start; dbir_year 2027. Containment date not stated.\nVictim: Zeabur (Taiwan), 7 employees per Cybernews -> 1 to 10. NAICS changed from 5112 to 518210 because Zeabur is a cloud hosting/deployment platform, not a software publisher.\nConfidence High: victim's own detailed report plus BleepingComputer/Cybernews.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2026-11-05T22:18:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploit vuln in customer NextChat app (CVE-2026-7644)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds; privilege escalation to cluster-admin"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Production DB and env vars read"
+      }
+    ],
+    "github": "24577",
+    "master_id": "815867CD-6EE7-4B41-9D0D-7600E9BEE869",
+    "modified": "2026-11-05T22:18:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://zeabur.com/es-ES/blogs/august-2026-security-incident; https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/; https://cybernews.com/news/zeabur-cloud-provider-shutdown-two-breaches-3-million-records/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 27, 2026 an unidentified attacker exploited a remote code execution flaw (CVE-2026-7644) in a customer-deployed NextChat instance on Zeabur's shared hosting cluster, moved over the poorly isolated internal network to a cache holding Zeabur legacy API keys, used a team administrator key to obtain AWS keys including a long-lived root key, granted itself cluster-admin, and read Zeabur's production database, exposing account information and customers' project environment variables (third-party API keys, cloud credentials, database passwords). Zeabur learned of it on August 28 from a report of abusive API key use. A second breach followed in October 2026 and Zeabur announced its shutdown.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 27,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Zeabur"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse",
+        "Data mishandling",
+        "Email misuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Let go"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 732,
+          "variety": "Payment"
+        },
+        {
+          "amount": 732,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 732,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored",
+        "Transmitted encrypted",
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0E5DC770-7D87-445A-988F-F108C22589D2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22634\nThis is the incident in the issue's original body (October 2025 reporting). The July 2026 Kraken/Accenture breach added in later comments is coded as a separate record under the same issue.\nTemplate Misuse-int-privabuse used (the issue's Misuse-prt-privabuse tag fits the 2026 incident; for this one the sources call the actor a former Origin employee, so internal).\nActor: internal, variety Unknown (role not stated). job_change Let go: the send attempt happened on the day the employee was terminated. Motive Unknown: Origin says no ransom demand was received and the employee was not charged.\nAction: Privilege abuse (collecting customer card data over almost two years), Data mishandling and Email misuse (emailing the file to a personal address). Vector LAN access per template; not stated in sources.\nData: 732 customers' credit and debit card details (Payment, with parent Personal). Origin says the file was encrypted and there is no evidence it was successfully accessed or shared outside Origin; the former employee signed a statutory declaration that it was deleted. data_disclosure coded Yes because the insider compiled and possessed the card data outside any business need; a reviewer may prefer Potentially given the encryption and the declaration. State Stored plus Transmitted encrypted for the emailed file.\nTimeline: Cyber Daily says the data was collected from 12 October 2023 to 30 July 2025, so incident begin 2023-10-12 and dbir_year 2024. Discovery around the July 2025 termination (under two years, coded 1 year). How Origin discovered it is not stated, so internal Unknown (the timing suggests offboarding, but no source says so).\nVictim: Origin Energy, Australian electricity and gas retailer. NAICS 2211 from the issue. About 5,000 employees (approximate, company reporting) -> 1001 to 10000.\nAsset: system holding the card data not named (S - Unknown); S - Mail for the email attempt.",
+    "created": "2026-11-09T19:26:29Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse: card data collected and emailed to personal address"
+      }
+    ],
+    "github": "22634",
+    "master_id": "0E5DC770-7D87-445A-988F-F108C22589D2",
+    "modified": "2026-11-09T19:26:29Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://ia.acs.org.au/article/2025/origin-energy-confirms-data-breach-involving-credit-cards.html; https://www.cyberdaily.au/security/12817-origin-confirms-data-breach-after-former-staffer-allegedly-exfiltrated-over-700-individuals-details; https://www.capitalbrief.com/briefing/origin-energy-confirms-data-breach-1ba884e6-da42-42b6-9f1b-a9fd193df684/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An Origin Energy employee collected credit and debit card details of 732 customers between October 12, 2023 and July 30, 2025 and, on the day they were terminated (July 30, 2025), attempted to email an encrypted file containing the data to their personal email address. Origin said there was no evidence the file was accessed or shared outside Origin, the former employee signed a statutory declaration that the file was deleted, and no ransom demand was received. Origin notified affected customers and the OAIC in October 2025.",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 1
+    },
+    "incident": {
+      "day": 12,
+      "month": 10,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "2211",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Origin Energy"
+  }
+}

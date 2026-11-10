@@ -1,0 +1,143 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "laserscript"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 670000,
+          "variety": "Other"
+        },
+        {
+          "amount": 8400,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 670000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "D3D89B9B-394A-4181-9896-3C934BAAC7F3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23679\nVictim: Teletrac Navman, US-headquartered fleet telematics/GPS tracking SaaS provider. Industry 541512 from the issue. About 605 employees per Revelio Labs (third-party estimate, inferred) -> 101 to 1000. US state not coded (Revelio lists Northbrook, IL; not confirmed by news sources).\nProvider rule applied: the alleged data covers 2,988 customer organizations in Australia and New Zealand, so Teletrac Navman is the primary victim and named customers are in victim.secondary (amount 2,988). NAICS on secondary victims added where clear; Veolia, Lindsay and Rentco left without NAICS.\nUnverified claim: forum user 'laserscript' posted on July 4, 2026 offering the data for sale with a 1,500-line sample. Teletrac Navman did not respond to Cyber Daily or Information Age; OAIC neither confirmed nor denied a notification. security_incident Suspected and data_disclosure Potentially for that reason; confidence Low. Reviewer should update if Teletrac Navman confirms.\nTemplate: Hacking-ext-unknown. Deviations: the seller says the data was 'captured from a production broker' over a 48-hour window (June 27-28, 2026), i.e. a telemetry message broker, not a web application -> asset S - Other, hacking vector Unknown, variety Unknown (attacker-sourced, not victim-confirmed). Because the data was real-time telemetry captured as it flowed through the broker, state coded Transmitted (encryption not stated).\nActor: name laserscript, variety Unknown (no information on the actor), motive Financial (data listed for sale, buyers asked to make contact). data_abuse not coded: sale listing only, no confirmed purchase or misuse; reviewer may choose 'Yes'.\nData (attacker-claimed): 670,000+ unique GPS position records and vehicle registration/VIN/make/model for 30,000+ vehicles (Other, amount 670,000), and personal data of ~8,400 drivers incl. 6,100+ emails, 3,200+ mobile numbers, 1,200+ driver licence numbers (Personal, amount 8,400). data_total 670,000 matches the issue's record count (position records, not people). data_victim Customer (customer organizations' drivers/vehicles).\nTimeline: incident 2026-06-27 (start of the claimed capture window); discovery via forum post July 4, 2026 (7 days) -> external Actor disclosure. dbir_year 2027.\nSources: issue Source (Information Age / ACS) is about this victim and was used; added Cyber Daily for post date, capture window and broker detail.",
+    "created": "2026-10-08T16:49:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to production telemetry broker; method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "48 hours of fleet telemetry and driver data captured, offered for sale"
+      }
+    ],
+    "github": "23679",
+    "master_id": "D3D89B9B-394A-4181-9896-3C934BAAC7F3",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://ia.acs.org.au/article/2026/teletrac-navman-gps-data-advertised-on-hacking-forum.html; https://www.cyberdaily.au/security/13865-exclusive-client-gps-data-potentially-exposed-in-alleged-teletrac-navman-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A hacking-forum user called 'laserscript' claimed on July 4, 2026 to be selling 7.7GB of fleet telematics data taken from Teletrac Navman, captured from a production broker over 48 hours on June 27-28, 2026. The claimed data covers 2,988 organizations in Australia and New Zealand, including KiwiRail, Gold Coast City Council, BHP and Aldi, with 670,000+ GPS position records, details of 30,000+ vehicles and personal data of about 8,400 drivers. Teletrac Navman had not confirmed the breach.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 7
+    },
+    "incident": {
+      "day": 27,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 2988,
+      "victim_id": [
+        "KiwiRail;482111",
+        "Gold Coast City Council;921140",
+        "Pacific National;482111",
+        "Veolia",
+        "BHP Newman Operations;212210",
+        "Aldi Stores Australia;445110",
+        "Lindsay",
+        "Rentco"
+      ]
+    },
+    "victim_id": "Teletrac Navman"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "Developer"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "In-person",
+        "IM"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "UNC4736",
+        "AppleJeus",
+        "Citrine Sleet"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Developer"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "U - Unknown"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Incident response"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 285000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 285000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9B9E2466-F1C0-4430-A115-1980A424252E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23185\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template tag is Social-ext-Phish, but the sources describe a long pretext (fake trading firm, in-person conference meetings, Telegram), not phishing email, so Social variety Pretexting with vectors In-person and IM; target Developer/contributors. Malware is coded with variety Unknown because Drift suspects a shared code repository and a TestFlight app infected contributor devices (not confirmed, no family named). The final drain step is coded hacking Unknown: The Hacker News' earlier headline mentions 'durable nonce' transactions, but the article read gives no detail.\nActor: Drift attributes with medium confidence to DPRK UNC4736 (AppleJeus, Citrine Sleet, Golden Chollima) -> Nation-state KP, Financial.\nData/impact: $285M -> Virtual currency, impact. Asset S - Other = protocol contracts/vaults on Solana.\nTimeline: operation began fall 2025 (month not given) -> incident year 2025 only; theft April 1 2026 -> compromise about 6 months. dbir_year 2027 is derived from the theft date (the later, precise anchor) since 'fall 2025' could fall either side of the Nov 1 cutoff.\nDiscovery: internal Incident response (Drift's device review traced it back to the trading group). Victim country/headcount Unknown; NAICS 523999 from the issue.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretext as quant trading firm builds trust with contributors"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Contributor devices likely infected via shared repo/app"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "unk",
+        "summary": "Steps to obtain control not documented"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "$285M drained from protocol"
+      }
+    ],
+    "github": "23185",
+    "master_id": "9B9E2466-F1C0-4430-A115-1980A424252E",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehackernews.com/2026/04/285-million-drift-hack-traced-to-six.html; https://thehackernews.com/2026/04/drift-loses-285-million-in-durable.html; https://therecord.media/drift-crypto-theft-post-mortem-north-korea",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 1, 2026 Solana-based decentralized exchange Drift lost about $285 million in a theft that Drift says capped a six-month social engineering operation by North Korea-linked UNC4736 (AppleJeus/Citrine Sleet). Starting in fall 2025, operatives posing as a quantitative trading firm met Drift contributors at conferences, built a relationship over Telegram, deposited $1 million and discussed vault integrations. Drift believes contributors' devices were compromised through a shared code repository and a possibly malicious TestFlight app, leading to the theft.",
+  "timeline": {
+    "compromise": {
+      "unit": "Months",
+      "value": 6
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Drift Protocol"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Abuse of functionality",
+        "Exploit vuln",
+        "Forced browsing"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 14640000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 4130000,
+          "variety": "Credentials"
+        },
+        {
+          "amount": 17780,
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 14640000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "4E539F0C-8EC8-4D95-890B-84FB7F196585",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24438\nCloses https://github.com/vz-risk/VCDB/issues/24463\nMerge: #24438 (Japan Times) and #24463 (NHK World) describe the same Adventure, Inc. / skyticket disclosure of October 9, 2026; one record. #24439 (same Japan Times article, titled H.I.S.) is coded separately as the H.I.S. Thai-subsidiary breach, and #24440 (Temairazu) is a separate company and incident.\nScope: Adventure disclosed three unauthorized-access events together (ITmedia @IT, Oct 13): (1) Oct 2-4, 2026, attackers manipulated some skyticket administrative functions and from there reached data on other servers and in cloud storage, ~14.64M customer records (names incl. romanized, DOB, email, phone, address, transfer names), ~4.13M with hashed member passwords; discovered Oct 5. (2) Sept 20, 2026, a vulnerability in the business management system was exploited; 17,780 records (with duplicates) incl. names, phones and refund bank account details; discovered Sept 28. (3) Aug 3 - Oct 1, 2026, bus booking-completion pages were viewable without login and were accessed automatically by third parties; ~12,000 bookings. Coded as one record because the company disclosed them as one incident; reviewer may prefer to split (different vectors and dates; no source says the same actor was behind all three).\nTemplate Hacking-ext-unknown deviations: hacking variety coded from sources instead of Unknown - Abuse of functionality (admin functions manipulated, route 1), Exploit vuln (business management system, route 2; vulnerability not named), Forced browsing (unauthenticated booking pages harvested, route 3). Result Infiltrate only: sources say data 'may have been' leaked/viewed; no explicit exfiltration statement. data_disclosure Yes because unauthorized access to the data stores is confirmed.\nData: Personal 14,640,000 (Japan Times/issue figure; NHK says 14.6M, ITmedia Business 14.67M); Credentials 4,130,000 hashed passwords; Bank 17,780 refund account records. data_total 14,640,000 (overlap between the three sets not disclosed). Card numbers held by a payment processor, not leaked; passport numbers not leaked. Assets: S - Web application plus S - Unknown (other servers; type not stated); cloud External Cloud Asset(s) because cloud storage is named (hosting of the servers themselves not stated).\nOne member account was logged into without authorization (linked to route 2); no other misuse confirmed, so data_abuse not coded.\nTimeline: incident begin Aug 3, 2026 (earliest of the three routes); main route discovered Oct 5 (~2 months after begin). Discovery method not stated -> unknown. dbir_year 2027.\nActor External, variety/motive/country Unknown (no actor or demand reported).\nNAICS: #24463 body gave 561520 (Tour Operators) and #24438 gave 5615; changed to 561510 (Travel Agencies) because skyticket is an online travel agency/booking site.\nEmployee count 101 to 1000 is approximate (Adventure, Inc., TSE 6030, consolidated headcount in the low hundreds); unverified - reviewer please confirm.\nSources: Japan Times and NHK links were not accessible (not read directly); facts taken from the issue bodies, ITmedia @IT (Oct 13, 2026) and ITmedia Business (Oct 31, 2026).\nConfidence Medium: action/asset/attribute are sourced but actor is unknown and the three events may be separate incidents.",
+    "created": "2026-11-05T22:19:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Forced browsing of unauthenticated bus booking pages"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Business management system vuln exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Admin functions abused"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer data accessed on servers and cloud storage"
+      }
+    ],
+    "github": "24438",
+    "master_id": "4E539F0C-8EC8-4D95-890B-84FB7F196585",
+    "modified": "2026-11-05T22:19:07Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.japantimes.co.jp/business/2026/10/09/tech/travel-companies-data-breach/; https://www3.nhk.or.jp/nhkworld/news/20261009de57465/; https://atmarkit.itmedia.co.jp/ait/articles/2610/13/news037.html; https://www.itmedia.co.jp/business/spv/2610/31/news017.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Adventure, Inc., operator of the Japanese online travel booking site skyticket, disclosed on October 9, 2026 three unauthorized-access incidents: attackers manipulated skyticket administrative functions on October 2-4 and reached data on other servers and cloud storage (about 14.64 million customer records, about 4.13 million with hashed passwords); a vulnerability in the business management system was exploited on September 20 (17,780 records including refund bank account details); and bus booking-completion pages were viewable without login and harvested automatically from August 3 to October 1 (about 12,000 bookings). Card numbers and passport numbers were not leaked.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 2
+    },
+    "incident": {
+      "day": 3,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561510",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Adventure, Inc. (skyticket)"
+  }
+}

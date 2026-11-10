@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 8300000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 8300000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "7ECAA9D2-E12B-4F4D-B8D5-518A189076DD",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22126\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag; coded as hacking Exploit vuln (logic flaw in self-listing verification), vector Other, asset S - Other (smart contracts/pools), cloud Other. Liquidity-pool funds belonged to users (who are being reimbursed) -> data_victim Customer. The prior May 2024 ALEX bridge hack was linked to Lazarus, but no actor is named for this one -> Unknown. Impact $8.3M. No NAICS tag; 523999 used. Country/headcount Unknown. Single source. dbir_year 2026.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Self-listing verification logic bypassed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Liquidity pools drained of $8.3M"
+      }
+    ],
+    "github": "22126",
+    "master_id": "7ECAA9D2-E12B-4F4D-B8D5-518A189076DD",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.analyticsinsight.net/news/alex-protocol-hacked-again-83-million-stolen-in-defi-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 6, 2025 attackers bypassed a flaw in the self-listing verification logic of Bitcoin-based DeFi platform ALEX Protocol and drained several liquidity pools of about $8.3 million (8.4M STX, 21.85 sBTC, 149,850 USDC/USDT and 2.8 WBTC). It was ALEX's second major hack in just over a year. The ALEX Lab Foundation committed to reimburse affected users in USDC from its treasury.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 6,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "ALEX Lab Foundation (ALEX Protocol)"
+  }
+}

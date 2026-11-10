@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "name": [
+        "Gonjeshke Darande",
+        "Predatory Sparrow"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      },
+      {
+        "variety": "S - Code repository"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Destruction",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Source code"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 90000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 90000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "700B5705-A2FB-4602-B897-8F6081490127",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22177\nTemplate Hacking-ext-unknown used; asset S - Other (hot wallets) and vector Unknown. Actor: Gonjeshke Darande / Predatory Sparrow claimed the attack -> external, motive Ideology (political, funds burned rather than taken). Variety State-affiliated is a judgment: the group is widely reported as linked to Israel but the sources read call it only 'pro-Israel'; reviewer may change to Activist. Country Unknown.\nData: >$90M crypto -> Virtual currency (data_victim includes Customer, exchange-held funds); source code claimed and threatened for release -> Source code (the group did post it per later reports; not confirmed in the sources read). Availability Destruction (funds sent to unspendable vanity addresses) and Interruption (exchange offline). Discovery external Actor disclosure. Impact $90M.\nVictim: Nobitex, IR; NAICS 523150 (no NAICS tag on issue); headcount Unknown. dbir_year 2026.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Hot wallets drained / source code taken"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Funds burned to vanity addresses, exchange offline"
+      }
+    ],
+    "github": "22177",
+    "master_id": "700B5705-A2FB-4602-B897-8F6081490127",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cnbc.com/2025/06/18/pro-israel-hackers-iran-crypto.html; https://www.elliptic.co/blog/iranian-crypto-exchange-nobitex-hacked-pro-israel-group",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 18, 2025 pro-Israel hacking group Gonjeshke Darande (Predatory Sparrow) hacked Nobitex, Iran's largest cryptocurrency exchange, draining more than $90 million from its hot wallets into vanity addresses bearing anti-IRGC messages, effectively burning the funds. The group said it would publish Nobitex's source code and claimed the attack was retaliation for the exchange's role in sanctions evasion and terror financing; it had claimed an attack on Bank Sepah the day before. Nobitex's website went offline.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 18,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Nobitex"
+  }
+}

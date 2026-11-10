@@ -1,0 +1,149 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Unknown"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 40000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 40000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "4ABA26D2-59ED-4AC1-A093-57A40D1C1BC7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23017\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown used. Asset changed to U - Unknown (executives' devices, type not given) plus S - Other (treasury wallets/validator stake on Solana). Action kept as hacking Unknown: Step says only 'a well-known attack vector' compromised execs' devices; secondary write-ups suggest phishing but Step has not said so, so no social/malware action is coded. Credentials coded because control of treasury keys was obtained via the devices.\nData/impact: Step's figure $40M used for impact (CertiK estimate $27-29M). Discovery internal Unknown (Step detected and announced it). Victim country/headcount Unknown. dbir_year 2027. Issue was labeled Needs Details; BleepingComputer added for the device-compromise detail.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "unk",
+        "summary": "Executives' devices compromised, vector not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Treasury SOL unstaked and transferred"
+      }
+    ],
+    "github": "23017",
+    "master_id": "4ABA26D2-59ED-4AC1-A093-57A40D1C1BC7",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.coindesk.com/business/2026/01/31/solana-based-defi-platform-step-finance-hit-by-usd30-million-treasury-hack-as-token-price-craters; https://finance.yahoo.com/news/30m-stolen-step-finance-treasury-082939652.html; https://www.bleepingcomputer.com/news/security/step-finance-says-compromised-execs-devices-led-to-40m-crypto-theft/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 31, 2026 Solana DeFi portfolio tracker Step Finance said some of its treasury wallets were compromised after attackers compromised devices belonging to its executives through 'a well-known attack vector'. CertiK saw 261,854 SOL (about $27-29 million) unstaked and transferred; Step's own investigation later put losses at about $40 million, of which about $4.7 million was recovered. Step Finance later ceased operations.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 31,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Step Finance"
+  }
+}

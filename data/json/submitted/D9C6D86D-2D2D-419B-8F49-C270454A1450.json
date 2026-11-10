@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "D9C6D86D-2D2D-419B-8F49-C270454A1450",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20820\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag; coded as Hacking-ext-unknown with S - Unknown/vector Unknown. Actor: CEO says the evidence points to a North Korea-linked group -> Nation-state KP (victim's own attribution). Data: 1,590 in-app wallets (their keys) -> Credentials (1,590 is a wallet count, so no amount/data_total); drained funds -> Virtual currency (amount stolen not disclosed). Availability Interruption (app shut down). Victim country/headcount Unknown; NAICS 513210 (app publisher). dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "1,590 in-app wallets compromised"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "App shut down"
+      }
+    ],
+    "github": "20820",
+    "master_id": "D9C6D86D-2D2D-419B-8F49-C270454A1450",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://news.bitcoin.com/crypto-portfolio-tracker-coinstats-confirms-security-breach-temporarily-shuts-down-app/; https://finance.yahoo.com/news/coinstats-suspends-user-activity-following-062922958.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 22, 2024 crypto portfolio tracker CoinStats was breached and about 1,590 wallets created within the app (about 1.3% of CoinStats wallets) were affected; connected wallets and exchange accounts were not. CEO Narek Gevorgyan said evidence pointed to a group with North Korean connections. CoinStats shut down the app and told affected users to move funds using their exported private keys.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 22,
+      "month": 6,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "CoinStats"
+  }
+}

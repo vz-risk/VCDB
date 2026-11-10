@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 26000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 26000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "2CDB399B-40F8-4C8D-865F-939BCFB5FBFC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20164\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Hacking Use of stolen creds: API keys accessed and used to move funds (how the keys were obtained is not stated). Data: API key + parent Credentials; ~$26M -> Virtual currency. Availability Interruption (trading halted). Victim TW, NAICS 523150 (market maker), headcount Unknown. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "API keys obtained, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$26M moved with stolen API keys"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Trading halted"
+      }
+    ],
+    "github": "20164",
+    "master_id": "2CDB399B-40F8-4C8D-865F-939BCFB5FBFC",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.newsbtc.com/news/kronos-research-halts-operations-after-losing-26-million-in-security-breach/; https://cryptopotato.com/kronos-research-reports-25-million-loss-in-security-breach/; https://www.cryptotimes.io/kronos-research-confirms-losing-26m-in-security-breach/; https://therecord.media/crypto-firm-kronos-research-26-million-stolen-cyberattack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 18-19, 2023 Taipei-based market maker and trading firm Kronos Research suffered unauthorized access to its API keys, losing about $26 million in crypto assets (mostly Ether). Kronos halted all trading and said it would cover the losses internally; exchange WOO X, for which Kronos makes markets, temporarily paused trading.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 18,
+      "month": 11,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Kronos Research"
+  }
+}

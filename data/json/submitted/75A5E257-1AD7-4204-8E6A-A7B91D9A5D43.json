@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "ByteToBreach"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "75A5E257-1AD7-4204-8E6A-A7B91D9A5D43",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24526\nPHIDBR2019 label ignored per project rule. The issue-linked MyBroadband URL could not be fetched; facts are from TechCentral (Oct 14, 2026), which reports Ampath's own POPIA notice and statement.\nTemplate Hacking-ext-unknown with one deviation: hacking variety Exploit vuln instead of Unknown, because Ampath's remediation list includes 'fixing a vulnerability in application functionality' and restoring the affected web server; vector Web application and asset S - Web application as in the template. Ampath also removed 'unauthorised files' and disabled compromised accounts; no malware or credential abuse coded because the source does not say what those were.\nActor ByteToBreach (claimed on a forum). KELA assesses it as likely an individual based in Algeria, active since June 2025; variety, motive and country left Unknown because that is an assessment and no ransom/sale is reported. Reviewer may set Unaffiliated / DZ.\nData: names, ID numbers, DOB, sex, language, addresses, emails, mobile numbers (Personal); medical aid scheme/membership details (Medical); payer names, amounts and transaction times (payment-related, not card or bank data, so Payment/Bank not coded). Ampath denies results/diagnoses were taken. The 80 million figure is the attacker's count of rows in an admissions table (10 of ~375 databases claimed copied); Ampath says rows are not individuals, so no amount or data_total coded. Issue title's '80 million patient records' is therefore overstated.\nDiscovery method not stated -> unknown. Date Oct 2, 2026 per Ampath -> dbir_year 2027. NAICS 621511 (Medical Laboratories) refines the issue's 6215. Employee count 1001 to 10000 is an unverified estimate of Ampath's size (large national lab network) (unverified).",
+    "created": "2026-11-05T22:19:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exploit vuln in web application functionality"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient admission and medical aid data exfiltrated"
+      }
+    ],
+    "github": "24526",
+    "master_id": "75A5E257-1AD7-4204-8E6A-A7B91D9A5D43",
+    "modified": "2026-11-05T22:19:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://mybroadband.co.za/news/security/672153-attackers-claim-to-have-stolen-80-million-south-african-patient-records-in-massive-ampath-laboratories-data-breach.html; https://techcentral.co.za/ampath-breach-no-evidence-test-results-taken/287314/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ampath, a South African pathology laboratory group, suffered a cyberattack on October 2, 2026 in which a threat actor calling itself ByteToBreach accessed a web server and exfiltrated patient data. ByteToBreach claimed an admissions table of over 80 million records; Ampath says that figure counts database entries, not individuals. Exposed data may include names, ID numbers, dates of birth, contact details, addresses, medical aid details and payment-related information; Ampath says there is no evidence medical records, diagnoses, pathology results or banking information were taken. Ampath fixed an application vulnerability, disabled compromised accounts, restored the server from backup and notified the Information Regulator.",
+  "timeline": {
+    "incident": {
+      "day": 2,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ZA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621511",
+    "region": [
+      "002018"
+    ],
+    "victim_id": "Ampath Laboratories"
+  }
+}

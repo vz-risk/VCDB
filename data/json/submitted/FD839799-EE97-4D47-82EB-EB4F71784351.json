@@ -1,0 +1,152 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Call center",
+        "Customer"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Call center"
+      },
+      {
+        "variety": "P - Customer"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "FD839799-EE97-4D47-82EB-EB4F71784351",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20072\nIssue tagged Social; coded social Phishing of the support agent (target Call center; vector not stated) and follow-on phishing of customers (target Customer), with hacking Use of stolen creds for the attacker's use of the agent's support-tool access (inferred: the agent was phished and the attacker then had the agent's access; reviewer may drop if judged duplicative). Data: partial customer info from tickets -> Personal (no count). Motive Financial (customer phishing to steal funds; no loss reported). Victim: Bitfinex (iFinex Inc.; founded in Hong Kong, registered BVI) -> country Unknown; NAICS 523150; headcount Unknown. dbir_year 2024.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Support agent phished"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Help desk tickets/customer info accessed"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Customers targeted with follow-on phishing"
+      }
+    ],
+    "github": "20072",
+    "master_id": "FD839799-EE97-4D47-82EB-EB4F71784351",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cryptopolitan.com/bitfinex-users-phishing-attack-employee-hack/; https://crypto.news/bitfinex-suffers-phishing-attack-says-there-is-no-loss-of-funds/; https://cryptonews.com/news/bitfinex-customers-targeted-in-phishing-attacks-after-support-agent-hack.htm",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between October 30 and November 5, 2023 an attacker phished a Bitfinex customer support agent, gaining the agent's limited access to support tools and help desk tickets. Several customers were then targeted by follow-on phishing attacks. Bitfinex called it a minor incident, said passwords were not accessible, customer assets were never at risk and its systems were not compromised, and reported it to law enforcement.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 30,
+      "month": 10,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Bitfinex (iFinex Inc.)"
+  }
+}

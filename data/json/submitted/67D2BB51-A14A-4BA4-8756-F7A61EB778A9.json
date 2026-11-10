@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "67D2BB51-A14A-4BA4-8756-F7A61EB778A9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24642\nIssue data wrong: the issue's only source (hipaajournal.com/denver-health-medical-plan-data-breach) is about Denver Health Medical Plan's vendor breach (238K members), a different incident; its record count 238,083 also belongs to that incident. Both dropped. BASS source used instead: ClaimDepot summary of the BASS notice/CA AG filing. The CA AG preliminary notice letter (https://oag.ca.gov/system/files/BASS%20-%20Preliminary%20Regulatory%20Notice%20Letter%20-%20CA_0.pdf) and ClassAction.org notice PDFs were found by search but could not be retrieved, so they are not cited in reference; reviewer should confirm details against the CA AG letter and add it.\nTemplate Hacking-ext-unknown: hacking variety Unknown, actor external Unknown/Unknown kept. Deviations: vector Unknown and asset S - Unknown instead of Web application, because the notice only says 'suspicious activity within its network environment'. Hosting unknown.\nPossible attribution (not coded): SOCRadar's ransomware-intelligence tracker lists 'BASS Medical Group' as a victim of the 'Booba Project' (Booba) group, which has hit other US medical practices in 2026. The listing could not be opened and the notice says nothing about ransomware or a group, so actor name, malware and extortion are not coded; reviewer may wish to check and add.\nData: medical treatment codes or billing information and health insurance information (Medical, with parent Personal). ClaimDepot's icon list also shows SSN, DOB, government ID and financial info but the page says types are not yet disclosed; not coded. Issue's 'Financial' data type is billing information, coded within Medical. Count not published -> no amounts/data_total. data_disclosure Yes: forensic experts determined data was accessed or acquired (notice wording 'may have been'; reviewer may prefer Potentially).\nTimeline: access start not disclosed; suspicious activity found ~Sept 4, 2026 -> incident coded 2026-09 (on or before discovery); discovery internal, method Unknown; determination Sept 22; notices from Oct 22. dbir_year 2027.\nVictim: BASS Medical Group, Walnut Creek, CA. NAICS refined from 6211 to 621111 (Offices of Physicians). Employees: Built In SF lists 1,001 employees (Walnut Creek HQ) -> 1001 to 10000 (at the bucket boundary; reviewer may prefer 101 to 1000).\nConfidence Medium: action, asset and actor details unknown; single summary-site source read.",
+    "created": "2026-11-05T22:18:24Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "PHI accessed or acquired"
+      }
+    ],
+    "github": "24642",
+    "master_id": "67D2BB51-A14A-4BA4-8756-F7A61EB778A9",
+    "modified": "2026-11-05T22:18:24Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/bass-medical-group-2026; https://www.builtinsf.com/company/bass-medical-group",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "BASS Medical Group, a multispecialty physician group in the San Francisco Bay Area (Walnut Creek, CA), identified suspicious activity in its network environment on or about September 4, 2026. Outside cybersecurity experts determined on September 22, 2026 that an unauthorized party may have accessed or acquired patients' personal and protected health information, including medical treatment codes or billing information and health insurance information. Notifications and a California AG filing began October 22, 2026; the number of affected individuals has not been published.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "BASS Medical Group"
+  }
+}

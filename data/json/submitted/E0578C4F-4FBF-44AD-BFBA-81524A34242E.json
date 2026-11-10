@@ -1,0 +1,99 @@
+{
+  "action": {
+    "unknown": {
+      "notes": "HHS breach type Unauthorized Access/Disclosure (Electronic Medical Record, Network Server); no details published."
+    }
+  },
+  "actor": {
+    "unknown": {
+      "notes": "No details published."
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 854,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 854,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E0578C4F-4FBF-44AD-BFBA-81524A34242E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Source: HHS OCR breach portal row (OU Medicine, Inc.; OK; Healthcare Provider; 854; submitted 2026-09-18; Unauthorized Access/Disclosure; Electronic Medical Record, Network Server; BA present: No). Related issue #21753 not closed by this record.\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIncident date: no source gives the access or discovery date; coded the year of the HHS submission (2026-09-18).\nNo public source beyond the HHS portal (and breach-tracker pages that restate it) was found; action, actor and data details are Unknown except what HHS states.\nOnly the year is known for the incident; dbir_year 2027.\nEmployee count: not looked up -> Unknown.\nIndustry 622110 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access or disclosure"
+      }
+    ],
+    "master_id": "E0578C4F-4FBF-44AD-BFBA-81524A34242E",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "OU Medicine, Inc. (OK), a healthcare provider, reported a unauthorized access/disclosure involving its electronic medical record, network server to the HHS Office for Civil Rights on 2026-09-18, affecting 854 individuals. No further details were published.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "OK",
+    "victim_id": "OU Medicine, Inc."
+  }
+}

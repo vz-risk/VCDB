@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 7900000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 7900000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "5C385E1D-1010-4F00-9625-0C61A87834CC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21707\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Coded Exploit vuln ('an exploit involving NoOnes' Solana bridge'), vector Other, asset S - Other (bridge), cloud Other. User funds reportedly safe -> data_victim Victim organization. Discovery external Security researcher (ZachXBT disclosed it before NoOnes did). Impact $7.9M. NAICS 523999 (no tag); country/headcount Unknown. Single source. dbir_year 2026.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Solana bridge exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "$7.9M withdrawn in small transfers"
+      }
+    ],
+    "github": "21707",
+    "master_id": "5C385E1D-1010-4F00-9625-0C61A87834CC",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.crowdfundinsider.com/2025/01/235625-crypto-platform-noones-ceo-confirms-8m-hack-several-weeks-after-security-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 1, 2025 attackers exploited NoOnes' Solana bridge to make hundreds of small (about $7,000) unauthorized withdrawals over two days across Ethereum, Tron, Solana and BNB Smart Chain, stealing about $7.9-8 million; the funds were mixed through Tornado Cash. ZachXBT disclosed the breach and CEO Ray Youssef later confirmed it. NoOnes, a peer-to-peer crypto trading platform, disabled its Solana bridge.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 1,
+      "month": 1,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "NoOnes"
+  }
+}

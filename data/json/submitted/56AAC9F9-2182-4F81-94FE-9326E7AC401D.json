@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 58000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 58000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "56AAC9F9-2182-4F81-94FE-9326E7AC401D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21482\nPartner_Breach tag noted but the provider rule was NOT applied: GitLab (the company) was not breached; the attacker exploited a vulnerability in GitLab software that Byte Federal ran, so Byte Federal is the primary victim (same reasoning as the Oracle PeopleSoft/Nottingham record).\nCoded hacking Exploit vuln via Web application, assets S - Code repository (GitLab) and S - Web application. Data: names, addresses, phones, emails, DOB, government IDs, SSNs, photos -> Personal (58,000 = data_total), Sensitive Personal (customer photographs/biometric-style images; reviewer may drop), transaction activity -> Bank. data_disclosure Potentially: the notice says the party 'may have had access' to the data. Motive Unknown.\nDiscovery internal Unknown (Byte Federal 'learned of' it Nov 18). Timeline: breach Sept 30 2024, discovered Nov 18 -> discovery 7 weeks. Victim NAICS 522320, Florida; headcount Unknown. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "GitLab vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer data accessed"
+      }
+    ],
+    "github": "21482",
+    "master_id": "56AAC9F9-2182-4F81-94FE-9326E7AC401D",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://techcrunch.com/2024/12/12/bitcoin-atm-giant-byte-federal-says-58000-users-personal-data-compromised-in-breach/; https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/8cd909c1-a046-4ac7-b845-35c7795894cc.html; https://www.bytefederal.com/files/Consumer%20Breach%20Notification%20Letter.pdf; https://www.techradar.com/pro/security/thousands-of-bitcoin-atm-users-may-have-personal-data-leaked-after-breach; https://www.jdsupra.com/legalnews/byte-federal-data-breach-stemming-from-3657720/; https://databreaches.net/2024/12/17/a-positive-example-of-forthright-breach-disclosure/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 30, 2024 an unauthorized party exploited a vulnerability in GitLab, used by Bitcoin ATM operator Byte Federal, to access its servers; Byte Federal discovered the intrusion on November 18. Data of about 58,000 customers may have been accessed, including names, addresses, phone numbers, emails, dates of birth, government-issued IDs, Social Security numbers, transaction activity and photographs. Byte Federal shut down its platform, reset all customer accounts and passwords and notified customers on December 12.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 7
+    },
+    "incident": {
+      "day": 30,
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Byte Federal"
+  }
+}

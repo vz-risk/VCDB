@@ -1,0 +1,207 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "INC Ransom"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 6
+      },
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 162000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "7CD8BF4D-5020-4063-92FA-D1F49A93E519",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23282\nCoded from both issue tags: Hacking-ext-unknown and Malware-ext-Ransomware-databreach. Beacon's spokesperson confirmed 'this was a ransomware attack' (Insurance Journal Feb 10, 2026; Rhode Island Current). Ransomware -> malware block, availability Obscuration + Interruption, integrity Software installation. Encryption itself is not described in sources; Obscuration follows the confirmed ransomware per the skill rule. Interruption: systems disconnected/isolated Jan 14, operations restored by Jan 20 (duration ~6 days).\nTemplate deviations: asset coded S - Unknown (sources only say 'parts of its computer network' and 'files') instead of S - Web application; hacking vector Unknown and malware vector Unknown (entry point not disclosed).\nActor: INC Ransom claimed the attack on its leak site around Jan 29, 2026 (Ransomware.Live via Insurance Journal and RI Current); Beacon has not confirmed the attribution but no source contradicts it. INC Ransom is a double-extortion ransomware group active since 2023 -> Organized crime, Financial. Extortion coded: leak-site listing with data-theft threat, and Beacon 'declined to discuss the ransom demand' and is not communicating with the group (demand apparently refused). data_abuse Yes - Data ransomed.\nTimeline: access Jan 7-14, 2026; discovered Jan 14 via an alert about suspicious network activity (source of alert not stated -> internal Unknown); review of files completed April 16, 2026; letters from May 18, 2026 (CA AG listing). dbir_year 2027.\nData: names with SSN and driver's license numbers (Personal), financial account numbers (Bank), health insurance and medical treatment information (Medical). Internal (financial statements, correspondence, claims data) and Employee as data_victim are from INC Ransom's claim only, not victim-confirmed. data_total 162,000 = Beacon's statement to Rhode Island Current ('about 162,000'); state filings: RI 131,207 (notice says 131,027), MA 11,890, ME 607. About 4,500 current and former RI state employees are among those affected (as insured workers). State Stored.\nVictim: Warwick RI, ~100 employees per Insurance Journal -> Small (exact bucket ambiguous at ~100). Industry corrected from the issue's 524210 (Insurance Agencies and Brokerages) to 524126 (Direct Property and Casualty Insurance Carriers), because Beacon Mutual is a workers' compensation insurance carrier, not an agency/broker.\nIssue data: all issue-linked sources are about this victim. Carrier Management and Insurance Business do not mention ransomware. The pipeline comment's 162,000 matches Beacon's statement. The CA AG notice PDF could not be fetched (proxy 403); the CA AG listing page was used. Added Insurance Journal (Feb 10, 2026) and Rhode Island Current as sources.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T16:49:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access to network, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encryption; systems isolated until Jan 20"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via INC Ransom leak-site listing"
+      }
+    ],
+    "github": "23282",
+    "master_id": "7CD8BF4D-5020-4063-92FA-D1F49A93E519",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.insurancebusinessmag.com/us/news/cyber/beacon-mutual-hit-by-breach--customer-data-exposed-576539.aspx; https://www.insurancejournal.com/news/east/2026/05/26/871293.htm; https://pbn.com/report-131k-beacon-mutual-r-i-customers-data-exposed-in-january-breach/; https://www.carriermanagement.com/news/2026/05/26/288353.htm; https://oag.ca.gov/ecrime/databreach/reports/sb24-623604; https://amp.insurancejournal.com/news/east/2026/02/10/857442.htm; https://rhodeislandcurrent.com/?p=30725",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Beacon Mutual Insurance Company, a Warwick, Rhode Island workers' compensation insurer, suffered a ransomware attack. An unauthorized party had access to parts of its network from January 7 to January 14, 2026 and copied files; Beacon received an alert about suspicious activity on January 14, isolated systems, contacted the FBI and restored operations by January 20. The INC Ransom group claimed the attack on its leak site around January 29, saying it took 275 GB of internal data. The files held names with Social Security numbers, driver's license numbers, financial account numbers, health insurance and medical treatment information for about 162,000 people, including about 131,000 Rhode Islanders and about 4,500 current and former state employees. Notification letters went out from May 18, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 7
+    },
+    "incident": {
+      "day": 7,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524126",
+    "region": [
+      "019021"
+    ],
+    "state": "RI",
+    "victim_id": "The Beacon Mutual Insurance Company"
+  }
+}

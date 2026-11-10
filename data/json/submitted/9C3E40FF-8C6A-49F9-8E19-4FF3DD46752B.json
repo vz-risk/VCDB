@@ -1,0 +1,148 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 35000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 35000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "9C3E40FF-8C6A-49F9-8E19-4FF3DD46752B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20196\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Method unknown (CertiK's private-key-exposure theory unconfirmed) -> hacking Unknown; assets U - Unknown (wallet apps) and S - Unknown. Users' keys -> Credentials, users' funds -> Virtual currency, data_victim Customer. Actor not attributed in this source (Elliptic later linked it to Lazarus; reviewer may add). Discovery external Customer (users reported losses). Impact $35M. Victim country EE (Atomic Wallet is Estonia-based; not stated in the source), NAICS 513210, headcount Unknown. dbir_year 2024.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "unk",
+        "attribute": "unk",
+        "summary": "Cause not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "$35M drained from user wallets"
+      }
+    ],
+    "github": "20196",
+    "master_id": "9C3E40FF-8C6A-49F9-8E19-4FF3DD46752B",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/millions-stolen-in-atomic-wallet-attack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In early June 2023 more than $35 million was stolen from users of Atomic Wallet, a decentralized multi-platform cryptocurrency wallet; the company said fewer than 1% of monthly active users were affected. The cause was not disclosed (CertiK suggested a bug exposing private keys), and users reported the losses on social media. Atomic Wallet reported attacker addresses to exchanges to block funds.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 2,
+      "month": 6,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "EE"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Atomic Wallet"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other network service",
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5700000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5700000,
+      "data_victim": [
+        "Student",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "DDF3C817-D862-4B9C-9FE4-33D2D6BDED81",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24550\nCoded from the Hacking-ext-unknown template with the provider/third-party rule. ETS operated the breached SFTP site and is the primary victim. The California Department of Education (whose student data it held under contract) is in victim.secondary. The CDE notice says the incident did not involve district systems. Individual school districts (e.g. Menlo Park City SD, whose family notice is cited) are downstream data owners via CDE and are not listed separately. The issue has no Partner_Breach label, but the facts fit the provider rule: a contractor's system was breached and a customer's data was exposed.\nDeviations from template: hacking.variety Use of stolen creds instead of Unknown (CDE: 'used a compromised login credential'). vector Other network service plus Partner instead of Web application, because the asset was an SFTP site, not a web application, and Partner records propagation to CDE. Asset S - File instead of S - Web application. Discovery internal/Unknown: ETS 'identified' the activity Sept 25; the method is not stated.\nActor external, Unknown / Unknown: no group claimed it, no ransom or sale reported, and ETS found no evidence of publication.\nData: Personal (names, SSIDs, DOB, addresses) and Sensitive Personal (disability status, demographic data). Test scores are listed only by Malwarebytes and are not coded separately. SSNs were not exposed. Count: LAist/CDE give 5.7M currently enrolled plus students enrolled since 2023. The issue body's 7M is EdSource's estimate. Amount 5,700,000 is coded as the confirmed minimum. data_total 5,700,000 (added by the VERIS rules from the amount) is therefore a floor, not the full total, which is not published. data_victim Student and Partner (the data belongs to the customer, CDE).\nNAICS changed from 6116 to 611710 (Educational Support Services) because ETS is a testing-services provider, not a school. The comments' NAICS 92/922110 refer to CDE and are used only for the secondary victim (923110). Employee count ~10,474 worldwide (Revelio Labs, March 2026) -> 10001 to 25000.\nTimeline: access May 22 - Sept 18, 2026; found Sept 25, about 4 months after the start. dbir_year 2027.\nSources: issue body plus all comment URLs, including the CDE news release.\nConfidence High: the action, asset, and attribute are confirmed by CDE. The actor is unknown, but that is the honest coding.",
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds on SFTP site; student files copied"
+      }
+    ],
+    "github": "24550",
+    "master_id": "DDF3C817-D862-4B9C-9FE4-33D2D6BDED81",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cybersecurity-insiders.com/millions-of-california-student-data-exposed-in-cyberattack-on-education-contractor/; https://edsource.org/updates/personal-information-for-7-million-california-students-has-been-stolen-following-hack; https://www.thedailystar.net/news/technology/news/millions-california-students-hit-data-breach-4301671; https://www.cbsnews.com/sanfrancisco/news/california-state-testing-ets-data-breach-impact-millions-of-students-officials-say/; https://district.mpcsd.org/families-community/new-pageets-data-security-incident-information-for-families; https://www.malwarebytes.com/blog/data-breaches/2026/10/millions-of-california-students-sensitive-data-stolen-in-breach; https://www.cde.ca.gov/nr/ne/yr26/yr26rel45.asp; https://lbpost.com/news/education/data-breach-exposes-california-student-information-how-to-protect-your-family/; https://laist.com/brief/news/education/california-student-data-breach-2026-what-do-do; https://laist.com/news/education/california-student-data-breach-2026-what-do-do",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized party used a compromised login credential to access a secure file transfer protocol (SFTP) site operated by Educational Testing Service (ETS), the nonprofit contractor that runs California's statewide student assessments (CAASPP, ELPAC). Between May 22 and September 18, 2026 it copied files with information on California public school students: names, statewide student identifiers, dates of birth, addresses, demographic data, disability status and test information. The data covers more than 5.7 million currently enrolled students plus students enrolled since 2023 (about 7 million per EdSource). ETS found the activity on September 25, 2026, and the California Department of Education disclosed the breach on October 16, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 4
+    },
+    "incident": {
+      "day": 22,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611710",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "California Department of Education; 923110"
+      ]
+    },
+    "state": "NJ",
+    "victim_id": "Educational Testing Service (ETS)"
+  }
+}

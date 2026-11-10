@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3709551,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3709551,
+      "data_victim": [
+        "Customer",
+        "Partner",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "31890F5C-F6B4-4D6A-BB08-2D34E110048B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24562\nNo template tag on the issue ('Needs Details'); Hacking-ext-unknown inferred: Recruit reports only unauthorized access by a third party to Car Sensor net-related systems, with cause and scope under investigation; no malware, ransomware or extortion reported. Vector Web application / asset S - Web application per the template (affected systems are the Car Sensor net website/app and the C-MATCH dealer web service; the hosting is not described).\nVictim: Recruit Co., Ltd. (Car Sensor net used-car listings, C-MATCH dealer support). NAICS changed from 5112 (software publishers) to 519130 (Internet Publishing and Broadcasting and Web Search Portals) because Car Sensor is an online listing/classifieds service. Employee count 10001 to 25000 is approximate and not confirmed against a fetched source in this pass (web lookups were rate-limited); please verify.\nData (maximum counts that 'may have been leaked', total 3,709,551): Car Sensor inquiry users 3,210,421 (names, addresses - 447,670 with street-level address - inquiry content, age range, gender, some phone/fax/email); review posters 5,289; C-MATCH registered used-car dealers 483,168 (contact names, phones, used-goods dealer licence numbers, login IDs; sole proprietors may include business address and direct-debit account information -> Bank); Recruit employees/former staff and outsourced/sales agency staff 10,673 (names, emails, login IDs). No card data or login passwords, so Credentials not coded. data_victim Customer, Partner (dealers), Employee. data_disclosure Potentially: Recruit gives 'maximum' counts that may have been leaked and has not confirmed exfiltration.\nTimeline: suspicious external access detected Oct 17, 2026; services suspended ~17:00 that day; scope identified Oct 20; disclosed Oct 21 with preliminary PPC report. Access start date unknown, so incident coded 2026-10 and discovery duration Unknown. Discovery internal (Recruit detected the access; how not stated) -> internal Unknown. dbir_year 2027.\nA kumanichi headline seen in search ('Carsensor info leak; Nissan and Mitsubishi Motors also halt used-car sites') suggests other carmakers' used-car sites were suspended; Impress (Car Watch) names no other affected company, and that article could not be read, so no secondary victims are coded - reviewer may wish to check whether a shared platform was involved.\nSources: Bernama (issue) gives only the 3.7M figure; details from Car Watch (Impress). Confidence Medium: action unknown and exfiltration unconfirmed.",
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to Car Sensor systems; data taken"
+      }
+    ],
+    "github": "24562",
+    "master_id": "31890F5C-F6B4-4D6A-BB08-2D34E110048B",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bernama.com/en/world/news.php?id=2623516; https://car.watch.impress.co.jp/docs/news/2150016.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Recruit Co. detected suspicious external access to systems behind its Car Sensor net used-car listing service on October 17, 2026 and suspended Car Sensor net, its app and the C-MATCH dealer service. On October 21 it disclosed that personal data for up to 3,709,551 people may have been leaked: Car Sensor inquiry users and review posters (names, addresses, some contact details), 483,168 used-car dealers registered with C-MATCH (contact details, dealer licence numbers, login IDs and, for some sole proprietors, direct-debit account data) and 10,673 Recruit employees and contractor staff. No card data or login passwords were involved.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "519130",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Recruit Co., Ltd."
+  }
+}

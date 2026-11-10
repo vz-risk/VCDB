@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CA"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "029D509B-252F-4B5F-BCFB-2866218CCB09",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23474\nTemplate Hacking-ext-unknown used (external, Hacking, vector Web application, asset S - Web application, data_disclosure Yes, hak/ext/srv/cp). Variety refined to Exploit vuln: London Hydro says a 'technical issue' in its portal allowed data to be accessed and downloaded, and the issue body (CBC) says the attacker exploited a system vulnerability, patched the same day.\nActor: London police charged a London man in connection with the unauthorized access (London Hydro update, Oct 2, 2026) -> external, Unaffiliated, country CA. Motive not stated -> Unknown.\nData: contact and account details (Personal). Number of affected accounts not disclosed.\nDiscovery: London Hydro noticed unusual account activity on its website portal -> internal; specific method not named, so Unknown.\nTimeline: activity noticed around June 18, 2026 (issue/CBC) and announced June 20; month only coded because the start of the access is not stated. Containment the same day the flaw was found. dbir_year 2027.\nVictim: London Hydro (London, Ontario), owned by the City of London (government Local). About 160,000 customers. NAICS 221122 (issue body said 2211). About 300 employees (approximate) -> 101 to 1000.",
+    "created": "2026-11-09T19:37:18Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Portal vulnerability exploited; customer account data downloaded"
+      }
+    ],
+    "github": "23474",
+    "master_id": "029D509B-252F-4B5F-BCFB-2866218CCB09",
+    "modified": "2026-11-09T19:37:18Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cbc.ca/lite/story/9.7243545?feature=related-link; https://lfpress.com/news/local-news/london-hydro-ceo-confirms-data-breach-affected-customer-information; https://www.cbc.ca/news/canada/london/london-hydro-investigating-data-breach-affecting-some-customer-accounts-9.7243545; https://www.londonhydro.com/data",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "London Hydro, the municipally owned electricity distributor for London, Ontario, noticed unusual account activity on its customer web portal around June 18, 2026. A technical issue in the portal had allowed an unauthorized third party to access and download data from some customer accounts: names, emails, mailing addresses, phone numbers, account numbers, service addresses, pricing plans, contract start dates, meter numbers and meter types. Passwords, banking, payment card and government ID data were not involved. London Hydro fixed the flaw the same day, offered Equifax credit monitoring, and on October 2, 2026 London police charged a London man in connection with the unauthorized access.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "221122",
+    "region": [
+      "019021"
+    ],
+    "state": "ON",
+    "victim_id": "London Hydro"
+  }
+}

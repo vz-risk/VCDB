@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "name": [
+        "Z-Pentest"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - ICS"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Hours",
+        "value": 7
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "8C8784EE-027E-4B0B-9F05-2C2F5DE647D8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22928\nTemplate Hacking-ext-unknown used for actor/action, but this is a destructive OT attack with no data theft, so the template's confidentiality block and S - Web application asset were not used. Coded integrity Modify configuration (attackers changed water pressure settings) and availability Interruption (homes without water).\nThe issue article is mainly about attribution; the 2024 waterworks attack is the incident coded here. The DDoS attacks on Danish election websites by NoName057(16), mentioned in the same article, are separate incidents with different victims and were not coded.\nVictim: SecurityWeek (AP) places the utility near Koge, about 35 km south of Copenhagen; Rescana names it Tureby Alkestrup waterworks. Employee count 1 to 10 is an inference from its being a small local waterworks (not sourced; change to Unknown if preferred). NAICS 221310 from the issue.\nActor: Z-Pentest, a pro-Russian hacktivist group that DDIS says acts on behalf of the Russian state -> State-affiliated, country RU, motive Ideology (DDIS: aim is to create insecurity and punish supporters of Ukraine).\nMethod: not given in the government statement or mainstream reporting, so hacking variety and vector Unknown. Rescana says the attackers reached internet-exposed HMIs over VNC with weak or default passwords, changed parameters and passwords and disabled alarms; this matches Z-Pentest's known MO in the December 2025 CISA/FBI advisory, but it is a secondary-source description, so it was noted rather than coded. A reviewer may add Brute force / Desktop sharing software.\nAsset: S - ICS (HMI / control system), role OT because the sources describe manipulation of water pressure controls.\nImpact: Rescana reports about 50 households without water for about 7 hours and 450 for about 1 hour; availability duration coded 7 hours from that.\nTimeline: 2024 per DDIS; month not given. dbir_year 2025.\nDiscovery: not described, so Unknown.",
+    "created": "2026-11-09T19:29:47Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to waterworks control system (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Water pressure settings modified"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Pipes burst; households without water"
+      }
+    ],
+    "github": "22928",
+    "master_id": "8C8784EE-027E-4B0B-9F05-2C2F5DE647D8",
+    "modified": "2026-11-09T19:29:47Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/denmark-blames-russia-for-destructive-cyberattack-on-water-utility/; https://www.fe-ddis.dk/da/nyheder/2025/rusland-er-ansvarlig-for-destruktive-og-forstyrrende-cyberangreb-mod-danmark/; https://www.securityweek.com/denmark-blames-russia-for-cyberattacks-ahead-of-elections-and-on-water-utility/; https://www.rescana.com/post/russian-cyberattacks-on-tureby-alkestrup-waterworks-and-danish-election-websites-attribution-impac",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In 2024 the pro-Russian group Z-Pentest attacked the operational control systems of a small Danish waterworks near Koge (identified in later reporting as Tureby Alkestrup Vandvaerk), manipulating water pressure so that pipes burst and households were temporarily without water. On December 18-19, 2025 the Danish Defence Intelligence Service publicly attributed the destructive attack to Z-Pentest, which it says the Russian state uses as an instrument of hybrid war against countries supporting Ukraine.",
+  "timeline": {
+    "incident": {
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "DK"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "NA"
+    ],
+    "industry": "221310",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Tureby Alkestrup Vandvaerk"
+  }
+}

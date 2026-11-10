@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Unspecified vulnerability in Gyazo's image upload server exploited to run arbitrary commands, then database accessed.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 23620000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Session key"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 23620000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "89F9F9E3-49C2-4358-9F79-2585AF269281",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24554\nVictim: Gyazo is operated by Helpfeel Inc. (formerly Nota Inc.), Kyoto, Japan; victim_id names the company with the service in parentheses. Employee count 246 (Helpfeel careers page, June 2026, excluding contractors) -> 101 to 1000. NAICS 511210 (software publisher / SaaS), the 6-digit form of the issue's 5112.\nTemplate Hacking-ext-unknown, deviated: sources (Helpfeel notice via Security Affairs, Help Net Security) say the attacker exploited a vulnerability in Gyazo's image upload server and executed arbitrary commands, so hacking variety is Exploit vuln (not Unknown), vector Web application. The specific vulnerability/CVE is not disclosed. Added S - Database because the attacker reached the user database after the upload server.\nActor: unnamed 'third party'; no group, claim, ransom demand or sale reported -> variety/motive/country Unknown.\nData: 23.62M user records -> Personal (amount 23,620,000), Credentials (password hashes, Google SSO data), Session key (login session IDs, X integration tokens). ~490M image metadata records (mostly images uploaded up to January 2019) plus extra metadata for ~2.4M images (IPs, user agents, EXIF location, OCR text, hashed private-image passphrases) also taken; not counted separately because they overlap the same users. A list of private images was obtained; Helpfeel cannot rule out that some private images were viewed. No payment card data. data_total = user record count.\nTimeline: exploited Sept 11, 2026; suspicious activity detected the evening of Sept 11 (discovery Hours, internal, method not stated -> Unknown); attacker cut off early Sept 12 (containment Hours); PPC report Sept 15; public notice Sept 16. dbir_year 2027.\nAvailability: Gyazo paused image delivery/took systems offline until Sept 15 as a response measure; not coded as an attacker-caused availability impact. Cloud vs on-prem hosting not stated -> Unknown.\nSources: CPO Magazine (issue link; could not be fetched, kept), Security Affairs, Help Net Security. BleepingComputer, The Hacker News and SecurityWeek also cover it (not fetched, not cited).",
+    "created": "2026-11-05T22:18:27Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Exploit vuln in image upload server (RCE)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "User DB and image metadata stolen"
+      }
+    ],
+    "github": "24554",
+    "master_id": "89F9F9E3-49C2-4358-9F79-2585AF269281",
+    "modified": "2026-11-05T22:18:27Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cpomagazine.com/cyber-security/gyazo-data-breach-exposes-23-6-million-user-records-and-nearly-half-a-billion-image-metadata/; https://securityaffairs.com/199338/data-breach/gyazo-data-breach-exposes-23-million-user-records.html; https://helpnetsecurity.com/2026/09/21/helpfeel-gyazo-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 11, 2026 an unknown attacker exploited a vulnerability in the image upload server of Gyazo, the screenshot-sharing service run by Kyoto-based Helpfeel Inc., executed arbitrary commands and reached a database. About 23.62 million user records (names/nicknames, email addresses, password hashes, user and device IDs, login session IDs, X integration tokens, Google SSO emails, profile and plan data) and about 490 million image metadata records (uploader IPs, user agents, EXIF location, OCR text, URLs) were taken. Helpfeel cut off the attacker on September 12, reported to Japan's PPC on September 15 and published a notice on September 16. No payment card data was exposed and no ransom demand was reported.",
+  "timeline": {
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 11,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Helpfeel Inc. (Gyazo)"
+  }
+}

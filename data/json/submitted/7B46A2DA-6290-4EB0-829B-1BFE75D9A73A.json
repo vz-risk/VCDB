@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Inadequate technology"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "7B46A2DA-6290-4EB0-829B-1BFE75D9A73A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23526\nTemplate Error-int-Misdelivery-media used (internal actor, Error Misdelivery, data_disclosure Yes, err/int/.../cp). Deviations: vector Inadequate technology instead of Carelessness, because EWE Netz says customer records were 'technically merged' in rare constellations and the system then emailed confirmations to the wrong person (an automated fault, not a person's slip; a reviewer may add Programming error). Asset S - Web application (meter reading submission) and S - Mail (automated confirmation emails) instead of the template's user desktop. Discovery external Customer instead of internal Reported by employee: customers alerted the company (NWZ).\nData: neighbours' meter readings and full address data (Personal). NWZ says potentially affected customers were in the mid three-digit range, but far fewer were likely actually exposed; no count coded. State Transmitted (data sent by email).\nTimeline: reported June 25, 2026; the family had recently submitted a reading after a request in recent weeks. Coded 2026-06. dbir_year 2027.\nVictim: EWE Netz GmbH (Oldenburg, Lower Saxony), electricity and gas distribution network operator, subsidiary of EWE AG. NAICS 221122 (issue said 2211). About 2,000 employees (approximate) -> 1001 to 10000.\nSingle source; confidence Medium.",
+    "created": "2026-11-09T19:37:18Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Merged customer records caused confirmation emails to go to wrong recipients"
+      }
+    ],
+    "github": "23526",
+    "master_id": "7B46A2DA-6290-4EB0-829B-1BFE75D9A73A",
+    "modified": "2026-11-09T19:37:18Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.nwzonline.de/wirtschaft/datenpanne-bei-ewe-netz-versehentlich-zaehlerstaende-und-adressdaten-von-nachbarn-verschickt_a_4,3,972144134.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "German distribution grid operator EWE Netz sent confirmation emails for digitally submitted electricity meter readings to the wrong recipients. In rare configurations, different customer records had been technically merged, so a customer's confirmation email showed the meter readings and full address details of other customers (in one reported case, three neighbours in Wiefelstede). Customers alerted the company; it corrected the faulty links, changed the IT system, and EWE Netz and at least one customer reported the incident to Lower Saxony's data protection commissioner. The number potentially affected was in the mid three-digit range, with far fewer likely actually exposed.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "DE"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "221122",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "EWE Netz GmbH"
+  }
+}

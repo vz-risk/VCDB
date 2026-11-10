@@ -1,0 +1,131 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Theft"
+      ],
+      "vector": [
+        "Victim work area"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CA"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 800,
+          "variety": "Bank"
+        },
+        {
+          "amount": 800,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 800,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Printed"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Break in discovered"
+      ]
+    }
+  },
+  "incident_id": "22D744C3-8F02-495C-A333-0ABE7DA34E45",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22970\nTemplate Physical-ext-theft-paper (issue tag) used: external actor, Physical Theft, asset M - Documents, availability Loss. No paper-theft diagram exists in the template folder, so the userdev theft diagram was followed with the paper asset swapped in.\nData: 800 pages of customer records with billing information used for pre-authorized payments, plus names and mailing addresses. Coded Bank (pre-authorized payment banking details; the article says 'billing information used in pre-authorized payments' and the headline says 800 customers' records) and Personal, amount 800 each (pages vs customers treated as the same count; adjust if notices give a customer total). data_disclosure Yes per the style guide rule for stolen paper documents. State Printed.\nActor: unknown burglar(s), external; motive Unknown (the documents may have been incidental to a burglary). Country CA assumed from a local break-in series.\nVector Victim work area (corporate office).\nTimeline: QEC did not give the date. Nunavut News places it within a series of Iqaluit break-ins from mid-December 2025 (other businesses hit Dec 16 - Jan 8). Coded 2025-12, which gives dbir_year 2027 (Nov/Dec rule); if it was actually in January 2026 the dbir_year is still 2027.\nDiscovery: internal, Break in discovered (inferred from a physical break-in; how QEC found it is not stated).\nVictim: Qulliq Energy Corporation, a Government of Nunavut territorial crown corporation (government Regional) that generates and distributes power. NAICS 221122 (the issue said 221). About 200-300 employees (approximate) -> 101 to 1000.\nSingle source only; confidence Medium.",
+    "created": "2026-11-09T19:31:37Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Break-in; paper billing records stolen"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "au",
+        "summary": "Documents lost"
+      }
+    ],
+    "github": "22970",
+    "master_id": "22D744C3-8F02-495C-A333-0ABE7DA34E45",
+    "modified": "2026-11-09T19:31:37Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://nunavutnews.com/2026/01/14/qec-corporate-office-broken-into-800-customers-records-stolen/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Qulliq Energy Corporation (QEC), Nunavut's territorial power utility, reported that its corporate office in Iqaluit was broken into during a string of break-ins in the city between mid-December 2025 and early January 2026. Thieves stole 800 pages of paper customer records with billing information used for pre-authorized payments, including customers' names and mailing addresses; no electronic records were taken. The break-in was reported to the RCMP.",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "221122",
+    "region": [
+      "019021"
+    ],
+    "state": "NU",
+    "victim_id": "Qulliq Energy Corporation"
+  }
+}

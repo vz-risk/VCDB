@@ -1,0 +1,237 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Lateral movement",
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Backdoor"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Infiltrate",
+        "Persist",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Backdoor",
+        "C2",
+        "Backdoor or C2",
+        "Trojan",
+        "RAT",
+        "Capture stored data",
+        "Export data"
+      ],
+      "vector": [
+        "Web application",
+        "Web application - download",
+        "Other"
+      ]
+    },
+    "social": {
+      "target": [
+        "Developer"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Social media",
+        "Virtual meeting",
+        "IM"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "TraderTraitor"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "P - Developer"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Security alarm"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 6340000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 6340000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "D8E0FD71-FBB9-48A6-921E-29EE894DD886",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24695\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate tags Social-ext-Pretex + Malware-ext-infostealer combined. Victim Binance (crypto exchange), NAICS 523 from issue body ('naics 523'); no finer code given. Country Unknown (no single HQ). Employee count 1001 to 10000 (public reports of roughly 5,000-8,000 staff).\nActor: FBI (Oct 31 alert) attributes the theft to North Korea's TraderTraitor; North Korea denies. Coded Nation-state, KP, Financial.\nChain per Binance's Nov 3 initial report: June 2026 an engineer on the wallet infrastructure team installed a tampered Homebrew installer while setting up an AI coding tool found via search (detected, device replaced, creds rotated, but roles of him and colleagues were exposed). Sept: a second engineer was pretexted via a job-hunting platform (fake Project Director, video interview with fake HR, second interview in a social chat app) and ran a coding 'assignment' repo that replaced a pyenv binary with a backdoor giving remote command execution and an attacker C2 connection (malware vector Other = user-run repo; Web application - download for the June installer). Malware variety Backdoor/C2/Trojan (so RAT) plus Capture stored data/Export data for the infostealer tag and the stolen Wallet DevOps Engineer A credentials (how those creds were captured is not spelled out).\nOct 20 attackers used the compromised machine and an internal AI tool to reach two more engineers, one holding a container deployment token for the wallet signing service. Oct 29 they logged into Engineer C's computer, used Engineer A's stolen creds, deployed a container and ran a malicious script; hot wallets across ten chains were drained (EIP-7702 delegation on an ETH hot wallet). Internal alert -> withdrawals suspended (discovery internal Security alarm).\nCrypto-theft convention: Virtual currency (data_victim Victim organization) + integrity Fraudulent transaction (project rule) + impact Asset and fraud USD 6.34B (about 2.85B frozen/intercepted; not netted). Asset S - Other = wallet signing service/hot wallets. Incident begin June 2026 -> dbir_year 2027. Compromise-to-theft about 4-5 months.\nSources: Business Insider (issue), GN Crypto summary of the Binance report, The Block, Let's Data Science (FBI attribution). Business Insider article was blocked to fetch; its text is quoted in the issue.",
+    "created": "2026-11-10T19:22:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Tampered installer for AI coding tool run by wallet engineer (June)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting via fake job interviews"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Malicious assignment repo installs backdoor"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Engineer credentials captured"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Lateral movement to two more engineers via internal AI tool"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds to deploy container and malicious script"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Fraudulent transfers from hot wallets"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Virtual currency stolen"
+      }
+    ],
+    "github": "24695",
+    "master_id": "D8E0FD71-FBB9-48A6-921E-29EE894DD886",
+    "modified": "2026-11-10T19:22:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.businessinsider.com/fake-job-interviews-helped-hackers-steal-6b-crypto-from-binance-2026-11; https://www.gncrypto.news/news/binance-traces-6-34b-hack-six-month-cyber-campaign/; https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225; https://letsdatascience.com/news/fbi-attributes-record-63b-binance-heist-to-north-koreas-trad-9a3ac760",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Binance said the $6.34 billion theft of October 29, 2026 was the end of a months-long campaign. In June an engineer on its wallet infrastructure team installed a tampered installer while setting up an AI coding tool, exposing team roles. In September another engineer was approached on a job-hunting platform by a fake Project Director, and in a second fake interview was told to run a coding assignment whose repository installed a backdoor on his work computer. On October 20 the attackers used that machine and an internal AI tool to compromise two more engineers, one with a container deployment token for the wallet signing service. On October 29 they used stolen credentials, deployed a container and ran a malicious script that drained Binance hot wallets across ten blockchains. The FBI attributed the theft to North Korea's TraderTraitor.",
+  "timeline": {
+    "compromise": {
+      "unit": "Months",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Binance"
+  }
+}

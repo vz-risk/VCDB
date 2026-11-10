@@ -1,0 +1,172 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application",
+        "Partner"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Export data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 23356000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 2096900,
+          "variety": "Payment"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 23356000,
+      "data_victim": [
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3DE7A288-70F1-4B7E-8A20-ECC4329124BB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24539\nFacts (Netshop Impress, Oct 19, 2026, on Estore's Oct 16 final report): intrusion May 21 - Aug 1, 2026; Estore learned of it Aug 1 and cut off the attacker's communications that day. Attackers exploited a vulnerability in an application on the ShopServe server (not named) and executed unauthorized programs that sent database contents outside. ~23,356,000 people (Aug 2 interim estimate was 8,853,839 records; final count re-matched records); partial card data for ~2,096,900; 7,858 shops. No secondary harm or dark-web posting found as of Oct 16. BASE says its own services were separate and unaffected.\nProvider rule applied (no Partner_Breach label, but ShopServe is a SaaS e-commerce platform and the breach reached 7,858 merchant shops and their buyers): Estore is the primary victim; secondary.amount 7,858 with no named merchants (none named in sources). hacking vector Partner added per house convention alongside Web application.\nTemplate Hacking-ext-unknown deviations: hacking variety Exploit vuln (source says an application vulnerability was exploited); added malware Export data / Direct install (unauthorized programs executed that sent DB contents outside) with integrity Software installation; asset S - Database added.\nData: Personal 23,356,000 (buyers: name, address, phone/fax, email, workplace, free-text); Payment 2,096,900 (cardholder name, first 6 / last 4, expiry - no full PAN or CVV); Credentials (member IDs + encrypted passwords, ShopServe admin logins, affiliate email/passwords). data_victim Customer and Partner (merchant/affiliate data). data_total 23,356,000. Issue said 23.35M; final figure ~23.356M. Mail-system, FTP and bank-transfer credentials were dropped from scope in the final report.\nTimeline: begin May 21, 2026; compromise and discovery ~2 months (72 days); containment same day as discovery. Discovery method not stated -> unknown. dbir_year 2027.\nActor External, Unknown variety/motive (no actor named, no demand).\nNAICS: issue gave 5182; coded 518210. Employee count 101 to 1000 is approximate (Estore, a BASE subsidiary, low hundreds of staff) (unverified) - reviewer please confirm.\nAsahi article link was not accessible (not read directly); facts from Netshop Impress and Qatar Tribune (agency report).\nConfidence High: actor unknown, but action (exploit + exfiltration program), asset and attribute are all stated in the victim's final report.",
+    "created": "2026-11-05T22:19:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Application vuln exploited on ShopServe server"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unauthorized program executed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Database contents exported"
+      }
+    ],
+    "github": "24539",
+    "master_id": "3DE7A288-70F1-4B7E-8A20-ECC4329124BB",
+    "modified": "2026-11-05T22:19:07Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.asahi.com/ajw/articles/16976490; https://netshop.impress.co.jp/n/2026/10/19/16881; https://www.qatar-tribune.com/article/259748/business/yamato-estore-and-nikkei-report-major-data-leaks-in-japan",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Estore Corp., a BASE group company operating the ShopServe e-commerce platform, reported that between May 21 and August 1, 2026 attackers exploited a vulnerability in an application on the ShopServe server and ran unauthorized programs that sent database contents outside. Its October 16, 2026 final report put the impact at about 23.36 million people (buyers' names, addresses, phone/fax, email, workplace; member IDs and encrypted passwords), partial card data (name, first six/last four digits, expiry) for about 2.1 million, and ShopServe admin and affiliate credentials, across 7,858 merchant shops.",
+  "timeline": {
+    "compromise": {
+      "unit": "Months",
+      "value": 2
+    },
+    "containment": {
+      "unit": "Days",
+      "value": 0
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 2
+    },
+    "incident": {
+      "day": 21,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 7858,
+      "notes": "7,858 ShopServe merchant shops affected; none named in sources found."
+    },
+    "victim_id": "Estore Corp. (ShopServe)"
+  }
+}

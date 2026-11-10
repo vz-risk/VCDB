@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 300000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Source code"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 300000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "B8398DC4-47A0-4084-A37E-D86CF23CA47D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/20115\nNo template tag. Actor-claimed and unconfirmed (BSC News uses 'reportedly'/'allegedly') -> data_disclosure Potentially, confidence Low; attacker-claimed specifics coded per the skill (300,000 users, selfies, SSNs, source code). Selfies -> Sensitive Personal (biometric-style images; reviewer may drop). data_total = claimed 300,000 (rules.py would fill it from the amount). Discovery external Actor disclosure. Motive Unknown (no sale price/ransom in source). Timeline: breach date unknown -> 2023; dbir_year 2025 from the Nov 2023 public claim. Victim US (Las Vegas; state not in sources so not coded), NAICS 522320, headcount Unknown.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Claimed theft of 300K user records, selfies and source code"
+      }
+    ],
+    "github": "20115",
+    "master_id": "B8398DC4-47A0-4084-A37E-D86CF23CA47D",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cryptopolitan.com/bitcoin-atm-coin-cloud-suffers-data-breach/; https://www.bsc.news/post/update-coin-cloud-data-breach-exposes-300k-users-stolen-selfies-and-source-code-reportedly-compromised; https://cointelegraph.com/news/coin-cloud-data-hack-united-states-brazil",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In November 2023 hackers claimed to have breached defunct US Bitcoin ATM operator Coin Cloud, which filed for bankruptcy in February 2023, and to hold data on more than 300,000 users in the US and Brazil, including about 70,000 customer selfies taken by ATM cameras, names, dates of birth, Social Security numbers, emails, phone numbers, occupations and addresses, plus the company's full backend source code. No confirmation from Coin Cloud was reported.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Coin Cloud"
+  }
+}

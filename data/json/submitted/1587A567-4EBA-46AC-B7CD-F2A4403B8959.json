@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "FireBear"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 12800000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_total": 12800000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "1587A567-4EBA-46AC-B7CD-F2A4403B8959",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21086\nUnverified actor claim, coded like the Grindr record: security_incident Suspected, data_disclosure Potentially, confidence Low. FireBear offered the data for sale -> motive Financial; variety Unknown. Binance denied the leak outright and experts called the claim likely a scam. Data: names, emails, phones, birthdays, addresses -> Personal, 12.8M claimed (data_total set to the claimed figure because rules.py fills it from the amount anyway). Discovery external Actor disclosure. Timeline: claimed leak August 2024 -> dbir_year 2025. Reviewer may mark Ineligible/False Positive given the denial. The issue's original source would not load; Decrypt used instead. Headcount Unknown (Binance is several thousand staff).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Alleged access, unverified"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Claimed 12.8M user records offered for sale"
+      }
+    ],
+    "github": "21086",
+    "master_id": "1587A567-4EBA-46AC-B7CD-F2A4403B8959",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.crypto-news-flash.com/binance-security-in-question-as-13-million-users-data-allegedly-leaked-online/; https://decrypt.co/250955/binance-refutes-alleged-dark-web-data-leak?amp=1",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "vcdb",
+  "summary": "In September 2024 a user called 'FireBear' offered for sale on a dark web forum what they claimed was data of about 12.8 million Binance users (names, emails, phone numbers, birthdays and addresses), allegedly leaked in August. Binance said the claim was false and its security team confirmed it was not a Binance data leak.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Binance"
+  }
+}

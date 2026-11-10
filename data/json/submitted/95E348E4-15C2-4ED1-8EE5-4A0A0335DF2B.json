@@ -1,0 +1,170 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 1000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 1000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "95E348E4-15C2-4ED1-8EE5-4A0A0335DF2B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21070\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag. Hacking Exploit vuln on a Shezmu vault (the source says only 'exploit' affecting a vault; wider reporting describes a missing access control on the collateral token mint). Social Extortion added because the hacker demanded a 20% bounty as the price of returning funds (a ransom-style demand); integrity Alter behavior and P - Unknown per rule. Funds returned, so impact = $1M (20% bounty kept) rather than $4.9M; reviewer may prefer gross.\nDiscovery external Security researcher (Chaofan Shou of Fuzzland alerted the community). Timeline: breach came to light 'late Friday' before the Sept 23 2024 issue -> Sept 20 2024 (inferred). Country/headcount Unknown. dbir_year 2025.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vault exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "$4.9M ShezUSD taken"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Hacker demands 20% bounty to return funds"
+      }
+    ],
+    "github": "21070",
+    "master_id": "95E348E4-15C2-4ED1-8EE5-4A0A0335DF2B",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://dailycoin.com/shezmu-recovers-millions-in-stolen-cryptos-after-negotiating-with-hacker/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In September 2024 an attacker exploited one of the vaults of DeFi project Shezmu, taking about $4.9 million in ShezUSD. After Shezmu offered a 10% bounty, the hacker demanded 20%; Shezmu agreed and recovered 288.1 ETH and 137 WETH (nearly $5 million).",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 20,
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Shezmu"
+  }
+}

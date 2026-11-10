@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - ICS"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Hours",
+        "value": 12
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "13DDD217-1250-4E55-9740-B5F5F156CA71",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24202\nIssue 24202 (NPR roundup, 'New Jersey water facilities') covers two named New Jersey victims, so it was split into two records: this one (Cape May Sewer Department) and the Borough of Woodbine Water Department.\nPart of the coordinated July 26-28, 2026 attacks on internet-exposed operational technology at US water and wastewater systems (30+ systems in Minnesota plus Georgia, Michigan, New Jersey and other states; the FBI says at least seven states). CISA's July 30 alert and its July 2026 update describe Iranian-affiliated actors targeting internet-facing PLCs (Rockwell, Schneider, Siemens), changing passwords and IP addresses to lock operators out and, for the first time, stealing PLC project files. No federal or state attribution has been made; experts suspect Iran's IRGC (pattern consistent with CyberAv3ngers per Tenable), so the actor is coded external Unknown with motive Unknown, and the suspicion is only noted. Method at this specific utility is not public, so hacking variety and vector are Unknown (the campaign generally used internet-exposed devices with default or weak credentials). Template Hacking-ext-unknown used for actor/action only; no data theft was reported, so no confidentiality block, and the asset is the control system with role OT rather than a web application. Consider linking all the July 2026 water records with one campaign_id.\nImpact: Cape May's city manager said the hackers changed settings to block remote access but did not take control (integrity Modify configuration); both systems were impacted for about 12 hours (availability Interruption of remote operation, duration 12 hours) while service continued. Customer data was not accessed.\nDiscovery: not described (reported to the state the following Thursday), so Unknown.\nVictim: City of Cape May, NJ, sewer department. NAICS 221320 (sewage treatment). Government Local; employee count is the city's, estimated.",
+    "created": "2026-11-09T19:39:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to sewer control system (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Settings changed to block remote access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Remote operation lost for about 12 hours"
+      }
+    ],
+    "github": "24202",
+    "master_id": "13DDD217-1250-4E55-9740-B5F5F156CA71",
+    "modified": "2026-11-09T19:39:57Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.npr.org/2026/08/12/nx-s1-5927437/cyberattack-water-iran-war; https://www.opb.org/article/2026/08/12/cyberattacks-on-the-u-s-water-sector-are-exposing-vulnerabilities-during-iran-war/; https://securityaffairs.com/?p=197012",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Early on July 27, 2026 attackers hit the control systems of the City of Cape May Sewer Department in New Jersey, nearly simultaneously with an attack on the Borough of Woodbine Water Department. The hackers changed settings to block remote access but did not take control of the systems; operations were affected for about 12 hours while service continued, and post-incident tests showed no effect on water quality. Customer data was not accessed. The incidents were part of coordinated attacks on internet-exposed water-sector operational technology in at least seven states.",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "221320",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "City of Cape May Sewer Department"
+  }
+}

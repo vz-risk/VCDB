@@ -1,0 +1,112 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted",
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "A7B7BCF7-2D9A-4FFF-B90E-06157C0331D8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24564\nTemplate Error-int-misconfig-srv followed: internal System admin, Misconfiguration / Carelessness, S - Database, discovery External - Security researcher, data_disclosure Yes (researcher viewed a sample of the files). Deviation: template has Cloud Yes, but no source says how the database was hosted -> cloud Unknown.\nVictim: SISVISA, the Brazilian health surveillance (vigilancia sanitaria) information system. Neither ExpressVPN nor Security Affairs names the operating agency (ANVISA, a state or a municipality) or says whether a contractor ran it; ExpressVPN says it is unknown whether the organization or a third-party contractor managed the database. The issue label says 'NAICS 92-Regional', but no source states the level of government, so government is Unknown and employee_count Unknown. NAICS changed from 92 to 923120 (Administration of Public Health Programs), the specific code for a health surveillance regulator. If a contractor is later shown to have run it, the actor/victim may need revisiting.\nData: 102,215 files (~79 GB) with names, home addresses, phones, CPF/CNPJ numbers, driver's license and federal doctor ID scans, facial photos and fingerprints -> Personal; inspection reports, complaint records, licensing/permit applications and backup archives -> Internal. No person count is given (102,215 is a file count), so no amount/data_total. The issue lists PHI, but the sources describe regulatory/sanitary compliance documents, not patient medical records, so Medical is not coded. State Stored unencrypted: sources say the database was not encrypted or password-protected. data_victim Customer (members of the public and businesses dealing with the regulator).\nTimeline: ExpressVPN post dated Aug 4, 2026; discovery date, exposure start and closure date not stated (closed 'shortly after' disclosure). Incident year 2026 (year only, from the publication) -> dbir_year 2027. Whether anyone else accessed the data is unknown.\nSecurity Affairs credits Hackread as the outlet ExpressVPN shared with; the Hackread article was not fetched.",
+    "created": "2026-11-05T22:18:59Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured database left public"
+      }
+    ],
+    "github": "24564",
+    "master_id": "A7B7BCF7-2D9A-4FFF-B90E-06157C0331D8",
+    "modified": "2026-11-05T22:18:59Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://securityaffairs.com/196766/data-breach/exposed-sisvisa-database-leaks-102000-brazilian-health-surveillance-records.html; https://www.expressvpn.com/blog/brazil-sisvisa-data-exposed/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Security researcher Jeremiah Fowler found a publicly accessible, non-password-protected and unencrypted database belonging to SISVISA (Sistema de Informacao da Vigilancia Sanitaria), a Brazilian health surveillance information system. It held 102,215 files (about 79 GB), including names, addresses, phone numbers, CPF/CNPJ tax IDs, scans of driver's licenses and federal doctor ID cards, facial photos and fingerprints, inspection reports, complaints, licensing documents and backup archives. Public access was restricted shortly after his disclosure notices to several government agencies, which did not reply. ExpressVPN published the findings on August 4, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "BR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Unknown"
+    ],
+    "industry": "923120",
+    "region": [
+      "019005"
+    ],
+    "victim_id": "SISVISA (Sistema de Informacao da Vigilancia Sanitaria)"
+  }
+}

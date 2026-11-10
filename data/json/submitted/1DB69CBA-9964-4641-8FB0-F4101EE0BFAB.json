@@ -1,0 +1,143 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 8724000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8724000,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1DB69CBA-9964-4641-8FB0-F4101EE0BFAB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24522\nPartner_Breach: coded from the service provider's perspective. Primary victim is Nippon Columbia Co., Ltd. (Nippon Columbia Group, 'NCG'), the contractor that processed customer personal data for Daiichi Kosho; the infected PC was NCG's. Daiichi Kosho Co., Ltd. is listed as the secondary victim (NAICS 713990, all other amusement and recreation: karaoke box operator, brands Big Echo, Mega Big, Banana Club, Karaoke Club DAM, B-Garage, DK Dining). Daiichi Kosho states its own network was not breached. No other NCG clients are named in any source.\nNAICS changed from 7139 (issue body; comments give 71/7131/713) to 512220 for the primary victim because the partner rule makes NCG (a music/video record label and entertainment group) the victim; 713990 is kept for Daiichi Kosho as secondary. 2017 NAICS used to match the corpus (512220 became 512250 in NAICS 2022).\nTemplate deviation (Hacking-ext-unknown): sources describe a malware infection on one NCG employee PC, not a hacking action, so this is coded as action.malware (variety Unknown, vector Unknown; family and delivery not disclosed) with integrity Software installation, and no hacking block. The issue also carries a 'Malware' label consistent with this. Asset U - Desktop or laptop: the issue body says 'laptop' but the articles say 'PC', so the parent value is used. Malware vector is Unknown, not Partner, because the malware struck the provider itself (as in the IDC Frontier partner record).\nAttribute: data_disclosure Potentially - neither company has confirmed data left NCG's environment ('cannot rule out the possibility that this data may have been leaked'). Data: names, gender, birth dates, email addresses, phone numbers; no payment, bank or password data. ~8,724,000 records total = ~8,631,000 customer records (after de-duplication) + ~93,000 employee records (SafeState/Shattered); data_victim Customer and Employee (the employee records appear to be Daiichi Kosho staff; sources do not say whose). Brand figures (Big Echo 5.6M, DK Dining 3.5M) add up to more than the total; sources do not explain the overlap.\nTimeline: malware found on the PC Oct 1-2, 2026 and the device isolated Oct 2; infection date unknown, so incident coded 2026-10 (month only) and discovery/compromise durations left Unknown. NCG reported to Daiichi Kosho Oct 5; Daiichi Kosho disclosed Oct 8 (update Oct 9). SafeState dates discovery to Oct 5 and isolation to Oct 6, which conflicts with the other sources; the Oct 1-2 dates from the company statement as quoted by Infosecurity/Cybernews were used. dbir_year 2027.\nDiscovery: internal, Unknown variety (NCG found the infection on its own device; how is not stated). Actor external, variety/motive/country Unknown; no actor named, no ransom or extortion reported.\nEmployee count for Nippon Columbia (101 to 1000) is an approximate figure not confirmed against a fetched source in this pass (web lookups were rate-limited); please verify. Hosting of the data store is Unknown.\nShattered.io (issue source) also covers unrelated incidents (DIVD/Zammad, Times Car) and mis-states the disclosure date as Oct 12; only its Daiichi Kosho content was used.\nConfidence Medium: malware family, vector and exfiltration unconfirmed.",
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "unk",
+        "summary": "Initial infection vector not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Malware installed on NCG employee PC"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Customer data on PC potentially accessed"
+      }
+    ],
+    "github": "24522",
+    "master_id": "1DB69CBA-9964-4641-8FB0-F4101EE0BFAB",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://shattered.io/daiichi-kosho-karaoke-data-breach-2026/; https://www.infosecurity-magazine.com/news/karaoke-giant-data-breach-eight/; https://cybernews.com/security/daiichi-kosho-data-breach-customers/; https://www.safestate.com/post/nippon-columbia-data-breach-exposes-8-6-million-records",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A malware infection on an employee PC at Nippon Columbia Group (NCG), a contractor that handled customer data for Japanese karaoke operator Daiichi Kosho, was found on October 1-2, 2026 and the device was isolated. Personal data temporarily stored on the PC for Daiichi Kosho work - names, gender, dates of birth, email addresses and phone numbers for about 8.63 million customers of Big Echo, DK Dining and other brands plus about 93,000 employee records (about 8.72 million records) - may have been leaked. Daiichi Kosho disclosed the incident on October 8, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "512220",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Daiichi Kosho Co., Ltd.; 713990"
+      ]
+    },
+    "victim_id": "Nippon Columbia Co., Ltd."
+  }
+}

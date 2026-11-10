@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1000000,
+          "variety": "Personal"
+        },
+        {
+          "amount": 1000000,
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1000000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "1BB4FFA6-1670-4B68-B71C-7C7731756809",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23225\nTemplate: Hacking-ext-unknown. Deviation: the affected asset is 'one system containing data on members' visits to clubs' (The Register); its type and hosting are not stated, so asset S - Unknown, hacking vector Unknown, cloud Unknown. How the attacker got in is still under investigation.\nVictim: Basic-Fit N.V., Hoofddorp, Netherlands (gym chain in NL, BE, LU, FR, ES, DE). NAICS 713940 (Fitness and Recreational Sports Centers) from the issue. Region 150155 (Western Europe). Employee count: Parqet lists 7,906 -> 1001 to 10000. Franchise operations and Clever Fit use separate systems and were not affected.\nTimeline: disclosed Monday April 13, 2026. The access was detected and stopped 'within minutes', and the exact date is not published. Incident coded April 2026 (assumed the same month as disclosure; could be slightly earlier). Containment Minutes (value not given). dbir_year 2027.\nDiscovery: Basic-Fit's 'system monitoring processes' detected the external access while data was being downloaded -> internal Infrastructure monitoring (closest enum to the description).\nData: names, home and email addresses, phone numbers, dates of birth, bank account details (Bank; Personal parent). No passwords or ID documents. About 1 million members per the spokesperson (The Register, BleepingComputer); about 200,000 in NL per the official notice. Exfiltration confirmed: 'external source... downloading details' (DutchNews) and exfiltration found by the investigation (BleepingComputer). Basic-Fit says the data has not been seen online; data_abuse omitted.\nSources: dropped the issue comment link https://b2b-cyber-security.de/tag/datenpanne/, which is a tag index page and not an article about this breach. The Reuters link was blocked for fetching; its content is quoted in the issue body. Added BleepingComputer and DutchNews.\nConfidence Medium: actor and method unknown.",
+    "created": "2026-10-08T16:48:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to member visit system, member data downloaded"
+      }
+    ],
+    "github": "23225",
+    "master_id": "1BB4FFA6-1670-4B68-B71C-7C7731756809",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.reuters.com/business/basic-fit-says-data-breach-exposes-details-200000-members-netherlands-2026-04-13/; https://www.globalbankingandfinance.com/basic-fit-data-breach-exposes-details-200-000-members/; https://www.theregister.com/2026/04/13/basicfit_breach/; https://b2b-cyber-security.de/gravierende-datenpannen-bei-booking-com-und-basic-fit/; https://www.bleepingcomputer.com/news/security/european-gym-giant-basic-fit-data-breach-affects-1-million-members/; https://www.dutchnews.nl/2026/04/hackers-steal-info-about-200000-basic-fit-members-in-nl/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unknown party gained unauthorized access to the system Basic-Fit uses to record members' club visits and downloaded member data before monitoring tools flagged it and the access was stopped within minutes. About 1 million members in the Netherlands, Belgium, Luxembourg, France, Spain and Germany were affected (about 200,000 in the Netherlands). Names, home and email addresses, phone numbers, dates of birth and bank account details were exposed. Basic-Fit disclosed it on April 13, 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "713940",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Basic-Fit"
+  }
+}

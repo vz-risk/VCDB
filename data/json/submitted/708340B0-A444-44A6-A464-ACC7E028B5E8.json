@@ -1,0 +1,128 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "unknown": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 13200000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 13200000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "708340B0-A444-44A6-A464-ACC7E028B5E8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23246\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Template Hacking-ext-unknown used, with asset S - Unknown and vector Unknown (no entry method known; the exchange's wallets were targeted, not a web app). Actor coded Unknown, not external Nation-state: Grinex blames 'foreign intelligence agencies' but Chainalysis disputes this and raises a possible insider/false-flag scenario. Hacking is kept as the action because the only account of events is a cyber-attack; reviewer may change if a later source confirms an insider. Actor block uses 'unknown' orientation.\nData: customer funds (1 billion rubles, about $13.2M) -> Virtual currency, data_victim Customer; impact $13.2M.\nVictim: Grinex, KG; NAICS 523999 (issue tag 52). Headcount Unknown. Only one source (Infosecurity Magazine) in the issue.\nTimeline: attack 'last week' relative to the April 2026 article -> 2026-04, dbir_year 2027.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to exchange wallets, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Customer stablecoins transferred out"
+      }
+    ],
+    "github": "23246",
+    "master_id": "708340B0-A444-44A6-A464-ACC7E028B5E8",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.infosecurity-magazine.com/news/crypto-exchange-grinex-western/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In April 2026 sanctioned Kyrgyzstan-based crypto exchange Grinex, believed to be the successor of Garantex, suspended operations after what it called a large-scale cyber-attack that stole about one billion rubles ($13.2 million) from Russian customers. Grinex blamed Western intelligence agencies, but Chainalysis noted the stolen stablecoins were quickly swapped into TRX through a Tron DEX previously used by Garantex and suggested the theft may have been a false flag covering an insider move of funds.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KG"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "142143"
+    ],
+    "victim_id": "Grinex"
+  }
+}

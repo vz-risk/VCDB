@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 399086,
+          "variety": "Medical"
+        },
+        {
+          "amount": 399086,
+          "variety": "Personal"
+        },
+        {
+          "amount": 399086,
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 399086,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "04829709-64CB-4C5F-B313-8ECB87C163A7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24500\nTemplate Error-int-publishing applied as drawn: internal actor, variety End-user, motive NA; Error / Publishing error, vector Unknown; asset S - Web application; data_disclosure Yes; discovery Unknown; event err/int/srv/cp. No source names who built or posted the reports, so End-user comes from the template, not from a source.\ndata_disclosure kept at Yes per the template (data posted on a public website). DHCF says it has 'no reason to believe anyone looked at or used' the data, and no source confirms access. A reviewer may prefer Potentially.\nData: Medicaid ID, provider name, and program enrollment coded as Medical (PHI reported to HHS OCR). DOB, gender, and ward coded as Personal. Race/ethnicity coded as Sensitive Personal. Names, SSNs, and financial account data were NOT exposed. Amount/data_total 399,086 (HHS OCR count). data_victim Patient (Medicaid/Alliance beneficiaries).\nTimeline: exposure began in 2023 (year only) and was discovered July 21, 2026, about 3 years, coded as discovery unit Years. HHS notified Sept 3, 2026 (the issue body says 'late September', but HIPAA Journal and shattered.io give Sept 3). dbir_year 2027 is derived from the more precise July 2026 discovery date, because the 2023 begin date is year-only. Discovery method unknown: DHCF only says it 'discovered' the problem.\nNAICS changed from 924 to 923130 because 924 is Administration of Environmental Quality Programs. DHCF is DC's Medicaid agency (Administration of Human Resource Programs). government Local per the issue label (the District is a municipal-level government). Employee count: DHCF ~350 FTEs (DC OCFO FY2024 budget chapter) -> 101 to 1000.\nSources: issue source (shattered.io); added HIPAA Journal, Security Affairs, SecurityWeek.\nConfidence High: all four A's are established from the victim's notice as reported by HIPAA Journal and SecurityWeek.",
+    "created": "2026-11-05T22:18:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Publishing error: record-level data hidden in public web reports"
+      }
+    ],
+    "github": "24500",
+    "master_id": "04829709-64CB-4C5F-B313-8ECB87C163A7",
+    "modified": "2026-11-05T22:18:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://shattered.io/dc-medicaid-dhcf-data-exposure-399086-2026/; https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/; https://securityaffairs.com/199926/data-breach/nearly-400000-medicaid-beneficiaries-caught-in-medicaid-and-dc-healthcare-alliance-data-exposure.html; https://www.securityweek.com/dc-health-agency-exposes-400000-beneficiary-records/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The District of Columbia Department of Health Care Finance (DHCF) found on July 21, 2026 that two public-facing reports on its website, which showed only aggregate Medicaid and DC Healthcare Alliance enrollment statistics, carried hidden record-level personal data that could be reached without authentication. The data covered 399,086 beneficiaries enrolled from 2023 to 2026: Medicaid ID numbers, dates of birth, provider names, race, gender, ward, and ethnicity. The reports had been publicly accessible since 2023. DHCF removed them and reported the breach to HHS on September 3, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Years",
+      "value": 3
+    },
+    "incident": {
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "923130",
+    "region": [
+      "019021"
+    ],
+    "state": "DC",
+    "victim_id": "District of Columbia Department of Health Care Finance"
+  }
+}

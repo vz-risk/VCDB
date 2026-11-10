@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Sprigatito"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "D62834DD-A6AB-4E17-90F1-DEC6E5F9E109",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22905\nVictim: Neighbourly, New Zealand hyper-local community social network, wholly owned by Stuff Group (Wellington; Stuff took full ownership in Nov 2017 per Wikipedia). Industry: the issue's NAICS line says 511120 (Periodical Publishers), which fits the parent Stuff but not the breached platform; coded 519130 (Internet Publishing and Broadcasting and Web Search Portals, the corpus-standard code for online community/social sites). Reviewer may prefer 511120. Employee count: Stuff headcount not published; coded 101 to 1000 inferred from Stuff being a mid-sized NZ media group (not sourced).\nActor: a threat actor using the alias 'Sprigatito' claimed the attack and listed a database of '213 million lines' (~150GB) for sale on a cybercrime forum/marketplace (SecurityBrief; RNZ says offered for sale over Christmas 2025, first reported by Daily Dark Web). Data for sale is a monetization signal -> motive Financial. Sprigatito appears to be a single forum alias with no documented group history, so variety left Unknown rather than Organized crime. Actor country Unknown.\nAction: SecurityBrief reports 'Stuff maintains that the security vulnerability used to access the data has been identified and closed'; Neighbourly's Q&A says it identified and addressed 'the issue that allowed the theft'. Coded hacking variety Exploit vuln (deviation from the Hacking-ext-unknown template's Unknown variety); the specific vulnerability is not named. Vector Web application and asset S - Web application kept from the template since Neighbourly is a web platform, but no source names the exploited component; reviewer may prefer Unknown variety/vector. Hosting not stated -> cloud Unknown.\nTimeline: Neighbourly says it became aware of the breach on January 1, 2026 and took the site offline; RNZ says the data was offered for sale over Christmas 2025, so access began on or before late December 2025; the begin date is not known. Coded incident year 2025 only. dbir_year 2027 derived from the Jan 1, 2026 discovery (later anchor) since the incident month is unknown. Site restored Jan 3-4, 2026; members emailed Jan 3. Stuff obtained a High Court (Auckland) injunction against unknown defendants on/after Jan 5, 2026.\nDiscovery: Neighbourly learned of the breach via claims of a breach (1News: taken down 'after claims of a data breach'), consistent with the actor's sale listing -> external Actor disclosure. Neighbourly does not say exactly how it learned; reviewer may prefer Unknown.\nData: names, email addresses, GPS coordinates derived from members' home addresses, some phone numbers, dates of birth (SecurityBrief), public posts and private member messages. Coded Personal (private messages and posts are members' personal content, not corporate Internal data). Passwords (hashed) and credentials reported not accessed. Member count: SecurityBrief/RNZ cite an expert estimate of 800,000-1,000,000 members; Neighbourly did not publish a count, so data amount/data_total omitted. The '213 million lines' figure is the seller's claim and not a person count. Encryption state not stated -> Stored.\ndata_abuse omitted: data was listed for sale but no source confirms downstream misuse; there was no extortion demand. Reviewer may consider 'Yes' given the sale listing.\nAvailability: Neighbourly took the site offline for about three days as a precaution; this was a victim response, not an attacker action, so no availability attribute coded.\nSources: all issue-linked URLs were checked and are about this incident. The stuff.co.nz link returned only metadata. Confidence Medium: attack method and actor details are thin.",
+    "created": "2026-10-08T16:49:21Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Exploit vuln in Neighbourly web platform (vulnerability not named)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member database copied and listed for sale"
+      }
+    ],
+    "github": "22905",
+    "master_id": "D62834DD-A6AB-4E17-90F1-DEC6E5F9E109",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://securitybrief.co.nz/story/neighbourly-data-breach-stuff-files-high-court-injunction; https://www.stuff.co.nz/nz-news/360920627/neighbourly-user-data-allegedly-sale-dark-web-after-breach; https://help.neighbourly.co.nz/hc/en-nz/articles/52524561335321-Q-A-regarding-Neighbourly-data-breach-03-01-2025; https://www.1news.co.nz/2026/01/03/neighbourly-confirms-data-breach-affecting-user-information/; https://www.rnz.co.nz/news/national/583175/be-very-very-suspicious-neighbourly-breach-makes-users-vulnerable-expert; https://www.rnz.co.nz/news/national/583124/neighbourly-users-private-information-up-for-sale-on-dark-web-after-a-breach; https://www.insurancebusinessmag.com/nz/news/cyber/community-social-network-confirms-cyber-incident-exposing-member-data-561258.aspx",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Attackers stole user data from Neighbourly, a New Zealand hyper-local community social network owned by Stuff Group, by exploiting a security vulnerability that Stuff says has since been closed. A seller using the alias Sprigatito listed about 150GB ('213 million lines') of Neighbourly data for sale on a cybercrime forum around Christmas 2025. Neighbourly learned of the breach on January 1, 2026, took the site offline for about three days, and told members on January 3 that names, email addresses, GPS coordinates derived from home addresses, some phone numbers, dates of birth, public posts and private messages were accessed. Stuff obtained a High Court injunction against use of the stolen data.",
+  "timeline": {
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "NZ"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "519130",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Neighbourly (Stuff Group)"
+  }
+}

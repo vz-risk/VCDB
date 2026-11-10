@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C55D403B-9CFA-44A3-979D-6ECF71C28037",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22916\nPartner_Breach rule applied: Global-e Online Ltd. (Israeli cross-border e-commerce / merchant-of-record platform; NAICS 541990 as an e-commerce services provider, reviewer may prefer 518210) is the primary victim; Ledger SAS (French hardware-wallet maker, NAICS 334118; issue gives 334110) is the secondary victim. Global-e's notice refers to brands and retailers generally, but no other merchant is named, so only Ledger is listed.\nTemplate Hacking-ext-unknown used; asset S - Unknown and vector Unknown (no entry point described) plus Partner. Data: names, contact info (and order data) -> Personal; no count disclosed. Motive Unknown.\nTimeline: begin date not disclosed; coded 2026-01 from the Jan 5 disclosure; dbir_year 2027. Headcount Unknown (not looked up; Global-e is roughly 1,000 staff).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to Global-e systems, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Merchant customer order data accessed"
+      }
+    ],
+    "github": "22916",
+    "master_id": "C55D403B-9CFA-44A3-979D-6ECF71C28037",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://siliconangle.com/2026/01/05/ledger-confirms-leak-customer-data-third-party-global-e-hack/; https://support.ledger.com/article/Global-e-Incident-to-Order-Data---January-2026; https://www.coindesk.com/markets/2026/01/05/crypto-wallet-firm-ledger-faces-data-breach-through-global-e-partner; https://www.bleepingcomputer.com/news/security/ledger-customers-impacted-by-third-party-global-e-data-breach/; https://www.dlnews.com/articles/web3/ledger-payments-partner-global-e-leaks-customer-data/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In early January 2026 e-commerce merchant-of-record platform Global-e notified customers of an incident involving unauthorized access to order data in its information systems. Hardware wallet maker Ledger confirmed that data of customers who bought on Ledger.com through Global-e, including names and contact information, was exposed; Ledger said its own platform, devices and customers' crypto assets were not affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541990",
+    "region": [
+      "142145"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Ledger; 334118"
+      ]
+    },
+    "victim_id": "Global-e Online Ltd."
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Lazarus Group (suspected)"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 308000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 308000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "7EFB23A6-92D9-45E9-B31D-67DCA8A6062A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21437\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). No template tag; coded like Hacking-ext-unknown with asset S - Other (exchange wallet) and vector Unknown. Attribution: suspected Lazarus (ZachXBT/Elliptic, not confirmed in this source; the FBI/NPA later attributed it to TraderTraitor per wider reporting) -> Nation-state KP. Availability Interruption: withdrawals restricted and business discontinued. Impact $308M. Victim DMM Bitcoin, JP; headcount Unknown. Issue also tagged Impact. Single source; reviewer may add the FBI/NPA attribution notice. dbir_year 2025.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "4,502.9 BTC stolen"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Withdrawals halted, business wound down"
+      }
+    ],
+    "github": "21437",
+    "master_id": "7EFB23A6-92D9-45E9-B31D-67DCA8A6062A",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/japanese-crypto-service-shuts-down",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On May 31, 2024 hackers stole 4,502.9 bitcoin (about $308 million) from Japanese crypto exchange DMM Bitcoin. The company never publicly explained how; ZachXBT and Elliptic linked the theft to North Korea's Lazarus Group based on laundering patterns. DMM Bitcoin borrowed 55 billion yen to cover the loss, Japan's FSA found serious risk management failures, and in November 2024 the company agreed to transfer all accounts to SBI VC Trade and shut down.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 31,
+      "month": 5,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523150",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "DMM Bitcoin"
+  }
+}

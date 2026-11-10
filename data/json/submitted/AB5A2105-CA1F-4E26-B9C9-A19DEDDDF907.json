@@ -1,0 +1,120 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - ICS"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Hours",
+        "value": 12
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "AB5A2105-CA1F-4E26-B9C9-A19DEDDDF907",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24202\nSecond record for issue 24202 (see the Cape May Sewer Department record).\nPart of the coordinated July 26-28, 2026 attacks on internet-exposed operational technology at US water and wastewater systems (30+ systems in Minnesota plus Georgia, Michigan, New Jersey and other states; the FBI says at least seven states). CISA's July 30 alert and its July 2026 update describe Iranian-affiliated actors targeting internet-facing PLCs (Rockwell, Schneider, Siemens), changing passwords and IP addresses to lock operators out and, for the first time, stealing PLC project files. No federal or state attribution has been made; experts suspect Iran's IRGC (pattern consistent with CyberAv3ngers per Tenable), so the actor is coded external Unknown with motive Unknown, and the suspicion is only noted. Method at this specific utility is not public, so hacking variety and vector are Unknown (the campaign generally used internet-exposed devices with default or weak credentials). Template Hacking-ext-unknown used for actor/action only; no data theft was reported, so no confidentiality block, and the asset is the control system with role OT rather than a web application. Consider linking all the July 2026 water records with one campaign_id.\nImpact: Security Affairs (citing Fox29) says both NJ systems were impacted for about 12 hours with water running throughout; the specific change at Woodbine is not described (Cape May's manager described settings changed to block remote access), so integrity Unknown and availability Interruption, 12 hours.\nDiscovery: not described, so Unknown.\nVictim: Borough of Woodbine, Cape May County, NJ (small borough). NAICS 221310. Government Local; employee count an estimate.",
+    "created": "2026-11-09T19:39:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to water control system (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems impacted for about 12 hours"
+      }
+    ],
+    "github": "24202",
+    "master_id": "AB5A2105-CA1F-4E26-B9C9-A19DEDDDF907",
+    "modified": "2026-11-09T19:39:57Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.npr.org/2026/08/12/nx-s1-5927437/cyberattack-water-iran-war; https://www.opb.org/article/2026/08/12/cyberattacks-on-the-u-s-water-sector-are-exposing-vulnerabilities-during-iran-war/; https://securityaffairs.com/?p=197012",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Early on July 27, 2026 attackers hit the control systems of the Borough of Woodbine Water Department in New Jersey, nearly simultaneously with an attack on the City of Cape May Sewer Department. The system was impacted for about 12 hours while water kept running, post-incident tests showed no effect on water quality, and customer data was not accessed. The incidents were part of coordinated attacks on internet-exposed water-sector operational technology in at least seven states.",
+  "timeline": {
+    "incident": {
+      "day": 27,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Local"
+    ],
+    "industry": "221310",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "Borough of Woodbine Water Department"
+  }
+}

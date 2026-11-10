@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "539051A0-D1FD-400F-BBA7-92FFE3424C48",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24659\nPartner_Breach rule applied: Amplitude (product analytics SaaS, NAICS 518210; the comments' codes 5182/5112/54 point the same way) is the primary victim; Coinbase (NAICS 523150 crypto exchange; issue tag NAICS 52) is the secondary victim. Amplitude says other customers were hit but none are named, so only Coinbase is listed. The issue headline also names Bithumb, Daishin and Mirae Asset, but those are separate, unrelated Korean leaks in a roundup article and are not part of this incident (each needs its own issue).\nTemplate Hacking-ext-unknown used, with deviations: asset S - Unknown and vector Unknown rather than Web application, since no source says how Amplitude was accessed; vector Partner added for the propagation to Coinbase. Cloud Unknown.\nData: emails and phone numbers -> Personal. No count: SlowMist's 70,000+ is unconfirmed by Coinbase, so no amount or data_total. Motive Unknown (no ransom/sale reported). Discovery Unknown.\nTimeline: begin date not disclosed; coded 2026-10 from the Oct 27 disclosure, dbir_year 2027. Employee count Unknown (not looked up; Amplitude is roughly 700 staff, which would be 101 to 1000).",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to Amplitude systems, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer contact data of Amplitude clients exposed"
+      }
+    ],
+    "github": "24659",
+    "master_id": "539051A0-D1FD-400F-BBA7-92FFE3424C48",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://crypto.news/coinbase-bithumb-daishin-mirae-asset-hit-by-data-leaks-what-crypto-users-should-know/; https://cryptobriefing.com/coinbase-denies-breach-amplitude-incident/; https://financefeeds.com/coinbase-denies-direct-data-breach-confirms-customer-information-exposed-through-analytics-vendor/; https://www.indiatoday.in/technology/news/story/coinbase-confirms-security-breach-reports-says-user-funds-remain-safe-3026631-2026-10-28; https://de.tradingview.com/news/cointelegraph:0421f845e600c:0/; https://finance.yahoo.com/markets/crypto/articles/coinbase-hit-another-data-leak-083907665.html; https://de.beincrypto.com/coinbase-amplitude-vorfall-kundendaten/; https://startupfortune.com/coinbases-third-party-vendor-problem-strikes-again-with-amplitude-leak/; https://decrypt.co/382009/coinbase-amplitude-data-breach-contact-data-funds-not-impacted",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late October 2026 Coinbase said a security incident at its third-party analytics vendor Amplitude exposed contact information (emails and phone numbers) for a small subset of Coinbase customers, along with data belonging to other Amplitude customers. Coinbase said its own systems and customer funds were not affected. SlowMist claimed more than 70,000 users were involved, which Coinbase has not confirmed. Amplitude has not disclosed how its systems were accessed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Coinbase; 523150"
+      ]
+    },
+    "victim_id": "Amplitude"
+  }
+}

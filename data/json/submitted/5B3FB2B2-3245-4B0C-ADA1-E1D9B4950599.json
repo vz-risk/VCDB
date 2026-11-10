@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 627,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 627,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "5B3FB2B2-3245-4B0C-ADA1-E1D9B4950599",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24439\nIssue data problem: #24439 is titled H.I.S. but its body (and record count 14.64M) is a copy of the Adventure/skyticket text from #24438. The linked Japan Times article ('Data leaks at travel companies...', Oct 9, 2026) covers several travel companies; H.I.S. Co., Ltd. disclosed its own breach on Oct 7, 2026, so this record codes the H.I.S. incident from TravelVoice and ITmedia @IT. The skyticket facts are in the separate Adventure record (#24438/#24463).\nFacts: unauthorized third-party access to a file server of H.I.S. TOURS CO., LTD. (Thai subsidiary). Intrusion-detection software alerted Dec 11, 2025; network cut off. Dec 29, 2025 server found to hold some personal data collected in Japan; reported to Japan's PPC and JIPDEC. Feb 24, 2026 external experts confirmed passport files. Public disclosure Oct 7, 2026 after manual review of all files. Data: passport details (romanized name, signature name, gender, DOB, passport number, expiry) and allergy information for up to 627 customers who departed for Thailand with H.I.S. in 2017, 2019-2020 and 2024-2025. No phone, address, email or card data.\nVictim: coded as the Thai subsidiary (owner/operator of the breached server), country TH; parent H.I.S. Co., Ltd. (JP) made the disclosure. Reviewer may prefer parent H.I.S. Co., Ltd., JP. Employee count of the Thai subsidiary not found -> Unknown (parent H.I.S. group is roughly 10,000+).\nNAICS: issue gave 5615; coded 561510 (Travel Agencies).\nTemplate Hacking-ext-unknown deviations: vector Unknown instead of Web application and asset S - File instead of S - Web application, because the source names a file server and no web-application vector. Discovery coded internal / Other (alert from 'unauthorized-access detection software'; HIDS vs NIDS not stated) instead of Unknown.\nData: Personal 627 (passport data), Medical (allergy information; count not separated). data_disclosure Yes: unauthorized access to the server confirmed; company says data 'may have been' taken (not proven exfiltrated), so result is Infiltrate only.\nTimeline: begin date not published; coded Dec 2025 from the Dec 11, 2025 detection alert (actual intrusion could be earlier). dbir_year 2027 (Dec 2025 falls after the Oct 31 cutoff); if a later source shows the intrusion began before Nov 1, 2025 the dbir_year would be 2026. Discovery lag from intrusion unknown.\nActor External, variety/motive/country Unknown (no actor, demand or misuse reported).\nJapan Times link was not accessible (not read directly).\nConfidence Medium: action and actor unknown; victim-sourced facts otherwise solid.",
+    "created": "2026-11-05T22:19:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "File server accessed; passport/allergy data exposed"
+      }
+    ],
+    "github": "24439",
+    "master_id": "5B3FB2B2-3245-4B0C-ADA1-E1D9B4950599",
+    "modified": "2026-11-05T22:19:07Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.japantimes.co.jp/business/2026/10/09/tech/travel-companies-data-breach/; https://www.travelvoice.jp/20261007-160643; https://atmarkit.itmedia.co.jp/ait/articles/2610/10/news006.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A third party gained unauthorized access to a file server of H.I.S. TOURS CO., LTD., the Thai subsidiary of Japanese travel company H.I.S. Co., Ltd. Intrusion-detection software alerted on December 11, 2025 and the server was disconnected. Passport details (name, signature name, gender, date of birth, passport number, expiry) and allergy information of up to 627 customers who travelled to Thailand with H.I.S. may have been taken. H.I.S. disclosed the incident on October 7, 2026 after a lengthy manual review of the server's files.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "TH"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "561510",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "H.I.S. TOURS CO., LTD. (Thailand subsidiary of H.I.S. Co., Ltd.)"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 400000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 400000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1829E10E-61A8-4ABB-80D6-FF6887675567",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24433\nCloses https://github.com/vz-risk/VCDB/issues/24467\nCoded with the Hacking-ext-unknown template (issue tag). Attack method was not disclosed beyond unauthorized access to the online customer portal, so hacking variety is Unknown with vector Web application; asset S - Web application per template.\nPrimary victim: Georgia Power (largest affected population, issue headline). The portal is described as Southern Company's customer portal shared by its utilities; Alabama Power (~100,000 customers per ABC 33/40) and Mississippi Power (named by the AJC and in the issue comment; no count reported) are recorded as secondary victims. ABC 33/40 attributes all ~100,000 non-Georgia records to Alabama Power and does not mention Mississippi.\nIndustry: NAICS 2211 from the issue body / NAICS 22 label. Employee count: 7,760 employees (georgiapower.com Facts & Figures, 2025) -> 1001 to 10000.\nTimeline: AJC (Oct 6, 2026) says the portal was hit \"last week\"; exact begin date not disclosed, so only year 2026 is coded. dbir_year 2027 derived from year-only incident date.\nDiscovery: company says it detected the activity through ongoing monitoring -> internal; the specific detection control was not named, so variety Unknown.\nData: names, addresses, phone numbers, email addresses, last four SSN digits, other basic account details (Personal). Bank, payment card and driver's license numbers were not affected. The issue body's \"account numbers\" and \"billing information\" were not confirmed by the sources read. data_total 400,000 (300,000 Georgia + ~100,000 sister utilities). Encryption state not stated -> Stored.\nActor: unidentified \"unauthorized third party\"; no monetization signal, so motive Unknown. Exfiltration not explicitly stated (sources say \"accessed\"), so result is Infiltrate only.\nSources: ajc.com (issue link), atlantanewsfirst.com, abc3340.com.\nMerged duplicate: issue 24467 (Alabama Power, ~100,000 accounts, same Southern Company customer portal breach) is already covered here as secondary victim Alabama Power; its sources were added to reference.",
+    "created": "2026-10-08T15:57:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to customer portal; customer data accessed"
+      }
+    ],
+    "github": "24433",
+    "master_id": "1829E10E-61A8-4ABB-80D6-FF6887675567",
+    "modified": "2026-11-09T19:41:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.ajc.com/business/2026/10/georgia-power-data-breach/; https://www.atlantanewsfirst.com/2026/10/05/georgia-power-targeted-by-hackers-company-says/; https://abc3340.com/news/local/100000-alabama-power-customers-affected-in-southern-company-data-breach-draft-10-05-2026-october; https://www.wbrc.com/2026/10/05/about-100000-alabama-power-accounts-affected-by-southern-company-data-breach/; https://www.wbrc.com/2026/10/05/nearly-100000-alabama-power-accounts-affected-by-southern-company-data-breach/; https://www.al.com/news/2026/10/potential-data-breach-possibly-affected-as-many-as-400000-alabama-power-customers.html; https://mynbc15.com/news/local/alabama-power-says-100000-customers-affected-by-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized third party accessed Southern Company's online customer portal, exposing names, addresses, phone numbers, email addresses, last four digits of Social Security numbers and other basic account details for about 300,000 Georgia Power customers and about 100,000 customers of sister utilities Alabama Power and Mississippi Power. The company detected the activity through monitoring, stopped the access, notified law enforcement and offered free credit monitoring.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "2211",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 2,
+      "victim_id": [
+        "Alabama Power; 2211",
+        "Mississippi Power; 2211"
+      ]
+    },
+    "state": "GA",
+    "victim_id": "Georgia Power"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "VPN"
+      ]
+    },
+    "malware": {
+      "name": "DynoWiper",
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Destroy data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "name": [
+        "Static Tundra",
+        "Sandworm"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - Firewall"
+      },
+      {
+        "variety": "N - Remote access"
+      },
+      {
+        "variety": "N - RTU"
+      },
+      {
+        "variety": "S - ICS"
+      },
+      {
+        "variety": "N - Other"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT",
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Destruction",
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Modify configuration",
+        "Hardware tampering"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "80971154-0330-41EF-9DD1-250A3DDD0F56",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23006\nSecond record for issue 23006 (the first is the large CHP plant). NEEDS YOUR CALL: the 30+ wind and PV farms are separate organizations, and VERIS would normally give each its own record. The operators are not named, so they are coded here as one aggregate record. Delete this record if you would rather count only the CHP plant from this issue.\nAccess: CERT Polska says internet-exposed FortiGate VPN concentrators/firewalls allowed authentication to configured accounts without MFA -> hacking Use of stolen creds, vector VPN (how the account credentials were obtained is not stated; Hacker News notes a vulnerable FortiGate may also have been exploited at a grid connection point).\nDestructive actions: corrupted firmware uploads, deleted operating files, factory resets of RTUs, relays, HMIs and Moxa serial servers, and at least four DynoWiper variants on Mikronika HMIs. Coded malware Destroy data (DynoWiper, Direct install), integrity Software installation, Modify configuration and Hardware tampering (firmware corruption), availability Destruction and Interruption (loss of communication with the DSO). Generation was not affected. No data theft reported, so no confidentiality block.\nAsset role OT and IT: RTUs, relays, HMIs and substation equipment are OT; the FortiGate edge devices are IT. Hitachi Energy said its RTU560 devices ran outdated firmware with default credentials.\nActor: same campaign as the CHP plant (CERT Polska -> Static Tundra / FSB Center 16; ESET and Dragos -> Sandworm). Motive Other (sabotage); no data theft here.\nTimeline: December 29, 2025 -> dbir_year 2027 (Nov/Dec rule).\nDiscovery: not described for the farms, so Unknown.\nNAICS 22111 (electric power generation; wind is 221115 and solar 221114). Employee count unknown.",
+    "created": "2026-11-09T19:33:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "Use of stolen creds on FortiGate VPN without MFA"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "Corrupted firmware and DynoWiper deployed to RTUs/HMIs"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "au",
+        "summary": "Devices destroyed; communication with DSO lost"
+      }
+    ],
+    "github": "23006",
+    "master_id": "80971154-0330-41EF-9DD1-250A3DDD0F56",
+    "modified": "2026-11-09T19:33:29Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/sandworm-hackers-linked-to-failed-wiper-attack-on-polands-energy-systems/; http://www.gov.pl/web/primeminister/poland-stops-cyberattacks-on-energy-infrastructure/; https://thehackernews.com/2026/01/poland-attributes-december-cyber.html; https://www.helpnetsecurity.com/2026/02/06/poland-cyberattacks-energy-sector-industrial-organizations/; https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On December 29, 2025 attackers linked to the Russian state hit at least 30 Polish wind and photovoltaic farms at their grid connection substations. They entered through internet-exposed FortiGate firewall/VPN devices that allowed logins without MFA, then damaged operational equipment from Hitachi Energy, Mikronika and Moxa (RTUs, protection relays, HMI computers, serial device servers) by uploading corrupted firmware, deleting files, factory-resetting devices and running DynoWiper on Mikronika HMIs. Communication between the facilities and the distribution system operators was lost, reducing monitoring and remote control, but electricity generation continued.",
+  "timeline": {
+    "incident": {
+      "day": 29,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "PL"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "22111",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "Multiple Polish wind and solar farm operators (30+ sites)"
+  }
+}

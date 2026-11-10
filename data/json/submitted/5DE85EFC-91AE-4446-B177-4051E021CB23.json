@@ -1,0 +1,161 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Insomnia"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 169626,
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "5DE85EFC-91AE-4446-B177-4051E021CB23",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23871\nCoded from the Hacking-ext-unknown template (issue tag), extended because sources name the actor: the Insomnia group claimed the attack in February 2026 and listed ACLA on its data leak site (teiss.co.uk). Insomnia is a data-theft-only extortion operation with no encryptor (HivePro advisory), so no malware is coded; actor coded Organized crime / Financial with name Insomnia. Attribution is attacker-claimed; ACLA's notice does not address the claim.\nExtortion coded under action.social because a leak-site listing is a threat to publish stolen data; no ransom amount disclosed and payment status unknown. Social target and vector Unknown; P - Unknown asset and integrity Alter behavior added per extortion coding rules. data_abuse \"Yes - Data ransomed\" because of the leak-site listing; whether the data was actually published is not stated.\nDeviation from template: sources describe access to ACLA's internal network, not a web application, so hacking vector is Unknown and the server asset is S - Unknown (template default is Web application / S - Web application). Insomnia's documented initial access is stolen/infostealer credentials or auth-bypass, but that is not confirmed for this victim, so hacking variety stays Unknown.\nACLA (Anatomic and Clinical Laboratory Associates P.C.), Nashville TN, physician-owned pathology/clinical lab. Industry 621511 (Medical Laboratories) from the issue body's NAICS 6215. Employee count not found -> Unknown.\nTimeline: suspicious activity detected Dec 1, 2025; the start of the intrusion is not disclosed, so the detection date is used as the incident date (the true begin date may be earlier). dbir_year 2027 from Dec 2025. Data review completed Apr 27, 2026; notices mailed June 23, 2026.\nDiscovery: ACLA identified anomalous activity in its own network (before Insomnia's February claim) -> internal, variety Unknown.\nData: names, DOB, SSN, taxpayer ID (Personal); dates of service, provider names, diagnoses, conditions, treatment, medical history, MRN, patient account numbers (Medical). 169,626 individuals per HHS; teiss headline says patients and employees, no split given. ACLA says files were downloaded -> Exfiltrate. Encryption state not stated -> Stored.\nIssue comments linking ZenPatient (edelson-law.com, classactionu.org) are about an unrelated breach (ZenPatient is a separate CA telehealth vendor per HIPAA Journal) and were not used or cited.\nSources: hipaajournal.com (issue link), teiss.co.uk (two articles), hivepro.com (actor profile).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T16:34:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Network access; method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files downloaded"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak-site listing"
+      }
+    ],
+    "github": "23871",
+    "master_id": "5DE85EFC-91AE-4446-B177-4051E021CB23",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/tennessee-pathology-group-data-breach/; https://www.teiss.co.uk/news/insomnia-ransomware-group-announces-major-data-theft-from-tennessee-pathology-lab-17739; https://www.teiss.co.uk/news/tennessee-lab-reports-data-breach-affecting-nearly-170000-patients-and-employees-17911; https://www.hivepro.com/threat-advisory/insomnia--data-theft-extortion-operation-targeting-us-healthcare",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Anatomic and Clinical Laboratory Associates (ACLA), a physician-owned pathology lab in Nashville, Tennessee, detected suspicious activity on its network on December 1, 2025. An unauthorized actor accessed the network and downloaded files containing names, dates of birth, Social Security numbers and medical information for 169,626 patients and employees. The Insomnia data-extortion group claimed the attack in February 2026 and listed ACLA on its leak site.",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621511",
+    "region": [
+      "019021"
+    ],
+    "state": "TN",
+    "victim_id": "Anatomic and Clinical Laboratory Associates"
+  }
+}

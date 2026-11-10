@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 285086,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 285086,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "B08C6C7A-9B20-4882-9055-6EB3F19A5979",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23240\nTemplate: Hacking-ext-unknown. Deviation: the notice describes unauthorized access to NTBHA's network, not a web application, so asset is S - Unknown and hacking vector Unknown (no method named). Hacking variety Unknown per template. No threat actor has claimed it (HIPAA Journal) and no ransomware is mentioned.\nVictim: North Texas Behavioral Health Authority, Dallas TX, the local behavioral health authority contracted by Texas HHSC for Dallas, Ellis, Hunt, Kaufman, Navarro and Rockwall counties. Industry 923120 (Administration of Public Health Programs) from the issue. government Regional per the issue's 'regional' note and NAICS 92-Regional tag; reviewer may confirm NTBHA's governmental status. Employee count: Built In lists 125 -> 101 to 1000.\nTimeline: access October 13-15, 2025; detected on or about October 15, 2025 (discovery 2 days). Personal information confirmed January 7, 2026; letters from March 6, 2026; HHS listing April 2026. dbir_year 2026 (incident Oct 2025, before the Oct 31 cutoff).\nData: the notice says files with personal information were accessed and removed, including SSNs for some people, and gives medical identity theft guidance. HHS OCR listing and Breaking News ABA say health information was exposed -> Personal + Medical. 285,086 per HHS OCR (via HIPAA Journal / Breaking News ABA). data_victim Patient. Encryption not stated -> Stored.\nDiscovery: NTBHA detected the unauthorized access itself -> internal, variety Unknown. NTBHA says it has no indication of fraud; data_abuse omitted.\nSources: the issue's 'Additional Source' (breakingnewsaba.com, Balance Autism settlement article) is mainly about a different breach but does include a short NTBHA paragraph that matches (285,086, October 13-15, 2025), so it is kept. HIPAA Journal added as an independent source. The HHS OCR portal link in the issue body is a generic search page and is not cited. PHIDBR label ignored.\nConfidence Medium: actor and method unknown.",
+    "created": "2026-10-08T16:48:22Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized network access, files removed (method not disclosed)"
+      }
+    ],
+    "github": "23240",
+    "master_id": "B08C6C7A-9B20-4882-9055-6EB3F19A5979",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/data-breaches-at-healthcare-organizations-in-illinois-and-texas-affect-600000/amp/; https://ntbha.org/wp-content/uploads/2026/03/Notice-Data-Security-Incident.pdf; https://breakingnewsaba.com/technology/balance-autism-agrees-pay-290-000; https://www.hipaajournal.com/north-texas-behavioral-health-authority-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized third party accessed the network of North Texas Behavioral Health Authority, a Dallas-based local behavioral health authority, between October 13 and 15, 2025, and removed some files. NTBHA detected the activity around October 15, 2025. By January 7, 2026 it had found that the files held personal information, including Social Security numbers for some people. It began notifying people on March 6, 2026 and reported 285,086 affected individuals to HHS OCR.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 13,
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923120",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "North Texas Behavioral Health Authority"
+  }
+}

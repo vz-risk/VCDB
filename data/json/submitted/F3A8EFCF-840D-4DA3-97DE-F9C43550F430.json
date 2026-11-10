@@ -1,0 +1,180 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1241020,
+          "variety": "Personal"
+        },
+        {
+          "amount": 87493,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1241020,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "F3A8EFCF-840D-4DA3-97DE-F9C43550F430",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22947\nCoded from the Malware-ext-Ransomware-databreach template (issue tag). All issue-linked sources (SecurityWeek, HIPAA Journal, Paubox, Hackread, UH report to the Legislature) verified to be about this incident.\nVictim: University of Hawaii Cancer Center (UHCC), Epidemiology Division research servers. NAICS 541712 from the issue (research and development in life sciences) kept, since the affected systems were research servers and clinical/EMR systems were unaffected. UH is a state university but VERIS victim.government is only set for NAICS 92 -> ['NA']. US/HI. Employee count Unknown (no headcount for the Cancer Center found).\nTimeline: UH identified the incident on or about 31 Aug 2025 (UH legislative report; HIPAA Journal). Access begin date not disclosed; incident coded 2025-08 (month only, begin may be earlier); dbir_year 2026. UH reported to the Legislature in Dec 2025 and notified individuals from late Feb 2026.\nAction: unnamed ransomware group encrypted research files and exfiltrated research files; UH 'engaged with the threat actors' and (per AP via Hackread/Paubox/HIPAA Journal) paid an undisclosed ransom for a decryption tool and assurances the stolen data was destroyed. Added action.social Extortion (P - Unknown, Alter behavior) beyond the template because the payment was explicitly to prevent publication of stolen data; data_abuse 'Yes - Data ransomed'. Initial access vector not disclosed -> malware vector Unknown, event 1 unk/ext/srv/unk. Actor name Unknown; Hackread mentions a separate 2023 NoEscape claim against UH which is not linked to this incident.\nDiscovery: not stated how; coded Actor disclosure per template since encryption + ransom demand would announce it (assumption).\nData: Multiethnic Cohort study participants (1993-1996): names, addresses, SSNs, driver's license numbers, some health info; plus 1998 Honolulu voter registration and 2000 Hawaii DOT records with names, DL numbers and SSNs. Counts: 87,493 study participants mailed letters + 1,153,527 additional individuals (HIPAA Journal 2 Mar 2026 update; Hackread reports 1.24 million total). data_total 1,241,020 = sum; possible overlap not explained by sources. Medical amount set to 87,493 (study participants with health info).\nRansom amount unknown, so no impact block.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-10-08T21:56:26Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Research files copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Files encrypted"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion; ransom paid"
+      }
+    ],
+    "github": "22947",
+    "master_id": "F3A8EFCF-840D-4DA3-97DE-F9C43550F430",
+    "modified": "2026-10-09T16:23:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/hackers-accessed-university-of-hawaii-cancer-center-patient-data-they-werent-immediately-notified/; https://www.hawaii.edu/govrel/docs/reports/2026/hrs487n-4_2026_cancer-center-exposure_report_508.pdf; https://www.hipaajournal.com/university-of-hawaii-cancer-center-ransomware-data-breach/; https://www.paubox.com/blog/uh-cancer-center-confirms-patient-data-stolen-in-ransomware-attack; https://hackread.com/ransomware-breach-university-of-hawaii-cancer-center/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In August 2025 an unnamed ransomware group breached University of Hawaii Cancer Center research servers in the Epidemiology Division, encrypted files and stole research files. The stolen files contained names, Social Security numbers, driver's license numbers and some health information of Multiethnic Cohort study participants, plus historical voter-registration and DOT records. UH identified the attack on about August 31, 2025 and paid the attackers for a decryptor and assurances that the data was destroyed. About 1.24 million people were notified starting in February 2026.",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541712",
+    "region": [
+      "019021"
+    ],
+    "state": "HI",
+    "victim_id": "University of Hawaii Cancer Center"
+  }
+}

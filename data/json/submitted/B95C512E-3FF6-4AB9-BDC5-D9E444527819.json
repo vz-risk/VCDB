@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 11180000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 11180000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B95C512E-3FF6-4AB9-BDC5-D9E444527819",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24548\nTemplate Hacking-ext-unknown applied: external actor, hacking variety Unknown. BK Japan has not disclosed the attack method (external specialists are investigating the initial access vector); no vulnerability, stolen credentials, ransomware or extortion reported. Vector Web application and asset S - Web application follow the template: the compromised system is the member-information management system behind the official BK Japan smartphone app (sources do not say whether it is cloud-hosted or vendor-operated; no vendor is named, so the partner rule does not apply).\nVictim: BK Japan (\u30d3\u30fc\u30b1\u30fc\u30fb\u30b8\u30e3\u30d1\u30f3\u682a\u5f0f\u4f1a\u793e), operator of Burger King restaurants in Japan. NAICS refined from 7221 (issue) to 722513 Limited-service restaurants. Employee count Unknown: not established from a source in this pass (web lookups were rate-limited).\nData: about 11.18 million app member records (company notes this is not a count of unique individuals): member IDs, names (kanji and kana), email addresses, phone numbers, dates of birth, gender, prefecture, registration type, mobile-order usage and email-verification status. No card data (not held); no confirmed password exposure. Coded Personal, amount and data_total 11,180,000, data_victim Customer. data_disclosure Yes: the company confirmed the information leak on Oct 13. No misuse confirmed (as of a Nov 3 update cited by shattered.io), so data_abuse not coded.\nTimeline: unauthorized access Oct 2-7, 2026; leak confirmed Oct 13; disclosed Oct 15 and reported to the Personal Information Protection Commission. Incident 2026-10-02; discovery Days (11 days from first access); dbir_year 2027. Discovery method not stated -> Unknown. Motive Unknown (no monetization signal).\nSources: MLex (issue), Mainichi, CyberSecurityNews and shattered.io (comments). Mainichi could not be fetched (blocked) but is kept as an issue-linked source on this incident.\nConfidence Medium: action variety and vector unknown.",
+    "created": "2026-11-05T22:17:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen from app member system"
+      }
+    ],
+    "github": "24548",
+    "master_id": "B95C512E-3FF6-4AB9-BDC5-D9E444527819",
+    "modified": "2026-11-05T22:17:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.mlex.com/mlex/articles/2538742/japan-s-burger-king-reports-data-breach-affecting-11m-app-accounts; https://mainichi.jp/english/articles/20261015/p2g/00m/0bu/042000c; https://cybersecuritynews.com/burger-king-japan-data-breach/; https://shattered.io/burger-king-japan-app-breach-11-million-records-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An unauthorized third party accessed the member-information management system behind BK Japan's official Burger King Japan smartphone app between October 2 and October 7, 2026. BK Japan confirmed the leak on October 13 and disclosed it on October 15: about 11.18 million app member records were exposed, including member IDs, names, email addresses, phone numbers, dates of birth, gender and prefecture. No card data was stored on the system and no password exposure has been confirmed. The attack method has not been disclosed.",
+  "timeline": {
+    "compromise": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 11
+    },
+    "incident": {
+      "day": 2,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "722513",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "BK Japan"
+  }
+}

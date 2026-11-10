@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Partner",
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - Secrets vault"
+      },
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)",
+      "Other"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify privileges",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 25000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 25000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "EC86D5E9-C428-45D8-9229-C8D58909041D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23121\nCrypto-theft coding convention used throughout this batch: stolen funds coded as confidentiality data variety Virtual currency (data_victim Victim organization unless customer wallets were drained), integrity Fraudulent transaction for the unauthorized transfers, and the USD loss in impact (Asset and fraud). Tag Hacking-ext-exploit-vuln not followed: early reports guessed a minting-contract bug, but Resolv's post-mortem says the root cause was credential compromise (contractor-linked third-party project -> GitHub credentials -> malicious workflow -> cloud signing-key access policy changed). Coded hacking Use of stolen creds, vectors Partner (entry through a contractor-linked project) and Other; integrity Modify privileges (access policies changed) and Fraudulent transaction (80M USR minted and sold). Assets: S - Code repository (GitHub), S - Secrets vault (signing key; the exact cloud service is not named, closest enum), S - Other (minting contract). Cloud External Cloud Asset(s).\nThe contractor's third-party project was the entry point, so a provider perspective could be argued, but it is unnamed and the issue is not tagged Partner_Breach; Resolv kept as primary victim.\nData: about $25M extracted -> Virtual currency; credentials -> Credentials. Discovery: Resolv says its monitoring flagged the activity -> internal Infrastructure monitoring.\nVictim country/headcount Unknown. dbir_year 2027. Main detail source is a KuCoin news flash summarizing the post-mortem; the post-mortem itself was not read.",
+    "created": "2026-11-05T23:06:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Contractor-linked GitHub credentials used to reach repos"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Malicious workflow harvests more credentials"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Signing-key access policy modified"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "80M USR minted and swapped for ~$25M ETH"
+      }
+    ],
+    "github": "23121",
+    "master_id": "EC86D5E9-C428-45D8-9229-C8D58909041D",
+    "modified": "2026-11-05T23:06:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.binance.com/en/square/post/304349927775713; https://www.kucoin.com/news/flash/resolv-postmortem-reveals-25m-crypto-drain-via-credential-exploitation",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 22, 2026 an attacker minted 80 million unbacked USR stablecoins from the Resolv protocol after depositing about 200,000 USDC, then swapped them for about $25 million in ETH, breaking USR's peg. Resolv's post-mortem says attackers first compromised a third-party project tied to a contractor account, exposing GitHub credentials; they used these to reach internal repositories, deployed a malicious workflow to collect more credentials, mapped the cloud infrastructure and changed access policies tied to a signing key used for minting.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 22,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Resolv Labs"
+  }
+}
