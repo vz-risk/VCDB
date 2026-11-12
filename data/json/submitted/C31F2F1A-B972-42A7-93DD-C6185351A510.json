@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3400,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3400,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C31F2F1A-B972-42A7-93DD-C6185351A510",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23762\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (SportsMed PT, LLC; NJ; Healthcare Provider; 3,400; submitted 2026-07-07; Hacking/IT Incident; Email; BA present: No).\nDiscovered May 8, 2026; the access start is not stated, so only year and month are coded. Issue record count (169,626) belongs to another entity in the same article; HHS figure 3,400 used.\nEmployee count: not looked up -> Unknown.\nIndustry 621340 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 331 employees per LeadIQ (https://leadiq.com/c/sportsmed-physical-therapy/5a1d9ab7230000530089e856/employee-directory).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access (Use of stolen creds)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23762",
+    "master_id": "C31F2F1A-B972-42A7-93DD-C6185351A510",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/tennessee-pathology-group-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "SportsMed Physical Therapy, with clinics in New Jersey and Connecticut, found unauthorized access to one employee email account on May 8, 2026. Patient names, dates of service, provider names, diagnosis, treatment and insurance information were in the account. 3,400 people were reported to HHS.",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621340",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "SportsMed PT, LLC"
+  }
+}

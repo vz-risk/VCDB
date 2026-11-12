@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 57412,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 57412,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2F50812C-DCD3-4B7C-8703-9BED5ADA8567",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22065\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (The Cooper Health System; NJ; Healthcare Provider; 57,412; submitted 2025-05-23; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 622110 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22065",
+    "master_id": "2F50812C-DCD3-4B7C-8703-9BED5ADA8567",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/cooper-health-system-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Cooper Health System in New Jersey has recently notified the Maine Attorney General about a security breach that potentially involved unauthorized access to the personal and protected health information of up to 57,412 individuals. Cooper Health System said unusual network activity was identified on May 14, 2024; however, there was no disruption to system access. Third-party cybersecurity experts were engaged to investigate the network activity and confirmed that an unauthorized third party had access to certain systems and may have exfiltrated sensitive data. The file review was completed on or around March 26, 2025, and confirmed that the compromised information included names and Social Security numbers.",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 5,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "The Cooper Health System"
+  }
+}

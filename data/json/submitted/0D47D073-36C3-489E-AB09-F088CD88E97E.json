@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 366491,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 366491,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "0D47D073-36C3-489E-AB09-F088CD88E97E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21539\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Rocky Mountain Gastroenterology Associates PLLC; CO; Healthcare Provider; 366,491; submitted 2024-11-13; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "21539",
+    "master_id": "0D47D073-36C3-489E-AB09-F088CD88E97E",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/rocky-mountain-gastroenterology-associates-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In November, Littleton, CO-based Rocky Mountain Gastroenterology Associates started notifying 366,491 patients about a hacking incident that was identified on September 13, 2024. Suspicious activity was identified within its network, and the investigation confirmed that a threat actor had accessed and potentially copied files containing patient data. The affected files were reviewed and found to contain patient data such as names, addresses, dates of birth, patient account numbers, medical record numbers, Social Security numbers, health insurance identification numbers, and health information such as diagnoses and treatment information. The types of information involved varied from individual to individual.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CO",
+    "victim_id": "Rocky Mountain Gastroenterology Associates PLLC"
+  }
+}

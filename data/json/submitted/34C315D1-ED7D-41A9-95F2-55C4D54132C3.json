@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 65648,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 65648,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "34C315D1-ED7D-41A9-95F2-55C4D54132C3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23056\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Alpine Ears, Nose & Throat, P.L.L.C.; CO; Healthcare Provider; 65,648; submitted 2025-01-17; Unauthorized Access/Disclosure; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 51-200 employees per Seamless.AI (https://seamless.ai/b/alpine-ear-nose-and-throat-153129122).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "23056",
+    "master_id": "34C315D1-ED7D-41A9-95F2-55C4D54132C3",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/patients-notified-2024-data-breaches/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Alpine Ear, Nose, and Throat in Fort Collins, Colorado, has mailed notification letters to 65,648 individuals warning them that some of their protected health information was exposed in a security incident identified by Alpine ENT on November 19, 2024. Alpine ENT engaged its managed service provider to investigate the incident, and it was confirmed that an unauthorized third party accessed and exfiltrated files containing patients\u2019 protected health information. Alpine ENT\u2019s legal counsel explained in the notification letters that a substitute data breach notice was published on the Alpine ENT website on January 17, 2025, although at the time, the investigation was ongoing. The data mining and review processes were completed on October 9, 2025, and in the subsequent months, Alpine ENT worked to verify the impacted individuals and obtained up-to-date contact information.",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CO",
+    "victim_id": "Alpine Ears, Nose & Throat, P.L.L.C."
+  }
+}

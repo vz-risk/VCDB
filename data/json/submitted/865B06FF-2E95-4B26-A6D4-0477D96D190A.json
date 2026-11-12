@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "World Leaks"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 145714,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 145714,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "865B06FF-2E95-4B26-A6D4-0477D96D190A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23802\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Operation PAR, Inc.; FL; Business Associate; 145,714; submitted 2026-06-25; Hacking/IT Incident; Network Server; BA present: Yes).\nActor: World Leaks named from a leak-site or press claim (attacker-sourced unless the victim confirmed it) -> Organized crime, Financial.\nEmployee count: not looked up -> Unknown.\nIndustry 621420 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 201-500 employees per ZoomInfo (https://www.zoominfo.com/c/operation-par/72483687).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "23802",
+    "master_id": "865B06FF-2E95-4B26-A6D4-0477D96D190A",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/operation-par-eyemart-express-vanderbilt-health-data-breaches/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Operation PAR, a Florida-based substance use disorder treatment provider, identified unauthorized access to its computer network on June 10, 2025, affecting the protected health information of 145,714 current and former clients. The breach was confirmed a year later to contain names, dates of birth, Social Security numbers, driver's license numbers, financial account information, medical records, and health insurance details. The Worldleaks threat group claimed responsibility and leaked the stolen data on its dark web site in July 2025. Notification letters were mailed to affected individuals starting June 25, 2026, though credit monitoring services were not offered.",
+  "timeline": {
+    "incident": {
+      "day": 10,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621420",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Operation PAR, Inc."
+  }
+}

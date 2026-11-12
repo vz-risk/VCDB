@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 52562,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 52562,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "DC2EC66A-6BC6-4960-9567-55338AA4046F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23939\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Heart Care Centers of Illinois; IL; Healthcare Provider; 52,562; submitted 2026-07-10; Hacking/IT Incident; Email; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from about 70 employees per LeadIQ (https://leadiq.com/c/heart-care-centers-of-illinois/5a1d993b2300005c0087e93e/employee-directory).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering of employee (phishing)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access (Use of stolen creds)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23939",
+    "master_id": "DC2EC66A-6BC6-4960-9567-55338AA4046F",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cardiovascularbusiness.com/topics/health-it/cybersecurity/illinois-cardiology-practice-sued-over-data-breach; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Heart Care Centers of Illinois (HCCI), a cardiology practice in Palos Park, Illinois, discovered unauthorized access to a patient database through an employee's compromised email account on January 15, 2026. The breach resulted from a phishing attack that occurred between August 22 and November 6, 2024, allowing external attackers to access patient information including names, Social Security numbers, dates of birth, driver's license numbers, credit card information, medical records, diagnoses, prescriptions, and health insurance details. HCCI notified affected patients on July 10, 2026, and offered free credit monitoring services. A class action lawsuit was filed on July 22, 2026, in Cook County Circuit Court.",
+  "timeline": {
+    "incident": {
+      "day": 22,
+      "month": 8,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Heart Care Centers of Illinois"
+  }
+}

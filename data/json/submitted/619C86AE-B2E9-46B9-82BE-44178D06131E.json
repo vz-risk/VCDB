@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 104513,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 104513,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "619C86AE-B2E9-46B9-82BE-44178D06131E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22257\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Mid America Physician Services; KS; Healthcare Provider; 104,513; submitted 2025-01-13; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 231 employees per NAICS List (https://naicslist.com/company-profile/mid-america-physician-services-llc-overland-park-ks-66204).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22257",
+    "master_id": "619C86AE-B2E9-46B9-82BE-44178D06131E",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/small-georgia-medical-practice-closes-due-to-cyberattack/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Kansas City, MO-based women\u2019s healthcare provider Mid America Physician Services (MAPS) is notifying patients about a network security incident that exposed their names, addresses, dates of birth, medical treatment information, billing information, and health insurance information. Suspicious network activity was identified on or around November 14, 2024. Third-party cybersecurity experts were engaged to investigate the activity and confirmed on May 8, 2025, that patient data had been exposed and potentially stolen. Notification letters were mailed to the affected individuals on July 15, 2025. The incident has yet to appear on the HHS\u2019 Office for Civil Rights website, so it is unclear how many individuals have been affected.",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "KS",
+    "victim_id": "Mid America Physician Services"
+  }
+}

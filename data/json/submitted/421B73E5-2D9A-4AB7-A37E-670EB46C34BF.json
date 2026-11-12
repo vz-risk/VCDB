@@ -1,0 +1,159 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 500,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 500,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "421B73E5-2D9A-4AB7-A37E-670EB46C34BF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22594\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Aunt Martha\u2019s Health & Wellness, Inc.; IL; Healthcare Provider; 500; submitted 2025-10-13; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 558 employees per LeadIQ (https://leadiq.com/c/aunt-marthas-health--wellness/5a1d8a5f240000240063a75a/employee-directory).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Files encrypted"
+      }
+    ],
+    "github": "22594",
+    "master_id": "421B73E5-2D9A-4AB7-A37E-670EB46C34BF",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/five-healthcare-providers-cyberattacks-data-breaches-oct-2025/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Aunt Martha\u2019s Health and Wellness, a provider of community health, wellness, and support services in Illinois, has fallen victim to a ransomware attack. The attack was detected on August 13, 2025, when suspicious network activity was observed. The forensic investigation confirmed that a threat actor gained access to its computer network on August 12, 2025, exfiltrated sensitive data, and deployed malware that encrypted files. The attack was rapidly contained, and systems and data were restored from backups, without paying the ransom. No evidence has been found to indicate that any of the compromised data has been misused; however, the affected individuals have been advised to remain vigilant against identity theft and fraud.",
+  "timeline": {
+    "incident": {
+      "day": 12,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Aunt Martha\u2019s Health & Wellness, Inc."
+  }
+}

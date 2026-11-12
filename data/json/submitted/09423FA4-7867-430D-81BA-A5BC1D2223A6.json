@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 9268,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 9268,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "09423FA4-7867-430D-81BA-A5BC1D2223A6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23889\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Bridgeway Benefit Technologies LLC; FL; Business Associate; 9,268; submitted 2026-07-24; Hacking/IT Incident; Email; BA present: Yes).\nEmail account compromise; how the credentials were obtained is not stated -> Use of stolen creds via Mail as the default for mailbox takeover.\nEmployee count: not looked up -> Unknown.\nIndustry 541511 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 237 employees per Built In (https://builtin.com/company/bridgeway-benefit-technologies).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access (Use of stolen creds)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23889",
+    "master_id": "09423FA4-7867-430D-81BA-A5BC1D2223A6",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-627081; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Bridgeway Benefit Technologies, a Florida benefits technology business associate, found a possible employee email compromise on May 18, 2026. Investigation showed unauthorized access between March 5 and May 19, 2026. Names and other personal and health plan information were exposed; 9,268 people were reported to HHS.",
+  "timeline": {
+    "incident": {
+      "day": 5,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Bridgeway Benefit Technologies LLC"
+  }
+}

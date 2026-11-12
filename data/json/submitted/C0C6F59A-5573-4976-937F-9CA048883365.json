@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 38553,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 38553,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C0C6F59A-5573-4976-937F-9CA048883365",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21791\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Restorix Health, Inc.; LA; Business Associate; 38,553; submitted 2025-02-14; Unauthorized Access/Disclosure; Email; BA present: Yes).\nEmployee count: not looked up -> Unknown.\nIndustry 621498 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 853 employees per Revelio Labs (https://www.reveliolabs.com/companies/restorixhealth/employees).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "21791",
+    "master_id": "C0C6F59A-5573-4976-937F-9CA048883365",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.lcmchealth.org/touro/blog/2025/february/restorix-notice-of-data-security-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Restorix Health, Inc. (\u201cRestorix\u201d) is a healthcare services company that provides wound care management services to hospitals, including East Jefferson General Hospital, Touro Infirmary, and New Orleans East Hospital. Restorix is committed to protecting the privacy and security of the personal information we maintain. We are publishing notice of this data security incident so that potentially affected individuals may take steps to protect their information, should they feel it appropriate to do so. On or around May 30, 2024, Restorix learned that an unauthorized actor obtained access to a Restorix employee\u2019s email account. Upon learning of this issue, we secured the account and commenced a prompt and thorough investigation in consultation with external cybersecurity professionals who regularly investigate and analyze these types of incidents.",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "LA",
+    "victim_id": "Restorix Health, Inc."
+  }
+}

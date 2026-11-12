@@ -1,0 +1,167 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Interlock"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 126196,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 126196,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3DC4DB3F-B8E5-4798-8063-5AAF63DF2F37",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24427\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (AngMar Management Services; TX; Business Associate; 126,196; submitted 2026-09-16; Hacking/IT Incident; Network Server; BA present: Yes).\nIssue cites 35,000 Texas residents; HHS total is 126,196, which is used for data_total.\nActor: Interlock named from a leak-site or press claim (attacker-sourced unless the victim confirmed it) -> Organized crime, Financial.\nEmployee count: not looked up -> Unknown.\nIndustry 621610 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Files encrypted"
+      }
+    ],
+    "github": "24427",
+    "master_id": "3DC4DB3F-B8E5-4798-8063-5AAF63DF2F37",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/angmar-management-services-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "AngMar Management Services, a Texas home health and hospice management company, found unauthorized access to its IT systems on July 20, 2026. An intruder had accessed patient files around July 18, and the Interlock ransomware group claimed the attack, posting the company on its leak site in August 2026 with 710 GB of stolen data. Names, SSNs, dates of birth, medical record numbers, insurance and clinical information were exposed; 126,196 people were reported to HHS.",
+  "timeline": {
+    "incident": {
+      "day": 18,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "AngMar Management Services"
+  }
+}

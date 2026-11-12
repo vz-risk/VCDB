@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 13723,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13723,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E7377A16-1A54-4180-9F90-A9825D6026A9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23647\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Optalis Management Solutions; MI; Healthcare Provider; 13,723; submitted 2026-06-29; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 623110 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 1,002 employees per Revelio Labs (https://www.reveliolabs.com/companies/optalis-mgmt-solutions/employees/).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "23647",
+    "master_id": "E7377A16-1A54-4180-9F90-A9825D6026A9",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/optalis-management-solutions-june-2026; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Optalis Management Solutions, a post-hospital rehabilitation and skilled nursing care provider, reported a data breach involving unauthorized network access that occurred between April 14-19, 2025. An investigation completed on June 10, 2026 determined that personal information was exfiltrated, including names, Social Security numbers, driver's license/state ID numbers, credit/debit card information, financial account details, medical treatment and diagnosis information, and health insurance policy numbers. Affected individuals were notified beginning June 29, 2026. Class action litigation is being investigated by attorneys.",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 4,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "623110",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Optalis Management Solutions"
+  }
+}

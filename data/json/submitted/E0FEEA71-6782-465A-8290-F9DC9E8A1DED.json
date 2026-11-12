@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 54131,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 54131,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E0FEEA71-6782-465A-8290-F9DC9E8A1DED",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23361\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (GrayRobinson, P.A.; FL; Business Associate; 54,131; submitted 2026-04-24; Hacking/IT Incident; Network Server; BA present: Yes).\n65,113 people were notified in total; 54,131 had health information (the HHS count).\nEmployee count: not looked up -> Unknown.\nIndustry 541110 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 682 employees per Revelio Labs (https://www.reveliolabs.com/companies/grayrobinson/employees/).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23361",
+    "master_id": "E0FEEA71-6782-465A-8290-F9DC9E8A1DED",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/grayrobinson-c2n-diagnostics-virta-health-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Orlando, Florida-based law firm GrayRobinson, P.A., has notified the Maine Attorney General about a data breach affecting 65,113 individuals, including 52 Maine residents. Among those individuals, 54,131 people had their protected health information exposed in the incident. In its substitute data breach notice, GrayRobinson explained that unauthorized access to its network was detected on or around March 24, 2025. Immediate steps were taken to secure its network, and assisted by third-party cybersecurity specialists, the incident was investigated to determine the extent to which sensitive information had been compromised. The investigation confirmed that its network was accessed by an unauthorized third party between March 5, 2025, and March 24, 2025, and during that time, files containing personal and protected health information were exfiltrated from its network.",
+  "timeline": {
+    "incident": {
+      "month": 3,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "GrayRobinson, P.A."
+  }
+}

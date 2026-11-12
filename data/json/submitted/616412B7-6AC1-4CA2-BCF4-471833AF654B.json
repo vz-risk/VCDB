@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 757,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 757,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "616412B7-6AC1-4CA2-BCF4-471833AF654B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/19957\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Claxton-Hepburn Medical Center; NY; Healthcare Provider; 757; submitted 2023-11-02; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 622110 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 474 employees per Claxton-Hepburn fact sheet (https://www.claxtonhepburn.org/documents/fact-sheet-binder.pdf).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "19957",
+    "master_id": "616412B7-6AC1-4CA2-BCF4-471833AF654B",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/60000-individuals-affected-by-texas-medical-liability-trust-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Carthage Area Hospital and Claxton Hepburn Medical Center in Northern New York experienced a cyberattack on August 31, 2023. The hospitals put their emergency rooms on diversion and appointments were cancelled as a precaution due to IT systems being taken offline. The FBI, New York State Department of Health, and the Department of Homeland Security were notified about the attack and the government is aware of the threat actor behind the attack but has not disclosed which group was responsible. The incident has been contained but the investigation is ongoing. At this stage of the investigation, it appears that patient data has not been compromised.",
+  "timeline": {
+    "incident": {
+      "day": 31,
+      "month": 8,
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Claxton-Hepburn Medical Center"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Cactus"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 9536,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 9536,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "5204509D-F751-478A-9D83-B738590F88F9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22852\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Physicians to Children & Adolescents; KY; Healthcare Provider; 9,536; submitted 2025-10-24; Hacking/IT Incident; Network Server; BA present: No).\nNo access date published; year from the October 2025 disclosure.\nActor: Cactus named from a leak-site or press claim (attacker-sourced unless the victim confirmed it) -> Organized crime, Financial.\nOnly the year is known for the incident; dbir_year 2026.\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 1-10 employees per ZoomInfo (https://www.zoominfo.com/c/ptcky/348196713).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Files encrypted"
+      }
+    ],
+    "github": "22852",
+    "master_id": "5204509D-F751-478A-9D83-B738590F88F9",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/pediatric-associates-2025; https://ptcky.com/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Oct. 24, 2025, Physicians to Children & Adolescents, a long-standing pediatric healthcare provider in Bardstown, Kentucky, reported a significant data breach. The data security incident may have exposed personally identifiable information (PII) and protected health information (PHI) of at least 9,536 current and former patients across the U.S. According to reports, the breach was the result of a ransomware attack orchestrated by a group known as Cactus. The attackers claimed responsibility for the incident on the dark web, stating they had accessed and exfiltrated approximately 902 GB of sensitive data from the organization. The exposed information may include names, dates of birth, addresses, phone numbers, medical information and health insurance information. The potential exposure of PII and PHI put individuals at risk of identity theft and medical fraud.",
+  "timeline": {
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "KY",
+    "victim_id": "Physicians to Children & Adolescents"
+  }
+}

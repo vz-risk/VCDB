@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 103879,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 103879,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "A5C84095-B450-4EAC-86E6-987A577B409F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22543\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Brightstar Global Solutions Corporation; RI; Health Plan; 103,879; submitted 2025-10-03; Hacking/IT Incident; Network Server; BA present: No).\nHHS lists Brightstar's health plan; the affected people are plan members (employees).\nEmployee count: not looked up -> Unknown.\nIndustry 713290 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 5,746 employees (Dec 31 2025) for parent Brightstar Lottery PLC per StockAnalysis (https://stockanalysis.com/stocks/brsl/employees/).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22543",
+    "master_id": "A5C84095-B450-4EAC-86E6-987A577B409F",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.globenewswire.com/news-release/2025/10/06/3162150/0/en/Brightstar-Lottery-Group-and-IGT-Group-Data-Breach-Exposes-Personal-Information-Murphy-Law-Firm-Investigates-Legal-Claims.html; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On or around November 17, 2024, Brightstar Lottery Group (\u201cBrightstar\u201d) and IGT Group (\u201cIGT\u201d) became aware of suspicious activity on its computer system, indicating a data breach. Based on a subsequent forensic investigation, Brightstar and IGT determined that cybercriminals infiltrated this inadequately secured network and gained access to its files. The investigation further determined that, through this infiltration, cybercriminals accessed and/or acquired files containing the sensitive personal information of 103,879 individuals. The information exposed in the data breach includes, but is not limited to: Names Social Security numbers Financial information Health information Driver\u2019s License numbers Dates of Birth Contact information",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "713290",
+    "region": [
+      "019021"
+    ],
+    "state": "RI",
+    "victim_id": "Brightstar Global Solutions Corporation"
+  }
+}

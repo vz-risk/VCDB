@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 40051,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 40051,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "46F9B366-471F-406F-BA7B-CB749B5B3E10",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22854\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Morton Drug Company; WI; Healthcare Provider; 40,051; submitted 2025-11-10; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 456110 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 112 employees per NAICS List (https://naicslist.com/company-profile/morton-drug-company-inc-neenah-wi-54956).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22854",
+    "master_id": "46F9B366-471F-406F-BA7B-CB749B5B3E10",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/data-breach-morton-drug-company-physicians-to-children-adolescents/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Morton Drug Company (Morton LTC), a Wisconsin-based pharmacy specializing in long-term care, has recently disclosed a security incident that has affected 40,051 individuals. The incident impacted its IT systems and was detected on or around August 20, 2025. Third-party cybersecurity experts were engaged to investigate, contain, and remediate the incident, and law enforcement was notified. Unauthorized network access was confirmed, and a review was conducted to determine the extent to which sensitive data had been exposed. On or around October 21, 2025, Morton LTC determined that patient data had been exposed and may have been stolen. The types of data involved vary from individual to individual and may include name in combination with address, prescription information, and, for certain individuals, Social Security numbers.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "456110",
+    "region": [
+      "019021"
+    ],
+    "state": "WI",
+    "victim_id": "Morton Drug Company"
+  }
+}

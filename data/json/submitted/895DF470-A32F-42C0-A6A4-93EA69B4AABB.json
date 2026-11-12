@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Kazu"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 118563,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 118563,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "895DF470-A32F-42C0-A6A4-93EA69B4AABB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24578\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (zHealth, Inc.; CA; Business Associate; 118,563; submitted 2026-07-29; Hacking/IT Incident; Network Server; BA present: Yes).\nDiscovery coded Actor disclosure: Kazu posted the claim months before zHealth detected the intrusion.\nActor: Kazu named from a leak-site or press claim (attacker-sourced unless the victim confirmed it) -> Organized crime, Financial.\nEmployee count: not looked up -> Unknown.\nIndustry 513210 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from about 42 employees per LeadIQ (https://leadiq.com/c/zhealth/5a1dcc632300005900d2a3b2).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "24578",
+    "master_id": "895DF470-A32F-42C0-A6A4-93EA69B4AABB",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/zhealth-2026; https://www.zhealthehr.com/Notice-of-Data-Event; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "zHealth, a California EHR vendor, had its network accessed on January 20-21, 2026. A threat actor called Kazu claimed on January 26 to hold 15 GB of data; zHealth did not detect the intrusion until June 15, 2026. Patient names, clinical notes, appointment and billing data, SSNs and government IDs were exposed for 118,563 people.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 20,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "zHealth, Inc."
+  }
+}

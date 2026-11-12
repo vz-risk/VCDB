@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 956,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 956,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "8C681546-3246-45FE-B0ED-7307C724A618",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21771\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Samaritan Counseling Center of the Fox Valley; WI; Healthcare Provider; 956; submitted 2025-01-10; Hacking/IT Incident; Email; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621330 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "21771",
+    "master_id": "8C681546-3246-45FE-B0ED-7307C724A618",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/accendo-insurance-company-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Samaritan Counseling Center of the Fox Valley, a mental health service provider in Menasha, Wisconsin, identified suspicious activity in an employee\u2019s account on November 18, 2024. The account was immediately secured and third-party forensics specialists were engaged to investigate the activity. The investigation revealed multiple email accounts had been compromised. The review of those accounts was completed on December 19, 2024, and confirmed that they contained the protected health information of 956 patients. Information potentially accessed and copied included names, addresses, dates of birth, Social Security numbers, driver\u2019s license numbers, health insurance information, and medical information. Notification letters have been mailed to the affected individuals and policies, procedures, and processes have been reviewed to determine where additional safeguards can be implemented.",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621330",
+    "region": [
+      "019021"
+    ],
+    "state": "WI",
+    "victim_id": "Samaritan Counseling Center of the Fox Valley"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Abuse of functionality",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2740,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2740,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "6E9F60B4-9625-4894-9520-C58583F2911B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24572\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Trinity Health; MI; Business Associate; 2,740; submitted 2026-03-13; Unauthorized Access/Disclosure; Electronic Medical Record; BA present: Yes).\nAccess dates not given; year from the Jan 2026 discovery. Coded external actor with hacking Abuse of functionality via the HIE (vector Partner); the requesting companies were not named.\nOnly the year is known for the incident; dbir_year 2027.\nEmployee count: not looked up -> Unknown.\nIndustry 622110 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 120,000+ employees per Wikipedia (https://en.wikipedia.org/wiki/Trinity_Health).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Records obtained through HIE requests with unverified purpose"
+      }
+    ],
+    "github": "24572",
+    "master_id": "6E9F60B4-9625-4894-9520-C58583F2911B",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/trinity-health-upmc-hie-unauthorized-access/; https://www.trinityhealthmichigan.org/sites/default/files/2026-03/HIE_Privacy_Incident_Substitute_Notice_3-12-26.pdf; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Trinity Health learned on January 13, 2026 from its health information exchange partner that companies obtaining records through Health Gorilla, an HIE member, had requested patient data claiming a treatment purpose that could not be verified. Clinical, demographic and insurance information and possibly driver's license numbers of 2,740 Trinity Health patients were involved.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Trinity Health"
+  }
+}

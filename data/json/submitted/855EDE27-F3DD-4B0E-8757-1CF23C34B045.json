@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 146108,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 146108,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "855EDE27-F3DD-4B0E-8757-1CF23C34B045",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23239\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Saint Anthony Hospital; IL; Healthcare Provider; 146,108; submitted 2026-03-06; Hacking/IT Incident; Email; BA present: No).\nSaint Anthony also filed an HHS row of 6,679 on Sept 12, 2025 for what appears to be the same email incident; only this (larger, later) filing is coded.\nEmployee count: not looked up -> Unknown.\nIndustry 622110 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 1,336 employees per Cause IQ (https://causeiq.com/organizations/saint-anthony-hospital,510217097).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23239",
+    "master_id": "855EDE27-F3DD-4B0E-8757-1CF23C34B045",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/data-breaches-at-healthcare-organizations-in-illinois-and-texas-affect-600000/amp/; https://sahchicago.org/cybersecurity-incident; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The third significant data breach hit Saint Anthony Hospital, which told the HHS that an email security incident exposed the information of 146,000 people. The Chicago, Illinois-based hospital said two employee email accounts were compromised, exposing patients\u2019 personal and health information. The intrusion occurred in February 2025. While it does not seem to be related, Saint Anthony Hospital was previously targeted by the LockBit ransomware group, which listed the organization on its leak website in January 2024.",
+  "timeline": {
+    "incident": {
+      "month": 2,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Saint Anthony Hospital"
+  }
+}

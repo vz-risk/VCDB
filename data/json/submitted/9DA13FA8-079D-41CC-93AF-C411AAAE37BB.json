@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 80860,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 80860,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "9DA13FA8-079D-41CC-93AF-C411AAAE37BB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23292\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Central Kansas Mental Health Center; KS; Healthcare Provider; 80,860; submitted 2025-11-25; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621420 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 220 employees (2024 Form 990) per Siviq (https://siviq.co/nonprofits/organizations/480688802/central-kansas-mental-health-center).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "23292",
+    "master_id": "9DA13FA8-079D-41CC-93AF-C411AAAE37BB",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/singing-river-health-system-54k-individuals-affected-by-december-cyberattack/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Central Kansas Mental Health Center in Salina, KS, has experienced a cybersecurity incident that exposed patient data. The incident was first identified on September 26, 2025, when suspicious activity was observed within its computer network. Immediate action was taken to contain the incident, and an investigation was launched to determine the nature and scope of the unauthorized activity. The investigation confirmed that an unauthorized third party accessed its network and likely exfiltrated files containing patient data. The files are being reviewed to determine the types of data involved and the individuals affected. Central Kansas Mental Health Center first announced the data breach via its website in November 2025, confirming that credit monitoring and identity theft protection services are being made available.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621420",
+    "region": [
+      "019021"
+    ],
+    "state": "KS",
+    "victim_id": "Central Kansas Mental Health Center"
+  }
+}

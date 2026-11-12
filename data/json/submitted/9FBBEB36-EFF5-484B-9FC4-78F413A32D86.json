@@ -1,0 +1,163 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "RAT",
+        "Backdoor",
+        "Trojan"
+      ],
+      "vector": [
+        "Email",
+        "Email attachment"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "P - End-user or employee"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "9FBBEB36-EFF5-484B-9FC4-78F413A32D86",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23127\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTags Malware-ext-BackdoorC2 and Social-ext-Phish followed. Motive Espionage from the researchers' description; the actor is not attributed. Data disclosure Potentially because the researchers describe long-term access but no confirmed theft. Victim unnamed; NAICS 324110 (refinery). Employee count unknown.",
+    "created": "2026-11-11T06:08:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing email"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "AsyncRAT installed via lure document"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "23127",
+    "master_id": "9FBBEB36-EFF5-484B-9FC4-78F413A32D86",
+    "modified": "2026-11-11T06:08:48Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.govinfosecurity.com/multi-month-cyberespionage-campaign-hits-libyan-oil-refinery-a-31091; https://www.security.com/threat-intelligence/asyncrat-libya-oil-cyberattack; https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/061025-libya-oil-output-hits-new-12-year-high-as-tripoli-tensions-flare",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Symantec and Carbon Black reported a cyberespionage campaign from November 2025 to mid-February 2026 that kept long-term access to at least one Libyan oil company network, including a refinery. It began with spear-phishing emails carrying Libya-themed lure documents and used the AsyncRAT remote access Trojan.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "LY"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "324110",
+    "region": [
+      "002015"
+    ],
+    "victim_id": "Unnamed Libyan oil company (refinery)"
+  }
+}

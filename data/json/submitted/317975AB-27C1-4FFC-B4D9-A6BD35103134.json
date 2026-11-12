@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 17040,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 17040,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "317975AB-27C1-4FFC-B4D9-A6BD35103134",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22207\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Arbor Associates, Inc.; MI; Business Associate; 17,040; submitted 2025-07-03; Hacking/IT Incident; Network Server; BA present: Yes).\nEmployee count: not looked up -> Unknown.\nIndustry 541219 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded.",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "22207",
+    "master_id": "317975AB-27C1-4FFC-B4D9-A6BD35103134",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/arbor-associates; https://oag.ca.gov/ecrime/databreach/reports/sb24-604990; https://www.mass.gov/doc/2025-1169-arbor-associates-inc/download; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 17, 2025, Arbor Associates Inc. discovered unusual activity on its network, prompting a response to secure its systems and launch an investigation with the help of independent cybersecurity experts. The investigation revealed that between April 15 and April 17, certain files may have been acquired without authorization. By May, Arbor Associates determined that these files contained sensitive information belonging to individuals whose data they process on behalf of healthcare providers. The breach exposed a range of personally identifiable information (PII) and protected health information (PHI). The types of information potentially accessed include first and last names, contact information, age, biological sex, date of birth, service date, CPT or diagnosis code, medical record number, name of insurance and doctor\u2019s name.",
+  "timeline": {
+    "incident": {
+      "day": 15,
+      "month": 4,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541219",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Arbor Associates, Inc."
+  }
+}

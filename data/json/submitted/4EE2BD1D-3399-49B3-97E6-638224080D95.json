@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 56902,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 56902,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "4EE2BD1D-3399-49B3-97E6-638224080D95",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21397\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Radiologic Medical Services, P.C.; IA; Healthcare Provider; 56,902; submitted 2024-11-12; Hacking/IT Incident; Email; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621512 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 11-50 employees per LeadIQ (https://leadiq.com/c/radiologic-medical-services/5a1da7212300005c009a8daa).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "21397",
+    "master_id": "4EE2BD1D-3399-49B3-97E6-638224080D95",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.myinjuryattorney.com/radiologic-medical-services-data-breach-investigation/; https://www.claimdepot.com/data-breach/radiologic-medical-services-pc-2025; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Two employee email accounts at Radiologic Medical Services, an Iowa radiology practice, were accessed by an unauthorized actor between February 22 and March 19, 2024. Names, SSNs, ID numbers, medical and insurance information of 56,902 people were exposed.",
+  "timeline": {
+    "incident": {
+      "day": 22,
+      "month": 2,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "019021"
+    ],
+    "state": "IA",
+    "victim_id": "Radiologic Medical Services, P.C."
+  }
+}

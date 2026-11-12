@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1419091,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1419091,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "5F70FC80-B3DB-4C1F-9CBB-53F9FB7C5E0B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22252\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Radiology Associates of Richmond, Inc.; VA; Healthcare Provider; 1,419,091; submitted 2025-07-01; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621512 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 88 employees per NAICS List (https://naicslist.com/company-profile/radiology-associates-of-richmond-inc-richmond-va-23235).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22252",
+    "master_id": "5F70FC80-B3DB-4C1F-9CBB-53F9FB7C5E0B",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaaguide.net/anne-arundel-dermatology-radiology-associates-richmond-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Radiology Associates of Richmond, a provider of medical imaging services at seven central Virginia hospitals and three outpatient imaging centers, reported a network server hacking incident to OCR on July 1, 2025, that involved the PHI of 1,419,091 individuals. An intrusion was detected and blocked on April 6, 2024, and the forensic investigation confirmed unauthorized access to its network between April 2, 2024, and April 6, 2024. Due to the complex nature of the data review, it took until May 2, 2025, to determine the individuals affected and the types of data involved. Radiology Associates of Richmond recently confirmed that the exposed files contained identifiable protected health and personal information such as names, birth dates, email addresses, account numbers, routing numbers, Social Security numbers, medical information, and health insurance information.",
+  "timeline": {
+    "incident": {
+      "day": 2,
+      "month": 4,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "Radiology Associates of Richmond, Inc."
+  }
+}

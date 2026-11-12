@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3183,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3183,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "0E08DFDA-B2C7-432A-A4D5-8DDB3461EE35",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23299\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Bronsky Orthodontics; NY; Healthcare Provider; 3,183; submitted 2026-05-08; Hacking/IT Incident; Email; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621210 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23299",
+    "master_id": "0E08DFDA-B2C7-432A-A4D5-8DDB3461EE35",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/patient-data-exposed-cyberattacks-on-dental-practices/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Bronsky Orthodontics, an orthodontic practice in New York City, has notified the HHS\u2019 Office for Civil Rights about a breach of the protected health information of 3,183 individuals. Suspicious activity was identified within an employee\u2019s email account on October 16, 2025. The account was immediately secured, and an investigation was launched to determine the nature and scope of the activity. Assisted by third-party cybersecurity specialists, Bronsky Orthodontics determined that a limited number of email accounts had been accessed by an unknown actor between August 18, 2025, and October 16, 2025. The accounts were reviewed, and on March 11, 2026, Bronsky Orthodontics determined that they contained patient information such as names, dates of birth, contact information, dental and orthodontic treatment information, and insurance information.",
+  "timeline": {
+    "incident": {
+      "day": 18,
+      "month": 8,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621210",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Bronsky Orthodontics"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 138209,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 138209,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "FFF42581-F5B7-40C7-BE6A-87D6313F5168",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23761\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (MRI Associates of St. Pete, Inc. d/b/a Saint Pete MRI; FL; Healthcare Provider; 138,209; submitted 2025-08-19; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621512 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 41 employees per NAICS List (https://naicslist.com/company-profile/mri-associates-of-st-pete-inc-st-petersburg-fl-33702).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23761",
+    "master_id": "FFF42581-F5B7-40C7-BE6A-87D6313F5168",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/tennessee-pathology-group-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Saint Pete MRI, a St. Petersburg diagnostic imaging and sleep lab, identified unauthorized access on February 23, 2025. A third-party cybersecurity firm confirmed that scanned data may have been acquired by the unauthorized party, though electronic patient care systems were not compromised. On April 7, 2026, the facility confirmed exposed files contained names, dates of birth, Social Security numbers, driver's license numbers, medical information, and health insurance information. Notification letters were mailed July 22, 2026, approximately 17 months after initial discovery; record count unclear.",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 2,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "MRI Associates of St. Pete, Inc. d/b/a Saint Pete MRI"
+  }
+}

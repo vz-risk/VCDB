@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 17800,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 17800,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "DB783B47-C417-44F1-877E-F846608B9941",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22864\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Loving and Living Center, PC dba Awakenings Center; NC; Healthcare Provider; 17,800; submitted 2025-11-07; Hacking/IT Incident; Electronic Medical Record; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621330 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22864",
+    "master_id": "DB783B47-C417-44F1-877E-F846608B9941",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/davies-mcfarland-carroll-awakenings-center-data-breaches/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Loving and Living Center, PC dba Awakenings Center, a North Carolina-based provider of couples, sex therapy, and individual counseling, has discovered unauthorized access to its electronic medical record system. The unauthorized access was detected on or around September 10, 2025, and the forensic investigation and data review confirmed that up to 17,800 patients may have been affected. Awakenings Center said the affected individuals had the following data elements exposed: name, age, date of birth, gender, relationship status, employment status, city, and zip code. No financial information was involved. Awakenings Center said it takes privacy and security very seriously and has taken steps to remedy the incident and improve security to prevent similar incidents in the future.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621330",
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Loving and Living Center, PC dba Awakenings Center"
+  }
+}

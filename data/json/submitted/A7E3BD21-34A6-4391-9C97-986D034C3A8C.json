@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 500,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 500,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "A7E3BD21-34A6-4391-9C97-986D034C3A8C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23824\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (McEwen & Associates; TX; Business Associate; 500; submitted 2025-08-21; Hacking/IT Incident; Network Server; BA present: Yes).\nMcEwen & Associates filed three HHS rows (500 each) on Aug 21, 2025 for this incident; coded once.\nEmployee count: not looked up -> Unknown.\nIndustry 561110 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 37 employees per NAICS List (https://naicslist.com/company-profile/mcewen-associates-inc-irving-tx-75038).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "23824",
+    "master_id": "A7E3BD21-34A6-4391-9C97-986D034C3A8C",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/mcewen-and-associates-june-2026; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "McEwen and Associates, a Texas-based healthcare operations company, detected unauthorized access to its systems on June 24, 2025, with the breach occurring between June 23\u201324, 2025. An unknown external actor accessed and copied patient information including names, Social Security numbers, dates of birth, financial account information, government-issued identification, treatment and diagnosis information, and health insurance details. The company reported the breach to the Texas Attorney General's Office on July 23, 2026, and attorneys are investigating the possibility of filing a class action lawsuit on behalf of affected individuals.",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 6,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "561110",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "McEwen & Associates"
+  }
+}

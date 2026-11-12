@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 279275,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 279275,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B1F48904-BDA6-490C-9F91-A40A723B0889",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22253\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Zumpano Patricios, P.A.; FL; Business Associate; 279,275; submitted 2025-07-03; Hacking/IT Incident; Network Server; BA present: Yes).\nInitial access date unknown; detection May 6, 2025 used.\nEmployee count: not looked up -> Unknown.\nIndustry 541110 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 51-200 employees per LeadIQ (https://leadiq.com/c/zumpano-patricios-pa/5f3af5d7a0cf8ca20ba9ea96).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "22253",
+    "master_id": "B1F48904-BDA6-490C-9F91-A40A723B0889",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/marketing-law-firms-say-data-breaches-impact-over-200000-people/; https://mm.nh.gov/files/uploads/doj/remote-docs/zumpano-patricios-20250703.pdf; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Zumpano Patricios breach impacts nearly 280,000 individuals. The law firm, which has offices in several major US cities, is representing healthcare providers in disputes with health insurance companies over medical service payments to patients. Zumpano Patricios is informing impacted individuals that it had detected an intrusion in its IT network on May 6, 2025, but could not determine the date and time of initial access. An investigation revealed that the hackers accessed and possibly exfiltrated files containing information such as patient name, date of birth, Social Security number, provider name, health insurer information, dates of service, and amounts charged by the provider and payments they received. It\u2019s unclear if the law firm was targeted in a ransomware attack \u2014 no known threat group has taken credit for the intrusion.",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "541110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Zumpano Patricios, P.A."
+  }
+}

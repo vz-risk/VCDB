@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1012,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1012,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "65576E53-B05C-49DA-B5A2-5BD09F3D1112",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23746\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (T.A. Solberg Co., Inc; WI; Healthcare Provider; 1,012; submitted 2026-07-07; Hacking/IT Incident; Network Server; BA present: No).\nHHS lists T.A. Solberg as a healthcare provider (it operates in-store pharmacies), so Medical data is coded alongside Personal. Coded detection date as incident date.\nEmployee count: not looked up -> Unknown.\nIndustry 445110 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "23746",
+    "master_id": "65576E53-B05C-49DA-B5A2-5BD09F3D1112",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.dapeer.com/databreaches/ta-solberg-data-breach-investigation; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "T.A. Solberg Co., a Wisconsin family-owned grocery and pharmacy retailer, detected unauthorized access to its network on March 3, 2026. Forensics confirmed an intruder obtained files with personal and health information including Social Security numbers. 1,012 people were reported to HHS; notices went out in July 2026.",
+  "timeline": {
+    "incident": {
+      "day": 3,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "region": [
+      "019021"
+    ],
+    "state": "WI",
+    "victim_id": "T.A. Solberg Co., Inc"
+  }
+}

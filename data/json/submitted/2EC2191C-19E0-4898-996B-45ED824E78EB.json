@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Cl0p"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "2EC2191C-19E0-4898-996B-45ED824E78EB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24332\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTags Malware-ext-Ransomware-databreach and Partner_Breach not followed: Cl0p stole data without encryption, so Extortion is coded instead of Ransomware, and the sources describe exploitation of vulnerable PTC software that Shell ran, not a breach of PTC itself, so the partner rule was not applied. If Shell's Windchill was hosted by PTC, recode with PTC as primary. Leak-site claim; Shell has not confirmed the data theft. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T06:08:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      }
+    ],
+    "github": "24332",
+    "master_id": "2EC2191C-19E0-4898-996B-45ED824E78EB",
+    "modified": "2026-11-11T06:08:48Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://izoologic.com/threat-advisory/shell-confirms-investigation-following-cl0p-ransomware-data-theft-claims-tied-to-ptc-windchill-zero-day/; https://www.safestate.com/post/shell-investigates-data-breach-claims-after-clop-extortion-post; https://www.computerweekly.com/news/366648757/Multiple-organisations-investigating-fresh-wave-of-Cl0p-breaches; https://tech-insider.org/clop-ransomware-ptc-windchill-cve-2026-12569/; https://www.techtimes.com/articles/324578/20260815/clop-hacks-shell-ge-philips-43-victim-ptc-windchill-zero-day-campaign.htm; https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/; https://www.esecurityplanet.com/threats/philips-and-ge-investigate-clop-ransomware-data-theft-claims/; https://cyberpress.org/shell-investigates-data-breach-cl0p-ransomware-group/; https://nltimes.nl/2026/10/08/russian-hackers-publish-stolen-shell-philips-data-dark-web",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In August 2026 the Cl0p extortion group listed Shell among 43 victims of a campaign exploiting a critical flaw (CVE-2026-12569) in PTC's Windchill and FlexPLM product lifecycle software, claiming 89 GB of engineering drawings, facility photos, test reports and project plans. Shell confirmed it was investigating, and Cl0p published the data on its leak site in October 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "211120",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Shell plc"
+  }
+}

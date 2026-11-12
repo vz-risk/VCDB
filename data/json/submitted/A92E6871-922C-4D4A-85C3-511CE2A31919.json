@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ],
+      "target": [
+        "Unknown"
+      ],
+      "notes": "Insomnia ransomware group posted a claim to the victim's data on its Tor leak site on April 5, 2026 (data-theft extortion). No ransom/extortion amount disclosed in any source."
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ],
+      "name": [
+        "Insomnia"
+      ],
+      "notes": "Insomnia ransomware/extortion group claimed responsibility per ClaimDepot."
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4631,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4631,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "A92E6871-922C-4D4A-85C3-511CE2A31919",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23971\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Nephrology Associates Medical Group, Inc; CA; Healthcare Provider; 4,631; submitted 2026-02-27; Hacking/IT Incident; Email; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 621111 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nMerged per analyst request: added issue comment sources (ClaimDepot, ClassAction.org). NOTE: those sources name Nephrology Associates, M.D., P.A. (Kansas City, MO area; network intrusion Jan 17-Apr 9, 2026; Insomnia ransomware claim Apr 5, 2026; notices Jul 30, 2026), while the CA AG letter and HHS row are Nephrology Associates Medical Group, Riverside, CA (email compromise May 19-22, 2025; 4,631 affected). Victim, timeline and record count kept from the CA/HHS sources. Coded Insomnia as actor name with social Extortion; no encryption reported, so ransomware/availability not coded. No extortion demand amount found in any source.",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Insomnia posts claim to leak site (extortion)"
+      }
+    ],
+    "github": "23971",
+    "master_id": "A92E6871-922C-4D4A-85C3-511CE2A31919",
+    "modified": "2026-11-12T18:10:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-620867; https://oag.ca.gov/system/files/ELN-26254%20Nephrology%20Ad%20CM%20SSN%20r2prf.pdf; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf; https://www.claimdepot.com/data-breach/nephrology-associates-2026-5ce77; https://www.classaction.org/data-breach-lawsuits/nephrology-associates-md-pa-july-2026; https://www.classaction.org/media/nephrology-associates-data-breach-web-notice-2026.pdf; https://www.classaction.org/media/nephrology-associates-data-breach-letter-2026.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Nephrology Associates Medical Group discovered suspicious activity in an employee's email account on or about May 20, 2025, and engaged cybersecurity experts to investigate. The investigation determined that an unauthorized individual accessed the account, which contained some individuals' personal information. The organization completed notification of affected individuals on December 12, 2025, and reported no evidence of fraudulent misuse. The organization offered two years of complimentary credit monitoring and identity protection services through Kroll to affected individuals. Additional sources on the issue (ClaimDepot, ClassAction.org) report that unauthorized actors accessed the network of Nephrology Associates between January 17 and April 9, 2026, and exfiltrated patient data; the Insomnia ransomware group posted a claim on its Tor leak site on April 5, 2026, stating it had obtained Nephrology Associates data. The investigation concluded July 1, 2026 that names, dates of birth, Social Security numbers, driver's license/state ID numbers, government ID numbers, treatment/diagnosis information, and health insurance policy details were acquired; notifications began July 30, 2026. No ransom or extortion amount was disclosed.",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Nephrology Associates Medical Group, Inc"
+  }
+}

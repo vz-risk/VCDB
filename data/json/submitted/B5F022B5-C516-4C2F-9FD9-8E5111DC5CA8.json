@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 437329,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 437329,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B5F022B5-C516-4C2F-9FD9-8E5111DC5CA8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21971\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Ascension Health; MO; Healthcare Provider; 437,329; submitted 2025-04-28; Hacking/IT Incident; Network Server; BA present: No).\nPartner breach: Ascension shared data with a former business partner whose systems were breached through a third-party software vulnerability (learned Dec 5, 2024). The partner is not named; it is the primary victim and Ascension the secondary. Industry 62 is a guess.\nEmployee count: not looked up -> Unknown.\nIndustry 62 inferred from the organization's name and description (HHS rows carry no NAICS tag).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access (Exploit vuln)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed and copied"
+      }
+    ],
+    "github": "21971",
+    "master_id": "B5F022B5-C516-4C2F-9FD9-8E5111DC5CA8",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/ascension-data-breach-former-business-partner/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A former business partner of Ascension was hacked through a vulnerability in third-party software, and patient data Ascension had shared with it was likely stolen. Ascension learned of the incident on December 5, 2024. Names, contact details, dates of birth, SSNs, medical record numbers, insurer names and inpatient visit information of 437,329 people were exposed.",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "62",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 437329,
+      "victim_id": [
+        "Ascension Health"
+      ]
+    },
+    "state": "MO",
+    "victim_id": "Unnamed former Ascension business partner"
+  }
+}

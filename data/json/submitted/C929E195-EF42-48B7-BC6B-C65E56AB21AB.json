@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Abuse of functionality",
+        "Exploit vuln",
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 107154,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 107154,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C929E195-EF42-48B7-BC6B-C65E56AB21AB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22197\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Centers for Medicare & Medicaid Services; MD; Health Plan; 107,154; submitted 2025-06-30; Hacking/IT Incident; Network Server; BA present: No).\nMatched to #22197 (CMS Medicare.gov fraudulent accounts), not #23412 (2026 directory exposure).\nOnly the year is known for the incident; dbir_year 2024.\nEmployee count: not looked up -> Unknown.\nIndustry 923120 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 6,620 employees (March 2025) per FedPayScale (https://fedpayscale.org/employees/agencies/centers-for-medicare-and-medicaid-services/).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2024,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Initial access (Abuse of functionality, Exploit vuln)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22197",
+    "master_id": "C929E195-EF42-48B7-BC6B-C65E56AB21AB",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://newrepublic.com/post/209849/dr-oz-medicare-portal-leak-social-security-numbers; https://www.govinfosecurity.com/feds-notify-103000-medicare-beneficiaries-scam-breach-a-28882; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Fraudsters used valid Medicare beneficiary information obtained elsewhere to create unauthorized Medicare.gov accounts between 2023 and 2025, which exposed the beneficiaries' account information. CMS detected the activity in May 2025 after beneficiaries called about account-confirmation letters they had not requested, and notified about 103,000 people.",
+  "timeline": {
+    "incident": {
+      "year": 2023
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "923120",
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "Centers for Medicare & Medicaid Services"
+  }
+}

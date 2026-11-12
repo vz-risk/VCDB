@@ -1,0 +1,104 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 8600,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8600,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "8C383920-D16B-4FDD-B826-2698F119BD32",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23585\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Washington Department of Social and Health Services; WA; Healthcare Provider; 8,600; submitted 2026-06-30; Unauthorized Access/Disclosure; Laptop; BA present: No).\nNo access dates given; incident year taken from the June 2026 HHS filing.\nOnly the year is known for the incident; dbir_year 2027.\nEmployee count: not looked up -> Unknown.\nIndustry 923130 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 18,000 employees (2025) per Wikipedia (https://en.wikipedia.org/wiki/Washington_State_Department_of_Social_and_Health_Services).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee viewed records without a business need"
+      }
+    ],
+    "github": "23585",
+    "master_id": "8C383920-D16B-4FDD-B826-2698F119BD32",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/washington-dept-health-social-services-insider-breach-2026/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A Washington Department of Social and Health Services employee accessed an internal client data system for reasons unrelated to their job and viewed records of about 8,600 people, including names, dates of birth, Social Security numbers, DSHS client numbers and program enrollment details. The employee is no longer with the department.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923130",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Washington Department of Social and Health Services"
+  }
+}

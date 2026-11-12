@@ -1,0 +1,115 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Let go"
+      ],
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4285,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4285,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "67C40348-565D-47B8-AB91-12DB77A5A62D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22644\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Archer Health; CA; Healthcare Provider; 4,285; submitted 2025-11-06; Hacking/IT Incident; Network Server; BA present: No).\nMisconfigured public database found by researcher Jeremiah Fowler (October 2025).\nEmployee count: not looked up -> Unknown.\nIndustry 621610 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 95 employees per Top Workplaces (https://topworkplaces.com/company/archer-health/sandiego/).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Database left online without password or encryption"
+      }
+    ],
+    "github": "22644",
+    "master_id": "67C40348-565D-47B8-AB91-12DB77A5A62D",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://hackread.com/archer-health-data-leak-23gb-medical-records/; https://hackread.com/tag/Jeremiah-Fowler/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A large cache of medical and personal information belonging to patients of Archer Health Inc. was left publicly accessible after a database was found online without encryption or password protection. Archer Health Inc., also known as Archer Home Health, is a California-based provider of in-home healthcare and palliative care services. The exposure, first identified by cybersecurity researcher Jeremiah Fowler and reported to Website Planet, included highly sensitive files that could have put thousands of individuals at risk. The database held more than 145,000 files, sized up to 23 gigabytes. Among the documents were patient assessments, home health certifications, care plans, discharge forms, and internal communications. Many of these contained personal details such as names, Social Security numbers (SSN), addresses, phone numbers, patient ID numbers, and medical information.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Archer Health"
+  }
+}

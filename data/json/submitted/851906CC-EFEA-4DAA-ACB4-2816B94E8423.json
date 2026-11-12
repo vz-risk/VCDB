@@ -1,0 +1,123 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 88609,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 88609,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "851906CC-EFEA-4DAA-ACB4-2816B94E8423",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22147\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Covenant Surgical Partners, Inc.; TX; Business Associate; 88,609; submitted 2025-05-28; Hacking/IT Incident; Network Server; BA present: Yes).\nNo access date published; year from the May 2025 HHS filing.\nOnly the year is known for the incident; dbir_year 2026.\nEmployee count: not looked up -> Unknown.\nIndustry 621493 inferred from the organization's name and description (HHS rows carry no NAICS tag).\nHHS lists a business associate; client covered entities are not named in the sources, so no secondary victims are coded. Employee count from 217 employees per GetLatka (https://getlatka.com/companies/covenant-surgical-partners/team).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22147",
+    "master_id": "851906CC-EFEA-4DAA-ACB4-2816B94E8423",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://ascnews.com/2025/06/covenant-surgical-partners-reports-data-breach-affecting-more-than-88000-people/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "\"Covenant Surgical Partners, a Nashville, Tennessee-based operator of single and limited-specialty ambulatory surgery centers (ASCs), has reported a data breach impacting 88,609 individuals, according to a filing with the U.S. Department of Health and Human Services\u2019 Office for Civil Rights. The breach involved the potential exposure of protected health information (PHI) and other sensitive personal data. While full details have not been released, information that may have been compromised includes names, contact details, dates of birth, medical records, insurance data and payment information. Covenant, which operates under the name Covenant Physician Partners, provides business and clinical support services to physician practices and surgery centers across the country.",
+  "timeline": {
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621493",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Covenant Surgical Partners, Inc."
+  }
+}

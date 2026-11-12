@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 970403,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 970403,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "4A2F7D31-3D0E-4126-A2C0-1E2F30AEF97B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24543\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Paradigm Healthcare Services; CA; Business Associate; 970,403; submitted 2026-09-14; Hacking/IT Incident; Network Server; BA present: Yes).\nRidgeway Pharmacy filed its own HHS row (258,920) for this same Paradigm incident; coded once with Ridgeway as a secondary victim.\nEmployee count: not looked up -> Unknown.\nIndustry 541219 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from about 37 employees per LeadIQ (https://leadiq.com/c/paradigm-healthcare-services/5a1d839124000024005e25f0).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24543",
+    "master_id": "4A2F7D31-3D0E-4126-A2C0-1E2F30AEF97B",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/970000-medi-cal-members-affected-by-paradigm-healthcare-data-breach/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Paradigm Healthcare Services, which processes billing for California's Medi-Cal program, discovered unauthorized access to its local network on October 13, 2025, affecting more than 970,000 Medi-Cal members. The company determined on August 18, 2026 that certain files containing protected health information (names, dates of birth, gender, and Medi-Cal member ID numbers) had been accessed by an unauthorized party between October 8\u201315, 2025. Paradigm notified affected individuals and the HHS in September 2026 but did not identify the threat actor or confirm data exfiltration. The company took systems offline and engaged outside incident response experts and law enforcement.",
+  "timeline": {
+    "incident": {
+      "day": 8,
+      "month": 10,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541219",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 258920,
+      "victim_id": [
+        "Ridgeway Pharmacy, Ltd"
+      ]
+    },
+    "state": "CA",
+    "victim_id": "Paradigm Healthcare Services"
+  }
+}

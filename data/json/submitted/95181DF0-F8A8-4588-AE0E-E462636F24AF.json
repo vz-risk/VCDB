@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 16046,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 16046,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "95181DF0-F8A8-4588-AE0E-E462636F24AF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22226\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Clement Manor; WI; Healthcare Provider; 16,046; submitted 2025-06-25; Hacking/IT Incident; Network Server; BA present: No).\nEmployee count: not looked up -> Unknown.\nIndustry 623311 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 315 employees (2024) per Cause IQ (https://causeiq.com/organizations/clement-manor,391020547).",
+    "created": "2026-11-06T19:32:02Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "22226",
+    "master_id": "95181DF0-F8A8-4588-AE0E-E462636F24AF",
+    "modified": "2026-11-06T19:32:02Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/gardner-orthopedics-ransomware-attack/; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Clement Manor, a senior retirement village in Greenfield, Wisconsin, experienced a cyberattack on or around April 14, 2025. The incident was described as \u201ca network disruption that affected its ability to access certain systems,\u201d which suggests ransomware was used to encrypt files, although ransomware was not mentioned in the substitute notification letter. Third party cybersecurity experts were engaged to investigate the incident, and it was determined that sensitive data may have been accessed or acquired, including first and last names, addresses, dates of birth, driver\u2019s license numbers, Social Security numbers, diagnoses/conditions, medication information, health insurance information, provider names, other treatment information, and/or financial account information.",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 4,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "623311",
+    "region": [
+      "019021"
+    ],
+    "state": "WI",
+    "victim_id": "Clement Manor"
+  }
+}

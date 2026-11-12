@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "11908A29-232A-4460-A4D4-316BB0032E6A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23531\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nSource: HHS OCR breach portal row (Horizon Eye Care Laser & Eye Surgery Center; NJ; Healthcare Provider; 501; submitted 2026-08-07; Hacking/IT Incident; Network Server; BA present: No).\nDifferent organization from Horizon Eye Care (Charlotte, NC), coded in PHIDBR from #23531; the earlier HHS review linked them by name only. HHS count 501 is a placeholder, so no data_total.\nEmployee count: not looked up -> Unknown.\nIndustry 621493 inferred from the organization's name and description (HHS rows carry no NAICS tag). Employee count from 11-50 employees per LeadIQ (https://leadiq.com/c/horizon-eye-care-nj/5a1d9a652300005b00897d34).",
+    "created": "2026-11-06T18:47:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23531",
+    "master_id": "11908A29-232A-4460-A4D4-316BB0032E6A",
+    "modified": "2026-11-06T18:47:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.beckersasc.com/asc-news/new-jersey-asc-experiences-data-breach-impacting-patient-information/; https://www.claimdepot.com/data-breach/horizon-eye-care-2026; https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Horizon Eye Care Laser and Surgery Center, an ambulatory surgery center in Margate, New Jersey with six locations, identified suspicious activity in its systems on or about June 8, 2026. Names, demographic, treatment and health insurance information were involved; 501 people (a placeholder) were reported to HHS.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621493",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "Horizon Eye Care Laser & Eye Surgery Center"
+  }
+}
