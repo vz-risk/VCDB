@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Previously unknown vulnerability in a third-party application used by Insightin.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Medusa"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1144686,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1144686,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "9C509280-28F3-4F56-88E1-A2F909240BF2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23053\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown, refined with what the sources say: hacking Exploit vuln (Insightin's own notice cites a previously unknown vulnerability in a third-party application) instead of Unknown; vector Unknown because the type of application is not stated (template had Web application), so the asset is S - Unknown.\nAdditions: Medusa's leak-site listing and $500,000 demand -> social Extortion (+ integrity Alter behavior, P - Unknown per lint), data_abuse 'Yes - Data ransomed' (attacker-sourced, not confirmed by Insightin). No source confirms encryption, so no ransomware malware is coded even though the issue title says ransomware.\nActor: Medusa, Organized crime / Financial (named claim; Insightin has not acknowledged it).\nData: health plan member data incl. Medicare Beneficiary IDs -> Medical + Personal. Amount 1,144,686 from the Oregon AG listing (Comparitech says that usually reflects the total); Insightin's notices name 142,727. data_victim Customer (health plan members of Insightin's clients). The health plan clients are not named, so no secondary victims.\nThe issue was assigned to dhylender; Suzanne added as assignee. Check for duplicate coding.\nVictim: label NAICS 51 / body 513 -> 513210; Baltimore, MD. Employee count not found -> Unknown.\nTimeline: Sept 17-23, 2025 -> dbir_year 2026.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Third-party app vuln exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Medusa extortion demand"
+      }
+    ],
+    "github": "23053",
+    "master_id": "9C509280-28F3-4F56-88E1-A2F909240BF2",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/insightin-health-clinic-service-corporation-data-breach/; https://oag.ca.gov/ecrime/databreach/reports/sb24-621162; https://www.comparitech.com/news/insightin-health-warns-142000-people-of-data-breach-claimed-by-ransomware-group",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Insightin Health, a Baltimore-based healthcare technology company that provides an AI-driven digital health platform to health insurers, found suspicious network activity in September 2025. An attacker exploited a previously unknown vulnerability in a third-party application Insightin used and accessed or copied files on a limited number of servers between September 17 and 23, 2025, including health plan members' names, dates of birth, contract numbers, health insurance and Medicare Beneficiary Identifiers and attributed-provider information. The Medusa ransomware group claimed the attack, listed Insightin on its leak site and demanded $500,000 for 378 GB of data. Insightin notified 142,727 people; the Oregon Attorney General's site lists 1,144,686.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 17,
+      "month": 9,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "Insightin Health"
+  }
+}

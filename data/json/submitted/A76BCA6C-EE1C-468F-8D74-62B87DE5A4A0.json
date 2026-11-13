@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3100000,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3100000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A76BCA6C-EE1C-468F-8D74-62B87DE5A4A0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22481\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed: external Unknown / Unknown, hacking Unknown / Web application, S - Web application, data_disclosure Yes.\nDeviation: discovery Internal - Unknown instead of the template's Unknown, because HCIactive says it identified the suspicious activity itself.\nData: SSNs, contact info -> Personal; diagnoses, lab results, prescriptions, medical images, claims -> Medical. About 3.1 million people -> amount 3,100,000. data_victim Customer (members of HCIactive's health plan/employer clients; clients not named, so no secondary victims). No misuse known.\nVictim: issue NAICS 511210, US. Employee count not found -> Unknown.\nTimeline: July 8-12, 2025, found about July 22 (about 2 weeks) -> dbir_year 2026.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "22481",
+    "master_id": "A76BCA6C-EE1C-468F-8D74-62B87DE5A4A0",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/healthcare-interactive-data-breach/; https://www.bankinfosecurity.com/ai-powered-services-firm-says-hack-affects-31m-a-30618; https://www.techtarget.com/healthtechsecurity/news/366638057/AI-powered-insurance-platform-breach-impacts-31M-individuals",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Healthcare Interactive Inc. (HCIactive), a provider of AI-powered insurance enrollment and benefits administration software, identified suspicious activity in its network around July 22, 2025. Its investigation confirmed unauthorized access and exfiltration of files between July 8 and 12, 2025, including names, contact details, dates of birth, Social Security numbers, health insurance enrollment and claims information, medical record numbers, diagnoses, lab results, prescriptions, other treatment information and medical images. About 3.1 million people were affected. The company said it was unaware of misuse and offered credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 8,
+      "month": 7,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Healthcare Interactive Inc. (HCIactive)"
+  }
+}

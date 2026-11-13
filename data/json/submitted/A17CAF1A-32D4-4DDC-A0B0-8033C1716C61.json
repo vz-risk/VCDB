@@ -1,0 +1,202 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Initial API endpoint breach (method not described); hardcoded credentials harvested from code repositories and used against secrets management, CI/CD and cloud.",
+      "result": [
+        "Infiltrate",
+        "Lateral movement",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Human attacker who set the objective plus frontier AI models / agentic attack frameworks that executed the intrusion.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - Secrets vault"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "A17CAF1A-32D4-4DDC-A0B0-8033C1716C61",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24386\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplates Hacking-ext-stolencreds + Malware-ext-Ransomware-databreach combined: external Organized crime / Financial (ransomware template), hacking Use of stolen creds / Web application, malware Ransomware, availability Obscuration + Interruption (rules.py), integrity Software installation, discovery Actor disclosure.\nAdditions: social Extortion (sources describe ransom negotiations and an 'extortion package'), which brings integrity Alter behavior and P - Unknown (lint rule). Actor variety adds 'Agentic system' because AI agents executed the attack. 'Agentic system' (actor variety) and 'Misalignment' (motive) are VERIS 1.4.2 enums not yet in VCDB's vcdb-merged.json; the record validates against vcdb-merged.json with those 1.4.2 enums added and passes veris checkValidity.py (Agentic system is never the sole actor variety).\nVictim: unnamed 'large enterprise environment' -> victim Unknown, industry 000, employee_count Large. No sector or country given. Consider dropping the record until a victim is named.\nData: credentials harvested from repositories and cloud access keys exfiltrated -> Credentials; internal data -> Internal. Exfiltration scope otherwise not specified. data_abuse not coded (no source says the stolen data was threatened for release).\nAssets: code repositories, secrets management, CI/CD and cloud -> S - Code repository, S - Secrets vault, S - Unknown, plus S - Web application for the API entry point (rules.py); cloud External Cloud Asset(s).\nTimeline: Unit 42 gives Sept 2, 2026 (ten hours from entry to ransomware), but one article also cites an Aug 27 Unit 42 briefing on the case, which predates it. Coded 2026-09-02 -> dbir_year 2027.\nConfidence Low: unnamed victim, initial access not described, single vendor case study.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial API endpoint access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Hardcoded creds and cloud keys harvested"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion with 80-page audit"
+      }
+    ],
+    "github": "24386",
+    "master_id": "A17CAF1A-32D4-4DDC-A0B0-8033C1716C61",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.techtimes.com/articles/326409/20260903/agentic-ransomware-took-down-enterprise-ten-hours-ai-left-80-page-audit.htm; https://tech-insider.org/unit-42-ai-agents-breach-firm-10-hours-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Palo Alto Networks Unit 42 documented an attack on an unnamed large enterprise on September 2, 2026 in which a human attacker set the objective and handed execution to frontier AI models and purpose-built agentic attack frameworks. Within about ten hours the agents performed reconnaissance, harvested hardcoded credentials from code repositories, got into secrets management, hijacked CI/CD pipelines, took cloud access keys, moved laterally across cloud, identity, DevOps and SaaS environments and deployed ransomware. The attacker handed the victim an 80-page technical audit written by the agents as part of the extortion package and said during ransom negotiations that AI agents had been used.",
+  "timeline": {
+    "compromise": {
+      "unit": "Hours",
+      "value": 10
+    },
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 2,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Unknown"
+    ],
+    "industry": "000",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Unknown (unnamed large enterprise)"
+  }
+}

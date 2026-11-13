@@ -1,0 +1,123 @@
+{
+  "action": {
+    "error": {
+      "notes": "Supabase key in client JavaScript with no Row Level Security policies.",
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "663EB410-A568-4EBD-92C2-2131CCA7E3C3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23023\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misconfig-srv followed: internal, Misconfiguration / Carelessness, S - Database, cloud = External Cloud Asset(s) (Supabase), discovery External - Security researcher (Wiz), data_disclosure Yes.\nDeviation: actor variety Developer instead of System admin, because the founder says he 'vibe-coded' the platform and the flaw was in the app's own code/database setup. Change back if you prefer the template.\nData: 1.5M agent API tokens -> API key (Credentials parent); ~35,000 emails -> Personal; private agent DMs (some with third-party OpenAI keys) -> Internal. Total ~4.75M records of mixed kinds (1.5M tokens, ~35,000 emails), not people, so no amounts or data_total. Wiz also had write access and edited a live post to prove it; not coded as an integrity impact because only the researcher did it.\nVictim: Moltbook, issue NAICS 511210; country and employee count not stated in the sources -> Unknown.\nTimeline: Moltbook launched in late January 2026; Wiz reported Jan 31 and it was fixed by Feb 1 01:00 UTC (about 3 hours) -> 2026-01, dbir_year 2027.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured database left public"
+      }
+    ],
+    "github": "23023",
+    "master_id": "663EB410-A568-4EBD-92C2-2131CCA7E3C3",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys; https://www.reuters.com/legal/litigation/moltbook-social-media-site-ai-agents-had-big-security-hole-cyber-firm-wiz-says-2026-02-02/; https://www.techzine.eu/news/security/138458/moltbook-database-exposes-35000-emails-and-1-5-million-api-keys/; https://carnegieendowment.org/research/2026/07/when-ai-agents-attack-autonomous-cyber-operations-and-europes-governance-gap",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Wiz researchers found that Moltbook, a newly launched 'vibe-coded' social network where AI agents post and chat, exposed its production Supabase database: a Supabase API key was hardcoded in client-side JavaScript and Row Level Security policies were missing, giving anyone unauthenticated read and write access. Exposed data included about 1.5 million agent API authentication tokens, about 35,000 email addresses and 4,060 private agent-to-agent conversations, some containing plaintext third-party credentials such as OpenAI API keys (about 4.75 million records). Wiz reported it on January 31, 2026 and Moltbook fully secured it by 01:00 UTC on February 1.",
+  "timeline": {
+    "containment": {
+      "unit": "Hours",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Moltbook"
+  }
+}

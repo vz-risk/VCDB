@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 400000,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 400000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "8D04B63C-0306-4BBB-A422-189C297F28D2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22568\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misconfig-srv followed: internal System admin, Misconfiguration / Carelessness, S - Database, discovery External - Security researcher (Cybernews), data_disclosure Yes.\nDeviation: cloud Unknown instead of the template's Cloud Yes (hosting not stated). The exposed system was a Kafka Broker (streaming/content delivery); coded S - Database as the closest template asset; S - Other is an alternative.\nData: 43M+ intimate messages and 600,000+ NSFW images/videos tied to device IDs/IPs -> Sensitive Personal (Personal parent); auth tokens -> Credentials. 400,000+ users -> amount and data_total 400,000.\nVictim: Imagime Interactive Limited, Hong Kong; issue label NAICS 51 -> 513210 (app publisher). Employee count not found -> Unknown.\nTimeline: discovery date not given; published Oct 2025 -> year 2025, dbir_year 2026.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Kafka broker left public"
+      }
+    ],
+    "github": "22568",
+    "master_id": "8D04B63C-0306-4BBB-A422-189C297F28D2",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.malwarebytes.com/blog/news/2025/10/millions-of-very-private-chats-exposed-by-two-ai-companion-apps; https://cybernews.com/security/ai-girlfriend-app-leak-exposes-400k-users; https://www.foxnews.com/tech/ai-girlfriend-apps-leak-millions-private-chats; https://betanews.com/2025/10/09/ai-girlfriend-apps-leaked-millions-of-intimate-conversations-and-images-heres-what-we-know",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Cybernews researchers found that Hong Kong developer Imagime Interactive Limited left a Kafka Broker instance used by its AI companion apps Chattee Chat and GiMe Chat exposed to the internet without authentication or access controls. It held more than 43 million intimate messages and over 600,000 images and videos from over 400,000 users, plus user logs, in-app purchase records, IP addresses, device identifiers and authentication tokens; no names or email addresses. The server was secured after Cybernews disclosed it; the findings were published in October 2025.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "HK"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Imagime Interactive Limited"
+  }
+}

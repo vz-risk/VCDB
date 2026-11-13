@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "notes": "AI-generated bulk email script (missing bracket) put all addresses in a batch into the To field.",
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 95364,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 95364,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "66BA39EA-3291-4C24-912A-DA0DBE2F9B27",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24478\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-Misdelivery-media followed: internal, Misdelivery / Carelessness, U - Desktop + U - Desktop or laptop, discovery Internal - Reported by employee, data_disclosure Yes.\nDeviation: actor variety End-user instead of the template's Unknown, because sources say a marketing-department employee ran the script.\nThe AI tool is not an actor: PDPC found the cause was the employee's prompt and inadequate testing, not a tool malfunction. 'Programming error' could be added to error.variety if you want to capture the faulty AI-generated script.\nData: 95,364 members' email addresses (Personal), state Transmitted (exposed in sent emails).\nDiscovery: sources say it was discovered and emails stopped, and PDPC was notified two days later; who spotted it is not stated, so the template's Reported by employee is kept.\nTimeline: April 25, 2024 -> dbir_year 2025. (Mothership's 2026 date is a typo; all other sources say 2024.)\nNAICS: label NAICS 44-45, body 445 -> 445298 (all other specialty food retailers; jerky/bakkwa). Employee count not found -> Unknown.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Misdelivery"
+      }
+    ],
+    "github": "24478",
+    "master_id": "66BA39EA-3291-4C24-912A-DA0DBE2F9B27",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://e.vnexpress.net/news/tech/tech-news/emails-of-95-000-customers-exposed-in-singapore-s-first-ai-related-data-breach-5127451.html; https://www.channelnewsasia.com/singapore/bee-cheng-hiang-data-breach-ai-pdpc-emails-6421711; https://sg.news.yahoo.com/singapore-sees-first-data-breach-linked-to-ai-use-st-reports-002640437.html; https://www.asiaone.com/singapore/bee-cheng-hiang-ai-data-breach-emails; https://mothership.sg/2026/10/bee-cheng-hiang-members-data-breach-ai/; https://www.straitstimes.com/tech/bad-ai-prompt-exposes-bee-cheng-hiang-customers-e-mail-addresses-in-first-case-of-ai-related-data; https://www.frontier-enterprise.com/shadow-ai-risks-bee-cheng-hiangs-email-leak/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 25, 2024 a marketing employee at Singapore jerky retailer Bee Cheng Hiang sent bulk marketing emails using a Python script generated with a generative AI tool. The prompt did not tell the tool to hide recipients, and the script put every address in each batch of up to 1,000 into the visible To field, exposing the email addresses of 95,364 members to each other. Testing only checked activity logs, so the error was missed. The company stopped the emails and notified Singapore's PDPC on April 27; the PDPC called it Singapore's first AI-related data breach and accepted a voluntary undertaking.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 25,
+      "month": 4,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "SG"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "445298",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "Bee Cheng Hiang"
+  }
+}

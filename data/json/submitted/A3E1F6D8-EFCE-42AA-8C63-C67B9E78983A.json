@@ -1,0 +1,120 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 13700000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored unencrypted",
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "A3E1F6D8-EFCE-42AA-8C63-C67B9E78983A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24525\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misconfig-srv followed: internal System admin, Misconfiguration / Carelessness, S - Database, discovery External - Security researcher (Jeremiah Fowler), data_disclosure Yes.\nDeviation: cloud Unknown instead of the template's Cloud Yes, because no source says how the database was hosted (Fowler notified 'the hosting provider').\nData: 13.7M records of previously breached data: credentials incl. plaintext passwords = Credentials; names, phones, emails = Personal; bank account details = Bank (Personal is its parent). data_victim Other: the people in the data are not Vibetech's customers or staff. data_total 13,700,000 (records, not unique people).\nNote: the data was already breached elsewhere and Vibetech appears to have been aggregating it; consider whether this belongs in VCDB.\nTimeline: discovery date not given (one eSecurity Planet summary says Oct 12, 2024, but every article is from Oct 2026 and Hackread is dated Oct 15, 2026). Coded year 2026 -> dbir_year 2027. Restricted the day after disclosure.\nNAICS: issue says 511210 (label NAICS 51). Employee count not found -> Unknown.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured database left public"
+      }
+    ],
+    "github": "24525",
+    "master_id": "A3E1F6D8-EFCE-42AA-8C63-C67B9E78983A",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://tech.yahoo.com/cybersecurity/articles/massive-data-leak-ai-development-130500148.html; https://www.expressvpn.com/research/vibetech-data-exposed; https://www.esecurityplanet.com/threats/news-vibetech-breach-records-unsecured-database-apac-india/; https://hackread.com/vibetech-database-exposes-att-fbi-data-more/; https://cybernews.com/security/at-t-amazon-paypal-walmart-fbi-data-leak-ai/; https://smbtech.au/news/researcher-finds-13-7-million-breached-credentials-sitting-in-an-unprotected-public-database/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Security researcher Jeremiah Fowler found an unsecured, non-password-protected database linked to Vibetech, an India-based AI software development and IT services company. It held 13.7 million records aggregated from earlier breaches and leaks (AT&T 7.9M, Casio.ru 1.7M, Amazon 1.2M, Walmart, PayPal, BluBank, the FBI employee directory, Interpol and others), including names, phone numbers, email addresses, plaintext passwords and bank account details. Access was restricted the day after his disclosure. The findings were published in October 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Vibetech"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "Publicly accessible Microsoft Azure storage bucket.",
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Other"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored unencrypted",
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "33666E21-A7F9-4876-BDE0-B5FE81C4AC69",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24615\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misconfig-srv followed: internal System admin, Misconfiguration / Carelessness, discovery External - Security researcher (Cybernews), data_disclosure Yes, cloud = External Cloud Asset(s) (Azure).\nDeviation: asset S - File instead of the template's S - Database, because the exposed store was an Azure storage bucket of files, not a database. Change back if you prefer the template.\nData: chat logs with names, birth dates, addresses, contact info = Personal; enterprise customers' corporate documents = Internal; prompts/AI responses/metadata = Other. 17.6M is a file count and 144,000 a chat-log count, not a person count, so no amount. State Stored unencrypted (sources say unencrypted). Cybernews found no evidence of malicious access but earlier access cannot be ruled out.\nTimeline: exposure start unknown; discovered Aug 2, 2026, disclosed Aug 11, closed by Sept 8 (containment about 5 weeks from discovery). Incident coded 2026-08 from the discovery date -> dbir_year 2027.\nNAICS: issue label NAICS 51, body 5191 -> 519290 (web portals / all other information services). Employee count not found -> Unknown.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured storage bucket left public"
+      }
+    ],
+    "github": "24615",
+    "master_id": "33666E21-A7F9-4876-BDE0-B5FE81C4AC69",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.techradar.com/pro/security/security-breach-at-ai-aggregator-exposes-over-18-million-files-including-some-very-embarrassing-chat-records; https://cybernews.com/security/302-ai-data-leak-exposed-millions-files/; https://www.esecurityplanet.com/threats/news-302-ai-data-leak-private-chats/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "302.ai, a Hong Kong-based AI aggregator operated by Univerads Technology Limited, left a Microsoft Azure storage bucket publicly accessible without authentication or encryption. Cybernews researchers found it on August 2, 2026: 17.6 million files (22.72 TB), including over 144,000 user chat logs with prompts, AI responses and personal details (birth dates, genders, addresses, contact information), plus enterprise customers' corporate documents and chatbot logs. Researchers notified the company on August 11 and the bucket was closed by September 8, 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Weeks",
+      "value": 5
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "HK"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "519290",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "302.ai (Univerads Technology Limited)"
+  }
+}

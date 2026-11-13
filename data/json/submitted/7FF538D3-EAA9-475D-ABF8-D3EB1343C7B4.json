@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Elevate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Web shells deployed and disguised as system files; Hades implant staged.",
+      "result": [
+        "Persist"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "Backdoor"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "notes": "Human operator (assessed Chinese-speaking, low-medium confidence) plus the Hermes AI agent running unattended.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "7FF538D3-EAA9-475D-ABF8-D3EB1343C7B4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23850\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed: external, hacking Unknown / Web application, S - Web application, discovery (changed, see below), data_disclosure Yes. Additions the sources support: malware web shells / implant, integrity Software installation.\nActor: external Unknown + Agentic system (Hermes agent ran commands unattended), motive Espionage (the reporting and target point to espionage; no monetization). Researchers assess a Chinese-speaking operator with low-medium confidence (ShadowPad link, Hong Kong hosting, Chinese artifacts); country left Unknown. 'Agentic system' (actor variety) and 'Misalignment' (motive) are VERIS 1.4.2 enums not yet in VCDB's vcdb-merged.json; the record validates against vcdb-merged.json with those 1.4.2 enums added and passes veris checkValidity.py (Agentic system is never the sole actor variety).\nData: the agent catalogued files from the Office of the Permanent Secretary for Finance, including personnel records -> Internal + Personal (data_victim Employee). No exfiltration was confirmed, but access to the systems is established, so data_disclosure Yes.\nDiscovery: Hunt.io and Bob Diachenko via the attacker's open directories -> External - Security researcher (template default was Unknown). The Thai government has not commented.\nVictim: issue NAICS 92 -> 921130 (Public Finance Activities); government Federal (national). Employee count Unknown.\nTimeline: open directories exposed July 9-13, 2026; intrusion was live then -> 2026-07, dbir_year 2027.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Web shells installed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Agent enumerated internal files"
+      }
+    ],
+    "github": "23850",
+    "master_id": "7FF538D3-EAA9-475D-ABF8-D3EB1343C7B4",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-espionage-attack-thai-ministry-finance; https://securityaffairs.com/195941/hacking/thailands-ministry-of-finance-targeted-with-hermes-ai-agent-running-unattended-hades-implant-staged.html; https://therecord.media/thailand-hackers-ai-finance-ministry",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Hunt.io and researcher Bob Diachenko found three open directories on a Hong Kong-hosted server, exposed July 9-13, 2026, holding nearly 600 files of exploit code, web shells, compiled implants, credentials and logs from an intrusion into Thailand's Ministry of Finance. An open-source Hermes AI agent running in 'YOLO' mode executed reconnaissance, privilege-escalation checks and file enumeration inside the network and catalogued documents from the Office of the Permanent Secretary, including personnel records. Active session cookies, deployed web shells and internal network access show multiple MOF systems were compromised; a new Go implant ('Hades') and privilege-escalation exploits were staged. No exfiltration was confirmed. Researchers assess with low-to-medium confidence that the operator is Chinese-speaking.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "TH"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921130",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "Ministry of Finance (Thailand)"
+  }
+}

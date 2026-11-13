@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Crafted HEIC upload to Discourse -> libheif heap overflow -> server takeover; second flaw -> ChatGPT/Codex account takeover -> GitHub org access via Codex.",
+      "result": [
+        "Infiltrate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "name": [
+        "Hacktron AI"
+      ],
+      "notes": "Independent security researchers (Hacktron AI) testing under a bug bounty; Claude was their tool, not an autonomous actor.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - LLM application"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Source code"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "0DD0B709-E594-4D49-8DA9-1D5E2976AA9E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24382\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-exploit-vuln followed: external, Exploit vuln / Web application, S - Web application, data_disclosure Yes.\nThe issue's 'Error' label is not coded: no source describes an error by OpenAI (running an unpatched Discourse is a failure to patch, which the style guide says not to code as Error).\nIs it an incident? This was bug-bounty research that OpenAI paid for ($6,500) but called out of scope. Coded Confirmed because accounts and code access were actually obtained; change to Near Miss / drop if you treat authorized bug-bounty work as non-incidents.\nActor: external Other (security researchers), motive Other (bug bounty), name Hacktron AI, country unknown. Claude Opus 5 was used to write the exploit, so it is a tool, not an Agentic system actor.\nAssets: Discourse forum server (S - Web application), ChatGPT/Codex accounts (S - LLM application), OpenAI's GitHub organization (S - Code repository). Event chain step 1 attribute coded 'unk' (no integrity impact is described for the exploit step).\nData: account takeover -> Credentials (session/account access); read access to private code -> Source code; Internal. Being able to 'suggest changes' (a pull request) is not coded as Modify data because no change is reported as merged.\nVictim: OpenAI, issue label NAICS 51 -> 513210; employees 1001 to 10000.\nTimeline: July 25, 2026; Discourse fixed July 27 -> dbir_year 2027.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Forum server vuln exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee ChatGPT/Codex account taken over, code access"
+      }
+    ],
+    "github": "24382",
+    "master_id": "0DD0B709-E594-4D49-8DA9-1D5E2976AA9E",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.wsj.com/tech/ai/hackers-used-anthropics-claude-to-break-into-openai-b40ba883; https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 25, 2026 Hacktron AI researchers, using Anthropic's Claude Opus 5 to build the exploit, compromised the Discourse server behind OpenAI's community forum with a crafted HEIC image that triggered a libheif memory bug (fixed upstream months earlier without a CVE). From the forum server they used a second flaw to take over ChatGPT and Codex accounts, including an OpenAI employee's account whose Codex was connected to OpenAI's GitHub organization, giving them a way to read and suggest changes to OpenAI's private code. They reported it through OpenAI's bug bounty; Discourse shipped a fix on July 27 and OpenAI paid a $6,500 award. OpenAI described the testing as out of scope.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "day": 25,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "OpenAI"
+  }
+}

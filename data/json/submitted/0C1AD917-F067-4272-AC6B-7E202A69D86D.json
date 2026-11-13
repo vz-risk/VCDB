@@ -1,0 +1,114 @@
+{
+  "action": {
+    "misuse": {
+      "notes": "Customer data put into an unauthorized AI-based software application.",
+      "variety": [
+        "Privilege abuse",
+        "Unapproved software"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - LLM application"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0C1AD917-F067-4272-AC6B-7E202A69D86D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23274\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTAG MISMATCH - please decide. The issue tag is Misuse-prt-privabuse (partner actor), but the 8-K calls it 'an internal incident' and names no vendor or partner. Coded with an INTERNAL actor (variety Unknown) and Privilege abuse per the tag's action. If you know a partner did it, change actor.internal to actor.partner.\nAction: Misuse Privilege abuse (tag) + Unapproved software (the 8-K's 'unauthorized artificial intelligence-based software application'). Data mishandling is another fit. Vector Unknown (not described).\nMotive Unknown: the 8-K gives no reason (the Misuse template's Financial is not supported).\nAssets: U - Desktop or laptop (Misuse template) + S - LLM application (the unauthorized AI app).\nData: customer names, SSNs, dates of birth -> Personal; count not disclosed.\nDiscovery: bank 'became aware' May 5, 2026; how is not stated -> Internal - Unknown.\nVictim: label NAICS 52 -> 522110; employees about 400 -> 101 to 1000.\nTimeline: incident date not given; became aware May 5, 2026 -> year 2026, dbir_year 2027.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Customer data put into unauthorized AI app"
+      }
+    ],
+    "github": "23274",
+    "master_id": "0C1AD917-F067-4272-AC6B-7E202A69D86D",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.theregister.com/security/2026/05/12/us-bank-reports-itself-after-ai-customer-data-mishap/5238787; https://www.sec.gov/ix?doc=/Archives/edgar/data/1605301/000160530126000021/cbfv-20260507.htm; https://www.wsgrdataadvisor.com/2026/05/shadow-ai-triggers-first-sec-form-8-k-for-unauthorized-ai-use-what-financial-institutions-and-public-companies-need-to-know/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Community Bank (CB Financial Services), which operates in southwestern Pennsylvania, Ohio and West Virginia, disclosed in an SEC Form 8-K (Item 1.05) that non-public customer information including names, Social Security numbers and dates of birth was handled using an unauthorized AI-based software application. The bank became aware of the internal incident on May 5, 2026, secured the information, engaged external cybersecurity advisors and determined on May 7 that it was material. The application, the person involved and the number of customers were not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522110",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Community Bank (CB Financial Services)"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Fun"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1900000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1900000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "EB207F04-F6D7-4955-A060-888722061277",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21172\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nNo template tag on the issue (only 'Hacking'); coded in the Hacking-ext-exploit-vuln shape because the hacker said the site's open-source components made it 'easy to exploit vulnerabilities' (attacker's account, not confirmed by Muah.ai).\nActor: external Unknown, motive Fun (the hacker says they were 'initially driven by curiosity'). Discovery: the hacker gave the data to 404 Media -> Actor disclosure.\nData: 1.9 million email addresses -> Personal (amount 1,900,000); sexual-fantasy prompts tied to those emails -> Sensitive Personal.\nVictim: Muah.ai; no NAICS tag on the issue, coded 511210 to match similar AI-companion sites (MyLovely.AI). Country and employee count not found -> Unknown.\nTimeline: Sept 17, 2024 -> dbir_year 2025.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2025,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Vulns in site exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Database stolen"
+      }
+    ],
+    "github": "21172",
+    "master_id": "EB207F04-F6D7-4955-A060-888722061277",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.deccanherald.com/world/ai-girlfriend-site-hacked-user-fantasies-stolen-heres-what-was-revealed-3234952; https://cyberinsider.com/ai-girlfriend-site-exposed-emails-and-interactions-of-1-9-million-users/; https://haveibeenpwned.com/Breach/Muah",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A hacker breached Muah.ai, an uncensored 'AI girlfriend' companion site, on September 17, 2024, describing it as built from 'duct-taped' open-source projects that were easy to exploit. The stolen database held about 1.9 million email addresses tied to users' prompts, many describing sexual fantasies and some involving child sexual abuse. The hacker, initially curious, gave the data to 404 Media after seeing the abuse content; it was added to Have I Been Pwned in October 2024. Muah.ai's administrator blamed an attack by competitors.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks"
+    },
+    "incident": {
+      "day": 17,
+      "month": 9,
+      "year": 2024
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Muah.ai"
+  }
+}

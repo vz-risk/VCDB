@@ -1,0 +1,167 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Web skimmers planted in JavaScript; a cron job re-injected one every two minutes.",
+      "result": [
+        "Persist"
+      ],
+      "variety": [
+        "Capture app data"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Single Chinese-speaking operator who set targets; AI agent frameworks Strix, Cairn and Hermes did most of the work.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Unknown",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Modify data"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "9158D59F-CF43-41F7-AF2C-E56A0F254A21",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24460\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (external, hacking Unknown / Web application, S - Web application, data_disclosure Yes), with additions the sources support: malware (web skimmers), integrity, availability.\nVictims: none are named (only described: Fortune 500 hospitality company, major US airline, industrial supplies distributor, online fashion retailer). Split into one record per victim (24460-1 through 24460-27), originally coded as a single campaign record (E96D3C40-2A5D-4BDE-AEB6-034CBF289CCB). This is record 17 of 27.\nActor: Gambit says one financially motivated, Chinese-speaking operator; country left Unknown (language is not location). Motive Financial (card data theft and resale is the stated purpose). Actor variety adds 'Agentic system' because the agents did most of the work autonomously. 'Agentic system' (actor variety) and 'Misalignment' (motive) are VERIS 1.4.2 enums not yet in VCDB's vcdb-merged.json; the record validates against vcdb-merged.json with those 1.4.2 enums added and passes veris checkValidity.py (Agentic system is never the sole actor variety).\nAction: initial access methods are not named in the sources -> hacking Unknown. Skimmers -> malware Capture app data, vector Direct install (placed after access). Cleanup wiped card fields from Magento databases (integrity Modify data) and in one case deleted 180 tables (availability Destruction).\nData: 600,000+ payment card records from two victims -> Payment (+ Personal parent).\nTimeline: campaign active since at least July 2026 (issue says 2024; sources say 2026) -> dbir_year 2027.\nConfidence Low: unnamed victims and a single research firm's account.\nData: the 600,000+ card records came from two victims, assigned to 24460-1 and 24460-2. For this victim, data type and disclosure are Unknown. Exfiltrate removed from action results for the same reason.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Data theft from this victim not confirmed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Web skimmer installed"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Database tables deleted in cleanup"
+      }
+    ],
+    "github": "24460-17",
+    "master_id": "9158D59F-CF43-41F7-AF2C-E56A0F254A21",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thenextweb.com/news/ai-agents-600000-credit-card-records-gambit; https://www.esecurityplanet.com/threats/news-ai-agents-600k-credit-card-records/; https://bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers; https://cyberinsider.com/ai-agents-steal-600000-credit-cards-in-attacks-on-online-retailers/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Gambit Security found that a single, financially motivated, Chinese-speaking operator used three open-source AI agent frameworks (Strix for scanning, Cairn for autonomous exploitation, Hermes for orchestration, directed with Claude Opus 4.6) to attack 105 targets and compromise at least 27 organizations between July and mid-September 2026, including a Fortune 500 hospitality company, a major US airline, an industrial supplies distributor and an online fashion retailer. The agents stole over 600,000 unexpired payment card records from two victims, planted web skimmers (one re-injected by cron every two minutes), wiped card fields from Magento databases and in one case deleted 180 database tables. Gambit recovered the attacker's staging server.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Unknown"
+    ],
+    "industry": "000",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "17 of 27 unnamed victims"
+  }
+}

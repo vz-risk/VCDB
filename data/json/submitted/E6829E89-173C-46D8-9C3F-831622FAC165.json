@@ -1,0 +1,122 @@
+{
+  "action": {
+    "misuse": {
+      "notes": "Applicant spreadsheet uploaded to ChatGPT, which was not authorised.",
+      "variety": [
+        "Privilege abuse",
+        "Unapproved software"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Contractor of the authority at the time of the upload (now a former contractor).",
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - LLM application"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2031,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2031,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "E6829E89-173C-46D8-9C3F-831622FAC165",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22516\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse followed: internal End-user (an on-site contractor counts as internal), Privilege abuse / LAN access, U - Desktop or laptop, data_disclosure Yes.\nDeviations: motive Unknown instead of the template's Financial (no source gives a reason; convenience is likely but not stated). Discovery Internal - Unknown (how it was found is not stated). Additions: misuse Unapproved software (ChatGPT was 'not authorised') and S - LLM application, cloud External Cloud Asset(s).\nData: names, addresses, emails, phones -> Personal; 'some personal and health information' -> Medical. Up to 3,000 people at first; later reporting confirms 2,031 -> amount 2,031.\nVictim: NSW Reconstruction Authority, issue NAICS 925110; government Regional (NSW state). Employee count Unknown.\nTimeline: upload March 12-15, 2025; disclosed Oct 6, 2025 (months later) -> dbir_year 2026.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Applicant data uploaded to ChatGPT"
+      }
+    ],
+    "github": "22516",
+    "master_id": "E6829E89-173C-46D8-9C3F-831622FAC165",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.nsw.gov.au/departments-and-agencies/nsw-reconstruction-authority/resilient-homes-program-data-breach; https://www.itnews.com.au/news/nsw-gov-contractor-uploaded-excel-spreadsheet-of-flood-victims-data-to-chatgpt-620815; https://www.9news.com.au/national/nsw-chatgpt-data-breach-northern-rivers-flood-victims/b633075b-1104-4bac-a3a1-9a4d85c46339; https://www.nsw.gov.au/departments-and-agencies/nsw-reconstruction-authority/our-work/northern-rivers/resilient-homes-program-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between March 12 and 15, 2025 a former contractor of the NSW Reconstruction Authority uploaded an Excel spreadsheet with more than 12,000 rows of personal information about applicants to the Northern Rivers Resilient Homes Program (a flood-recovery buyback and home-raising program) to ChatGPT, an AI tool the authority had not authorised. The data included names, addresses, email addresses, phone numbers and some personal and health information of up to 3,000 people (2,031 confirmed). The authority disclosed it on October 6, 2025, said there was no evidence the data was made public and had Cyber Security NSW monitor the internet and dark web.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months"
+    },
+    "incident": {
+      "day": 12,
+      "month": 3,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "925110",
+    "region": [
+      "009053"
+    ],
+    "state": "NSW",
+    "victim_id": "NSW Reconstruction Authority"
+  }
+}

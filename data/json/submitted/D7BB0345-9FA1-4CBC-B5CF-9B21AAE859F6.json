@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "7.24 million fraudulent commands sent to the app server.",
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "JP"
+      ],
+      "motive": [
+        "Fun"
+      ],
+      "notes": "Group of Japanese teenagers; the program was written with help from ChatGPT.",
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7200000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7200000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "D7BB0345-9FA1-4CBC-B5CF-9B21AAE859F6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23712\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed: external, hacking Unknown / Web application, S - Web application, discovery Unknown, data_disclosure Yes.\nAdditions: availability Interruption (company suspended some app functions).\nActor: external Unaffiliated (group of teenagers), motive Fun (the Osaka student told police he did it 'for fun'), country JP. ChatGPT helped write the program; it is a tool, not an Agentic system actor.\nData: about 7.2 million members' personal information (SoraNews24 'some 7.2 million people') -> Personal, amount 7,200,000. No misuse confirmed.\nVictim: Kaikatsu Frontier, label NAICS 71 -> 713990 (all other amusement and recreation). Employee count not found -> Unknown.\nTimeline: Jan 18-20, 2025 -> dbir_year 2026 (outside the 2027 window; arrests were in Dec 2025 and July 2026).",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member data extracted from app server"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "App functions suspended"
+      }
+    ],
+    "github": "23712",
+    "master_id": "D7BB0345-9FA1-4CBC-B5CF-9B21AAE859F6",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.japantimes.co.jp/news/2026/07/09/japan/crime-legal/japan-teen-arrest-cyberattack-internet-cafe/; https://soranews24.com/2025/12/09/osaka-teen-arrested-for-hacking-into-internet-cafes-app-to-steal-data-was-helped-by-chat-gpt/amp/; https://english.adnkronos.com/2026/07/09/18-year-old-arrested-over-cyberattack-on-internet-cafe-operator/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 18-20, 2025 attackers sent more than 7.24 million fraudulent commands to the app server of Kaikatsu Frontier, operator of the Kaikatsu Club internet cafe chain, to extract membership information, forcing the company to suspend some app functions; personal information of about 7.2 million members was leaked. A 17-year-old Osaka high school student who wrote the attack program with help from ChatGPT was arrested in December 2025 and said he did it 'for fun'. An 18-year-old Tokyo man was arrested in July 2026 and a 19-year-old was referred to prosecutors for compiling the stolen data into a database. No misuse of the data has been confirmed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 18,
+      "month": 1,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "713990",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Kaikatsu Frontier"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Third party obtained profile and settings information from a GoDaddy API. The specific flaw is not described.",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Human operator plus the AI agent that ran the attack. Investigators cited a strong Chinese nexus (IPs in China and Singapore) and a suspected Chinese state-sponsored group, but this is suspicion only.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A97A5E6B-FB62-4537-8068-9D13C96A013D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24681\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-exploit-vuln followed (external, Exploit vuln, Web application, S - Web application, data_disclosure Yes).\nDeviations: discovery coded Internal - Unknown instead of the template's Unknown, because GoDaddy says it detected the incident on Sept 19, the day after. Actor variety adds 'Agentic system' because GoDaddy calls it an AI-driven attack and investigators found AI attack skills on the attacker's infrastructure. Remove it if you only want Agentic system on rogue-AI cases. 'Agentic system' (actor variety) and 'Misalignment' (motive) are VERIS 1.4.2 enums not yet in VCDB's vcdb-merged.json; the record validates against vcdb-merged.json with those 1.4.2 enums added and passes veris checkValidity.py (Agentic system is never the sole actor variety).\nEvent chain: the template's Event 1 attribute 'ia' is coded 'unk' because no source supports an integrity impact (GoDaddy says nothing was changed).\nActor: unknown. 123 Reg's investigators traced it to IPs in China and Singapore ('strong Chinese nexus') and suspect a Chinese state-sponsored group; actor country left Unknown because this is suspicion.\nData: profile/settings and contact information (names, phone numbers, countries, preferences, VAT numbers for businesses) = Personal + Internal. GoDaddy first said access was read-only; a later spokesperson said 'it's possible they created copies', so Exfiltrate is not coded. No customer count given.\n123 Reg (GoDaddy-owned) disclosed what appears to be the same Sept 18 attack; treated as part of this GoDaddy record rather than a second incident. Split it out if you prefer.\nNAICS: issue label NAICS 51 and body 5182 -> 518210. Employees about 5,500-7,000 per public company profiles -> 1001 to 10000.\nConfidence Medium: actor and the exact flaw are unknown.",
+    "created": "2026-11-05T23:36:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "API vuln exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer profile data read"
+      }
+    ],
+    "github": "24681",
+    "master_id": "A97A5E6B-FB62-4537-8068-9D13C96A013D",
+    "modified": "2026-11-05T23:36:51Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://vinnews.com/2026/10/28/godaddy-says-ai-driven-cyberattack-exposed-website-customer-information/; https://thecudaily.com/godaddy-says-its-been-penetrated-by-its-first-ai-driven-cyber-attack/; https://news.lavx.hu/article/123-reg-discloses-ai-cyberattack-on-customer-data-suspects-china-nexus",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 18, 2026 an unidentified attacker used an AI-driven attack to exploit a GoDaddy API and read profile, settings and contact information of customers of GoDaddy's Websites + Marketing product (and, per 123 Reg's own notice, customer data of GoDaddy-owned UK registrar 123 Reg). GoDaddy detected the activity on September 19, said the attacker did not obtain passwords, access accounts or change websites, contained the incident, reported it to law enforcement and voluntarily notified the FTC and UK and EU data protection authorities. Investigators found AI attack 'skills' on attacker infrastructure and IP addresses resolving to China and Singapore.",
+  "timeline": {
+    "containment": {
+      "unit": "Unknown"
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 18,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "state": "AZ",
+    "victim_id": "GoDaddy"
+  }
+}

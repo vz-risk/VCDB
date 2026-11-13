@@ -1,0 +1,123 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "5D2091FD-5E27-4554-BAB8-24D6BC465470",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23202\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed: external Unknown / Unknown, hacking Unknown / Web application, S - Web application, data_disclosure Yes.\nDeviation: discovery External - Actor disclosure instead of the template's Unknown, because the data surfaced through cybercrime forum posts.\nData: emails, user IDs, social media usernames -> Personal; explicit sexual prompts linkable to user IDs -> Sensitive Personal (sexual content; Personal is its parent); subscription info, storage URLs, moderation reports -> Internal. 'More than 100,000 users' with no exact count, so no amount.\nMotive Unknown: posted on a forum, but no sale price or ransom demand is described.\nThe issue was assigned to dhylender; Suzanne added as assignee. Check dhylender has not coded it too.\nVictim: issue NAICS 511210; country and employee count not found -> Unknown.\nTimeline: incident date not given; reported April 2026 -> year 2026, dbir_year 2027.\nThe X/DarkWebInformer link in the source article is social media and is not cited.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23202",
+    "master_id": "5D2091FD-5E27-4554-BAB8-24D6BC465470",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.helpnetsecurity.com/2026/04/09/mylovely-ai-data-breach-user-conversations/; https://haveibeenpwned.com/Breach/MyLovelyAI",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Data from MyLovely.AI, a platform for creating NSFW AI companions and images, was leaked and posted on a cybercrime forum and added to Have I Been Pwned in April 2026. It includes email addresses, user IDs, user-created prompts, links to generated images, a limited number of Discord and X usernames, subscription information, storage URLs and content-moderation reports, and two datasets of about 113,000 explicit prompts, nearly 70,000 of which can be linked to specific user IDs. More than 100,000 users were affected. How the data was obtained has not been disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "MyLovely.AI"
+  }
+}

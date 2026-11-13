@@ -1,0 +1,125 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "System admin"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Log"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "3555CF53-2B9E-45ED-870A-EEA3F8AABEBC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22528\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misconfig-srv followed: internal System admin, Misconfiguration / Carelessness, S - Database, discovery External - Security researcher (Wiz), data_disclosure Yes. Addition: S - Log (the exposed data was log streams).\nDeviation: cloud Unknown instead of the template's Cloud Yes (hosting not stated).\nNAICS: the issue label says NAICS 56 and the body 561, so industry is coded '561' per the project rule; this looks like a mis-tag for an AI research company (541715 would fit). Please confirm or change.\nData: API secrets/keys -> API key (Credentials parent); backend and operational logs -> Internal; user chat history -> Personal. Over 1 million log lines, not a person count, so no amount.\nVictim: DeepSeek, China; about 150-200 staff -> 101 to 1000.\nTimeline: late January 2025 -> dbir_year 2026.",
+    "created": "2026-11-05T23:39:10Z",
+    "dbir_year": 2026,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured database left public"
+      }
+    ],
+    "github": "22528",
+    "master_id": "3555CF53-2B9E-45ED-870A-EEA3F8AABEBC",
+    "modified": "2026-11-05T23:39:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.msn.com/en-us/news/technology/deepseek-security-breach-critical-databases-exposed-more-than-one-million-records-reportedly-leaked/ar-AA1y7hzr; https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Wiz researchers found two open ports leading to a publicly accessible ClickHouse database belonging to Chinese AI company DeepSeek that required no authentication and allowed full database control. It held over a million lines of log streams containing chat history, secret keys/API secrets, backend details and operational metadata, and could have let an attacker escalate privileges in DeepSeek's environment. Wiz found it within minutes of starting its research in late January 2025 and DeepSeek secured it promptly after disclosure.",
+  "timeline": {
+    "containment": {
+      "unit": "Hours"
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "DeepSeek (Hangzhou DeepSeek Artificial Intelligence)"
+  }
+}
