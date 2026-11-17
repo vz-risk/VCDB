@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Misrepresentation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "7B5E5816-159E-4CEE-B1AB-C506479A23B1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24415\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nPartner_Breach rule applied: Brevo is primary and its customers are secondary. Tag Hacking-ext-unknown; Exploit vuln coded for the SAML flaw. Integrity Misrepresentation for phishing sent from customer accounts. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "created": "2026-11-11T18:20:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "24415",
+    "master_id": "7B5E5816-159E-4CEE-B1AB-C506479A23B1",
+    "modified": "2026-11-11T18:20:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.malwarebytes.com/blog/news/2026/09/crypto-customers-targeted-by-scammers-after-email-marketing-provider-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 10, 2026, an attacker exploited a flaw in email marketing platform Brevo's SAML single sign-on to get into 138 customer accounts, exported contact lists from 43 accounts and used 6 to send phishing emails to subscribers. Crypto wallet makers Trezor, CoinTracking and BitBox confirmed fake security alerts went to their newsletter lists.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 10,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "150155"
+    ],
+    "secondary": {
+      "amount": 138,
+      "notes": "138 Brevo customer accounts were accessed; three named.",
+      "victim_id": [
+        "Trezor; 334118",
+        "CoinTracking; 513210",
+        "BitBox; 334118"
+      ]
+    },
+    "victim_id": "Brevo"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "FulcrumSec"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 300000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Source code"
+        },
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 300000,
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "7ADD6042-0D5E-466F-9D63-79C1E08CDC02",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24633\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Hacking-ext-unknown; Use of stolen creds coded per the reports. Record count is the group's claim. No ransom demand is described, so Extortion is not coded. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "created": "2026-11-11T18:20:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Stolen or phished credentials used"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "24633",
+    "master_id": "7ADD6042-0D5E-466F-9D63-79C1E08CDC02",
+    "modified": "2026-11-11T18:20:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.infoq.com/news/2026/10/pingcap-cloud-data-breach/; https://aviatrix.ai/threat-research-center/tidb-breach-flawed-cloud-security-fulcrumsec-2026/; https://tech-insider.org/tidb-cloud-breach-pingcap-stolen-service-account-28-days-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between September 9 and October 7, 2026, the FulcrumSec extortion group used stolen service account credentials to access PingCAP's internal systems and took about 10.6 TB of data, including TiDB Cloud control-plane records, customer SQL statements, API keys, billing information and 413 private source code repositories. It claimed records on about 300,000 users.",
+  "timeline": {
+    "compromise": {
+      "unit": "Weeks",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 9,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "PingCAP"
+  }
+}

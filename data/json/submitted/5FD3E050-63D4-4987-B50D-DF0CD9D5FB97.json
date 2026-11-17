@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "5FD3E050-63D4-4987-B50D-DF0CD9D5FB97",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22782\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nPartner_Breach rule applied: Gainsight is primary and its Salesforce customers are secondary. Use of stolen creds coded for the stolen OAuth tokens (the tag says exploit vuln, but no vulnerability is described). Extortion coded for the group's pay-or-leak campaign. Secondary amount is an estimate. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "created": "2026-11-11T18:20:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Stolen or phished credentials used"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      }
+    ],
+    "github": "22782",
+    "master_id": "5FD3E050-63D4-4987-B50D-DF0CD9D5FB97",
+    "modified": "2026-11-11T18:20:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/salesforce-investigates-customer-data-theft-via-gainsight-breach/; https://status.salesforce.com/generalmessages/20000233; https://www.bleepingcomputer.com/news/security/google-warns-salesloft-breach-impacted-some-workspace-accounts/; https://techcrunch.com/2025/11/20/salesforce-says-some-of-its-customers-data-was-accessed-after-gainsight-breach/; https://www.databreachtoday.com/salesforce-details-supply-chain-attack-targeting-gainsight-a-30108; https://www.databreachtoday.com/shinyhunters-hack-salesforce-instances-via-gainsight-apps-a-30087; https://www.theregister.com/2025/11/26/gainsight_ceos_handful_customers_data_stolen/; https://haveibeenpwned.com/Breach/RalphLauren; https://www.stockstoday.com/salesforce-faces-dual-challenges-security-breach-and-major-acquisition/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In November 2025 attackers used OAuth refresh tokens tied to Gainsight-published applications connected to Salesforce to pull data from customers' Salesforce instances. Salesforce revoked the tokens; Scattered Lapsus$ Hunters claimed the attack and named victims, and Gainsight said a handful of customers had data stolen.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 10,
+      "notes": "A handful of Gainsight customers had Salesforce data stolen; Ralph Lauren is named in a comment (HIBP).",
+      "victim_id": [
+        "Ralph Lauren; 458110"
+      ]
+    },
+    "state": "CA",
+    "victim_id": "Gainsight"
+  }
+}
