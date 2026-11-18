@@ -1,0 +1,168 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "RU"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Cl0p"
+      ],
+      "region": [
+        "150151"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "A1A684DF-A485-4452-833E-54AA6223F972",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24457\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach followed per the tag; Cl0p typically steals data via mass exploitation without encryption, so ransomware/availability is template-driven, not source-confirmed. Data verified by BNR: MRI and equipment drawings -> Secrets; IT infrastructure info -> Internal. Data published -> data_abuse Yes - Data ransomed. NAICS 334510 (electromedical/MRI) from the issue's 334. Employee count approximate (about 67k). Incident date = August 2026 claim -> dbir_year 2027. The same NL Times article also covers Shell, not coded here.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "24457",
+    "master_id": "A1A684DF-A485-4452-833E-54AA6223F972",
+    "modified": "2026-11-11T01:30:49Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://nltimes.nl/2026/10/08/russian-hackers-publish-stolen-shell-philips-data-dark-web",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In August 2026 the Russian Cl0p gang claimed to have stolen data from Philips and later published it on the dark web. Dutch broadcaster BNR verified that the leak included technical drawings of MRI scanners and other medical equipment and information about Philips' IT infrastructure.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334510",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Koninklijke Philips N.V."
+  }
+}

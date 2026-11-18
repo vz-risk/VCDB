@@ -1,0 +1,133 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "28DAF970-7BD5-463B-9839-29B2EA0097F0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23877\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed with vector Unknown and asset S - Unknown (systems not described). Data acquired -> Yes; names + SSNs -> Personal; data_victim Customer per the issue summary of the CA AG notice. Discovery internal (company found the activity same day). Count not stated. NAICS refined from 333 to 333415 (commercial refrigeration equipment); if the company only services systems, 238220 would fit better. Employee count and state not found. Incident Dec 25, 2025 -> dbir_year 2027.",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes"
+      }
+    },
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23877",
+    "master_id": "28DAF970-7BD5-463B-9839-29B2EA0097F0",
+    "modified": "2026-11-11T01:30:49Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-620890",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Alliance Industrial Refrigeration Services found suspicious activity in its network on December 25, 2025 and determined that an unauthorized actor accessed and acquired personal data between December 25 and 26, 2025, including customers' names and Social Security numbers. It offered 12 months of Cyberscout credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 25,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "333415",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Alliance Industrial Refrigeration Services, Inc."
+  }
+}

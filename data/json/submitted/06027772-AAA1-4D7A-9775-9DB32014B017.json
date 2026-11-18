@@ -1,0 +1,174 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Play"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Victim organization",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "06027772-AAA1-4D7A-9775-9DB32014B017",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22805\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach followed. Leak-site claim only (attacker-sourced, no samples): IDs/payroll -> Personal; budget/financial/client files -> Internal; payroll implies bank details but that is not stated, so Bank is coded only because Play lists payroll records - reviewer may drop Bank. Encryption not confirmed. NAICS refined from 33641 to 336413 (other aircraft parts and auxiliary equipment). State CA per company profiles (Southern California). Employee count not found -> Unknown. Incident date = claim (SC World brief Dec 2, 2025) -> 2025-12, dbir_year 2027. Employee count from 51-200 employees per LeadIQ (https://www.leadiq.com/c/adc-aerospace/5a1d893e240000240062b8da).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:15:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "22805",
+    "master_id": "06027772-AAA1-4D7A-9775-9DB32014B017",
+    "modified": "2026-11-11T01:15:47Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/play-ransomware-alleges-adc-aerospace-compromise; https://cybernews.com/security/adc-aerospace-breach-claims/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late November/early December 2025 the Play ransomware gang listed ADC Aerospace, a U.S. turnkey manufacturer for defense and aerospace, on its leak site, claiming to have stolen client files, budget and financial details, identification documents, payroll records and private and personal confidential data. No samples were posted and the company had not acknowledged the claim.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "336413",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "ADC Aerospace"
+  }
+}

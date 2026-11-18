@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "E29EB3C5-4073-4BB9-85C9-20C24F6A9335",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24275\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown), but data_disclosure Unknown because no source says whether data was accessed; result Infiltrate only. Availability Interruption (order processing/shipping disrupted globally). No ransomware confirmed. Discovery internal. The issue's \"Approximate date: 2024\" is wrong; sources date it to Aug 25, 2026 -> dbir_year 2027. Employee count approximate (about 53k). Consider an impact rating once losses are reported (forecast cut).",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Intrusion, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Global information systems and order processing disrupted"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data compromised"
+      }
+    ],
+    "github": "24275",
+    "master_id": "E29EB3C5-4073-4BB9-85C9-20C24F6A9335",
+    "modified": "2026-11-11T01:30:49Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://dysruptionhub.com/boston-scientific-cyber-order-disruption/; https://www.cybersecuritydive.com/news/boston-scientific-cyberattack-disrupted-order-processing-shipping/828816/; https://techradar.com/pro/security/boston-scientific-says-cyberattack-is-causing-a-global-disruption-to-medical-device-operations; https://www.irishexaminer.com/business/companies/arid-41908165.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Tuesday, August 25, 2026 Boston Scientific detected a cybersecurity incident that disrupted access to its global information systems and business applications, particularly order processing and shipping. It activated incident response, hired outside specialists and moved to phased restoration; more than 7,000 employees at its Irish sites in Cork, Clonmel and Galway were affected, and the company later said it was unlikely to meet its 2026 forecast. It did not disclose whether data was compromised, the method or the actor.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 25,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "339112",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Boston Scientific Corporation"
+  }
+}

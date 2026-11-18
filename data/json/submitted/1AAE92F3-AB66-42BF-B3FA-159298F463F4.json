@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ExfilSquad"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "amount": 570000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ],
+      "data_total": 570000
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1AAE92F3-AB66-42BF-B3FA-159298F463F4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23984\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown). Exfiltration confirmed by ADI -> Yes. Actor named from ExfilSquad's claim (ADI did not attribute); motive Financial (extortion group). Social Extortion not coded because no demand is documented. Data: ADI did not state types -> Internal; ExfilSquad claims 570,000 customer records -> Personal 570,000 (attacker-sourced, unverified). Discovery internal. The issue summary and one comment give 2024 in error; sources say June 23, 2026 -> dbir_year 2027. Employee count approximate (about 24k).",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23984",
+    "master_id": "1AAE92F3-AB66-42BF-B3FA-159298F463F4",
+    "modified": "2026-11-11T01:30:49Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/semiconductor-firm-analog-devices-discloses-data-breach/; https://www.bleepingcomputer.com/news/security/analog-devices-discloses-data-breach-says-operations-unaffected/; https://www.classaction.org/data-breach-lawsuits/analog-devices-july-2026; https://therecord.media/analog-devices-semiconductor-company-data-breach; https://securityaffairs.com/196320/data-breach/analog-devices-discloses-data-breach-after-unauthorized-system-access.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Analog Devices detected unauthorized access to certain company systems on June 23, 2026 and later found that certain files had been exfiltrated; it disclosed the breach in an SEC 8-K and said operations were not affected and it was not aware of the data being leaked or misused. The ExfilSquad extortion group separately claimed to have stolen more than 570,000 customer-related records, a claim ADI was assessing; the group later removed ADI from its leak site.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 23,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334413",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Analog Devices, Inc."
+  }
+}

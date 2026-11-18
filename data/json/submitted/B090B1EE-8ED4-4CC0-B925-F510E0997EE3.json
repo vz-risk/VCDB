@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "B090B1EE-8ED4-4CC0-B925-F510E0997EE3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24223\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Social-ext-Phish adapted: the channel of the social engineering is not stated, so social variety Unknown (not Phishing) with vector Unknown; hacking Unknown via Web application for the access to Salesforce/SharePoint (cloud SaaS -> External). The tag's Fraudulent transaction outcome does not apply. Data: customer contacts, employee names/emails -> Personal; communications records and business files -> Internal. Contained same day. The issue summary says 2024 in error; MedTech Dive (Aug 13, 2026) refers to the July 2 incident -> 2026, dbir_year 2027. Employee count approximate (about 12k).",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee deceived into granting access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Salesforce and SharePoint data accessed"
+      }
+    ],
+    "github": "24223",
+    "master_id": "B090B1EE-8ED4-4CC0-B925-F510E0997EE3",
+    "modified": "2026-11-11T01:30:49Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.massdevice.com/cook-medical-customer-information-leaked-in-cyberattack/; https://www.medtechdive.com/news/cook-medical-discloses-cyber-incident-stemming-from-a-scam/827847/; https://www.cookmedical.com/newsroom/?p=10027",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 2, 2026 a social engineering attack deceived a Cook Medical employee into inadvertently giving an outside party access to some company systems. The attacker accessed contact information for U.S. and Canadian customers, records of customer communications in Salesforce, employee names and email addresses, and some internal business files from SharePoint. Cook contained the access the same day and found no evidence that sensitive or protected health information was accessed.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 0
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 2,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "339112",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Cook Medical LLC"
+  }
+}

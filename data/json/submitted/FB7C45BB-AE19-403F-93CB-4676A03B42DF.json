@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "World Leaks"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "FB7C45BB-AE19-403F-93CB-4676A03B42DF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22990\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate tag Hacking-ext-extortion: hacking Unknown + social Extortion (target/vector Unknown); World Leaks is a data-theft extortion operation (no encryption), so no malware block. Access was to a \"third-party portal\" (Bloomberg Law); whether the portal belongs to a vendor is not stated, so no Partner vector and Nike stays primary. Asset S - Web application for the portal. Data: internal data (1.4TB) -> Internal; customer data per the lawsuit -> Personal (count \"thousands\", no number). Discovery: Nike found the access Jan 21 but the public disclosure came from the actor listing; coded Actor disclosure. Incident date = Jan 21, 2026 discovery (begin date unknown) -> dbir_year 2027. Employee count approximate (about 77-80k).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:19:23Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access to a third-party portal"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "About 1.4TB of internal data extracted"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak-site listing"
+      }
+    ],
+    "github": "22990",
+    "master_id": "FB7C45BB-AE19-403F-93CB-4676A03B42DF",
+    "modified": "2026-11-11T01:19:23Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cyberdaily.au/security/13131-exclusive-athletics-giant-nike-actively-investigating-data-breach-claims; https://hothardware.com/news/nike-hackers-claim-14tb-data-breach-watch-for-counterfeits; https://www.reuters.com/sustainability/boards-policy-regulation/nike-says-it-is-investigating-possible-data-breach-2026-01-26/; https://centrexit.com/nike-data-breach-internal-data-stolen-2026/; https://news.bloomberglaw.com/privacy-and-data-security/nike-hit-with-suit-over-january-data-breach-affecting-thousands",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 22, 2026 the World Leaks extortion group (a rebrand of Hunters International) listed Nike on its leak site and later published about 1.4TB of data it said was taken from Nike's systems. Nike said it was investigating and found unauthorized access to a third-party portal on January 21; a March 2026 class action says customer data of thousands of people was affected and notices went out about a month after discovery.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "316210",
+    "region": [
+      "019021"
+    ],
+    "state": "OR",
+    "victim_id": "Nike, Inc."
+  }
+}

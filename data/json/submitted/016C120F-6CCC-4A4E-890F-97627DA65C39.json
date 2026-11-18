@@ -1,0 +1,175 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Akira"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "016C120F-6CCC-4A4E-890F-97627DA65C39",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22722\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach followed. All data details come from the Akira leak-site post (attacker-sourced, not victim-confirmed): employee I-9/SSN/DL/passport -> Personal; customer info and financials -> Internal; confidential files/NDAs/projects -> Secrets. 18GB volume, record count unknown. Encryption not confirmed; availability kept per template. Incident date = Nov 5, 2025 claim -> dbir_year 2027. Employee count not found (a 2023 release mentions preserving 50+ jobs from an acquisition) -> Unknown. Single aggregator source (DeXpose) -> confidence Low. Employee count from 51-200 employees per LeadIQ (https://leadiq.com/c/pine-pharmaceuticals/5a1da9ce23000052009e2796).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:15:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "22722",
+    "master_id": "016C120F-6CCC-4A4E-890F-97627DA65C39",
+    "modified": "2026-11-11T01:15:47Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.dexpose.io/akira-ransomware-compromises-pine-pharmaceuticals/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 5, 2025 the Akira ransomware group claimed an attack on Pine Pharmaceuticals, a Tonawanda, New York 503B outsourcing (compounding) facility, and threatened to leak over 18GB of corporate documents including employee I-9 forms, SSNs, driver's licenses and passports, customer information, project details, financials, confidential files and NDAs.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 5,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "325412",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Pine Pharmaceuticals"
+  }
+}

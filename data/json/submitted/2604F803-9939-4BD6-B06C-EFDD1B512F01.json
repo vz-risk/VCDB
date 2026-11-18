@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Other"
+      ]
+    },
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Former employee"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "Espionage"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "U - Laptop"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "2604F803-9939-4BD6-B06C-EFDD1B512F01",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23721\nCloses https://github.com/vz-risk/VCDB/issues/23763\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nMerged: #23721 (Misuse-int-privabuse) and #23763 (Hacking-ext-exploit-misconfig) describe the same Apple v. OpenAI complaint; plus.github is 23721. Liu had left Apple when he used the bug, so he is coded external Former employee (hacking Exploit vuln: sources call it an authentication bug, not a misconfiguration; vector Other because access was from a retained corporate laptop to internal network storage). Current Apple employees who copied materials or brought parts to interviews are coded internal (variety Unknown) with misuse Privilege abuse; motive Espionage (competitive/trade-secret theft) for both. Allegations are from Apple's complaint and unproven; OpenAI denies wrongdoing. Discovery internal (Apple found the activity through internal messages/forensics). The Financial Express comment's \"July 2024\" is an error. Incident date Feb 9, 2026 (bug found) -> dbir_year 2027; Tan-directed activity may be earlier. Employee count Over 100000 (about 166k).",
+    "created": "2026-11-11T01:25:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Former engineer exploits authentication bug from retained laptop"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Confidential hardware files downloaded"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Current employees copy confidential materials for OpenAI"
+      }
+    ],
+    "github": "23721",
+    "master_id": "2604F803-9939-4BD6-B06C-EFDD1B512F01",
+    "modified": "2026-11-11T01:25:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://bmmagazine.co.uk/news/apple-sues-openai-trade-secrets/; https://www.firstpost.com/tech/openai-engineers-lol-moment-at-centre-of-apple-lawsuit-alleging-trade-secrets-theft-14030710.html; https://m.ajupress.com/20260711111270969; https://techcrunch.com/2026/07/13/apple-says-former-employee-exploited-rare-bug-to-download-confidential-files-after-leaving-for-openai/; https://bitcoinfoundation.org/news/people-in-crypto-news/apple-vs-openai/; https://timesofindia.indiatimes.com/technology/tech-news/telling-apple-employees-coming-for-job-interviews-to-bring-in-cad-designs-stealing-laptops-and-other-explosive-claims-made-in-apples-41-page-lawsuit-against-chatgpt-maker-openai/articleshow/132384546.cms; https://finance.yahoo.com/technology/ai/articles/lol-funny-apple-says-ex-190000424.html; https://www.financialexpress.com/life/technology-11-employees-sold-trade-secrets-to-openai-apple-alleges-in-court-4310847/lite/; https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/; https://finance.yahoo.com/technology/ai/articles/apple-says-former-employee-exploited-200017484.html; https://thehill.com/policy/technology/5965640-apple-openai-trade-secret-lawsuit/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In a July 10, 2026 lawsuit against OpenAI, its io Products unit and two former employees, Apple alleges that senior system electrical engineer Chang Liu, who left for OpenAI in January 2026, kept his Apple-issued laptop and from February 9 exploited an authentication bug to keep accessing Apple's confidential network storage, downloading dozens of files on unreleased products, engineering presentations and circuit board specifications, and coached a colleague still at Apple on copying materials without alerting security. Apple also alleges former VP Tang Tan had current Apple employees bring proprietary parts and designs to OpenAI interviews; it says at least 11 current and former employees were involved.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 9,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Apple Inc."
+  }
+}

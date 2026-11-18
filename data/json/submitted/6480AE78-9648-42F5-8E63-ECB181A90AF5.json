@@ -1,0 +1,144 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "name": [
+        "Cyber Support Front"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "6480AE78-9648-42F5-8E63-ECB181A90AF5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23810\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown). Only source is Tasnim (Iranian state media) relaying the group's claims and an IMCO acknowledgment of \"serious damage\" -> confidence Low. Actor: pro-Iran hacktivist group -> Activist/Ideology, country Unknown. Availability Interruption coded for the acknowledged infrastructure damage. Data: blueprints/military documents -> Secrets; contracts/footage -> Internal. NAICS 336992 (military armored vehicle and parts) from the issue's 3364. Asset role IT by default; the claim mentions \"industrial infrastructure\" but no OT asset is identified. Employee count not found. Incident July 2026 -> dbir_year 2027. Employee count from 330 employees (Dec 31, 2024) per StockAnalysis (https://stockanalysis.com/quote/tlv/IMCO/employees/).",
+    "created": "2026-11-11T01:25:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Network access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "About 30TB of documents and footage stolen"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Infrastructure damaged"
+      }
+    ],
+    "github": "23810",
+    "master_id": "6480AE78-9648-42F5-8E63-ECB181A90AF5",
+    "modified": "2026-11-11T01:25:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.tasnimnews.ir/en/news/2026/07/26/3656819/cyberattack-hits-israeli-military-supplier-imco-30-tb-of-data-stolen",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July 2026 the pro-Iran \"Cyber Support Front\" hacking group claimed an attack on IMCO, an Israeli supplier of electrical systems, battlefield computers and displays for armored vehicles and air defense platforms, saying it infiltrated communication networks, industrial infrastructure and storage and stole about 30TB including 10TB of military documents, manufacturing blueprints, contracts and facility surveillance footage. According to the report, IMCO acknowledged serious damage and set up a crisis team.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "336992",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "IMCO Industries Ltd."
+  }
+}

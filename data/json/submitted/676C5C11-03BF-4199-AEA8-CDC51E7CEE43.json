@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3834294,
+          "variety": "Medical"
+        },
+        {
+          "amount": 3834294,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3834294,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "676C5C11-03BF-4199-AEA8-CDC51E7CEE43",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23409\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag \"Hacking\" only; coded hacking Unknown (entry method not disclosed) + social Extortion for the documented leak threat with an April 21 payment deadline (target/vector Unknown). ShinyHunters claimed 9M+ records; the notified total is 3,834,294, used for Medical/Personal and data_total. Corporate files claimed -> Internal. Discovery internal (Medtronic detected unusual activity Apr 15), 2 days after the Apr 13 start. 24 months credit monitoring (Epiq). Victim coded as Medtronic Inc. (US operating company that filed the notices; parent Medtronic plc is in Ireland). NAICS 334510 (electromedical apparatus) instead of the autocoded 33. The autocode \"Approximate date 2024-04\" is wrong; all sources give April 2026 -> dbir_year 2027. Employee count approximate (about 95k).",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes",
+        "credit_monitoring_years": 2,
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:22:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to corporate IT systems, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient and corporate data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Leak threat with April 21 ransom deadline"
+      }
+    ],
+    "github": "23409",
+    "master_id": "676C5C11-03BF-4199-AEA8-CDC51E7CEE43",
+    "modified": "2026-11-11T01:22:47Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.securityweek.com/medtronic-hack-confirmed-after-shinyhunters-threatens-data-leak/; https://www.hipaajournal.com/medical-device-maker-medtronic-data-breach/; https://healthexec.com/topics/health-it/cybersecurity/hackers-say-they-breached-medtronics-servers-company-confirms-access-unauthorized-party; https://www.startribune.com/medtronic-shinyhunters-hacker-data-breach-ameriprise-allianz-unitedhealth/601829023; https://www.globenewswire.com/news-release/2026/06/30/3320264/0/en/medtronic-data-breach-exposes-personal-information-murphy-law-firm-investigates-legal-claims.html; https://securityaffairs.com/194788/cyber-crime/medtronic-notifies-3-8-million-after-shinyhunters-data-breach.html; https://oag.ca.gov/ecrime/databreach/reports/sb24-625652",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between April 13 and 19, 2026 an unauthorized actor accessed certain Medtronic corporate IT systems; Medtronic detected the activity on April 15. ShinyHunters listed Medtronic on its leak site on April 18, claiming more than 9 million records of personal data and internal files and threatening a leak if not paid by April 21. Medtronic notified 3,834,294 people that names, contact details, dates of birth, SSNs and health-related information of device patients were involved, and said device safety and manufacturing were not affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 13,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334510",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Medtronic Inc."
+  }
+}

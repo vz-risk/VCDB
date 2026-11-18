@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0D81611D-B6FF-4ABA-A4BE-55EB49E3F120",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23124\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed with vector Unknown (no web application named) and asset S - Unknown. Unauthorized access to business applications holding business and employee information is confirmed -> data_disclosure Yes; types Internal and Personal (employee information). Discovery internal assumed (company activated its incident response; no outside notifier mentioned). NAICS refined from 3336 to 336310 (motor vehicle engine and engine parts; Westport makes alternative fuel systems for engines). Employee count approximate (about 1,500). Incident date = disclosure Friday Mar 20, 2026 (begin date not stated) -> 2026-03, dbir_year 2027. Single source (MarketWatch).",
+    "created": "2026-11-11T01:22:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23124",
+    "master_id": "0D81611D-B6FF-4ABA-A4BE-55EB49E3F120",
+    "modified": "2026-11-11T01:22:47Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.marketwatch.com/story/westport-fuel-systems-hit-by-cybersecurity-breach-financial-filing-to-be-delayed-a94cd3f7",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In March 2026 Westport Fuel Systems, a Vancouver, British Columbia clean-technology and alternative fuel systems engineering company, said it was investigating an unauthorized breach of its network involving access to certain internal IT business applications and other business and employee information. Manufacturing was not affected because it runs on separate servers, but the company said its full-year financial filing would be delayed past the March 31 deadline.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "336310",
+    "region": [
+      "019021"
+    ],
+    "state": "BC",
+    "victim_id": "Westport Fuel Systems Inc."
+  }
+}
