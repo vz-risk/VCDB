@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ],
+      "duration": {
+        "unit": "Days"
+      }
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "F47D1C8C-EBAE-460E-B86E-328DCABF35ED",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24546\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nPartner_Breach rule applied: U.S.NEXT (web and email hosting provider) is the primary victim and every affected downstream customer named in the source is a secondary victim: Madison, Hinds, Warren and Clarke counties, the Mississippi Association of Coaches (NAICS 813920 approximated) and the Peacock Information Center, Iowa (NAICS 519290 approximated). Assets set to S - Web application and S - Mail for the hosted websites and email; availability duration Days (outages began Oct 7-8 and were unresolved on Oct 12). U.S.NEXT said its database server and client account data were not affected. Tag Hacking-ext-unknown followed. Whether site content or email was accessed is not disclosed, so no confidentiality attribute. Employee count unknown. Employee count from 11-50 employees per ZoomInfo (https://www.zoominfo.com/c/usnext/40337410).",
+    "created": "2026-11-11T18:20:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access to U.S.NEXT hosting environment; method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Hosted customer websites and email knocked offline (Interruption)"
+      }
+    ],
+    "github": "24546",
+    "master_id": "F47D1C8C-EBAE-460E-B86E-328DCABF35ED",
+    "modified": "2026-11-17T18:45:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://dysruptionhub.com/usnext-mississippi-cyberattack-web-email/?attribution_id=6ad5f8649342a60001e88262&attribution_type=post",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In October 2026 a cyberattack on Jackson, Mississippi web host U.S.NEXT knocked out websites and email for 69 Mississippi government sites, including Madison, Hinds, Warren and Clarke counties, and for private customers, blocking access to services and payments. U.S.NEXT said databases, billing and payment systems were not affected and it was working with the FBI and DHS.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 71,
+      "notes": "Partner breach coded from the hosting provider's perspective. U.S.NEXT hosts 69 Mississippi government websites (Madison County and 68 others) that were disrupted; four counties are named. Private hosting customers were also hit, two of them named. Amount is a minimum (69 government sites plus 2 named private customers).",
+      "victim_id": [
+        "Madison County, Mississippi; 921190",
+        "Hinds County, Mississippi; 921190",
+        "Warren County, Mississippi; 921190",
+        "Clarke County, Mississippi; 921190",
+        "Mississippi Association of Coaches; 813920",
+        "Peacock Information Center; 519290"
+      ]
+    },
+    "state": "MS",
+    "victim_id": "U.S.NEXT"
+  }
+}
