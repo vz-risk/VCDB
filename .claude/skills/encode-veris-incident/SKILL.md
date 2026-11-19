@@ -1,6 +1,6 @@
 ---
 name: encode-veris-incident
-version: "20260801T010623Z"
+version: "20260819T132648Z"
 description: Encode a GitHub issue describing a data breach into a VERIS-schema JSON incident for VCDB. Invoke with a vz-risk/VCDB issue URL (e.g. https://github.com/vz-risk/VCDB/issues/23372) and an optional analyst GitHub handle. Reads the issue and its linked sources, finds an additional independent source via web search, maps everything to the VERIS schema (vcdb-merged.json), and writes a validated JSON file to data/json/submitted/.
 ---
 
@@ -9,7 +9,7 @@ description: Encode a GitHub issue describing a data breach into a VERIS-schema 
 You turn a GitHub issue that describes a data breach into one VERIS-schema JSON
 object and write it to `data/json/submitted/<UUID>.json`.
 
-**Skill version: `20260801T010623Z`.** This is the skill's revision timestamp
+**Skill version: `20260819T132648Z`.** This is the skill's revision timestamp
 (UTC date + Zulu time, `YYYYMMDDThhmmssZ`). Claude skills have no automatic
 version number, so this string is the version of record. Bump it whenever you
 edit this skill to the current UTC date+time —
@@ -53,8 +53,18 @@ which skill version — and that AI — produced each record.
 
 ### 1. Gather the breach facts (be thorough — use multiple sources)
 
-1. **Read the GitHub issue.** `gh` is not installed, so fetch the issue with
-   WebFetch (the vz-risk/VCDB repo is public). Extract:
+1. **Read the GitHub issue.** Fetch it with `gh` (the vz-risk/VCDB repo is
+   public, `gh` is installed) rather than WebFetch — WebFetch renders the
+   issue page's HTML and can silently miss or truncate comments, which is
+   exactly where automated tooling (e.g. the `vcdb-pipeline` bot) posts
+   "Additional Source Found" comments with corroborating URLs, sometimes
+   added well after the issue was opened. Pull the body and **every**
+   comment explicitly:
+   ```bash
+   gh api repos/vz-risk/VCDB/issues/<number> --jq '.body'
+   gh api repos/vz-risk/VCDB/issues/<number>/comments --jq '.[].body'
+   ```
+   Extract:
    - The title and full description of the breach.
    - **Labels / tags** on the issue — these are strong signals. In particular a
      **NAICS code** label maps directly to `victim.industry`; action-category
@@ -81,7 +91,13 @@ which skill version — and that AI — produced each record.
      `plus.sub_source`, dates, `plus.dbir_year`, or any other field. In
      particular the embedded year (e.g. the `2019` in `PHIDBR2019`) is NOT the
      incident year.
-   - Every **URL / reference** mentioned in the issue body and comments.
+   - Every **URL / reference** mentioned in the issue body and comments,
+     including source URLs posted by automated tooling comments (e.g.
+     `vcdb-pipeline` "Additional Source Found" comments, which are often
+     added well after the issue was opened) — not just URLs a human posted.
+     Ignore incidental/navigational links that aren't themselves a source
+     about the incident (a link to another GitHub issue, a site's privacy
+     policy or generic homepage, an image link, etc.).
 2. **Visit the linked URLs** with WebFetch and read them for incident detail
    (who, what, how, what data, how many records, when, victim org & size).
    **Some sources are PDFs, not HTML** — state AG breach-notification filings
@@ -104,10 +120,15 @@ which skill version — and that AI — produced each record.
    "data breach" (plus year/specifics) and fetch at least one credible source
    not already linked in the issue, to corroborate or fill gaps.
    **Always include every issue-linked URL in `reference`, in addition to any
-   new source(s) you find** — do not let "go find a newer source" cause you to
-   drop the URLs that were already in the issue body or comments. They go in
-   the top-level `reference` field as a single string with URLs separated by
-   **semicolons** (`; `), which is the VCDB/WebApp convention.
+   new source(s) you find** — every source URL identified in Step 1 (body and
+   comments, human-posted or bot-posted) should have been visited per Step 2
+   above and then listed in `reference`, not just the one(s) that ended up
+   informing the summary. Do not let "go find a newer source" cause you to
+   drop the URLs that were already in the issue body or comments — the
+   searched-for source is *additive*, never a replacement. They go in the
+   top-level `reference` field as a single string with URLs separated by
+   **semicolons** (`; `), which is the VCDB/WebApp convention, with **no URL
+   listed twice**.
    - **Social media is NOT a source.** Reddit, X/Twitter, Facebook, and LinkedIn
      posts may *point* you to a real article, but never cite the social-media
      post itself in `reference` — follow it to the underlying article and cite
@@ -287,6 +308,33 @@ Guidance:
     the refusal in `plus.analyst_notes` rather than dropping the attribute;
   - (c) add a People asset to `asset.assets`: a `"P - …"` variety for the targeted
     person, using `"P - Unknown"` if the role is unspecified.
+- **Phished/social-engineered credentials that are then used → also code
+  `action.hacking`.** A social-engineering issue tag (e.g. `Social-ext-Phish`)
+  is not the end of the analysis — read the sources fully for what happened
+  *after* the credentials were obtained, don't stop once the template tag is
+  decoded. When sources describe an attacker acquiring credentials via
+  `action.social` (Phishing, Pretexting, etc.) **and** confirm those
+  credentials were subsequently used (to log in, access an account/system,
+  etc.), code **both**:
+  - `action.social` for the acquisition, **and**
+  - `action.hacking` with `variety` including `"Use of stolen creds"` for the
+    subsequent use — this is a second, distinct action, not a detail of the
+    social action.
+  - Add `{"variety": "Credentials"}` to `attribute.confidentiality.data[]` —
+    the credentials themselves were compromised data, regardless of what else
+    was accessed with them.
+  - Extend `plus.event_chain` with a step for the credential use (e.g.
+    `hak/ext/srv/cp` following the `soc/ext/ppl/ia` acquisition step) so the
+    chain reflects both actions.
+  - **Only add `action.hacking` when a source confirms the credentials were
+    actually used** — never infer use just because credentials were
+    successfully phished. **If sources confirm the phishing succeeded but say
+    nothing about the credentials being used afterward, do not add
+    `action.hacking` — but explicitly say so in `plus.analyst_notes`** (e.g.
+    "credentials were confirmed obtained via phishing; no source states
+    whether they were subsequently used, so no action.hacking block is
+    coded"). Leaving this unexplained reads as an oversight to a reviewer, not
+    a deliberate gap.
 - **Data scope:** code the full claimed scope of exfiltrated data in
   `attribute.confidentiality.data[].variety`, not just one category — e.g.
   `Medical`, `Personal`, `Source code`, `Secrets` (trade secrets / unreleased
@@ -495,7 +543,7 @@ about data gaps — only ask for the analyst handle if it is missing.
   1. `Closes <issue URL>` — the full GitHub issue URL this record encodes
      (e.g. `Closes https://github.com/vz-risk/VCDB/issues/23372`), so a reviewer
      can copy/paste it to check the work against the source issue.
-  2. `Encoded by AI — encode-veris-incident skill version 20260801T010623Z`
+  2. `Encoded by AI — encode-veris-incident skill version 20260819T132648Z`
      (use the **Skill version** string from the top of this file verbatim), so
      reviewers know the record was AI-generated and by which skill revision.
 
