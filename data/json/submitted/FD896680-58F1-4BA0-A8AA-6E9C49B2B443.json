@@ -1,0 +1,158 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 0,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Repurpose"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "FD896680-58F1-4BA0-A8AA-6E9C49B2B443",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23733\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Social-ext-Phish used as scaffold; added hacking Use of stolen creds (webmail) because sources say phishing compromised at least two email accounts and the attacker is believed to have downloaded mailbox contents, so data_disclosure coded Yes (confirmed account access) rather than the template's Potentially. Data types not specified beyond personal information and confidential records -> Personal; data_victim Customer (DCF clients/families) assumed. Number of affected individuals not yet known; amount 0. Fraudulent transaction from the template not coded (no fraud reported). Attacker identity/motive unknown. Discovery method not stated. Industry 923130 (administration of human resource/social programs). Employee count ~3,000 (CT DCF) -> 1001 to 10000. Integrity Repurpose for using the compromised mailboxes. Sources: Yahoo/CT Insider, NBC Connecticut, WTNH, FOX61.",
+    "created": "2026-11-11T04:09:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing email - employee credentials captured"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen creds on email accounts"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Emails downloaded"
+      }
+    ],
+    "github": "23733",
+    "master_id": "FD896680-58F1-4BA0-A8AA-6E9C49B2B443",
+    "modified": "2026-11-11T04:09:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.yahoo.com/news/us/articles/personal-information-possibly-stolen-connecticut-162130834.html; https://www.nbcconnecticut.com/news/local/dcf-staffers-emails-breached-in-phishing-attack/3753480/; https://www.wtnh.com/news/connecticut/hartford/personal-information-may-have-been-stolen-from-connecticut-department-of-children-and-families-email-accounts/; https://www.fox61.com/article/news/local/hartford-county/hartford/dcf-email-accounts-compromised-in-cyber-attack/520-d698a4b5-e8d4-4744-a08a-8d5d1eb8e848",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On May 20, 2026, employees of the Connecticut Department of Children and Families received phishing emails that led to the compromise of at least two DCF email accounts. Investigators believe the attacker downloaded emails from the accounts, which may contain personal information and confidential records. The Department of Administrative Services removed the attacker from state systems and disabled the compromised accounts; DCF is reviewing the emails to notify affected individuals and offer credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 20,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923130",
+    "region": [
+      "019021"
+    ],
+    "state": "CT",
+    "victim_id": "Connecticut Department of Children and Families"
+  }
+}

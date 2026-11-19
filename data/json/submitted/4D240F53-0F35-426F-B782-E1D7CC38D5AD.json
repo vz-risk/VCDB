@@ -1,0 +1,115 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Grudge"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "4D240F53-0F35-426F-B782-E1D7CC38D5AD",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23684\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse. YEAR INFERRED: the issue summary gives May 6, 2024 searches and a June 2024 hearing, but the Coventry Telegraph article (ID 34223700) dates to mid-2026 and this pipeline has repeatedly defaulted undated events to 2024 (cf. other issues in this batch). An accelerated hearing in June following May searches fits May 6 2026 -> coded 2026, dbir_year 2027. Article could not be fetched to confirm; reviewer should verify the year (if 2024, this is out of window). Motive: jealousy over the wife's new partner -> Grudge (closest enum; personal motive). Data: one individual's personal details and criminal history (Personal, data_victim Other). Vector LAN access per template. Discovery mechanism unstated -> internal Unknown. WMP ~12,000+ officers and staff -> 10001 to 25000. Government Regional (territorial police force).",
+    "created": "2026-11-11T04:17:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse - personal-interest database searches"
+      }
+    ],
+    "github": "23684",
+    "master_id": "4D240F53-0F35-426F-B782-E1D7CC38D5AD",
+    "modified": "2026-11-11T04:17:30Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.coventrytelegraph.net/news/coventry-news/jealous-west-midlands-police-officer-34223700",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A West Midlands Police constable spent about 40 minutes on May 6 searching confidential police databases for the personal details, criminal history and linked reports of his estranged wife's new partner, with no policing purpose, admitting he acted out of jealousy. An accelerated misconduct hearing found gross misconduct and he was dismissed without notice.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 6,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "922120",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "West Midlands Police"
+  }
+}

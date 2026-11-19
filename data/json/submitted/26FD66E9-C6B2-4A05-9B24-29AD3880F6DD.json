@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 46,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 46,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "26FD66E9-C6B2-4A05-9B24-29AD3880F6DD",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22965\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misconfig-srv followed. Source says the redaction failure was a 'technical issue' connected to a software update; Misconfiguration kept per the template tag, vector Unknown, internal actor variety Unknown. Asset coded S - Database as the IMT case-management system (closest fit). Incident begin = 4 Dec 2025 (first affected packages) -> dbir 2027; discovery within ~2 weeks (RNZ 20 Dec 2025: Privacy Commissioner notified of the IMT issue; RNZ 15 Jan 2026 gave the affected counts). 46 confirmed unintended disclosures of private information coded as Personal amount 46; 1,527 packages/1,037 cases potentially affected, so data_total omitted. data_victim Other (case participants). The pipeline-added ODT 'human errors' source describes a different incident (address given to ex-partner) and was not used. Employee count from NZ Police headcount (~15,000). National police -> government Federal per project rule (issue label says federal). Single mainstream source; confidence Medium since the error variety is inferred.",
+    "created": "2026-11-11T04:09:09Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfiguration: redaction failure after software update exposed redacted data in disclosure packages"
+      }
+    ],
+    "github": "22965",
+    "master_id": "26FD66E9-C6B2-4A05-9B24-29AD3880F6DD",
+    "modified": "2026-11-11T04:09:09Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.stuff.co.nz/nz-news/360924795/sensitive-info-possibly-made-public-1000-police-cases-affected-tech-problem; https://www.rnz.co.nz/news/national/584113/sensitive-info-possibly-made-public-as-1000-police-cases-affected-by-tech-problem; https://www.rnz.co.nz/news/national/582321/privacy-commissioner-notified-following-technical-issue-with-police-incident-management-tool",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A technical issue with New Zealand Police's Investigation Management Tool (IMT), linked to a software update, caused redactions in disclosure packages produced from 4 December 2025 not to be applied correctly. Police found 1,527 disclosure packages from 1,037 cases were affected and identified 46 occasions where private information was shared unintentionally.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 4,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "NZ"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "New Zealand Police"
+  }
+}

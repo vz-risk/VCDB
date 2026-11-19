@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "IR"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - PLC"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Hours"
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "FEB4C359-A7F0-42E8-B6D4-825D024FD487",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23906\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nPart of a coordinated July 26-28, 2026 campaign against 30+ Minnesota municipal water/wastewater utilities (and facilities in other states); each issue names a different city, so one record per victim city - reviewer may want a shared campaign_id. The issue's pipeline summary says Oct 14-15, 2024, but NPR, Wired, DysruptionHub and the GovInfoSecurity link (2026-07-30) all date the attacks to late July 2026 -> 2026 used, dbir 2027. Attribution: a leaked WaterISAC memo (citing Minnesota Fusion Center and CISA) tied the attacks to Iranian state-sponsored hackers (CyberAv3ngers or Handala, IRGC-linked) -> actor State-affiliated, country IR, no single name; not formally confirmed by the government. Motive not stated -> Unknown. NPR cites experts that internet-exposed devices with default credentials were likely targeted, but this is not confirmed for this victim -> hacking variety/vector Unknown. Assets: PLCs/ICS at water facilities -> N - PLC, asset role OT. No data disclosure reported -> no confidentiality attribute despite the Breach label. NAICS re-coded from 92 to 221310 (water supply) following the analyst comment on issue 23907 ('naics 2213'); victim is the city (government Local) operating the utility. Sources fetched: issue summaries; WebFetch budget ran out before StateScoop/Wired could be re-read directly. Braham: pump station failure, manual intervention restored operations within hours -> availability Interruption (Hours). Integrity Unknown (control logic tampering implied but not described). Discovery: plant failure noticed by operators -> internal Infrastructure monitoring (assumption). Employee count estimated 11 to 100 for a city of 1,700 - not sourced.",
+    "created": "2026-11-11T04:11:21Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "unk",
+        "summary": "Unauthorized access to internet-exposed PLC"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "Control equipment tampered"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "au",
+        "summary": "Pump station outage"
+      }
+    ],
+    "github": "23906",
+    "master_id": "FEB4C359-A7F0-42E8-B6D4-825D024FD487",
+    "modified": "2026-11-11T04:11:21Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://statescoop.com/coordinated-cyberattack-disrupts-water-utilities-in-30-minnesota-communities/; https://securityaffairs.com/196453/ics-scada/cisa-urges-utilities-to-remove-internet-exposed-plcs-after-minnesota-attacks.html; https://www.npr.org/2026/08/12/nx-s1-5927437/cyberattack-water-iran-war",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On or about July 26-28, 2026, the City of Braham, Minnesota (population about 1,700) was one of more than 30 Minnesota municipal water and wastewater utilities hit by a coordinated cyberattack on remotely accessible, cellular-connected industrial control equipment. Braham's pump station failed, briefly threatening water service until staff restored operations manually within hours; water quality was not affected. A leaked WaterISAC memo tied the campaign to Iranian state-sponsored hackers, and CISA urged utilities to remove internet-exposed PLCs.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Local"
+    ],
+    "industry": "221310",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "City of Braham"
+  }
+}

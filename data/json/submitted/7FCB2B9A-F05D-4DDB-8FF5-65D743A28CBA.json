@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "IR"
+      ],
+      "motive": [
+        "Espionage",
+        "Ideology"
+      ],
+      "name": [
+        "Handala Hack Team"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "7FCB2B9A-F05D-4DDB-8FF5-65D743A28CBA",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23158\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. REVIEW: the breached asset is the FBI Director's PERSONAL Gmail account and the FBI says the data is historical with no government information; the victim is effectively an individual. Coded victim as Patel's personal account with FBI demographics (922120/Federal) because of the issue labels - reviewer may prefer to exclude or recode. Hacking vector Web application (webmail) and variety Unknown (method not disclosed; the address had appeared in earlier breaches per District 4 Labs, so credential reuse is plausible but not stated). Actor: Handala, assessed by Western researchers as a persona of Iranian government cyber units -> State-affiliated, IR; motive Espionage/Ideology (hack-and-leak). Access date unknown; incident date = Mar 27 2026 claim/publication -> dbir 2027. Emails date 2010-2019, so the compromise could be old. Reuters via Yahoo single source; confidence Medium.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-11T04:13:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to personal webmail account (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Emails and photos stolen and published"
+      }
+    ],
+    "github": "23158",
+    "master_id": "7FCB2B9A-F05D-4DDB-8FF5-65D743A28CBA",
+    "modified": "2026-11-11T04:13:08Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.yahoo.com/news/articles/iran-linked-hackers-claim-breach-142402770.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 27, 2026 the Iran-linked hacker persona Handala Hack Team claimed to have breached the personal Gmail inbox of FBI Director Kash Patel and published personal photographs and a sample of more than 300 emails dated 2010-2019. A Justice Department official confirmed the email had been breached and the material appeared authentic; the FBI said the data was historical and involved no government information.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 27,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Kash Patel (FBI Director) - personal Gmail account"
+  }
+}

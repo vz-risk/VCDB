@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E2561EDF-1008-468A-A1AF-6C79583C2281",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24492\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown refined: WOWT (2026-10-16) quotes the mayor that a stolen employee password caused the attack -> hacking Use of stolen creds; how the password was stolen and the access vector are not stated. Issue draft said approximate date 2026-01; sources show the attack in the week of October 9, 2026 (Friday) -> dbir_year 2027. Mayor says residents' information secure and 'no data was lost'; access to systems confirmed but no data access established -> data_disclosure Potentially. No ransomware or actor reported. Lincoln County systems were also hit (shared city/county systems) -> listed as secondary victim. Employee count 101-1000 from general knowledge (city of ~24,000). Confidence Medium.",
+    "created": "2026-11-11T04:13:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen creds - employee password"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems taken offline / outage"
+      }
+    ],
+    "github": "24492",
+    "master_id": "E2561EDF-1008-468A-A1AF-6C79583C2281",
+    "modified": "2026-11-11T04:13:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.govtech.com/security/governor-declares-emergency-after-north-platte-neb-breach; https://www.wowt.com/2026/10/09/national-guard-cyber-team-deployed-after-north-platte-lincoln-county-internet-outage/; https://www.wowt.com/2026/10/16/stolen-employee-password-caused-city-cyberattack-mayor-says/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An attacker used a stolen employee password to break into City of North Platte and Lincoln County, Nebraska computer systems around Friday, October 9, 2026, coinciding with internet and phone outages at City Hall and the county courthouse. Systems were taken off the internet, Gov. Jim Pillen declared an emergency and activated the Nebraska National Guard cyber team. The mayor said residents' information was secure and no data was lost.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 9,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Lincoln County, Nebraska; 921110"
+      ]
+    },
+    "state": "NE",
+    "victim_id": "City of North Platte"
+  }
+}

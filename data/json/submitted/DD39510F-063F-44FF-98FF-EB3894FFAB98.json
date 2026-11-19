@@ -1,0 +1,170 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Interlock"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "DD39510F-063F-44FF-98FF-EB3894FFAB98",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23014\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. WebFetch budget was exhausted, so details beyond the issue quote come from search-result headlines only: GovTech 'Cyber Criminals Leak Data From Minnesota Ransomware Incident' (pipeline add-on), Comparitech 'Interlock Claims Responsibility for Winona County Breach', and KTTC (31 Aug 2026) 'Winona County pays $128k ransom following back-to-back cyberattacks'. Interlock attribution and data types (Personal/Internal; PII and government data per the pipeline tag) are attacker/press-sourced and should be checked. A SECOND Winona attack later in 2026 is a separate incident and is not coded here; which attack the $128k ransom covered is unclear, so no impact block. Date: January 2026 (county called it 'recent' in late January; begin date unknown) -> dbir 2027. Discovery internal Unknown (county identified and responded). Employee count approx. (county government ~500 staff) - verify.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:12:16Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted / services disrupted"
+      }
+    ],
+    "github": "23014",
+    "master_id": "DD39510F-063F-44FF-98FF-EB3894FFAB98",
+    "modified": "2026-11-11T04:12:16Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://kstp.com/kstp-news/local-news/ransomware-attacks-hits-winona-county/; https://www.govtech.com/security/cyber-criminals-leak-data-from-minnesota-ransomware-incident; https://comparitech.beehiiv.com/p/interlock-claims-responsibility-for-winona-county-breach; https://www.kttc.com/2026/08/31/winona-county-pays-128k-ransom-following-back-to-back-cyberattacks/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Winona County, Minnesota identified and responded to a ransomware attack on its computer network in January 2026; 911 and emergency services remained operational. The Interlock ransomware group claimed responsibility and leaked data, and the county later issued breach notification letters. The county was hit by a second attack later in 2026 and reportedly paid a $128,000 ransom.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Winona County"
+  }
+}

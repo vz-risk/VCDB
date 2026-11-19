@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other network service"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "Andrew Harrison Legette"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Former employee"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "C93F037E-D216-4AA8-8764-4C856DCA6696",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24247\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue template tag Misuse-int-privabuse NOT followed: Legette was a FORMER deputy of a different agency (Williamsburg County SO), not an employee of the victim (Florence County SO / Detention Center), so per the actor-centric rule he is external; his credentials were no longer legitimately his to use, so coded hacking 'Use of stolen creds' (vector 'Other network service' for the law-enforcement computer network). External variety 'Other' (he is a former employee of a neighboring agency, not of the victim). Reviewer may prefer internal misuse if the credentials were still a valid shared law-enforcement account. Inmate phone call records coded as Personal; data_victim Other (inmates). Access ran Jan-Jul 2026 -> incident Jan 2026, dbir 2027. Discovery not described beyond the sheriff's office reporting it -> internal Unknown. Industry 922120 (sheriff's office / detention center) rather than the issue body's 922110. Employee count not found. Single local TV source (WYFF4, published Aug 13 2026); WebFetch budget ran out before a corroborating search -> Medium.",
+    "created": "2026-11-11T04:11:18Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Use of stolen (former) creds to access inmate call records"
+      }
+    ],
+    "github": "24247",
+    "master_id": "C93F037E-D216-4AA8-8764-4C856DCA6696",
+    "modified": "2026-11-11T04:11:18Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.wyff4.com/article/former-cop-misuse-credentials-inmate-database/73419236",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Andrew Harrison Legette, a former deputy with the Williamsburg County Sheriff's Office, repeatedly used his former law enforcement credentials between January and July 2026 to log into a database at the Florence County Detention Center and access inmate phone call records without a legitimate purpose. The Florence County Sheriff's Office reported the case and he was charged with seven counts of second-degree computer crime.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "state": "SC",
+    "victim_id": "Florence County Sheriff's Office"
+  }
+}

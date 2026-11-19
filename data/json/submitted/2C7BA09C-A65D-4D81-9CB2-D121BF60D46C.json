@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown",
+        "Customer"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "SMS",
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Customer"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Repurpose",
+        "Misrepresentation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2C7BA09C-A65D-4D81-9CB2-D121BF60D46C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22775\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue tag Hacking-ext-unknown, but the AOL/NBC report shows the vendor Mobile Commons was compromised and several of its customers' accounts were abused (NY State, Catholic Relief Services, Fight for a Union), so per the skill's provider-breach rule the incident is coded from the provider's perspective: Mobile Commons primary victim (NAICS 513210 software publishers, government NA, employee count from parent Upland Software ~1,000 - approximate) with customers in victim.secondary. NY-Alert operator recorded as NYS Office of Information Technology Services per the spokesperson. Initial access: Mobile Commons 'believe[s]' it was spear phishing or similar social engineering -> social Phishing with vector/target Unknown and P - Unknown asset; follow-on hacking variety Unknown (stolen creds likely but not stated). The scam SMS to subscribers is a second social Phishing (vector SMS, target Customer, asset P - Customer). Integrity: Alter behavior (social), Repurpose and Misrepresentation (platform used to send fraudulent messages in customers' names). No confidentiality block: Mobile Commons said it does not believe subscriber data was accessed. Motive Financial inferred from the bank-fraud lure (monetization attempt). Access lasted about four hours (Nov 10 to 12:10 AM Nov 11) -> containment 4 Hours. Discovery method not stated.",
+    "created": "2026-11-11T04:11:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Suspected spear phishing of provider staff"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unauthorized access to texting platform"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing SMS sent to customers' subscribers"
+      }
+    ],
+    "github": "22775",
+    "master_id": "2C7BA09C-A65D-4D81-9CB2-D121BF60D46C",
+    "modified": "2026-11-11T04:11:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.syracuse.com/news/2025/11/hackers-breach-ny-alert-system-state-officials-say-ignore-any-message-about-transactions.html; https://www.aol.com/news/hackers-breach-mass-texting-used-205141328.html; https://www.nbcnewyork.com/news/national-international/hackers-breach-new-york-mass-texting-service-scam/6418532/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On the evening of Nov 10 2025 an intruder gained access for about four hours to the mass-texting platform of Mobile Commons (an Upland Software company), which Mobile Commons believes was via spear phishing or similar social engineering. The intruder used the accounts of several Mobile Commons customers to send scam texts - including a fake Bank of America declined-transaction message sent to about 160,000 of roughly 188,000 New York State NY-Alert subscribers, plus messages from Catholic Relief Services and Fight for a Union numbers. Mobile Commons said it does not believe subscriber data was accessed.",
+  "timeline": {
+    "containment": {
+      "unit": "Hours",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 10,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 3,
+      "victim_id": [
+        "New York State Office of Information Technology Services (NY-Alert); 921190",
+        "Catholic Relief Services; 624230",
+        "Fight for a Union; 813940"
+      ]
+    },
+    "victim_id": "Mobile Commons (Upland Software)"
+  }
+}

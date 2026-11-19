@@ -1,0 +1,156 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "NL"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "150155"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    },
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "095FE442-605A-4464-B262-0F5831673B4C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23072\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-media followed for the officer's misdelivery (internal, Unknown variety, NA motive, Carelessness). Added an independent external actor (the recipient, Unaffiliated) with social Extortion because he demanded 'something in return' to delete the files; motive coded Financial as the closest fit for a demanded reward (not collusion - separate actors in sequence). Extortion target/vector Unknown. Asset S - File for the shared document repository instead of the template's U - Desktop. Data types: confidential police documents -> Internal; whether personal data was included is not stated in the issue quote. Discovery: officer/police realized the error and told him to stop -> internal Reported by employee. Politie is the national police -> government Federal, though the issue label says Local. Employee count ~65,000. HOF 2027 tag noted.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:10:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misdelivery: download link to confidential documents sent to member of the public"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Recipient refused to delete files without something in return (extortion)"
+      }
+    ],
+    "github": "23072",
+    "master_id": "095FE442-605A-4464-B262-0F5831673B4C",
+    "modified": "2026-11-11T04:10:17Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/man-arrested-for-demanding-reward-after-accidental-police-data-leak/; https://www.theregister.com/2026/02/16/dutch_cops_breach/; https://databreaches.net/2026/02/16/he-tried-to-extort-the-dutch-police-it-didnt-work-out-well-for-him/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On 12 February 2026 a Dutch police officer responding to a man who offered images relevant to an investigation mistakenly sent him a download link to confidential police documents instead of an upload link. The 40-year-old man downloaded the files and, when told to stop and delete them, refused unless he received 'something in return'. Police arrested him on suspicion of computer trespass.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 12,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Politie (Dutch National Police)"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "47CCF802-C68A-417E-89FD-650D4BC0CB4B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24648\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Issue draft dated the attack October 20, 2025, but ABC News 4 (2026-10-24) and other search results show the attack in October 2026 -> Oct 20, 2026, dbir_year 2027. Qilin attribution comes from a SOCRadar ransomware-tracker listing (leak-site claim found via search, not victim-confirmed); data_abuse 'Data ransomed' rests on that listing. City confirmed sensitive data was accessed -> data_disclosure Yes; data types and counts not released -> Unknown. Employee count from general knowledge (~2,500 city staff). Discovery method not stated. The Yahoo article itself was not re-fetched (fetch budget). Confidence Medium.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:16:34Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Sensitive data accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Online services encrypted/taken down"
+      }
+    ],
+    "github": "24648",
+    "master_id": "47CCF802-C68A-417E-89FD-650D4BC0CB4B",
+    "modified": "2026-11-11T04:16:34Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.yahoo.com/news/us/articles/confirmed-ransomware-attack-causes-down-174000524.html; https://abcnews4.com/news/state/2026-10-24-city-of-columbia-confirms-ransomware-attack-disrupting-online-services-sled-investigation-cybersecurity-fbi; https://abcnews4.com/news/state/sled-investigating-security-breach-in-city-of-columbia; https://socradar.io/free-tools/ransomware-intelligence/victims/city-of-columbia-sc-qilin-c26fffc2",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The City of Columbia, South Carolina suffered a confirmed ransomware attack around October 20, 2026 that took down online services including permit applications, business licensing and GIS. The city said sensitive data on its network was accessed or compromised, without giving details. SLED is investigating with cybersecurity specialists; police, fire, 911, water and payment processing remained operational. The Qilin ransomware group listed the city on its leak site.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 20,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "SC",
+    "victim_id": "City of Columbia"
+  }
+}

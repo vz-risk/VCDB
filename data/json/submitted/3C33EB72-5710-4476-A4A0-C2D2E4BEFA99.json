@@ -1,0 +1,146 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "3C33EB72-5710-4476-A4A0-C2D2E4BEFA99",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24222\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue tagged Malware-ext-Ransomware-databreach, but no source reports data theft or a leak-site listing. Coded per the ransomware-nobreach pattern: confidentiality Potentially with data Unknown, no Exfiltrate result. Revise if a group later posts data. The ministry's statement says it would not 'give in to extortion', implying a ransom demand, but no demand details were published, so no social Extortion was coded. Actor Organized crime/Financial inferred from ransomware with an implied extortion demand; no group named. Incident date: ministry confirmed the attack on Mon 3 Aug 2026, start date not given -> year 2026 only -> dbir_year 2027. Discovery: ministry says it detected and isolated the attack -> internal Unknown. NAICS 922190 (other justice/public order) used for the Justice and Law ministry; government Federal. Employee count not found -> Unknown. Dark Reading page could not be opened; facts from Infobae and Vanguardia.",
+    "created": "2026-11-11T04:13:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted, services degraded"
+      }
+    ],
+    "github": "24222",
+    "master_id": "3C33EB72-5710-4476-A4A0-C2D2E4BEFA99",
+    "modified": "2026-11-11T04:13:17Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.darkreading.com/cyberattacks-data-breaches/ransomware-hits-colombian-justice-ministry-presidential-transition; https://www.infobae.com/colombia/2026/08/03/ataque-cibernetico-contra-el-ministerio-de-justicia-se-reportan-fallas-en-algunos-servicios/; https://www.vanguardia.com/colombia/2026/08/03/atencion-ministerio-de-justicia-confirma-ataque-cibernetico-con-ransomware/; https://www.scworld.com/brief/colombias-ministry-of-justice-hit-by-ransomware-attack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Colombia's Ministry of Justice and Law confirmed on 3 August 2026 that a ransomware attack had compromised part of its technology infrastructure, degrading several digital services days before the presidential transition. The ministry said it detected the attack, isolated the affected systems, and was working with MinTIC to restore services. It refused to negotiate with the attackers and asked the Attorney General's Office and National Police to investigate. No group was named and no data theft was reported.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CO"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922190",
+    "region": [
+      "019005"
+    ],
+    "victim_id": "Ministerio de Justicia y del Derecho (Colombia)"
+  }
+}

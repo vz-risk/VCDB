@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "World Leaks"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "8A39FE77-54B7-4D9A-A10D-CB6A4216B0B0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23197\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown, with social Extortion added because World Leaks is a data-extortion gang that published the data on its leak site. Primary victim is the Los Angeles City Attorney's Office (whose storage system was breached; NAICS 922130 prosecution/legal counsel), not LAPD (issue NAICS 922120); LAPD listed as secondary victim (its records). Not a Partner_Breach-tagged issue. Asset S - File for the 'digital storage system'; hosting unknown. Incident date = early April 2026 leak/reporting (LA Times 7 Apr; begin date not disclosed) -> dbir 2027 - reviewer should check whether a later notice gives an earlier intrusion date. Employee count of the City Attorney's office not confirmed -> Unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:13:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "7.7 TB / 337,000 LAPD-related files stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion / leak threat"
+      }
+    ],
+    "github": "23197",
+    "master_id": "8A39FE77-54B7-4D9A-A10D-CB6A4216B0B0",
+    "modified": "2026-11-11T04:13:08Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.scworld.com/brief/lapd-data-breach-sensitive-documents-leaked-online-by-world-leaks; https://ktla.com/news/local-news/lapd-records-leaked-city-attorney-hack/; https://www.latimes.com/california/story/2026-04-07/lapd-records-suspected-hack; https://www.dailynews.com/2026/04/08/la-city-attorneys-office-suffers-data-breach-of-lapd-records/; https://techcrunch.com/2026/04/08/hackers-steal-and-leak-sensitive-lapd-police-documents",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In early April 2026 the World Leaks extortion gang leaked about 7.7 TB (over 337,000 files) of sensitive Los Angeles Police Department records - officer personnel files, internal affairs investigations and discovery documents with unredacted criminal complaints and witness personal information - stolen from a digital storage/discovery system belonging to the Los Angeles City Attorney's Office. LAPD said its own systems were not affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Local"
+    ],
+    "industry": "922130",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Los Angeles Police Department; 922120"
+      ]
+    },
+    "state": "CA",
+    "victim_id": "Los Angeles City Attorney's Office"
+  }
+}

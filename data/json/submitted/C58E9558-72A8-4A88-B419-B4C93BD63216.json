@@ -1,0 +1,108 @@
+{
+  "action": {
+    "unknown": {
+      "notes": "How the documents left the e-Cinepramaan portal is not established (CBFC found no unauthorized account access); possible error or unauthorized access.",
+      "result": [
+        "Exfiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "unknown": {
+      "notes": "Party that obtained/uploaded the documents is not identified."
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 500,
+          "variety": "Copyrighted"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 500,
+      "data_victim": [
+        "Customer",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C58E9558-72A8-4A88-B419-B4C93BD63216",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24646\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nRe-sourced 2026-11-11: Read ThePrint (citing The Hindu) and IBTimes India: documents dated Dec 2025-Aug 2026, Internet Archive account (alias of ex-chairman Prasoon Joshi in Russian) taken down 12 Oct 2026; CBFC found no external attack, filed cybercrime complaint, informed CERT-In. Added data_abuse, refined dates/summary; action/actor still Unknown; confidence Low -> Medium.\nIssue carries an Error label but no source establishes how the documents left e-Cinepramaan (CBFC's technical team found no external attack on servers/databases and no unauthorised access to filmmaker accounts; no misconfiguration or insider named), so action and actor stay Unknown rather than Error - reviewer check. Date: leaked documents span Dec 2025 - Aug 2026, so the exfiltration cannot predate Dec 2025 -> year-only 2026, dbir_year 2027. Internet Archive account taken down 12 Oct 2026; The Hindu story ~25 Oct 2026. Exposure lasted days before discovery. Uploader alias: Prasoon Joshi's name in Russian (identity unknown) -> data_abuse Posted on personal forum (Internet Archive). Data: scripts (Copyrighted, 500+ films) and distribution agreements / fee details (Internal); data_victim filmmakers (Customer) and CBFC. CBFC filed a cybercrime complaint and informed CERT-In. Industry 926150; government Federal. Employee count not found -> Unknown. Confidence Medium: reputable press (The Hindu via ThePrint, IBTimes) but actor and action Unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-11T04:17:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Portal documents for 500+ films posted on Internet Archive - cause not established"
+      }
+    ],
+    "github": "24646",
+    "master_id": "C58E9558-72A8-4A88-B419-B4C93BD63216",
+    "modified": "2026-11-11T04:54:23Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.telugu360.com/cbfc-security-breach-500-scripts-leaked/; https://theprint.in/entertainment/cbfc-data-breach-scripts-censor-cuts-film-distribution/3081894/; https://www.digit.in/news/general/cbfc-data-breach-over-500-film-scripts-and-other-sensitive-documents-reportedly-leaked-check-details.html; https://www.ibtimes.co.in/cbfc-data-leak-sensitive-documents-over-500-films-exposed-investigation-underway-907838",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Documents relating to more than 500 films submitted between December 2025 and August 2026 to India's Central Board of Film Certification (CBFC) through its e-Cinepramaan certification portal - shooting scripts, CBFC cut orders and distribution agreements revealing licensing fees - were posted to the Internet Archive by an account using the name of former CBFC chairman Prasoon Joshi written in Russian, and stayed downloadable until the account was taken down on October 12, 2026. The Hindu reported the leak in late October. CBFC said it found no evidence of external attack or unauthorised access to filmmaker accounts, filed a cybercrime complaint, informed CERT-In and began a security audit; how the documents were obtained is unknown.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "Federal"
+    ],
+    "industry": "926150",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Central Board of Film Certification (CBFC)"
+  }
+}

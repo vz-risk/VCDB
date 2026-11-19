@@ -1,0 +1,117 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 136,
+          "variety": "Personal"
+        },
+        {
+          "amount": 136,
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 136,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1017B49F-689D-41C9-A259-868A1FAC33FE",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24132\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-media followed (Misdelivery/Carelessness, internal actor, motive NA). Asset coded S - Mail rather than the template's U - Desktop or laptop, since the error was a mass email; state Transmitted. Data: email addresses (Personal); Medical also coded because being on the list reveals that a practitioner has a health or substance-misuse notification, which is health information by association. Reviewer may drop Medical if preferred. data_victim Customer (registered practitioners). Discovery: AHPRA detected the error the same day (detector role not stated) -> internal Unknown. NAICS 926150 (regulation/licensing of professions) instead of the issue's 924; government Federal (national registration scheme). Employee count ~1,500 per public figures -> 1001 to 10000 (approximate). The RACGP newsGP summary in the issue comment says 2024 by mistake; ABC dates it 29 Jul 2026.",
+    "created": "2026-11-11T04:10:56Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misdelivery: mass email with recipients visible"
+      }
+    ],
+    "github": "24132",
+    "master_id": "1017B49F-689D-41C9-A259-868A1FAC33FE",
+    "modified": "2026-11-11T04:10:56Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.abc.net.au/news/2026-08-06/ahpra-apologises-for-mass-email-doctor-privacy-breach/107000392; https://www1.racgp.org.au/newsgp/professional/healthcare-workers-caught-up-in-ahpra-privacy-brea",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On 29 July 2026 the Australian Health Practitioner Regulation Agency (AHPRA) emailed 136 health practitioners an invitation to a webinar on substance-misuse notifications without hiding the recipients' addresses. This exposed the identities of doctors, nurses and other practitioners, many with health-related notifications or restrictions, to each other, even though the invitation promised anonymity. AHPRA found the error the same day, asked recipients to delete the email, apologised, and notified the National Health Practitioner Ombudsman.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 29,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "926150",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Australian Health Practitioner Regulation Agency (AHPRA)"
+  }
+}

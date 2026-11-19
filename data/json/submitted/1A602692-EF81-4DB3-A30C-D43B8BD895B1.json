@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "1A602692-EF81-4DB3-A30C-D43B8BD895B1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22888\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-Misdelivery-media (U - Desktop or laptop asset per template; delivery was by email). Article (~Dec 19-22 2025) says the email was sent 'earlier this week' -> Dec 2025, dbir_year 2027. Recipient (unrelated member of the public) noticed and went to the press -> discovery external Unrelated 3rd party. Data: personal details of two adopted children and adoptive parents (Personal; could be argued Sensitive Personal); data_victim Customer (service users). Record count small (~4 people) not coded. Vector Carelessness per template. Employee count: Devon County Council ~5,000 staff (non-schools) - approximate. Single source; second-source search not done due to fetch budget.",
+    "created": "2026-11-11T04:11:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Misdelivery of adoption details by email"
+      }
+    ],
+    "github": "22888",
+    "master_id": "1A602692-EF81-4DB3-A30C-D43B8BD895B1",
+    "modified": "2026-11-11T04:11:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cornwalllive.com/news/cornwall-news/shocked-cornwall-mum-sent-strangers-10712474.amp",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In December 2025 Devon County Council's adoption services mistakenly emailed confidential adoption information about two children (aged 10 and 2) and their adoptive parents' details to an unrelated woman in Cornwall, who reported the GDPR breach to the press.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Devon County Council"
+  }
+}

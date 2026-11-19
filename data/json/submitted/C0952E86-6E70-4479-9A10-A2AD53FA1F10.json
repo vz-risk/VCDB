@@ -1,0 +1,145 @@
+{
+  "action": {
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Customer"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Customer"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C0952E86-6E70-4479-9A10-A2AD53FA1F10",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24503\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nPartner_Breach rule applied: coded from the perspective of ClassWallet (the payment platform whose vendor accounts were targeted; NAICS 522320, private, FL) with the South Carolina Department of Education (ESTF program; 923110) as secondary victim. Note The 74 says ClassWallet itself was not reported breached - the phishing targeted program vendors who use ClassWallet accounts; reviewer may prefer SCDE as primary. Issue draft dated it 2024-09; The 74 (published Oct 6, 2026) says the scam occurred 'late last month' with vendor notice Sept 25 -> 2026-09, dbir_year 2027. Data_disclosure Yes based on the issue/Dysruption Hub statement that attackers had at least partial success obtaining banking details; The 74 says it is unclear how many vendors entered information or whether money was withdrawn, so no Fraudulent transaction integrity coded. Credentials inferred from the password-reset instruction. Motive Financial (banking-detail harvesting). Employee count for ClassWallet not looked up. Confidence Medium.",
+    "created": "2026-11-11T04:13:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing emails impersonating SCDE/ClassWallet sent to program vendors"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Vendor credentials/banking details captured"
+      }
+    ],
+    "github": "24503",
+    "master_id": "C0952E86-6E70-4479-9A10-A2AD53FA1F10",
+    "modified": "2026-11-11T04:13:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.the74million.org/article/cyberattack-hits-south-carolina-school-choice-program/; https://dysruptionhub.com/south-carolina-voucher-phishing-payments/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late September 2026 attackers sent phishing emails impersonating the South Carolina Department of Education or the ClassWallet payment platform to service providers (vendors) in South Carolina's Education Scholarship Trust Fund program, trying to harvest their banking and account information. Some vendors' banking details were obtained. The department notified vendors on September 25, told them to reset email and ClassWallet passwords, and with ClassWallet temporarily locked down the system, halting vendor payments while it assessed which bank account details were affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "South Carolina Department of Education; 923110"
+      ]
+    },
+    "state": "FL",
+    "victim_id": "ClassWallet"
+  }
+}

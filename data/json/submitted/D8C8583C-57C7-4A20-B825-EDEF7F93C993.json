@@ -1,0 +1,108 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "D8C8583C-57C7-4A20-B825-EDEF7F93C993",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23625\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-Misdelivery-media (email). Source: law-firm breach page summarizing the MassDOT notice filed with the MA AG on June 29 2026; one individual, driver's license number. Email date not given; 'on or before June 29 2026' -> timeline June 2026, dbir_year 2027. Discovery method not stated -> unknown (template's Reported by employee not sourced). Vector Carelessness per template (not explicitly stated). Asset per template U - Desktop or laptop. State Transmitted (sent by email). NAICS re-coded from the pipeline's 928110 to 926120 (transportation programs). MassDOT ~3,000-4,000 staff -> 1001 to 10000. Single secondary source (dapeer.com) -> Medium.",
+    "created": "2026-11-11T04:12:38Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Misdelivery by email"
+      }
+    ],
+    "github": "23625",
+    "master_id": "D8C8583C-57C7-4A20-B825-EDEF7F93C993",
+    "modified": "2026-11-11T04:12:38Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.dapeer.com/databreaches/massdot-data-breach-investigation-zIoCX",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In June 2026 the Massachusetts Department of Transportation's Registry of Motor Vehicles inadvertently emailed one customer's driver's license records to another RMV customer. MassDOT notified the individual and the Massachusetts Attorney General on June 29, 2026, offered a replacement license with a new number and advised a credit freeze.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "926120",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Massachusetts Department of Transportation (MassDOT) - Registry of Motor Vehicles"
+  }
+}

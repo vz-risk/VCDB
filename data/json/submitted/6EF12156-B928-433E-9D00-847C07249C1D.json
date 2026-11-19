@@ -1,0 +1,130 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Let go"
+      ],
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1300,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1300,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "max_amount": 25000,
+        "variety": "Legal and regulatory"
+      }
+    ],
+    "overall_max_amount": 25000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "6EF12156-B928-433E-9D00-847C07249C1D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24622\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-paper. The Chronicle (Oct 24, 2026) refers to 'the Sept. 21 disclosure' without a year; issue draft said 2024 but publication date indicates 2026 -> Sept 21, 2026, dbir_year 2027. The medium of the records response (paper vs electronic attachment) is not stated; kept the template asset M - Documents and confidentiality.state Unknown. Actor variety Manager (County Records Manager), terminated -> job_change Let go. About 1,300 people includes family members, so data_victim Employee is approximate. Medical coded for health insurance details. Impact: up to $25,000 deductible (coded as max amount; legal/identity protection costs). Discovery: county 'was alerted' by someone outside -> external Unknown. Employee count not established. Single local-newspaper source with clear facts; confidence High per 4 A's complete.",
+    "created": "2026-11-11T04:15:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Misdelivery - employee spreadsheet attached to public records response"
+      }
+    ],
+    "github": "24622",
+    "master_id": "6EF12156-B928-433E-9D00-847C07249C1D",
+    "modified": "2026-11-11T04:15:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.chronicleonline.com/news/local/county-data-breach-could-cost-taxpayers-25-000/article_7349e473-dc15-5ee3-9c4c-1dbb2b8f2b56.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On September 21, 2026 Citrus County, Florida's records manager mistakenly included a 74-page spreadsheet containing Social Security numbers and health insurance details for about 1,300 county employees and family members in a response to a public records request. The requester forwarded it to two other people before the county was alerted and recovered the materials. The county faces up to a $25,000 insurance deductible for legal services and identity protection; the employee was terminated.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Citrus County"
+  }
+}

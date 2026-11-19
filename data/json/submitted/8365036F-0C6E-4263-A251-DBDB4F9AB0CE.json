@@ -1,0 +1,155 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Defacement"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "8365036F-0C6E-4263-A251-DBDB4F9AB0CE",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24384\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue tag Hacking-ext-exploit-vuln followed (Exploit vuln via Web application); the specific vulnerability is not stated in the issue text and is attacker/tag-sourced. Data scope ('all FBI employees and applicants') is attacker-claimed; 404 Media partially verified a 5,000-record sample. Defacement of the jobs site confirmed by 404 Media -> integrity Defacement; portals offline -> availability Interruption. Date: ShinyHunters said the hack was 'Monday night' and defaced the site Tuesday; issue was filed Tue Sept 22 2026, so incident coded Mon Sept 21 2026 (inferred) -> dbir 2027. Actor ShinyHunters: established financially-motivated data-theft/extortion crew -> Organized crime / Financial (no ransom demand stated in the excerpt). FBI headcount ~37,000 (general knowledge). Coded from the issue body excerpt of 404 Media; helpnetsecurity link not re-read (WebFetch budget exhausted).",
+    "created": "2026-11-11T04:14:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Web application vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee/applicant data stolen"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "FBI jobs site defaced"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Job portals taken offline"
+      }
+    ],
+    "github": "24384",
+    "master_id": "8365036F-0C6E-4263-A251-DBDB4F9AB0CE",
+    "modified": "2026-11-11T04:14:50Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/; https://www.helpnetsecurity.com/2026/09/28/fbi-job-portals-offline-shinyhunters-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The ShinyHunters hacking group claimed to have breached multiple FBI-related services, including the FBI jobs / Special Agent applicant portal, and stolen data 'on all FBI employees and applicants', including names, home addresses, phone numbers, dates of birth and spouse details. It gave 404 Media a sample of about 5,000 records, some of which matched real DOJ personnel, and defaced the FBI jobs website with a 'seized by ShinyHunters' notice. The group said the hack happened on a Monday night in late September 2026; the FBI job portals were taken offline.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Federal Bureau of Investigation (FBI)"
+  }
+}

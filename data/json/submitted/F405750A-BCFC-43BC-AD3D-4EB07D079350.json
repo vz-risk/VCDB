@@ -1,0 +1,110 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 330,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 330,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "F405750A-BCFC-43BC-AD3D-4EB07D079350",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24051\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue tagged Error-int-publishing, but the facts are a mass email sent with recipients visible (CC/To instead of BCC), which VERIS codes as Misdelivery (Error-int-misdelivery-media pattern); coded Misdelivery/Carelessness, asset S - Mail, state Transmitted. Industry 921120 (Legislative Bodies) chosen as the most specific code for a parliamentary committee (issue label said 921); government Regional (Victorian state parliament). Actor variety Unknown (committee staff, role not stated). Discovery method not stated (survivors complained the same day) -> unknown. Employee count approximate (Parliament of Victoria staff in the hundreds), not confirmed. data_victim Other (inquiry witnesses/submitters and group representatives). Sources: ABC News, The Daily Aus, IBTimes UK.",
+    "created": "2026-11-11T04:09:15Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misdelivery: report emailed with recipients' addresses visible"
+      }
+    ],
+    "github": "24051",
+    "master_id": "F405750A-BCFC-43BC-AD3D-4EB07D079350",
+    "modified": "2026-11-11T04:09:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.abc.net.au/news/2026-07-30/email-inadvertently-shares-identities-of-cult-survivors-victoria/106975620; https://www.thedailyaus.com.au/politics/cult-survivors-email-leak-victoria-30-07-2026; https://www.ibtimes.co.uk/privacy-breach-victorian-inquiry-coercive-groups-1811284",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On 30 July 2026 the Victorian Legislative Assembly Legal and Social Issues Committee emailed its final report on cults and coercive groups to a distribution list without hiding the recipients, exposing about 330 email addresses. The exposed people included survivors and witnesses who had made anonymous or confidential submissions, as well as representatives of the groups under inquiry. The committee chair called it an administrative error and apologised.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 30,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "921120",
+    "region": [
+      "009053"
+    ],
+    "state": "AU-VIC",
+    "victim_id": "Parliament of Victoria - Legislative Assembly Legal and Social Issues Committee"
+  }
+}

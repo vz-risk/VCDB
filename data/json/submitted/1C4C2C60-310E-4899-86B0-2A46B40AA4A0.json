@@ -1,0 +1,171 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "1C4C2C60-310E-4899-86B0-2A46B40AA4A0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23435\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach followed. Qilin (ransomware-as-a-service crew) claimed the attack -> Organized crime / Financial; data_abuse Yes - Data ransomed (leak-site claim). Begin date unknown; discovery Apr 8, 2026 used as incident date -> dbir_year 2027. Exfiltration of employee and resident PII (names, addresses, DOB, SSNs, bank account/routing numbers) confirmed by city investigation per Teiss. Number affected not stated -> data_total omitted. Initial access unknown. Discovery coded Actor disclosure per skill rule for ransomware (ransom note/claim). Sandstone is a city of ~2,800 -> 11 to 100 employees (estimate). Single source (Teiss) cites the city notice; confidence kept High given confirmed exfiltration from the official notice, but reviewer may lower to Medium.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:14:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "23435",
+    "master_id": "1C4C2C60-310E-4899-86B0-2A46B40AA4A0",
+    "modified": "2026-11-11T04:14:17Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.teiss.co.uk/news/ransomware-attack-on-city-of-sandstone-compromised-residents-personal-data-17590",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The City of Sandstone, Minnesota discovered on April 8, 2026 that it had been hit by a ransomware attack affecting its computer systems; the Qilin ransomware group claimed responsibility. The investigation confirmed that personal information of city employees and residents was exfiltrated, including names, addresses, dates of birth, Social Security numbers and bank account/routing numbers. The city offered free identity monitoring and credit protection.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 8,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "City of Sandstone, Minnesota"
+  }
+}

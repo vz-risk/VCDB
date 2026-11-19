@@ -1,0 +1,139 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "name": [
+        "Andrae Wright"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Former employee"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Log review"
+      ]
+    }
+  },
+  "incident_id": "DC4166CF-89F9-44C0-974B-60469E5C719F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23804\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-stolencreds. Actor is a former Effingham County Sheriff's Office employee who still held credentials from that job (he then worked at the DA's office, a separate agency), so external/Former employee; his retained credentials are coded as Use of stolen creds per the template. Motive Other: personal/stalking per charges (no financial signal). Flock Safety is a cloud SaaS LPR platform -> S - Web application + S - Database, cloud External. Data: vehicle plate/location lookups of individuals -> Personal, data_victim Other (members of the public). Discovery: ECSO internal audit of Flock use -> internal Log review (closest enum to 'audit'). One source (Statesboro Herald) gives the year as 2025, but the GBI press release dated 2026-07-27 and WSB/WTOC say 2026 -> 2026 used. Employee count of ECSO estimated 101 to 1000 (not sourced). Flock Safety not treated as partner (not breached).",
+    "created": "2026-11-11T04:09:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of retained (stolen) credentials to Flock LPR"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Plate reader data queried for stalking"
+      }
+    ],
+    "github": "23804",
+    "master_id": "DC4166CF-89F9-44C0-974B-60469E5C719F",
+    "modified": "2026-11-11T04:09:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://gbi.georgia.gov/press-releases/2026-07-27/gbi-arrests-former-ogeechee-circuit-district-attorneys-office; https://www.wtoc.com/2026/07/27/ogeechee-judicial-circuit-das-office-gives-statement-arrest-former-employee-gbi-investigation/; https://www.wsav.com/news/local-news/gbi-investigating-former-ogeechee-judicial-circuit-of-georgia-investigator/; https://www.wjcl.com/article/bulloch-county-da-investigator-arrested-stalking/73274220; https://www.wsbtv.com/news/georgia/das-office-investigator-illegally-accessed-flock-camera-system-more-than-60-times-gbi-says/DLMA5BZUSJCX3PHXQEPTJBQ73E/; https://www.statesboroherald.com/local/gbi-arrests-former-ogeechee-circuit-district-attorneys-office-chief-investigator/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Andrae Wright, a former Effingham County Sheriff's Office employee then working as an investigator for the Ogeechee Circuit District Attorney's Office, retained login access to the Effingham County Sheriff's Office Flock Safety license plate reader system and accessed it more than 60 times between June 15 and July 5, 2026, for non-law-enforcement purposes. The sheriff's office found the misuse in an internal audit and reported it to the GBI on July 9; Wright was arrested July 27, 2026 and charged with misuse of a license plate reader system, stalking, computer invasion of privacy and violation of oath of office.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 20
+    },
+    "discovery": {
+      "unit": "Weeks",
+      "value": 3
+    },
+    "incident": {
+      "day": 15,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Effingham County Sheriff's Office"
+  }
+}

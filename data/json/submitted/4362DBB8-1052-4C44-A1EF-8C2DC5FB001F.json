@@ -1,0 +1,111 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Remote access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Justin Brown; Michael Atkins",
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Log review"
+      ]
+    }
+  },
+  "incident_id": "4362DBB8-1052-4C44-A1EF-8C2DC5FB001F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24283\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse followed; two internal actors each misusing their own access (not collusion, but same victim/system/audit - coded as one incident). Dates of the searches not given; earliest dated anchor is the Aug 25 2026 announcement (Flock's auditing tools released April 2026) -> incident Aug 2026, dbir 2027 - reviewer check. Motive Unknown (personal use; no monetization). Internal variety End-user (investigators). Flock is a cloud ALPR SaaS -> External Cloud Asset(s), S - Database. Data: vehicle location/plate lookups -> Personal; data_victim Other (members of the public). Discovery: internal Flock audit -> Log review. Not tagged Partner_Breach, so coded from the sheriff's office perspective (compare #24355 where Partner_Breach was tagged). Single source.",
+    "created": "2026-11-11T04:12:40Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Insider Flock ALPR searches for personal use"
+      }
+    ],
+    "github": "24283",
+    "master_id": "4362DBB8-1052-4C44-A1EF-8C2DC5FB001F",
+    "modified": "2026-11-11T04:12:40Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.atlantanewsfirst.com/2026/08/25/hall-county-sheriffs-office-investigators-fired-following-flock-audit/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Two Hall County (Georgia) Sheriff's Office investigators, Justin Brown and Michael Atkins, were fired after an internal Flock audit found they used the Flock license plate reader system for reasons unrelated to their jobs - Brown on at least two searches and Atkins on at least four occasions for personal use. Brown was referred to the Georgia Bureau of Investigation. The firings were announced August 25, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "Hall County Sheriff's Office (Georgia)"
+  }
+}

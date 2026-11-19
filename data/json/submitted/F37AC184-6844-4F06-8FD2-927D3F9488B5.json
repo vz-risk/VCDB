@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 143,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 143,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "F37AC184-6844-4F06-8FD2-927D3F9488B5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24303\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-media followed (email sent with To/CC instead of BCC). Comment summaries say 'August 11, 2024' but Euronews URL is dated 2026/08/16 and the issue was filed Aug 2026, so coded Aug 11 2026 - reviewer confirm. 143 email addresses (BBC says ~140). data_victim Customer (complainants / members of the public). state Transmitted (email). Discovery same day; method not stated -> internal Unknown. Employee count ~44k (Met officers + staff, general knowledge). The earlier Met misdelivery of handwritten notes to a woman in Australia is a separate incident and is not coded here.",
+    "created": "2026-11-11T04:12:33Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Misdelivery - email addresses exposed via CC"
+      }
+    ],
+    "github": "24303",
+    "master_id": "F37AC184-6844-4F06-8FD2-927D3F9488B5",
+    "modified": "2026-11-11T04:12:33Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.the-independent.com/bulletin/news/met-police-mohamed-al-fayed-victims-b3033611.html; https://www.yahoo.com/news/us/articles/met-facing-large-fine-breach-124357959.html; http://www.bbc.co.uk/news/articles/c1w1yv987jqo; https://www.aol.com/articles/met-facing-large-fine-breach-124357000.html; https://www.euronews.com/my-europe/2026/08/16/uk-police-databreach-alfayed",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 11, 2026 the Metropolitan Police sent a monthly Operation Cornpoppy update email to 143 people who alleged sexual abuse by Mohamed Al Fayed without using blind copy, exposing all recipients' email addresses to each other. The Met blamed human error, apologised the same day, and referred itself to the ICO. It was the force's second data protection breach involving Fayed complainants in recent months.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 11,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Metropolitan Police Service"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "IR"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "Breach Boyz World Wide"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "Unaffiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - WLAN"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 31,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 31,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "EA1F8860-12B6-44D6-8108-1CB858F33322",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23672\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nRe-sourced 2026-11-11: Read KOKH Fox 25 follow-up (13-14 Jul 2026): county confirms the leaked inmate data is accurate but says OSBI and a security firm found no vulnerability or breach evidence; a second attacker email included an inmate booked 10 Jul. Updated summary, data amount 30 -> 31 (plus contacts' phone numbers), notes on the victim's denial; coding kept per attacker-claim rule; confidence stays Low.\nTemplate Hacking-ext-unknown, refined from attacker claims. KTUL (July 3 2026): the group said it first hacked the jail in 'early March' (year not stated; coded March 2026 since the leaked list was of current inmates and the story is July 2026 - issue summary's 2024 is a pipeline assumption) -> dbir_year 2027. Method, Iran location, crew size and the 134-system/1.2M-record scale are ATTACKER-SOURCED and not victim-confirmed; coded per the skill rule: wireless capture of network credentials -> Use of stolen creds, vector Other (wireless proximity), asset N - WLAN. The sheriff's office initially said it was mitigating access and notified OSBI; by 13-14 Jul 2026 (KOKH Fox 25) the county said the leaked data is accurate but OSBI, a network security company and a third entity found no vulnerability and no proof of a breach on its end - the source of the data is therefore disputed (could be a third-party system). A second attacker email included an inmate booked 10 Jul 2026, so access appears ongoing. Data: ~30 + 1 current inmates' DL numbers, addresses, SSNs and contacts' phone numbers (amount 31) (Personal; data_victim Other = inmates). No ransom; motive unclear -> Unknown, variety Unaffiliated (judgment). NAICS 922140 (jail). Employee count 101 to 1000 (judgment). Confidence stays Low: method is attacker-only and the victim disputes that its systems were breached.",
+    "created": "2026-11-11T04:16:11Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "unk",
+        "summary": "Wireless network access via war-driving (claimed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Inmate records exfiltrated"
+      }
+    ],
+    "github": "23672",
+    "master_id": "EA1F8860-12B6-44D6-8108-1CB858F33322",
+    "modified": "2026-11-11T04:55:33Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://ktul.com/news/local/rogers-county-jail-inmate-info-hacked; https://okcfox.com/news/local/mystery-deepens-over-data-breach-of-inmate-info",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A group calling itself 'Breach Boyz World Wide', claiming to operate from northern Iran, told KTUL in early July 2026 that it had hacked the Rogers County Jail in Claremore, Oklahoma in early March by war-driving the jail parking lot to capture Wi-Fi network access, and sent a list of nearly 30 current inmates with driver's license numbers, home addresses, Social Security numbers and contacts' phone numbers. A second email days before July 13 included an inmate booked July 10, suggesting continuing access. Rogers County said the data was accurate but that the OSBI and a network security company found no vulnerability and no proof its systems were breached.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 4
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "922140",
+    "region": [
+      "019021"
+    ],
+    "state": "OK",
+    "victim_id": "Rogers County Sheriff's Office (Rogers County Jail)"
+  }
+}

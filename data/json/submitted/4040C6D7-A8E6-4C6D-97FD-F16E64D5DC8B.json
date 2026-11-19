@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "name": [
+        "Jabaroot"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 70000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 70000,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "4040C6D7-A8E6-4C6D-97FD-F16E64D5DC8B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24308\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed. Attacker-sourced, not officially confirmed (only validated by former agents per El Confidencial) - Confirmed coded on that basis, reviewer may prefer Suspected. Begin/compromise date unknown; anchored on the August 2026 leak (Ara article Aug 25 2026; warning 'a few days' earlier) -> dbir 2027. Actor Jabaroot coded Activist/Ideology (political framing of the leak; group known for prior Morocco-targeted leaks - country left Unknown as source does not state it). DGSN primary (922120 police), DGST secondary (928110). Employee count not found. data_victim Employee. Single source; no corroborating search possible (WebFetch budget exhausted).",
+    "created": "2026-11-11T04:13:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Agent personnel databases leaked"
+      }
+    ],
+    "github": "24308",
+    "master_id": "4040C6D7-A8E6-4C6D-97FD-F16E64D5DC8B",
+    "modified": "2026-11-11T04:13:48Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://en.ara.cat/international/group-of-hackers-leak-the-data-of-70-000-moroccan-intelligence-agents-as-gift-to-spain_1_5832159.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In August 2026 the hacker group Jabaroot leaked databases with personal data (names, birth dates, ID numbers, rank) of about 70,000 Moroccan police and intelligence agents of the General Directorate of National Security and the General Directorate of Territorial Surveillance, posting them via Telegram as a 'gift to Europe and Spain' amid Ceuta migration tensions. El Confidencial reported former Moroccan agents validated the data; there was no official confirmation.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "MA"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "002015"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Morocco General Directorate of Territorial Surveillance (DGST); 928110"
+      ]
+    },
+    "victim_id": "Morocco General Directorate of National Security (DGSN)"
+  }
+}

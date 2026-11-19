@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "2B8350AC-1284-4247-A49B-FE51C5EA060E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23901\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. CA AG notice: unauthorized access on Feb 23, 2026; city learned on Mar 3, 2026 when the actor contacted employees and a councilmember claiming to have city files -> discovery Actor disclosure, discovery 8 days. No explicit ransom demand stated, so Extortion not coded (reviewer: actor contact may have been an extortion attempt). Access method undisclosed -> hacking variety/vector Unknown, asset S - Unknown (template's Web application vector not applied as unsupported). Data: names plus other unspecified elements -> Personal; whose data not stated. Number affected not in issue. Only the CA AG listing as source (WebFetch budget exhausted before a corroborating fetch). Employee count estimated 101 to 1000 - not sourced.",
+    "created": "2026-11-11T04:10:40Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "City files acquired"
+      }
+    ],
+    "github": "23901",
+    "master_id": "2B8350AC-1284-4247-A49B-FE51C5EA060E",
+    "modified": "2026-11-11T04:10:40Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-623545",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On February 23, 2026, an unknown external actor gained unauthorized access to City of Port Hueneme, California files. The city learned of it on March 3, 2026 when the actor contacted city employees and a city councilmember claiming to have accessed city files. An independent investigation confirmed data was acquired without authorization, and on April 24, 2026 the city determined that personal information including names and other data elements was affected. The city notified affected individuals, law enforcement and the FBI and offered 12 months of CyberScout credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 8
+    },
+    "incident": {
+      "day": 23,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "City of Port Hueneme"
+  }
+}

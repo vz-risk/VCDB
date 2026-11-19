@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "XP95"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "6F773999-5580-4DC5-A783-5272BB7B6372",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23164\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue template tag Malware-ext-Ransomware-databreach, but sources describe data theft plus a ransom demand with no reported encryption or outage, so coded hacking Unknown + social Extortion (TEMPLATE DEPARTURE; some outlets call XP95 a 'ransomware group'). The $100k demand was refused - Alter behavior coded anyway per the skill. Stats SA confirmed the breached system was the job-seeker HR application database -> S - Database + S - Web application, data Personal, data_victim Other (job applicants). 154 GB volume is attacker-claimed. NAICS 926110 (national statistics agency under general economic programs); employees ~3,000. Incident March 2026 (claim/confirmation ~30 Mar; begin unknown) -> dbir 2027. The Gauteng City Region Academy claim is a separate victim and is not coded here.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:13:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "154 GB of HR/job-applicant data stolen (claimed)"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion / leak threat"
+      }
+    ],
+    "github": "23164",
+    "master_id": "6F773999-5580-4DC5-A783-5272BB7B6372",
+    "modified": "2026-11-11T04:13:08Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.itweb.co.za/article/stats-sa-confirms-data-breach-as-hackers-demand-r17m-ransom/JBwErvn3wpo76Db2; https://businesstech.co.za/news/government/855214/stats-sa-breached-in-cyberattack/; https://www.upguard.com/news/statistics-south-africa-data-breach-2026-03-31",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late March 2026 a hacker group called XP95 claimed on Telegram to have stolen 154 GB of private and personal information from Statistics South Africa (Stats SA) and demanded a $100,000 (R1.7 million) ransom. Stats SA confirmed a breach affecting one human resources database - the online HR system used by job seekers to apply - and said it would not pay. XP95 also claimed a separate theft from the Gauteng City Region Academy.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ZA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "926110",
+    "region": [
+      "002018"
+    ],
+    "victim_id": "Statistics South Africa (Stats SA)"
+  }
+}

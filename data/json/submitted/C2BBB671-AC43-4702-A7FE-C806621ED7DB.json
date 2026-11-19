@@ -1,0 +1,132 @@
+{
+  "action": {
+    "social": {
+      "target": [
+        "Finance"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Email",
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Finance"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Fraud detection"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 27799.81,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "notes": "$492,056 initially diverted; bank recovered $214,256 and insurance covered $250,000, leaving a net city loss of $27,799.81.",
+    "overall_amount": 27799.81,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "C2BBB671-AC43-4702-A7FE-C806621ED7DB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24623\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nBusiness email compromise against the city. Spectrum News 13 (Sept 16, 2026) says the request was 'compromised from within the Vendor's information system and not the City's systems' (the Ocala Gazette summary in the issue described a spoofed address); either way the city's people were socially engineered -> social Pretexting via Email with vector Partner (vendor channel). The vendor-side compromise is not coded as an action against this victim. Dates: the issue draft said April 2025 / FBI July 28, 2025; Spectrum's article gives April without a year and was published Sept 2026 - coded April 2026 (dbir_year 2027) but the year is NOT explicitly confirmed; if it was April 2025 this falls outside the window. Discovery in May via the receiving bank -> external Fraud detection, ~1 month. Integrity: Alter behavior + Fraudulent transaction (no confidentiality impact). Impact: net loss $27,799.81 (gross $492,056). Employee count not looked up. Confidence High.",
+    "created": "2026-11-11T04:19:09Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting - fake vendor EFT change form from compromised vendor email"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Fraudulent transaction - payment diverted to attacker account"
+      }
+    ],
+    "github": "24623",
+    "master_id": "C2BBB671-AC43-4702-A7FE-C806621ED7DB",
+    "modified": "2026-11-11T04:19:09Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.ocalagazette.com/new-details-in-city-of-ocala-cyber-scam/; https://mynews13.com/fl/orlando/news/2026/09/16/investigation-finds-k-ocala-cyber-fraud-incident-was-preventable",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In April 2026 criminals used an email account compromised within vendor Traffic Control Devices' systems to send the City of Ocala, Florida a doctored Electronic Fund Transfer form with altered banking details. A city vendor relationship employee entered the new bank details without the required phone verification, and $492,056 was diverted to the attacker's account. The receiving bank flagged suspicious activity in May; the bank recovered $214,256 and insurance covered $250,000, leaving a net city loss of $27,799.81. An investigation found the incident preventable and the FBI took the case.",
+  "timeline": {
+    "discovery": {
+      "unit": "Months",
+      "value": 1
+    },
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "City of Ocala"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CN"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "F80EEEAC-5A5C-46C7-B483-FB4A167FF119",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22728\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. CBO confirmed the incident on Nov 6 2025; begin date not reported, discovery was a few days before disclosure -> timeline.incident Nov 2025 (earliest dated anchor) -> dbir_year 2027. Actor: WaPo/Reuters say a suspected foreign actor, CNN cited a US official saying Chinese state-backed hackers; coded State-affiliated/Espionage/CN as suspected attribution, not officially confirmed. Entry vector unconfirmed: researcher Kevin Beaumont suggested an unpatched Cisco ASA firewall (possibly ArcaneDoor) - not coded, vector Unknown, asset S - Unknown (template's web application vector not supported). Confidentiality coded Yes on the basis of confirmed network access; data type Internal (agency/congressional communications) is reported as possible only. Discovery method not stated. Industry 921120 (legislative bodies) re-coded from issue's 921 since CBO is a legislative-branch agency. Employee count ~275 (CBO headcount). Reuters/WaPo not fetched (blocked); facts from The Hill (issue) and SiliconANGLE.",
+    "created": "2026-11-11T04:09:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Network breached, method not confirmed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal communications potentially accessed"
+      }
+    ],
+    "github": "22728",
+    "master_id": "F80EEEAC-5A5C-46C7-B483-FB4A167FF119",
+    "modified": "2026-11-11T04:09:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehill.com/policy/national-security/5594139-cbo-hacking-incident-investigation/; https://www.washingtonpost.com/business/2025/11/06/cbo-hack-congress-foreign/; https://www.usnews.com/news/business/articles/2025-11-06/the-congressional-budget-office-was-hacked-it-says-it-has-implemented-new-security-measures; https://www.reuters.com/world/us/us-congressional-budget-office-hacked-by-suspected-foreign-actor-washington-post-2025-11-06/; https://abcnews.go.com/Technology/wireStory/congressional-budget-office-hacked-implemented-new-security-measures-127276744; https://siliconangle.com/2025/11/07/congressional-budget-office-breached-suspected-foreign-hackers/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In early November 2025 the US Congressional Budget Office (CBO) identified a security incident in which hackers, suspected by US officials to be a foreign (reportedly Chinese state-backed) actor, breached its network. CBO said it contained the incident and added monitoring and new controls; reports said communications between CBO analysts and congressional offices may have been exposed, and the Senate Sergeant at Arms warned staff about emails from CBO accounts.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921120",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Congressional Budget Office"
+  }
+}

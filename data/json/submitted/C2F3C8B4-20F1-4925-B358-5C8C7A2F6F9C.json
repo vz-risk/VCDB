@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ExfilSquad"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Student"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "C2F3C8B4-20F1-4925-B358-5C8C7A2F6F9C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23986\nCloses https://github.com/vz-risk/VCDB/issues/24141\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nMerged: #23986 and #24141 describe the same ExfilSquad claim against DC Public Schools (July 2026); plus.github is 23986. #24141 sources (Resecurity) report an attacker-claimed ~60,000 records and a ransom deadline, unverified. References combined.\nTemplate Hacking-ext-unknown (external, variety Unknown, vector Web application - here source-supported: a web-based Summer Learning registration application). Attribution: NBC Washington cites a security expert that a dark-web group claimed it; DEXPOSE threat-intel lists ExfilSquad claiming DCPS on July 26, 2026 with a threat to release the full data set absent a response -> Extortion coded, data_abuse 'Yes - Data ransomed', actor ExfilSquad/Organized crime/Financial. The group claim and threat are attacker-sourced and not confirmed by DCPS. Discovery: Actor disclosure assumed (leak-site claim July 26 preceded the July 29 parent letter) - not confirmed. Incident date = July 26, 2026 claim (begin date unknown) -> dbir 2027. Data: names, student IDs, DOB, school/grade, guardian names, addresses, phones -> Personal, data_victim Student. Count not given ('thousands', 55 schools). NAICS re-coded from the 92 label to 611110 (elementary/secondary schools; DCPS is a school district) with government Local - reviewer may prefer 923110. Employee count ~8,000+ (DCPS staff) - approximate.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:12:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Unauthorized access to summer registration web app"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Student/family data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion - threat to release data"
+      }
+    ],
+    "github": "23986",
+    "master_id": "C2F3C8B4-20F1-4925-B358-5C8C7A2F6F9C",
+    "modified": "2026-11-11T04:20:37Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.nbcwashington.com/news/local/dcps-data-breach-potentially-exposed-students-names-addresses-birthdays/4136249/; https://www.dcnewsnow.com/news/local-news/washington-dc/student-information-possibly-leaked-in-dcps-cybersecurity-breach/; https://www.nbcwashington.com/video/news/local/student-information-could-have-been-exposed-in-dcps-data-breach/4136313/; https://www.dexpose.io/exfilsquad-targets-district-of-columbia-public-schools/; https://wtop.com/dc/2026/07/dc-public-schools-web-application-hacked-info-about-students-compromised/; https://www.resecurity.com/blog/article/exfilsquad-targets-new-victims-shares-data-via-torrents; https://dcschools.com/news/2026-08-05-student-data-from-55-dcps-schools-may-have-been-exposed-by-hackers---n",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "District of Columbia Public Schools disclosed in late July 2026 that an unauthorized third party accessed a web-based application used for DCPS Summer Learning registration, exposing student names, student ID numbers, dates of birth, school and grade, parent/guardian names, home addresses and phone numbers for students at up to 55 schools. The ExfilSquad extortion group listed DCPS on its leak site on July 26, 2026, threatening to release the full data set if the district did not respond. DCPS removed the data from the application, engaged the DC Office of the Chief Technology Officer, and the FBI is investigating.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 26,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "611110",
+    "region": [
+      "019021"
+    ],
+    "state": "DC",
+    "victim_id": "District of Columbia Public Schools"
+  }
+}
