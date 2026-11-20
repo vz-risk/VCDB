@@ -1,0 +1,118 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "partner": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 17551,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 17551,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored encrypted",
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "partner": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "EB11CB5C-68BE-4938-AD37-5FCF4B3324A1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23612\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nPartner_Breach rule applied: the developer is primary (NAICS 541511 assumed) and Woori Bank secondary. From the developer's view its employee's error (posting retained data on a developer platform) is an internal Publishing error. Unauthorized retention could alternatively be coded as Misuse Data mishandling. Discovery by Woori (the client) coded as partner. Leak date not given; dated from the June 30, 2026 discovery (the pipeline's 2025 is wrong).",
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "23612",
+    "master_id": "EB11CB5C-68BE-4938-AD37-5FCF4B3324A1",
+    "modified": "2026-11-11T05:59:31Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.asiae.co.kr/en/article/2026070515403729996; https://biz.chosun.com/en/en-finance/2026/07/08/SKOWASA5RFBOTEGTQCHNXTQROU/; https://www.digitaltoday.co.kr/en/view/77944/woori-bank-leak-of-17551-personal-data-records-during-nft-platform-outsourcing",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An employee of an external developer retained Woori Bank customer data from an NFT platform project that began in September 2024 beyond the project's end and shared it on a developer platform, exposing 17,551 records of encrypted connection information and nicknames. Woori Bank discovered the leak on June 30, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "142030"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Woori Bank; 522110"
+      ]
+    },
+    "victim_id": "Unnamed external developer (Woori Bank NFT platform project)"
+  }
+}

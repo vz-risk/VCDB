@@ -47,6 +47,9 @@
       "data": [
         {
           "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
         }
       ],
       "data_disclosure": "Yes",
@@ -66,7 +69,7 @@
   "plus": {
     "analysis_status": "Reviewed",
     "analyst": "swidup",
-    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24645\nPartner_Breach tag: coded from the partner's perspective per the project rule. Primary victim InvoiceCloud (the billing/payment platform whose access key was compromised); the City of Oshkosh utility and AquaHawk Alerting (the other billing platform involved) are secondary victims. The incident_id reuses 2D848031-3327-46AF-951C-97FC03FAC81B from the row already in Partner_Breaches_2027_dbir.csv so the two stay linked.\nTemplate Hacking-ext-unknown used, refined to Use of stolen creds because InvoiceCloud 'disabled the compromised access key' (an API/access key). Vector Partner: the access ran through the vendor integration; which party's key was compromised, and how, is not stated. The CSV row coded variety Unknown; this record is more specific.\nData: names, emails, utility account numbers, invoice numbers (Personal). Number of customers not given.\nTimeline: city notice dated October 9, 2026; when access began is not stated, so year 2026 only. dbir_year 2027.\nDiscovery: not stated, so Unknown.\nVictim: InvoiceCloud (Braintree, Massachusetts), NAICS 522320 to match the CSV; employee count approximate. City of Oshkosh utility NAICS 221310 (the issue body said 2211, but the city utility bills water/sewer/storm water; change if needed).\nSingle source; confidence Medium.",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24645\nPartner_Breach tag: coded from the partner's perspective per the project rule. Primary victim InvoiceCloud (the billing/payment platform whose access key was compromised); the City of Oshkosh utility and AquaHawk Alerting (the other billing platform involved) are secondary victims. The incident_id reuses 2D848031-3327-46AF-951C-97FC03FAC81B from the row already in Partner_Breaches_2027_dbir.csv so the two stay linked.\nTemplate Hacking-ext-unknown used, refined to Use of stolen creds because InvoiceCloud 'disabled the compromised access key' (an API/access key). Vector Partner: the access ran through the vendor integration; which party's key was compromised, and how, is not stated. The CSV row coded variety Unknown; this record is more specific.\nData: names, emails, utility account numbers, invoice numbers (Personal). Number of customers not given.\nTimeline: city notice dated October 9, 2026; when access began is not stated, so year 2026 only. dbir_year 2027.\nDiscovery: not stated, so Unknown.\nVictim: InvoiceCloud (Braintree, Massachusetts), NAICS 522320 to match the CSV; employee count approximate. City of Oshkosh utility NAICS 221310 (the issue body said 2211, but the city utility bills water/sewer/storm water; change if needed).\nSingle source; confidence Medium.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
     "created": "2026-11-09T19:41:18Z",
     "dbir_year": 2027,
     "event_chain": [
@@ -80,7 +83,7 @@
     ],
     "github": "24645",
     "master_id": "2D848031-3327-46AF-951C-97FC03FAC81B",
-    "modified": "2026-11-09T19:41:18Z",
+    "modified": "2026-11-19T22:00:00Z",
     "sub_source": "vcdb"
   },
   "reference": "https://www.wbay.com/2026/10/26/oshkosh-utility-customers-warned-data-breach/",

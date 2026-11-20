@@ -69,6 +69,9 @@
         {
           "amount": 92554,
           "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
         }
       ],
       "data_disclosure": "Yes",
@@ -94,7 +97,7 @@
   "plus": {
     "analysis_status": "Reviewed",
     "analyst": "swidup",
-    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21229\nIssue template tag Malware-ext-Ransomware-databreach not followed: Transak describes phishing of an employee and use of their credentials on a third-party KYC vendor's dashboard, with no encryption or ransomware deployment; Stormous (a ransomware group) only claimed the theft. Coded social Phishing (vector Unknown; channel not stated) + hacking Use of stolen creds on the vendor dashboard (S - Web application, vector Partner because the system belongs to the KYC vendor). Laptop takeover is noted as U - Desktop or laptop; no malware action coded since none is described.\nProvider rule not applied: the KYC vendor was not breached; Transak's own employee credentials were abused, so Transak is primary victim.\nActor: Stormous claim -> Organized crime, Financial (attacker-claimed). Extortion not coded: no demand to Transak is documented in the sources read; data_abuse omitted.\nData: names, DOB, selfies, passports/ID docs -> Personal, 92,554 = data_total. Timeline: disclosed Oct 21 2024; begin date not stated -> 2024-10, dbir_year 2025. Country Unknown (Transak notified the UK ICO, EU and US regulators). NAICS 522320 (payment gateway); headcount Unknown.",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/21229\nIssue template tag Malware-ext-Ransomware-databreach not followed: Transak describes phishing of an employee and use of their credentials on a third-party KYC vendor's dashboard, with no encryption or ransomware deployment; Stormous (a ransomware group) only claimed the theft. Coded social Phishing (vector Unknown; channel not stated) + hacking Use of stolen creds on the vendor dashboard (S - Web application, vector Partner because the system belongs to the KYC vendor). Laptop takeover is noted as U - Desktop or laptop; no malware action coded since none is described.\nProvider rule not applied: the KYC vendor was not breached; Transak's own employee credentials were abused, so Transak is primary victim.\nActor: Stormous claim -> Organized crime, Financial (attacker-claimed). Extortion not coded: no demand to Transak is documented in the sources read; data_abuse omitted.\nData: names, DOB, selfies, passports/ID docs -> Personal, 92,554 = data_total. Timeline: disclosed Oct 21 2024; begin date not stated -> 2024-10, dbir_year 2025. Country Unknown (Transak notified the UK ICO, EU and US regulators). NAICS 522320 (payment gateway); headcount Unknown.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
     "created": "2026-11-05T23:06:54Z",
     "dbir_year": 2025,
     "event_chain": [
@@ -122,7 +125,7 @@
     ],
     "github": "21229",
     "master_id": "2000654B-5477-481F-A538-ED65E7594BD6",
-    "modified": "2026-11-05T23:06:54Z",
+    "modified": "2026-11-19T22:00:00Z",
     "sub_source": "vcdb"
   },
   "reference": "https://coinmarketcap.com/community/articles/6728a0f6be2dfb7a8a58acb1/; https://www.infosecurity-magazine.com/news/phishing-attack-impacts-over-92000/; https://www.theblock.co/news/regulation/2024-10-21-transak-discloses-data-breach-affecting-over-57000-users-stormous-ransomware-gang-claims-responsibility-322263",
@@ -144,7 +147,7 @@
     "country": [
       "Unknown"
     ],
-    "employee_count": "101 to 1000",
+    "employee_count": "Unknown",
     "government": [
       "NA"
     ],

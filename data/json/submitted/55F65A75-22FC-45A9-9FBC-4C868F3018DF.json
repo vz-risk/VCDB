@@ -1,0 +1,179 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Dire Wolf"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "55F65A75-22FC-45A9-9FBC-4C868F3018DF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24419\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nProvider-perspective rule applied (no Partner_Breach tag, but the sources describe one third-party breach hitting three clients): the unnamed provider is primary (NAICS 561990 assumed) and the three firms are secondary. Dire Wolf attribution comes only from the issue's MyBroadband headline (the page could not be opened); Connecting Africa names no attacker. Ransomware is coded per the tag but encryption is unconfirmed.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Stolen or phished credentials used"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "24419",
+    "master_id": "55F65A75-22FC-45A9-9FBC-4C868F3018DF",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://mybroadband.co.za/news/security/667365-why-easyequities-cell-c-and-a-bank-announced-potential-data-breaches-on-the-same-weekend-in-south-africa.html; https://www.connectingafrica.com/cybersecurity/sa-s-cell-c-easyequities-and-bidvest-bank-warn-customers-of-data-leak",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In September 2026 a South African third-party provider that performs verification and customer services for several firms detected a breach of its access credentials. EasyEquities, Cell C (Fiber customers) and Bidvest Bank warned customers that names, emails, phone numbers, account numbers and other personal information held by the provider were exposed. MyBroadband linked the attack to the Dire Wolf ransomware gang.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ZA"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "561990",
+    "region": [
+      "002018"
+    ],
+    "secondary": {
+      "amount": 3,
+      "victim_id": [
+        "EasyEquities (First World Trader); 523150",
+        "Cell C Limited; 517112",
+        "Bidvest Bank Limited; 522110"
+      ]
+    },
+    "victim_id": "Unnamed South African verification service provider"
+  }
+}

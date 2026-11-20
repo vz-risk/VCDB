@@ -72,6 +72,9 @@
         },
         {
           "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
         }
       ],
       "data_disclosure": "Yes",
@@ -102,7 +105,7 @@
   "plus": {
     "analysis_status": "Reviewed",
     "analyst": "swidup",
-    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24551\nTemplate Hacking-ext-unknown with deviations: hacking variety Use of stolen creds because Flink says the data was taken via a compromised former employee's account; vector Unknown and asset S - Unknown because Flink only says 'one of our internal systems' (not necessarily a web application). Actor coded external (the account was compromised by outsiders, not misused by the former employee).\nExtortion: LPG Group emailed individual customers demanding 0.005 ETH (~EUR 12) each and asked Flink for 100 ETH (~EUR 237,000) to delete the data; deadline Oct 2; no one reportedly paid and the data was put up for auction. Social Extortion, target Customer (customers were directly extorted) plus Unknown (the company demand), vector Email; Alter behavior and P - Customer added; data_abuse 'Yes - Data ransomed'. Actor Organized crime / Financial per the extortion-crew rule; little else is known about LPG Group (a Conti-era lpg.dll link is speculative and not coded).\nData: names, postal codes/home addresses, emails, phone numbers, delivery instructions (Personal); order information and last order price (Internal). Flink says passwords, billing, bank and card data were not affected. RTL verified the data. data_total 1,010,000 = ~1M customers + 'over 10,000' employees (lower bound; the Sept 25 claim said 13,000 workers).\nTimeline: stolen data covers March-September 2026 and the claim/ransom emails came Sept 25, 2026 -> incident coded 2026-09 (intrusion date not given) -> dbir_year 2027. Discovery Actor disclosure (claim and ransom emails). Victim country DE (Berlin HQ; customers in DE and NL). NAICS 454110 (Electronic Shopping) refines the issue's 4541. Employee count 10001 to 25000 from the reported 10,000-13,000 worker records (riders and staff).",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24551\nTemplate Hacking-ext-unknown with deviations: hacking variety Use of stolen creds because Flink says the data was taken via a compromised former employee's account; vector Unknown and asset S - Unknown because Flink only says 'one of our internal systems' (not necessarily a web application). Actor coded external (the account was compromised by outsiders, not misused by the former employee).\nExtortion: LPG Group emailed individual customers demanding 0.005 ETH (~EUR 12) each and asked Flink for 100 ETH (~EUR 237,000) to delete the data; deadline Oct 2; no one reportedly paid and the data was put up for auction. Social Extortion, target Customer (customers were directly extorted) plus Unknown (the company demand), vector Email; Alter behavior and P - Customer added; data_abuse 'Yes - Data ransomed'. Actor Organized crime / Financial per the extortion-crew rule; little else is known about LPG Group (a Conti-era lpg.dll link is speculative and not coded).\nData: names, postal codes/home addresses, emails, phone numbers, delivery instructions (Personal); order information and last order price (Internal). Flink says passwords, billing, bank and card data were not affected. RTL verified the data. data_total 1,010,000 = ~1M customers + 'over 10,000' employees (lower bound; the Sept 25 claim said 13,000 workers).\nTimeline: stolen data covers March-September 2026 and the claim/ransom emails came Sept 25, 2026 -> incident coded 2026-09 (intrusion date not given) -> dbir_year 2027. Discovery Actor disclosure (claim and ransom emails). Victim country DE (Berlin HQ; customers in DE and NL). NAICS 454110 (Electronic Shopping) refines the issue's 4541. Employee count 10001 to 25000 from the reported 10,000-13,000 worker records (riders and staff).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
     "attribute": {
       "confidentiality": {
         "data_abuse": "Yes - Data ransomed"
@@ -135,7 +138,7 @@
     ],
     "github": "24551",
     "master_id": "A343E9E4-80BE-4B8E-A464-600D92B662B0",
-    "modified": "2026-11-05T22:19:15Z",
+    "modified": "2026-11-19T22:00:00Z",
     "sub_source": "vcdb"
   },
   "reference": "https://nltimes.nl/2026/10/05/hackers-offer-1-million-stolen-flink-records-highest-bidder-extortion-fails; https://nltimes.nl/2026/09/25/individuals-sent-ransom-notes-cybercriminals-steal-flink-customer-worker-data",

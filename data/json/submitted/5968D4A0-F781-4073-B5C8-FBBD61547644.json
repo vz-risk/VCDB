@@ -1,0 +1,147 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Virtual currency"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "5968D4A0-F781-4073-B5C8-FBBD61547644",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23799\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nPartner_Breach tag noted but no partner is identified in the sources, so Triple-A is the victim. Wallet key compromise assumed (Credentials) because funds moved from hot wallets; method not disclosed. Discovery: flagged by PeckShield/Specter on-chain analysts. Pipeline date 2024 is wrong. Employee count from 79 employees per Built In Singapore (https://builtinsingapore.com/company/triple).",
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Hot wallet funds transferred out"
+      }
+    ],
+    "github": "23799",
+    "master_id": "5968D4A0-F781-4073-B5C8-FBBD61547644",
+    "modified": "2026-11-11T05:59:31Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.valuethemarkets.com/cryptocurrency/news/triple-a-faces-security-breach-losing-12-million-from-hot-wallets; https://cryptobriefing.com/triple-a-hot-wallet-12m-security-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 24, 2026, attackers drained about $12 million from crypto payment gateway Triple-A's hot wallets across six blockchains. Cold storage was unaffected and the company said client funds were safe.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 24,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "SG"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "522320",
+    "region": [
+      "142035"
+    ],
+    "victim_id": "Triple-A Technologies Pte. Ltd."
+  }
+}

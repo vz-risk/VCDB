@@ -79,6 +79,20 @@
         "Alter behavior",
         "Software installation"
       ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Unknown"
+      ]
     }
   },
   "confidence": "Medium",
@@ -93,7 +107,7 @@
   "plus": {
     "analysis_status": "Reviewed",
     "analyst": "swidup",
-    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23764\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Malware-ext-infostealer; the infostealer ran on the freelancer's own machine, so the record codes the use of stolen credentials against Artlist plus the site modification. Recoded per analyst review to add the social and malware actions: the injected JavaScript showed a fake reCAPTCHA (ClickFix) pretext that had visitors paste and run a PowerShell command (social Pretexting via Web application, target Customer = blog visitors), which downloaded an infostealer/RAT with browser credential and cookie theft and keylogging (malware Capture stored data, Spyware/Keylogger, RAT with its parents Backdoor, Trojan and Backdoor or C2, via Web application - download) onto visitors' Windows computers. No specific data theft from visitors or from Artlist is reported, so no confidentiality attribute is coded. The 2023 infostealer infection of the freelancer's machine is not coded as a separate action because that machine was not Artlist's. Dated July 2026 from discovery; the blog compromise may be earlier. NAICS 519290 is an approximation for a stock media licensing site. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23764\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Malware-ext-infostealer; the infostealer ran on the freelancer's own machine, so the record codes the use of stolen credentials against Artlist plus the site modification. Recoded per analyst review to add the social and malware actions: the injected JavaScript showed a fake reCAPTCHA (ClickFix) pretext that had visitors paste and run a PowerShell command (social Pretexting via Web application, target Customer = blog visitors), which downloaded an infostealer/RAT with browser credential and cookie theft and keylogging (malware Capture stored data, Spyware/Keylogger, RAT with its parents Backdoor, Trojan and Backdoor or C2, via Web application - download) onto visitors' Windows computers. No specific data theft from visitors or from Artlist is reported, so no confidentiality attribute is coded. The 2023 infostealer infection of the freelancer's machine is not coded as a separate action because that machine was not Artlist's. Dated July 2026 from discovery; the blog compromise may be earlier. NAICS 519290 is an approximation for a stock media licensing site. Employee count is an approximate figure from general knowledge, not a per-record lookup.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
     "created": "2026-11-11T18:20:52Z",
     "dbir_year": 2027,
     "event_chain": [
@@ -121,7 +135,7 @@
     ],
     "github": "23764",
     "master_id": "0A36A8E6-15F5-46C2-8985-961CAA2714BA",
-    "modified": "2026-11-16T22:30:00Z",
+    "modified": "2026-11-19T22:00:00Z",
     "sub_source": "vcdb"
   },
   "reference": "https://www.infostealers.com/article/how-an-infostealer-infection-led-to-a-sophisticated-clickfix-campaign-at-artlist/",
