@@ -1,0 +1,129 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Skimmer",
+        "Tampering"
+      ],
+      "vector": [
+        "Victim public area"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "T - PED pad"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Hardware tampering"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2B9E7C79-CE1D-40CD-86F7-2A96A11FACA5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22830\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Physical-ext-tampering-POS. Asset role OT because the skimmer was on a payment terminal. Date is the Tuesday before the Dec 5, 2025 article. Actor variety Organized crime assumed for skimming. Disclosure Potentially because no card compromise is confirmed. Employee count from 59,330 employees per Wikipedia infobox (older figure, year not given) (https://en.wikipedia.org/wiki/Family_Dollar).",
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "ia",
+        "summary": "Skimmer installed on terminal"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "cp",
+        "summary": "Card data captured"
+      }
+    ],
+    "github": "22830",
+    "master_id": "2B9E7C79-CE1D-40CD-86F7-2A96A11FACA5",
+    "modified": "2026-11-11T06:07:29Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://news.ssbcrack.com/credit-card-skimmer-found-at-cedar-rapids-family-dollar/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Cedar Rapids police reported that a credit card skimmer was found on the morning of Tuesday, December 2, 2025, at a Family Dollar store on 32nd Street NE. Police did not say how it was found or whether suspects were identified.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 2,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "455219",
+    "region": [
+      "019021"
+    ],
+    "state": "IA",
+    "victim_id": "Family Dollar (Cedar Rapids, Iowa store)"
+  }
+}

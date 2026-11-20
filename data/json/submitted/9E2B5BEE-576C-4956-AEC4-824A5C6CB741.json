@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "9E2B5BEE-576C-4956-AEC4-824A5C6CB741",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23500\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nRecoded 2026-11-19 at analyst request: Femtosec attributes the precursor credential theft to commodity infostealer logs (Lumma, RedLine, StealC) and describes SSO/session abuse into the elarabygroup.com e-commerce backend, so initial access is coded Hacking - Use of stolen creds via Web application (S - Web application plus S - Database for the leaked structured records). The access path is Femtosec's analysis, not victim-confirmed. Infostealer infection not coded as malware because the infected device and its owner are not identified.\nTag Malware-ext-Ransomware-databreach not followed: Femtosec ties this June 2026 forum leak to no ransomware group (the LockBit listing was May 2024, DBIR 2025). Unverified forum claim coded Confirmed with Low confidence. Theft date unknown; dated from the June 21, 2026 leak. If this leak is the 2024 LockBit data reposted, drop the record. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Use of stolen creds (infostealer-harvested) against web application"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "23500",
+    "master_id": "9E2B5BEE-576C-4956-AEC4-824A5C6CB741",
+    "modified": "2026-11-19T18:58:11Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://femtosec.io/threat-intelligence/elaraby-group-data-leak-analysis",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In June 2026 a threat actor published an alleged 25 GB Elaraby Group database on the pwnforums cybercrime forum, containing customer records, shipping addresses and sales transaction logs from elarabygroup.com. The Egyptian consumer electronics company had been listed by LockBit in May 2024.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "EG"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "443142",
+    "region": [
+      "002015"
+    ],
+    "victim_id": "Elaraby Group"
+  }
+}

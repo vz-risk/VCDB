@@ -1,0 +1,129 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Skimmer",
+        "Tampering"
+      ],
+      "vector": [
+        "Victim public area"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "T - PED pad"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Hardware tampering"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3D96B759-4FA7-4862-A337-B7F95A658573",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22889\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Physical-ext-tampering-POS (issue tag is -gas, but this store has no fuel pumps, so the POS template was used per reviewer). Asset role OT because the skimmer was on a payment terminal. Assets coded as PED pads although some devices across the sweep were on ATMs and gas pumps; sources do not say which device type was at which store. Split from the original multi-victim record 7DA8BA4C-D389-4B5C-A8FF-89F19BCCA79C (Operation Skim Scam, Fairfax County, VA): all 7-Eleven stores in that file; each other named store (Dollar Tree, Fresh World, Americana Grocery) has its own file. Victim: Americana Grocery of Virginia is a local grocery; employee count not found in sources -> Unknown. Industry 445110 supermarkets and grocery stores. Locations affected: 1, per the police location list quoted in the GitHub issue: 6128 Columbia Pike (Lake Barcroft). data_disclosure Yes per reviewer (template value).",
+    "created": "2026-11-19T18:40:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "ia",
+        "summary": "Skimmer installed on terminal"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "cp",
+        "summary": "Card data captured"
+      }
+    ],
+    "github": "22889-1",
+    "master_id": "3D96B759-4FA7-4862-A337-B7F95A658573",
+    "modified": "2026-11-19T18:42:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://wjla.com/news/local/skimming-devices-found-20-stores-locations-fairfax-county-police-herndon-northern-virginia-united-states-secret-service-operation-skim-scam-countywide-joint-investigation-fraud-sweep-dollar-tree-fresh-world-7-eleven-atms-gas-pumps-terminals; https://wjla.com/news/local/Operation%20Skim%20Scam:%2020%20credit%20card%20skimmers%20recovered%20across%20Fairfax%20County",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Card skimming devices were found at 1 Americana Grocery of Virginia location in Fairfax County, Virginia, during 'Operation Skim Scam', a December 2025 sweep by Fairfax County Police and the US Secret Service that inspected point-of-sale terminals, ATMs and gas pumps at more than 100 sites and recovered 20 skimmers at nearly 20 locations (including 7-Eleven, Dollar Tree, Fresh World and Americana Grocery stores).",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "locations_affected": 1,
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "Americana Grocery of Virginia (Lake Barcroft store)"
+  }
+}

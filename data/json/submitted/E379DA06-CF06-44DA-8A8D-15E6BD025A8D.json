@@ -1,0 +1,188 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "SETTRA"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption",
+        "Obscuration"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "E379DA06-CF06-44DA-8A8D-15E6BD025A8D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24672\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Malware-ext-Ransomware-databreach followed; Extortion added for the publication threat. Data disclosure Potentially (claimed, not confirmed). Colmobil is a vehicle importer and distributor, so NAICS 423110 is used instead of the tag's 4411. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "24672",
+    "master_id": "E379DA06-CF06-44DA-8A8D-15E6BD025A8D",
+    "modified": "2026-11-11T06:07:29Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://shattered.io/settra-ransomware-colmobil-israel-car-importer-oct-28-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Israeli vehicle importer Colmobil detected a ransomware attack on October 14, 2026, later attributed to the SETTRA group, which threatened to publish customers' personal details unless paid. Colmobil said it returned to full operation and no data had been made public; the Ministry of Transport temporarily cut it off from the vehicle-registration system.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 14,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "423110",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Colmobil Corporation Ltd."
+  }
+}

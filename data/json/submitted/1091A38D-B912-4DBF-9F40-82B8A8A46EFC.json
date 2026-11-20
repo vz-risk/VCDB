@@ -1,0 +1,129 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Skimmer",
+        "Tampering"
+      ],
+      "vector": [
+        "Victim public area"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "T - PED pad"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Hardware tampering"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "1091A38D-B912-4DBF-9F40-82B8A8A46EFC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22997\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Physical-ext-tampering-POS. Asset role OT because the skimmer was on a payment terminal. Actor variety Organized crime assumed. Employee count from 135,332 employees per Wikipedia (unclear whether US or worldwide, so coded Large) (https://en.wikipedia.org/wiki/7-Eleven).",
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "ia",
+        "summary": "Skimmer installed on terminal"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "cp",
+        "summary": "Card data captured"
+      }
+    ],
+    "github": "22997",
+    "master_id": "1091A38D-B912-4DBF-9F40-82B8A8A46EFC",
+    "modified": "2026-11-11T06:07:29Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thebaynet.com/card-skimming-device-discovered-at-waldorf-7-eleven/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 21, 2026, Charles County Sheriff's officers recovered an overlay skimmer attached to a point-of-sale terminal at the 7-Eleven on St. Ignatius Drive in Waldorf, Maryland.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "NA"
+    ],
+    "industry": "445131",
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "7-Eleven, Inc. (Waldorf, Maryland store)"
+  }
+}
