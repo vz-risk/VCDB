@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 66422,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 66422,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "8D45A840-DE42-4515-9736-CBF17E63A486",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24182\nCloses https://github.com/vz-risk/VCDB/issues/23685\nMerged #23685 (Federman & Sherwood post: unauthorized access discovered Apr 29, 2026; files accessed or copied Apr 26-28; FBI notified). Hacking Unknown; files accessed or downloaded -> Exfiltrate. NAICS 6215 -> 621512 (diagnostic imaging). Title's 'Association for Neurologically Impaired Brain Injured' is another entity in the same roundup and not coded here. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:17:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24182",
+    "master_id": "8D45A840-DE42-4515-9736-CBF17E63A486",
+    "modified": "2026-11-06T00:17:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/data-breaches-five-hipaa-regulated-entities/; https://www.federmanlaw.com/blog/womens-center-for-radiology-data-breach-investigated-by-federman-sherwood/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Women's Center for Radiology, a Florida radiology practice, found unauthorized third-party access to its network between April 26 and 28, 2026. Patient files with names, addresses, dates of birth, diagnoses, lab results, medical record numbers, driver's license numbers and health insurance information of 66,422 patients were accessed or downloaded.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 2
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 26,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Women's Center for Radiology"
+  }
+}

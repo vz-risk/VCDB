@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5459,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5459,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A8252B19-9ECB-4A3B-AF97-94312C0F1A30",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23809\nBilling company is the primary victim (not tagged Partner_Breach; its healthcare clients are not named). Assets U - Desktop and S - Unknown per the HHS location (desktop computer, network server). Hacking Unknown. Incident month Mar 2026 (discovery). NAICS tag 5241 does not fit -> 541219 (billing services). Employee count 11 to 100 (approximate).",
+    "created": "2026-11-06T00:10:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23809",
+    "master_id": "A8252B19-9ECB-4A3B-AF97-94312C0F1A30",
+    "modified": "2026-11-06T00:10:48Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.federmanlaw.com/blog/hudson-valley-medical-billing-credentialing-llc-data-breach-investigated-by-federman-sherwood/; https://www.claimdepot.com/data-breach/hudson-valley-medical-billing-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Hudson Valley Medical Billing & Credentialing, a medical billing and credentialing company, became aware on March 6, 2026 of possible unauthorized access to one of its computer systems and shut the computer down. HHS lists the hacking incident, involving a desktop computer and network server, as affecting 5,459 people. Names, Social Security numbers, financial account information, medical and health insurance information were exposed. Letters went out from July 7, 2026.",
+  "timeline": {
+    "incident": {
+      "day": 6,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541219",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Hudson Valley Medical Billing & Credentialing, LLC"
+  }
+}

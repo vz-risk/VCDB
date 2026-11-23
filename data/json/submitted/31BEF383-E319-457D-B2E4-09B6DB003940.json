@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "31BEF383-E319-457D-B2E4-09B6DB003940",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24093\nPhishing -> mailbox takeover; mailbox then sent phishing to contacts (the alert went to mailbox users who received the phishing email) -> hacking Use of stolen creds on S - Mail. Incident month Apr 2026 (alert date Apr 24). Data: DVA ID numbers (Personal) and other mailbox contents (Medical likely). Count not disclosed (clinic has 14,000+ patients overall). Employee count 11 to 100 (approximate).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-06T00:05:33Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing email"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Mailbox accessed"
+      }
+    ],
+    "github": "24093",
+    "master_id": "31BEF383-E319-457D-B2E4-09B6DB003940",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://databreaches.net/2026/08/01/au-go2-health-medical-clinic-in-brisbane-waited-almost-three-months-to-alert-patients-it-was-hacked/; https://www.cyberdaily.au/security/13944-go2-health-confirms-limited-data-breach-patient-data-remains-largely-secure",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "GO2 Health, a medical clinic in Brisbane, Australia, had one internal email mailbox taken over in a business email compromise phishing attack; it alerted mailbox users who received the phishing email on April 24, 2026. The mailbox auto-archived 12 months of email, including some patients' Department of Veterans' Affairs ID numbers. The clinic's main patient system was not accessed. Patients were told almost three months later, and the ABC reported it on July 21, 2026.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "GO2 Health"
+  }
+}

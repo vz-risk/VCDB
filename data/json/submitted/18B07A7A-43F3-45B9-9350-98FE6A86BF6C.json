@@ -1,0 +1,181 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Genesis"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 500,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 500,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "18B07A7A-43F3-45B9-9350-98FE6A86BF6C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24117\nGenesis described as a ransomware group; encryption not mentioned, coded ransomware per the template tag (reviewer may change to hacking + Exfiltrate). Posted data -> data_abuse 'Yes - Data ransomed'? Not stated whether a ransom was demanded; coded 'Yes - Data ransomed' following leak-site precedent. Count 500 from HHS (amount only, close to the placeholder). Discovery ~17 days after access. Employee count 11 to 100 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:03:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen and posted"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems affected"
+      }
+    ],
+    "github": "24117",
+    "master_id": "18B07A7A-43F3-45B9-9350-98FE6A86BF6C",
+    "modified": "2026-11-06T00:03:30Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://hoodline.com/2026/08/raleigh-clinic-data-heist-puts-500-patients-medical-files-social-security-numbers-at-risk/; https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf; https://cdn.prod.website-files.com/56dde0c1c14610ec13542a42/6a4705bfcae8a69f996bc915_FMAR%20Website%20Notice%20of%20data.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Family Medical Associates of Raleigh, a North Carolina family medicine practice, found suspicious activity on May 7, 2026 and determined an unauthorized actor had intermittently accessed its systems between April 18 and 20. The Genesis ransomware group claimed the attack on June 3 and posted data it said it took. The HHS breach portal lists 500 people affected; medical records, Social Security numbers, financial and insurance information, dates of birth, addresses and government IDs were potentially exposed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 18,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Family Medical Associates of Raleigh"
+  }
+}

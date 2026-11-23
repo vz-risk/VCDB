@@ -1,0 +1,186 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Payouts King"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 189432,
+          "variety": "Personal"
+        },
+        {
+          "amount": 25000,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 189432,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "9B5B12CE-773E-4B5C-AA9C-8AB78C0C3B3D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23798\nPayouts King ransomware claim; coded ransomware per the template tag (encryption not described by the victim). Total 189,432 (Indiana AG); Medical amount 25,000 (HHS). Discovery 1 day. Data victim Customer and Employee (group claims employee PII). NAICS 4461 -> 446130. Seven comments only partly reviewed. Employee count 1001 to 10000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:12:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "23798",
+    "master_id": "9B5B12CE-773E-4B5C-AA9C-8AB78C0C3B3D",
+    "modified": "2026-11-06T00:12:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.nbc4i.com/video/eyemart-reports-data-breach/12004629/; https://www.msn.com/en-us/health/other/north-texas-based-eyemart-express-confirms-cyberattack-that-exposed-customer-data/ar-AA28Dcle; https://www.msn.com/en-us/news/us/texas-based-eyemart-express-warns-customers-of-data-security-event/ar-AA28CCaD; https://kvia.com/news/business-technology/2026/07/24/eyemart-express-confirms-data-breach-involving-customer-data/; https://bakersfieldnow.com/news/local/eyemart-express-warns-customers-after-cyberattack-exposed-personal-information; https://www.yahoo.com/news/videos/eyemart-reports-data-breach-214644312.html; https://www.claimdepot.com/data-breach/eyemart-express-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Eyemart Express, a Texas-based optical retailer, had a security event on February 12, 2026, found the next day. The Payouts King ransomware group claimed on March 10, 2026 that it took 435 GB of internal data. Names, addresses, Social Security and driver's license numbers, dates of birth, payment and financial account information and, for about 25,000 people, medical and health insurance information were exposed. The Indiana Attorney General lists 189,432 people affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 12,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "446130",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Eyemart Express"
+  }
+}

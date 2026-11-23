@@ -1,0 +1,117 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1677,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1677,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "7021DAED-549E-4542-B848-8CF6C4D3D18E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23767\nThe issue body repeats the NAS Recovery text; details here are from ClaimDepot. Error Publishing error by an employee, asset S - Unknown (online repository, type not stated) with cloud External Cloud Asset(s). Data disclosure Potentially (public exposure, no evidence of access stated). 1,677 = MA residents -> amount only. Discovery about 10 weeks. NAICS 6241 tag; Entyre Care is a home care provider -> 621610. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:14:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files published to public repository"
+      }
+    ],
+    "github": "23767",
+    "master_id": "7021DAED-549E-4542-B848-8CF6C4D3D18E",
+    "modified": "2026-11-06T00:14:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/colorado-behavioral-healthcare-provider-insider-data-breach/; https://www.claimdepot.com/data-breach/entyre-care-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An Entyre Care Massachusetts employee accidentally published files with personal information to a publicly accessible online repository on March 2, 2026. It went unnoticed until May 12, 2026. Names, ages, Medicaid IDs and medical records of at least 1,677 Massachusetts residents were exposed; parent company Entyre Inc. mailed letters July 10, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 10
+    },
+    "incident": {
+      "day": 2,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Entyre Care Massachusetts Inc."
+  }
+}

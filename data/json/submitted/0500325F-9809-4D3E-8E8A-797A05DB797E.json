@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Interlock"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0500325F-9809-4D3E-8E8A-797A05DB797E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23608\nRansomware (Interlock) with exfiltration claim and leak threat -> social Extortion not separately coded (ransom note is part of the ransomware); data_abuse 'Yes - Data ransomed'. Government Local. NAICS 926410 tag -> 925110 (housing program administration). Incident month Jun 2026 (systems compromised). Count not disclosed. Employee count 1001 to 10000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:19:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "23608",
+    "master_id": "0500325F-9809-4D3E-8E8A-797A05DB797E",
+    "modified": "2026-11-06T00:19:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://washingtoncitypaper.com/article/788082/dcha-cyberattack-message-reveals-claims-of-encrypted-systems-data-theft/; https://www.dexpose.io/interlock-breaches-district-of-columbia-housing-authority/; https://wjla.com/news/local/dc-housing-authority-systems-compromised-website-down-robert-white-washington-dcha",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "The District of Columbia Housing Authority (DCHA) was hit by a cyberattack in June 2026 that encrypted systems, took down its website and email and disrupted residents' access to housing services for weeks. Attackers left a ransom note threatening to leak stolen personal, financial and health information on thousands of residents and landlord financial data within 72 hours. The Interlock group claimed it on July 16, 2026, saying it took 1.6 TB including passports and client data.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "925110",
+    "region": [
+      "019021"
+    ],
+    "state": "DC",
+    "victim_id": "District of Columbia Housing Authority"
+  }
+}

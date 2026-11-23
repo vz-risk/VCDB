@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Executive",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "39A2DB9E-1D75-4830-9836-29C2A94F14D8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23393\nExtortion-only claim by ShinyHunters -> hacking Exfiltrate plus social Extortion, no data_abuse since unconfirmed; Suspected / Potentially / Low. Claim date not given; incident coded June 2026 from the June 22 deadline -> dbir_year 2027. Parent Amazon. NAICS 62 tag -> 621111. Employee count 1001 to 10000 (approximate).",
+    "created": "2026-11-06T00:25:46Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Claimed data theft"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Ransom demand"
+      }
+    ],
+    "github": "23393",
+    "master_id": "39A2DB9E-1D75-4830-9836-29C2A94F14D8",
+    "modified": "2026-11-06T00:25:46Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cybernews.com/security/amazon-one-medical-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "phidbr",
+  "summary": "ShinyHunters listed One Medical, Amazon's primary care subsidiary, on its leak site, claiming to have stolen 8.8TB of data, possibly including medical records and personal information, and set a June 22 deadline for negotiations. No samples were released, and One Medical did not comment.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "One Medical"
+  }
+}

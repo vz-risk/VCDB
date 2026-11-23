@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 83114,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 83114,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "3E9CD5EC-9EA4-4C18-AC1B-2A74D0EE987B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23718\nEmail account compromise; the account was then used to send phishing (integrity Misrepresentation not coded since the victim's own data is the focus). Hacking Unknown with Exfiltrate (mailbox downloaded), asset S - Mail. Government Local. NAICS 92 -> 923130. Employee count 11 to 100 (approximate).",
+    "created": "2026-11-06T00:21:23Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23718",
+    "master_id": "3E9CD5EC-9EA4-4C18-AC1B-2A74D0EE987B",
+    "modified": "2026-11-06T00:21:23Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/aitkin-county-health-human-services-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Aitkin County Health and Human Services in Minnesota found unauthorized access to three employee email accounts on April 7-8, 2026, after one account was seen sending phishing emails. A forensic investigation confirmed one mailbox's contents were downloaded, exposing names, Social Security numbers, dates of birth, medical records, diagnoses, medications and health insurance information of 83,114 people.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 7,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "Local"
+    ],
+    "industry": "923130",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Aitkin County Health and Human Services"
+  }
+}

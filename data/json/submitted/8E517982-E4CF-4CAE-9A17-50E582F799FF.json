@@ -1,0 +1,167 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Interlock"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Student",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "8E517982-E4CF-4CAE-9A17-50E582F799FF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23499\nRansomware by Interlock with data leaked -> data_abuse Yes - Data ransomed. No health data named in sources, though the issue lists PHI. Incident June 2026 -> dbir_year 2027. Government school per its Department for Education ties (inferred) -> government Regional. NAICS 611110. Employee count 101 to 1000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:29:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen and leaked"
+      }
+    ],
+    "github": "23499",
+    "master_id": "8E517982-E4CF-4CAE-9A17-50E582F799FF",
+    "modified": "2026-11-06T00:29:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.cybersecurityconnect.com.au/security/13801-exclusive-hacker-behind-reynella-east-college-hack-dumps-hundreds-of-gigabytes-of-alleged-teacher-student-data-on-darkweb; https://www.insurancebusinessmag.com/au/news/cyber/south-australian-school-data-dumped-online-weeks-after-hack-580273.aspx",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Reynella East College, a preschool to Year 12 school in Adelaide, South Australia, told parents of a cyber security breach on June 9, 2026. Interlock claimed the attack and on June 23 dumped more than 600 GB of alleged data, including passport scans of international students and staff, plaintext credential lists, student and family contact records, teaching documents and budget files.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "611110",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Reynella East College"
+  }
+}

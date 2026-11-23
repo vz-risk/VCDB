@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "25ED1F35-7EE5-4247-8859-402D15C44504",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23628\nSocial engineering of the user (method not stated) -> social Pretexting with vector Unknown, then hacking Use of stolen creds on S - Mail and S - File (SharePoint). Count not disclosed. NAICS 6223 tag; Acadia operates behavioral health facilities -> 622210. Employee count 25001 to 50000 (approximate).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-06T00:19:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "User socially engineered"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Email and SharePoint accessed"
+      }
+    ],
+    "github": "23628",
+    "master_id": "25ED1F35-7EE5-4247-8859-402D15C44504",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.healthcarefacilitiestoday.com/posts/details.aspx?id=31148",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Acadia Healthcare found unusual activity in a user's email account on March 25, 2026. Through social engineering, an unauthorized party had accessed that email account and an associated SharePoint account between March 21 and 25. Patient names, addresses, dates of birth, treatment information and dates, insurance information and in some cases Medicare HICNs that may contain Social Security numbers were exposed. EHR systems and patient care were not affected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 4
+    },
+    "incident": {
+      "day": 21,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622210",
+    "region": [
+      "019021"
+    ],
+    "state": "TN",
+    "victim_id": "Acadia Healthcare Company, Inc."
+  }
+}

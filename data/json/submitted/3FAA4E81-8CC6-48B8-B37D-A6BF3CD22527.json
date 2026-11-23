@@ -1,0 +1,159 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4220,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4220,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "3FAA4E81-8CC6-48B8-B37D-A6BF3CD22527",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23670\nSocial engineering of two employees; the notice does not say phishing, so social Phishing is coded from the issue tag (Social-ext-Phish) with vector Unknown, followed by hacking Use of stolen creds (access obtained). Count 4,220 total (TX 268). NAICS 524 -> 524126. Employee count 10001 to 25000 (approximate).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-06T00:18:11Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Two employees deceived"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Internal systems accessed"
+      }
+    ],
+    "github": "23670",
+    "master_id": "3FAA4E81-8CC6-48B8-B37D-A6BF3CD22527",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.msdlegal.com/blog/2026/07/markel-insurance-data-breach-class-action-lawsuit-investigation/; https://www.claimdepot.com/data-breach/markel-corporation-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An unauthorized actor used social engineering to trick two Markel employees into giving up access or sensitive information, leading to unauthorized access to internal systems on March 17-18, 2026. Names, Social Security and driver's license numbers and medical information of 4,220 people were involved. The investigation finished June 29, 2026 and letters went out from July 2, 2026.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 17,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524126",
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "Markel Group Inc."
+  }
+}

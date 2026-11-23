@@ -1,0 +1,173 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 14830,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 14830,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "473A8EFB-6A04-4A47-ADFF-A96D2423BBEC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24400\nRansomware partially executed (encryption stopped) -> malware Ransomware, availability Obscuration + Interruption (encryption started but was stopped before completion). Discovery internal within hours. 'May have been compromised' with confirmed attacker access -> disclosure Yes. NAICS 6214 -> 621420. Employee count Unknown.",
+    "created": "2026-11-05T23:57:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware launched"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient data potentially accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Partial encryption stopped"
+      }
+    ],
+    "github": "24400",
+    "master_id": "473A8EFB-6A04-4A47-ADFF-A96D2423BBEC",
+    "modified": "2026-11-05T23:57:08Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/cornerstone-behavioral-healthcare-2026; https://cornerstonebhc.com/wp-content/uploads/2026/07/0603809.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "On May 26, 2026 Cornerstone Behavioral Healthcare, a Maine mental health and substance use treatment provider, was targeted by a ransomware attack. It detected the attack immediately, cut off the attacker within an hour, prevented full encryption and did not pay. 2,830 people's names, addresses, dates of birth, health records, SSNs and insurance information may have been compromised; a July 22 review found 12,000 more whose appointment reminder logs may have been accessed (14,830 total). It reported to HHS on July 27, 2026.",
+  "timeline": {
+    "containment": {
+      "unit": "Hours",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Hours",
+      "value": 1
+    },
+    "incident": {
+      "day": 26,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621420",
+    "region": [
+      "019021"
+    ],
+    "state": "ME",
+    "victim_id": "Cornerstone Behavioral Healthcare"
+  }
+}

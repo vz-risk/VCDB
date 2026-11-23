@@ -1,0 +1,108 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "38A2E10C-0A65-483F-A81F-BFC4AE95E542",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23973\nError Misdelivery by email (wrong content attached/included) -> actor Internal (End-user), asset S - Mail. Data Personal only (no health data stated). Discovery soon after. Count not disclosed. NAICS 6241 -> 624120. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:07:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Email sent with other people's data"
+      }
+    ],
+    "github": "23973",
+    "master_id": "38A2E10C-0A65-483F-A81F-BFC4AE95E542",
+    "modified": "2026-11-06T00:07:31Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-626543",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Redwood Caregiver Resource Center, a program of North Coast Opportunities in California, sent an email on June 30, 2026 that contained other people's names, email addresses and identifying details by mistake. It told recipients to delete the email and notified affected caregivers.",
+  "timeline": {
+    "incident": {
+      "day": 30,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "624120",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "North Coast Opportunities, Inc."
+  }
+}

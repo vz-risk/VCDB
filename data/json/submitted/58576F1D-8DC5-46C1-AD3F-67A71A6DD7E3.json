@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "58576F1D-8DC5-46C1-AD3F-67A71A6DD7E3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24018\nRansomware attack initially believed blocked; whether encryption succeeded is unclear -> malware Ransomware with availability Obscuration and Interruption per lint (reviewer may drop availability if encryption was blocked). Data accessed -> data_disclosure Yes. Incident late Dec 2025 -> dbir_year 2027. NAICS 33 tag -> 336413 (aircraft parts). Data victim Employee (direct deposit details). Count not disclosed. Employee count 1001 to 10000 (approximate).",
+    "created": "2026-11-06T00:06:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware deployed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware attack"
+      }
+    ],
+    "github": "24018",
+    "master_id": "58576F1D-8DC5-46C1-AD3F-67A71A6DD7E3",
+    "modified": "2026-11-06T00:06:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-620501",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "In late December 2025, Senior Operations LLC found a ransomware attack on its Senior Aerospace Jet Products/Ketema division. It first believed its security controls had stopped the attack with no data taken, but forensic analysis finished in late February 2026 found the attackers had accessed files with names, addresses, Social Security, passport and driver's license numbers, dates of birth, medical information and partial banking/direct deposit details.",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "336413",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Senior Operations LLC"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6340,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6340,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "73810543-377A-430F-BA12-6EB57A88852E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23615\nHacking Unknown with Exfiltrate. Issue tagged Hacking-ext-extortion but no extortion is described in the body -> not coded. 6,340 = Texas residents -> amount only. Data victim Customer (app users). NAICS 5112 -> 513210. Employee count 11 to 100 (approximate).",
+    "created": "2026-11-06T00:19:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23615",
+    "master_id": "73810543-377A-430F-BA12-6EB57A88852E",
+    "modified": "2026-11-06T00:19:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/reframe-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Glucobit, operator of the Reframe alcohol reduction app, had an unauthorized actor access one system and download personal information users shared through the platform around May 1, 2026, including names and medical information about their alcohol use and recovery. Passwords, financial data and government IDs were not involved. Users were notified June 30, 2026; 6,340 Texas residents were affected.",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Glucobit Inc."
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2876,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2876,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "6763A7EE-401C-41CE-836F-D87609AFED93",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24607\nEmail environment intrusion: S - Mail, hacking Unknown. 2,876 is Texas residents only, so it is coded as the Medical amount but data_total is omitted. NAICS 6211 -> 621111. Employee count Unknown.",
+    "created": "2026-11-05T23:52:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24607",
+    "master_id": "6763A7EE-401C-41CE-836F-D87609AFED93",
+    "modified": "2026-11-05T23:52:05Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/heritage-pediatrics-2026; https://www.heritagepediatrics.com/wp-content/uploads/2026/10/Incident.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Heritage Pediatrics PLLC, a San Antonio pediatric practice, disclosed a data security incident in its email environment on or about April 12-13, 2026. Names, Social Security numbers, dates of birth, government IDs, passport numbers, financial account information, health insurance details, clinical records, diagnoses and medical codes were involved. The practice reported 2,876 affected Texas residents to the Texas Attorney General on October 20, 2026.",
+  "timeline": {
+    "incident": {
+      "day": 12,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Heritage Pediatrics PLLC"
+  }
+}

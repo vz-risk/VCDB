@@ -1,0 +1,112 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7000,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7000,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "03EB3C45-8204-4EDA-BC75-7430C4CC7B56",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23768\nInsider misuse: Privilege abuse by multiple workforce members (downloaded client lists), vector LAN access; motive Unknown. Data Medical (treatment status) and Personal; 7,000 'up to'. Incident month May 2026 (discovery). NAICS 6241 tag -> 621420 (outpatient SUD). Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:14:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Workforce members downloaded client data"
+      }
+    ],
+    "github": "23768",
+    "master_id": "03EB3C45-8204-4EDA-BC75-7430C4CC7B56",
+    "modified": "2026-11-06T00:14:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/colorado-behavioral-healthcare-provider-insider-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "NAS Recovery Solutions, a Colorado substance use disorder treatment provider, found on May 13, 2026 that certain workforce members had downloaded personal information of up to 7,000 current and former clients without authorization. Names, dates of birth and phone numbers were involved, which also revealed their SUD treatment status. The company took corrective action against those responsible.",
+  "timeline": {
+    "incident": {
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621420",
+    "region": [
+      "019021"
+    ],
+    "state": "CO",
+    "victim_id": "NAS Recovery Solutions"
+  }
+}

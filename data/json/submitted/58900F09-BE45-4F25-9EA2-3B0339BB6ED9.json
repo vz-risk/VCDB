@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Insomnia"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "58900F09-BE45-4F25-9EA2-3B0339BB6ED9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24682\nTemplate Hacking-ext-unknown. Insomnia (described as a ransomware group) claimed the attack and leaked data; no encryption reported, so coded hacking (Unknown) + exfiltration and a social Extortion step for the threat to publish. Actor Insomnia, Organized crime / Financial; data_abuse 'Yes - Data ransomed'.\nNAICS 6214 -> 621498 (community health center). Count not yet determined in the Oct 14, 2026 notice. Incident Aug 10, 2026; discovered the same day. Discovery method not stated. Employee count Unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T23:50:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access to IT environment"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion and leak"
+      }
+    ],
+    "github": "24682",
+    "master_id": "58900F09-BE45-4F25-9EA2-3B0339BB6ED9",
+    "modified": "2026-11-05T23:50:57Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/data-breach-northshore-health-centers/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "NorthShore Health Centers, a nonprofit community health provider in Northwest Indiana, discovered unauthorized access to its IT environment on August 10, 2026. An unauthorized party accessed files between August 10 and 11. Exposed information likely includes names, Social Security numbers, medical treatment and condition information and health insurance data. The Insomnia ransomware group claimed responsibility and leaked the stolen data after threatening to publish it.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 10,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "NorthShore Health Centers"
+  }
+}

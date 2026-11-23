@@ -1,0 +1,135 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Chaos"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2545DFB5-3069-4E3F-A131-2AC71238ACF2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24535\nHealthcare Highways is a Texas health plan/network company; NAICS coded 524114 (issue 6244 is wrong). Ransomware-databreach label: Chaos is a ransomware group but no source mentions encryption, so coded hacking + exfiltration with actor Chaos (Organized crime / Financial); ransomware malware not coded. Leak-site claim -> data_abuse not coded (no demand described). Discovery Aug 4 (about 13 days). Count not disclosed. dvictim Patient/Customer (plan members).",
+    "created": "2026-11-05T23:54:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Network access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "235 GB exfiltrated (Chaos claim)"
+      }
+    ],
+    "github": "24535",
+    "master_id": "2545DFB5-3069-4E3F-A131-2AC71238ACF2",
+    "modified": "2026-11-05T23:54:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/photon-health-healthcare-highways-data-breaches/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Healthcare Highways identified a cybersecurity incident on August 4, 2026; unauthorized third parties had access to its network between July 22 and 27, 2026 and accessed and acquired protected health information including names, addresses, dates of birth, dates of service, Social Security numbers, patient IDs, procedure codes and costs, diagnoses, claims and payment data. The Chaos ransomware group claimed responsibility and said it exfiltrated 235 GB of data.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 13
+    },
+    "incident": {
+      "day": 22,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "524114",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Healthcare Highways"
+  }
+}

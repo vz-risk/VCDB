@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1526,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1526,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Printed"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "731442CB-B9AA-4D8A-94AB-D6D527583BC1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24416\nTemplate Error-int-misdelivery-paper: Error Misdelivery, vector Carelessness per the template (cause not stated). Asset M - Documents, state Printed, disclosure Yes (paper misdelivered). NAICS 6295 is invalid -> 524114. Data victim Customer (members). Employee count 101 to 1000 (approximate). Discovery Unknown.",
+    "created": "2026-11-05T23:55:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Mailings sent with other members data"
+      }
+    ],
+    "github": "24416",
+    "master_id": "731442CB-B9AA-4D8A-94AB-D6D527583BC1",
+    "modified": "2026-11-05T23:55:50Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/call-on-doc-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Partnership HealthPlan of California, a Fairfield managed care plan, identified on July 7, 2026 that Primary Care Physician Selection Forms and Welcome Packets mailed between May 13 and July 8 contained another member's name, date of birth and membership ID. 1,526 members were affected.",
+  "timeline": {
+    "incident": {
+      "day": 13,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524114",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Partnership HealthPlan of California"
+  }
+}

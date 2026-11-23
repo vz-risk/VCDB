@@ -1,0 +1,147 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "SeraphimGroup"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "54532DE9-46F2-4F5E-BCD4-446866ED000D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23483\nPartner_Breach coded from the vendor's perspective: Solventum HIS is primary, its hospital customers are secondary (only NYC Health + Hospitals named). Actor SeraphimGroup; data posted to the dark web -> Exfiltrate and data_abuse Yes. Incident March 29, 2026 -> dbir_year 2027. NAICS 5415 tag -> 541512. Employee count 1001 to 10000 for the division (approximate); parent Solventum is larger. Discovery internal per the vendor.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2026-11-06T00:24:27Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Systems accessed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient data posted to dark web"
+      }
+    ],
+    "github": "23483",
+    "master_id": "54532DE9-46F2-4F5E-BCD4-446866ED000D",
+    "modified": "2026-11-06T00:24:27Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/solventum-2026; https://www.nychealthandhospitals.org/pressrelease/notification-of-unauthorized-access-to-phi",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An unauthorized party accessed limited systems and data of Solventum's Health Information Systems division, a business associate serving hospital customers, on or around March 29, 2026; Solventum discovered it March 30. SeraphimGroup claimed the attack and posted patient data on the dark web on April 19, 2026. Exposed patient data included names, addresses, dates of birth, medical record numbers, medical history and diagnoses. Customers including NYC Health + Hospitals notified patients; the total affected has not been disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 29,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "notes": "Other hospital customers not named.",
+      "victim_id": [
+        "NYC Health + Hospitals"
+      ]
+    },
+    "state": "MN",
+    "victim_id": "Solventum Health Information Systems"
+  }
+}

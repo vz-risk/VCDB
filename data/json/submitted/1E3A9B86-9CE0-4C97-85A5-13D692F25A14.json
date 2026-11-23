@@ -1,0 +1,112 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "Doctor or nurse",
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "1E3A9B86-9CE0-4C97-85A5-13D692F25A14",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23508\nInsider misuse: Privilege abuse (curiosity snooping on a high-profile patient) by up to 40 staff, vector LAN access, motive Fun/curiosity -> 'Fun'. Data Medical for 1 patient. Incident month Jun 2026. Government NA kept consistent with other NHS records in this batch (reviewer may set Federal). Employee count 10001 to 25000.",
+    "created": "2026-11-06T00:23:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Staff viewed a high-profile patient record"
+      }
+    ],
+    "github": "23508",
+    "master_id": "1E3A9B86-9CE0-4C97-85A5-13D692F25A14",
+    "modified": "2026-11-06T00:23:06Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.msn.com/en-au/news/insight/hospital-probes-40-staff-over-crocodile-pit-victim-data-breach/gm-GM8118ECBA?gemSnapshotKey=GM8118ECBA-snapshot-3&uxmode=ruby; https://www.itv.com/news/anglia/2026-06-26/probe-after-nhs-staff-accessed-medical-details-of-boy-hurt-in-crocodile-pit",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Addenbrooke's Hospital in Cambridge opened an investigation in late June 2026 after up to 40 staff accessed the medical records of a three-year-old boy seriously injured in a crocodile attack at a Cambridgeshire zoo, without clear clinical justification.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Cambridge University Hospitals NHS Foundation Trust (Addenbrooke's Hospital)"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Chaos"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 616,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 616,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "443CB83C-A455-49DB-9773-3129B08E0DA0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23839\nChaos ransomware claim (leak site) -> malware Ransomware coded per the group/template; Radia's notice does not mention encryption. Incident month Jul 2026 (access dates not stated). Count 616 from a federal tracker (amount only; review ongoing). SSNs claimed by Chaos but denied by Radia -> not coded. NAICS 6215 -> 621512. Employee count 101 to 1000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:10:44Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files acquired and listed on leak site"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "23839",
+    "master_id": "443CB83C-A455-49DB-9773-3129B08E0DA0",
+    "modified": "2026-11-06T00:10:44Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://today.westlaw.com/Document/Ie06e3117877411f1a775922134a7233e/View/FullText.html?transitionType=CategoryPageItem&contextData=(sc.Default; https://www.emeryreddy.com/blog/data-breach/chaos-ransomware-group-claims-655gb-of-radia-patient-data-stolen; https://www.claimdepot.com/data-breach/radia-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Radia, a Washington State radiology practice, learned of a security incident on July 8, 2026 and found on July 20 that patient information was in files an unauthorized party accessed and took. The Chaos ransomware group listed Radia on its leak site on July 16, claiming 655 GB of data. Names, addresses, dates of birth, service dates, treatment and diagnosis information, medical record and account numbers, Medicare IDs and insurance information were involved. Notices went out September 18, 2026.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621512",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Radia Inc., P.S."
+  }
+}

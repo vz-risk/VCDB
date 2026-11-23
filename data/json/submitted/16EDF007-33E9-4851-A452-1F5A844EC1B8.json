@@ -1,0 +1,112 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "16EDF007-33E9-4851-A452-1F5A844EC1B8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24538\nIssue 'Approximate date: 2024' is wrong: the attack was Oct 10, 2026 and the access followed that weekend (ITV Oct 16, 2026). Misuse Privilege abuse by 2 staff (End-user), motive Fun/curiosity is typical but not stated -> Unknown. Asset S - Database (patient records system). NAICS 621910 (ambulance services; label 622). Government NA (NHS trust coded as healthcare, as in other NHS records). Count 1 patient. Discovery internal Unknown. Employee count 1001 to 10000 (approximate).",
+    "created": "2026-11-05T23:54:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Staff viewed tiger victim records without need"
+      }
+    ],
+    "github": "24538",
+    "master_id": "16EDF007-33E9-4851-A452-1F5A844EC1B8",
+    "modified": "2026-11-05T23:54:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.examinerlive.co.uk/news/local-news/nhs-staff-who-accessed-william-34782631; https://www.yorkshirepost.co.uk/news/crime/medical-records-of-tiger-victim-inappropriately-accessed-ambulance-service-says-9293121; https://www.itv.com/news/calendar/2026-10-16/allegations-nhs-staff-accessed-medical-records-of-tiger-attack-victim",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "After William Chapman, 23, died on October 10, 2026 after entering a tiger enclosure at Yorkshire Wildlife Park, two Yorkshire Ambulance Service staff members inappropriately accessed or tried to access his medical records. The trust disclosed the potential breach in mid-October 2026 and the Health Secretary called for those responsible to be dismissed.",
+  "timeline": {
+    "incident": {
+      "day": 10,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621910",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Yorkshire Ambulance Service NHS Trust"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 933,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 933,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "80C37C17-1CA6-4265-9CAF-76E379D86E73",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24172\nEmail account compromise: S - Mail, hacking Unknown. Count is Texas residents only (933) -> amount only, no data_total. NAICS 621 -> 621320 (optometrists). Employee count 11 to 100 (approximate).",
+    "created": "2026-11-06T00:17:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24172",
+    "master_id": "80C37C17-1CA6-4265-9CAF-76E379D86E73",
+    "modified": "2026-11-06T00:17:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/data-breaches-five-small-healthcare-organizations/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Princeton Family Eye Care found suspicious activity in its email environment on May 4, 2026 and confirmed an unauthorized third party accessed a company email account. Names, dates of birth, contact information, government ID numbers and limited medical information of 933 Texas residents were exposed.",
+  "timeline": {
+    "incident": {
+      "day": 4,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621320",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "Princeton Family Eye Care"
+  }
+}

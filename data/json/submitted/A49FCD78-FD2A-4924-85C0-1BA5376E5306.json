@@ -1,0 +1,152 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A49FCD78-FD2A-4924-85C0-1BA5376E5306",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23754\nAbbott disclosed two separate incidents in July 2026; this record covers the Cancer Diagnostics intrusion claimed by ShinyHunters. The second, the externally hosted LabCentral customer portal accessed on July 4, 2026 with compromised customer credentials (claimed by ShadowByt3$; Abbott found no sensitive data exposed), is a separate incident and is not coded here; reviewer may add it as its own record.\nHacking Unknown with social Extortion (leak deadline). Data claimed but not confirmed by Abbott -> data_disclosure Potentially. NAICS 3254 -> 325413 (in-vitro diagnostics). Employee count Over 100000.",
+    "created": "2026-11-06T00:15:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to Cancer Diagnostics systems"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion with leak deadline"
+      }
+    ],
+    "github": "23754",
+    "master_id": "A49FCD78-FD2A-4924-85C0-1BA5376E5306",
+    "modified": "2026-11-06T00:15:31Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.malwarebytes.com/blog/data-breaches/2026/07/healthcare-giant-abbott-probes-two-cyber-incidents-amid-extortion-claims",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Abbott Laboratories said on July 16, 2026 that there had been unauthorized access to a limited number of internal systems in its Cancer Diagnostics business. ShinyHunters claimed the attack, saying it stole internal documents, contracts, customer information, over 22 million doctor-patient notes, over 20 million medical orders and more than a million US Social Security numbers, and set a July 21 deadline before leaking. Abbott said operations and patient care were not affected; the data claims were unverified.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "325413",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Abbott Laboratories"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "911E91EB-5AE6-4374-AD71-3F1E3FB64822",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24313\nTemplate Social-ext-Phishing: social Phishing via Email -> credentials; then the actor accessed the mailboxes (hacking Use of stolen creds). Assets P - End-user (3 employees) and S - Mail. Integrity Alter behavior. Government Regional (state agency); NAICS 921 -> 923120 (administration of public health programs). Count not given. Comments not reviewed. Employee count 1001 to 10000 (approximate).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-05T23:59:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Three employees fell for phishing"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Email accounts accessed"
+      }
+    ],
+    "github": "24313",
+    "master_id": "911E91EB-5AE6-4374-AD71-3F1E3FB64822",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hhs.nd.gov/news/media-notice-security-notice-unauthorized-access-phi",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "On July 21, 2026 the North Dakota Department of Health and Human Services identified a phishing email attack. Three employees in its Developmental Disabilities division interacted with the email, letting an external actor access their email accounts. A review finished August 14, 2026 found protected health information including names, contact details, dates of birth, service, health plan, medical and guardian information was accessed.",
+  "timeline": {
+    "incident": {
+      "day": 21,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923120",
+    "region": [
+      "019021"
+    ],
+    "state": "ND",
+    "victim_id": "North Dakota Department of Health and Human Services"
+  }
+}

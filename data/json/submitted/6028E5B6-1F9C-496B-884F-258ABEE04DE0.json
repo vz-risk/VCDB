@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 501,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 501,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "6028E5B6-1F9C-496B-884F-258ABEE04DE0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24431\n501 is the HHS placeholder -> amount, no data_total. NAICS 621 -> 621498 (community health center). Employee count Unknown.",
+    "created": "2026-11-05T23:55:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24431",
+    "master_id": "6028E5B6-1F9C-496B-884F-258ABEE04DE0",
+    "modified": "2026-11-05T23:55:50Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/windrose-health-network-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Camden-on-Gauley Medical Center in West Virginia identified suspicious network activity on July 18, 2026. Investigators confirmed unauthorized access that day, with potential viewing or acquisition of files containing patients' medical and health insurance information. HHS OCR was notified with the placeholder estimate of 501 individuals.",
+  "timeline": {
+    "incident": {
+      "day": 18,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "WV",
+    "victim_id": "Camden-on-Gauley Medical Center"
+  }
+}

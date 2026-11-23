@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "INC Ransom"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 6245,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 6245,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "3079B54D-0478-4550-ACD9-998DC909B13B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23954\nDate and actor from the ransomware.live listing (INC Ransom, Mar 9, 2026); the practice itself did not name the group. Coded ransomware per INC Ransom's modus (reviewer may switch to hacking + Exfiltrate). NAICS tag 621330 (mental health) does not fit an eye clinic -> 621320. Employee count 11 to 100 (ransomware.live lists about 50).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:09:04Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen and listed on leak site"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "23954",
+    "master_id": "3079B54D-0478-4550-ACD9-998DC909B13B",
+    "modified": "2026-11-06T00:09:04Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.federmanlaw.com/blog/joseph-j-chappell-jr-md-p-a-d-b-a-tupelo-eye-clinic-data-breach-investigated-by-federman-sherwood/; https://www.ransomware.live/id/dHVwZWxvZXllLmNvbUBpbmNyYW5zb20=",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Joseph J. Chappell, Jr., MD, P.A., doing business as Tupelo Eye Clinic in Mississippi, reported a hacking incident involving a network server to HHS affecting about 6,245 patients. Names, Social Security numbers, medical records and health insurance information were exposed. The INC Ransom group listed tupeloeye.com on its leak site on March 9, 2026.",
+  "timeline": {
+    "incident": {
+      "day": 9,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621320",
+    "region": [
+      "019021"
+    ],
+    "state": "MS",
+    "victim_id": "Tupelo Eye Clinic"
+  }
+}
