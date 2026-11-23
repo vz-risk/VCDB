@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "CF967A90-0AC2-4AA6-8FE9-A2AA8BAB30A3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23879\nHacking Unknown; 'limited access to certain computer systems' -> availability Interruption (ransomware not stated). Data victim Employee; data Personal only (no patient data stated). Incident Dec 2025 -> dbir_year 2027. Count not disclosed. NAICS 6214 -> 621498. Employee count 1001 to 10000.",
+    "created": "2026-11-06T00:10:44Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee data accessed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems access limited"
+      }
+    ],
+    "github": "23879",
+    "master_id": "CF967A90-0AC2-4AA6-8FE9-A2AA8BAB30A3",
+    "modified": "2026-11-06T00:10:44Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-618676",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "AltaMed Health Services, a California community health center network, had a cybersecurity incident on December 14, 2025 that limited access to certain computer systems and involved unauthorized access to employee personal information: names, addresses, Social Security numbers and compensation information. It notified law enforcement and offered Experian monitoring.",
+  "timeline": {
+    "incident": {
+      "day": 14,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "AltaMed Health Services Corporation"
+  }
+}

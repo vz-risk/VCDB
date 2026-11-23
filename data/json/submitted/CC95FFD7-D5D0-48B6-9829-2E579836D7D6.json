@@ -1,0 +1,108 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Data mishandling"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 12,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Sensitive Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 12,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Printed"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "CC95FFD7-D5D0-48B6-9829-2E579836D7D6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24639\nLabel Misuse-int-privabuse. The doctor was a medical observer attached to the unit (treated as internal; End-user). Coded misuse variety Data mishandling rather than Privilege abuse: she had legitimate access to the handover sheets and mishandled them by photographing and posting them; reviewer may prefer Privilege abuse per template. Vector Physical access (paper handover sheets). Asset M - Documents (handover sheets). Data Medical + Personal, 12 (about a dozen). Motive Unknown (not stated). Incident date coded Oct 2026 (disclosure; posting date not given). Discovery Unknown. Government NA; NT public hospital coded as healthcare.",
+    "created": "2026-11-05T23:50:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Patient handover sheets posted to Instagram"
+      }
+    ],
+    "github": "24639",
+    "master_id": "CC95FFD7-D5D0-48B6-9829-2E579836D7D6",
+    "modified": "2026-11-05T23:50:57Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.abc.net.au/news/2026-10-25/nt-rdh-privacy-breach-medical-patient-info-posted-to-instagram/107304564",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Royal Darwin Hospital disclosed that a doctor attached as a medical observer in its obstetrics and gynaecology unit posted images and videos to Instagram showing hospital handover sheets with patient names, hospital record numbers, ward/bed details, presenting problems, histories, investigations and care plans for about a dozen pregnant patients. The account had about 28,000 followers. The hospital ended the doctor's attachment and apologised to the patients.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "009053"
+    ],
+    "state": "NT",
+    "victim_id": "Royal Darwin Hospital"
+  }
+}

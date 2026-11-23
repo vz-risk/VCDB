@@ -1,0 +1,129 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Payment card"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "ACE63319-32DB-46D9-8B48-A062AC31399F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23100\nInsider misuse: Privilege abuse via Physical access, motive Financial; integrity Fraudulent transaction. Purchase dates not given; coded December 2025 from the report -> dbir_year 2027, confidence Low. NAICS 623110. Employee count 101 to 1000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2026-11-06T00:27:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Debit card details taken"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "ia",
+        "summary": "Fraudulent purchases"
+      }
+    ],
+    "github": "23100",
+    "master_id": "ACE63319-32DB-46D9-8B48-A062AC31399F",
+    "modified": "2026-11-06T00:27:22Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.wgal.com/article/pa-thornwald-nursing-home-employee-stole-residents-debit-card/70407886",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An employee of Thornwald Nursing Home in Carlisle, Pennsylvania, took a resident's debit card information from the resident's nightstand and used it for Amazon purchases. A family member spotted the charges and reported them on December 13, 2025; Amazon records led police to the employee.",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "623110",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Thornwald Nursing Home"
+  }
+}

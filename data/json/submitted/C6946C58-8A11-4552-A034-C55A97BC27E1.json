@@ -1,0 +1,133 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 311760,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 311760,
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "C6946C58-8A11-4552-A034-C55A97BC27E1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23766\nHacking Unknown on a legacy file server -> S - File. EMR not involved. Incident Dec 15, 2025 -> dbir_year 2027. Count 311,760 from HHS. Data victim Patient and Employee (HR records). Seven comments not reviewed. Employee count 1001 to 10000 (approximate).",
+    "created": "2026-11-06T00:14:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23766",
+    "master_id": "C6946C58-8A11-4552-A034-C55A97BC27E1",
+    "modified": "2026-11-06T00:14:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/colorado-behavioral-healthcare-provider-insider-data-breach/; https://www.hipaajournal.com/brown-health-medical-group-ma-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Lifespan Physicians Group of Massachusetts, doing business as Brown Health Medical Group-MA, found unauthorized activity on a legacy file server on December 16, 2025; the access ran from December 15 to 16. Its review, finished June 22, 2026, found names, dates of birth, contact information, Social Security and government ID numbers, payment card and financial account information, and personnel records including payroll, credentialing and medical or disability information. HHS lists 311,760 people affected (290,357 in Massachusetts).",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 15,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Lifespan Physicians Group of Massachusetts Inc."
+  }
+}

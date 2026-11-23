@@ -1,0 +1,173 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "The Gentlemen"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1500,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1500,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "C670BEFD-2030-4EBA-B36C-5E26258D60DE",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24420\nTemplate Malware-ext-ransomware-breach: ransomware + exfiltration per HIPAA Journal. Leak-site listing -> Actor disclosure; data_abuse 'Yes - Data ransomed' (extortion via leak site) - not coded as a social Extortion step because no demand is described. Incident month June 2026 (leak post date; attack likely shortly before). An issue comment describes an unrelated incident (pipeline mis-attachment) and was ignored. Employee count Unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-05T23:55:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "24420",
+    "master_id": "C670BEFD-2030-4EBA-B36C-5E26258D60DE",
+    "modified": "2026-11-05T23:55:50Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/lhc-group-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Central Arkansas Pediatrics notified about 1,500 current and former patients of a ransomware attack by The Gentlemen ransomware-as-a-service group, which exfiltrated personal and health information and listed the practice on its leak site on June 8, 2026.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "AR",
+    "victim_id": "Central Arkansas Pediatrics"
+  }
+}

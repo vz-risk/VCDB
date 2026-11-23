@@ -1,0 +1,179 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Partner",
+        "Unknown"
+      ],
+      "variety": [
+        "Pretexting",
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Partner"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 4115802,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 4115802,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "D4185D97-1E1B-473F-BC9D-D28C56B63AB4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23593\nSocial engineering of a contractor -> social Pretexting (vector Unknown), target Partner; then hacking Use of stolen creds into cloud apps (S - Web application, S - File, cloud External). Exfiltration plus extortion -> social Extortion added; data_abuse 'Yes - Data ransomed'. Actor ShinyHunters (per HIPAA Journal attribution; AdaptHealth did not name it). Data Medical, Personal, Credentials (password file). Discovery Actor disclosure (Jun 15). Count 4,115,802 from HHS. NAICS tag 3842; AdaptHealth rents/sells home medical equipment -> 532283. 17 comments only partly reviewed. Employee count 10001 to 25000.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:21:12Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Contractor socially engineered"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Cloud applications accessed and data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion"
+      }
+    ],
+    "github": "23593",
+    "master_id": "D4185D97-1E1B-473F-BC9D-D28C56B63AB4",
+    "modified": "2026-11-06T00:21:12Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://databreaches.net/2026/07/04/adapthealth-says-attackers-sweet-talked-their-way-into-cloud-systems-and-stole-patient-data/; https://www.hipaajournal.com/adapthealth-data-breach/; https://cybernews.com/news/adapthealth-patient-data-theft/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "On June 5, 2026 an attacker used social engineering against a third-party contractor of AdaptHealth, a home medical equipment provider, to get the contractor's credentials and access cloud-based business applications, including patient management systems and document storage. The attacker also took a stored password file for insurance billing and external EHR portals. On June 15 the attacker contacted AdaptHealth claiming to have patient files; ShinyHunters listed the company and threatened to leak the data unless paid. Names, contact, demographic, insurance and health information of 4,115,802 people were stolen.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 10
+    },
+    "incident": {
+      "day": 5,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "532283",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "AdaptHealth"
+  }
+}

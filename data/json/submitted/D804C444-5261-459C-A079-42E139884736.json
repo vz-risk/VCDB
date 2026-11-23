@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "D804C444-5261-459C-A079-42E139884736",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23978\nEmail account compromise -> S - Mail, hacking Unknown. NAICS tag 6215; Option Care Health is a home infusion provider -> 621610. Count not disclosed. Employee count 1001 to 10000.",
+    "created": "2026-11-06T00:07:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23978",
+    "master_id": "D804C444-5261-459C-A079-42E139884736",
+    "modified": "2026-11-06T00:07:31Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-621411",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An Option Care Health employee's email account was accessed without authorization between February 6 and 9, 2026. On February 26, 2026 the company determined that patient names, dates of birth, medical record numbers and treatment information were in the account.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 6,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Option Care Health, Inc."
+  }
+}

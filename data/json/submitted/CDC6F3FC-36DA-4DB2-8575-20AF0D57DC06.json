@@ -1,0 +1,133 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 550164,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 550164,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "CDC6F3FC-36DA-4DB2-8575-20AF0D57DC06",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23765\nHacking Unknown with Exfiltrate (copied). Count 550,164 total (VT 6,097 in the issue). Discovery same day access ended (~12 days after it began). A separate earlier BAYADA notice (Jan 2026, linked by some sources to vendor Doctor Alliance) is a different incident. Four comments not reviewed. Employee count 25001 to 50000 (approximate).",
+    "created": "2026-11-06T00:14:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23765",
+    "master_id": "CDC6F3FC-36DA-4DB2-8575-20AF0D57DC06",
+    "modified": "2026-11-06T00:14:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.federmanlaw.com/blog/bayada-home-health-care-inc-data-breach-investigated-by-federman-sherwood/; https://www.claimdepot.com/data-breach/bayada-home-health-care-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "BAYADA Home Health Care found on March 2, 2026 that an unauthorized actor had accessed certain BAYADA systems and copied data between February 18 and March 2, 2026. Names, dates of birth, Social Security and driver's license numbers, financial account and payment card information, diagnosis, treatment, provider, insurance, prescription, admission and discharge, and disability information were exposed. 550,164 people were notified starting July 17, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 12
+    },
+    "incident": {
+      "day": 18,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "region": [
+      "019021"
+    ],
+    "state": "NJ",
+    "victim_id": "BAYADA Home Health Care, Inc."
+  }
+}

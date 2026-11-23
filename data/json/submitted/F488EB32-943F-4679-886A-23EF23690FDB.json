@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Brain Cipher"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "F488EB32-943F-4679-886A-23EF23690FDB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23616\nVictim confirmed an incident with possible PHI access -> Confirmed, data_disclosure Potentially. Ransomware (Brain Cipher) per the claim and template tag. NAICS 6213 tag -> 621111 (orthopedic physicians). Count not disclosed. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:19:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted"
+      }
+    ],
+    "github": "23616",
+    "master_id": "F488EB32-943F-4679-886A-23EF23690FDB",
+    "modified": "2026-11-06T00:19:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.masonllp.com/case/golden-state-orthopedics-and-spine-data-breach-class-action/; https://www.claimdepot.com/data-breach/golden-state-orthopedics-spine-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "The Brain Cipher ransomware group claimed on July 1, 2026 that it took 150 GB of data from Golden State Orthopedics and Spine, a Bay Area orthopedic practice. The practice noticed unusual network activity around July 2, 2026, and in a notice posted August 27, 2026 said protected health information may have been accessed. Patient and employee names, contact details and Social Security numbers were potentially exposed.",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Golden State Orthopedics and Spine"
+  }
+}

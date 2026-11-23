@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "EDE44ACD-AA09-4C86-8397-05127F46004C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23777\nHacking Unknown. Incident Nov 6, 2025 -> dbir_year 2027. Data victim Employee, Customer (clients), Other (donors/partners). NAICS tag 6241; Devereux runs residential behavioral health programs -> 623220. Count not disclosed in the issue (three comments not reviewed). Employee count 1001 to 10000.",
+    "created": "2026-11-06T00:14:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23777",
+    "master_id": "EDE44ACD-AA09-4C86-8397-05127F46004C",
+    "modified": "2026-11-06T00:14:28Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/devereux-foundation-july-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Devereux Foundation, a multistate nonprofit behavioral healthcare organization, found suspicious network activity on November 9, 2025 and determined an outside actor accessed certain systems between November 6 and 9. Its review, finished June 23, 2026, found names, dates of birth, Social Security, driver's license, alien registration and taxpayer ID numbers, digital signatures, financial account and payment card data, and medical and health insurance information of employees, clients, donors, payors and business partners were exposed. It reported to HHS on January 8, 2026.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 3
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 6,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "623220",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Devereux Foundation"
+  }
+}

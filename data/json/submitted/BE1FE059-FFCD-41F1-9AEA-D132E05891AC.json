@@ -1,0 +1,159 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "BE1FE059-FFCD-41F1-9AEA-D132E05891AC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24234\nTitle calls it a data theft/extortion incident and the actor contacted the practice claiming the breach -> discovery Actor disclosure; social Extortion coded (demand implied by 'extortion incident'), data_abuse 'Yes - Data ransomed'. Actor Unknown individual, motive Financial. Count not disclosed. Employee count 11 to 100 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:00:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Network access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient files copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion claim to the practice"
+      }
+    ],
+    "github": "24234",
+    "master_id": "BE1FE059-FFCD-41F1-9AEA-D132E05891AC",
+    "modified": "2026-11-06T00:00:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/data-theft-extortion-incident-beverly-hills-plastic-surgeon/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Beverly Hills plastic surgeon Terry J. Dubrow, MD confirmed unauthorized access to its systems beginning January 16, 2026, after an individual claimed to have breached the network and copied patient files. The breach was confirmed July 27, 2026. Patient names, contact information, Social Security and driver's license numbers, dates of birth, prescription information, procedure images and X-rays were compromised.",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Terry J. Dubrow, MD"
+  }
+}

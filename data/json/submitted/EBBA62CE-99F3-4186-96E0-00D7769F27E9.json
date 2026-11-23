@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 30434,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 30434,
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "EBBA62CE-99F3-4186-96E0-00D7769F27E9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23042\nRansomware. Source gives November 25, 2026, which is impossible given the notice date; coded November 25, 2025 -> dbir_year 2027. NAICS 621330 tag; mental health authority -> 621420. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:27:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23042",
+    "master_id": "EBBA62CE-99F3-4186-96E0-00D7769F27E9",
+    "modified": "2026-11-06T00:27:22Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/jbs-mental-health-authority-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Hackers accessed the network of Jefferson-Blount-St. Clair Mental Health Authority in Alabama around November 25, 2025 in a ransomware attack. Names, Social Security numbers, health insurance information, dates of birth and medical information of 30,434 patients and employees from 2011 to 2025 may have been viewed or acquired.",
+  "timeline": {
+    "incident": {
+      "day": 25,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621420",
+    "region": [
+      "019021"
+    ],
+    "state": "AL",
+    "victim_id": "Jefferson-Blount-St. Clair Mental Health Authority"
+  }
+}

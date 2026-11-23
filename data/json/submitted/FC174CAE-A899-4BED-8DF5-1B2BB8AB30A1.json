@@ -1,0 +1,163 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Kairos"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1525,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1525,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "FC174CAE-A899-4BED-8DF5-1B2BB8AB30A1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23559\nKairos is a data-extortion group (no encryption reported) -> hacking + Exfiltrate with social Extortion; unpaid ransom and data posted -> data_abuse 'Yes - Data ransomed'. The title also names Chickasaw Nation Department of Health, coded under its own issue (#23522). Count up to 1,525. NAICS 6211 -> 621111. Employee count 11 to 100 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:21:43Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Ransom demand"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data leaked"
+      }
+    ],
+    "github": "23559",
+    "master_id": "FC174CAE-A899-4BED-8DF5-1B2BB8AB30A1",
+    "modified": "2026-11-06T00:21:43Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.hipaajournal.com/south-florida-injury-centers-chackasaw-bation-doh-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "The Kairos extortion group breached South Florida Injury Centers, a Florida auto-injury practice, in April 2026 and took about 45 GB of data on up to 1,525 patients, including names, contact details, driver's license and Social Security numbers and medical histories. When the practice did not pay, Kairos posted the data and samples on its leak site on April 7, 2026.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "South Florida Injury Centers"
+  }
+}

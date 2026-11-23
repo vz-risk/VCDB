@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Anubis"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 56197,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 56197,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "D7D2FA68-5B54-4D80-BA17-21C0CD6CB086",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24485\nTemplate Hacking-ext-unknown. Anubis claim (via DeXpose) not confirmed by the victim; per house rule a named actor stands unless contradicted: actor Anubis, Organized crime / Financial, noted as attacker-claimed. No encryption reported, so no ransomware malware. 'May have accessed' -> data_disclosure Yes since system access is confirmed. Incident = discovery May 23, 2026. NAICS 621 -> 621111. Employee count Unknown.",
+    "created": "2026-11-05T23:54:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24485",
+    "master_id": "D7D2FA68-5B54-4D80-BA17-21C0CD6CB086",
+    "modified": "2026-11-05T23:54:52Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://wilshirelawfirm.com/blog/casper-orthopedics-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Casper Orthopedics, a Wyoming orthopedic practice, discovered a cyberattack on or about May 23, 2026. Its investigation concluded June 11 that unauthorized parties may have accessed Social Security numbers, financial account information, medical records and driver's license numbers. It reported 56,197 affected individuals to HHS on July 23, 2026. The Anubis ransomware group claimed the attack on July 12, 2026; Casper has not confirmed the attribution.",
+  "timeline": {
+    "incident": {
+      "day": 23,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "WY",
+    "victim_id": "Casper Orthopedics"
+  }
+}

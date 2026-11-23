@@ -1,0 +1,133 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "DF977338-0CC2-4FD9-A749-545771EA12E6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23509\nHacking Unknown with Exfiltrate. Help-desk tickets -> S - Web application (help-desk platform, assumed SaaS) plus S - File. Offered for sale -> data_abuse Yes. NAICS 6215 tag -> 621999 (telehealth). Count not disclosed. Employee count 11 to 100 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes"
+      }
+    },
+    "created": "2026-11-06T00:23:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23509",
+    "master_id": "DF977338-0CC2-4FD9-A749-545771EA12E6",
+    "modified": "2026-11-06T00:23:06Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/agelessrx-june-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "AgelessRx, a telehealth longevity medicine company, found on April 22, 2026 that unauthorized actors had accessed certain files and help-desk tickets between April 17 and 22. A threat actor had posted unverified claims on BreachNews on April 25 about selling a database of its patient records. By May 27 it determined patient names, dates of birth, diagnoses, medications and treatment information were exposed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 5
+    },
+    "incident": {
+      "day": 17,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621999",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "AgelessRx"
+  }
+}

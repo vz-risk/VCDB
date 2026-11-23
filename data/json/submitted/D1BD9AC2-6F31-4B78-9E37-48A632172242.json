@@ -1,0 +1,150 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "D1BD9AC2-6F31-4B78-9E37-48A632172242",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23560\nRansomware per Qilin. Incident June 28, 2026 from the claim -> dbir_year 2027. NAICS 6212 tag does not fit a dental referral and marketing company -> 541613. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:29:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware attack"
+      }
+    ],
+    "github": "23560",
+    "master_id": "D1BD9AC2-6F31-4B78-9E37-48A632172242",
+    "modified": "2026-11-06T00:29:14Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cybernews.com/news/800-dentist-ransomware-health-data-breach-qilin/; https://www.beckersdental.com/dentists/hackers-threaten-to-publish-1-800-dentist-files-5-notes/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "phidbr",
+  "summary": "Qilin claimed on June 28, 2026 that it had breached 1-800-Dentist, a US dental referral service working with more than 5,000 practices, and posted samples of lead-generation, customer, payroll and financial data. The company had not confirmed an incident.",
+  "timeline": {
+    "incident": {
+      "day": 28,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541613",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "1-800-Dentist"
+  }
+}
