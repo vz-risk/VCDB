@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks",
+        "value": 2
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 16004,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 16004,
+      "data_victim": [
+        "Student",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "8F66905E-88FE-47CD-8A15-09F93F893865",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24127\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Two-week network disruption -> availability Interruption; method not disclosed, no ransomware or extortion stated, so no malware block (reviewer may add).\nInfo 'may have been accessed or downloaded' -> Potentially; names + SSNs -> Personal, 16,004 Iowa residents. Incident Nov 24, 2025 -> dbir_year 2027 (Nov-Dec rule). Discovered Nov 26 -> 2 days. Public community college -> government Local. Employee count approximate.",
+    "created": "2026-11-20T19:44:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data possibly accessed or downloaded"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Network disruption cancels classes"
+      }
+    ],
+    "github": "24127",
+    "master_id": "8F66905E-88FE-47CD-8A15-09F93F893865",
+    "modified": "2026-11-20T19:44:57Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://dysruptionhub.com/northwest-iowa-college-cyber-disclosure/; https://nwicc.edu/emergency-2/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between November 24 and 26, 2025 an unauthorized party may have accessed or downloaded information from the network of Northwest Iowa Community College in Sheldon, Iowa, which found the activity on November 26. The resulting disruption lasted nearly two weeks into December, canceling on-campus classes. The college at first described only technical issues, and in July 2026 notified 16,004 Iowans that names and Social Security numbers may have been taken.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 24,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "611210",
+    "region": [
+      "019021"
+    ],
+    "state": "IA",
+    "victim_id": "Northwest Iowa Community College"
+  }
+}

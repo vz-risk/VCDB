@@ -1,0 +1,123 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "22C3C62F-135B-4847-BDF3-4097C18F5965",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24211\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Files 'accessed or acquired' -> Exfiltrate, Yes. SSN, gov ID, biometric -> Personal; health records -> Medical; financial account -> Bank. Employees -> Employee.\nVT count 2,992 only; national total not stated, so no data_total. Date Apr 8, 2026, discovered Apr 9 -> dbir_year 2027. Applebee's franchisee -> 722511 (issue has no NAICS tag). HQ state not confirmed. Employee count approximate. Law-firm sources only.",
+    "created": "2026-11-20T19:50:16Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      }
+    ],
+    "github": "24211",
+    "master_id": "22C3C62F-135B-4847-BDF3-4097C18F5965",
+    "modified": "2026-11-20T19:50:16Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.prnewswire.com/news-releases/apple-american-group-data-breach-edelson-lechtzin-llp-launches-investigation-into-exposure-of-personal-information-302857029.html; https://www.federmanlaw.com/blog/apple-american-group-llc-and-apple-american-group-ii-llc-data-breach-investigated-by-federman-sherwood/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between April 8 and 9, 2026 an unknown actor accessed servers of Apple American Group LLC and Apple American Group II, LLC, operators of Applebee's franchise restaurants, and accessed or acquired files with current and former employees' personal information. The companies noticed the suspicious activity on April 9 and mailed notices on August 18, 2026; Vermont filings show 2,992 Vermont residents affected, with data including Social Security numbers, government ID numbers, financial account information, health records and biometric information.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 8,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "722511",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Apple American Group LLC"
+  }
+}

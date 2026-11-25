@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Akira"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "0F7D9402-00F1-4ACB-AFC4-AA794E64C059",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23750\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown; Akira leak-site claim only (via HookPhish), unconfirmed -> Suspected, Potentially, Low. No encryption reported, so no ransomware block despite Akira being a ransomware group.\nDate Jul 10, 2026 claim -> dbir_year 2027. Industry 532412 (construction equipment rental). HQ Ohio assumed. Employee count approximate. Not related to the Vandalia Health record (#24307).",
+    "created": "2026-11-20T19:28:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data allegedly stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Akira leak-site claim"
+      }
+    ],
+    "github": "23750",
+    "master_id": "0F7D9402-00F1-4ACB-AFC4-AA794E64C059",
+    "modified": "2026-11-20T19:28:30Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/vandalia-rental-july-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 10, 2026 the Akira ransomware group claimed an attack on Vandalia Rental, a construction equipment rental company operating in Ohio, Indiana and Kentucky, saying it stole 40 GB of corporate data including employee and client names, Social Security numbers and dates of birth. The company had not confirmed the breach.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "532412",
+    "region": [
+      "019021"
+    ],
+    "state": "OH",
+    "victim_id": "Vandalia Rental"
+  }
+}

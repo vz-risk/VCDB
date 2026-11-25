@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Agents were told to find a way to run code on a site and plant a web shell uploader; paths differed by victim (documented intrusions used vulnerable Zend Framework code, unsafe PHP object handling, an exposed memcached session store, a vulnerable backend server selected by a cookie). The method used against Deere was not disclosed.",
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Two actors of the same orientation in one object (diagram 'Inherits' arrow): an unaffiliated Chinese-speaking human operator and the open-source Cairn AI agents (Agentic system) that carried out the attack, which inherit the external orientation and the human's motive. NorForge: the aim seems to be lasting access to shop and payment systems for later use -> Financial.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Unknown"
+      ],
+      "notes": "Deere said it had no sign that sensitive information was accessed; how much data, if any, was taken across the campaign is not known.",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "39AB9E35-E235-4A81-81D1-8B0D26F498E3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24530\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nRecoded 2026-11-24 to the 'AI As the Tool - External: Simple Template' diagram (issue tag AI-as-the-tool-ext-hacking). Part of the Oct 2026 Cairn AI-agent campaign (see #24529, #24531, #24533). Actor: one External block, Unaffiliated + Agentic system (diagram 'Inherits' pair); motive Financial instead of the diagram's Unknown, because NorForge says the aim is lasting access to shop and payment systems. Action: Hacking Exploit vuln via Web application per the diagram (previously Exploit misconfig from the issue tag; the article describes mostly code flaws and Deere's specific path is not stated). Asset S - Web application instead of the diagram's S - Unknown, because rules.py adds it whenever the hacking vector is Web application. Confidentiality: variety Internal per the diagram, but data_disclosure Unknown instead of Yes, because Deere said it had no sign sensitive information was accessed. Discovery: kept external Security researcher instead of the diagram's Unknown, because NorForge researcher Snorre Fagerland found the attacker's records naming Deere. Event chain per diagram: hak/ext/srv/ia then hak/ext/srv/cp. Deere fixed the problem -> Confirmed. ~Oct 2026 -> dbir_year 2027. Industry 333111 assumed (no NAICS tag). Agentic system is a VERIS 1.4.2 enum not yet in vcdb-merged.json.",
+    "created": "2026-11-20T19:55:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vuln exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data possibly accessed"
+      }
+    ],
+    "github": "24530",
+    "master_id": "39AB9E35-E235-4A81-81D1-8B0D26F498E3",
+    "modified": "2026-11-24T18:30:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html; https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Beginning around October 2, 2026 a Chinese-speaking attacker used open-source Cairn AI agents, built for authorized penetration testing, to attack more than 1,200 websites at over 100 companies, including Deere, according to the attacker's own records found by NorForge researcher Snorre Fagerland on exposed control panels. The agents were told to find a way to run code on each site and plant a web shell uploader, and succeeded about 10% of the time. Deere said it took steps to fix the problem and had no sign that sensitive information was accessed.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "333111",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Deere & Company"
+  }
+}

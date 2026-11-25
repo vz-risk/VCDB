@@ -1,0 +1,120 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Student"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "3D2165EA-6EB0-4AC0-811B-90871FEA1E93",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24239\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Mass external access to member DB, breach confirmed -> Exfiltrate, Yes. Personal details and grades -> Personal; user IDs + encrypted passwords -> Credentials. Members (students/parents) -> Customer, Student.\nDetected Aug 17, 2026 -> dbir_year 2027. NAICS tag 6114 (business/computer/management training); coded 611630 (language schools). Chosun page could not be fetched; coded from issue text. Count unknown.",
+    "created": "2026-11-20T19:50:16Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      }
+    ],
+    "github": "24239",
+    "master_id": "3D2165EA-6EB0-4AC0-811B-90871FEA1E93",
+    "modified": "2026-11-20T19:50:16Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://biz.chosun.com/en/en-industry/2026/08/24/AEVDCGZ545FZ3AOYVMKY4LZIPY/?outputType=amp",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 17, 2026 JLS, a South Korean language academy operator, detected abnormal mass external access to its member database and confirmed a breach the next day. Exposed data included names, dates of birth, phone numbers, email and home addresses, school information, grades, user IDs and encrypted passwords. JLS reported to authorities and police on August 21; the access route and scale were still under investigation.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 17,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "611630",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "JLS (Jeongsang Language Academy)"
+  }
+}

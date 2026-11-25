@@ -1,0 +1,146 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Play"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "5AE648D5-A701-45D0-82CA-B9CDBC7C852E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24097\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue tagged Hacking-ext-stolencreds, but no source mentions credentials; Play leak-site claim only (Ransomware.live, HookPhish) -> Suspected, Potentially, Low, no malware block, hacking Unknown.\nPayroll, IDs, tax info -> Personal; budgets -> Internal. Date Aug 1, 2026 -> dbir_year 2027. NAICS tag 6798 is a SIC code (REITs); industry coded 531311 (residential property managers). Issue tagged Impact but no figures. Employee count a guess.",
+    "created": "2026-11-20T19:44:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Play leak-site claim"
+      }
+    ],
+    "github": "24097",
+    "master_id": "5AE648D5-A701-45D0-82CA-B9CDBC7C852E",
+    "modified": "2026-11-20T19:44:57Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/cambridge-management-august-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On August 1, 2026 the Play ransomware group claimed an attack on Cambridge Management, a Tacoma, Washington property management company that runs affordable housing communities in seven states. Play said it took client documents, budget details, payroll data, IDs, and tax and financial information. The company had not confirmed the attack or its scope.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "531311",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Cambridge Management"
+  }
+}

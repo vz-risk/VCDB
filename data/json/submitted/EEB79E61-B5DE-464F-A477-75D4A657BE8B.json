@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown",
+        "DoS"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Lazarus",
+        "TraderTraitor"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Misrepresentation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 292000000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 292000000,
+    "overall_rating": "Catastrophic"
+  },
+  "incident_id": "EEB79E61-B5DE-464F-A477-75D4A657BE8B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24717\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown + Impact. Per LayerZero: RPC nodes used by its DVN poisoned (how access was gained unknown -> hacking Unknown) and clean nodes DDoSed (DoS, availability Interruption of the verifier nodes). Forged message -> integrity Misrepresentation; theft -> Fraudulent transaction; ~$292M loss in impact. Kelp is the primary victim; LayerZero's DVN infrastructure is the vendor component (reviewer may consider LayerZero as a partner/secondary).\nPause 46 min after drain -> discovery 46 Minutes, internal. Apr 18, 2026 -> dbir_year 2027. Attribution is LayerZero's preliminary claim. Kelp country/size unknown. Industry 523999 within NAICS 5239.",
+    "created": "2026-11-20T20:02:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Verifier RPC nodes poisoned to deliver forged cross-chain message"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Clean RPC nodes DDoSed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "116,500 rsETH (~$292M) drained"
+      }
+    ],
+    "github": "24717",
+    "master_id": "EEB79E61-B5DE-464F-A477-75D4A657BE8B",
+    "modified": "2026-11-20T20:02:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://bitcoinfoundation.org/news/security/north-korean-hackers-stole-7-61-billion-in-crypto-in-2026-without-breaking-code/; https://www.coindesk.com/tech/2026/04/19/2026-s-biggest-crypto-exploit-kelp-dao-hit-for-usd292-million-with-wrapped-ether-stranded-across-20-chains; https://www.theblock.co/news/ecosystems/2026-04-20-layerzero-kelp-dao-lazarus-398028",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 18, 2026 attackers drained 116,500 rsETH, about $292 million, from Kelp DAO's LayerZero-powered bridge that backed wrapped rsETH on more than 20 chains. According to LayerZero, the attackers gained access to the RPC node list used by its verifier, poisoned two RPC nodes to deliver a forged cross-chain message and knocked the clean nodes offline with a denial of service attack; Kelp's single-verifier setup accepted the message. Kelp's emergency multisig paused contracts 46 minutes later, lending markets froze rsETH, and LayerZero preliminarily attributed the attack to North Korea's Lazarus Group (TraderTraitor).",
+  "timeline": {
+    "discovery": {
+      "unit": "Minutes",
+      "value": 46
+    },
+    "incident": {
+      "day": 18,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "Kelp DAO"
+  }
+}

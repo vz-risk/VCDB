@@ -1,0 +1,158 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks"
+      },
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "JPY",
+    "loss": [
+      {
+        "amount": 1800000000,
+        "variety": "Business disruption"
+      }
+    ],
+    "overall_amount": 1800000000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "B3227240-C45B-44A5-906D-7DB145FFC5EC",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24450\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Ransomware -> Obscuration + Interruption, Software installation. Qilin published personal data from a group company -> Exfiltrate, Personal, Yes; data subjects assumed Customer. Issue counts (59,000; 1,260,000) unverified and the 1.26M figure may cover several companies in the Asahi article -> no count coded.\nImpact: projected JPY 1.8B lodging revenue reduction (Oct-Dec 2026) -> Business disruption. Disclosed Sep 26, 2026 -> dbir_year 2027. NHK page could not be fetched.",
+    "created": "2026-11-20T19:55:45Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data exfiltrated"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware disrupts sales and hotel systems"
+      }
+    ],
+    "github": "24450",
+    "master_id": "B3227240-C45B-44A5-906D-7DB145FFC5EC",
+    "modified": "2026-11-20T19:55:45Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www3.nhk.or.jp/nhkworld/news/20260928de52828/; https://www.techtarget.com/cybersecurity/news/366652400/Off-the-rails-Railway-cyberattacks-highlight-infrastructure-risks; https://www.asahi.com/ajw/articles/16976490; https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4656832:0-keio-ransomware-disruption-weighs-on-hotel-revenue-as-2q-profit-trails-plan/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Keio Corporation, a Tokyo private railway and hospitality group, disclosed on September 26, 2026 a ransomware attack that caused system failures across its corporate IT, disabled part of its sales system and disrupted affiliates including Keio Plaza Hotel Tokyo and the Keio Presso Inn reservation system; train operations continued normally. The Qilin ransomware group later claimed the attack and published personal information it said came from a Keio group company. Keio expects the disruption to cut lodging revenue by about 1.8 billion yen in October to December 2026.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "485111",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Keio Corporation"
+  }
+}

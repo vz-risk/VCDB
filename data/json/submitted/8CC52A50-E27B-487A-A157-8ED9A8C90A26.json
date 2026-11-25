@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Vulnerability in an unnamed third-party vendor used in Warp's infrastructure ('narrow-banded exploitation of a vendor'); 'very sophisticated penetration and escalation technique'. Vendor and flaw not disclosed.",
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "notes": "Two actors of the same orientation in one object (diagram 'Inherits' arrow): an unaffiliated human attacker (motive Unknown) and the 'agent swarm' Agentic system that carried out the attack, which inherits the external orientation and the human's motive (Unknown). 'Agent swarm' wording is BleepingComputer's analysis, not a Warp statement.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unaffiliated",
+        "Agentic system"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "notes": "AI agent decision logs (agent traces) and user telemetry 'exposed'; Warp did not say whether source code, prompts or credentials were included.",
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "8CC52A50-E27B-487A-A157-8ED9A8C90A26",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24688\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nRecoded 2026-11-24 to the 'AI As the Tool - External: Simple Template' diagram (template test). Actor: Unaffiliated + Agentic system, both motive Unknown (diagram 'Inherits' pair). Action: Hacking Exploit vuln via Web application (diagram vector; the flaw was in a third-party vendor in Warp's infrastructure, previously coded Partner). Asset S - Web application instead of the diagram's S - Unknown, because rules.py adds S - Web application whenever the hacking vector is Web application. Confidentiality: agent decision logs and telemetry 'exposed' -> data_disclosure Yes (viewing is sufficient), variety Internal per the diagram; roughly 1% of 800k+ users (~8,000), count not given so data_total left out. Discovery: diagram says Unknown, but Warp's CEO said 'We detected the operation within hours', so kept internal / Unknown variety. Event chain per diagram: hak/ext/srv/ia (vuln exploited) then unk/ext/srv/cp (data accessed). Article Oct 27, 2026 (became aware 'Friday', likely Oct 23) -> dbir_year 2027; the issue's '2025' date is wrong. Industry 541511 within NAICS 54. Employee count approximate. Agentic system is a VERIS 1.4.2 enum not yet in vcdb-merged.json.",
+    "created": "2026-11-20T20:02:01Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vuln exploited"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24688",
+    "master_id": "8CC52A50-E27B-487A-A157-8ED9A8C90A26",
+    "modified": "2026-11-24T17:24:15Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/; https://www.emeryreddy.com/blog/data-breach/warp-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late October 2026 an external attacker exploited a vulnerability in a third-party vendor used in the infrastructure of Warp, a developer terminal and agentic development environment, exposing AI agent decision logs and telemetry data for roughly 1% of Warp's 800,000+ users. Analysts described the attack as an 'agent swarm' using a sophisticated penetration and escalation technique. Warp detected and remediated the activity within hours, engaged CrowdStrike, notified affected users and law enforcement, and did not say whether source code, prompts or credentials were exposed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Warp"
+  }
+}

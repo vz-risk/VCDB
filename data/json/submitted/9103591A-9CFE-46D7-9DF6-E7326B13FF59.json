@@ -1,0 +1,142 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "CoinbaseCartel"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "9103591A-9CFE-46D7-9DF6-E7326B13FF59",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23728\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach; extortion-group claim only, unconfirmed by CMT -> Suspected, Potentially, Low, no malware block (CoinbaseCartel is a data-theft extortion group).\nDriving/location/insurance data of app users -> Personal; data_victim Customer. Date Jun 2, 2026 claim -> dbir_year 2027. Industry 541511 within NAICS 5415. Employee count approximate. Sources are law-firm releases.",
+    "created": "2026-11-20T19:28:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data allegedly stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "CoinbaseCartel leak-site claim"
+      }
+    ],
+    "github": "23728",
+    "master_id": "9103591A-9CFE-46D7-9DF6-E7326B13FF59",
+    "modified": "2026-11-20T19:28:30Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.prnewswire.com/news-releases/privacy-alert-cambridge-mobile-telematics-under-investigation-for-data-breach-involving-driver-location-and-insurance-data-302824627.html; https://www.classactionlawyers.com/blog/cmt",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 2, 2026 the CoinbaseCartel group claimed an attack on Cambridge Mobile Telematics, a Massachusetts telematics and insurtech company, and threatened to leak data it said included driving behavior records, GPS location histories, user profiles, insurance details and account information. CMT had not publicly confirmed the incident as of mid-July.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541511",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Cambridge Mobile Telematics"
+  }
+}

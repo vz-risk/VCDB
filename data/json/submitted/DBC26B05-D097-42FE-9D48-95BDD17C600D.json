@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5353,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "DBC26B05-D097-42FE-9D48-95BDD17C600D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24329\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Database accessed, card data obtained -> Exfiltrate, Yes. Names + card info -> Payment, Personal. data_total 5,353 is a floor (SC+MA+VT; NC not disclosed).\nNOTE: the Yahoo source in the issue comments (72,912 people, 61,335 NC) describes a separate June 2024 incident at the same company, out of window and not used. Date Jun 7, 2026 -> dbir_year 2027. Industry 812930 (parking lots) within NAICS 81. Employee count approximate.",
+    "created": "2026-11-20T19:52:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      }
+    ],
+    "github": "24329",
+    "master_id": "DBC26B05-D097-42FE-9D48-95BDD17C600D",
+    "modified": "2026-11-20T19:52:48Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://charlotteledger.substack.com/p/preferred-parking-data-breach-credit-card-information",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 7 and 8, 2026 an unauthorized actor accessed a database of Preferred Parking Service, a Charlotte, North Carolina operator of parking lots and garages in 15 Southeast cities, and obtained customers' names and credit card information. State filings showed about 5,200 South Carolinians, 142 Massachusetts residents and 11 Vermonters affected, with the North Carolina count not disclosed. The company said it had added security measures.",
+  "timeline": {
+    "incident": {
+      "day": 7,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "812930",
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Preferred Parking Service, LLC"
+  }
+}

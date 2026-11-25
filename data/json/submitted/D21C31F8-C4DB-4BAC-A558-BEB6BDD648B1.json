@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "D21C31F8-C4DB-4BAC-A558-BEB6BDD648B1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23450\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Cloud environment accessed May 10-12, 2026 (containment ~2 days); method not described. Data: usernames, emails, IPs, device IDs, linked platform IDs -> Personal (issue lists Credentials, but passwords were not involved, so not coded). Exfiltration not stated -> Potentially. Count not disclosed.\ndbir_year 2027. Industry 511210 (game/software publisher) instead of NAICS 54 tag. HQ San Francisco, CA and employee count from general knowledge. Single source (law-firm page citing Maine AG).",
+    "created": "2026-11-20T19:18:36Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Cloud environment accessed May 10-12; user account data involved"
+      }
+    ],
+    "github": "23450",
+    "master_id": "D21C31F8-C4DB-4BAC-A558-BEB6BDD648B1",
+    "modified": "2026-11-20T19:18:36Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.dapeer.com/databreaches/vrchat-data-breach-investigation",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between May 10 and 12, 2026 an unauthorized party accessed VRChat, Inc.'s cloud environment. VRChat detected and contained the activity and engaged outside experts. Usernames, linked email addresses, VRChat+ subscription status, login history including device identifiers and IP addresses, and linked Steam or Meta user IDs were involved; passwords, payment cards and ID documents were not. VRChat filed a notice with the Maine attorney general and notified users on June 10, without disclosing the number affected.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 10,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "511210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "VRChat, Inc."
+  }
+}

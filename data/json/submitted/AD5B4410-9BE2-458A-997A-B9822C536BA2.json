@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "The Gentlemen"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "AD5B4410-9BE2-458A-997A-B9822C536BA2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23620\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach, but only a leak-site claim; Indra (unofficially) said it was investigating, no encryption or outage confirmed -> claim-only convention: Suspected, Potentially, Low, no malware block.\nGroup named 'The Gentleman'/'The Gentlemen' in sources. Date ~Jun 30, 2026 -> June 2026, dbir_year 2027. Cybernews page could not be fetched. Industry 541512 within NAICS 54 (Indra also makes defense systems, 3345). Employee count approximate.",
+    "created": "2026-11-20T19:23:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data allegedly exfiltrated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Leak-site listing with ~9-day deadline"
+      }
+    ],
+    "github": "23620",
+    "master_id": "AD5B4410-9BE2-458A-997A-B9822C536BA2",
+    "modified": "2026-11-20T19:23:50Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://cybernews.com/security/indra-group-ransomware-attack-data-leak/; https://www.cybersecurity-insiders.com/the-gentleman-ransomware-targets-prominent-european-nato-contractor/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Around June 30, 2026 the ransomware group The Gentlemen listed Spanish technology and defense company Indra Group, a NATO contractor, on its leak site, claiming to have exfiltrated confidential data and giving the company about nine days to meet its demands. Indra said its incident response teams were investigating whether systems were compromised; the volume and sensitivity of the claimed data were not independently verified.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ES"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "150039"
+    ],
+    "victim_id": "Indra Group"
+  }
+}

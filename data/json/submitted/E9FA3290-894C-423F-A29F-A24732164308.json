@@ -1,0 +1,104 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Inadequate technology"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 70000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 70000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E9FA3290-894C-423F-A29F-A24732164308",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23843\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nIssue tagged Error-int-misdelivery-media; source says a configuration error in delivery-notification emails exposed users' info -> Misdelivery via email (S - Mail) rather than media. Reviewer may prefer Misconfiguration.\nJapan Today page could not be fetched; details from MLex teaser only. 70,000 users -> Personal, Yes. Date ~Jul 26, 2026 announcement, dbir_year 2027. Separate from Sagawa's Oct 2026 package-tracking unauthorized-access incident (53M records). Industry 492110 within NAICS 492. Employee count approximate.",
+    "created": "2026-11-20T19:32:34Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Misconfigured notification emails deliver customer data to wrong users"
+      }
+    ],
+    "github": "23843",
+    "master_id": "E9FA3290-894C-423F-A29F-A24732164308",
+    "modified": "2026-11-20T19:32:34Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://japantoday.com/category/business/70-000-customers'-info-leaked-by-japan's-sagawa-express-setup-error; https://www.mlex.com/mlex/amp/articles/2503624",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July 2026 Sagawa Express, a major Japanese parcel delivery company, said an error in the configuration of delivery-notification emails for its Smart Club membership web service caused personal information of about 70,000 users to be leaked to other users.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "492110",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Sagawa Express Co"
+  }
+}

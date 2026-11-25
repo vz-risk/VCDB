@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit misconfig",
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Web shell uploader planted by AI agents.",
+      "result": [
+        "Persist"
+      ],
+      "variety": [
+        "Backdoor or C2",
+        "Backdoor"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Chinese-speaking operator directing open-source Cairn AI agents (NorForge / Reuters, Oct 2026). Agentic system actor variety not in current vcdb schema.",
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "04C2EF63-3D25-438E-A144-6061520CFD5C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24531\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-exploit-misconfig. Part of the Oct 2026 Cairn AI-agent campaign (see #24529, #24530, #24533). Writable memcached session store -> Exploit misconfig; PHP object deserialization / old Zend code -> Exploit vuln. Web shell verified live by NorForge -> Malware Backdoor, integrity Software installation; Confirmed, conf Medium.\nData access unknown. Victim unnamed; country unknown. NAICS tag 4239 (misc. durable goods); coded 423710 (hardware wholesalers). Discovered via researcher. ~Oct 2026 -> dbir_year 2027.",
+    "created": "2026-11-20T19:55:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "AI agents exploit website"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Web shell planted"
+      }
+    ],
+    "github": "24531",
+    "master_id": "04C2EF63-3D25-438E-A144-6061520CFD5C",
+    "modified": "2026-11-20T19:55:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In October 2026 autonomous Cairn AI agents directed by a Chinese-speaking attacker compromised the website of an unnamed large hardware-parts vendor. NorForge researchers checked the claimed break-in and found the planted web shell live. The documented chain used unauthorized write access to a memcached session store, unsafe handling of saved PHP objects and a weakness in old Zend Framework code.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "NA"
+    ],
+    "industry": "423710",
+    "victim_id": "Unnamed large hardware-parts vendor"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "83C4AC79-81F0-4581-86D8-98447C6633F5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23182\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Party confirmed a serious attack and referred to ransomware; Qilin claimed it. Encryption not explicitly described -> Obscuration inferred from the ransomware attack (reviewer may drop).\nParty could not assess whether data was taken; Qilin threatened to leak -> Internal + employee Personal, data_disclosure Potentially. Membership database unaffected.\nDate: late March 2026, dbir_year 2027. Industry 813940 (political organizations). Employee count approximate (HQ).",
+    "created": "2026-11-20T18:59:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Qilin ransomware attack"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Parts of IT shut down"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Leak-site threat to publish data"
+      }
+    ],
+    "github": "23182",
+    "master_id": "83C4AC79-81F0-4581-86D8-98447C6633F5",
+    "modified": "2026-11-20T18:59:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://therecord.media/hackers-threaten-to-leak-german-political-party-data; https://www.scworld.com/brief/qilin-ransomware-group-targets-german-political-party-die-linke-threatens-data-leak; https://www.die-linke.de/start/presse/detail/news/cyberangriff-auf-die-partei-die-linke/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late March 2026 the German political party Die Linke confirmed a serious cyberattack on its IT infrastructure and temporarily shut down parts of its systems. The Qilin ransomware gang added the party to its leak site and threatened to publish stolen data unless paid. The party warned that internal organizational data and personal data of headquarters employees could be leaked, said its membership database was not affected, and filed a criminal complaint.",
+  "timeline": {
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "DE"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "813940",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Die Linke"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0476670D-AE2F-4929-A172-274F7249C06E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23528\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown, refined: 'sophisticated phishing' -> Social Phishing (Email assumed), then mailbox access -> Use of stolen creds (vector Unknown) with Credentials (the employee's) added per house rule.\nInbox downloaded -> data_disclosure Yes. Screening subjects -> Customer; Employee also possible. Count not disclosed. Motive Financial assumed.\nNov 13, 2025, discovered Nov 17 (4 days). Nov-Dec 2025 -> dbir_year 2027. HQ Atlanta, GA from general knowledge. Employee count approximate.",
+    "created": "2026-11-20T19:23:59Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing of screening-unit employee"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Email account accessed; inbox downloaded"
+      }
+    ],
+    "github": "23528",
+    "master_id": "0476670D-AE2F-4929-A172-274F7249C06E",
+    "modified": "2026-11-20T19:23:59Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://potterhandy.com/first-advantage-corporation-data-breach-lawsuit; https://oag.ca.gov/ecrime/databreach/reports/sb24-625323",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On November 13, 2025 an unauthorized third party gained access to the email account of an employee in First Advantage Corporation's Drug & Occupational Health Screening Unit through sophisticated phishing and downloaded the contents of the inbox. The background screening company discovered the breach on November 17, disabled the account and later notified affected individuals, whose exposed information included names, Social Security numbers, driver's license numbers and other personal data. It offered two years of credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 4
+    },
+    "incident": {
+      "day": 13,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561611",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "First Advantage Corporation"
+  }
+}

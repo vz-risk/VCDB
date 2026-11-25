@@ -1,0 +1,114 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit misconfig"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "notes": "Chinese-speaking operator directing open-source Cairn AI agents (NorForge / Reuters, Oct 2026). Agentic system actor variety not in current vcdb schema.",
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "D7B7EBC8-AA9D-4698-949F-099FF2C181B6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24529\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-exploit-misconfig. Part of the Oct 2026 Cairn AI-agent campaign (also #24530 Deere, #24531 hardware-parts vendor, #24533 SharkNinja; related to but not linked with the Sept Gambit campaign #24460). Cummins said only that a vendor-run website may have been attacked -> Suspected, Low; the vendor may be the true victim.\nMethod per campaign: agents exploit web app weaknesses and plant web shell uploaders -> Exploit misconfig / Web application. Data access unknown. Discovered via researcher -> Security researcher. Campaign began ~Oct 2, 2026 -> dbir_year 2027. Industry 336310 assumed (no NAICS tag).",
+    "created": "2026-11-20T19:55:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "AI agents exploit website"
+      }
+    ],
+    "github": "24529",
+    "master_id": "D7B7EBC8-AA9D-4698-949F-099FF2C181B6",
+    "modified": "2026-11-20T19:55:53Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In October 2026 a Chinese-speaking attacker used open-source Cairn AI agents to attack more than 1,200 websites at over 100 companies, and the attacker's own records, found by NorForge researcher Snorre Fagerland on exposed control panels, named Cummins among the targets. Cummins said it was investigating a report of a possible attack on a website run by one of its vendors; no compromise or data theft was confirmed.",
+  "timeline": {
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "336310",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Cummins"
+  }
+}

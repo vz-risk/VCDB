@@ -1,0 +1,108 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "2C713080-960D-4C9B-96E2-C7D7A1CFCCF2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24016\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-media. W-2s emailed to two former student workers -> Misdelivery via email (S - Mail), state Transmitted.\nNames + SSNs -> Personal, Employee. No count. Exposure Apr 13 - May 21, discovered May 14, 2026 -> dbir_year 2027. Public community college -> government Local. Industry 611210 within NAICS 611. Single source (CA AG).",
+    "created": "2026-11-20T19:40:00Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee W-2s sent to unauthorized recipient"
+      }
+    ],
+    "github": "24016",
+    "master_id": "2C713080-960D-4C9B-96E2-C7D7A1CFCCF2",
+    "modified": "2026-11-20T19:40:00Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-625455; https://oag.ca.gov/system/files/Santa%20Monica%20Community%20College%20-%20Exhibit%20A_0.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Santa Monica Community College District found on May 14, 2026 that employee W-2 forms, with names and Social Security numbers, had been emailed to two former student workers, with the information exposed from April 13 to May 21, 2026. The college confirmed the email was deleted, found no evidence of misuse and offered affected employees credit monitoring.",
+  "timeline": {
+    "incident": {
+      "day": 13,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "611210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Santa Monica Community College District"
+  }
+}

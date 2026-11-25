@@ -1,0 +1,147 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Partner",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "B2A0D1DE-F1D1-48E9-9DD1-6335A46710FF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23899\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Social-ext-Pretex. 'Social engineering' despite MFA; target and channel not stated -> Pretexting, target/vector Unknown. Records involved -> disclosure Yes. Motive Financial assumed.\nFranchisees -> Partner; franchise applicants -> Other. Names + SSNs -> Personal. Detected and shut down in <1 hour -> discovery/containment Minutes. Date Jan 14, 2026 -> dbir_year 2027. HQ North Bethesda, MD. Industry 721110 within NAICS 7211. Single source (CA AG).",
+    "created": "2026-11-20T19:34:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Social engineering bypasses MFA"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Franchisee records accessed"
+      }
+    ],
+    "github": "23899",
+    "master_id": "B2A0D1DE-F1D1-48E9-9DD1-6335A46710FF",
+    "modified": "2026-11-20T19:34:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-619003; https://oag.ca.gov/system/files/Choice%20-%20California%20Notification.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 14, 2026 an attacker used social engineering to get into a Choice Hotels application holding records on franchisees and franchise applicants, even though the application required multifactor authentication. Choice detected the access and shut it down in less than an hour, and on January 26 determined that records with names and Social Security numbers were involved. It notified affected people in February 2026 without stating a count.",
+  "timeline": {
+    "containment": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "day": 14,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "721110",
+    "region": [
+      "019021"
+    ],
+    "state": "MD",
+    "victim_id": "Choice Hotels International, Inc."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "D18DF938-5774-421B-AF9E-1A4BCA0EF4E1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23272\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nAlso closes https://github.com/vz-risk/VCDB/issues/23379 (same incident)\nTemplate Hacking-ext-exploit-vuln. Also covers #23379 (same BWH incident).\nDATE CAVEAT: detected Apr 22, 2026. Affected data spans reservations from Oct 14, 2025; TechRadar says data 'generated' in that window, Daily Record says 'accessed between' those dates. Coded incident April 2026 / dbir_year 2027; if access really began Oct 14, 2025 the dbir_year would be 2026 (out of window).\nCount not disclosed. 'stole' per TechRadar -> data_disclosure Yes. HQ Phoenix, AZ. Employee count approximate (corporate).",
+    "created": "2026-11-20T19:06:44Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Web application flaw exploited; guest reservation data taken"
+      }
+    ],
+    "github": "23272",
+    "master_id": "D18DF938-5774-421B-AF9E-1A4BCA0EF4E1",
+    "modified": "2026-11-20T19:06:44Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.techradar.com/pro/security/best-western-hotels-warns-customers-reservation-data-may-have-been-spilled-in-breach; https://www.dailyrecord.co.uk/news/crime/warning-watch-convincing-email-after-37290176",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 22, 2026 BWH Hotels, parent of Best Western Hotels & Resorts, WorldHotels and SureStay, detected that attackers had exploited a flaw in a web application holding guest reservation data. Guest names, email addresses, phone numbers, home addresses and reservation details such as reservation numbers, dates of stay and special requests from reservations made between October 14, 2025 and April 22, 2026 were accessed; payment information was not stored in the system. BWH took the application offline, revoked the access and notified an undisclosed number of guests in May.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "721110",
+    "region": [
+      "019021"
+    ],
+    "state": "AZ",
+    "victim_id": "BWH Hotels"
+  }
+}

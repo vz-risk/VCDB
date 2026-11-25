@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "N - Firewall"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks",
+        "value": 1
+      },
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "F2D0D0F9-7BFC-4D44-9D42-587AB843AA7D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24653\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Encryption -> Ransomware (Obscuration + Interruption, Software installation); entry via known firewall vulnerability -> Exploit vuln, N - Firewall. Data theft not mentioned -> no confidentiality coded.\nDATE UNCERTAIN: the sponsored Eide Bailly article (Oct 26, 2026) gives no attack date; the issue says Oct 2026. Coded 2026, dbir_year 2027; reviewer should confirm it is in window. ~1 week downtime. NAICS 42 tag only; 424990 assumed. Employee count a guess. Single sponsored source.",
+    "created": "2026-11-20T19:58:32Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "ia",
+        "summary": "Known firewall vulnerability exploited"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encrypts ERP and file servers"
+      }
+    ],
+    "github": "24653",
+    "master_id": "F2D0D0F9-7BFC-4D44-9D42-587AB843AA7D",
+    "modified": "2026-11-20T19:58:32Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://siouxfalls.business/first-48-hours-what-ransomware-attack-taught-family-business-about-cybersecurity-trusted-partnerships/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "G&H Distributing, a family-owned distributor in Sioux Falls, South Dakota, was hit by ransomware that encrypted files and locked employees out of ERP-related and file servers. Forensic investigators traced the attack to a known, actively exploited firewall vulnerability. The company had about a week of significant downtime before restoring operations and afterward moved to managed IT services.",
+  "timeline": {
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "424990",
+    "region": [
+      "019021"
+    ],
+    "state": "SD",
+    "victim_id": "G&H Distributing"
+  }
+}

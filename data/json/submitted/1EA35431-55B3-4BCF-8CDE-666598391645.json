@@ -1,0 +1,191 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Anubis"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "1EA35431-55B3-4BCF-8CDE-666598391645",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23083\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Encryption not explicitly stated; ransomware inferred from the Anubis claim, network disconnection and restoration from backups (reviewer may drop Obscuration).\nFirm confirmed internal information and some client documents copied from the file server; Anubis published samples and later the full 380 GB -> data_disclosure Yes. Passport scans of employees/clients per Cyber Daily headline -> Personal, Customer + Employee.\nDetected by monitoring software Jan 11, 2026 -> Infrastructure monitoring. dbir_year 2027. Employee count approximate.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-20T18:54:39Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Anubis ransomware deployed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "File server data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Network disconnected; restored from backups"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion; 380 GB released in stages"
+      }
+    ],
+    "github": "23083",
+    "master_id": "1EA35431-55B3-4BCF-8CDE-666598391645",
+    "modified": "2026-11-20T18:54:39Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.lawyersweekly.com.au/sme-law/43830-more-data-released-in-nz-law-firm-hack; https://www.cyberdaily.au/security/13139-exclusive-nz-law-firm-investigating-cyber-attack-as-hackers-share-employee-client-passport-scans; https://www.langleytwigg.co.nz/my-post",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 11, 2026 monitoring software at Langley Twigg Law in Napier, New Zealand flagged unauthorized activity, and the firm disconnected its network and later restored systems from backups. The Anubis ransomware gang claimed the attack on January 25 and published stolen files, including internal operational information and client documents copied from the firm's file server and reportedly passport scans, followed by further releases and the full 380 GB dataset. The firm obtained a High Court injunction on February 5 against accessing or distributing the data and notified the Privacy Commissioner and police.",
+  "timeline": {
+    "incident": {
+      "day": 11,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NZ"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541110",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Langley Twigg Law"
+  }
+}

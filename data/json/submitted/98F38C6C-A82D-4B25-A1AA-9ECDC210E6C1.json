@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Other"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "KP"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 24150000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 24150000,
+    "overall_rating": "Damaging"
+  },
+  "incident_id": "98F38C6C-A82D-4B25-A1AA-9ECDC210E6C1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24715\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown + Impact. Compromised validator keys used to sign the withdrawal -> Use of stolen creds + Credentials data (how keys were stolen unknown); asset S - Other (bridge validator). Theft -> integrity Fraudulent transaction; $24.15M loss in impact.\nDATE: July 22, 2026 per Halborn/KuCoin (issue says August 2026) -> dbir_year 2027. DPRK attribution from the bitcoinfoundation analysis only -> State-affiliated, KP, Financial. Country and size of AFX unknown. Industry 523999 within NAICS 5239.",
+    "created": "2026-11-20T20:02:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Validator private keys compromised"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Forged bridge withdrawal of $24.15M USDC"
+      }
+    ],
+    "github": "24715",
+    "master_id": "98F38C6C-A82D-4B25-A1AA-9ECDC210E6C1",
+    "modified": "2026-11-20T20:02:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://bitcoinfoundation.org/news/security/north-korean-hackers-stole-7-61-billion-in-crypto-in-2026-without-breaking-code/; https://www.halborn.com/blog/post/explained-the-afxbridge-hack-july-2026; https://www.kucoin.com/news/flash/afx-trade-loses-24m-in-bridge-exploit-offers-hacker-30-bounty",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 22, 2026 an attacker used compromised private keys for five of the seven validators of the AFX Trade bridge, which serves the Arbitrum-based decentralized perpetuals exchange, to pass the bridge's signature threshold and withdraw about $24.15 million in USDC, which was bridged to Ethereum and swapped for ETH. The bridge contract itself was not flawed; it accepted valid signatures. AFX offered the attacker a 30% bounty to return the rest, and analysts later linked the theft to North Korean hackers through shared laundering addresses.",
+  "timeline": {
+    "incident": {
+      "day": 22,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "Unknown"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "523999",
+    "region": [
+      "000000"
+    ],
+    "victim_id": "AFX Trade"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Elevate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Anubis"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "491C41DB-9BE6-46F8-8E8F-18B88D337258",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23469\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Details come from a Resecurity threat report (via issue text; industrialcyber page blocked) and The Defense Post; no statement from the port authority was found, hence confidence Medium.\nVictim name: sources say 'Adriatic Port Authority (Port of Ancona)' -> coded as the Central Adriatic Ports System Authority (public body -> government Other). Spear-phishing, privilege escalation and unpatched-vuln exploitation per Resecurity; encryption and $10M demand -> ransomware + data ransomed.\nDate December 2025 (Nov-Dec 2025 -> dbir_year 2027). Employee count approximate.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-20T19:21:20Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Spear-phishing for initial access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege escalation, vulnerability exploitation, data exfiltration"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware encrypts cargo, scheduling and customs systems"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "$10M ransom demand; data released Jan 2026"
+      }
+    ],
+    "github": "23469",
+    "master_id": "491C41DB-9BE6-46F8-8E8F-18B88D337258",
+    "modified": "2026-11-20T19:21:20Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://industrialcyber.co/transport/resecurity-details-anubis-ransomware-attack-on-adriatic-port-authority-exposing-maritime-infrastructure-risks/; https://thedefensepost.com/2026/06/26/maritime-sector-cyber-threats-resecurity/; https://www.resecurity.com/blog/article/the-anubis-ransomware-attack-on-the-adriatic-port-authority",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In December 2025 the Anubis ransomware group compromised the Adriatic Port Authority (Port of Ancona, Italy), according to a Resecurity report. The attackers gained initial access through spear-phishing, escalated privileges and exploited unpatched vulnerabilities, then encrypted systems supporting cargo tracking, shipping schedules and customs processing and exfiltrated contracts, safety plans, employee records and internal communications. They demanded $10 million in bitcoin and publicly claimed the attack in January 2026, releasing stolen data. The disruption affected maritime logistics in the region.",
+  "timeline": {
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IT"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Other"
+    ],
+    "industry": "488310",
+    "region": [
+      "150039"
+    ],
+    "victim_id": "Central Adriatic Ports Authority (Port of Ancona)"
+  }
+}

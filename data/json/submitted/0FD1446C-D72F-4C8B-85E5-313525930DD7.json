@@ -1,0 +1,148 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "The Gentlemen"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 22875,
+      "data_victim": [
+        "Customer",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0FD1446C-D72F-4C8B-85E5-313525930DD7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23955\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown; The Gentlemen leak-site claim (~Apr 4) -> Social Extortion added, actor named. No encryption reported, so no ransomware block.\nSSNs, DOB, IDs -> Personal; financial account info -> Bank. Tenants/applicants -> Customer, plus Employee. data_total 22,875 is a floor (CA >11,000 + TX 11,120 + RI 755). Date Mar 26, 2026 -> dbir_year 2027. Issue tagged Impact but no loss figures found. Industry 531311 assumed within NAICS 53. Employee count approximate.",
+    "created": "2026-11-20T19:37:40Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "The Gentlemen leak-site extortion"
+      }
+    ],
+    "github": "23955",
+    "master_id": "0FD1446C-D72F-4C8B-85E5-313525930DD7",
+    "modified": "2026-11-20T19:37:40Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-627223; https://www.globenewswire.com/news-release/2026/08/03/3337725/0/en/jrk-property-holdings-data-breach-edelson-lechtzin-llp-launches-class-action-investigation-into-exposure-of-tenant-and-applicant-personal-information.html; https://www.federmanlaw.com/blog/jrk-property-holdings-inc-data-breach-investigated-by-federman-sherwood/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 26, 2026 JRK Property Holdings, a Los Angeles real estate investment and property management firm, found suspicious activity on its network. Around April 4 the ransomware group The Gentlemen claimed on its leak site to have JRK's data and threatened to publish it. JRK's investigation found that an unauthorized party had accessed files containing tenant, applicant and employee names, Social Security numbers, dates of birth, addresses, government ID numbers and financial account information, affecting more than 11,000 Californians, 11,120 Texans and 755 Rhode Islanders.",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "531311",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "JRK Property Holdings, Inc."
+  }
+}

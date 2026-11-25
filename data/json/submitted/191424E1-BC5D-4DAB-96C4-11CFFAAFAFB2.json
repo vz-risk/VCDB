@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "191424E1-BC5D-4DAB-96C4-11CFFAAFAFB2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23037\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nAlso closes https://github.com/vz-risk/VCDB/issues/23067 (same incident)\nTemplate Malware-ext-Ransomware-databreach not fully followed: the trust's notice describes file access/acquisition only and no encryption or outage was reported, so no malware block despite the Qilin claim. Qilin listing + samples -> Extortion.\nDates from the trust's notice: Jan 17-20, 2026, discovered Jan 20 (3 days). Count not stated. Whose data (employees, tenants, customers) not stated -> data_victim Unknown.\nPublic airport trust -> government Local. Employee count approximate. dbir_year 2027.",
+    "created": "2026-11-20T18:51:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed and acquired Jan 17-20"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Qilin leak-site listing with document samples"
+      }
+    ],
+    "github": "23037",
+    "master_id": "191424E1-BC5D-4DAB-96C4-11CFFAAFAFB2",
+    "modified": "2026-11-20T18:51:54Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.teiss.co.uk/news/news-scroller/qilin-ransomware-gang-claims-breach-of-tulsa-international-airport-posts-alleged-data-samples-17030; https://www.newson6.com/tulsa-oklahoma-news/tulsa-airport-cybersecurity-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between January 17 and 20, 2026 an unauthorized party accessed and took files from the computer system of the Tulsa Airports Improvement Trust, which runs Tulsa International Airport. The trust discovered the breach on January 20, secured its network and hired a forensic firm. The Qilin ransomware gang claimed the attack in early February and posted document samples on its leak site. The files held names with addresses, phone numbers, Social Security numbers, driver's license or other ID numbers, and bank routing and account numbers.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 17,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "488119",
+    "region": [
+      "019021"
+    ],
+    "state": "OK",
+    "victim_id": "Tulsa Airports Improvement Trust (Tulsa International Airport)"
+  }
+}

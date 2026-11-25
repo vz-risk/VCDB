@@ -1,0 +1,149 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Pear"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "68791564-55B3-417C-8219-0358417B2742",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22714\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach not followed: Pear (Pure Extraction and Ransom) is a data-theft extortion crew and no encryption is reported, so no malware block. Leak-site claim only, not confirmed by the firm -> Suspected, data_disclosure Potentially, confidence Low. Data types not described -> Unknown.\nDate: claim posted Nov 3, 2025; the intrusion date is unknown and may be late October, which would make this dbir 2026. Coded 2025-11 / dbir 2027 from the claim date.\nEmployee count: small law firm (approximate). No second source found.",
+    "created": "2026-11-20T18:35:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data claimed stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via Pear leak-site listing"
+      }
+    ],
+    "github": "22714",
+    "master_id": "68791564-55B3-417C-8219-0358417B2742",
+    "modified": "2026-11-20T18:35:58Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.dexpose.io/pear-ransomware-targets-gerson-schwartz-accident-injury-lawyers/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The Pear ransomware/data-extortion group claimed on November 3, 2025 to have attacked Gerson & Schwartz, a Miami personal injury law firm, and threatened to leak sensitive data unless the firm began negotiations. The firm had not confirmed the attack at the time of reporting.",
+  "timeline": {
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "541110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Gerson & Schwartz Accident & Injury Lawyers"
+  }
+}

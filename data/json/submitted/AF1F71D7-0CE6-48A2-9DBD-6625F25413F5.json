@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT",
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks",
+        "value": 2
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "AF1F71D7-0CE6-48A2-9DBD-6625F25413F5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22980\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach only partly followed: the school called it a serious cyberattack with data removal and widespread system loss, but ransomware/encryption was never stated and no group claimed it, so coded Hacking + Interruption without a malware block. Reviewer may add Ransomware if later confirmed.\nRole IT + OT: the attack disabled building safety systems (electronic gates, fire alarm). Data types not disclosed -> Unknown; data removal confirmed -> data_disclosure Yes.\nDate: shortly after Christmas break, school notice Jan 3, 2026 -> 2026-01 (could be late Dec 2025); dbir_year 2027. Outage ~2 weeks. Employee count approximate.",
+    "created": "2026-11-20T18:49:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data removed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "IT, phones and building safety systems disabled; school closed ~2 weeks"
+      }
+    ],
+    "github": "22980",
+    "master_id": "AF1F71D7-0CE6-48A2-9DBD-6625F25413F5",
+    "modified": "2026-11-20T18:49:06Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://www.theregister.com/2026/01/19/higham_lane_school_reopens/; https://www.theregister.com/2026/01/06/nuneaton_school_cyberattack/; https://www.highamlaneschool.co.uk/news/?pid=3&nid=1&storyid=344",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Shortly after the 2025 Christmas break, Higham Lane School in Nuneaton, Warwickshire was hit by a serious cyberattack that took down phones, email, servers and the school management system, as well as physical safety systems including electronic gates, the fire alarm and electronic registers. The school closed on advice from the Department for Education and police, reopened in stages, and returned all year groups to full-time teaching on January 19, 2026 with very limited IT access. The school confirmed the attack involved removal of data and reported it to the ICO. No group had claimed the attack.",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611110",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Higham Lane School"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "55017730-6B7F-4FEB-A7DA-4074A9B306F2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23930\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Social-ext-Phish. Vishing -> Phishing via Phone. How the attacker then accessed the device is not stated -> Hacking Unknown with Exfiltrate (files 'copied and taken'). Reviewer may prefer Use of stolen creds or Backdoor if confirmed.\nClient personal info -> Personal, Customer; data fields blank in sample notice. Same-day awareness -> discovery Hours. About 40 RI residents named; no total. Date May 21, 2026 -> dbir_year 2027. HQ Philadelphia. Single source (CA AG).",
+    "created": "2026-11-20T19:35:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee vished"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Files copied from employee device"
+      }
+    ],
+    "github": "23930",
+    "master_id": "55017730-6B7F-4FEB-A7DA-4074A9B306F2",
+    "modified": "2026-11-20T19:35:07Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-626597; https://oag.ca.gov/system/files/Fox%20Rothschild%20LLP%20-%20sample%20notice.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On May 21, 2026 a Fox Rothschild LLP employee was targeted in a voice phishing (vishing) attack, and the attacker copied and took files from a single device tied to that employee's account. The law firm found the unusual activity the same day, completed its review of affected files containing client and other personal information on June 18, and notified affected individuals in July 2026 with credit monitoring. The firm said the incident did not reach its broader network.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 21,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541110",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Fox Rothschild LLP"
+  }
+}

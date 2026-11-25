@@ -1,0 +1,114 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0F2E8E8D-6EA6-4124-B072-55E6C40084DB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24030\nEncoded by AI — encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Files confirmed accessed -> disclosure Yes; no exfiltration stated. SSN, DL, Alien Registration numbers -> Personal; financial account info -> Bank. Data subjects not stated; Alien Registration numbers suggest employees -> Employee (assumed).\nDate Feb 16, 2026 -> dbir_year 2027. Victim assumed to be the Long Beach, CA knit-fabric maker (notice gives no address); industry 313240 assumed, issue has no NAICS tag. Employee count a guess. Single source (CA AG).",
+    "created": "2026-11-20T19:42:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      }
+    ],
+    "github": "24030",
+    "master_id": "0F2E8E8D-6EA6-4124-B072-55E6C40084DB",
+    "modified": "2026-11-20T19:42:10Z",
+    "sub_source": "vcdb"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-624138; https://oag.ca.gov/system/files/Texollini%2C%20Inc.%20-%20Notice%20of%20Data%20Breach%20-%20CA_0.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between February 16 and 18, 2026 an unauthorized actor accessed Texollini's environment and certain files, after which the company noticed anomalous activity. A forensic review completed April 28 found the files held full names, Social Security numbers, driver's license numbers, U.S. Alien Registration numbers and financial account information. Texollini notified affected people in May 2026 with credit monitoring and did not give a count.",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "313240",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Texollini, Inc."
+  }
+}
