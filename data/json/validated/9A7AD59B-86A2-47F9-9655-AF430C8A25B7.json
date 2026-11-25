@@ -1,0 +1,110 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "IR"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "N - PLC"
+      },
+      {
+        "variety": "N - Other"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 2
+      },
+      "variety": [
+        "Interruption"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "9A7AD59B-86A2-47F9-9655-AF430C8A25B7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23907\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nRe-sourced 2026-11-11: Read the City of Plymouth news notice (outage began overnight Sun 26 Jul; communications restored Tuesday afternoon; city later calls it a cyber attack and is working with law enforcement) and Avertium's campaign analysis (Rockwell MicroLogix 1100/1400 internet-facing PLCs, config/password changes; CISA advisory of 22 Jul 2026 on Iranian-affiliated PLC targeting; no official US attribution; lists Plymouth among four MN systems with disclosed impact). Changed security_incident Suspected -> Confirmed, added availability duration ~2 days, discovery changed to unknown, confidence Low -> Medium.\nPart of a coordinated July 26-28, 2026 campaign against 30+ Minnesota municipal water/wastewater utilities (and facilities in other states); each issue names a different city, so one record per victim city - reviewer may want a shared campaign_id. The issue's pipeline summary says Oct 14-15, 2024, but NPR, Wired, DysruptionHub and the GovInfoSecurity link (2026-07-30) all date the attacks to late July 2026 -> 2026 used, dbir 2027. Attribution: a leaked WaterISAC memo (citing Minnesota Fusion Center and CISA) tied the attacks to Iranian state-sponsored hackers (CyberAv3ngers or Handala, IRGC-linked) -> actor State-affiliated, country IR, no single name; not formally confirmed by the government. Motive not stated -> Unknown. NPR cites experts that internet-exposed devices with default credentials were likely targeted, but this is not confirmed for this victim -> hacking variety/vector Unknown. Assets: PLCs/ICS at water facilities -> N - PLC, asset role OT. No data disclosure reported -> no confidentiality attribute despite the Breach label. NAICS re-coded from 92 to 221310 (water supply) following the analyst comment on issue 23907 ('naics 2213'); victim is the city (government Local) operating the utility. Sources fetched: issue summaries; WebFetch budget ran out before StateScoop/Wired could be re-read directly. Plymouth: the city said it 'suspected' a cyberattack limited to communications equipment (cellular) at two water towers and lift stations, with no shutdown and how access occurred not disclosed -> security_incident now Confirmed (city's restoration update calls it a cyber attack), availability Interruption (communications) ~2 days, no integrity coded. Assets N - PLC (per campaign reporting) and N - Other (cellular comms equipment). Discovery method not stated by the city -> unknown (was assumed internal monitoring). Employee count estimated 101 to 1000 - not sourced. Confidence Medium: actor attribution unofficial and per-victim access method unknown.",
+    "created": "2026-11-11T04:11:21Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "au",
+        "summary": "Communications to water towers/lift stations disrupted"
+      }
+    ],
+    "github": "23907",
+    "master_id": "9A7AD59B-86A2-47F9-9655-AF430C8A25B7",
+    "modified": "2026-11-11T04:51:32Z"
+  },
+  "reference": "https://statescoop.com/coordinated-cyberattack-disrupts-water-utilities-in-30-minnesota-communities/; https://securityaffairs.com/196453/ics-scada/cisa-urges-utilities-to-remove-internet-exposed-plcs-after-minnesota-attacks.html; https://www.govinfosecurity.com/hackers-disrupt-controls-at-minnesota-water-utilities-a-32362; https://www.wired.com/story/a-leaked-memo-ties-cyberattacks-on-minnesota-water-utilities-to-iran/; https://dysruptionhub.com/plymouth-minnesota-water-cyberattack/; https://www.plymouthmn.gov/Home/Components/News/News/8977/2158; https://www.avertium.com/flash-notices/coordinated-attack-on-rockwell-micrologix-plcs-disrupts-water-systems-across-7-states",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Overnight on Sunday July 26, 2026, the City of Plymouth, Minnesota lost communications to cellular-connected equipment at two water towers and several wastewater lift stations in a cyberattack that was part of a coordinated campaign against more than 30 Minnesota municipal water utilities (and systems in other states) targeting internet-facing PLCs. Crews ran the system manually and restored communications by Tuesday afternoon; water levels and quality were unaffected. A leaked WaterISAC memo tied the campaign to Iranian state-sponsored hackers; US agencies have not formally attributed it.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 26,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "221310",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "City of Plymouth"
+  }
+}

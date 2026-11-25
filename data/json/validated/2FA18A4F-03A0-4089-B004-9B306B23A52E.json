@@ -1,0 +1,116 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "2FA18A4F-03A0-4089-B004-9B306B23A52E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24290\nM365 account compromise: S - Mail, cloud External; hacking Unknown. Incident date not given: coded July 2026 (investigation end) as the latest anchor - the access itself was earlier, so dbir_year could be 2027 or 2026; kept 2027. NAICS 237 -> 237310. Count not given. Employee count 25001 to 50000 (approximate).",
+    "created": "2026-11-05T23:59:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24290",
+    "master_id": "2FA18A4F-03A0-4089-B004-9B306B23A52E",
+    "modified": "2026-11-05T23:59:58Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/kiewit-corporation-august-2026; https://www.classaction.org/media/kiewit-data-breach-notice-2026.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Kiewit, a major North American construction and engineering firm, found unauthorized access to an employee's Microsoft 365 account that exposed names, addresses, dates of birth, Social Security numbers, driver's license and government ID numbers and employment-related health information of current and former employees and contractors. Its investigation finished July 24, 2026 and it reported to Massachusetts regulators August 21, 2026.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "237310",
+    "region": [
+      "019021"
+    ],
+    "state": "NE",
+    "victim_id": "Kiewit Corporation"
+  }
+}

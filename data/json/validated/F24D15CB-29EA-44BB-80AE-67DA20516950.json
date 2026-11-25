@@ -1,0 +1,135 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "notes": "Malware associated with early-stage ransomware; no encryption reported.",
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "F24D15CB-29EA-44BB-80AE-67DA20516950",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24464\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach, but no encryption or ransom reported -> Malware Unknown (ransomware-precursor), integrity Software installation; no availability impact reported. Asset role OT (weather-services OT network).\nPreliminary exfiltration to Chinese IPs -> Potentially, data Internal. Possible insider involvement under investigation; actor coded External Unknown. Issue says ~2025 but reporting is Sept 2026 (TimesLive/BusinessDay Sep 26, 2026) -> dbir_year 2027. State-owned company -> government Other. Industry 488111 within NAICS 488.",
+    "created": "2026-11-20T19:55:45Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware-precursor malware in OT weather systems"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Possible exfiltration to Chinese IPs"
+      }
+    ],
+    "github": "24464",
+    "master_id": "F24D15CB-29EA-44BB-80AE-67DA20516950",
+    "modified": "2026-11-20T19:55:45Z"
+  },
+  "reference": "https://www.scworld.com/brief/south-african-air-traffic-control-firm-investigates-ransomware-linked-malware-in-ot-network; https://www.timeslive.co.za/news/business/2026-09-26-air-traffic-agency-probes-cyberattack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In September 2026 South Africa's state-owned air traffic control operator ATNS found suspicious activity and malware commonly associated with the early stages of ransomware attacks in operational technology environments supporting weather services, with preliminary signs of data exfiltration to IP addresses in China. Facilities under investigation included Port Elizabeth and possibly East London airports and Maputo International Airport in Mozambique. ATNS believed its team had contained the attack and brought in forensics firms, which were also looking into possible insider data theft.",
+  "timeline": {
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ZA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Other"
+    ],
+    "industry": "488111",
+    "region": [
+      "002018"
+    ],
+    "victim_id": "Air Traffic and Navigation Services (ATNS)"
+  }
+}

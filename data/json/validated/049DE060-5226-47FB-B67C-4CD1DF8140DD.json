@@ -1,0 +1,160 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ExfilSquad"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "049DE060-5226-47FB-B67C-4CD1DF8140DD",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24126\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nThe bank confirmed only email addresses and phone numbers; the 90 million figure is attacker-claimed (data_total omitted). Extortion inferred from the leak-site listing and later removal; reviewer may drop. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      }
+    ],
+    "github": "24126",
+    "master_id": "049DE060-5226-47FB-B67C-4CD1DF8140DD",
+    "modified": "2026-11-11T05:59:31Z"
+  },
+  "reference": "https://saharareporters.com/2026/08/04/hackers-access-zenith-bank-customers-email-addresses-phone-numbers-bank-investigates; https://www.premiumtimesng.com/business/business-news/900865-zenith-bank-investigates-data-breach.html; https://www.resecurity.com/blog/article/exfilsquad-targets-new-victims-shares-data-via-torrents",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ExfilSquad claimed on July 26, 2026 to have breached Zenith Bank and stolen about 90 million records (874 GB). Zenith Bank confirmed unauthorized access to limited customer data, such as emails and phone numbers, as part of a broader global attack, and said financial data and banking services were not affected. The claims were removed from the leak site by August 7.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 26,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NG"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "522110",
+    "region": [
+      "002011"
+    ],
+    "victim_id": "Zenith Bank Plc"
+  }
+}

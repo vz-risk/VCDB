@@ -1,0 +1,134 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ALP-001"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "DF9F0A30-F9D6-4C10-8CF4-3CCF169215A2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23147\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown). ALP-001 calls itself a ransomware group but no encryption is claimed, so no malware block. Claim is attacker-sourced, unverified (broken sample link) -> confidence Low; data types not stated. Leak-site publication threat -> data_abuse Yes - Data ransomed; Extortion not coded (no demand). Employee count approximate (about 58k). Incident date = Mar 21, 2026 post -> dbir_year 2027.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:22:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23147",
+    "master_id": "DF9F0A30-F9D6-4C10-8CF4-3CCF169215A2",
+    "modified": "2026-11-11T01:22:47Z"
+  },
+  "reference": "https://www.cyberdaily.au/security/13383-exclusive-ransomware-newcomer-claims-breach-of-security-camera-firm-hikvision",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 21, 2026 the newly emerged ALP-001 ransomware group listed security camera maker Hikvision on its leak site, claiming to have stolen 19.9TB of data and threatening to publish it in 200GB portions within five days. The sample link was broken, no ransom demand was listed, and Hikvision said it was investigating.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CN"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334290",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Hangzhou Hikvision Digital Technology Co., Ltd."
+  }
+}

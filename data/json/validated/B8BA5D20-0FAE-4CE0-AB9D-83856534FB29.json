@@ -1,0 +1,108 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Snap picture"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Mobile phone"
+      },
+      {
+        "variety": "P - Customer"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B8BA5D20-0FAE-4CE0-AB9D-83856534FB29",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24368\nLabel Misuse. Coded misuse 'Snap picture' (unauthorized photos/video of residents) via Physical access by internal End-user; motive Fun (sharing with coworkers; not stated -> Unknown). Asset U - Mobile phone (Snapchat recording) and P - Customer (residents). Data Personal 3 (images of residents), data_victim Customer. Discovery internal Reported by employee? Not stated -> Unknown. NAICS 6231 -> 623312 (assisted living for the elderly; memory care). Six employees terminated (others shared the footage) - coded as one actor group. Employee count Unknown.",
+    "created": "2026-11-05T23:58:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Employee recorded residents and shared videos"
+      }
+    ],
+    "github": "24368",
+    "master_id": "B8BA5D20-0FAE-4CE0-AB9D-83856534FB29",
+    "modified": "2026-11-05T23:58:07Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.chicagotribune.com/2026/09/01/woman-pleads-not-guilty-memory-care-facility/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Madison Russo, a 25-year-old former employee of Encore Memory Care in South Barrington, Illinois, was charged with unlawfully recording at least three residents between January and July 2026, including footage of residents naked, showering and using toilets, via Snapchat and sharing it with other employees in a group chat. The facility learned of it in June and fired six employees.",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "623312",
+    "region": [
+      "019021"
+    ],
+    "state": "IL",
+    "victim_id": "Encore Memory Care"
+  }
+}

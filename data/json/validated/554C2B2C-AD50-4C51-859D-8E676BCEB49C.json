@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1536,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1536,
+      "data_victim": [
+        "Employee",
+        "Customer",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "554C2B2C-AD50-4C51-859D-8E676BCEB49C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24605\nCTG is an IT services/staffing firm (a Cegeka company): NAICS coded 541512 rather than issue's 561. Counts are the sum of state AG filings (TX 1,385 + MA 77 + VT 48 + NH 26 = 1,536). Files copied: result Exfiltrate. Health insurance member IDs -> Medical. Employee count 1001 to 10000 (approximate). Discovery Unknown.",
+    "created": "2026-11-05T23:52:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24605",
+    "master_id": "554C2B2C-AD50-4C51-859D-8E676BCEB49C",
+    "modified": "2026-11-05T23:52:05Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.prnewswire.com/news-releases/computer-task-group-data-breach-investigation-edelson-lechtzin-llp-probes-class-action-claims-after-exposure-of-social-security-numbers-and-health-data-302916253.html; https://www.federmanlaw.com/blog/computer-task-group-incorporated-data-breach-investigated-by-federman-sherwood/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "On September 26, 2026 an unauthorized party accessed Computer Task Group's network and copied files. CTG determined on October 2 that the files contained names, Social Security numbers, direct deposit account details, government IDs and health insurance member IDs. About 1,536 current and former employees, contractors and clients were affected; notices began October 19, 2026.",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541512",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Computer Task Group, Incorporated"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 26,
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 26,
+      "data_victim": [
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "3DA0F575-1BEE-4C4C-8704-1A28C4B2F7F7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22746\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue has no template tag (labelled Needs Details). Sources say Wiltshire Police 'accidentally released' the document but not how (publication, FOI response, misdelivery) or to whom -> error variety/vector Unknown, internal actor variety Unknown. The release date is not reported; earliest dated anchor is The Telegraph report of Nov 8 2025 -> timeline.incident 2025-11-08, dbir_year 2027 (reviewer: the release may predate this). Credentials amount 26 = 13 codes + 13 passwords. data_victim includes Employee (officer/prison staff details); prison officers belong to HMPPS (other org) - noted only. Asset M - Documents assumed from 'the document'; state Unknown (paper vs electronic not stated). Government kept Local per issue label (county-area force). Employee count ~2,000+ (Wiltshire Police officers and staff).",
+    "created": "2026-11-11T04:09:28Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "unk",
+        "attribute": "cp",
+        "summary": "Document with codes and passwords accidentally released"
+      }
+    ],
+    "github": "22746",
+    "master_id": "3DA0F575-1BEE-4C4C-8704-1A28C4B2F7F7",
+    "modified": "2026-11-11T04:09:28Z"
+  },
+  "reference": "https://www.yahoo.com/news/articles/police-accidentally-release-dozens-passwords-183819084.html; https://databreaches.net/?p=124971",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Wiltshire Police in England accidentally released a document containing 13 door/entry codes and 13 passwords for police systems and buildings, including door codes to safe houses for rape and sexual assault victims, codes for digital evidence systems and a police computer password, plus contact details of 32 police contacts and details of prison officers at HMP Erlestoke, Winchester and Isle of Wight. The force opened an investigation; the leak was reported by The Telegraph on Nov 8 2025.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 8,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Wiltshire Police"
+  }
+}

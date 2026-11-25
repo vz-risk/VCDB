@@ -1,0 +1,189 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B2708E94-C0EB-4BB4-917B-F81BF6746643",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24406\nLabel 'Social'. Coded social Phishing via Email (link) targeting End-user, then hacking Use of stolen creds on the cloud email/work account (S - Mail, cloud External). Integrity Alter behavior. The issue's 35,916 count is from another entity in the source; Eskenazi's count not disclosed. Government: Eskenazi is the Health & Hospital Corporation of Marion County (municipal) -> Local; NAICS 622110. Employee count 1001 to 10000 (approximate).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-05T23:57:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee phished from compromised partner mailbox"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Stolen credentials used on cloud work account"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Patient data accessed"
+      }
+    ],
+    "github": "24406",
+    "master_id": "B2708E94-C0EB-4BB4-917B-F81BF6746643",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/angmar-management-services-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Eskenazi Health, an Indianapolis safety-net health system, was hit by a social engineering attack beginning June 3, 2026 and discovered July 27, 2026. A threat actor took over a trusted business contact's email account and sent phishing emails with document notifications; an Eskenazi employee clicked the link and entered credentials, which were used to access the employee's cloud-based work account. Patient demographics, contact, insurance and billing information, medical record numbers, medical and treatment information, Social Security numbers and substance use disorder information were compromised.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 7
+    },
+    "incident": {
+      "day": 3,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Eskenazi Health"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 368000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 368000,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "16B32759-7DB7-48EA-B971-3715C27ED969",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23461\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Hacking-ext-unknown; Exploit vuln and Extortion coded from the Have I Been Pwned description (Oracle PeopleSoft zero-day, pay-or-leak demand). The zero-day claim is the attacker's and is unverified. Record count is HIBP's 368k email addresses. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      }
+    ],
+    "github": "23461",
+    "master_id": "16B32759-7DB7-48EA-B971-3715C27ED969",
+    "modified": "2026-11-11T06:07:29Z"
+  },
+  "reference": "https://themalaysianreserve.com/2026/06/18/jcpenney-and-catalyst-brands-data-breach-edelson-lechtzin-llp-launches-investigation-into-exposure-of-personal-information/; https://haveibeenpwned.com/Breach/JCPenney",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In June 2026 ShinyHunters targeted JCPenney and other Catalyst Brands companies in a 'pay or leak' extortion campaign, allegedly exploiting a zero-day vulnerability in Oracle PeopleSoft. About 368,000 records from internal HR systems were later published, including names, emails, phone numbers, addresses, dates of birth, job titles and government ID numbers of current and former employees.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "455110",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "J. C. Penney Company, Inc. (Catalyst Brands)"
+  }
+}

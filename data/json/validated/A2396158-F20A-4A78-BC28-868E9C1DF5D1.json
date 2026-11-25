@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "INC Ransom"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Student",
+        "Employee",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A2396158-F20A-4A78-BC28-868E9C1DF5D1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23501\nINC Ransom claim but the compromise was a cloud storage platform with data theft; no encryption reported -> hacking + Exfiltrate, actor INC Ransom (Organized crime, Financial), cloud External. Data victim Student, Employee, Patient (university health services). Count not in the issue body. Employee count 1001 to 10000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:23:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23501",
+    "master_id": "A2396158-F20A-4A78-BC28-868E9C1DF5D1",
+    "modified": "2026-11-06T00:23:06Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/campbell-university-may-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Campbell University in North Carolina found on April 1, 2026 that one of its cloud-based data storage platforms had been accessed without authorization on March 31-April 1. The INC Ransom group claimed it took about 500 GB, publicized by DeXpose on April 12. Names, addresses, Social Security numbers, government IDs, digital signatures, medical records, diagnoses, medications, health insurance and financial information were compromised. It reported to HHS on May 29, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 31,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611310",
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Campbell University"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Partner",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "AA69473F-C0DA-47F4-B90E-415DEB5AC490",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24237\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. 'Leaked' data -> Exfiltrate, Yes. Names, RRNs, addresses, entrance codes -> Personal; bank account info -> Bank. Administrators -> Employee; riders and stores -> Partner; ordering customers -> Customer.\nRecognized Aug 18, 2026 -> dbir_year 2027. Industry 492210 within NAICS 492. Chosun page could not be fetched; coded from issue text. Count and employee size unknown.",
+    "created": "2026-11-20T19:50:16Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed"
+      }
+    ],
+    "github": "24237",
+    "master_id": "AA69473F-C0DA-47F4-B90E-415DEB5AC490",
+    "modified": "2026-11-20T19:50:16Z"
+  },
+  "reference": "https://biz.chosun.com/en/en-industry/2026/08/24/AEVDCGZ545FZ3AOYVMKY4LZIPY/?outputType=amp",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In August 2026 Fly, a South Korean delivery agency platform, found unauthorized access through abnormal access routes that exposed data on administrators, delivery riders, stores and ordering customers. Leaked data included names, contact details, addresses and bank account information, resident registration numbers for administrators and riders, business registration numbers for stores, and some building entrance codes for customers. Fly blocked the access routes and reported to KISA, the Personal Information Protection Commission and police.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "KR"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "492210",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Fly"
+  }
+}

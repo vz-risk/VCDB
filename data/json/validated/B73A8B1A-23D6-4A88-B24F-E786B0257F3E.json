@@ -1,0 +1,166 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "S - Mail"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B73A8B1A-23D6-4A88-B24F-E786B0257F3E",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22932\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. County identified the attack as ransomware on Dec 25 2025 -> incident date Dec 25 2025 (begin may be slightly earlier), dbir_year 2027. Confidentiality Yes based on the mayor's Jan 4 2026 statement (via BeyondMachines) that attackers 'only accessed a small amount of data'; data types and counts not disclosed -> Unknown. No ransomware group claim found. Motive Financial inferred from ransomware (extortion payload); no explicit ransom demand reported, so no social/Extortion action. Mail and web-application assets reflect the email platform and online permit portal taken offline (may have been proactive shutdown). Discovery method not stated (county 'became aware'). Employee count ~300-400 (approximate, not confirmed).",
+    "created": "2026-11-11T04:12:19Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Small amount of data accessed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems encrypted / services offline"
+      }
+    ],
+    "github": "22932",
+    "master_id": "B73A8B1A-23D6-4A88-B24F-E786B0257F3E",
+    "modified": "2026-11-11T04:12:19Z"
+  },
+  "reference": "https://www.ctvnews.ca/edmonton/article/leduc-county-target-of-christmas-day-cybersecurity-attack/; https://beyondmachines.net/event_details/leduc-county-reports-ransomware-attack-impacting-municipal-services-d-r-u-k-7",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Dec 25 2025 Leduc County, Alberta became aware of a ransomware attack that disabled some of its IT systems; other systems were proactively shut down, taking the county email platform, online safety-codes and development permit portal and website forms offline. RCMP, insurers and banks were notified. In early January 2026 the county said preliminary findings indicated the attackers accessed a small amount of data.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 25,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Leduc County"
+  }
+}

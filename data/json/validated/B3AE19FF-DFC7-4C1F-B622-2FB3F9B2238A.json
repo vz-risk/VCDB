@@ -1,0 +1,174 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access vector not disclosed.",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "VYPR"
+      ],
+      "notes": "VYPR ransomware group claimed the attack on its leak site on Oct 5, 2026 and threatened to release data.",
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days",
+        "value": 13
+      },
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "B3AE19FF-DFC7-4C1F-B622-2FB3F9B2238A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24288\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nRecoded to the Malware-ext-ransomware-breach template: the multi-day outage, controlled network downtime and restoration pattern are consistent with ransomware, and the VYPR ransomware group claimed the attack on Oct 5, 2026 (dexpose.io, breachsense.com), threatening to release stolen data. JPS has not confirmed ransomware or data theft. Actor: VYPR -> external Organized crime, Financial. Action: Ransomware with Exfiltrate (per leak-site claim); initial vector Unknown. data_disclosure Yes per template and the actor's data-theft claim; data variety Unknown (no categories or record counts published). Discovery: Actor disclosure per template; JPS itself reported detecting suspicious activity early Monday Aug 3, 2026, so discovery is coded 0 days. Incident date corrected from Aug 4 to Aug 3 per JPS statement. Availability duration ~13 days (Aug 3 to Aug 16, when MyChart was restored and routine operations resumed). Government Local (Tarrant County Hospital District). Employee count 5000+ -> 1001 to 10000 (approximate). Sources: hoodline.com, jpshealthnet.org/network-downtime, beckershospitalreview.com, keranews.org, dexpose.io, breachsense.com.",
+    "created": "2026-11-05T23:59:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "System access"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Malware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted"
+      }
+    ],
+    "github": "24288",
+    "master_id": "B3AE19FF-DFC7-4C1F-B622-2FB3F9B2238A",
+    "modified": "2026-11-23T19:33:58Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://hoodline.com/2026/08/jps-health-network-hits-fifth-day-of-outage-patients-stuck-on-paper-forms/; https://www.jpshealthnet.org/network-downtime; https://beckershospitalreview.com/healthcare-information-technology/cybersecurity/jps-health-network-outage-stretches-into-8th-day-in-fort-worth; https://www.keranews.org/news/2026-08-14/jps-brings-some-systems-back-online-returns-pharmacy-clinic-and-lab-operations-to-normal; https://www.dexpose.io/vypr-strikes-jps-health-network-in-ransomware-attack/; https://www.breachsense.com/breaches/jps-health-network-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "JPS Health Network, Tarrant County's safety-net health system in Fort Worth, Texas, identified suspicious activity in its network early on August 3, 2026 and took systems offline. The outage lasted about two weeks: staff used paper forms, phone lines and prescription refills were disrupted, ambulances were diverted, and the core EHR was not restored until August 14, with MyChart back on August 16. On October 5, 2026 the VYPR ransomware group claimed the attack on its leak site and threatened to release stolen data. JPS has not confirmed ransomware or data theft.",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 3,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "TX",
+    "victim_id": "JPS Health Network"
+  }
+}

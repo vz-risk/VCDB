@@ -1,0 +1,169 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "INC Ransom"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0E98CE53-4EBB-4B1A-9F2D-A448208C4AE6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23479\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nRe-sourced 2026-11-11: Found the city's official notice (June 18, 2026: incident on Monday June 8, certain systems impacted, all restored), FOX 5 Atlanta (June 20) and a July 2, 2026 INC Ransom leak-site claim (DeXpose) of stolen municipal data with a release threat. Re-coded from Hacking-unknown to ransomware with exfiltration: actor INC Ransom (Organized crime, Financial), malware Ransomware + Exfiltrate, unknown initial action, Obscuration/Interruption, Software installation, confidentiality Yes with Internal data; confidence Low -> Medium.\nActor, ransomware and data theft are attacker-sourced (INC Ransom leak-site claim of 'valuable municipal data', no data types or volume given) and not confirmed by the city, which says only that certain computer systems were impacted and restored; per the skill rule the specific attacker claim is coded over Unknown. Data coded Internal (municipal data, types unspecified), data_victim Victim organization. Incident date June 8, 2026 per the city notice -> dbir_year 2027. Discovery: city detected it before the actor's claim -> internal Unknown. Acworth city government ~300 staff -> 101 to 1000 (estimate). Asset unknown (city did not name systems). No data_abuse coded: no evidence the data was published. Sources: city notice, AJC, 11Alive, MDJ, FOX 5 Atlanta, DeXpose.",
+    "created": "2026-11-11T04:15:09Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware deployed (INC Ransom claim)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Municipal data exfiltrated (claimed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "City systems impacted, later restored"
+      }
+    ],
+    "github": "23479",
+    "master_id": "0E98CE53-4EBB-4B1A-9F2D-A448208C4AE6",
+    "modified": "2026-11-11T04:53:23.000Z"
+  },
+  "reference": "https://www.ajc.com/news/2026/06/systems-restored-after-data-breach-in-city-of-acworth-officials-say/; https://www.11alive.com/article/news/local/city-of-acworth-investigates-cybersecurity-breach-services-fully-restored/85-c9398edd-9a17-4664-a496-ce39675d746f; https://www.mdjonline.com/news/local/acworth-reports-cyberattack-on-city-computer-systems/article_551f7dbc-c4e3-4c39-8030-97b00631ba79.html; https://acworth-ga.gov/wp-content/uploads/2026/06/Cybersecurity-Incident-Website-Update-6.18.2026.pdf; https://www.fox5atlanta.com/news/acworth-computer-networks-targeted-early-june-cyberattack; https://www.dexpose.io/incransom-targets-city-of-acworth-in-ransomware-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The City of Acworth, Georgia identified a cybersecurity incident that began on Monday, June 8, 2026 and impacted certain city computer systems. The city notified law enforcement and engaged cybersecurity professionals; by June 18 all systems were restored with no impact on day-to-day operations. On July 2, 2026 the INC Ransom ransomware group claimed the attack, saying it had obtained municipal data and threatening to release it unless the city made contact; the city has not confirmed ransomware or data theft.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 8,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "GA",
+    "victim_id": "City of Acworth, Georgia"
+  }
+}

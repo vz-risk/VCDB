@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "MoneyMessage"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 8151,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8151,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "8AD6D291-ACB1-4D19-B6B9-8AC250D09E5C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24246\nMoneyMessage (ransomware/extortion group) claimed and leaked data; no encryption reported -> hacking + Exfiltrate, actor MoneyMessage (Organized crime / Financial), data_abuse 'Yes - Data ransomed' (leak after non-payment implied). Incident Dec 4, 2025 -> dbir_year 2027. Data victim Customer/Other (children and families served). Employee count 101 to 1000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:00:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24246",
+    "master_id": "8AD6D291-ACB1-4D19-B6B9-8AC250D09E5C",
+    "modified": "2026-11-06T00:00:53Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/texas-hearing-institute-sportsmed-family-partnerships-florida-data-breaches/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Family Partnerships of Central Florida, a community-based care lead agency contracted by the Florida Department of Children and Families, found that a threat actor accessed its network between December 4, 2025 and January 2, 2026. The MoneyMessage group claimed it and leaked the stolen data. Names, dates of birth, Social Security numbers, driver's license and state ID numbers, financial account and health information of 8,151 people were compromised.",
+  "timeline": {
+    "compromise": {
+      "unit": "Weeks",
+      "value": 4
+    },
+    "incident": {
+      "day": 4,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "624110",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Family Partnerships of Central Florida"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2856,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2856,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "E3F01B71-2D2C-4897-BA01-6EE3BDEF7C9F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23493\nAttackers registered member portal accounts using members' identifiers and redeemed wellness rewards -> hacking Unknown via Web application, integrity Fraudulent transaction, motive Financial. Incident January 1, 2026 -> dbir_year 2027. NAICS 524114 tag kept.",
+    "created": "2026-11-06T00:24:27Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Member portal accounts registered and accessed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Wellness rewards redeemed"
+      }
+    ],
+    "github": "23493",
+    "master_id": "E3F01B71-2D2C-4897-BA01-6EE3BDEF7C9F",
+    "modified": "2026-11-06T00:24:27Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/blue-fish-pediatrics-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Unauthorized actors registered and accessed Regence BlueCross BlueShield of Oregon digital member accounts between January 1 and April 15, 2026, and redeemed the members' wellness rewards for gift cards. Account information for 2,856 members may have been viewed.",
+  "timeline": {
+    "incident": {
+      "day": 1,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524114",
+    "region": [
+      "019021"
+    ],
+    "state": "OR",
+    "victim_id": "Regence BlueCross BlueShield of Oregon"
+  }
+}

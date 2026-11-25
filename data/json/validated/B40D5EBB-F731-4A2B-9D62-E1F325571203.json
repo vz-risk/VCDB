@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "B40D5EBB-F731-4A2B-9D62-E1F325571203",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23177\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown). Hasbro says data appears to have been stolen -> data_disclosure Yes; types not disclosed -> Unknown. Systems were taken offline by Hasbro as containment, so no availability attribute is coded for the attacker (add Interruption if you count the disruption). No ransomware confirmed, so no malware block. Discovery internal (Hasbro detected it). Employee count approximate (about 5k). Incident date = detection Mar 28, 2026 -> dbir_year 2027.",
+    "created": "2026-11-11T01:22:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23177",
+    "master_id": "B40D5EBB-F731-4A2B-9D62-E1F325571203",
+    "modified": "2026-11-11T01:22:47Z"
+  },
+  "reference": "https://www.bankinfosecurity.com/hasbro-systems-nerfed-by-data-breach-recovery-underway-a-31321; https://securityaffairs.com/190306/security/hasbro-hit-by-cyberattack-investigates-possible-data-breach.html; https://www.sec.gov/Archives/edgar/data/46080/000004608026000013/has-20260401.htm; https://ghostbustersnews.com/2026/04/05/hasbro-hit-by-cyberattack-potential-delays-and-data-concerns-under-investigation/; https://www.wsj.com/articles/toy-maker-hasbro-hit-in-cyberattack-03637b05",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Toymaker Hasbro detected a breach of its IT systems on Saturday, March 28, 2026, took some systems offline as a containment measure and warned investors in an April 1 SEC 8-K filing that some operations were disrupted, that full recovery could take weeks, and that data appears to have been stolen. It did not say whether ransomware or a ransom demand was involved.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 28,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "339930",
+    "region": [
+      "019021"
+    ],
+    "state": "RI",
+    "victim_id": "Hasbro, Inc."
+  }
+}

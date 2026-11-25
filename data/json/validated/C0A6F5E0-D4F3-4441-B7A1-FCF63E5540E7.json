@@ -1,0 +1,117 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Unapproved hardware",
+        "Snap picture"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Fun"
+      ],
+      "variety": [
+        "Doctor or nurse"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Other employee"
+      },
+      {
+        "variety": "M - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 8,
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 8,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "C0A6F5E0-D4F3-4441-B7A1-FCF63E5540E7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23621\nInsider privacy violation: misuse 'Unapproved hardware' (hidden camera) via Physical access; actor Internal Doctor or nurse, motive not stated (Unknown). Assets P - Other employee (people recorded) and M - Other (recording device holding the footage). Data Personal (images) of 8 employees. Discovery internal Unknown (employees found it). Employee count 1001 to 10000 (WVU Medicine).",
+    "created": "2026-11-06T00:19:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Hidden camera recorded employees"
+      }
+    ],
+    "github": "23621",
+    "master_id": "C0A6F5E0-D4F3-4441-B7A1-FCF63E5540E7",
+    "modified": "2026-11-06T00:19:05Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.dominionpost.com/2026/07/03/warrants-issued-in-ruby-bathroom-camera-investigation/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "A physician at J.W. Ruby Memorial Hospital in Morgantown, West Virginia hid a recording device under a sink in a staff restroom on or before June 26, 2026. Employees found it and reported it to police. Investigators found video of eight hospital employees recorded without consent and seized computers and storage devices from his home. He was charged with eight counts of criminal invasion of privacy and one felony count.",
+  "timeline": {
+    "incident": {
+      "day": 26,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "WV",
+    "victim_id": "J.W. Ruby Memorial Hospital"
+  }
+}

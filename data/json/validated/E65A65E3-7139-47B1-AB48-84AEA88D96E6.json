@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Settra"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "E65A65E3-7139-47B1-AB48-84AEA88D96E6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23689\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach; leak-site listing only, unconfirmed -> Suspected, Potentially, Low, no malware block.\nThe Caltrain link in comments (Claim Depot) describes a TDS network disruption in Nov 2024 affecting Caltrain data, disclosed Nov 2026; that appears to be a separate, earlier incident (out of the DBIR 2027 window) and is not coded here.\nIndustry 518210 (data/payment processing for citations) chosen within NAICS 56 tag. Date June 2026, dbir_year 2027. Employee count a guess. Single source (law-firm page).",
+    "created": "2026-11-20T19:26:33Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Settra leak-site listing"
+      }
+    ],
+    "github": "23689",
+    "master_id": "E65A65E3-7139-47B1-AB48-84AEA88D96E6",
+    "modified": "2026-11-20T19:26:33Z"
+  },
+  "reference": "https://www.masonllp.com/case/turbo-data-systems-data-breach-class-action/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "vcdb",
+  "summary": "On June 28, 2026 the Settra ransomware group listed Turbo Data Systems, a California citation processing and enforcement company serving municipalities, universities and public agencies, on its dark web portal. The data potentially exposed could include names, addresses, email addresses, phone numbers and Social Security numbers of people whose citations the company processed; the company had not confirmed the incident.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "518210",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Turbo Data Systems"
+  }
+}

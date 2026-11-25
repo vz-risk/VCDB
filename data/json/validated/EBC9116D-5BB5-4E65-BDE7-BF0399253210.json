@@ -1,0 +1,129 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "name": [
+        "Stuckin2019"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 68160,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 68160,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "EBC9116D-5BB5-4E65-BDE7-BF0399253210",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23144\nExfiltration confirmed -> hacking Unknown, Exfiltrate. Actor name from the forum claim. Amount coded as the 68,160 Texas figure only. Incident January 7, 2026 -> dbir_year 2027. NAICS 541611 tag does not fit a telehealth platform and clinician network -> 621999. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:27:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files copied"
+      }
+    ],
+    "github": "23144",
+    "master_id": "EBC9116D-5BB5-4E65-BDE7-BF0399253210",
+    "modified": "2026-11-06T00:27:22Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/openloop-health-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An unauthorized third party accessed OpenLoop Health's systems on January 7 and 8, 2026 and copied files containing names, addresses, email addresses, dates of birth and medical information; Social Security numbers were not taken. A threat actor called Stuckin2019 claimed the attack on a hacking forum and said it held data on 1.6 million patients. The Texas Attorney General lists 68,160 Texans affected; the total was not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 7,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621999",
+    "region": [
+      "019021"
+    ],
+    "state": "IA",
+    "victim_id": "OpenLoop Health Inc."
+  }
+}

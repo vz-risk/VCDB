@@ -1,0 +1,143 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ArcusMedia"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "B389E2BF-D1B6-4A10-B3FB-65D182431E1A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23845\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach; leak-site claim only (ArcusMedia via DeXpose/SOCRadar), no encryption or confirmation reported -> Suspected, Potentially, Low, no malware block. MyBroadband page could not be fetched.\nData types not stated. Date July 2026 claim -> dbir_year 2027. Industry 561510 within NAICS 5615 tag. Employee count unknown.",
+    "created": "2026-11-20T19:34:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data allegedly stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "ArcusMedia leak-site claim"
+      }
+    ],
+    "github": "23845",
+    "master_id": "B389E2BF-D1B6-4A10-B3FB-65D182431E1A",
+    "modified": "2026-11-20T19:34:54Z"
+  },
+  "reference": "https://mybroadband.co.za/news/security/658327-south-african-company-that-books-flights-for-agency-in-r29-6-billion-government-department-hit-by-ransomware-attack.html; https://www.dexpose.io/arcusmedia-strikes-south-african-travel-agency-be-travel/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July 2026 the ArcusMedia ransomware group claimed an attack on BE Travel, a South African travel management company that books flights for an agency of the national Department of Human Settlements. MyBroadband reported the attack based on the group's claim; no ransom demand, data details or confirmation from the company were published.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "ZA"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "561510",
+    "region": [
+      "002018"
+    ],
+    "victim_id": "BE Travel"
+  }
+}

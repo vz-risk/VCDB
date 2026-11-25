@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Days"
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "46EF3381-0794-4C25-A703-F4300A8FD6A1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24131\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplates Hacking-ext-unknown and Malware-ext-Ransomware-databreach. No ransomware or group named and CEVA would not discuss a ransom, so no malware block; warehouse operations disrupted -> availability Interruption. Reviewer may add Ransomware if confirmed.\nCEVA is the primary victim; clients whose customers' shipping data was taken listed as secondary victims (6 named; at least 10 reported to Dutch DPA). Data: names, addresses, phones, emails -> Personal; payment cards not involved per Bol. No count. Date ~Jul 29, 2026 -> dbir_year 2027. NAICS tag 4213 is not a current code; coded 493110 (warehousing). Issue tagged Impact but no figures.",
+    "created": "2026-11-20T19:44:57Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Shipping data stolen from CEVA systems"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Eight warehouses disrupted"
+      }
+    ],
+    "github": "24131",
+    "master_id": "46EF3381-0794-4C25-A703-F4300A8FD6A1",
+    "modified": "2026-11-20T19:44:57Z"
+  },
+  "reference": "https://techcrunch.com/2026/08/10/a-data-breach-at-shipping-giant-ceva-logistics-is-rippling-across-banks-retailers-steam-gamers-and-beyond/; https://www.freightwaves.com/news/cyberattack-on-ceva-logistics-warehouses-in-europe-impacts-retailers; https://partnerplatform.bol.com/en/nadp/security-incident-logistics-partner-of-bol; https://www.bleepingcomputer.com/news/security/valve-notifies-steam-hardware-customers-of-a-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Beginning around July 29, 2026 attackers intruded into systems supporting eight European warehouses of France-headquartered CEVA Logistics and stole shipping data, including names, home addresses, phone numbers and email addresses of customers of retailers and other clients that use CEVA. CEVA confirmed the intrusion to customers on August 1. The attack delayed shipments and led to canceled orders; Bol, De Bijenkorf, Ajax, ING, Ace & Tate and Valve (Steam hardware buyers) all warned customers, and the Dutch data protection authority received reports from at least 10 organizations. CEVA did not say how many people were affected or whether a ransom was demanded.",
+  "timeline": {
+    "incident": {
+      "day": 29,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "493110",
+    "region": [
+      "150155"
+    ],
+    "secondary": {
+      "amount": 6,
+      "victim_id": [
+        "Bol",
+        "De Bijenkorf",
+        "AFC Ajax",
+        "ING",
+        "Ace & Tate",
+        "Valve"
+      ]
+    },
+    "victim_id": "CEVA Logistics"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 31000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 31000,
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "7DBE5627-6402-43F0-BF0A-767A160EAE06",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24099\nCloses https://github.com/vz-risk/VCDB/issues/24121\nCloses https://github.com/vz-risk/VCDB/issues/24176\nCloses https://github.com/vz-risk/VCDB/issues/24177\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nMerged record for four issues on the same incident: #24099, #24121, #24176, #24177. Several issue summaries wrongly say July 2024; all primary sources (Euronews, TechTimes, Bloomberg, 20min) date it to the night of 30-31 Jul 2026 (TechNadu says 29-30 Jul). Incident date 30 Jul 2026 -> dbir_year 2027. Victim coded as the Office of Justice (Amt fuer Justiz), which runs the register. Government Federal because Liechtenstein is a sovereign national government (issue labels said Regional). NAICS 921190. Employee count not found -> Unknown. Hacking variety/vector not disclosed -> Unknown (template Hacking-ext-unknown; web application vector not stated, so asset coded S - Database). Motive Unknown: no ransom demand or sale reported. 31,000 counts legal entities, not individuals; used as data amount/total as reported. data_victim Other (beneficial owners of registered entities). The register was taken offline by the government as a response step; no availability attribute coded for that. Discovery: 'irregularities detected' by authorities -> internal, Unknown variety. Confidence Medium (vector/actor unknown).",
+    "created": "2026-11-11T04:10:02Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Register data copied"
+      }
+    ],
+    "github": "24099",
+    "master_id": "7DBE5627-6402-43F0-BF0A-767A160EAE06",
+    "modified": "2026-11-11T04:10:02Z"
+  },
+  "reference": "https://www.yahoo.com/news/world/articles/cyberattack-hits-liechtenstein-31-000-190432168.html; https://www.euronews.com/my-europe/2026/08/03/cyberattack-hits-liechtensteins-anti-money-laundering-data-register-vaduz-says; https://www.techtimes.com/articles/322751/20260803/liechtenstein-data-breach-attackers-hack-aml-registry-exposing-eu-security-flaw.htm; https://www.bluewin.ch/en/news/massive-cyberattack-on-economic-data-shocks-liechtenstein-li.3550299; https://eutoday.net/liechtenstein-register-breach-ownership-transparency/; https://www.20min.ch/story/super-gau-datenpanne-erschuettert-liechtenstein-und-bald-auch-die-schweiz-103612546; https://www.bloomberg.com/news/articles/2026-08-04/liechtenstein-hunts-hackers-after-names-on-31-000-funds-stolen; https://www.finews.com/news/english-news/73119-liechtenstein-one-of-the-most-serious-cyber-incidents-hackers-gained-access-register-of-beneficial-owners-exposing-highly-sensitive-information-on-around-31-000-legal-entities; https://www.b2b-cyber-security.de/en/Liechtenstein-data-records-stolen-from-anti-money-laundering-register/; https://www.technadu.com/hackers-breach-liechtensteins-registry-of-beneficial-owners-exfiltrating-data-on-31000-entities/632792/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On the night of 30-31 July 2026 an unknown attacker gained unauthorised access to Liechtenstein's Register of Beneficial Owners (VwbP), the anti-money-laundering register run by the Office of Justice. Data on about 31,000 companies, foundations and trusts was copied, including beneficial owners' names, dates of birth, nationality and country of residence. Irregularities were detected on 31 July and the system was taken offline. The government formed a crisis team under Prime Minister Brigitte Haas and announced the breach on 3-4 August. No ransom demand or dark-web posting was reported, and no data was altered or deleted.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 30,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "LI"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Liechtenstein Office of Justice - Register of Beneficial Owners (VwbP)"
+  }
+}

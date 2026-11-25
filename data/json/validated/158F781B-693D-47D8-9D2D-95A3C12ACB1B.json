@@ -1,0 +1,118 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1450,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1450,
+      "data_victim": [
+        "Patient",
+        "Employee",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "158F781B-693D-47D8-9D2D-95A3C12ACB1B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24370\nIssue NAICS 3254 (pharma); Novocure makes Tumor Treating Fields devices -> 334510 (electromedical apparatus). Patient IDs without names + <50 identified -> Medical amount 1450 (1,400 + <50) is approximate; data_total omitted. Also Personal (provider/employee contact info). Country: Novocure is Jersey-incorporated, US operations; coded US (subsidiary affected US data). Employee count 1001 to 10000 (approximate). Incident mid-Aug 2026.",
+    "created": "2026-11-05T23:58:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24370",
+    "master_id": "158F781B-693D-47D8-9D2D-95A3C12ACB1B",
+    "modified": "2026-11-05T23:58:07Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.cleveland.com/news/2026/09/cancer-patients-records-exposed-during-cyberattack.html; https://www.stocktitan.net/sec-filings/NVCR/8-k-novo-cure-ltd-reports-material-event-1bcfd6e39f02.html; https://securityarsenal.com/blog/novocure-cyberattack-exposes-patient-and-employee-data-detection-hipaa-response-and-defense-guide-for-healthcare-organizations; https://www.hipaajournal.com/novocure-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "NovoCure detected unauthorized access to certain information systems at a subsidiary in mid-August 2026 and disclosed it in an SEC 8-K on September 1, 2026. Internal patient ID numbers for more than 1,400 U.S. patients (without names), identifying information for fewer than 50 patients in the western U.S., and contact information for U.S. healthcare providers and Novocure employees were exposed. Medical devices and operations were not affected.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334510",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "NovoCure Ltd."
+  }
+}

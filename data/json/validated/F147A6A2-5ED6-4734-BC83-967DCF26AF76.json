@@ -1,0 +1,154 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "F147A6A2-5ED6-4734-BC83-967DCF26AF76",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24077\nVishing -> social Pretexting via Phone (target End-user) followed by network access (hacking Unknown; the notice letter PDF was not read). Industry from the NAICS 6241 tag -> 624190; Quantum Health is a care-navigation vendor to employer health plans, reviewer may prefer 524292. Count not disclosed. Employee count 1001 to 10000 (approximate).",
+    "created": "2026-11-06T00:06:25Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Vishing call to user"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Network access and data exposure"
+      }
+    ],
+    "github": "24077",
+    "master_id": "F147A6A2-5ED6-4734-BC83-967DCF26AF76",
+    "modified": "2026-11-06T00:06:25Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/quantum-health-july-2026; https://www.classaction.org/media/quantum-health-data-breach-letter-2026.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Quantum Health, an Ohio healthcare navigation and services company, found unauthorized access to its IT network between May 29 and June 1, 2026, after a user responded to a voice phishing (vishing) call. Insurance policy details, medical records, diagnoses and prescriptions, Social Security numbers, names, dates of birth, email addresses and phone numbers were exposed. It reported to Massachusetts regulators on July 30, 2026.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 29,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "624190",
+    "region": [
+      "019021"
+    ],
+    "state": "OH",
+    "victim_id": "Quantum Health"
+  }
+}

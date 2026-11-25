@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "LAPSUS$"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Source code"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "5EEAEEC5-11F2-49CE-9401-8F5EAB6A38E5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23141\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate tag Hacking-ext-extortion: hacking Unknown + social Extortion (target/vector Unknown). Sources say LAPSUS$ is trying to sell the data rather than publicly extort, and SecurityWeek calls it an extortion group; Extortion kept per the tag. Claims are attacker-sourced with screenshots, unconfirmed by AstraZeneca: IP -> Secrets; redacted secrets/config -> Credentials, Internal; Source code added because the dump is described as including code repositories and configuration - drop if not supported by the full article. data_abuse Yes - Data ransomed (offered for sale). Employee count approximate (about 90k). Incident date = March 2026 claim -> dbir_year 2027.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:22:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "3GB internal data dump taken"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Data offered for sale / extortion"
+      }
+    ],
+    "github": "23141",
+    "master_id": "5EEAEEC5-11F2-49CE-9401-8F5EAB6A38E5",
+    "modified": "2026-11-11T01:22:47Z"
+  },
+  "reference": "https://cybersecuritynews.com/astrazeneca-data-breach/; https://www.securityweek.com/extortion-group-claims-it-hacked-astrazeneca/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In March 2026 the LAPSUS$ extortion group claimed to have breached AstraZeneca and offered for sale a 3GB internal data dump described as intellectual property and infrastructure configuration details, posting file listings, screenshots and password-protected pastes with redacted secrets as proof. AstraZeneca had not commented as of March 20, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "325412",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "AstraZeneca PLC"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Skimmer",
+        "Tampering"
+      ],
+      "vector": [
+        "Victim public area"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "T - ATM"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "OT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Payment"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Hardware tampering"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "7D898800-2B70-4AAF-A88C-E5EABF5CD279",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22937\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Physical-ext-tampering-atm. Asset role OT because the skimmer was on a payment terminal. Date is the Friday before the Jan 6, 2026 reports. The ATM may belong to a bank; victim follows the issue (the supermarket). Data includes PINs captured by camera (Credentials). Employee count from 5,001-10,000 employees per The Org (LinkedIn range, likely an undercount), so coded Large (https://theorg.com/org/hannaford-supermarkets).",
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "ia",
+        "summary": "Skimmer installed on terminal"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "ter",
+        "attribute": "cp",
+        "summary": "Card data captured"
+      }
+    ],
+    "github": "22937",
+    "master_id": "7D898800-2B70-4AAF-A88C-E5EABF5CD279",
+    "modified": "2026-11-11T06:07:29Z"
+  },
+  "reference": "https://wbznewsradio.iheart.com/content/card-skimming-device-found-inside-atm-machine-at-a-chelmsford-supermarket/; https://chelmsfordpd.com/chelmsford-police-department-notifies-community-of-atm-skimmer/; https://rock929rocks.com/2026/01/06/skimming-device-camera-found-on-chelmsford-hannaford-atm/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Friday, January 2, 2026, Chelmsford police responded to Hannaford Supermarket on Drum Hill Road after someone found a debit card skimmer and a pinhole camera inside the store's ATM. Police said it was not clear how long the device had been there.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 2,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "NA"
+    ],
+    "industry": "445110",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Hannaford Supermarkets (Chelmsford, Massachusetts store)"
+  }
+}

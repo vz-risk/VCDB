@@ -1,0 +1,116 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 5,
+          "variety": "Classified"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 5,
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Law enforcement"
+      ]
+    }
+  },
+  "incident_id": "39D87501-75AC-414B-B7B5-2483B22C4A82",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24647\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse. Brinksman worked for a private contractor but served on-site at the agency with a TS clearance and agency system access -> coded internal (on-prem individual contractor treated as staff), variety Developer (systems integration developer). Reviewer could alternatively code actor partner. Per U.S. Press Freedom Tracker (citing the DOJ affidavit) the five reports were accessed between March and October 2026 -> incident 2026-03, dbir_year 2027. The journalist said in Sept 2026 she had published classified-based reporting 'over the past year', so earlier leaking is possible but uncharged. Motive not stated (relationship with the journalist reported) -> Unknown. Vector LAN access (classified facility). Discovery: FBI investigation (database logs etc.) -> external Law enforcement; how the leak was first detected is not stated. NAICS 928110 (national security) re-coded from the issue's 9211. Employee count from public estimates (~21,000). Confidence High.",
+    "created": "2026-11-11T04:18:37Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse - classified reports accessed outside job scope and leaked to journalist"
+      }
+    ],
+    "github": "24647",
+    "master_id": "39D87501-75AC-414B-B7B5-2483B22C4A82",
+    "modified": "2026-11-11T04:18:37Z"
+  },
+  "reference": "https://www.jpost.com/international/article-912939; https://pressfreedomtracker.us/all-incidents/cia-contractor-charged-with-leaking-classified-reports-to-journalist/; https://www.spokesman.com/stories/2026/oct/23/us-accuses-government-contractor-of-leaking-classi/; https://www.newsweek.com/who-is-ian-brinksman-u-s-contractor-accused-of-leaking-defense-info-12613977",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Ian Brinksman, a systems integration developer for a private contractor serving the CIA and holding a Top Secret clearance, allegedly accessed at least five classified intelligence reports outside the scope of his work between March and October 2026 and passed their contents to journalist Aida Chavez, who published matching articles on her Substack, Capital & Empire. The material included assessments on Israel, US-Israel relations and Iran. The FBI arrested him on October 23, 2026, citing database logs, phone records, building access records and emails.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "928110",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Central Intelligence Agency"
+  }
+}

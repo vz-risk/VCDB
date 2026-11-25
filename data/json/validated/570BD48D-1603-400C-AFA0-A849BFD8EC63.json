@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "570BD48D-1603-400C-AFA0-A849BFD8EC63",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23211\nEmail account compromise, financially motivated -> hacking Unknown, motive Financial, asset S - Mail. Incident November 12, 2025 -> dbir_year 2027. NAICS 621111. Employee count 11 to 100 (approximate).",
+    "created": "2026-11-06T00:27:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Mailbox accessed"
+      }
+    ],
+    "github": "23211",
+    "master_id": "570BD48D-1603-400C-AFA0-A849BFD8EC63",
+    "modified": "2026-11-06T00:27:22Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/data-breaches-neinstein-plastic-surgery-atlantic-brain-spine/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "An unauthorized individual accessed an email account at Neinstein Plastic Surgery in New York City between November 12 and 20, 2025; the practice spotted the activity December 2. Investigators judged it a financially motivated attack, but the mailbox held patient names, contact details, dates of birth, driver's license or passport numbers, Social Security numbers, card or financial account, health insurance and clinical information.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 12,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Neinstein Plastic Surgery"
+  }
+}

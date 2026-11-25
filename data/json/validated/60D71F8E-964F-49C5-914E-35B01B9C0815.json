@@ -1,0 +1,111 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 419,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 419,
+      "data_victim": [
+        "Partner"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "60D71F8E-964F-49C5-914E-35B01B9C0815",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24217\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-media followed (Misdelivery/Carelessness, internal actor, U - Desktop or laptop). The data went to a records requester who was not entitled to it. Count (419) and data fields (names, addresses, SSNs) come from the requester's own public post. The city confirms only that 'sensitive information was inadvertently included' and disputes the scale. data_victim Partner (people on a city vendor list). DATE CHECK: the source does not say when the records response was sent. Incident dated Aug 2026, the earliest anchor (city statement / iBerkshires article of 14 Aug 2026) -> dbir_year 2027. The actual error could be earlier. Discovery: the requester reported it -> external Unrelated 3rd party. Transmission medium (email/portal) not stated -> state Unknown. Employee count not found -> Unknown. NAICS 921110. Single source; confidence Medium.",
+    "created": "2026-11-11T04:12:20Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Misdelivery: SSN vendor list sent in records response"
+      }
+    ],
+    "github": "24217",
+    "master_id": "60D71F8E-964F-49C5-914E-35B01B9C0815",
+    "modified": "2026-11-11T04:12:20Z"
+  },
+  "reference": "https://www.iberkshires.com/story/83582/North-Adams-Disputes-Report-of-Data-Breach-.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The City of North Adams, Massachusetts, mistakenly included sensitive personal information in its response to a public records request. The requester said he received an Excel spreadsheet, built from a vendor list prepared for the Starbridge public-sector vendor platform, containing names, addresses and Social Security numbers of at least 419 people. He returned the documents and reported the error to the city and police. In August 2026 the city acknowledged the information was inadvertently included, disputed that a widespread breach occurred, and said it was reviewing its public records procedures.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "US-MA",
+    "victim_id": "City of North Adams"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Data mishandling"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Other"
+      ],
+      "variety": [
+        "Manager"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Printed"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "AFB4AB4F-36FD-4DC7-9E5E-5FAA657383DA",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23443\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue tagged Misuse (pipeline: Actor Internal). The Registrar of Voters (head of the office) removed copies of confidential voter records from the office -> internal actor variety Manager, misuse Data mishandling via Physical access. Motive coded Other: Curtis states he secured the copies to prevent alteration; no financial motive. data_disclosure Yes: printed records containing voter PII left the controlled environment in the possession of an insider acting outside policy (reviewer may prefer Potentially since the actor was already authorized to view them). Discovered during the election reconciliation process -> internal Other; reported to the Secretary of State June 6 (2 days). The ballot-count discrepancy involving another employee mentioned in the source is not coded. Victim recorded as Shasta County Elections Office; NAICS 921190 (election administration); Shasta County ~2,000 employees -> 1001 to 10000 (county-level estimate). Single local source (Shasta Scout).",
+    "created": "2026-11-11T04:14:30Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Registrar removed confidential voter documents from office"
+      }
+    ],
+    "github": "23443",
+    "master_id": "AFB4AB4F-36FD-4DC7-9E5E-5FAA657383DA",
+    "modified": "2026-11-11T04:14:30Z"
+  },
+  "reference": "https://shastascout.org/incident-at-shasta-elections-office-triggered-report-to-secretary-of-state-county-says/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 4, 2026 Shasta County Registrar of Voters Clint Curtis removed from the Elections Office copies of documents containing confidential voter information (names, addresses, birthdates, phone numbers and signatures). The removal was identified during the election reconciliation process and the county reported it to the California Secretary of State on June 6, 2026. Curtis said the documents were copies he had secured to prevent alteration.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 4,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921190",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Shasta County Elections Office"
+  }
+}

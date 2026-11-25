@@ -1,0 +1,149 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "25917F26-D6AB-4326-A2FB-E50506A3ED53",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24494\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue template is Malware-ext-Ransomware-databreach but sources describe an attempted ransomware attack stopped before encryption with no evidence of data theft, so: no confidentiality block, availability Interruption for the server outage/shutdown. Recoded per analyst review (2026-11-18): ransomware was downloaded and installed but blocked before it executed (mayor: blocked 'before it was able to execute'), so added action.malware Ransomware (vector Direct install, inferred from attacker's prior network access; entry method undisclosed) and integrity Software installation. Availability Obscuration deliberately NOT coded because no encryption occurred; this overrides the skill lint rule that pairs Ransomware with Obscuration. Issue draft dated it 2024-09; WSAW (published Sept 28, 2026) places the intrusion on Wednesday Sept 23, 2026 (date inferred from 'Wednesday'/'last week') -> dbir_year 2027. Discovery: staff noticed servers failing to communicate -> internal Infrastructure monitoring. Actor unnamed. Employee count from general knowledge. Confidence Medium.",
+    "created": "2026-11-11T04:13:34Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized network access - method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed; blocked before it could execute or encrypt"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Servers disrupted; systems shut down to stop attempted ransomware"
+      }
+    ],
+    "github": "24494",
+    "master_id": "25917F26-D6AB-4326-A2FB-E50506A3ED53",
+    "modified": "2026-11-18T21:31:47Z"
+  },
+  "reference": "https://spmetrowire.com/city-says-ransomware-attempt-behind-stevens-point-cyberattack/; https://www.wsaw.com/2026/09/29/stevens-point-city-staff-suspect-attempted-ransomware-attack/; https://www.wsaw.com/video/2026/09/28/city-stevens-point-believes-attempted-ransomware-attack-led-outage/; https://www.wsaw.com/video/2026/09/28/suspected-ransomware-attack-affects-some-stevens-point-city-devices/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Wednesday, September 23, 2026, an unauthorized intrusion into the City of Stevens Point, Wisconsin network disrupted city servers, which were online but failing to communicate. IT staff found suspicious activity on several machines and quarantined them, stopping what the city believes was the beginning of a ransomware attack before encryption. The mayor said there was no evidence data was stolen; about 240 devices were checked and services restored over the following weeks.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 23,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "WI",
+    "victim_id": "City of Stevens Point"
+  }
+}

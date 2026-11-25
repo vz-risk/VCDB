@@ -1,0 +1,176 @@
+{
+  "action": {
+    "hacking": {
+      "notes": "Stolen developer credentials",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ],
+      "variety": [
+        "Use of stolen creds",
+        "Backdoor"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "notes": "Miasma worm downloads config file that exfils credentials ",
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Password dumper"
+      ],
+      "vector": [
+        "Software update"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "teampcp"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 1,
+        "variety": "S - Code repository"
+      },
+      {
+        "variety": "S - LLM application"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "notes": "compromised credentials against code repo and also included code updates to targegt LLMs to run payloads",
+    "role": [
+      "IT"
+    ],
+    "total_amount": 1
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "API key"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Partner"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify configuration",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "partner": {
+      "variety": [
+        "Antivirus"
+      ]
+    }
+  },
+  "incident_id": "c5711940-b111-11f1-aa28-0b2e3ed5d951",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-09-15T18:28:51.029Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "use of stolen credentials to modify code base"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "codebase has stealer installed"
+      }
+    ],
+    "github": "23310",
+    "master_id": "9f45cb1b-ab67-4500-9ed0-9a171a0305e5",
+    "modified": "2026-09-15T18:40:08.316Z",
+    "timeline": {
+      "notification": {
+        "day": 2026,
+        "month": 6,
+        "year": 5
+      }
+    }
+  },
+  "reference": "https://www.govinfosecurity.com/miasma-worm-hits-microsofts-ai-coding-ecosystem-a-31912",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Security researchers said a fast-moving supply-chain attack linked to the \"Miasma\" worm hit Microsoft's developer ecosystem Friday, spreading through code repositories tied to Azure cloud tools. Security researchers said the attack spread to more than 70 repositories Friday in under two minutes, forcing the temporary disabling of Azure Functions-related repositories and development workflows. The incident affected repositories across the Azure, Azure-Samples and Microsoft repositories, including projects tied to Azure Functions and Microsoft's Durable Task framework",
+  "targeted": "Opportunistic",
+  "timeline": {
+    "compromise": {
+      "unit": "Minutes"
+    },
+    "discovery": {
+      "unit": "Days"
+    },
+    "exfiltration": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 5,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "513210",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Microsoft"
+  }
+}

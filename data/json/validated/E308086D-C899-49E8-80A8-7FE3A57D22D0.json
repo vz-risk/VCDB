@@ -1,0 +1,125 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Loss"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Mobile phone"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "E308086D-C899-49E8-80A8-7FE3A57D22D0",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22934\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-loss-userdev. Phone lost Nov 3 2025 at Shanghai airport, noticed three days later -> discovery 3 Days, dbir_year 2027. data_disclosure Potentially: NRA could not confirm a leak; device protection status not stated. Data: confidential contact details of nuclear-security staff (Personal, Internal); Bloomberg headline calls it classified data but Classified not coded as the BBC describes it as confidential contact details. Industry kept at issue 926130 (regulation of utilities, incl. nuclear). Employee count: NRA ~1,000+ staff (approximate). Facts from the issue text (BBC quote); fetches limited.",
+    "created": "2026-11-11T04:12:19Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "au",
+        "summary": "Work phone lost"
+      },
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Staff contact data potentially exposed"
+      }
+    ],
+    "github": "22934",
+    "master_id": "E308086D-C899-49E8-80A8-7FE3A57D22D0",
+    "modified": "2026-11-11T04:12:19Z"
+  },
+  "reference": "https://www.bbc.com/news/articles/c8j38rmm4z3o; https://japantoday.com/category/national/japanese-nuclear-official-loses-phone-with-confidential-data-in-china; https://www.bloomberg.com/news/articles/2026-01-07/japan-nuclear-official-loses-phone-with-classified-data-in-china",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Nov 3 2025 an employee of Japan's Nuclear Regulation Authority lost his work smartphone during a security check at a Shanghai airport while on a personal trip to China; he noticed three days later and it was not recovered. The phone held confidential contact details of NRA staff involved in nuclear security work; the agency could not confirm whether the data was leaked.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 3,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "JP"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "926130",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Nuclear Regulation Authority (Japan)"
+  }
+}

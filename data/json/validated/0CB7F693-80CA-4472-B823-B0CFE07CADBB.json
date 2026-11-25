@@ -1,0 +1,199 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "result": [
+        "Infiltrate"
+      ],
+      "target": [
+        "Finance",
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Phishing",
+        "Pretexting"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "NG",
+        "US"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "002011",
+        "019021"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "P - Finance"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Financial audit"
+      ]
+    }
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 913839.81,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "notes": "Fraudulent ACH of $913,839.81; $696,241.00 recovered by freezing the account, remainder covered by insurance.",
+    "overall_amount": 913839.81,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "0CB7F693-80CA-4472-B823-B0CFE07CADBB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24219\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue tagged Hacking-ext-unknown, but sources describe a phishing-led business email compromise. Coded per the Social-ext-Phishing template (Organized crime/Financial, Email vector, Alter behavior + Fraudulent transaction, confidentiality Potentially), adding Pretexting for the vendor impersonation and a Hacking Unknown step for the email-system compromise (the technique after the phish, e.g. stolen creds, is not stated). Fraudulent transaction coded as integrity per project rule. Phishing target role not stated -> End-user/End-user or employee; Finance for the payment staff. Actor country NG + US (Nigeria-based primary suspect, two U.S.-based affiliates); Organized crime per template given a multi-person ring. Discovery: staff detected the fraud on 17 Feb (financial review) -> internal Financial audit; discovery 5 days after the 12 Feb payment. Incident month Feb 2026 (phish date not given) -> dbir_year 2027. Data accessed in the mailbox not described -> data Unknown, disclosure Potentially. Employee count approximate (~350-400 city staff) -> 101 to 1000. NAICS 921110 (city; issue label 921190).",
+    "created": "2026-11-11T04:12:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee falls for phish"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Email system compromised"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Vendor impersonation (pretexting) leads to fraudulent ACH transaction"
+      }
+    ],
+    "github": "24219",
+    "master_id": "0CB7F693-80CA-4472-B823-B0CFE07CADBB",
+    "modified": "2026-11-11T04:12:58Z"
+  },
+  "reference": "https://contracosta.news/2026/08/05/pittsburg-targeted-in-phishing-attack-investigation-and-recovery-effort-recover-majority-of-funds/; https://www.ktvu.com/news/city-pittsburg-falls-victim-phishing-attack; https://localnewsmatters.org/2026/08/07/pittsburg-phishing-scam-city-loss/; https://www.pittsburgca.gov/Home/Components/News/News/3714/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In February 2026 a phishing attack compromised the City of Pittsburg, California's email system. The attackers impersonated a vendor and got the city to send a fraudulent ACH payment of $913,839.81 on 12 February. City staff spotted the fraud on 17 February and worked with local police, Contra Costa County and the FBI to freeze the receiving account, recovering $696,241 with insurance covering the rest. Investigators named a Nigeria-based primary suspect and two U.S.-based affiliates.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 5
+    },
+    "incident": {
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "US-CA",
+    "victim_id": "City of Pittsburg, California"
+  }
+}

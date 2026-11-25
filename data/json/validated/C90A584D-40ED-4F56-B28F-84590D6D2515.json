@@ -1,0 +1,184 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Spyware/Keylogger"
+      ],
+      "vector": [
+        "Direct install"
+      ]
+    },
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse",
+        "Data mishandling"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee",
+        "Other employee"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Social media"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "PK"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "142034"
+      ],
+      "variety": [
+        "Nation-state"
+      ]
+    },
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "U - Mobile phone"
+      },
+      {
+        "variety": "P - Other employee"
+      },
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Classified"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "C90A584D-40ED-4F56-B28F-84590D6D2515",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24259\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nCoded from the issue body and the pipeline comment summaries of The Quint, SSBCrack, NDTV and The Hindu (WebFetch budget exhausted, so sources were not re-read directly). Issue body's 'May 2024' is wrong - all added sources say arrest May 30/31 2026. Begin date of the leaking is not given; earliest dated anchor is the January 2026 start of electronic surveillance (SSBCrack) -> incident Jan 2026, dbir 2027. Multiple actors: external Nation-state (Pakistani intelligence handlers, Espionage) ran a honey-trap pretext over social media; the internal officer then misused his access to pass classified material (Privilege abuse + Data mishandling via photos/videos; vector Physical access assumed for photographing documents - reviewer check). He also allegedly installed spyware on a colleague's phone (malware Spyware/Keylogger, Direct install, asset U - Mobile phone). Internal motive Unknown (sources mention personal difficulties, no payment reported). Internal variety Other (Wing Commander, an officer). Discovery internal Other (IAF intelligence surveillance). Employee count Over 100000 (IAF ~140k personnel, general knowledge). Allegations, not yet tried.",
+    "created": "2026-11-11T04:11:18Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Honey-trap pretexting via social media"
+      },
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Classified documents photographed and passed to handler"
+      },
+      {
+        "action": "mal",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Spyware installed on colleague phone"
+      }
+    ],
+    "github": "24259",
+    "master_id": "C90A584D-40ED-4F56-B28F-84590D6D2515",
+    "modified": "2026-11-11T04:11:18Z"
+  },
+  "reference": "https://www.thefinancetoday.net/international/6a795a5d11e84; https://www.thequint.com/story/news/breaking-news/iaf-officer-arrested-defence-information-secrets-act; https://www.ssbcrack.com/2026/08/wing-commander-allegedly-installed-spyware-on-fellow-iaf-officers-phone-in-espionage-case.html; https://www.ndtv.com/india-news/iaf-honey-trap-case-air-force-officer-lured-by-woman-on-chats-to-leak-defence-secrets-to-pakistan-11882402; https://www.thehindu.com/news/national/iaf-officer-arrested-for-alleged-leak-of-sensitive-information-to-pakistan-based-operative/article71320933.ece",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A serving Indian Air Force Wing Commander posted at a field unit on the Western Front was honey-trapped via social media by a woman acting for Pakistani intelligence and allegedly shared classified defence documents, deployment information and other sensitive material as photographs and videos. He also allegedly installed spyware on a fellow officer's mobile phone. IAF intelligence / Delhi Police electronic surveillance (reported as starting January 2026) detected him; he was arrested on May 30-31 2026 and charged under the Official Secrets Act, with a charge sheet filed July 30 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "928110",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Indian Air Force"
+  }
+}

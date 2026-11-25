@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Misrepresentation"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "56A90080-E54C-49E2-BC10-3C9B9E693BC8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24414\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed; compromise method not stated. Same Hoodline source as #24413, which also mentions the Aliquippa PD chief's account; Aliquippa is coded separately under #24413 and this record covers only Duquesne PD. Account takeover -> data_disclosure Yes, Credentials. Integrity Misrepresentation (phishing sent in his name to outside recipients). Discovery: his daughter (a recipient) questioned the message -> external Other. Date Sept 2026. Employee count not found. Single aggregator source -> Low.",
+    "created": "2026-11-11T04:14:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Chief email account compromised (method unknown)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Account used to send phishing in chief name"
+      }
+    ],
+    "github": "24414",
+    "master_id": "56A90080-E54C-49E2-BC10-3C9B9E693BC8",
+    "modified": "2026-11-11T04:14:50Z"
+  },
+  "reference": "https://hoodline.com/2026/09/aliquippa-and-duquesne-police-chiefs-emails-hacked-thousands-get-fake-messages/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In September 2026 Duquesne (Pennsylvania) Police Chief Tom Shaw's email account was compromised and used to send a fraudulent phishing email asking recipients to review attached documents. Shaw learned of it when his daughter asked about the message; the account received thousands of replies before the message was recognized as fraudulent.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "state": "PA",
+    "victim_id": "Duquesne Police Department (Pennsylvania)"
+  }
+}

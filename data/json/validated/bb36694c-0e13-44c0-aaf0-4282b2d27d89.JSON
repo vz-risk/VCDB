@@ -1,0 +1,157 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate",
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      },
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 3750000,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 3750000,
+      "data_victim": [
+        "Partner",
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "cafab3b0-b2ad-11f1-ad3f-872c5037f111",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Unknown"
+      }
+    },
+    "created": "2026-09-17T19:38:12.971Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "unknown methdoloy to getting credentials for the cloud"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Used cloud credentials to exfil data"
+      }
+    ],
+    "github": "24273",
+    "master_id": "bb36694c-0e13-44c0-aaf0-4282b2d27d89",
+    "modified": "2026-09-17T19:54:19.800Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "day": 30,
+        "month": 4,
+        "year": 2026
+      }
+    }
+  },
+  "reference": "https://techcrunch.com/2026/08/19/carecloud-confirms-3-7m-patients-had-their-medical-records-stolen-in-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Carecloud a SaaS provider for various medical facilities has their AWS s3 bucket accessed buy unauthorized third party for 6 days",
+  "targeted": "Unknown",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 6
+    },
+    "exfiltration": {
+      "unit": "Minutes"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5415",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 146
+    },
+    "victim_id": "CareCloud "
+  }
+}

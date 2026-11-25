@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "6BB11866-6710-458E-B9E5-6AAC75F8CAEF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23656\nVendor (TPA) is the primary victim; NC Office of State Human Resources (NCFlex) is the secondary victim. Website breach -> hacking Unknown via Web application, asset S - Web application. The mid-May 'infrastructure disruption' is not coded as part of this incident (relationship unclear). Data victim Customer (plan participants). Count not disclosed. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:18:11Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23656",
+    "master_id": "6BB11866-6710-458E-B9E5-6AAC75F8CAEF",
+    "modified": "2026-11-06T00:18:11Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://uncw.edu/news/administrative-units/human-resources/2026/07/security-breach-at-the-p-a-group-an-ncflex-vendor?image",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "P&A Group, a third-party administrator of flexible spending accounts for North Carolina's NCFlex program, had a confirmed website security breach in late June 2026, after an earlier infrastructure disruption in mid-May. Social Security numbers, health account data and banking details of NCFlex participants were exposed. The North Carolina Office of State Human Resources told state employees not to use P&A accounts while the investigation continued.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524292",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "North Carolina Office of State Human Resources (NCFlex)"
+      ]
+    },
+    "state": "NY",
+    "victim_id": "P&A Group"
+  }
+}

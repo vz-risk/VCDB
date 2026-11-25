@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Qilin"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 45853,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 45853,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "1A3A2925-F884-42A3-94A6-91807CC8F9B3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24423\nHHS OCR entry (issue comment): Hacking/IT Incident, location Email, submitted 2026-08-21 -> asset S - Mail. Qilin claim -> actor Qilin (Organized crime / Financial), Exfiltrate per the claim; no encryption reported, so no ransomware malware. Title's 'Community Health Care' is not the victim. NAICS 621 -> 621210. Employee count Unknown.",
+    "created": "2026-11-05T23:55:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24423",
+    "master_id": "1A3A2925-F884-42A3-94A6-91807CC8F9B3",
+    "modified": "2026-11-05T23:55:50Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/hacking-incident-hawaii-family-dental/; https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Hawaii Family Dental, a Honolulu operator of dental clinics, identified suspicious activity on July 20, 2026; an unauthorized party had accessed systems containing patient information on July 19-20. Names, contact details, dates of birth, medical and dental treatment and health insurance information of 45,853 patients were exposed. The Qilin ransomware group claimed responsibility and said it exfiltrated data.",
+  "timeline": {
+    "incident": {
+      "day": 19,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621210",
+    "region": [
+      "019021"
+    ],
+    "state": "HI",
+    "victim_id": "Hawaii Dental Group, Inc. (Hawaii Family Dental)"
+  }
+}

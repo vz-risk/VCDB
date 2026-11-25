@@ -1,0 +1,190 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate",
+        "Lateral movement"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "FulcrumSec"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - Code repository"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 11500,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 11500,
+      "data_victim": [
+        "Patient",
+        "Employee",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "4DE05A7E-472E-461B-BA5D-63DE46A16534",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23360\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Hacking-ext-unknown refined with FulcrumSec's specific claims (attacker-sourced, not confirmed by Novo): Use of stolen creds (exposed Azure registry credential + GitHub PAT) via Web application, lateral movement, code repositories and databases, cloud External. Social Extortion for the documented $25M demand (target/vector Unknown). Data: trial data -> Medical (11,500 per FulcrumSec/heise); HCP names/contacts and employee info -> Personal; AI models/IP -> Secrets; API tokens/DB credentials -> Credentials; Internal. No data_total (HCP/employee counts unknown). Discovery internal (Novo \"identified\" the incident). Incident date = March 2026 initial access per the actor -> dbir_year 2027. Employee count approximate (about 77k).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:22:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Exposed cloud registry credential and GitHub token used"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Lateral movement with secrets from repositories"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "About 1.3TB copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "$25M ransom demand, data leaked after refusal"
+      }
+    ],
+    "github": "23360",
+    "master_id": "4DE05A7E-472E-461B-BA5D-63DE46A16534",
+    "modified": "2026-11-11T01:22:47Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://finance.yahoo.com/sectors/healthcare/articles/novo-nordisk-hit-cyber-incident-154512317.html; https://www.fiercepharma.com/pharma/novo-reports-cybersecurity-breach-tells-clinical-trial-patients-remain-vigilant; https://securityaffairs.com/193650/security/novo-nordisk-confirms-data-theft-what-attackers-took-and-what-they-didnt.html; https://www.fiercepharma.com/pharma/novos-security-breach-claimed-hacking-groups-attempted-squeeze-multi-million-ransom-bids; https://www.heise.de/en/news/Data-leak-at-Ozempic-manufacturer-Novo-Nordisk-11335568.html; https://endpoints.news/hackers-claim-they-stole-novo-nordisk-ai-models-manufacturing-recipes/; https://www.bankinfosecurity.com/hackers-begin-to-leak-novo-nordisks-stolen-data-a-31989; https://databreaches.net/2026/06/14/novo-nordisk-reports-data-breach-tells-clinical-trial-patients-to-remain-vigilant/; https://finance.yahoo.com/healthcare/articles/novo-nordisk-data-breach-hackers-150106943.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 11, 2026 Novo Nordisk disclosed unauthorized access to a limited number of internal IT systems from which data was copied externally, including pseudonymized clinical trial patient data (patient IDs, sex, year of birth, biomarkers, health and immunogenicity data) and healthcare provider contact details. The FulcrumSec gang claimed it got in around March using an Azure container registry credential exposed in a JavaScript bundle and a GitHub token, stayed for months, took about 1.3TB including AI models, drug discovery data and records of about 11,500 trial patients, demanded $25 million and began leaking data after Novo refused.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "DK"
+    ],
+    "employee_count": "50001 to 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "325412",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Novo Nordisk A/S"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "6E74DECB-AC2C-48B1-ACE4-A1B844031CF8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24340\nLabel Malware-ext-Ransomware-databreach but the source doesn't say ransomware; coded hacking Exploit vuln? Only 'vulnerability involving one of the bank's vendors' -> hacking variety Exploit vuln, vector Partner; availability Interruption (branches closed). Ransomware not coded (not stated). Data 'potentially affected' -> Potentially. NAICS 522110 -> 522180 (savings institutions). Employee count 11 to 100 (approximate).",
+    "created": "2026-11-05T23:59:03Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Vendor-related vulnerability exploited"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Systems disrupted; branches closed"
+      }
+    ],
+    "github": "24340",
+    "master_id": "6E74DECB-AC2C-48B1-ACE4-A1B844031CF8",
+    "modified": "2026-11-05T23:59:03Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/sawyer-savings-bank-2026; https://www.sawyersavings.bank/technical-disruption-update/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Sawyer Savings Bank, a community bank in Saugerties, New York, had a data security incident in early August 2026 that caused a technical disruption and forced the temporary closure of all branches. The incident likely resulted from a vulnerability involving one of the bank's vendors. Customer names, Social Security numbers, dates of birth, addresses, government IDs, medical and financial information were potentially affected.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "522180",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Sawyer Savings Bank"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "amount": 2000,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2000,
+      "data_victim": [
+        "Victim organization",
+        "Customer",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "5A97714E-F88E-498A-819A-C9C791D5ECE4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23484\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue tagged Malware-ext-Ransomware-databreach, but Insurance Business reports no encryption (data theft and extortion only); Claim Depot calls it ransomware. Coded without a malware block; reviewer may add.\nPeopleSoft zero-day campaign (Mandiant attributed to ShinyHunters) -> Exploit vuln / Web application. Data per amended actor claim: filings and rating files (Internal; rating agencies -> Partner), ~2,000 customer records (Personal), SQL scripts with stored credentials (Credentials). NAIC disputes PII exposure.\nAvailability Interruption for suspended designations / paused feeds. Discovered Jun 11, 2026; zero-day exploited from ~late May. dbir_year 2027. Industry 813910 (NAICS 813 per tag). Employee count approximate.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-20T19:21:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "PeopleSoft zero-day exploited; 3.1 TB taken"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "ShinyHunters extortion; data dumped ~Jun 28"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Investment designations suspended; rating feeds paused"
+      }
+    ],
+    "github": "23484",
+    "master_id": "5A97714E-F88E-498A-819A-C9C791D5ECE4",
+    "modified": "2026-11-20T19:21:14Z"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/naic-2026; https://www.insurancebusinessmag.com/us/news/breaking-news/terabytes-of-data-dumped-on-the-dark-web-after-us-insurance-regulator-hacked-580537.aspx; https://databreaches.net/2026/06/27/naic-suspends-investment-risk-designations-after-cyber-attack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 11, 2026 the National Association of Insurance Commissioners identified unauthorized access to its Oracle PeopleSoft systems, part of a ShinyHunters campaign exploiting a PeopleSoft zero-day that was patched on June 10. ShinyHunters claimed the attack on June 18, set a deadline for contact, and after NAIC did not pay posted 3.1 TB of data around June 28, including more than 264,000 insurer filing PDFs, about 45,000 credit-rating-agency files, about 2,000 customer order records with names and emails, AWS logs and configuration files, and SQL scripts with stored credentials. NAIC said core systems and personal policyholder data were not affected, but it suspended issuing investment designations while rating agencies paused their data feeds.",
+  "timeline": {
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "813910",
+    "region": [
+      "019021"
+    ],
+    "state": "MO",
+    "victim_id": "National Association of Insurance Commissioners (NAIC)"
+  }
+}

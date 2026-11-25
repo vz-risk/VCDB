@@ -1,0 +1,107 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "52EABE0B-D173-4123-A72B-6CECC260B8F7",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23665\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse. Facts from the issue summary of the CBC article (CBC page could not be fetched; search found no other coverage). Access period not reported; Calgary police were notified January 22 2026 -> timeline January 2026 as the earliest dated anchor, dbir_year 2027 (the access may have begun earlier). Motive and what information was obtained not stated -> motive Unknown (template's Financial not sourced), data Personal assumed for confidential records (judgment), data_victim Unknown. Vector Unknown. Discovery mechanism not stated. NAICS 922150 (probation offices). Employee count Unknown. Single source -> Medium.",
+    "created": "2026-11-11T04:13:41Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse - database lookups outside duties"
+      }
+    ],
+    "github": "23665",
+    "master_id": "52EABE0B-D173-4123-A72B-6CECC260B8F7",
+    "modified": "2026-11-11T04:13:41Z"
+  },
+  "reference": "https://www.cbc.ca/lite/story/9.7263380?feature=related-link",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An Alberta Correctional Services probation officer was charged with breach of trust and unauthorized use of a computer after allegedly accessing protected government databases outside the scope of her duties to obtain confidential information. Calgary police were notified of the improper access on January 22, 2026 and executed a search warrant on her electronic devices on April 30, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Regional"
+    ],
+    "industry": "922150",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Alberta Correctional Services"
+  }
+}

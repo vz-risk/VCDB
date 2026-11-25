@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "C4B722EE-E8E1-4E6D-B985-7D57DCA35CB4",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24348\nMicrosoft (365) account compromise: S - Mail, cloud External; hacking Unknown (how credentials were obtained not stated). Files downloaded -> Exfiltrate. NAICS 4213 (invalid) -> 488510 (freight transportation arrangement). Count not given; data victim Unknown (likely employees). Discovery 2 weeks. Comment not reviewed. Employee count 1001 to 10000 (approximate).",
+    "created": "2026-11-05T23:59:03Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24348",
+    "master_id": "C4B722EE-E8E1-4E6D-B985-7D57DCA35CB4",
+    "modified": "2026-11-05T23:59:03Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.classaction.org/data-breach-lawsuits/ascent-global-logistics-august-2026; https://www.classaction.org/media/ascent-global-logistics-data-breach-letter-2026.pdf",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Ascent Global Logistics, a Michigan shipping and logistics company, discovered unauthorized access to an employee's Microsoft account on May 22, 2026. An external attacker had downloaded files on May 8-9, 2026, exposing Social Security numbers, medical records, financial account numbers, driver's license numbers, payment card numbers and names. It reported to Massachusetts regulators on August 21, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Weeks",
+      "value": 2
+    },
+    "incident": {
+      "day": 8,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "488510",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Ascent Global Logistics"
+  }
+}

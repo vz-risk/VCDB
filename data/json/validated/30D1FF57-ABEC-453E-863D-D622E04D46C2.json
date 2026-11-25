@@ -1,0 +1,164 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 47876,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 47876,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "30D1FF57-ABEC-453E-863D-D622E04D46C2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23266\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nAlso closes https://github.com/vz-risk/VCDB/issues/23402\nIssues #23266 and #23402 describe the same incident and are merged. Notified count 47,876 used as data_total (HIBP lists ~502,600 email addresses). Discovery method not stated beyond Ameriprise blocking the access. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      }
+    ],
+    "github": "23266",
+    "master_id": "30D1FF57-ABEC-453E-863D-D622E04D46C2",
+    "modified": "2026-11-11T05:59:31Z"
+  },
+  "reference": "https://www.thinkadvisor.com/2026/04/20/ameriprise-data-breach-affected-nearly-48000/; https://www.thinkadvisor.com/2026/04/01/ex-ameriprise-client-files-class-action-over-data-incident/; https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/d8179c59-c088-4bee-b3fe-ceb870a26508.html; https://haveibeenpwned.com/Breach/Ameriprise; https://www.investmentnews.com/regulation-legal-compliance/lpl-ameriprise-once-again-report-attacks-on-client-data-to-maine/266307; https://oag.ca.gov/ecrime/databreach/reports/sb24-621953",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 2, 2026, an unauthorized person gained access to Ameriprise stored data and files; the company blocked the access on March 18. ShinyHunters claimed over 200 GB from Salesforce and SharePoint, extorted the company and published data including more than 500,000 email addresses, names, phone numbers and addresses. Ameriprise notified 47,876 people.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 16
+    },
+    "incident": {
+      "day": 2,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523930",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Ameriprise Financial, Inc."
+  }
+}

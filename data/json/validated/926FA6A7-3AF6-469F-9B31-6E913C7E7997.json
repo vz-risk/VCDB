@@ -1,0 +1,120 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "926FA6A7-3AF6-469F-9B31-6E913C7E7997",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24608\nEmail environment intrusion: asset S - Mail, hacking variety Unknown. NAICS 6214 -> 621111 is arguably better (physician-owned multi-specialty practice) but kept 621498. Count not given; the 258,920 in the issue comment belongs to another entity in the HIPAA Journal round-up (the article says IMS count is not yet known). Discovery 1 day. Employee count Unknown.",
+    "created": "2026-11-05T23:52:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24608",
+    "master_id": "926FA6A7-3AF6-469F-9B31-6E913C7E7997",
+    "modified": "2026-11-05T23:52:05Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://classactionu.org/current-data-breaches/ims-care-center/; https://www.hipaajournal.com/ridgeway-pharmacy-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "IMS Care Center, a Phoenix-based health care organization, discovered unauthorized access to its email environment on or about June 18, 2026. The intrusion occurred June 17-18 and exposed names, addresses, Social Security numbers and medical information. The data review finished September 30 and individuals were notified by October 16, 2026; the notice went to the New Hampshire Attorney General.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 17,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "AZ",
+    "victim_id": "IMS Care Center"
+  }
+}

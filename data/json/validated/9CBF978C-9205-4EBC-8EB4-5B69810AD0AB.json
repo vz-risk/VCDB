@@ -1,0 +1,152 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - VM host"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption",
+        "Destruction"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "9CBF978C-9205-4EBC-8EB4-5B69810AD0AB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23970\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach, but no source reports data theft: the attack encrypted and deleted part of ANCPI's virtualization infrastructure and the central cadastral database is said to be intact -> data_disclosure Potentially (closer to the nobreach template); reviewer check. Availability Obscuration + Interruption (ransomware rule) plus Destruction (data deleted). Asset S - VM host (virtualization infrastructure); cloud On-Premise assumed for agency-run virtualization. No group named, no ransom demand disclosed -> Organized crime/Financial per template, discovery Unknown (no actor disclosure reported). National agency -> government Federal; NAICS kept at 926110 from the issue (cadastre/land registry could arguably be 925120). Employee count not found -> Unknown. Single source (Romania Insider) via issue summary.",
+    "created": "2026-11-11T04:11:21Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Virtualization infrastructure encrypted and partly deleted"
+      }
+    ],
+    "github": "23970",
+    "master_id": "9CBF978C-9205-4EBC-8EB4-5B69810AD0AB",
+    "modified": "2026-11-11T04:11:21Z"
+  },
+  "reference": "https://www.romania-insider.com/romania-ransomware-attack-cadastre-agency-july-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 14, 2026, Romania's National Agency for Cadastre and Real Estate Advertising (ANCPI) was hit by a ransomware attack that encrypted and deleted part of the virtualization infrastructure hosting its applications, disrupting cadastral and land registry services nationwide and delaying property transactions. The government confirmed the attack on July 28, saying the central cadastral database remained intact; no ransom demand, attacker, or restoration timeline was disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 14,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "RO"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "926110",
+    "region": [
+      "150151"
+    ],
+    "victim_id": "National Agency for Cadastre and Real Estate Advertising (ANCPI)"
+  }
+}

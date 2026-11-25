@@ -1,0 +1,189 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "malware": {
+      "result": [
+        "Deploy payload"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "CMD Organization"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption",
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Student"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation",
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "7EE31C9D-AE3D-4B65-A43B-BFD9FE1294AE",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23657\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. University confirmed exfiltration and deletion; CMD Organization claimed it (the university did not name the group). Deleted H/J drive data -> availability Loss in addition to Obscuration/Interruption. File shares -> S - File.\nData: employee and student PII (passport scans per one report) -> Personal; departmental records -> Internal. Count not disclosed (CMD claims 10 TB). Outage duration not stated (portal reopened later in July).\nDiscovered Jun 17, 2026, dbir_year 2027. Employee count approximate.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-20T19:26:33Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Employee and student data exfiltrated from H drive"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Ransomware disrupts web, portal, internet, phones; storage erased"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "CMD Organization demands ~$1.9M, threatens auction"
+      }
+    ],
+    "github": "23657",
+    "master_id": "7EE31C9D-AE3D-4B65-A43B-BFD9FE1294AE",
+    "modified": "2026-11-20T19:26:33Z"
+  },
+  "reference": "https://www.cbc.ca/news/canada/calgary/mru-cyberattack-personal-data-9.7261930; https://www.securityweek.com/mount-royal-university-confirms-data-stolen-in-ransomware-attack/; https://calgary.citynews.ca/2026/07/07/mount-royal-university-cyberattack/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 17, 2026 Mount Royal University in Calgary discovered a ransomware attack that disrupted internal systems, online services including its website and MyMRU portal, campus internet and phones. Attackers exfiltrated and deleted employee and student personal information from folders on the university's H drive and erased a second departmental storage system. The CMD Organization group listed the university on its leak site, claimed more than 10 TB of data and demanded about $1.9 million in cryptocurrency. MRU reported the attack to police and the Alberta privacy commissioner and offered two years of credit monitoring to current and recent employees.",
+  "timeline": {
+    "incident": {
+      "day": 17,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "CA"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "611310",
+    "region": [
+      "019021"
+    ],
+    "state": "AB",
+    "victim_id": "Mount Royal University"
+  }
+}

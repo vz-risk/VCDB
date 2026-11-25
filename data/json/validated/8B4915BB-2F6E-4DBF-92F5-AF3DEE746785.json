@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "8B4915BB-2F6E-4DBF-92F5-AF3DEE746785",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22822\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (hacking Unknown), but vector set to Unknown and asset S - File (FTP server named in the claim) instead of the template Web application default. Claim is attacker-sourced (forum sale listing), unconfirmed by the company. Data listed for sale -> motive Financial; no extortion demand to the victim, so no social action. Project models/drawings -> Secrets/Internal; data_victim includes Customer because the drawings belong to client projects. Issue title misspells the name as Copper; victim is Cooper Steel Fabricators (Shelbyville, TN). Employee count approximate (several hundred). Incident date = sale listing reported Dec 2, 2025 -> dbir_year 2027.",
+    "created": "2026-11-11T01:15:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Access to FTP server, method unknown"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "FTP server mirrored (330GB)"
+      }
+    ],
+    "github": "22822",
+    "master_id": "8B4915BB-2F6E-4DBF-92F5-AF3DEE746785",
+    "modified": "2026-11-11T01:15:47Z"
+  },
+  "reference": "https://www.scworld.com/brief/copper-steel-fabricators-allegedly-subjected-to-data-breach; https://cybernews.com/security/cooper-steel-fabrication-data-breach-amazon/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In late 2025 a threat actor offered for sale a \"complete mirror\" of the FTP server of Cooper Steel Fabricators, a Tennessee structural steel fabricator, containing 330GB of models, drawings and frames from client projects including an Amazon data center in Ohio, an Amazon sorting facility in Massachusetts and a Publix distribution center, for $28,500 in cryptocurrency.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "332312",
+    "region": [
+      "019021"
+    ],
+    "state": "TN",
+    "victim_id": "Cooper Steel Fabricators"
+  }
+}

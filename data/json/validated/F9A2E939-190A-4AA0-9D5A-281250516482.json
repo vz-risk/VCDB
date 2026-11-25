@@ -1,0 +1,122 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Code repository"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        },
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored unencrypted",
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "F9A2E939-190A-4AA0-9D5A-281250516482",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23280\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-publishing followed. Repo public since Nov 13, 2025 (incident begin) -> dbir_year 2027; discovered May 14, 2026 by GitGuardian (Security researcher) and taken down in ~26 hours. Sources (CISA postmortem via Cybersecurity Dive/TechCrunch) say a contractor exposed the repo; coded internal per the template and the skill's rule that individual contractors working as staff are internal - reviewer may prefer actor.partner. Actor variety Unknown (role of the contractor employee not confirmed). Data: plaintext credentials, tokens and other secrets plus internal agency files; encryption status 'plain-text' -> Stored unencrypted. No evidence in sources of malicious use; data_abuse omitted. Industry 928110 (DHS component, national security); some may prefer 921190. Employee count ~3,000+ CISA staff -> 1001 to 10000. Sources: Dark Reading, GitGuardian blog, GovExec, CyberScoop, KrebsOnSecurity, TechCrunch, Cybersecurity Dive, ASIS (linked in issue; not re-fetched due to fetch budget).",
+    "created": "2026-11-11T04:09:51Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Publishing error: private repo made public"
+      }
+    ],
+    "github": "23280",
+    "master_id": "F9A2E939-190A-4AA0-9D5A-281250516482",
+    "modified": "2026-11-11T04:09:51Z"
+  },
+  "reference": "https://www.darkreading.com/cybersecurity-operations/cisa-exposes-secrets-credentials-private-repo; https://blog.gitguardian.com/how-we-got-a-cisa-github-leak-taken-down-in-26-hours/; https://www.govexec.com/technology/2026/05/cisa-leaked-agency-credentials-congressional-scrutiny/413673/; https://cyberscoop.com/cisa-credential-leak-forensic-report/; https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/; https://techcrunch.com/2026/07/10/us-cyber-agency-cisa-had-to-build-its-incident-playbook-during-the-incident-agency-reveals/; https://www.cybersecuritydive.com/news/cisa-github-passwords-leak-contractor-report/824953/; https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/july/cisa-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A GitHub repository named 'Private-CISA' belonging to the U.S. Cybersecurity and Infrastructure Security Agency was publicly accessible from November 13, 2025, exposing 844MB of sensitive data including plain-text passwords, authentication tokens and other secrets for government systems. GitGuardian researcher Guillaume Valadon found it on May 14, 2026 after automated monitoring flagged it; CISA's postmortem attributes the exposure to a contractor and the repo was taken down within about 26 hours of notification.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 1
+    },
+    "discovery": {
+      "unit": "Months",
+      "value": 6
+    },
+    "incident": {
+      "day": 13,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "928110",
+    "region": [
+      "019021"
+    ],
+    "state": "DC",
+    "victim_id": "Cybersecurity and Infrastructure Security Agency (CISA)"
+  }
+}

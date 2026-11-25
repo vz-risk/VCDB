@@ -1,0 +1,164 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunters"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "E876FCAF-BC16-42C9-9051-78923D7E5B03",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23102\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Malware-ext-Ransomware-databreach not followed: no source mentions encryption; ShinyHunters runs data-theft extortion, so coded Hacking unknown plus Extortion. The 5.7 million figure is attacker-claimed, so data_total is omitted. The notice says SSNs were not involved. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion demand"
+      }
+    ],
+    "github": "23102",
+    "master_id": "E876FCAF-BC16-42C9-9051-78923D7E5B03",
+    "modified": "2026-11-11T05:59:31Z"
+  },
+  "reference": "https://www.wealthmanagement.com/ria-news/in-class-action-mercer-client-faults-firms-data-protection-amid-shinyhunters-cyber-attack; https://www.globenewswire.com/news-release/2026/04/02/3267889/0/en/Mercer-Advisors-Data-Breach-Exposes-Personal-Information-Murphy-Law-Firm-Investigates-Legal-Claims.html; https://oag.ca.gov/ecrime/databreach/reports/sb24-621099",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Around January 22, 2026, ShinyHunters gained unauthorized access to Mercer Advisors systems holding client data, then gave the firm 48 hours to pay or see about 5.7 million client records leaked. Mercer refused and the group published the data. The firm's notice lists names, contact details, government ID numbers, dates of birth and account numbers.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 22,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "523930",
+    "region": [
+      "019021"
+    ],
+    "state": "CO",
+    "victim_id": "Mercer Global Advisors Inc. (Mercer Advisors)"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Worldleaks"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "30361124-A24F-4C05-9A39-CF342C483824",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24455\nWorldleaks (data-theft extortion group) claimed it: actor named, Organized crime / Financial. No ransomware coded (not established). Files downloaded -> Exfiltrate. Discovery 8 days. Government: Modoc Medical Center is a county hospital district facility -> government Local? Coded NA to stay consistent with healthcare coding; reviewer may set Local. Count not given. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-05T23:54:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Network access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files downloaded"
+      }
+    ],
+    "github": "24455",
+    "master_id": "30361124-A24F-4C05-9A39-CF342C483824",
+    "modified": "2026-11-05T23:54:52Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/california-critical-access-hospital-cybersecurity-incident/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Modoc Medical Center, a 12-bed critical access hospital in Alturas, California, identified unauthorized access to its network on January 27, 2026. An unknown actor had access between January 19 and 27 and downloaded files with patient information including names with Social Security numbers, driver's license numbers, financial account and payment card information, passport numbers, military IDs, medical and health insurance information. The Worldleaks group claimed responsibility; it is unclear whether ransomware was deployed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 8
+    },
+    "incident": {
+      "day": 19,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Modoc Medical Center"
+  }
+}

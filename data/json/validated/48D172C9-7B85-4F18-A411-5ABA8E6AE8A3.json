@@ -1,0 +1,110 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse",
+        "Data mishandling"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Doctor or nurse"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "48D172C9-7B85-4F18-A411-5ABA8E6AE8A3",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23833\nInsider misuse: Privilege abuse (accessed records without authorization) plus Data mishandling (downloaded to personal devices); vector LAN access. Actor Internal, Doctor or nurse, motive Unknown. When the access happened is not stated; incident year/month coded Jul 2026 from the report date -> dbir_year 2027. Data disclosure Yes (taken off-premises to personal devices). Asset S - Database? not specified -> S - Unknown plus U - Desktop or laptop? not stated -> S - Unknown. Government Regional (NSW state health system). Count not disclosed. Employee count 10001 to 25000 (approximate).",
+    "created": "2026-11-06T00:10:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Nurse downloaded patient data without authorization"
+      }
+    ],
+    "github": "23833",
+    "master_id": "48D172C9-7B85-4F18-A411-5ABA8E6AE8A3",
+    "modified": "2026-11-06T00:10:48Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.news.com.au/national/nsw-act/crime/northern-sydney-nurse-arrested-after-allegedly-stealing-confidential-patient-data/news-story/46ed5b49b21cfefd75f39c556d3d3f66; https://www.miragenews.com/nurse-charged-by-cybercrime-squad-in-data-1716161/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "NSW Police were told on July 22, 2026 that a Northern Sydney Local Health District employee had accessed and downloaded patient data without authorization. Cybercrime Squad detectives searched his Frenchs Forest home on July 23, seized devices holding patient details and charged the 59-year-old nurse with accessing restricted data held in a computer. Early inquiries suggested the data stayed with him.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "622110",
+    "region": [
+      "009053"
+    ],
+    "victim_id": "Northern Sydney Local Health District"
+  }
+}

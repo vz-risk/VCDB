@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "54327D88-931F-4413-B994-3C94F717215B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24323\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown). Files copied -> Yes; names + SSNs -> Personal; data_victim Employee. Discovery internal. Begin date not stated; coded the Jun 4, 2026 detection -> dbir_year 2027. NAICS refined from 3332 to 333249 (other industrial machinery); a systems integrator could also be 541330. Employee count and state not found. Single law-firm source -> Medium. Employee count from 11 employees (Cedar Falls, IA) per Futern (https://futern.com/companies/Padget-Technologies/449dbc4561a20328).",
+    "attribute": {
+      "confidentiality": {
+        "credit_monitoring": "Yes"
+      }
+    },
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "24323",
+    "master_id": "54327D88-931F-4413-B994-3C94F717215B",
+    "modified": "2026-11-11T01:30:49Z"
+  },
+  "reference": "https://www.federmanlaw.com/blog/padget-technologies-inc-data-breach-investigated-by-federman-sherwood/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Padget Technologies, an industrial automation and robotic integration company, detected suspicious activity on its computer systems on June 4, 2026. An investigation confirmed that an unauthorized actor accessed and copied limited files containing employees' names and Social Security numbers. It offered 12 months of identity protection and credit monitoring.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 4,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "333249",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Padget Technologies, Inc."
+  }
+}

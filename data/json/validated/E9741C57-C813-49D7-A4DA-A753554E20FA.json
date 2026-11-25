@@ -1,0 +1,114 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "E9741C57-C813-49D7-A4DA-A753554E20FA",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23224\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Booking.com gave no technical details; Malwarebytes speculates hotel-partner compromise (not confirmed), so no partner/secondary victim coded. Motive Financial inferred from follow-on reservation-hijack scams (not confirmed as linked).\nAsset S - Database is a best guess for the reservation store (could be partner extranet). 'may have viewed' -> data_disclosure Potentially; count not disclosed.\nIndustry 561510 (travel agencies / online travel booking) chosen over the issue's 721110 because Booking.com is not a lodging operator; reviewer may revert. Guardian link in comments was blocked. Date April 2026, dbir_year 2027. Employee count approximate.",
+    "created": "2026-11-20T19:06:44Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized access to reservation data; guest contact details possibly viewed"
+      }
+    ],
+    "github": "23224",
+    "master_id": "E9741C57-C813-49D7-A4DA-A753554E20FA",
+    "modified": "2026-11-20T19:06:44Z"
+  },
+  "reference": "https://nltimes.nl/2026/04/13/hack-bookingcom-customers-booking-data-accessed; https://securityaffairs.com/190757/data-breach/hackers-access-booking-com-user-data-company-secures-systems.html; https://www.malwarebytes.com/blog/data-breaches/2026/04/booking-com-breach-gives-scammers-what-they-need-to-target-guests",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In April 2026 Booking.com detected suspicious activity affecting a number of reservations and determined that unauthorized third parties may have viewed booking details, guest names, email addresses, physical addresses, phone numbers and other information guests had shared with the accommodation. The company notified affected guests by email on April 12-13, reset reservation PINs and said payment data was not accessed. It did not say how the access occurred or how many people were affected; customers reported scammers contacting them with real reservation details.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NL"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "561510",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Booking.com"
+  }
+}

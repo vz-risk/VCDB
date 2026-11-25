@@ -1,0 +1,126 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Student"
+      ],
+      "state": [
+        "Stored",
+        "Stored encrypted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "55571F07-EE0D-4753-8D61-D9BB17E71898",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22954\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown; asset coded S - Database (sources say a database was accessed) and vector Unknown instead of the template's web-application vector. Begin date not stated; disclosed to parents ~Jan 13-14 2026 -> Jan 2026, dbir_year 2027. Government Regional (state department) and NAICS 923110, overriding the issue's Federal label. Credentials: passwords were encrypted (state Stored encrypted). AFR headline says hackers stole the data, hence Exfiltrate. Student count not disclosed (system serves ~650,000 students) -> no amount. Employee count 'Large' (>1000; exact departmental headcount not confirmed). Sources from the issue; not re-fetched due to fetch budget.",
+    "created": "2026-11-11T04:12:19Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Database accessed, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Student data stolen"
+      }
+    ],
+    "github": "22954",
+    "master_id": "55571F07-EE0D-4753-8D61-D9BB17E71898",
+    "modified": "2026-11-11T04:12:19Z"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/victorian-department-of-education-notifies-parents-of-data-breach/; https://www.afr.com/politics/hackers-steal-victorian-students-personal-data-in-major-cyber-breach-20260114-p5nu57",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In January 2026 the Department of Education in Victoria, Australia notified parents that an unauthorized third party accessed a database containing current and former students' names, school names, year levels, school-issued email addresses and encrypted passwords, prompting password resets. More sensitive data such as birth dates, home addresses and phone numbers were not exposed; the number of affected students was not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Regional"
+    ],
+    "industry": "923110",
+    "region": [
+      "009053"
+    ],
+    "state": "VIC",
+    "victim_id": "Department of Education (Victoria)"
+  }
+}

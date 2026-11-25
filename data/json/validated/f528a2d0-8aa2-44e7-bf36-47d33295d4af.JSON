@@ -1,0 +1,191 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user",
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ShinyHunter"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1100000,
+      "data_victim": [
+        "Customer",
+        "Employee",
+        "Victim organization"
+      ],
+      "data_volume": 176,
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "86d4be30-b2b5-11f1-ad3f-872c5037f111",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "planglois",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-09-17T20:33:34.611Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "some time of phishing to compromise a user's credentials"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "alter behavior to disclose credentials "
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "use user's credentials to access and steal data"
+      }
+    ],
+    "github": "24135",
+    "master_id": "f528a2d0-8aa2-44e7-bf36-47d33295d4af",
+    "modified": "2026-09-17T20:41:16.607Z",
+    "sub_source": "priority",
+    "timeline": {
+      "notification": {
+        "month": 8,
+        "year": 2026
+      }
+    }
+  },
+  "reference": "https://narutoblog.odoo.com/blog/tech-cyber-news-2/shinyhunters-ransomware-group-unleashes-august-2026-data-breach-wave-millions-of-records-stolen-across-healthcare-it-and-pharma-111",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.1",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "ShinyHunters ransomware group targeted Lumenis, an Israel-based medical technology manufacturer specializing in laser and energy-based solutions for skin, body, and eye care treatment, and claimed to have stolen over 1.1 million records including customer and employee personally identifiable information along with 176 GB of internal corporate data. The exposure of patient and customer data from a medical device company carries significant regulatory and legal consequences under HIPAA, GDPR, and other data protection frameworks",
+  "targeted": "Unknown",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "3342",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Lumenis"
+  }
+}

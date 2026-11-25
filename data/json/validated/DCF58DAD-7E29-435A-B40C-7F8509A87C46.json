@@ -1,0 +1,134 @@
+{
+  "action": {
+    "physical": {
+      "variety": [
+        "Theft"
+      ],
+      "vector": [
+        "Public vehicle"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "US"
+      ],
+      "motive": [
+        "Ideology"
+      ],
+      "region": [
+        "019021"
+      ],
+      "variety": [
+        "Activist"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Documents"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 15,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 15,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Printed"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "DCF58DAD-7E29-435A-B40C-7F8509A87C46",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23027\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Physical-ext-theft-paper. Thieves were participants in anti-ICE unrest; actor variety Activist / motive Ideology inferred from the protest context and subsequent harassment campaign (no named individual for the theft). Physical vector 'Public vehicle' is the closest enum for a government vehicle parked on a public street (no 'victim vehicle' value). Up to 15 agents/employees harassed -> Personal amount 15 (minimum). data_abuse 'Yes - Posted on personal forum' since info was posted online and used to threaten agents (Fox News: Illinois man charged after info posted online). Month-only date January 2026 -> dbir 2027. Employee count FBI (~37,000). Sources fetched only via issue quotes (fetch budget exhausted); confidence Medium.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Posted on personal forum"
+      }
+    },
+    "created": "2026-11-11T04:09:10Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "au",
+        "summary": "Theft of ID documents from vandalized government vehicles"
+      },
+      {
+        "action": "phy",
+        "actor": "ext",
+        "asset": "med",
+        "attribute": "cp",
+        "summary": "Agent identity information exposed and posted online"
+      }
+    ],
+    "github": "23027",
+    "master_id": "DCF58DAD-7E29-435A-B40C-7F8509A87C46",
+    "modified": "2026-11-11T04:09:10Z"
+  },
+  "reference": "https://www.startribune.com/mn-feds-harassed-stolen-ids/601576555; https://www.foxnews.com/us/illinois-man-accused-threatening-fbi-agent-after-info-stolen-from-government-vehicles-posted-online",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "During unrest in Minneapolis in January 2026 involving anti-ICE demonstrators after a shooting, two federal government vehicles were vandalized and identification documents belonging to FBI agents and employees were stolen. Information from the documents was posted online and, per a criminal complaint, as many as 15 FBI agents and employees were subsequently harassed and threatened.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "state": "MN",
+    "victim_id": "Federal Bureau of Investigation"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "LAN access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "D7FA3FE9-8F3D-4558-A5BA-63901EB88203",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24312\nIssue named no organization; search found NHS Tayside (ITV, Aug 7, 2026). Alleged and under investigation -> security_incident Suspected, confidence Low. Misuse Privilege abuse by internal staff (number not stated). Incident date Aug 2026 (access date not given; death was shortly before). Government NA (NHS board coded as healthcare); issue NAICS 92 changed to 622110. Employee count 10001 to 25000 (approximate).",
+    "created": "2026-11-05T23:59:58Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Staff allegedly viewed records without clinical need"
+      }
+    ],
+    "github": "24312",
+    "master_id": "D7FA3FE9-8F3D-4558-A5BA-63901EB88203",
+    "modified": "2026-11-05T23:59:58Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://news.sky.com/story/investigation-into-claims-nhs-staff-accessed-medical-records-of-schoolgirl-who-died-on-camping-trip-13570614; https://www.itv.com/news/calendar/2026-08-07/nhs-probe-claims-staff-accessed-records-of-girl-allegedly-murdered-by-dad",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "phidbr",
+  "summary": "NHS Tayside, which runs Ninewells Hospital, said in August 2026 it was investigating claims that staff accessed the medical records of Minnie Merriman, a nine-year-old girl who died during a camping trip and was allegedly murdered by her father, without clinical need or permission.",
+  "timeline": {
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "NHS Tayside"
+  }
+}

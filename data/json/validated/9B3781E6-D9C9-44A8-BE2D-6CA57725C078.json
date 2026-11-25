@@ -1,0 +1,180 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Green Blood Group"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "amount": 2,
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Sensitive Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "partner": {
+      "variety": [
+        "Other"
+      ]
+    }
+  },
+  "incident_id": "9B3781E6-D9C9-44A8-BE2D-6CA57725C078",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23052\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach. Green Blood Group described as a ransomware gang; encryption itself is not confirmed by the victim, availability Obscuration kept per template/ransomware rule, Interruption supported by suspension of DAF operations. Data scope (139 GB, citizen records, biometrics, immigration documents) is attacker-claimed with samples; the DAF notice confirmed a cyberattack and IRIS email confirmed theft of card personalization data from one server. Biometric data coded Sensitive Personal. data_victim Customer (citizens). Discovery: the contractor IRIS Corporation Berhad detected and warned DAF on 20 Jan -> discovery partner Other, 1 day. data_abuse Yes - Data ransomed (ransomware/leak samples). NAICS 921190 (national ID/passport administration; no closer code). Employee count unknown. Single reputable source (The Record); fetched only via issue quote due to fetch budget exhaustion; confidence Medium.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:10:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed (claimed)"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "139 GB of citizen/biometric data stolen"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "DAF operations suspended"
+      }
+    ],
+    "github": "23052",
+    "master_id": "9B3781E6-D9C9-44A8-BE2D-6CA57725C078",
+    "modified": "2026-11-11T04:10:17Z"
+  },
+  "reference": "https://therecord.media/senegal-breach-national-id-agency",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On 19 January 2026 attackers breached two servers of Senegal's Directorate of File Automation (DAF), the office that manages national ID cards, passports and biometric data, and stole card personalization data from one of them, according to an email from IRIS Corporation Berhad, the Malaysian contractor building Senegal's new digital ID cards. A ransomware gang calling itself Green Blood Group claimed the theft of 139 GB including citizen database records, biometric data and immigration documents and published samples; the government temporarily suspended the office's operations and confirmed the breach.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 19,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "SN"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "002011"
+    ],
+    "victim_id": "Direction de l'Automatisation des Fichiers (DAF), Senegal"
+  }
+}

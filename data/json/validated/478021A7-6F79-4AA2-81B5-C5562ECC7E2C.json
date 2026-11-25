@@ -1,0 +1,137 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 12801,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 12801,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "478021A7-6F79-4AA2-81B5-C5562ECC7E2C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23710\nCloses https://github.com/vz-risk/VCDB/issues/23533\nMerged #23533 (Federman & Sherwood post on the same HHS entry). The law firm is the business associate and primary victim; its three health system clients are secondary victims. Compromised user account -> hacking Use of stolen creds (vector Unknown). Incident Nov 25, 2025 -> dbir_year 2027. Count 12,801 from HHS (issue rounds to 13,000). The issue title's firm name ('Rosen... Fage & Katz') is garbled; the firm is Greenbaum, Rowe, Smith & Davis. Employee count 101 to 1000 (approximate).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-06T00:21:23Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23710",
+    "master_id": "478021A7-6F79-4AA2-81B5-C5562ECC7E2C",
+    "modified": "2026-11-19T22:00:00Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.nj.com/healthfit/2026/07/law-firm-for-major-nj-health-systems-gets-hacked-exposing-personal-info-of-nearly-13k-patients.html; https://www.federmanlaw.com/blog/greenbaum-rowe-smith-davis-llp-data-breach-investigated-by-federman-sherwood/; https://www.beckershospitalreview.com/healthcare-information-technology/cybersecurity/law-firm-hack-exposes-data-on-12801-patients-at-3-health-systems/; https://www.atlantichealth.org/greenbaum-cybersecurity-incident",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "New Jersey law firm Greenbaum, Rowe, Smith & Davis, which represents major health systems, had an intrusion through a compromised user account on November 25-27, 2025. Names, addresses, medical record numbers, medical history, provider details, bill amounts and insurance information of 12,801 patients of Hackensack Meridian Health, Atlantic Health and Trinitas Regional Medical Center were exposed; some also had SSNs or dates of birth exposed. It found no evidence the data was published or misused.",
+  "timeline": {
+    "compromise": {
+      "unit": "Days",
+      "value": 2
+    },
+    "incident": {
+      "day": 25,
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "541110",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 3,
+      "victim_id": [
+        "Hackensack Meridian Health",
+        "Atlantic Health System",
+        "Trinitas Regional Medical Center"
+      ]
+    },
+    "state": "NJ",
+    "victim_id": "Greenbaum, Rowe, Smith & Davis LLP"
+  }
+}

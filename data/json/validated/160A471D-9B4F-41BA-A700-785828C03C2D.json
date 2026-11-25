@@ -1,0 +1,141 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 11,
+          "variety": "Virtual currency"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 11,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Fraudulent transaction",
+        "Modify data"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "160A471D-9B4F-41BA-A700-785828C03C2D",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23549\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nFront-end supply-chain compromise via an unnamed third party; no Partner_Breach tag, so Polymarket is coded as victim. Modify data covers the injected script. Fraudulent transaction per project rule. The October 2026 outage comments refer to a different event. Employee count unknown. Employee count from 594 employees per TipRanks (Nov 2026) (https://www.tipranks.com/private-companies/polymarket).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Financial fraud"
+      }
+    },
+    "created": "2026-11-11T05:59:31Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "User wallet approvals harvested"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Fraudulent transactions"
+      }
+    ],
+    "github": "23549",
+    "master_id": "160A471D-9B4F-41BA-A700-785828C03C2D",
+    "modified": "2026-11-11T05:59:31Z"
+  },
+  "reference": "https://www.cointribune.com/en/polymarket-an-external-breach-costs-the-platform-3-million-dollars/; https://www.techspot.com/news/112912-polymarket-hack-may-have-drained-close-3-million.html; https://www.privacyguides.org/news/2026/06/26/data-breach-roundup-june-19-25/; https://techcrunch.com/2026/06/25/polymarket-says-hackers-stole-users-funds/; https://www.wsj.com/business/polymarket-pauses-trading-after-some-users-report-funds-drained-b014527d; https://www.reuters.com/business/polymarket-reports-major-outage-suspends-trading-actions-2026-10-29/; https://www.cnbc.com/2026/10/29/polymarket-reports-outage-on-international-exchange-halts-trading.html; https://www.nbcnews.com/business/consumer/polymarket-trading-halt-hack-wallets-rcna606405; https://cryptoticker.io/en/polygon-hard-fork-stolen-pol/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In June 2026 attackers compromised a third-party provider whose code was embedded in Polymarket's web interface and injected malicious scripts that prompted at least 11 users to approve fraudulent transactions, draining about $3 million from their crypto wallets. Polymarket removed the dependency and promised refunds.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "5239",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Polymarket"
+  }
+}

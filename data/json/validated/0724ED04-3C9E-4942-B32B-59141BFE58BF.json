@@ -1,0 +1,172 @@
+{
+  "action": {
+    "malware": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Unknown initial action",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1276,
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1276,
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "0724ED04-3C9E-4942-B32B-59141BFE58BF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24351\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Hacking-ext-unknown, but the company detected encryption of data, so the ransomware pattern is coded (malware Ransomware, availability Obscuration/Interruption). No group named; motive Financial inferred from ransomware. Data: IDs/SSN/DOB/passport -> Personal (1,276 Washington residents; other states may add more, so no data_total beyond this) ; financial data -> Bank. data_victim Employee assumed (likely staff); reviewer may change. Discovery internal, 9 days after start. NAICS refined from 3332 to 333120 (concrete block/products machinery falls under construction machinery). Incident Mar 27, 2026 -> dbir_year 2027. Employee count approximate.",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files with personal data copied"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Encryption tool deployed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Data encrypted"
+      }
+    ],
+    "github": "24351",
+    "master_id": "0724ED04-3C9E-4942-B32B-59141BFE58BF",
+    "modified": "2026-11-11T01:30:49Z"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/columbia-machine-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Columbia Machine, a Vancouver, Washington maker of concrete products and palletizing equipment, found an unauthorized external actor had access to its systems between March 27 and April 5, 2026; it detected suspicious activity and encryption of data on April 5. The actor copied files that, as confirmed June 18, included names, SSNs, driver's license/state ID numbers, dates of birth, passport numbers and other personal and financial data of at least 1,276 Washington residents.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 9
+    },
+    "incident": {
+      "day": 27,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "333120",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Columbia Machine, Inc."
+  }
+}

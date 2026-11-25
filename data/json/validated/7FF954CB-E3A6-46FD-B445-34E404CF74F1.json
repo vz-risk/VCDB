@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Everest"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Source code"
+        },
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "7FF954CB-E3A6-46FD-B445-34E404CF74F1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22984\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate tag Hacking-ext-extortion: hacking Unknown + social Extortion (target/vector Unknown). No encryption claimed, so no malware block. Data per Everest (attacker-sourced, unconfirmed): firmware/BIOS/software -> Source code; confidential technical documentation -> Secrets/Internal. Asset S - Database because Everest calls it a database. Incident date = leak post the night before the Jan 22, 2026 report -> 2026-01-21, dbir_year 2027. Employee count not found. Employee count from 85 employees per Built In (https://builtin.com/company/asrock-rack).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:19:23Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "509GB database stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion via leak-site listing"
+      }
+    ],
+    "github": "22984",
+    "master_id": "7FF954CB-E3A6-46FD-B445-34E404CF74F1",
+    "modified": "2026-11-11T01:19:23Z"
+  },
+  "reference": "https://www.cyberdaily.au/security/13120-exclusive-asrock-rack-allegedly-breached-data-leak-could-lead-to-further-breaches",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In January 2026 the Everest ransomware gang listed ASRock Rack, the enterprise server and storage hardware brand of Taiwan's ASRock, on its leak site, claiming to have stolen a 509GB database of confidential technical documentation and software including firmware, BIOS, BMC firmware, diagnostic and installation tools, drivers and utilities, and warning that a leak could let attackers exploit vulnerabilities in its products.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "334111",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "ASRock Rack Inc."
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "CCB0E840-8F8A-410D-8A6E-4FBA35173951",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24631\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Malware-ext-Ransomware-databreach, but the district has not disclosed any data compromise -> data_disclosure Potentially, no exfiltration coded. Issue draft said 2024 and the pipeline-added summary said October 2024, but AllOtsego published Oct 26, 2026 and the dates (Thu discovery, Fri Oct 23 closure, Mon Oct 26 staff day) match 2026 -> discovery Oct 22, 2026 used as incident anchor, dbir_year 2027. Industry re-coded from the issue's 921 to 611110 (elementary and secondary schools) since the victim is a public school district; government Local. No group named; Organized crime/Financial per template. Employee count from general knowledge (~1,700 students, five schools). Confidence Medium.",
+    "created": "2026-11-11T04:16:19Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Network disrupted; schools closed"
+      }
+    ],
+    "github": "24631",
+    "master_id": "CCB0E840-8F8A-410D-8A6E-4FBA35173951",
+    "modified": "2026-11-11T04:16:19Z"
+  },
+  "reference": "https://dysruptionhub.com/oneonta-new-york-schools-ransomware-attack/; https://www.allotsego.com/oneonta-school-district-confirms-ransomware-attack-cyber-incident-now-under-investigation/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Oneonta City School District in New York discovered a ransomware attack on Thursday, October 22, 2026 that disrupted its network and forced it to close all buildings on Friday, October 23 and convert Monday, October 26 into a staff-only day. The district engaged a third-party cybersecurity firm and local, state and federal authorities are investigating; it has not said whether student or staff data was compromised.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 22,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "611110",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "Oneonta City School District"
+  }
+}

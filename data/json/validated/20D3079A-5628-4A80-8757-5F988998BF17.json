@@ -1,0 +1,105 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misdelivery"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer",
+        "Student"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "20D3079A-5628-4A80-8757-5F988998BF17",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23975\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-misdelivery-media. A mail-merge error in a school transport pass renewal email exposed other families' details (student names and reference numbers, parent/carer names and email addresses, renewal costs). Date: the BBC article says the email went out 'on Friday' with no calendar date; the issue was filed July 2026 and the rankiteo summary is timestamped July 28, 2026, so July 2026 is used (likely Friday July 24, 2026). One aggregator's metadata lists 2023-11-03, which conflicts - REVIEWER confirm the date (if 2023 this is out of window). 'Dozens' affected -> no amount. Discovery method not stated (template's 'reported by employee' not applied). State Transmitted (data sent by email). UK county council coded government Local (issue label said Regional); NAICS 921110 (issue suggested 921190). Employee count ~8,000 (council staff excluding schools) - approximate.",
+    "created": "2026-11-11T04:12:06Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "usr",
+        "attribute": "cp",
+        "summary": "Misdelivery - mail merge email exposed other families data"
+      }
+    ],
+    "github": "23975",
+    "master_id": "20D3079A-5628-4A80-8757-5F988998BF17",
+    "modified": "2026-11-11T04:12:06Z"
+  },
+  "reference": "https://www.bbc.com/news/articles/cgk4glym54vo; https://blog.rankiteo.com/not1785263548-nottinghamshire-county-council-breach-july-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Nottinghamshire County Council sent a school bus pass renewal reminder email, generated through a mail merge, that disclosed full names and reference numbers of dozens of students along with the names and email addresses of other parents and carers and individual renewal costs. The council apologised, asked recipients to delete the message, and its internal investigation found the incident met the threshold for reporting to the ICO.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Nottinghamshire County Council"
+  }
+}

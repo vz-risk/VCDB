@@ -1,0 +1,115 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 1,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 1,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "044E68E7-BF53-4596-9676-9D9F5FF341B1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23534\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse. Officer used valid CVR login credentials (INEC: misuse of credentials, no external breach). Motive not stated (leak occurred during a political primary dispute) -> Unknown rather than the template's Financial. Exact access date not reported; the record circulated in late May/early June 2026 (allAfrica June 3 2026, INEC disclosure June 25 2026) -> timeline year 2026, dbir_year 2027. Discovery: the record circulating online drew the victim's complaint; INEC then traced it via audit trail -> external Unrelated 3rd party (judgment). Misuse vector not stated -> Unknown. Asset S - Database (CVR voter register). NAICS 921190 (independent electoral body). Employee count not confirmed -> Large. The Sahara Reporters link (Aug 2026) describes a separate INEC website compromise posting casino content; that is a different incident and is not coded here. guardian.ng and thewhistler.ng could not be fetched; facts from thenigerialawyer.com and the issue summary.",
+    "created": "2026-11-11T04:08:44Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse - voter record accessed and leaked"
+      }
+    ],
+    "github": "23534",
+    "master_id": "044E68E7-BF53-4596-9676-9D9F5FF341B1",
+    "modified": "2026-11-11T04:08:44Z"
+  },
+  "reference": "https://guardian.ng/news/inec-suspends-electoral-officer-over-voter-data-breach/; https://thewhistler.ng/court-adjourns-emeka-ikes-n10bn-privacy-breach-suit-against-inec/; https://saharareporters.com/2026/08/30/cdhr-demands-probe-security-complicity-kidnapping-inec-website-breach; https://thenigerialawyer.com/no-external-breach-officer-suspended-inec-traces-emeka-ike-voter-data-leak-to-alleged-internal-misuse-of-cvr-login/; https://allafrica.com/stories/202606030296.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "An electoral officer of Nigeria's Independent National Electoral Commission (INEC) used valid Continuous Voter Registration (CVR) platform credentials to access and disclose, without authorization, the voter registration record of actor and politician Emeka Ike, which then circulated online during a party primary dispute in the Federal Capital Territory in mid-2026. INEC's audit trail identified the account and officer, who was suspended; INEC said there was no external hack. The case was referred to the DSS and police.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "NG"
+    ],
+    "employee_count": "Large",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921190",
+    "region": [
+      "002011"
+    ],
+    "victim_id": "Independent National Electoral Commission (INEC)"
+  }
+}

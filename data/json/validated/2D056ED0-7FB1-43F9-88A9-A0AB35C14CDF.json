@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Configuration or patch management"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "2D056ED0-7FB1-43F9-88A9-A0AB35C14CDF",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23031\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (hacking variety/vector Unknown, external actor Unknown). Asset coded S - Configuration or patch management as the closest enum for a mobile device management (MDM) platform. The Commission said the attack 'may have resulted in access' to staff names and mobile numbers, so data_disclosure coded Potentially rather than Yes. Incident date = 30 Jan 2026 detection date (begin date not disclosed) -> dbir 2027. The EC is the EU's supranational executive: coded NAICS 921110 (executive offices), government Federal, country BE (Brussels HQ) - reviewer may prefer a different convention. Employee count ~32,000 staff. Some later press linked this to Ivanti EPMM exploitation but that is not stated in the sources used, so not coded.",
+    "created": "2026-11-11T04:10:17Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Intrusion into mobile device management infrastructure (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Access to staff names and mobile numbers"
+      }
+    ],
+    "github": "23031",
+    "master_id": "2D056ED0-7FB1-43F9-88A9-A0AB35C14CDF",
+    "modified": "2026-11-11T04:10:17Z"
+  },
+  "reference": "https://www.bleepingcomputer.com/news/security/european-commission-discloses-breach-that-exposed-staff-data/; https://ec.europa.eu/commission/presscorner/detail/en/ip_26_342",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On 30 January 2026 the European Commission's central infrastructure that manages staff mobile devices (its mobile device management platform) identified traces of a cyberattack that may have resulted in access to the names and mobile numbers of some staff members. The Commission found no evidence that the mobile devices themselves were compromised.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 30,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "BE"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "921110",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "European Commission"
+  }
+}

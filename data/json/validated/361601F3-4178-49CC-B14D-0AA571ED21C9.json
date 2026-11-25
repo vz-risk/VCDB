@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 2500000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 2500000,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "361601F3-4178-49CC-B14D-0AA571ED21C9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22857\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (variety Unknown) with vector Unknown and asset S - Database (CRM backend) instead of Web application. Industry: the victim is a car dealership, so NAICS 441110 (new car dealers) is used instead of the issue's 336111; Volkswagen itself was not breached. Change back to 336111 if you want it counted as manufacturing. Claim is attacker-sourced with a limited sample -> security_incident Suspected, confidence Low. Data offered for sale -> motive Financial. 2.5M is a row count, coded as Personal amount without data_total. Incident date = Dec 2025 report -> dbir_year 2027.",
+    "created": "2026-11-11T01:15:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "CRM backend accessed, method unknown"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Customer records stolen and offered for sale"
+      }
+    ],
+    "github": "22857",
+    "master_id": "361601F3-4178-49CC-B14D-0AA571ED21C9",
+    "modified": "2026-11-11T01:15:47Z"
+  },
+  "reference": "https://www.scworld.com/brief/allegedly-stolen-indian-volkswagen-dealership-data-up-for-sale; https://cybernews.com/security/volkswagen-dealership-data-breach-india/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Suspected",
+  "source_id": "vcdb",
+  "summary": "In December 2025 hackers offered for sale about 2.5 million rows of data allegedly taken from the CRM backend of Volkswagen Mandi, a Volkswagen dealership in India, including customer names, phone numbers, emails, home addresses and ZIP codes. Researchers said the claim's veracity was uncertain because only a small sample was posted.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "IN"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "441110",
+    "region": [
+      "142034"
+    ],
+    "victim_id": "Volkswagen Mandi (dealership)"
+  }
+}

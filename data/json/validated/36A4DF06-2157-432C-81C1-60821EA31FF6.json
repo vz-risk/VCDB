@@ -1,0 +1,180 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "End-user or employee"
+      ],
+      "variety": [
+        "Phishing"
+      ],
+      "vector": [
+        "Email"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "36A4DF06-2157-432C-81C1-60821EA31FF6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24258\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTags Social-ext-Phish and Hacking-ext-unknown: social Phishing (Email) + hacking Use of stolen creds on the M365 mailbox (Web application, cloud External). No fraudulent transaction, so the phishing template's integrity Fraudulent transaction is not coded. data_disclosure Yes because mailbox access is confirmed, although IEH found no evidence of exfiltration (result Infiltrate only). Data: engineering docs/export-controlled data -> Secrets; POs/communications -> Internal; contact details -> Personal. Discovery method not stated. Brooklyn, NY; employee count approximate. Incident date = Aug 2026 8-K (exact compromise date not in the issue) -> dbir_year 2027.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Phishing link from fake business contact"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Stolen credentials used on Microsoft 365 mailbox"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Mailbox contents exposed"
+      }
+    ],
+    "github": "24258",
+    "master_id": "36A4DF06-2157-432C-81C1-60821EA31FF6",
+    "modified": "2026-11-19T22:00:00Z"
+  },
+  "reference": "https://cybernews.com/security/ieh-corporation-microsoft-365-phishing-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "IEH Corporation, a U.S. maker of connectors for satellites, fighter jets and the THAAD and Patriot missile programs, disclosed in an SEC 8-K in August 2026 that an employee's Microsoft 365 mailbox was compromised after the employee entered credentials on a fake login page reached from a fraudulent document-sharing link sent by an attacker posing as a prospective business contact. Emails, attachments, customer communications, purchase orders, engineering documentation and possibly export-controlled technical data may have been exposed; IEH found no evidence of exfiltration.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "development": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "distribution": {
+      "notes": "VERIS 1.3.6: value_chain.distribution.variety.Email added because action.social.vector.Email exists.",
+      "variety": [
+        "Email"
+      ]
+    },
+    "targeting": {
+      "notes": "VERIS 1.3.6: value_chain.targeting.variety.Email addresses added because action.social.vector.Email exists.",
+      "variety": [
+        "Email addresses"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334417",
+    "region": [
+      "019021"
+    ],
+    "state": "NY",
+    "victim_id": "IEH Corporation"
+  }
+}

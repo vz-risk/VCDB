@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "9D80E025-7B9F-43A9-9E29-3FDE6E05FCE5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23960\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed (vector Unknown, S - Unknown); breach method not in the sources read. data_disclosure Yes (filed as a breach of personal information); types Personal (financial exposure risk mentioned, not confirmed). Discovery method not stated -> internal Unknown assumed, reviewer may set unknown. NAICS refined from 311 to 311710 (seafood product preparation and packaging). Breach date Jan 31, 2026 from the CA AG listing -> dbir_year 2027. Employee count not found. Employee count from 51-200 employees per LeadIQ (https://leadiq.com/c/lusamerica-foods-inc/5a1d889e240000240062426e).",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access, method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      }
+    ],
+    "github": "23960",
+    "master_id": "9D80E025-7B9F-43A9-9E29-3FDE6E05FCE5",
+    "modified": "2026-11-11T01:30:49Z"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-623614",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Lusamerica Foods, a California seafood processor and distributor, reported a data breach to the California Attorney General with a breach date of January 31, 2026, involving unauthorized access to personal information; it set up a response line and recommended credit monitoring. The method and number of affected people were not given.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 31,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "311710",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Lusamerica Foods, Inc."
+  }
+}

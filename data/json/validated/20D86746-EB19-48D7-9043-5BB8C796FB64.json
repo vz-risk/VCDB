@@ -1,0 +1,110 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Other"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Transmitted"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "20D86746-EB19-48D7-9043-5BB8C796FB64",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23243\nUnencrypted email transmission of PHI -> error Other (no matching enum for unencrypted transmission), internal actor, data state Transmitted, data_disclosure Potentially. Incident January 2026 -> dbir_year 2027. The same article mentions a separate email breach at Interventional Pain Center (Tennessee), not coded here. NAICS 621111. Employee count 11 to 100 (approximate).",
+    "created": "2026-11-06T00:25:46Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "PHI emailed unencrypted"
+      }
+    ],
+    "github": "23243",
+    "master_id": "20D86746-EB19-48D7-9043-5BB8C796FB64",
+    "modified": "2026-11-06T00:25:46Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/medical-group-phi-exposure-unencrypted-emails/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "CardioFit Medical Group, a California cardiology group, found on February 17, 2026 that emails sent in January and February 2026 contained patient names, demographic information and, for some, diagnoses and health insurance information but had not been encrypted.",
+  "timeline": {
+    "incident": {
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "11 to 100",
+    "government": [
+      "NA"
+    ],
+    "industry": "621111",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "CardioFit Medical Group, Inc."
+  }
+}

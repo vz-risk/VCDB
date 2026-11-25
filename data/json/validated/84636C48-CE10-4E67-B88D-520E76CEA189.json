@@ -1,0 +1,120 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse",
+        "Data mishandling"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "job_change": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Unrelated 3rd party"
+      ]
+    }
+  },
+  "incident_id": "84636C48-CE10-4E67-B88D-520E76CEA189",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24473\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nInsider theft by an Auburn football staff member. Coded Misuse Privilege abuse + Data mishandling (sent to competitor programs); vector not stated -> Unknown. Motive not stated -> Unknown. Discovery: a competitor school returned the materials to Auburn -> external Unrelated 3rd party (inferred from the issue summary). Incident date July 19, 2026 per issue/article (send date); job_change Unknown. Industry re-coded from issue label 92119 to 611310 (colleges and universities) since the victim is a public university athletics department; government kept Regional (state university). Employee count 1001 to 10000 from general knowledge of Auburn staff size (~7,000), not looked up. Only one source (AL Daily News); no corroborating source fetched due to fetch budget. Confidence Medium.",
+    "created": "2026-11-11T04:11:42Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse - scouting/recruiting data taken and sent to rivals"
+      }
+    ],
+    "github": "24473",
+    "master_id": "84636C48-CE10-4E67-B88D-520E76CEA189",
+    "modified": "2026-11-11T04:11:42Z"
+  },
+  "reference": "https://aldailynews.com/former-auburn-staffer-faces-felony-charges-for-allegedly-stealing-and-sharing-trade-secrets/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "David Rudolph Jenrath, a player personnel scouting assistant for Auburn University's football program, was arrested on felony charges of theft of trade secrets and computer tampering after allegedly taking scouting reports, recruiting databases and prospect evaluations and sending them to competing football programs around July 19, 2026. At least one competitor school returned the materials to Auburn.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 19,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Regional"
+    ],
+    "industry": "611310",
+    "region": [
+      "019021"
+    ],
+    "state": "AL",
+    "victim_id": "Auburn University (Athletics)"
+  }
+}

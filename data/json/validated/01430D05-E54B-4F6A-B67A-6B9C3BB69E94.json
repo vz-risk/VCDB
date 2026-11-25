@@ -1,0 +1,106 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Publishing error"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "01430D05-E54B-4F6A-B67A-6B9C3BB69E94",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24271\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-publishing. Backend mistake posted the full film publicly -> Publishing error, S - Web application (Prime Video page). Unreleased film -> Secrets; owned by Lionsgate/distributors -> data_victim Partner.\nOnline for hours -> discovery Hours. Box-office shortfall (~$16M vs ~$50M budget) and compensation claims reported but not attributed solely to the leak, so no impact amount coded. Date ~Aug 19, 2026 -> dbir_year 2027. NAICS tag 5417 does not fit Amazon/Prime Video; coded 516210. Single source.",
+    "created": "2026-11-20T19:52:48Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Full film posted to public product page"
+      }
+    ],
+    "github": "24271",
+    "master_id": "01430D05-E54B-4F6A-B67A-6B9C3BB69E94",
+    "modified": "2026-11-20T19:52:48Z"
+  },
+  "reference": "https://movieweb.com/jason-statham-mutiny-amazon-leak/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Around August 19, 2026, two days before its theatrical release, Amazon mistakenly posted the full finished Lionsgate film Mutiny to its Prime Video product page, where trailers normally appear, because of a backend error. The file stayed publicly accessible for hours before anyone caught it and circulated widely. The film earned about $16 million worldwide against a budget around $50 million, and distributors were reportedly seeking compensation from Amazon.",
+  "timeline": {
+    "discovery": {
+      "unit": "Hours"
+    },
+    "incident": {
+      "day": 19,
+      "month": 8,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "NA"
+    ],
+    "industry": "516210",
+    "region": [
+      "019021"
+    ],
+    "state": "WA",
+    "victim_id": "Amazon"
+  }
+}

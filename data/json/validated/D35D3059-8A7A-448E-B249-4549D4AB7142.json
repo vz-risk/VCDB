@@ -1,0 +1,138 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Partner"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "CN"
+      ],
+      "motive": [
+        "Espionage"
+      ],
+      "region": [
+        "142030"
+      ],
+      "variety": [
+        "State-affiliated"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "N - Other"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Customer"
+      ]
+    }
+  },
+  "incident_id": "D35D3059-8A7A-448E-B249-4549D4AB7142",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23096\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nCloses https://github.com/vz-risk/VCDB/issues/23187\nMERGED: issue 23096 (FBI investigating wiretap-system breach, Mar 2026) and issue 23187 (Partner_Breach tag; same DCS-3000/Red Hook intrusion declared a major incident) describe the same incident. PARTNER RULE APPLIED per 23187's Partner_Breach tag: the FBI told Congress the hackers leveraged 'a commercial Internet Service Provider's vendor infrastructure', so the unnamed ISP vendor is coded as primary victim (NAICS 517111 wired telecom assumed - provider not named, government NA, employee count Unknown) and the FBI as secondary victim ('Federal Bureau of Investigation; 922120'); hacking vector Partner. Reviewer may prefer FBI as primary given the provider is unnamed. Actor: suspected Chinese state-linked (investigators focusing on Salt Typhoon, MSS-linked; not formally named) -> State-affiliated, CN, Espionage; name not coded. Disclosure Yes on confirmed intrusion into the system holding the data, though the full scope of access/exfiltration has not been disclosed (no Exfiltrate result coded). Discovery: FBI spotted abnormal log activity -> from the provider's perspective, external Customer. Incident date = Feb 17 2026 detection (begin date unknown) -> dbir 2027. Politico (blocked for fetching) cited via Militarnyi and HSToday.",
+    "created": "2026-11-11T04:13:08Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "net",
+        "attribute": "unk",
+        "summary": "Access via commercial ISP vendor infrastructure (method not disclosed)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Access to DCS-3000 surveillance returns and subject PII"
+      }
+    ],
+    "github": "23096",
+    "master_id": "D35D3059-8A7A-448E-B249-4549D4AB7142",
+    "modified": "2026-11-11T04:13:08Z"
+  },
+  "reference": "https://www.theregister.com/2026/03/08/fbi_investigates_wiretap_system_breach/; https://edition.cnn.com/2026/03/05/politics/fbi-investigating-cyber-breach-critical-surveillance-network; https://militarnyi.com/en/news/chinese-hackers-breached-fbi-surveillance/; https://www.politico.com/news/2026/04/01/fbi-hack-surveillance-system-major-incident-00854237; https://www.hstoday.us/fbi/fbi-labels-china-linked-hack-of-surveillance-system-a-major-cyber-incident/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Suspected Chinese state-linked hackers breached the FBI's DCS-3000 ('Red Hook') system, an unclassified component of the DCSNet surveillance network that stores pen register and trap-and-trace returns and PII of investigation subjects, by leveraging a commercial internet service provider's vendor infrastructure. The FBI detected suspicious activity on February 17, 2026 (at its Virgin Islands offices, per reports), told Congress, and later declared it a major cyber incident; investigators reportedly focused on Salt Typhoon.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 17,
+      "month": 2,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "517111",
+    "region": [
+      "019021"
+    ],
+    "secondary": {
+      "amount": 1,
+      "victim_id": [
+        "Federal Bureau of Investigation; 922120"
+      ]
+    },
+    "victim_id": "Unnamed commercial internet service provider vendor (FBI DCSNet supplier)"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Exploit vuln"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Partner"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "B32D1635-0177-476A-826E-2C12325E6CB5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23591\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown, refined: DHS said it 'mitigated the vulnerability', so hacking variety Exploit vuln; vector Web application is a judgment for a web-based SharePoint collaboration platform. Intrusion late May-early June 2026 (Nextgov) -> timeline May 2026, dbir_year 2027. Exfiltration not confirmed; data_disclosure Yes on confirmed attacker access to HSIN servers holding partner-shared operational data and PII (skill rule); data varieties Internal + Personal per Nextgov description; no Exfiltrate result coded. Attribution unknown. Discovery method not stated. Asset S - File for the SharePoint document store (judgment). NAICS 928110; DHS >200k employees. Nextgov and TechCrunch read; BleepingComputer fetch failed.",
+    "created": "2026-11-11T04:11:16Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Vulnerability exploited on HSIN"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Access to HSIN/SharePoint data"
+      }
+    ],
+    "github": "23591",
+    "master_id": "B32D1635-0177-476A-826E-2C12325E6CB5",
+    "modified": "2026-11-11T04:11:16Z"
+  },
+  "reference": "https://www.nextgov.com/cybersecurity/2026/06/hackers-breached-dhs-information-sharing-network-people-familiar-say/414534/; https://techcrunch.com/2026/07/02/us-government-says-it-got-hacked-again/; https://www.pymnts.com/cybersecurity/2026/sen-warner-demands-doj-probe-into-homeland-security-network-breach/; https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/; https://www.securitymagazine.com/articles/102413-department-of-homeland-security-investigating-a-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Between late May and early June 2026 unidentified hackers breached servers of the DHS Homeland Security Information Network (HSIN), an unclassified legacy information-sharing platform used by federal, state, local and private partners (including for World Cup security planning), and a SharePoint collaboration system. DHS isolated the affected systems, said it mitigated the exploited vulnerability and opened a forensic investigation; whether documents were taken was not disclosed.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Over 100000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "928110",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Department of Homeland Security (HSIN)"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "action": {
+    "social": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "target": [
+        "End-user or employee",
+        "End-user"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Phone"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - End-user or employee"
+      },
+      {
+        "variety": "P - End-user"
+      },
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 41569,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 41569,
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "E37E86E1-1D19-4EBA-A097-FFD15051C63A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24254\nCloses https://github.com/vz-risk/VCDB/issues/24024\nMerged #24024 (Sunshine Health, Social-ext-Pretex). #24254's title also names Health Payment Systems, a separate incident (#24120). Social Pretexting via Phone (impersonation call) -> employee sent files: confidentiality via the social action itself; no hacking. Assets P - End-user and S - File? Files were 'shared' by the employee -> asset S - Unknown. Integrity Alter behavior. Discovery same day. NAICS 524114. Employee count 1001 to 10000 (approximate; Centene subsidiary).",
+    "created": "2026-11-06T00:00:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Employee deceived by impersonation call"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "cp",
+        "summary": "Health plan files shared with caller"
+      }
+    ],
+    "github": "24254",
+    "master_id": "E37E86E1-1D19-4EBA-A097-FFD15051C63A",
+    "modified": "2026-11-06T00:00:53Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/data-breaches-sunshine-health-health-payment-systems/; https://www.classaction.org/data-breach-lawsuits/sunshine-health-july-2026",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Sunshine Health, a Florida Medicaid managed care plan, had a voice phishing attack on May 6, 2026: an employee was tricked by a caller impersonating a trusted person into sharing health plan files. Names, dates of birth, medical information and history and plan coverage details of 41,569 people were exposed. The breach was identified the same day and reported to HHS on July 10, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 6,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "524114",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Sunshine Health"
+  }
+}

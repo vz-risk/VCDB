@@ -1,0 +1,166 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "ExfilSquad"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "S - Database"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 135000,
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 135000,
+      "data_victim": [
+        "Customer",
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "81E0FF47-D700-48B3-9398-FDDD256A16D1",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24067\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue tagged both Hacking-ext-unknown and Malware-ext-Ransomware-databreach. No source reports ransomware or encryption at PNLD; ExfilSquad is a data-theft extortion group. Coded Hacking (Unknown) + Social Extortion with no malware block. Incident date is the 26 Jul 2026 leak-site listing (begin date unknown) -> dbir_year 2027. Record count 135,000 'pieces of data' (The Record), used as the Personal amount; data_total omitted because it counts data items, not people. Asset S - Web application/S - Database assumed from the hosted Ask the Police Q&A platform; hacking vector not disclosed so left Unknown. Victim government coded Federal per the issue label (PNLD serves all 43 Home Office forces; it is run by West Yorkshire Police, so Regional/Local could also be argued). NAICS 922120. Employee count not found -> Unknown. The DfE (Turing scheme/helpdesk portals) breach by the same group is a separate victim and was not coded here. Confidence Medium: action vector and asset are unknown.",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T04:09:41Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Extortion for payment"
+      }
+    ],
+    "github": "24067",
+    "master_id": "81E0FF47-D700-48B3-9398-FDDD256A16D1",
+    "modified": "2026-11-11T04:09:41Z"
+  },
+  "reference": "https://www.thecanary.co/uk/2026/07/30/hackers-dfe-police/; https://therecord.media/united-kingdom-ransomware-education; https://securityaffairs.com/196525/data-breach/pnld-confirms-data-breach-affecting-uk-police-and-justice-staff.html; https://www.resecurity.com/blog/article/exfilsquad-targets-new-victims-shares-data-via-torrents",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "The extortion group ExfilSquad breached the Police National Legal Database (PNLD), a legal reference platform used by the police forces of England and Wales, and listed it on its leak site on 26 July 2026. About 135,000 data items were taken, including names, forces and work email addresses of police officers, staff and criminal justice professionals, plus contact details of members of the public who used the Ask the Police service hosted on the same platform. The group demanded a ransom, then published the data. PNLD reported the breach to the ICO; the NCSC supported the response. The UK Department for Education was hit in the same campaign.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 26,
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "922120",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Police National Legal Database (PNLD)"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Medical"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "52BE771D-E1F9-4F6C-9E34-68F1A4FB903B",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24057\nHacking Unknown; data copied -> Exfiltrate. Industry kept at the issue's NAICS 6215 (four digits; WTN is a wound care/hyperbaric services company and reviewer may refine). Incident Dec 2025 -> dbir_year 2027. Count not disclosed. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:06:25Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24057",
+    "master_id": "52BE771D-E1F9-4F6C-9E34-68F1A4FB903B",
+    "modified": "2026-11-06T00:06:25Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-620273",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Wound Technology Network found unauthorized activity in its network on December 6, 2025. A forensic investigation finished December 31 confirmed that an unauthorized person copied certain customer personal information between December 6 and 9, 2025. The data review finished March 2, 2026, and notices were reported to the California Attorney General on March 16, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 6,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "6215",
+    "region": [
+      "019021"
+    ],
+    "state": "FL",
+    "victim_id": "Wound Technology Network, Inc."
+  }
+}

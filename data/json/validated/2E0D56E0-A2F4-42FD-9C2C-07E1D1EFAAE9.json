@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Student",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "2E0D56E0-A2F4-42FD-9C2C-07E1D1EFAAE9",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24482\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Issue draft dated the attack September 2024, but ITV (4 November 2026) says the attack 'happened in September' and the stolen files were published in Nov 2026; coded 21 Sept 2026 (detection date from BBC as summarized in the issue; begin date may be earlier) -> dbir_year 2027. The BBC page could not be fetched (site blocked); details from issue text and ITV. Hacking variety/vector unknown (template's Web application vector not stated by sources -> Unknown). The BBC summary calls it a 'malware attack' but no malware type is given, so no malware action was coded. Council initially said no evidence of theft; later ~320,000 files were found published online, so data_disclosure Yes. No actor named and no ransom demand reported -> motive Unknown; data_abuse left out. Containment 4 days (21->25 Sept). Data: pupil and staff personal data, payroll/budget internal data. Schools affected listed as secondary count (88 per ITV) without names. Victim government Local; NAICS 921110. Employee count from general knowledge (~6,000+ council staff). Confidence Medium (actor/vector unknown).",
+    "created": "2026-11-11T04:12:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Platform accessed - method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "About 320,000 files stolen and published"
+      },
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Platform taken offline"
+      }
+    ],
+    "github": "24482",
+    "master_id": "2E0D56E0-A2F4-42FD-9C2C-07E1D1EFAAE9",
+    "modified": "2026-11-11T04:12:05Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.bbc.com/news/articles/cmed30pg4x7lo; https://www.the-independent.com/news/uk/home-news/bristol-school-hack-files-dark-web-b3078972.html; https://www.itv.com/news/westcountry/2026-11-04/childrens-data-leaked-by-criminals-in-bristol-schools-cyber-attack",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Attackers breached Bristol City Council's Trading with Schools IT platform, used by around 87-88 schools for scheduling, budgets, staff and payroll details and pupil records including educational psychology files. The council detected suspicious activity on 21 September 2026 but did not disconnect the system until 25 September. About 320,000 stolen files were later published online/on the dark web. The South West Regional Cyber Crime Unit is investigating.",
+  "timeline": {
+    "containment": {
+      "unit": "Days",
+      "value": 4
+    },
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 21,
+      "month": 9,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "GB"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "150154"
+    ],
+    "secondary": {
+      "amount": 88,
+      "notes": "Schools using the council's Trading with Schools platform (87-88 per BBC/ITV; Independent says files from 39 schools)."
+    },
+    "victim_id": "Bristol City Council"
+  }
+}

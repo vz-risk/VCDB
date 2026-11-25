@@ -1,0 +1,169 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "malware": {
+      "variety": [
+        "Capture stored data",
+        "Spyware/Keylogger",
+        "RAT",
+        "Backdoor",
+        "Trojan",
+        "Backdoor or C2"
+      ],
+      "vector": [
+        "Web application - download",
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Customer"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Customer"
+      },
+      {
+        "variety": "U - Desktop or laptop"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Unknown"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Modify data",
+        "Alter behavior",
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Security researcher"
+      ]
+    }
+  },
+  "incident_id": "0A36A8E6-15F5-46C2-8985-961CAA2714BA",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23764\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Malware-ext-infostealer; the infostealer ran on the freelancer's own machine, so the record codes the use of stolen credentials against Artlist plus the site modification. Recoded per analyst review to add the social and malware actions: the injected JavaScript showed a fake reCAPTCHA (ClickFix) pretext that had visitors paste and run a PowerShell command (social Pretexting via Web application, target Customer = blog visitors), which downloaded an infostealer/RAT with browser credential and cookie theft and keylogging (malware Capture stored data, Spyware/Keylogger, RAT with its parents Backdoor, Trojan and Backdoor or C2, via Web application - download) onto visitors' Windows computers. No specific data theft from visitors or from Artlist is reported, so no confidentiality attribute is coded. The 2023 infostealer infection of the freelancer's machine is not coded as a separate action because that machine was not Artlist's. Dated July 2026 from discovery; the blog compromise may be earlier. NAICS 519290 is an approximation for a stock media licensing site. Employee count is an approximate figure from general knowledge, not a per-record lookup.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-11T18:20:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Use of stolen WordPress admin creds; malicious JavaScript injected into blog"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Fake CAPTCHA (ClickFix) pretext tricks visitors into running a PowerShell command"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "usr",
+        "attribute": "ia",
+        "summary": "Infostealer/RAT downloaded and installed on visitors' computers"
+      }
+    ],
+    "github": "23764",
+    "master_id": "0A36A8E6-15F5-46C2-8985-961CAA2714BA",
+    "modified": "2026-11-19T22:00:00Z"
+  },
+  "reference": "https://www.infostealers.com/article/how-an-infostealer-infection-led-to-a-sophisticated-clickfix-campaign-at-artlist/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July 2026 researchers found that Artlist's corporate blog had been compromised and injected with malicious JavaScript showing a fake CAPTCHA (ClickFix) that tricked visitors into installing a remote access trojan. The attackers logged in with WordPress admin credentials stolen in 2023 by infostealer malware on a freelance developer's computer, and used blockchain-hosted code (EtherHiding) to serve the payload.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IL"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "519290",
+    "region": [
+      "142145"
+    ],
+    "victim_id": "Artlist"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "action": {
+    "misuse": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Privilege abuse",
+        "Unapproved hardware"
+      ],
+      "vector": [
+        "Physical access"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Espionage"
+      ],
+      "variety": [
+        "Developer"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "U - Other"
+      }
+    ],
+    "cloud": [
+      "On-Premise Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Infrastructure monitoring"
+      ]
+    }
+  },
+  "incident_id": "A427C2EA-E1A0-4CF4-896F-A99B924E2C95",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24310\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse followed: internal (senior engineer -> Developer), Privilege abuse plus Unapproved hardware (hidden camera), vector Physical access (restricted R&D area). Motive Espionage (trade secrets intended for China). data_disclosure Yes because he captured the material, although forensics found no transmission outside the company. Assets: R&D system (S - Unknown) and the camera (U - Other). Discovery internal Infrastructure monitoring (wireless signal detection). Incident Mar 28, 2026 -> dbir_year 2027. Employee count approximate (about 3.5k). Comments not opened.",
+    "created": "2026-11-11T01:30:49Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Engineer photographs and films R&D documents with a hidden camera"
+      }
+    ],
+    "github": "24310",
+    "master_id": "A427C2EA-E1A0-4CF4-896F-A99B924E2C95",
+    "modified": "2026-11-11T01:30:49Z"
+  },
+  "reference": "https://www.tomshardware.com/pc-components/dram/nanya-engineer-used-360-degree-cam-hidden-in-snacks-in-attempt-to-steal-dram-process-tech-for-china-it-security-team-pinpointed-perp-due-to-cameras-leaky-wireless-signals",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On March 28, April 4 and April 5, 2026 Yeh Yen-wei, a senior engineer at Taiwanese DRAM maker Nanya Technology, smuggled an Insta360 action camera hidden in a bag of snacks into restricted areas and used his legitimate credentials to open internal R&D systems, photographing and filming documents on DRAM process technology for use in China. Nanya's IT security team spotted the camera's abnormal Bluetooth and Wi-Fi signals and matched them to his access logs; forensics found no evidence the material left the company. He was indicted under Taiwan's Trade Secrets Act.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 28,
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "TW"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "334413",
+    "region": [
+      "142030"
+    ],
+    "victim_id": "Nanya Technology Corporation"
+  }
+}

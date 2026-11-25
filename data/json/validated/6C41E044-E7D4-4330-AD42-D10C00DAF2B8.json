@@ -1,0 +1,124 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "6C41E044-E7D4-4330-AD42-D10C00DAF2B8",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24083\nEmail account compromise -> S - Mail, hacking Unknown. NAICS tag 6241; Youth Home is a residential/psychiatric treatment provider -> 623220. Discovery 1 day. Count not disclosed. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-06T00:05:33Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24083",
+    "master_id": "6C41E044-E7D4-4330-AD42-D10C00DAF2B8",
+    "modified": "2026-11-06T00:05:33Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.claimdepot.com/data-breach/youth-home-2026; https://youthhome.org/notice-of-data-event/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Youth Home Inc., a nonprofit mental health provider for adolescents in Little Rock, Arkansas, had an employee's email inbox accessed without authorization on May 14, 2026; it was detected the next day. The mailbox held names, Social Security numbers, dates of birth, addresses, medical records, diagnoses, medications, admission and discharge dates and government IDs. It disclosed the breach July 13, 2026.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "incident": {
+      "day": 14,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "623220",
+    "region": [
+      "019021"
+    ],
+    "state": "AR",
+    "victim_id": "Youth Home Inc."
+  }
+}

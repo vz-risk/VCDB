@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        },
+        {
+          "variety": "Payment"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Unknown"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "80A7DE83-1EEE-4348-991D-3849F63303C6",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24454\nNAICS 3391 -> 339112 (medical instruments; Millstone does inspection/cleaning/packaging for device makers). Incident Dec 15, 2025 -> dbir_year 2027. Discovery 1 day. Data victim Unknown (not stated whether employees or patients). Count not given. Employee count 101 to 1000 (approximate).",
+    "created": "2026-11-05T23:54:52Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24454",
+    "master_id": "80A7DE83-1EEE-4348-991D-3849F63303C6",
+    "modified": "2026-11-05T23:54:52Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/california-critical-access-hospital-cybersecurity-incident/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Millstone Medical Outsourcing, a Fall River, Massachusetts medical device outsourcing company, suffered a network intrusion first accessed December 15, 2025 and detected December 16, with files acquired through December 19, 2025. A forensic review confirmed July 15, 2026 that stolen data included Social Security numbers, government IDs, financial account and payment card information and health records.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 1
+    },
+    "exfiltration": {
+      "unit": "Days",
+      "value": 4
+    },
+    "incident": {
+      "day": 15,
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "339112",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Millstone Medical Outsourcing"
+  }
+}

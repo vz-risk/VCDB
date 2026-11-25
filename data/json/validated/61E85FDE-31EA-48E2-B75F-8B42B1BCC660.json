@@ -1,0 +1,131 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Termite"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 7037,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 7037,
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "61E85FDE-31EA-48E2-B75F-8B42B1BCC660",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23613\nIssue body says 'Termine'; the group is Termite. Termite runs data theft and encryption; encryption not reported here -> hacking + Exfiltrate, actor Termite (Organized crime, Financial), leak-site samples -> data_abuse 'Yes - Data ransomed'. NAICS 621330 tag does not fit a community health center -> 621498. Employee count 101 to 1000 (approximate).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-06T00:19:53Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "23613",
+    "master_id": "61E85FDE-31EA-48E2-B75F-8B42B1BCC660",
+    "modified": "2026-11-06T00:19:53Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/data-breach-round-up-july-6-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Family Health Centers of Southern Indiana found unauthorized third-party network activity on or around January 16, 2026. The Termite group claimed the attack, listing the organization on its leak site with samples and claiming about 250 GB. Names, dates of birth, contact and demographic information, Social Security numbers, medical and health insurance information of 7,037 Indiana residents were compromised.",
+  "timeline": {
+    "incident": {
+      "day": 16,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "IN",
+    "victim_id": "Family Health Centers of Southern Indiana"
+  }
+}

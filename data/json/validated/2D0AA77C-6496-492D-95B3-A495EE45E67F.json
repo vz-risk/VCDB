@@ -1,0 +1,109 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Misconfiguration"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "2D0AA77C-6496-492D-95B3-A495EE45E67F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22838\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Error-int-publishing; coded as Misconfiguration because Petco describes an application setting that left files accessible online. Disclosure Potentially (TechCrunch saw at least one record indexed by Google; Yes would also be reasonable). Pet medical records are not human Medical data, so only Personal is coded. Incident start date is not disclosed in any source found; dbir_year is derived from the disclosure/notification date (2026), so this record may belong to an earlier DBIR year. Reviewer check. Employee count is an approximate figure from general knowledge, not a per-record lookup.",
+    "created": "2026-11-11T06:07:29Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "22838",
+    "master_id": "2D0AA77C-6496-492D-95B3-A495EE45E67F",
+    "modified": "2026-11-11T06:07:29Z"
+  },
+  "reference": "https://techcrunch.com/2025/12/05/petco-confirms-security-lapse-exposed-customers-personal-data/; https://oag.ca.gov/ecrime/databreach/reports/sb24-615037; https://www.techbuzz.ai/articles/petco-data-breach-exposes-customer-info-in-app-config-error; https://www.msn.com/en-us/money/companies/petco-discloses-security-breach-involving-customers-personal-information/ar-AA1RNj05; https://www.upi.com/Top_News/US/2025/12/08/Petco-customer-data-security-breach-information/1461765216117/; https://techcrunch.com/2025/12/10/petco-takes-down-vetco-website-after-exposing-customers-personal-information/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Petco disclosed in a December 2025 filing with California's attorney general that a setting in one of its software applications let certain customer files be accessed online. The exposed Vetco clinic records, some indexed by Google, included names, contact details, visit summaries, pet medical histories, prescriptions and vaccination records. Petco found the issue itself and took the Vetco site down.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 12,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "25001 to 50000",
+    "government": [
+      "NA"
+    ],
+    "industry": "453910",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "Petco Health and Wellness Company, Inc."
+  }
+}

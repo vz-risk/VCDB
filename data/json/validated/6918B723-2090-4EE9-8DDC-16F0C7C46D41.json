@@ -1,0 +1,128 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "6918B723-2090-4EE9-8DDC-16F0C7C46D41",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/22806\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Hacking-ext-unknown; Use of stolen creds coded because the FFF says the intrusion used a compromised account. Incident dated November 2025 from the Nov 26 statement. NAICS 813990 (sports governing body) instead of the tag's 71. Employee count is an approximate figure from general knowledge, not a per-record lookup.\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "created": "2026-11-11T18:11:07Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Stolen or phished credentials used"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed or copied"
+      }
+    ],
+    "github": "22806",
+    "master_id": "6918B723-2090-4EE9-8DDC-16F0C7C46D41",
+    "modified": "2026-11-19T22:00:00Z"
+  },
+  "reference": "https://www.theregister.com/2025/12/01/french_football_federation_breach/; https://www.fff.fr/article/15831-communique-du-26-novembre-relatif-au-vol-de-donnees.html; https://uk.fff.fr/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In November 2025 attackers used a compromised account to log in to the French Football Federation's club member management software and stole personal data of licensed players and members. The FFF spotted the unauthorized login, disabled the account, reset passwords and announced the theft on November 26, 2025.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 11,
+      "year": 2025
+    }
+  },
+  "victim": {
+    "country": [
+      "FR"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "813990",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "F\u00e9d\u00e9ration Fran\u00e7aise de Football (FFF)"
+  }
+}

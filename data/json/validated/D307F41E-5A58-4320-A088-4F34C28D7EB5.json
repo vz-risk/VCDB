@@ -1,0 +1,125 @@
+{
+  "action": {
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Pretexting"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "integrity": {
+      "variety": [
+        "Alter behavior",
+        "Fraudulent transaction"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "impact": {
+    "iso_currency_code": "USD",
+    "loss": [
+      {
+        "amount": 425000,
+        "variety": "Asset and fraud"
+      }
+    ],
+    "overall_amount": 425000,
+    "overall_rating": "Unknown"
+  },
+  "incident_id": "D307F41E-5A58-4320-A088-4F34C28D7EB5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23854\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Social-ext-Pretext. Town notice says fraudsters impersonated attorneys for the town and a litigation party, causing a $425,000 wire transfer on June 1, 2026. Channel (likely email) not stated -> vector Unknown; target staff role not stated -> Unknown / P - Unknown. No data was reported stolen, so the template's confidentiality block and S - Database / S - Remote Access assets were not coded (no data disclosure). Motive Financial (fraudulent wire). Fraudulent transaction coded as integrity per project rule; loss of $425,000 recorded as Asset and fraud. Single source (official town notice). Employee count estimated 101 to 1000 for a town of ~14,000 - not sourced. Discovery not stated. Industry 921110 (issue suggested 921190).",
+    "created": "2026-11-11T04:10:47Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Pretexting - attorneys impersonated"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Fraudulent wire transfer of $425,000"
+      }
+    ],
+    "github": "23854",
+    "master_id": "D307F41E-5A58-4320-A088-4F34C28D7EB5",
+    "modified": "2026-11-11T04:10:47Z"
+  },
+  "reference": "https://www.eastbridgewaterma.gov/m/newsflash/Home/Detail/166",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On June 1, 2026, the Town of East Bridgewater, Massachusetts was defrauded by a social engineering scheme in which criminals impersonated attorneys representing the town and a party to litigation, leading the town to wire $425,000 to the fraudsters. The town opened an independent administrative investigation, is reviewing its financial controls, and law enforcement is investigating.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "day": 1,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "MA",
+    "victim_id": "Town of East Bridgewater"
+  }
+}

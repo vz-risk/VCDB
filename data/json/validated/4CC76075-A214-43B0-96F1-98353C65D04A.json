@@ -1,0 +1,116 @@
+{
+  "action": {
+    "error": {
+      "variety": [
+        "Loss"
+      ],
+      "vector": [
+        "Carelessness"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "NA"
+      ],
+      "variety": [
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "M - Flash drive"
+      }
+    ],
+    "cloud": [
+      "NA"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Loss"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "data_victim": [
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Reported by employee"
+      ]
+    }
+  },
+  "incident_id": "4CC76075-A214-43B0-96F1-98353C65D04A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23902\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Error-int-loss-usrdev, but the lost device was a USB thumb drive -> asset M - Flash drive instead of U - Laptop (event chain asset med). Encryption status not stated -> state Stored; data_disclosure Potentially (no evidence of access). Data: employee names and SSNs -> Personal, data_victim Employee. Actor role not specified ('workforce member') -> internal Unknown. Discovery Jan 12 (3 days after loss); who discovered not stated -> Reported by employee per template (assumption). Number affected not in issue. Employee count ~7,000 (City of San Jos\u00e9). Industry 921110 (issue suggested 921190). Source: CA AG notice.",
+    "created": "2026-11-11T04:10:40Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "err",
+        "actor": "int",
+        "asset": "med",
+        "attribute": "au",
+        "summary": "Loss of USB drive"
+      }
+    ],
+    "github": "23902",
+    "master_id": "4CC76075-A214-43B0-96F1-98353C65D04A",
+    "modified": "2026-11-11T04:10:40Z"
+  },
+  "reference": "https://oag.ca.gov/ecrime/databreach/reports/sb24-618398",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On January 9, 2026, a City of San Jos\u00e9 workforce member lost a USB thumb drive containing employee personal information including names and Social Security numbers. The loss was discovered on January 12, 2026; the city investigated, notified law enforcement and offered affected individuals one year of identity theft and credit monitoring. There was no evidence the information had been accessed or misused.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 3
+    },
+    "incident": {
+      "day": 9,
+      "month": 1,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "CA",
+    "victim_id": "City of San Jos\u00e9"
+  }
+}

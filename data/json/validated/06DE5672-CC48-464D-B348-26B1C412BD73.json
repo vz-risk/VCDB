@@ -1,0 +1,111 @@
+{
+  "action": {
+    "misuse": {
+      "variety": [
+        "Privilege abuse",
+        "Data mishandling"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "internal": {
+      "motive": [
+        "Unknown"
+      ],
+      "variety": [
+        "Executive",
+        "Manager",
+        "End-user"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Database"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Other"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "06DE5672-CC48-464D-B348-26B1C412BD73",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23221\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Misuse-int-privabuse. Insiders (authorized users of the databases): mayor -> Executive, police chief -> Manager, sergeant/officer/dispatch supervisor -> End-user. Motive not stated -> Unknown (template's Financial not supported). Misuse varieties Privilege abuse + Data mishandling (information passed to an arrested defendant). Databases not named ('state or government computer databases'); the victim is coded generically as the Evangeline Parish law enforcement agencies, NAICS 922120, Local - the database custodian (possibly a state system) and the officials span several agencies (Ville Platte, Mamou, Opelousas PDs, parish 911), so reviewer may refine. DATE: no access dates given; incident date = March 2026, when the Sheriff's Office asked LSP to investigate (earliest anchor) -> dbir 2027; the misuse may have begun earlier. Discovery method not stated. Sources: NewsNation (issue) and LSP press release of 7 Apr 2026.",
+    "created": "2026-11-11T04:13:42Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "mis",
+        "actor": "int",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Privilege abuse: officials queried law enforcement databases and shared case/victim information with a defendant"
+      }
+    ],
+    "github": "23221",
+    "master_id": "06DE5672-CC48-464D-B348-26B1C412BD73",
+    "modified": "2026-11-11T04:13:42Z"
+  },
+  "reference": "https://www.newsnationnow.com/us-news/southeast/five-louisiana-officials-arrested-for-malfeasance-and-data-breach/; https://lsp.org/community-outreach/news/five-public-officials-arrested-in-evangeline-parish-investigation/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "Five public officials in Evangeline Parish, Louisiana - the Mayor of Ville Platte, a Ville Platte police sergeant, the Mamou police chief, the parish 911 dispatch supervisor and an Opelousas police officer - were arrested after a Louisiana State Police investigation (requested by the Evangeline Parish Sheriff's Office in March 2026) found they accessed state and government computer databases and shared sensitive information about ongoing criminal cases, including information about alleged victims, with an arrested defendant.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 3,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "Local"
+    ],
+    "industry": "922120",
+    "region": [
+      "019021"
+    ],
+    "state": "LA",
+    "victim_id": "Evangeline Parish, Louisiana law enforcement agencies (state/government databases)"
+  }
+}

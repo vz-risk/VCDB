@@ -1,0 +1,148 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Deadlock"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "634D33C8-11EA-418D-B675-48AEA72B9E79",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23864\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-extortion; leak-site claim with published files, unconfirmed by the company -> Suspected, Potentially, Low. Leaked data appears legitimate, so reviewer may upgrade to Confirmed/Yes.\nAccounting, bank contracts, budgets -> Internal; staff salaries -> Personal (Employee). No volume. Date Jul 26, 2026 -> dbir_year 2027. Industry 212221 per NAICS tag. Employee count ~2,350 group staff. Single source.",
+    "created": "2026-11-20T19:34:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data allegedly stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "Deadlock leak-site claim"
+      }
+    ],
+    "github": "23864",
+    "master_id": "634D33C8-11EA-418D-B675-48AEA72B9E79",
+    "modified": "2026-11-20T19:34:54Z"
+  },
+  "reference": "https://www.cyberdaily.au/security/13961-exclusive-australian-mining-firm-west-african-resources-suffers-alleged-data-breach",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On July 26, 2026 the Deadlock ransomware group posted West African Resources, a Subiaco, Western Australia gold miner with projects in Burkina Faso, on its leak site, publishing about 11 folders of French and English files including accounting data for two mining projects, staff salaries, bank contracts and budgets. Cyber Daily said the data appeared legitimate and current; the company did not comment.",
+  "timeline": {
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "NA"
+    ],
+    "industry": "212221",
+    "region": [
+      "009053"
+    ],
+    "state": "WA",
+    "victim_id": "West African Resources"
+  }
+}

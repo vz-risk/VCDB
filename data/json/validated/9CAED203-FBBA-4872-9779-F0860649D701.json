@@ -1,0 +1,130 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "9CAED203-FBBA-4872-9779-F0860649D701",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24398\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown followed; access method not disclosed (hacking Unknown/Unknown; template's Web application vector not supported by source). Confirmed unauthorized access to the data -> data_disclosure Yes per skill rule though the notice says 'potentially exposed'. Access May 6 2026, discovered May 11 (5 days) -> dbir 2027. Data: names/SSN/passport -> Personal; financial account info -> Bank. Number affected not stated. Employee count ~1,800 (city of ~100k, general knowledge) -> 1001 to 10000. Single source (Cardinal News); coded from issue body summary (WebFetch budget exhausted).",
+    "created": "2026-11-11T04:14:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access (method unknown)"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Departmental data with resident PII accessed"
+      }
+    ],
+    "github": "24398",
+    "master_id": "9CAED203-FBBA-4872-9779-F0860649D701",
+    "modified": "2026-11-11T04:14:50Z"
+  },
+  "reference": "https://cardinalnews.org/2026/09/04/concerns-raised-over-time-between-city-of-roanoke-data-breach-and-notification/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "A malicious actor gained unauthorized access to City of Roanoke, Virginia departmental data on May 6, 2026; the city discovered it on May 11. Data potentially exposed includes residents' names, Social Security numbers, passport numbers and financial account information. The city notified affected residents by letters dated August 24, 2026, reported the incident to the FBI, and engaged security experts; it had no indication of misuse.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 5
+    },
+    "incident": {
+      "day": 6,
+      "month": 5,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "VA",
+    "victim_id": "City of Roanoke, Virginia"
+  }
+}

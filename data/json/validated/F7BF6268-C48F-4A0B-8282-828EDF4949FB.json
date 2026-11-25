@@ -1,0 +1,128 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Mail"
+      }
+    ],
+    "cloud": [
+      "External Cloud Asset(s)"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Misrepresentation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "F7BF6268-C48F-4A0B-8282-828EDF4949FB",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24685\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTemplate Hacking-ext-unknown. Issue draft said 2024; WXII published Oct 26, 2026 and says the account was hacked 'Friday morning' -> Oct 23, 2026 (inferred), dbir_year 2027. Hacking method (e.g. stolen credentials) not stated -> Unknown; template vector Web application not stated -> Unknown. Mailbox/account access confirmed -> data_disclosure Yes per skill rule; data types unknown. The fake email to outside recipients coded as integrity Misrepresentation (sent in the administrator's name); the phishing of third-party recipients was not coded as a social action against this victim. Motive not stated (likely credential/payment phishing, not confirmed) -> Unknown. Small town; employee count 1-10 from general knowledge (town of ~600). Single source. Confidence Medium.",
+    "created": "2026-11-11T04:17:01Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Microsoft 365 account compromised - method not disclosed"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Fraudulent 'payment report' email sent as town administrator"
+      }
+    ],
+    "github": "24685",
+    "master_id": "F7BF6268-C48F-4A0B-8282-828EDF4949FB",
+    "modified": "2026-11-11T04:17:01Z"
+  },
+  "reference": "https://www.wxii12.com/article/whitsett-security-breach-town-hall-email-hacked/74252560",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On Friday morning, October 23, 2026, the Town of Whitsett, North Carolina's town hall Microsoft 365 account was hacked and used to send a fake email bearing a town administrator's signature with the subject 'Ref: Approved Payment Report from Whitsett, NC', attachments and links. IT provider Brooks Networking secured the affected accounts, and the town warned residents and recipients not to open the attachments or click the links.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 0
+    },
+    "incident": {
+      "day": 23,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "1 to 10",
+    "government": [
+      "Local"
+    ],
+    "industry": "921110",
+    "region": [
+      "019021"
+    ],
+    "state": "NC",
+    "victim_id": "Town of Whitsett"
+  }
+}

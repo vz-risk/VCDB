@@ -1,0 +1,168 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Use of stolen creds"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    },
+    "social": {
+      "target": [
+        "Executive"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "Everest"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      },
+      {
+        "variety": "P - Executive"
+      },
+      {
+        "variety": "S - File"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Secrets"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Credentials"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "High",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "BAAEC17D-BF6A-4BEB-9AA6-CA8E6CEA869F",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23780\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nTag Malware-ext-Ransomware-databreach not followed: Everest brands itself ransomware but no encryption occurred, so coded hacking Use of stolen creds (compromised credentials for the data exchange platform) via Web application + social Extortion (CHF 10M letter to management -> target Executive). Sources differ on whether the platform belongs to Stadler or a supplier (Rail Journal: \"a Stadler data exchange platform\"); Stadler kept as primary victim and no Partner vector added - reviewer may apply the partner rule if the supplier owned it. Technical documents -> Secrets/Internal; no personal data. The issue summary's \"2024\" is an error; all sources are July 2026 -> dbir_year 2027. Employee count approximate (about 14k).\nCredentials added to attribute.confidentiality.data on 2026-11-19 per analyst rule: Hacking 'Use of stolen creds' requires Credentials as a compromised data variety (amount unknown).",
+    "attribute": {
+      "confidentiality": {
+        "data_abuse": "Yes - Data ransomed"
+      }
+    },
+    "created": "2026-11-11T01:25:54Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Compromised credentials used on data exchange platform"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Technical documents stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "CHF 10M extortion letter (refused)"
+      }
+    ],
+    "github": "23780",
+    "master_id": "BAAEC17D-BF6A-4BEB-9AA6-CA8E6CEA869F",
+    "modified": "2026-11-19T22:00:00Z"
+  },
+  "reference": "https://therecord.media/stadler-refuses-everest-ransom-demand; https://www.theregister.com/security/2026/07/23/stadler-rail-scoffs-at-eversts-123m-extortion-attempts/5276922; https://www.rescana.com/post/stadler-rail-data-exchange-platform-breach-cybersecurity-incident-analysis-of-everest-ransomware-attack-and-12-3m-ransom; https://www.railjournal.com/fleet/cyber-gang-gains-access-to-a-stadler-data-exchange-platform/; https://www.helpnetsecurity.com/2026/07/23/stadler-everest-ransom-demand/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In July 2026 Swiss train maker Stadler Rail confirmed that the Everest gang used compromised credentials to access a file-sharing/data exchange platform used with a third-party supplier and stole Stadler technical documents. Everest demanded CHF 10 million (about $12.3 million) in an extortion letter; Stadler refused, filed a criminal complaint and said no personal data was stolen, its own systems were unaffected and production continued.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 7,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "CH"
+    ],
+    "employee_count": "10001 to 25000",
+    "government": [
+      "NA"
+    ],
+    "industry": "336510",
+    "region": [
+      "150155"
+    ],
+    "victim_id": "Stadler Rail AG"
+  }
+}

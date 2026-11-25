@@ -1,0 +1,132 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Web application"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Web application"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks"
+      },
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Customer"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "A315B0F2-BDBF-4B8D-9868-213076F539A5",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24694\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nRe-sourced 2026-11-11: Read the Department's official notice 'Employment Permits Portal - Personal Data Security Incident' (29 Oct, 2 Nov, 5 Nov 2026 updates). Changed Suspected -> Confirmed, disclosure Potentially -> Yes (first names/surnames downloaded), added Exfiltrate, outage duration Weeks, noted suspected compromised admin accounts; confidence Low -> Medium.\nTemplate Hacking-ext-unknown. Department's official notice (29 Oct, updated 2 and 5 Nov 2026) confirms data was 'downloaded by the unauthorised third party' -> security_incident Confirmed, data_disclosure Yes, result Exfiltrate. Data: first names and surnames of portal users (employers, agents, employees) -> Personal, data_victim Customer; number of users not stated -> no amount. Access path not stated: a vulnerability was found and suspected compromised administrator accounts were cut off, so hacking variety left Unknown (could be Exploit vuln and/or Use of stolen creds - reviewer check), vector Web application. Availability Interruption: portal offline from 29 Oct and not reopened by 5 Nov -> duration Weeks. Date: activity identified Oct 2026 (start not given) -> dbir_year 2027. Discovery internal (department identified it), method unstated. Government Federal; NAICS 926110. Employee count not confirmed from a source -> Unknown. Confidence Medium: official confirmation but actor and access method Unknown.",
+    "created": "2026-11-11T04:17:14Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Unauthorized third party exploits a portal vulnerability / admin accounts and downloads user names"
+      },
+      {
+        "action": "unk",
+        "actor": "unk",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Portal taken offline for over a week during response"
+      }
+    ],
+    "github": "24694",
+    "master_id": "A315B0F2-BDBF-4B8D-9868-213076F539A5",
+    "modified": "2026-11-11T04:52:19Z"
+  },
+  "reference": "https://www.rte.ie/news/ireland/2026/1029/1597264-data-breach-employment-permit/; https://enterprise.gov.ie/en/publications/employment-permits-portal-personal-data-security-incident.html",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On October 29, 2026 Ireland's Department of Enterprise, Tourism and Employment said it had identified suspicious unauthorised activity on its Employment Permits Online System portal and a security vulnerability, and took the portal offline. It suspended registrations, restricted administration access, removed access from suspected compromised administrator accounts and engaged independent cybersecurity specialists. A November 5 update said the unauthorised third party had downloaded users' first names and surnames (not email addresses or account roles), with a very small number of accounts under separate investigation. The Data Protection Commission was notified and affected users contacted; the portal stayed offline past its planned November 3 reopening.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "IE"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "Federal"
+    ],
+    "industry": "926110",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Department of Enterprise, Tourism and Employment (Ireland)"
+  }
+}

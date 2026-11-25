@@ -1,0 +1,153 @@
+{
+  "action": {
+    "malware": {
+      "variety": [
+        "Ransomware"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "unknown": {
+      "notes": "Initial access method not disclosed",
+      "result": [
+        "Infiltrate",
+        "Deploy payload"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "duration": {
+        "unit": "Weeks"
+      },
+      "variety": [
+        "Obscuration",
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Software installation"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "CE5899BA-98DF-4135-A37B-1CFB6E0E9B8C",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23623\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue tag Hacking-ext-unknown, but sources (Cert.lv via LSM; The Record; LV Portals 'no ransom for data decryption demanded') describe a ransomware attack by a foreign financially motivated group -> coded Malware/Ransomware with Obscuration+Interruption per skill rule. Attack date from headlines: June 2026 (The Star, June 27 2026; LV Portals coverage late June) -> dbir_year 2027; exact day not confirmed because full articles could not be fetched (web fetch budget exhausted). Data theft: breached.company headline mentions 44GB, not victim-confirmed -> data_disclosure Potentially, data Unknown; reviewer may upgrade if 44GB leak confirmed. Group not named. Restoration took weeks (LVM GEO partially restored, deliveries resumed later). NAICS kept at the tag's 924 sector as 924120 (state forest management); LVM is a state-owned joint-stock company that also sells timber (113110 would be an alternative). Government Federal (owned by the national state). ~1,100 employees -> 1001 to 10000. Olpha intrusion is a separate victim, not coded.",
+    "created": "2026-11-11T04:12:25Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "unk",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Initial access method not disclosed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "ia",
+        "summary": "Ransomware installed"
+      },
+      {
+        "action": "mal",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Servers encrypted, external systems shut down"
+      }
+    ],
+    "github": "23623",
+    "master_id": "CE5899BA-98DF-4135-A37B-1CFB6E0E9B8C",
+    "modified": "2026-11-11T04:12:25Z"
+  },
+  "reference": "https://eng.lsm.lv/article/society/crime/03.07.2026-latvian-state-forests-hacker-also-attacked-olpha.a653743/; https://therecord.media/latvia-state-owned-foresty-company-lvm-ransomware; https://www.thestar.com.my/news/world/2026/06/27/cybersecurity-breach-reveals-vulnerability-of-latvia039s-strategic-infrastructure-minister; https://lvportals.lv/dienaskartiba/391576-latvijas-valsts-meziem-izpirkuma-maksa-par-datu-atsifresanu-nav-pieprasita-2026; https://breached.company/latvia-state-forests-lvm-ransomware-44gb-2026/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "In June 2026 Latvia's state-owned forestry company Latvijas valsts me\u017ei (LVM) was hit by a ransomware attack that compromised its servers and forced it to shut down external systems, disrupting timber deliveries and its LVM GEO app for weeks. Cert.lv attributed it to a foreign, financially motivated ransomware group that also accessed a server of pharmaceutical maker Olpha (a technically separate incident). LVM said no ransom for decryption had been demanded.",
+  "timeline": {
+    "discovery": {
+      "unit": "Unknown"
+    },
+    "incident": {
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "value_chain": {
+    "cash-out": {
+      "notes": "VERIS 1.3.6: value_chain.development.variety.Cryptocurrency added because action.malware.variety.Ransomware exists.",
+      "variety": [
+        "Cryptocurrency"
+      ]
+    }
+  },
+  "victim": {
+    "country": [
+      "LV"
+    ],
+    "employee_count": "1001 to 10000",
+    "government": [
+      "Federal"
+    ],
+    "industry": "924120",
+    "region": [
+      "150154"
+    ],
+    "victim_id": "Latvijas valsts me\u017ei (Latvian State Forests, LVM)"
+  }
+}

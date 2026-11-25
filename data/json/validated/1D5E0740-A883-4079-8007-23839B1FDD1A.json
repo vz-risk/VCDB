@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "availability": {
+      "variety": [
+        "Interruption"
+      ]
+    },
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Unknown"
+        }
+      ],
+      "data_disclosure": "Potentially",
+      "state": [
+        "Unknown"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "1D5E0740-A883-4079-8007-23839B1FDD1A",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24624\nIssue 'Approximate date: 2024' is wrong; the article (Oct 20, 2026) says the attack happened 'over the weekend', i.e. about Oct 17-18, 2026 (inferred). No ransomware/encryption reported, so coded hacking Unknown with availability Interruption; no confidentiality impact (preliminary: patient data unaffected) -> data_disclosure Unknown, no data block. Qilin attribution comes only via an MSC News report and is flagged as unverified, so actor variety/name left Unknown (noted). Discovery Unknown. Employee count Unknown (small critical access hospital).",
+    "created": "2026-11-05T23:52:05Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "unk",
+        "summary": "Unauthorized access"
+      },
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "au",
+        "summary": "Network damaged; systems locked down"
+      }
+    ],
+    "github": "24624",
+    "master_id": "1D5E0740-A883-4079-8007-23839B1FDD1A",
+    "modified": "2026-11-05T23:52:05Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://dysruptionhub.com/community-medical-center-nebraska-cyberattack/?attribution_id=6adf32df4933f60001209a8e&attribution_type=post",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Community Medical Center in Falls City, Nebraska suffered a cyberattack over the weekend of about October 17-18, 2026. Unauthorized access damaged parts of the network, forcing the hospital to lock down systems, divert critical patients because diagnostic images could not be sent to radiologists, use paper records and reschedule appointments. Preliminary findings indicated patient information was not affected. The hospital deployed new computers and a new network. A news report named Qilin as the group involved, an attribution not independently established.",
+  "timeline": {
+    "incident": {
+      "day": 17,
+      "month": 10,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Unknown",
+    "government": [
+      "NA"
+    ],
+    "industry": "622110",
+    "region": [
+      "019021"
+    ],
+    "state": "NE",
+    "victim_id": "Community Medical Center, Inc. (Falls City, Nebraska)"
+  }
+}

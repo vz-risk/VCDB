@@ -1,0 +1,151 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    },
+    "social": {
+      "target": [
+        "Unknown"
+      ],
+      "variety": [
+        "Extortion"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Financial"
+      ],
+      "name": [
+        "DragonForce"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Organized crime"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      },
+      {
+        "variety": "P - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Personal"
+        },
+        {
+          "variety": "Internal"
+        },
+        {
+          "variety": "Bank"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Employee",
+        "Victim organization"
+      ],
+      "state": [
+        "Stored"
+      ]
+    },
+    "integrity": {
+      "variety": [
+        "Alter behavior"
+      ]
+    }
+  },
+  "confidence": "Low",
+  "discovery_method": {
+    "external": {
+      "variety": [
+        "Actor disclosure"
+      ]
+    }
+  },
+  "incident_id": "19D0D290-B4E9-4BA6-B97C-20431F441564",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23408\nEncoded by AI \u2014 encode-veris-incident skill version 20260801T010623Z\nIssue tagged Malware, but only a leak-site claim with samples; no encryption or outage reported -> per claim-only convention: Suspected, Potentially, confidence Low, no malware block, Social Extortion.\nDate: issue says ~2025, but the leak-site post was Apr 27, 2026 (attack date unknown) -> April 2026, dbir_year 2027.\nData from samples: employee pay/TFN/passport -> Personal; corporate bank statement -> Bank (Victim organization); incident reports -> Internal. Industry 722515 (franchisor of gelato stores; 533110 possible). HQ Sydney assumed. Employee count approximate. Single source (cites Information Age).",
+    "created": "2026-11-20T19:16:22Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "352 GB stolen"
+      },
+      {
+        "action": "soc",
+        "actor": "ext",
+        "asset": "ppl",
+        "attribute": "ia",
+        "summary": "DragonForce leak-site listing with ransom deadline"
+      }
+    ],
+    "github": "23408",
+    "master_id": "19D0D290-B4E9-4BA6-B97C-20431F441564",
+    "modified": "2026-11-20T19:16:22Z"
+  },
+  "reference": "https://www.insurancebusinessmag.com/au/news/cyber/aussie-ice-cream-giant-hit-by-hackers-573224.aspx",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "vcdb",
+  "summary": "On April 27, 2026 the DragonForce ransomware group listed Australian gelato franchisor Gelatissimo on its leak site, claiming to have stolen 352.42 GB of data and setting a deadline of under five days. Sample screenshots showed employee names and pay details, partial tax file numbers, a visa application with passport details, a workplace incident report, a bank transfer receipt and a corporate bank statement, plus contact details of the CEO and CFO. Gelatissimo did not respond to questions.",
+  "timeline": {
+    "incident": {
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "AU"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "722515",
+    "region": [
+      "009053"
+    ],
+    "state": "NSW",
+    "victim_id": "Gelatissimo"
+  }
+}

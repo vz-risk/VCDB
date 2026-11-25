@@ -1,0 +1,122 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "amount": 19851,
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_total": 19851,
+      "data_victim": [
+        "Patient",
+        "Employee"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "unknown": true
+  },
+  "incident_id": "892E522E-6AF0-4C44-AB0A-0E3B7C4F5711",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/24430\nTemplate Hacking-ext-unknown. 'The Gentlemen' only suspected (no confirmed claim) -> actor variety Unknown, named group noted only here. No encryption reported. An issue comment describes an unrelated incident (pipeline mis-attachment) and was ignored. NAICS 621 -> 621610. Discovery 7 days. Employee count Unknown; state not given in issue (assumed US).",
+    "created": "2026-11-05T23:55:50Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Data accessed"
+      }
+    ],
+    "github": "24430",
+    "master_id": "892E522E-6AF0-4C44-AB0A-0E3B7C4F5711",
+    "modified": "2026-11-05T23:55:50Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/windrose-health-network-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Advantage Home Health Care discovered unauthorized access to one of its servers on June 16, 2026; initial access occurred June 9. Patient names, dates of birth, addresses, phone numbers, Social Security numbers and medical information, plus employee health plan insurance and enrollment data, were compromised for 19,851 individuals. The Gentlemen ransomware group is suspected.",
+  "timeline": {
+    "discovery": {
+      "unit": "Days",
+      "value": 7
+    },
+    "incident": {
+      "day": 9,
+      "month": 6,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "Small",
+    "government": [
+      "NA"
+    ],
+    "industry": "621610",
+    "region": [
+      "019021"
+    ],
+    "victim_id": "Advantage Home Health Care"
+  }
+}

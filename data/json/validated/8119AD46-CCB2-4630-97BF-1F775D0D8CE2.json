@@ -1,0 +1,121 @@
+{
+  "action": {
+    "hacking": {
+      "result": [
+        "Infiltrate",
+        "Exfiltrate"
+      ],
+      "variety": [
+        "Unknown"
+      ],
+      "vector": [
+        "Unknown"
+      ]
+    }
+  },
+  "actor": {
+    "external": {
+      "country": [
+        "Unknown"
+      ],
+      "motive": [
+        "Unknown"
+      ],
+      "region": [
+        "000000"
+      ],
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "asset": {
+    "assets": [
+      {
+        "variety": "S - Unknown"
+      }
+    ],
+    "cloud": [
+      "Unknown"
+    ],
+    "role": [
+      "IT"
+    ]
+  },
+  "attribute": {
+    "confidentiality": {
+      "data": [
+        {
+          "variety": "Medical"
+        },
+        {
+          "variety": "Personal"
+        }
+      ],
+      "data_disclosure": "Yes",
+      "data_victim": [
+        "Patient"
+      ],
+      "state": [
+        "Stored"
+      ]
+    }
+  },
+  "confidence": "Medium",
+  "discovery_method": {
+    "internal": {
+      "variety": [
+        "Unknown"
+      ]
+    }
+  },
+  "incident_id": "8119AD46-CCB2-4630-97BF-1F775D0D8CE2",
+  "plus": {
+    "analysis_status": "Reviewed",
+    "analyst": "swidup",
+    "analyst_notes": "Closes https://github.com/vz-risk/VCDB/issues/23495\nExternal actor with access and copying of files -> hacking Unknown with Exfiltrate. Some trackers label it ransomware but the notice does not say so. Incident April 19, 2026 -> dbir_year 2027. NAICS 6214 tag; FQHC -> 621498. Employee count 101 to 1000 (approximate). Record count not yet known.",
+    "created": "2026-11-06T00:24:27Z",
+    "dbir_year": 2027,
+    "event_chain": [
+      {
+        "action": "hak",
+        "actor": "ext",
+        "asset": "srv",
+        "attribute": "cp",
+        "summary": "Files accessed and copied"
+      }
+    ],
+    "github": "23495",
+    "master_id": "8119AD46-CCB2-4630-97BF-1F775D0D8CE2",
+    "modified": "2026-11-06T00:24:27Z",
+    "sub_source": "phidbr"
+  },
+  "reference": "https://www.hipaajournal.com/blue-fish-pediatrics-data-breach/",
+  "schema_name": "vcdb",
+  "schema_version": "1.4.0",
+  "security_incident": "Confirmed",
+  "source_id": "phidbr",
+  "summary": "Cherry Health, a Federally Qualified Health Center in Michigan, identified suspicious network activity on April 19, 2026. A forensic investigation confirmed that an unauthorized party accessed and copied files containing patient names, addresses, phone numbers, dates of birth, health insurance information, patient ID numbers, provider names, service dates and, for some, Social Security numbers. The number of affected individuals had not been determined when notices went out on June 18, 2026.",
+  "timeline": {
+    "incident": {
+      "day": 19,
+      "month": 4,
+      "year": 2026
+    }
+  },
+  "victim": {
+    "country": [
+      "US"
+    ],
+    "employee_count": "101 to 1000",
+    "government": [
+      "NA"
+    ],
+    "industry": "621498",
+    "region": [
+      "019021"
+    ],
+    "state": "MI",
+    "victim_id": "Cherry Health"
+  }
+}
