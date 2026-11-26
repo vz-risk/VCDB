@@ -336,6 +336,13 @@ deprecated for VCDB coding (see Step 5, check 5).
   `"DoS"` implies the acting party's `motive` (whichever of
   `actor.external`/`actor.internal`/`actor.partner` is populated) includes
   `"Secondary"`, in addition to any other motive already coded.
+- **Fraudulent transaction → integrity, not confidentiality.** A fraudulent
+  transaction (an unauthorized payment, wire, fund transfer, purchase, or
+  crypto withdrawal) is an integrity violation. Code it as
+  `attribute.integrity.variety` including `"Fraudulent transaction"`, and do
+  **not** code it as `attribute.confidentiality`. Code a confidentiality impact
+  only when a source separately supports data being exposed or taken (e.g.
+  stolen credentials or card data), and give that its own step.
 - **Sum/max consistency:** `impact.overall_amount`, if set, must be at least
   the sum of `impact.loss[].amount`; `attribute.confidentiality.data_total`,
   if set, must be at least the max of `attribute.confidentiality.data[].amount`;
@@ -396,6 +403,9 @@ Each event is an object using **abbreviated** enums (no other keys allowed):
 2. **Attribute arc** tells the story: getting in / installing tooling / coercing
    = `ia`; data accessed or copied = `cp`; encryption, outage, or destruction =
    `au`. Most ransomware chains end on a `mal/.../au` event.
+   A **fraudulent transaction** (unauthorized payment, wire, transfer, or
+   withdrawal) is always `ia`, never `cp`: e.g. `hak/ext/srv/ia`
+   "Fraudulent transaction" or `soc/ext/ppl/ia` "Fraudulent wire transfer".
 3. **Asset per step**: social steps (phishing, extortion) → `ppl`; endpoint
    malware → `usr`; server compromise/encryption/exfil → `srv`. (The `…/ppl/ia`
    social step satisfies the same logic as the Alter-behavior + People-asset
